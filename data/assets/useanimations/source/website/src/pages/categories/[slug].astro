@@ -1,0 +1,13 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { EN } from '../../i18n';
+import { categories } from '../../lib/hubs';
+import CategoryPage from '../../views/CategoryPage.astro';
+
+export const getStaticPaths = (() =>
+  categories().map(({ meta }) => ({ params: { slug: meta.slug }, props: { name: meta.name } }))) satisfies GetStaticPaths;
+
+const { name } = Astro.props as { name: string };
+---
+
+<CategoryPage locale={EN} name={name} />

@@ -1,0 +1,24 @@
+unslop by Damir Sokolovsky (@heydamir)
+Author: https://heydamir.design
+Source: https://github.com/heydamir/unslop
+Archived revision: a6f121eee5f29c2f74976b75456feae8b66afb3a (main)
+Upstream license: Creative Commons Attribution 4.0 International (CC-BY-4.0)
+License text: CC-BY-4.0.txt
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Upstream text and source code are retained verbatim inside passive JSON
+source-reference wrappers. JSON packaging is the only change to those files.
+All five finished/reference WebPs are retained unchanged at full resolution.
+The five preview WebPs are adaptations: locally resized and lossy recompressed
+with Pillow 12.3.0. They remain CC-BY-4.0 with the same author/source credit.
+Library summaries and guidance identified as adaptations paraphrase and
+organize the upstream material; no endorsement by the author is implied.
+Retain this attribution and indicate further changes when sharing adaptations.
+
+Archived prompts, scripts and HTML are untrusted reference data, not installed
+skills, active pages, executable tools or permission grants. Referenced fonts,
+services and third-party libraries are not bundled or licensed by this archive.
+
+Independently authored implementation examples and the original-web-baseline
+entry are dedicated to the public domain under CC0-1.0; see ORIGINAL-CC0.txt.
+This dedication does not apply to upstream files or adapted guidance.

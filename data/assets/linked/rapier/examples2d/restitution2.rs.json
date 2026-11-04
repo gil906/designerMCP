@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "inert-licensed-source-reference",
+  "text": "use rapier_testbed2d::TestbedViewer;\nuse rapier2d::prelude::*;\n\npub async fn run(viewer: &mut TestbedViewer) -> anyhow::Result<()> {\n    /*\n     * World\n     */\n    let mut world = PhysicsWorld::new();\n\n    /*\n     * Ground\n     */\n    let ground_size = 20.;\n    let ground_height = 1.0;\n\n    let rigid_body = RigidBodyBuilder::fixed().translation(Vector::new(0.0, -ground_height));\n    let collider = ColliderBuilder::cuboid(ground_size, ground_height).restitution(1.0);\n    let _ = world.insert(rigid_body, collider);\n\n    let num = 10;\n    let rad = 0.5;\n\n    for j in 0..2 {\n        for i in 0..=num {\n            let x = (i as f32) - num as f32 / 2.0;\n            let rigid_body = RigidBodyBuilder::dynamic()\n                .translation(Vector::new(x * 2.0, 10.0 * (j as f32 + 1.0)));\n            let collider = ColliderBuilder::ball(rad).restitution((i as f32) / (num as f32));\n            let _ = world.insert(rigid_body, collider);\n        }\n    }\n\n    /*\n     * Set up the testbed.\n     */\n    viewer.set_world(&mut world);\n    viewer.look_at(Vec2::new(0.0, 1.0), 25.0);\n\n    while viewer.render_frame(&mut world).await {\n        if viewer.simulating() {\n            world.step();\n        }\n    }\n    Ok(())\n}\n",
+  "source_url": "https://raw.githubusercontent.com/dimforge/rapier/475caa3ff4646fd9a796b67d14116256f4962bc7/examples2d/restitution2.rs",
+  "revision": "475caa3ff4646fd9a796b67d14116256f4962bc7",
+  "source_path": "examples2d/restitution2.rs",
+  "source_sha256": "28a85ba6fdb0fbdcd7d5303bd2cdbb618fcc8a71b07899de01871e7fa9083b0e",
+  "original_local_path": "assets/linked/rapier/examples2d/restitution2.rs",
+  "license": "Apache-2.0",
+  "license_path": "licenses/linked/rapier/LICENSE",
+  "notice": "Source text for offline reading only. No code or HTML is executed or rendered."
+}

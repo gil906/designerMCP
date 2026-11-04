@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "designer-mcp"
+version = "0.1.0"
+description = "Offline, read-only design reference MCP server"
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.26,<2", "pillow>=11,<13"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "pytest-asyncio>=0.25,<2"]
+
+[project.scripts]
+designer-mcp = "designer_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/designer_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-q"
+cache_dir = ".pytest_cache"

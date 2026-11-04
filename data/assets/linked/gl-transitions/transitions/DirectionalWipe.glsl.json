@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "inert-licensed-source-reference",
+  "text": "// Author: gre\n// License: MIT\n// Description: A soft-edged diagonal wipe\n// Tags: wipe, directional\n\n// @param Direction of the wipe\nuniform vec2 direction; // = vec2(1.0, -1.0)\n// @param Softness of the edge\nuniform float smoothness; // = 0.5\n \nconst vec2 center = vec2(0.5, 0.5);\n \nvec4 transition (vec2 uv) {\n  vec2 v = normalize(direction);\n  v /= abs(v.x)+abs(v.y);\n  float d = v.x * center.x + v.y * center.y;\n  float m =\n    (1.0-step(progress, 0.0)) * // there is something wrong with our formula that makes m not equals 0.0 with progress is 0.0\n    (1.0 - smoothstep(-smoothness, 0.0, v.x * uv.x + v.y * uv.y - (d-0.5+progress*(1.+smoothness))));\n  return mix(getFromColor(uv), getToColor(uv), m);\n}\n",
+  "source_url": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/6e235c9649233abda2d2c6cb54a4896aac649175/transitions/DirectionalWipe.glsl",
+  "revision": "6e235c9649233abda2d2c6cb54a4896aac649175",
+  "source_path": "transitions/DirectionalWipe.glsl",
+  "source_sha256": "ab13a278d9a62400fb54ac3c1df98d06b57172ec72f79ec4e8d185614ecfdb52",
+  "original_local_path": "assets/linked/gl-transitions/transitions/DirectionalWipe.glsl",
+  "license": "MIT",
+  "license_path": "licenses/linked/gl-transitions/LICENSE",
+  "notice": "Source text for offline reading only. No code or HTML is executed or rendered."
+}

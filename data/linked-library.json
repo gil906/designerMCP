@@ -1,0 +1,1286 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "linked-motionsites-studio",
+      "title": "MotionSites Studio",
+      "summary": "An AI-assisted website customization service. Use it as a prototyping workflow reference, not as a source of redistributable templates.",
+      "categories": [
+        "ai-website-builder",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "ai",
+        "prototype",
+        "landing-page",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Start with an independently written brief: audience, task, evidence, conversion action and accessibility constraints. Separate factual business copy from speculative placeholder copy. Build a neutral wireframe first, then try one visual direction at a time. Evaluate the generated result by keyboard order, narrow-screen readability, semantic headings and useful empty/error states. Keep your own source-of-truth content outside the builder. Before exporting, verify the service's project-use terms and every font, image and video license. This archive contains no builder output or proprietary prompts.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://studio.motionsites.ai",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "text",
+          "code": "Original brief: A repair shop needs a one-page booking site. Primary action: request a repair. Evidence: opening hours and verified customer quotations. Layout: concise introduction, three service cards, pricing explanation, accessible contact form. No autoplay video. At 320px, labels remain visible and actions never overlap.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-motionsites",
+      "title": "MotionSites",
+      "summary": "A commercial design-prompt and motion reference library. Offline coverage is factual metadata plus independently authored design planning.",
+      "categories": [
+        "ai-design-prompts",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "brief",
+        "motion",
+        "prompting",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Translate an observed design goal into your own constraints rather than transcribing a prompt. Specify information hierarchy, spacing rhythm, motion purpose and failure behavior. For a restrained hero, give the headline most of the visual weight and put proof near the action. Limit decorative animation to one layer that cannot obscure text. Treat AI output as a candidate requiring contrast, layout-shift and interaction tests. Product use rights do not imply permission to repackage a prompt library. Do not put purchased prompts or source packs into this corpus.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://motionsites.ai",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "css",
+          "code": ".hero { display: grid; gap: 1.5rem; padding: clamp(2rem, 7vw, 6rem); }\n.hero h1 { max-width: 16ch; font-size: clamp(2rem, 5vw, 4rem); line-height: 1.08; }\n.hero p { max-width: 58ch; }\n@media (min-width: 60rem) { .hero { grid-template-columns: 3fr 2fr; align-items: center; } }",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-land-book",
+      "title": "Land-book",
+      "summary": "A destination described in the discovered post as a landing-page inspiration resource. Discovery received HTTP 403; current content and terms remain unverified.",
+      "categories": [
+        "landing-page-inspiration",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "composition",
+        "conversion",
+        "inspiration",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Because the destination could not be inspected, do not infer current catalog features, screenshot rights or pricing. You can still apply an original landing-page critique: identify the first question the visitor asks, make the answer visible above the action, then supply evidence and objections in a logical order. Use a text-only reference worksheet instead of copying a page. Check that the page remains coherent without illustrations. Choose a conversion metric tied to successful user intent rather than time spent looking at animation.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://land-book.com",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "text",
+          "code": "Independent landing-page worksheet:\n1. Audience and immediate question.\n2. One-sentence answer and primary action.\n3. Three claims with evidence owners.\n4. Common objections and truthful answers.\n5. Mobile reading order.\n6. Completion metric and accessible fallback.\nDo not attach third-party screenshots.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-recent",
+      "title": "Recent",
+      "summary": "A public design-reference gallery spanning interfaces, web, branding, motion and print. Third-party work is not made reusable by being visible.",
+      "categories": [
+        "design-inspiration",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "branding",
+        "editorial",
+        "layout",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web",
+        "react",
+        "flutter"
+      ],
+      "guidance": "Record abstract design decisions: density, alignment, typography scale, color roles and movement cadence. Distinguish brand expression from usability. Rebuild a chosen principle using your own text and geometry; do not reproduce a recognizable page or identity. On web, implement hierarchy with semantic elements. In Flutter, map the same hierarchy to text styles and constrained padding rather than screenshot dimensions. A useful comparison changes only one variable, such as card density, so feedback identifies the cause.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://recent.design",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "dart",
+          "code": "Widget originalInfoCard(String title, String detail) => Padding(\n  padding: const EdgeInsets.all(20),\n  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [\n    Text(title, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),\n    const SizedBox(height: 12), Text(detail),\n  ]),\n);",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        },
+        {
+          "language": "jsx",
+          "description": "Original React semantic information card; parallel to the independent Flutter composition.",
+          "code": "function OriginalInfoCard({ title, detail, headingId }) {\n  return <article aria-labelledby={headingId} className=\"original-info-card\">\n    <h2 id={headingId}>{title}</h2><p>{detail}</p>\n  </article>;\n}\n// Use a unique headingId per instance; adapt typography with CSS tokens."
+        }
+      ]
+    },
+    {
+      "id": "linked-landdding",
+      "title": "Landdding",
+      "summary": "A community website gallery with categorical and time-based browsing. Its restricted site-content terms are not an offline redistribution grant.",
+      "categories": [
+        "landing-page-inspiration",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "gallery",
+        "wireframe",
+        "templates",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Use references to discover questions, not to duplicate solutions. Sketch three structurally different wireframes for the same original content: proof-first, task-first and comparison-first. Test them with a reader who has not seen the brief. Keep the identity and imagery independent. Treat cloneable templates as separately licensed project inputs, never as archive assets. If an item lacks clear permission, preserve only the URL and your own factual interpretation. Match component order to the visitor's decision path.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://landdding.com",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "html",
+          "code": "<main>\n  <header><h1>Plan a calmer team week</h1><p>Make responsibilities visible before Monday.</p><a href=\"#plan\">Create a plan</a></header>\n  <section aria-labelledby=\"proof\"><h2 id=\"proof\">What changes</h2><ul><li>One owner per task</li><li>Visible review dates</li></ul></section>\n  <section id=\"plan\"><h2>Start with your next milestone</h2></section>\n</main>",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-font-in-logo",
+      "title": "Font In Logo",
+      "summary": "A catalog connecting brand logos with font references. Logo visibility grants neither trademark rights nor font-file redistribution rights.",
+      "categories": [
+        "typography-reference",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "fonts",
+        "identity",
+        "typography",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web",
+        "flutter"
+      ],
+      "guidance": "Separate typeface identification from licensing. A brand wordmark may be modified lettering rather than a stock font, and an identification can be approximate. For your own identity, compare x-height, apertures, numeral clarity and text-width at realistic sizes. Archive only independently licensed font files after checking desktop, web, app embedding and redistribution scope. Use system fonts for an offline baseline. Build a specimen with your own words, numbers, punctuation and multilingual content; test fallback and font-loading layout stability.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://fontinlogo.com",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "css",
+          "code": ".specimen { font-family: system-ui, sans-serif; font-variant-numeric: tabular-nums; }\n.specimen__title { font-size: clamp(1.8rem, 4vw, 3.2rem); letter-spacing: -.025em; }\n.specimen__body { max-width: 65ch; line-height: 1.6; }\n/* Test with original text: Harbor 2026 — Invoice #1048; I/l/1; O/0. */",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-godly",
+      "title": "Godly / Recent",
+      "summary": "The discovered Godly URL redirected to Recent with a referral parameter. It is retained as a searchable alias, not claimed as an independently archived gallery.",
+      "categories": [
+        "design-inspiration",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "redirect",
+        "gallery",
+        "visual-design",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Track provenance when a reference moves: keep the original destination, the observed redirect and observation date separate. For design work, derive a neutral visual system: background, surface, accent, readable text and border tokens. Ensure an accent conveys state alongside words or icons. Do not assume two URLs imply two independent sources. This entry deliberately carries original guidance and no screenshots from either destination. Compare a token system in light and dark contexts before building elaborate motion.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://godly.website",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "css",
+          "code": ":root { --page: #f6f7fb; --surface: #fff; --ink: #202839; --accent: #3153c7; --edge: #c7cedd; }\n.panel { color: var(--ink); background: var(--surface); border: 1px solid var(--edge); border-radius: 1rem; }\n.panel a { color: var(--accent); text-decoration: underline; text-underline-offset: .2em; }",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-60fps",
+      "title": "60fps",
+      "summary": "A curated UI animation reference service. Its terms prohibit mirroring, caching and redistribution through another reference product; no service content is imported.",
+      "categories": [
+        "interaction-inspiration",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "motion",
+        "interaction",
+        "accessibility",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web",
+        "react",
+        "flutter",
+        "ios",
+        "android"
+      ],
+      "guidance": "Invent a motion specification from the task itself. Define trigger, state change, duration, easing, interruption and reduced-motion behavior. Prefer animation that explains spatial continuity or confirms an action. Keep the final state usable with zero animation. For a disclosure, update semantic expanded state immediately; animate only the visual layer. For native apps, respect platform motion settings and avoid gestures as the sole path. The example is an independently designed state transition, not a service shot or breakdown.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://60fps.design",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "css",
+          "code": ".notice { opacity: 1; transform: translateY(0); transition: opacity 140ms ease-out, transform 180ms ease-out; }\n.notice[data-entering=\"true\"] { opacity: 0; transform: translateY(.4rem); }\n@media (prefers-reduced-motion: reduce) { .notice { transition: none; transform: none; } }",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        },
+        {
+          "language": "dart",
+          "description": "Original Flutter state animation. Motion is decorative; state and semantics update immediately.",
+          "code": "Widget originalSelection(bool selected, Widget child, BuildContext context) {\n  final reduced = MediaQuery.disableAnimationsOf(context);\n  return Semantics(selected: selected, child: AnimatedContainer(\n    duration: reduced ? Duration.zero : const Duration(milliseconds: 160),\n    curve: Curves.easeOut,\n    padding: const EdgeInsets.all(16),\n    decoration: BoxDecoration(\n      color: selected ? const Color(0xffe8edff) : const Color(0xffffffff),\n      border: Border.all(color: selected ? const Color(0xff3153c7) : const Color(0xffb8c0cf)),\n      borderRadius: BorderRadius.circular(12),\n    ), child: child,\n  ));\n}"
+        }
+      ]
+    },
+    {
+      "id": "linked-modulify",
+      "title": "Modulify free templates",
+      "summary": "A site-template catalog with previews and dashboard cloning. Project-use permissions do not establish a right to republish catalog media or template files.",
+      "categories": [
+        "website-templates",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "builder",
+        "templates",
+        "responsive",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Write a template acceptance checklist before choosing a layout. Inspect actual content fit, keyboard behavior, responsive overflow, loading cost and form ownership. Replace promotional placeholder claims with verified statements. Make header navigation work independently of decorative animation. Clone only through authorized product features and keep any acquired template outside this redistribution library unless the item grants redistribution explicitly. For your own reusable template, define slots and constraints instead of matching a vendor's visual identity.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://modulify.ai/templates",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "text",
+          "code": "Original reusable page contract:\nSlots: title, description, primary action, evidence list, FAQ, contact details.\nConstraints: title <= 80 characters; one primary action per section; images require alt decisions; no fixed-height copy containers.\nStates: loading, empty, error, success.\nAcceptance: 320px width, 200% zoom, keyboard-only navigation, no motion.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-oversight-sections",
+      "title": "Oversight Supply sections",
+      "summary": "A commercial collection of interactive website sections. Advertising a section as free to copy does not authorize republishing the source catalog.",
+      "categories": [
+        "website-sections",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "hero",
+        "scroll",
+        "section-design",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "guidance": "Design a section around one user question and one explicit outcome. Use CSS layout and semantic content before adding scroll behavior. A scroll story should preserve a complete reading order without pinning or effects. Keep visual progress separate from real application progress. Do not trap focus inside sticky sections. If using an unlocked vendor template in a client project, retain the item terms; do not redistribute template files or access links here. The original example supplies a scalable section frame without recreating vendor artwork.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://supply.madebyoversight.com/sections",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "jsx",
+          "code": "function EvidenceSection({ title, items }) {\n  return <section aria-labelledby=\"evidence-title\" className=\"evidence\">\n    <h2 id=\"evidence-title\">{title}</h2>\n    <ul>{items.map(item => <li key={item.id}><h3>{item.label}</h3><p>{item.detail}</p></li>)}</ul>\n  </section>;\n}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-oversight-videos",
+      "title": "Oversight video skills",
+      "summary": "A commercial collection of video-style workflow skills and references. No proprietary scripts, instructions, videos or paid content are archived.",
+      "categories": [
+        "video-production",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "storyboard",
+        "explainer",
+        "ai-video",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "guidance": "Build an original explainer by scripting the message before selecting effects. Split the message into problem, concrete change and next action; assign one idea per shot. Use independently licensed media or your own geometry. Keep voiceover and captions semantically equivalent. Allocate silence so the viewer can read numbers. For deterministic rendering, express timing in frames and record the frame rate. Obtain consent for identifiable voices and likenesses. Do not copy a premium skill or style recipe into an offline tool.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://supply.madebyoversight.com/videos",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "json",
+          "code": "{\"fps\":30,\"shots\":[{\"start\":0,\"frames\":90,\"message\":\"Tasks disappear between meetings\",\"visual\":\"three original labeled cards\"},{\"start\":90,\"frames\":120,\"message\":\"Assign one owner and review date\",\"visual\":\"cards align into an original timeline\"},{\"start\":210,\"frames\":90,\"message\":\"Start with your next milestone\",\"visual\":\"plain call-to-action and captions\"}]}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-oversight-supply",
+      "title": "Oversight Supply",
+      "summary": "A premium Webflow/Framer template and video-workflow supplier. This offline entry supplies original evaluation guidance, not its files or access links.",
+      "categories": [
+        "website-templates",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "framer",
+        "webflow",
+        "licensing",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Treat licensing as part of component selection. Record who purchased an item, the permitted project count, allowed platforms, transfer rules and restrictions on source sharing. Prefer your own reusable primitives for a public library. A template can be appropriate for a single client while unsuitable for redistribution in an MCP asset service. Evaluate recurring subscription and export constraints before investing in customization. Build a license ledger that separates template rights from font, stock image, plugin and customer-content rights.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://supply.madebyoversight.com",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "json",
+          "code": "{\"project\":\"original-client-site\",\"inputs\":[{\"kind\":\"layout\",\"origin\":\"in-house\",\"redistributable\":true},{\"kind\":\"font\",\"origin\":\"system stack\",\"filesBundled\":false},{\"kind\":\"photography\",\"origin\":\"client-provided\",\"permissionStatus\":\"verify before publication\"}],\"reviewBeforeExport\":[\"template scope\",\"font embedding\",\"stock media\",\"client consent\"]}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-refero",
+      "title": "Refero",
+      "summary": "A searchable web/iOS UI-reference service described by public metadata. Discovery did not expose the catalog; no screenshot or catalog redistribution permission was found.",
+      "categories": [
+        "ui-pattern-reference",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "product-ui",
+        "forms",
+        "onboarding",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "web",
+        "react",
+        "flutter",
+        "ios"
+      ],
+      "guidance": "Study a pattern by writing the user's goal, information required, error recovery and success feedback. Design an original flow with fewer decisions rather than reproducing another product's screen. For forms, keep labels visible, explain validation next to the field, preserve values after errors and announce submission status. Platform-native expectations matter: web needs keyboard semantics; Flutter needs semantics labels, text scaling and accessible touch targets. Keep a text-only critique log when catalog rights are uncertain.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://refero.design",
+      "license": "Metadata only/no upstream redistribution; proprietary or unverified content rights. No screenshots, prompts, templates, articles or media copied. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "html",
+          "code": "<form>\n  <label for=\"workspace\">Workspace name</label>\n  <input id=\"workspace\" name=\"workspace\" aria-describedby=\"workspace-help\" required maxlength=\"60\">\n  <p id=\"workspace-help\">Use a name your teammates recognize.</p>\n  <button type=\"submit\">Create workspace</button>\n  <p role=\"status\" aria-live=\"polite\"></p>\n</form>",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        },
+        {
+          "language": "dart",
+          "description": "Original Flutter labeled input. Requires Material imports and a caller-owned controller.",
+          "code": "Widget originalWorkspaceField(TextEditingController controller) => TextFormField(\n  controller: controller,\n  maxLength: 60,\n  decoration: const InputDecoration(\n    labelText: 'Workspace name',\n    helperText: 'Use a name your teammates recognize.',\n  ),\n  validator: (value) => (value == null || value.trim().isEmpty)\n    ? 'Enter a workspace name.' : null,\n);\n// Keep the controller in caller state and dispose it when that state ends."
+        }
+      ]
+    },
+    {
+      "id": "linked-remotion",
+      "title": "Remotion",
+      "summary": "A React-based programmatic video and image toolkit under the custom Remotion License, not MIT. Entity eligibility and commercial license requirements must be reviewed.",
+      "categories": [
+        "video-production",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "rendering",
+        "timeline",
+        "commercial-license",
+        "offline",
+        "original-example",
+        "metadata-only-no-redistribution"
+      ],
+      "platforms": [
+        "react",
+        "web"
+      ],
+      "guidance": "Use frame-indexed rendering for reproducible motion: a visual state should be a function of frame number, composition size and explicit inputs. Avoid wall-clock timers, random values without a seed and untracked network requests while rendering. Keep preview interactivity separate from render state. Verify the current custom license for your organization before installing or deploying; the discovered free-use eligibility is not a blanket open-source grant. No Remotion source is redistributed. The independent example demonstrates frame math without importing Remotion.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/remotion-dev/remotion",
+      "license": "Remotion custom commercial eligibility license, NOT MIT. Metadata only/no upstream redistribution. Original guidance/examples: CC0-1.0.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "export function originalShotState(frame, fps) {\n  const seconds = frame / fps;\n  const t = Math.max(0, Math.min(1, seconds / 0.6));\n  const eased = 1 - (1 - t) ** 3;\n  return { opacity: eased, translateY: 18 * (1 - eased), caption: seconds < 3 ? 'Make the next step visible' : 'Give it an owner' };\n}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ]
+    },
+    {
+      "id": "linked-hyperframes",
+      "title": "HyperFrames",
+      "summary": "An HTML-to-video rendering project aimed at agent-assisted workflows. Selected Apache-2.0 deployment references are archived separately from media and dependencies.",
+      "categories": [
+        "video-production",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "html-to-video",
+        "rendering",
+        "deployment",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Treat a rendered HTML scene as a deterministic document, not an arbitrary website capture. Bundle original text and explicitly licensed assets, fix viewport and font availability, wait for known readiness signals and prohibit late network loads. Render a short representative scene before committing to a full export. Keep worker resource limits and job cancellation explicit. Deployment references in this archive may depend on external infrastructure; they are reading material, not automatically runnable jobs. Review notices and cloud costs separately.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/heygen-com/hyperframes",
+      "license": "Upstream selection: Apache-2.0; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "hyperframes-source-1",
+          "path": "assets/linked/hyperframes/examples/aws-lambda/README.md.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: README.md"
+        },
+        {
+          "id": "hyperframes-source-2",
+          "path": "assets/linked/hyperframes/examples/gcp-cloud-run/README.md.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: README.md"
+        }
+      ],
+      "examples": [
+        {
+          "language": "html",
+          "code": "<section class=\"scene\" aria-label=\"Original explainer frame\">\n  <h1>One task, one owner</h1><p>A clear handoff beats another status meeting.</p>\n</section>\n<style>.scene{width:1280px;height:720px;display:grid;place-content:center;background:#102437;color:#fff;font:32px system-ui;padding:80px;box-sizing:border-box}.scene h1{font-size:72px;max-width:15ch}</style>",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/hyperframes/LICENSE"
+    },
+    {
+      "id": "linked-anime",
+      "title": "Anime.js",
+      "summary": "A JavaScript animation engine for visual choreography. Pinned MIT easing implementation references are archived; all inline examples are independently authored.",
+      "categories": [
+        "animation-engine",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "timeline",
+        "easing",
+        "svg",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "guidance": "Use a timeline when several visual changes share a narrative, not merely because animation is available. Define the settled state in CSS so loading failure cannot hide content. Animate transform and opacity where possible; measure layout-affecting changes. In React, scope targets to a ref and clean up the engine's active animations during unmount. Anime APIs vary by major version; inspect the pinned source and installed package before adapting. A menu should update its real state immediately and use motion only to reinforce it.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/juliangarnier/anime",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "anime-source-1",
+          "path": "assets/linked/anime/src/easings/linear/index.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: index.js"
+        },
+        {
+          "id": "anime-source-2",
+          "path": "assets/linked/anime/src/easings/cubic-bezier/index.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: index.js"
+        }
+      ],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "// Original browser animation recipe; no Anime runtime is bundled.\nfunction revealOriginalCard(element) {\n  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;\n  return element.animate([\n    { opacity: 0, transform: 'translateY(10px)' },\n    { opacity: 1, transform: 'translateY(0)' }\n  ], { duration: 180, easing: 'cubic-bezier(.2,.7,.2,1)' });\n}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/anime/LICENSE.md"
+    },
+    {
+      "id": "linked-react-spring",
+      "title": "React Spring",
+      "summary": "A React animation library using spring dynamics. Selected MIT demo sources are reading references; adapt APIs to the installed version.",
+      "categories": [
+        "spring-animation",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "physics",
+        "react",
+        "state-transition",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "react",
+        "web"
+      ],
+      "guidance": "Use springs for continuity when a target changes before the previous movement finishes. Tune by interaction semantics: a dragging object should follow intent; a confirmation should settle quickly without repeated bounce. Keep state ownership in React and render the final target even if motion is disabled. Do not animate a huge list independently without profiling. Test rapid toggling and unmount while moving. Avoid fixed durations as a substitute for spring behavior; reduce-motion can select an immediate state update. The example demonstrates the conceptual model independently.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/pmndrs/react-spring",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "react-spring-source-1",
+          "path": "assets/linked/react-spring/packages/core/src/hooks/useSpring.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: useSpring.ts"
+        },
+        {
+          "id": "react-spring-source-2",
+          "path": "assets/linked/react-spring/demo/src/sandboxes/chain/src/App.tsx.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: App.tsx"
+        }
+      ],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "export function originalSpringStep(position, velocity, target, dt) {\n  const step = Math.min(Math.max(dt, 0), 1 / 60);\n  const acceleration = 180 * (target - position) - 24 * velocity;\n  const nextVelocity = velocity + acceleration * step;\n  return { position: position + nextVelocity * step, velocity: nextVelocity };\n}\n// Illustrative semi-implicit step; production solvers need stability testing.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        },
+        {
+          "language": "jsx",
+          "description": "Original React Spring adaptation; requires React and @react-spring/web. reducedMotion is caller-supplied.",
+          "code": "import { animated, useSpring } from '@react-spring/web';\nfunction OriginalStatus({ complete, reducedMotion }) {\n  const style = useSpring({\n    opacity: complete ? 1 : 0.7,\n    transform: complete ? 'translateY(0px)' : 'translateY(4px)',\n    immediate: reducedMotion,\n    config: { tension: 180, friction: 24 },\n  });\n  return <animated.p role=\"status\" style={style}>\n    {complete ? 'Saved successfully' : 'Waiting for confirmation'}\n  </animated.p>;\n}"
+        }
+      ],
+      "license_path": "licenses/linked/react-spring/LICENSE"
+    },
+    {
+      "id": "linked-pixijs",
+      "title": "PixiJS",
+      "summary": "A GPU-accelerated 2D JavaScript rendering library. Archived MIT geometry source contains no demo artwork.",
+      "categories": [
+        "graphics-2d",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "canvas",
+        "gpu",
+        "sprites",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "guidance": "Choose a canvas renderer for many moving visual objects, not for ordinary forms or text-heavy layouts. Maintain DOM alternatives for essential information and actions. Use logical coordinates, resize intentionally and cap device pixel ratio for expensive scenes. Batch similar objects and avoid creating textures every frame. Release textures and event listeners on teardown. Separate simulation from rendering so tests can inspect numeric state. The original coordinate helper illustrates responsive scene placement without external assets.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/pixijs/pixijs",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "pixijs-source-1",
+          "path": "assets/linked/pixijs/src/maths/point/Point.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: Point.ts"
+        },
+        {
+          "id": "pixijs-source-2",
+          "path": "assets/linked/pixijs/src/maths/point/ObservablePoint.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: ObservablePoint.ts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "export function originalFitScene(width, height, designWidth = 960, designHeight = 540) {\n  const scale = Math.min(width / designWidth, height / designHeight);\n  return { scale, x: (width - designWidth * scale) / 2, y: (height - designHeight * scale) / 2 };\n}\n// Apply the result to a scene container; keep controls in accessible DOM.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/pixijs/LICENSE"
+    },
+    {
+      "id": "linked-p5-js",
+      "title": "p5.js",
+      "summary": "A browser creative-coding platform. Selected upstream math source is LGPL-2.1 and is retained with its actual license; it is not relabeled MIT.",
+      "categories": [
+        "creative-coding",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "generative",
+        "canvas",
+        "lgpl",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Prototype a visual idea using a deterministic sketch, then decide whether it belongs in the production interface. Use your own geometry and color system rather than bundled example artwork. Separate random seed, interaction inputs and rendering dimensions. Keep frame work bounded and stop loops when the scene is offscreen. For distribution of p5 or modified library source, review LGPL notice, source and relinking obligations applicable to the packaging. The independent inline sketch is not copied from upstream and does not replace those obligations.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/processing/p5.js",
+      "license": "Upstream selection: LGPL-2.1; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "p5-js-source-1",
+          "path": "assets/linked/p5-js/src/math/trigonometry.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: trigonometry.js"
+        },
+        {
+          "id": "p5-js-source-2",
+          "path": "assets/linked/p5-js/src/math/calculation.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: calculation.js"
+        }
+      ],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "// Original p5 global-mode sketch; requires a separately installed p5 runtime.\nfunction setup() { createCanvas(480, 240); noLoop(); }\nfunction draw() {\n  background('#f4f5fa'); noFill(); stroke('#3153c7');\n  for (let row = 0; row < 6; row++) {\n    beginShape();\n    for (let x = 0; x <= width; x += 8) vertex(x, 30 + row * 32 + 8 * sin(x / 42 + row));\n    endShape();\n  }\n}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/p5-js/license.txt"
+    },
+    {
+      "id": "linked-paper-js",
+      "title": "Paper.js",
+      "summary": "A canvas vector-graphics scripting library for paths and geometry. Selected MIT numeric primitives are retained as source references.",
+      "categories": [
+        "vector-graphics",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "paths",
+        "bezier",
+        "canvas",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Use vectors when the important object is a path, curve, intersection or editable shape. Keep design coordinates distinct from CSS pixels. Avoid accumulating new paths on each frame; update existing objects or clear the project deliberately. Keep handles and hit regions usable at touch sizes. For editable diagrams, serialize semantic shapes in your own model instead of making the canvas the only source of truth. Exported SVG must be reviewed for external references and accessibility. The independent example derives curve controls without copying a drawing.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/paperjs/paper.js",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "paper-js-source-1",
+          "path": "assets/linked/paper-js/src/basic/Point.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: Point.js"
+        },
+        {
+          "id": "paper-js-source-2",
+          "path": "assets/linked/paper-js/src/basic/Size.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: Size.js"
+        }
+      ],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "export function originalConnector(a, b) {\n  const bend = Math.max(24, Math.abs(b.x - a.x) * 0.45);\n  return `M ${a.x} ${a.y} C ${a.x + bend} ${a.y}, ${b.x - bend} ${b.y}, ${b.x} ${b.y}`;\n}\n// Use this path in your own SVG or vector scene; label relationships in text.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/paper-js/LICENSE.txt"
+    },
+    {
+      "id": "linked-matter-js",
+      "title": "Matter.js",
+      "summary": "A browser-oriented 2D rigid-body physics engine. Two selected MIT demonstrations illustrate constraints and gravity without importing their media.",
+      "categories": [
+        "physics-2d",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "rigid-body",
+        "collision",
+        "simulation",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Use physics for meaningful interactive objects, not as a replacement for predictable navigation. Run a fixed simulation timestep and interpolate visual state when necessary. Distinguish visual size from collision boundaries; constrain speed so objects cannot jump through thin walls. Pause or reset when the scene leaves view. Essential controls should remain outside the physics world. A celebratory pile of cards should be decorative and should not obstruct actual content. Imported demos require the corresponding runtime and are not claimed as standalone assets.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/liabru/matter-js",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "matter-js-source-1",
+          "path": "assets/linked/matter-js/examples/constraints.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: constraints.js"
+        },
+        {
+          "id": "matter-js-source-2",
+          "path": "assets/linked/matter-js/examples/gravity.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: gravity.js"
+        }
+      ],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "export function originalFixedStepper(step, interval = 1 / 60) {\n  let remaining = 0;\n  return elapsed => {\n    remaining = Math.min(remaining + Math.max(0, elapsed), interval * 5);\n    while (remaining >= interval) { step(interval); remaining -= interval; }\n    return remaining / interval;\n  };\n}\n// Clamp backlog to avoid a catch-up spiral after a suspended tab.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/matter-js/LICENSE"
+    },
+    {
+      "id": "linked-three-js",
+      "title": "Three.js",
+      "summary": "A JavaScript 3D rendering library. Archived MIT math source is separate from models, textures and third-party example assets.",
+      "categories": [
+        "graphics-3d",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "webgl",
+        "scene",
+        "3d",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "guidance": "Introduce 3D only when spatial understanding improves the task. Budget mesh count, draw calls, texture memory and pixel ratio before adding effects. Use an original primitive scene for a performance baseline. Dispose of geometries, materials and textures when replacing scenes. Provide a meaningful fallback image or text and DOM controls for interaction. Asset licenses are independent of the renderer license: processing a model with Three.js does not grant rights to redistribute it. The original orbit helper is library-independent numeric guidance.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/mrdoob/three.js",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "three-js-source-1",
+          "path": "assets/linked/three-js/src/math/MathUtils.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: MathUtils.js"
+        },
+        {
+          "id": "three-js-source-2",
+          "path": "assets/linked/three-js/src/math/Vector2.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: Vector2.js"
+        }
+      ],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "export function originalOrbitPose(angle, radius, height) {\n  return { x: Math.cos(angle) * radius, y: height, z: Math.sin(angle) * radius };\n}\nexport function originalPixelRatio(deviceRatio) { return Math.min(2, Math.max(1, deviceRatio || 1)); }\n// Apply a bounded ratio after measuring low-end GPU frame times.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/three-js/LICENSE"
+    },
+    {
+      "id": "linked-rapier",
+      "title": "Rapier",
+      "summary": "A high-performance 2D/3D physics engine. Selected Apache-2.0 Rust examples cover damping and restitution; web bindings and dependencies are not bundled.",
+      "categories": [
+        "physics-3d",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "wasm",
+        "physics",
+        "collision",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Choose the 2D or 3D engine intentionally and match units across graphics and simulation. Start with gravity, one fixed collider and one dynamic body. Test collision groups, sleeping and timestep behavior before integrating character movement. WASM initialization is asynchronous; do not render interactive controls as ready before the engine is available. Keep simulation state deterministic where practical, but do not assume identical floating-point results across every platform. Review notices before redistributing compiled bindings. The inline model is an original design of world parameters, not a copied Rapier sample.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/dimforge/rapier",
+      "license": "Upstream selection: Apache-2.0; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "rapier-source-1",
+          "path": "assets/linked/rapier/examples2d/damping2.rs.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: damping2.rs"
+        },
+        {
+          "id": "rapier-source-2",
+          "path": "assets/linked/rapier/examples2d/restitution2.rs.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: restitution2.rs"
+        }
+      ],
+      "examples": [
+        {
+          "language": "json",
+          "code": "{\"units\":\"meters\",\"dimension\":3,\"fixedStepSeconds\":0.0166666667,\"gravity\":[0,-9.81,0],\"interactiveObjects\":[{\"id\":\"original-ball\",\"shape\":\"sphere\",\"radius\":0.25,\"position\":[0,2,0],\"restitution\":0.2}],\"fallback\":\"static diagram and textual explanation\",\"pauseWhenHidden\":true}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/rapier/LICENSE"
+    },
+    {
+      "id": "linked-ogl",
+      "title": "OGL",
+      "summary": "A small WebGL library. Its repository README contains the Unlicense dedication; that actual pinned evidence is retained rather than inventing a missing LICENSE file.",
+      "categories": [
+        "webgl-shaders",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "webgl",
+        "shader",
+        "minimal",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "A minimal graphics wrapper offers control but leaves more lifecycle, shader and compatibility decisions to you. Build one triangle before layering effects. Define shader uniforms explicitly and check precision support. Compile failures should produce a usable DOM fallback, not a blank page. Resize the drawing buffer separately from CSS size and clean up GPU resources. Read archived HTML as inert source: external scripts and assets are not fetched or executed. Use original procedural geometry so media licensing does not become ambiguous.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/oframe/ogl",
+      "license": "Upstream selection: Unlicense; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "ogl-source-1",
+          "path": "assets/linked/ogl/examples/triangle-screen-shader.html.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: triangle-screen-shader.html"
+        },
+        {
+          "id": "ogl-source-2",
+          "path": "assets/linked/ogl/src/math/Vec2.js.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: Vec2.js"
+        }
+      ],
+      "examples": [
+        {
+          "language": "glsl",
+          "code": "// Original fragment body; host supplies vUv and uTime.\nprecision mediump float;\nvarying vec2 vUv;\nuniform float uTime;\nvoid main() {\n  float band = 0.5 + 0.5 * sin(vUv.x * 7.0 + uTime * 0.25);\n  vec3 base = mix(vec3(0.08,0.15,0.25), vec3(0.18,0.35,0.65), band);\n  gl_FragColor = vec4(base, 1.0);\n}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/ogl/README.md"
+    },
+    {
+      "id": "linked-tsparticles",
+      "title": "tsParticles",
+      "summary": "A configurable particle-effects engine with framework integrations. Selected MIT preset configuration sources are retained without media or runtime bundles.",
+      "categories": [
+        "particle-animation",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "particles",
+        "confetti",
+        "background",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "guidance": "Use particles as a bounded decorative layer, never behind essential text without an opaque readable surface. Tie celebrations to confirmed success rather than merely clicking submit. Cap particle count, frame rate and duration. Disable pointer interception unless interaction is intentional. Stop and destroy the container on unmount, and select a static fallback for reduced motion. Import only required engine features instead of assuming every bundle is equally small. The original configuration is a planning contract; map fields to your installed engine version.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/tsparticles/tsparticles",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "tsparticles-source-1",
+          "path": "assets/linked/tsparticles/presets/confetti/src/options.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: options.ts"
+        },
+        {
+          "id": "tsparticles-source-2",
+          "path": "assets/linked/tsparticles/presets/stars/src/options.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: options.ts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "json",
+          "code": "{\"purpose\":\"confirm a completed milestone\",\"decorative\":true,\"pointerEvents\":\"none\",\"maxParticles\":36,\"maxDurationMs\":900,\"maxFps\":30,\"palette\":[\"#3153c7\",\"#287c66\",\"#ad6b19\"],\"reducedMotion\":\"show a static checkmark with success text\",\"cleanup\":\"destroy effect after completion or unmount\"}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/tsparticles/LICENSE"
+    },
+    {
+      "id": "linked-gltf-transform",
+      "title": "glTF Transform",
+      "summary": "A TypeScript/JavaScript toolkit for editing and optimizing glTF 2.0 assets. The tool's MIT license does not cover arbitrary processed models.",
+      "categories": [
+        "asset-optimization",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "gltf",
+        "optimization",
+        "3d-assets",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Make optimization measurable: record original bytes, texture dimensions, mesh counts and visual reference views. Apply one transformation at a time, then compare silhouette, materials, animations and metadata. Keep the original licensed source asset outside the deployment output. Geometry compression needs compatible decoders and can increase startup cost on weak devices. Texture downscaling often matters more than tiny geometry reductions. Verify model and texture rights independently before publishing either source or optimized output. Archived functions are inert reading references.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/donmccurdy/glTF-Transform",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "gltf-transform-source-1",
+          "path": "assets/linked/gltf-transform/packages/functions/src/center.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: center.ts"
+        },
+        {
+          "id": "gltf-transform-source-2",
+          "path": "assets/linked/gltf-transform/packages/functions/src/get-bounds.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: get-bounds.ts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "json",
+          "code": "{\"asset\":\"original-product-model.glb\",\"rights\":\"verify model and every texture before publication\",\"baseline\":{\"bytes\":0,\"drawCalls\":0,\"texturePixels\":0},\"checks\":[\"silhouette front/side\",\"material roughness\",\"animation duration\",\"named nodes\",\"decoder availability\"],\"deliveryTargets\":{\"mobileBytes\":1500000,\"desktopBytes\":4000000},\"retainOriginal\":true}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/gltf-transform/LICENSE.md"
+    },
+    {
+      "id": "linked-gl-transitions",
+      "title": "GL Transitions",
+      "summary": "A collection of GPU transition shaders. Two selected MIT transition sources are archived with per-file notices retained.",
+      "categories": [
+        "shader-transitions",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "glsl",
+        "transition",
+        "gpu",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "A transition shader mixes two images according to progress; it is not a complete renderer. Define sampler orientation, color space, aspect ratio, progress clamping and endpoint behavior in the host. Verify that progress zero reproduces the first image and progress one the second. Avoid distortion-heavy transitions for information that must be read during navigation. Respect reduced motion by swapping content immediately or using a simple fade. Retain shader-specific notices and independently verify rights to the input imagery. The independent shader body illustrates an original controlled wipe.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/gl-transitions/gl-transitions",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "gl-transitions-source-1",
+          "path": "assets/linked/gl-transitions/transitions/Fade.glsl.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: Fade.glsl"
+        },
+        {
+          "id": "gl-transitions-source-2",
+          "path": "assets/linked/gl-transitions/transitions/DirectionalWipe.glsl.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: DirectionalWipe.glsl"
+        }
+      ],
+      "examples": [
+        {
+          "language": "glsl",
+          "code": "// Original transition function; host provides getFromColor/getToColor.\nvec4 originalWipe(vec2 uv, float progress) {\n  float p = clamp(progress, 0.0, 1.0);\n  if (p <= 0.0) return getFromColor(uv);\n  if (p >= 1.0) return getToColor(uv);\n  float blend = 1.0 - smoothstep(p - 0.015, p + 0.015, uv.x);\n  return mix(getFromColor(uv), getToColor(uv), blend);\n}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/gl-transitions/LICENSE"
+    },
+    {
+      "id": "linked-obs-studio",
+      "title": "OBS Studio",
+      "summary": "Desktop recording and livestreaming software. GPL license evidence is retained, but no application binaries, plugins or large source tree are mirrored.",
+      "categories": [
+        "video-production",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "recording",
+        "streaming",
+        "gpl",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "linux",
+        "windows",
+        "macos"
+      ],
+      "guidance": "Record interface demonstrations as a production workflow separate from interactive UI implementation. Prepare a clean scene, redact personal notifications and credentials, choose a readable capture size and verify audio levels. Record a ten-second sample before a long session. Keep a consent and asset-rights ledger for screens, voices and music. GPL software distribution obligations differ from rights in your recorded output; do not label all footage GPL just because OBS captured it. Exact source headers and build dependencies control redistribution scope. No OBS build is distributed here.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/obsproject/obs-studio",
+      "license": "Upstream selection: GPL-2.0; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "text",
+          "code": "Original recording preflight:\n- Use a demo account with synthetic data.\n- Hide notifications and credential-bearing terminals.\n- Capture at a resolution where UI text remains readable after scaling.\n- Record 10 seconds; check framing, peaks and caption readability.\n- Save a clean master and a delivery copy.\n- Record consent, media licenses and export settings.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/obs-studio/COPYING"
+    },
+    {
+      "id": "linked-chatterbox",
+      "title": "Chatterbox",
+      "summary": "A text-to-speech project with an MIT code license. No models, audio, cloned voices or dependencies are imported; their rights need separate review.",
+      "categories": [
+        "video-production",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "text-to-speech",
+        "voice",
+        "consent",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "python"
+      ],
+      "guidance": "Treat voice generation as a consent-sensitive production step. Use a voice you control or an explicitly authorized speaker and record permitted purposes, retention and disclosure. Avoid imitating an identifiable person without authorization. Script for speech rather than dense written prose, then verify pronunciation and captions manually. Code licensing does not settle model weights, training provenance or output-use terms. Keep generated narration separate from real identity evidence. This archive provides original workflow guidance and license evidence only.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/resemble-ai/chatterbox",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "json",
+          "code": "{\"narrationJob\":\"original-demo\",\"speakerPermission\":{\"status\":\"required\",\"purposes\":[\"product explainer\"],\"impersonationAllowed\":false},\"scriptReview\":[\"factual accuracy\",\"pronunciation\",\"caption parity\"],\"modelsBundled\":false,\"outputReview\":[\"audible artifacts\",\"disclosure\",\"rights scope\"],\"retention\":\"delete unneeded voice inputs\"}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/chatterbox/LICENSE"
+    },
+    {
+      "id": "linked-tone-js",
+      "title": "Tone.js",
+      "summary": "A Web Audio framework for synthesis and timing. Selected MIT time/frequency source is archived; audio samples are not included.",
+      "categories": [
+        "browser-audio",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "web-audio",
+        "sound",
+        "scheduling",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Audio should be opt-in and should reinforce, not replace, visual feedback. Browsers require a user gesture to start an audio context. Offer mute and level controls, use short envelopes to prevent clicks and keep levels conservative. Schedule audio against the audio clock rather than visual frame timing. Stop active nodes on teardown. A confirmation sound must not be the only success signal. Synthesized tones avoid sample-file licensing but still require thoughtful accessibility and sensory design. The independent example uses native Web Audio.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/Tonejs/Tone.js",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [
+        {
+          "id": "tone-js-source-1",
+          "path": "assets/linked/tone-js/Tone/core/type/Time.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: Time.ts"
+        },
+        {
+          "id": "tone-js-source-2",
+          "path": "assets/linked/tone-js/Tone/core/type/Frequency.ts.json",
+          "mime_type": "application/json",
+          "title": "Pinned upstream reference: Frequency.ts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "javascript",
+          "code": "async function originalQuietCue() {\n  const context = new AudioContext();\n  try {\n    await context.resume();\n    const oscillator = context.createOscillator(), gain = context.createGain();\n    const now = context.currentTime;\n    oscillator.frequency.value = 520;\n    gain.gain.setValueAtTime(0, now);\n    gain.gain.linearRampToValueAtTime(0.025, now + 0.01);\n    gain.gain.linearRampToValueAtTime(0, now + 0.12);\n    oscillator.connect(gain); gain.connect(context.destination);\n    oscillator.start(now); oscillator.stop(now + 0.13);\n    oscillator.onended = () => context.close();\n  } catch (error) { await context.close(); throw error; }\n}\n// Invoke only after a user gesture and explicit sound opt-in.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/tone-js/LICENSE.md"
+    },
+    {
+      "id": "linked-faster-whisper",
+      "title": "faster-whisper",
+      "summary": "A CTranslate2-based Whisper transcription implementation under MIT. Models, audio and large dependencies are deliberately excluded.",
+      "categories": [
+        "video-production",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "transcription",
+        "captions",
+        "speech",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "python"
+      ],
+      "guidance": "Use transcription to draft captions, not as an unquestioned record. Obtain permission to process the audio, minimize retention and review proper nouns, numbers, speaker changes and timing. Keep captions readable with short lines and sufficient display time. Review model-weight licenses independently of application code. Production throughput depends on model size, hardware, precision and batching; benchmark with representative authorized audio. Generated text can contain mistakes or hallucinations during silence. The original formatter demonstrates deterministic caption serialization without importing the model.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/SYSTRAN/faster-whisper",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "python",
+          "code": "def original_srt_timestamp(seconds):\n    milliseconds = max(0, round(seconds * 1000))\n    hours, milliseconds = divmod(milliseconds, 3600000)\n    minutes, milliseconds = divmod(milliseconds, 60000)\n    whole_seconds, milliseconds = divmod(milliseconds, 1000)\n    return f'{hours:02}:{minutes:02}:{whole_seconds:02},{milliseconds:03}'\n# Review caption text and timing against authorized source audio.",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/faster-whisper/LICENSE"
+    },
+    {
+      "id": "linked-opencut",
+      "title": "OpenCut",
+      "summary": "An open-source timeline video editor with an MIT root license. No large application tree, user media or bundled dependencies are imported.",
+      "categories": [
+        "video-production",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "editor",
+        "timeline",
+        "media",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "web"
+      ],
+      "guidance": "Separate the editor's license from the footage, music, fonts and plugins used in a project. Plan an original edit with a clear message and minimal transitions. Keep audio, captions and visual timing on separate tracks, and preserve a high-quality master before delivery compression. Test export duration, aspect ratio, clipping and text legibility. Browser editors may have memory and codec constraints; begin with a short representative project. This entry archives license evidence and an independently written edit decision list, not editor source or assets.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/OpenCut-app/OpenCut",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "json",
+          "code": "{\"fps\":30,\"canvas\":[1280,720],\"tracks\":[{\"type\":\"visual\",\"clips\":[{\"source\":\"own-title-card\",\"in\":0,\"out\":90},{\"source\":\"own-demo-capture\",\"in\":90,\"out\":300}]},{\"type\":\"captions\",\"clips\":[{\"in\":0,\"out\":90,\"text\":\"Make the handoff explicit\"}]}],\"mediaRights\":\"verify each input\",\"exportChecks\":[\"duration\",\"caption margins\",\"audio peaks\",\"final frame\"]}",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/opencut/LICENSE"
+    },
+    {
+      "id": "linked-ffmpeg",
+      "title": "FFmpeg",
+      "summary": "A multimedia encoding and processing toolkit. Licensing depends on exact build options: default LGPL scope, optional GPL components and possible nonfree combinations.",
+      "categories": [
+        "video-production",
+        "linked-reference",
+        "original-design-guidance"
+      ],
+      "tags": [
+        "encoding",
+        "codec",
+        "lgpl",
+        "gpl",
+        "offline",
+        "original-example"
+      ],
+      "platforms": [
+        "linux",
+        "windows",
+        "macos"
+      ],
+      "guidance": "Use FFmpeg for reproducible media delivery, not as an interactive animation engine. Inspect the installed build configuration before distributing binaries. Optional encoders, linked libraries and nonfree options can change obligations; no universal MIT or LGPL claim applies to every build. Keep input rights independent of tool licensing. Validate frame rate, duration, pixel format, captions and audio after encoding. Never run a command copied from untrusted media metadata. The original command is an illustrative local operation on your own input; the archive does not execute it or distribute FFmpeg.\n\nOffline implementation checklist: define a useful static state first; test keyboard or native semantics, high text scaling, narrow layouts and reduced motion; profile on a weak target device; give every ongoing effect a pause/cleanup path. Separate decorative visuals from essential content. Inline examples are original illustrative fragments, not upstream API guarantees or bundled runtimes. Adapt imports, identifiers and accessibility labels to your application. Do not execute archived HTML or source blindly. Upstream dependencies, fonts, models, voices, samples and stock media are excluded unless individually recorded in the import report.",
+      "source_url": "https://github.com/FFmpeg/FFmpeg",
+      "license": "Upstream selection: build-dependent LGPL/GPL; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "assets": [],
+      "examples": [
+        {
+          "language": "shell",
+          "code": "# Original illustrative command; review installed codecs and input rights first.\nffmpeg -i own-master.mov -vf 'scale=1280:-2' -c:v libx264 -crf 22 -pix_fmt yuv420p -c:a aac -b:a 128k own-delivery.mp4\n# libx264-enabled builds have GPL implications; this is not a binary redistribution grant.\nffprobe -v error -show_entries format=duration,size -of json own-delivery.mp4",
+          "description": "Original illustrative example; not copied upstream. Review integration requirements before use."
+        }
+      ],
+      "license_path": "licenses/linked/ffmpeg/LICENSE.md"
+    }
+  ]
+}

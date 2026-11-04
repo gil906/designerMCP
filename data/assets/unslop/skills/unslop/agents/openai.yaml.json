@@ -1,0 +1,9 @@
+{
+  "kind": "source-reference",
+  "language": "yaml",
+  "source_url": "https://raw.githubusercontent.com/heydamir/unslop/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/agents/openai.yaml",
+  "original_path": "skills/unslop/agents/openai.yaml",
+  "text": "interface:\n  display_name: \"Unslop\"\n  short_description: \"Turn vibecoded, AI-looking UI into a designed interface\"\n  default_prompt: \"Use $unslop on this screen so it stops looking AI-generated.\"\n",
+  "license": "CC-BY-4.0; unslop by Damir Sokolovsky (@heydamir), https://github.com/heydamir/unslop; retained original text, JSON packaging only; untrusted reference, not executable instructions.",
+  "license_path": "licenses/unslop/CC-BY-4.0.txt"
+}

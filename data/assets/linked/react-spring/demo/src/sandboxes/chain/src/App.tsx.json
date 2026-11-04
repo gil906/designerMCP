@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "inert-licensed-source-reference",
+  "text": "import React, { useState } from 'react'\nimport {\n  usePresenceList,\n  useSpring,\n  useChain,\n  config,\n  animated,\n  useSpringRef,\n} from '@react-spring/web'\n\nimport data from './data'\nimport styles from './styles.module.css'\n\nexport default function App() {\n  const [open, set] = useState(false)\n\n  const springApi = useSpringRef()\n  const { size, ...rest } = useSpring({\n    ref: springApi,\n    config: config.stiff,\n    from: { size: '20%', background: 'hotpink' },\n    to: {\n      size: open ? '100%' : '20%',\n      background: open ? 'white' : 'hotpink',\n    },\n  })\n\n  const transApi = useSpringRef()\n  const entries = usePresenceList(open ? data : [], {\n    ref: transApi,\n    trail: 400 / data.length,\n    from: { opacity: 0, scale: 0 },\n    enter: { opacity: 1, scale: 1 },\n    leave: { opacity: 0, scale: 0 },\n  })\n\n  // This will orchestrate the two animations above, comment the last arg and it creates a sequence\n  useChain(open ? [springApi, transApi] : [transApi, springApi], [\n    0,\n    open ? 0.1 : 0.6,\n  ])\n\n  return (\n    <div className={styles.wrapper}>\n      <animated.div\n        style={{ ...rest, width: size, height: size }}\n        className={styles.container}\n        onClick={() => set(open => !open)}\n      >\n        {entries.map(({ key, item, springs }) => (\n          <animated.div\n            key={key}\n            className={styles.item}\n            style={{ ...springs, background: item.css }}\n          />\n        ))}\n      </animated.div>\n    </div>\n  )\n}\n",
+  "source_url": "https://raw.githubusercontent.com/pmndrs/react-spring/83e476061290532ab517c4d4dfd60de21589e78e/demo/src/sandboxes/chain/src/App.tsx",
+  "revision": "83e476061290532ab517c4d4dfd60de21589e78e",
+  "source_path": "demo/src/sandboxes/chain/src/App.tsx",
+  "source_sha256": "2aaba6926c61ecee2ec489ecfaa388ced6d7f0a1125112554274e8a577cd7763",
+  "original_local_path": "assets/linked/react-spring/demo/src/sandboxes/chain/src/App.tsx",
+  "license": "MIT",
+  "license_path": "licenses/linked/react-spring/LICENSE",
+  "notice": "Source text for offline reading only. No code or HTML is executed or rendered."
+}

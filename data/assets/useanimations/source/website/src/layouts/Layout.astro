@@ -1,0 +1,150 @@
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import LanguageBanner from '../components/LanguageBanner.astro';
+import { EN, LOCALES, type Locale, t } from '../i18n';
+import { SITE } from '../lib/icons';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Path of the canonical URL, e.g. /documentation; pages without one (the 404 page) omit it. */
+  path?: string;
+  /** The page's language; English by default. */
+  locale?: Locale;
+  /** hreflang alternates of a translated page, from alternatesOf(path). */
+  alternates?: Record<string, string>;
+  jsonLd?: object;
+  /** Extra <link>/<meta> tags. */
+  head?: { rel: string; href: string; type?: string; title?: string }[];
+  noindex?: boolean;
+  /** Social card, a path or URL of a 1200 × 630 image; the site-wide card by default. */
+  image?: string;
+  imageAlt?: string;
+  /** og:type, e.g. 'article'. */
+  type?: string;
+  /** Path of the page's Markdown version, e.g. /icons/heart.md. */
+  markdown?: string;
+}
+
+const {
+  title,
+  description,
+  path,
+  locale = EN,
+  alternates,
+  jsonLd,
+  head = [],
+  noindex,
+  image: imagePath = '/og.png',
+  imageAlt = t(locale).common.ogImageAlt,
+  type = 'website',
+  markdown,
+} = Astro.props;
+const canonical = path && new URL(path, SITE).href;
+const image = new URL(imagePath, SITE).href;
+---
+
+<!doctype html>
+<html lang={locale.hreflang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    {
+      alternates &&
+        Object.entries(alternates).map(([hreflang, href]) => (
+          <link rel="alternate" hreflang={hreflang} href={new URL(href, SITE).href} />
+        ))
+    }
+    {markdown && <link rel="alternate" type="text/markdown" href={markdown} title={`${title} (Markdown)`} />}
+    {head.map((link) => <link {...link} />)}
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="useAnimations" />
+    <meta property="og:locale" content={locale.ogLocale} />
+    {
+      alternates &&
+        LOCALES.filter((l) => l !== locale && alternates[l.hreflang]).map((l) => (
+          <meta property="og:locale:alternate" content={l.ogLocale} />
+        ))
+    }
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@useAnimations" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+    <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#08090c" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate" type="application/json" title="useAnimations icon catalog" href="/icons.json" />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    <script is:inline>
+      // Applies the saved or system theme before the first paint.
+      (() => {
+        const saved = localStorage.getItem('theme');
+        const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
+    <script
+      is:inline
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="c6736abb-8f30-42da-9094-5046c19e883f"
+      onload="window.umamiCloud = window.umami; delete window.umami;"></script>
+    {/* Our own Umami as well, only on useanimations.com. Each claims window.umami only if it's
+    free, so the cloud tracker moves aside once it runs; scripts/analytics.ts sends to both. */}
+    <script
+      is:inline
+      defer
+      src="https://umami.tuancodes.com/script.js"
+      data-website-id="24bb398f-c08b-4abd-be1c-5a4a64ca3dc9"
+      data-domains="useanimations.com,www.useanimations.com"></script>
+    <script is:inline>
+      // Session replays and heatmaps for our Umami (switched on in its website settings). The
+      // recorder has no data-domains, so it's only added on useanimations.com.
+      if (['useanimations.com', 'www.useanimations.com'].includes(location.hostname)) {
+        const recorder = document.createElement('script');
+        recorder.src = 'https://umami.tuancodes.com/recorder.js';
+        recorder.dataset.websiteId = '24bb398f-c08b-4abd-be1c-5a4a64ca3dc9';
+        document.head.append(recorder);
+      }
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-bg text-fg"
+    data-copied-text={t(locale).common.copied}
+    data-copy-failed-text={t(locale).common.pressCtrlC}
+  >
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-fg px-4 py-2 text-bg focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >{t(locale).common.skipToContent}</a
+    >
+    <Header locale={locale} alternates={alternates} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer locale={locale} alternates={alternates} />
+    {/* Suggested only on English pages: a visitor on a translated page chose its language. */}
+    {alternates && !locale.prefix && <LanguageBanner locale={locale} alternates={alternates} />}
+    <script>
+      import '../scripts/analytics';
+      import '../scripts/copy';
+    </script>
+  </body>
+</html>

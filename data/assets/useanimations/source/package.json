@@ -1,0 +1,66 @@
+{
+  "name": "react-useanimations",
+  "version": "3.1.1",
+  "private": true,
+  "description": "Official React component for useAnimations animated Lottie icons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/useAnimations/react-useanimations.git"
+  },
+  "author": "Tuan Phung, Marek Feikus",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "website"
+  ],
+  "bugs": {
+    "url": "https://github.com/useAnimations/react-useanimations/issues"
+  },
+  "homepage": "https://useanimations.com",
+  "keywords": [
+    "react",
+    "lottie",
+    "animated-icons",
+    "icons",
+    "microanimations",
+    "svg",
+    "useanimations"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vp pack && node scripts/prepare-dist.ts",
+    "check": "vp check",
+    "format": "vp check --fix",
+    "test": "vp test run",
+    "test:watch": "vp test",
+    "icons": "node scripts/icons.ts",
+    "pack": "node scripts/pack.ts",
+    "verify": "npm run check && npm test && npm run build && npm run pack",
+    "website:dev": "npm run dev -w website",
+    "website:build": "npm run build -w website"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/semver": "^7.8.0",
+    "@vitest/browser-playwright": "^5.0.5",
+    "playwright": "^1.64.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "semver": "^7.7.3",
+    "vite-plus": "1.4.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.11.0"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0",
+    "vitest": "5.0.5"
+  }
+}

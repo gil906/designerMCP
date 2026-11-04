@@ -1,0 +1,27 @@
+---
+import type { Crumb } from '../lib/hubs';
+
+interface Props {
+  /** Every level, the current page last. */
+  crumbs: Crumb[];
+  /** Accessible name of the trail, in the page's language. */
+  label?: string;
+}
+
+const { crumbs, label = 'Breadcrumb' } = Astro.props;
+---
+
+<nav aria-label={label} class="text-sm text-muted">
+  {
+    crumbs.map((crumb, index) =>
+      index < crumbs.length - 1 ? (
+        <>
+          <a href={crumb.path} class="hover:text-fg">{crumb.name}</a>
+          <span class="mx-1.5 text-subtle">/</span>
+        </>
+      ) : (
+        <span class="text-fg" aria-current="page">{crumb.name}</span>
+      )
+    )
+  }
+</nav>

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "inert-licensed-source-reference",
+  "text": "// Author: gre\n// License: MIT\n// Description: A linear crossfade between the two images\n// Tags: fade, blend\n\nvec4 transition (vec2 uv) {\n  return mix(\n    getFromColor(uv),\n    getToColor(uv),\n    progress\n  );\n}\n",
+  "source_url": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/6e235c9649233abda2d2c6cb54a4896aac649175/transitions/Fade.glsl",
+  "revision": "6e235c9649233abda2d2c6cb54a4896aac649175",
+  "source_path": "transitions/Fade.glsl",
+  "source_sha256": "4fbafcd1e5b536b37e256c27a6d7a3d217460b3a6dea0cfee343c3db8b06c5ed",
+  "original_local_path": "assets/linked/gl-transitions/transitions/Fade.glsl",
+  "license": "MIT",
+  "license_path": "licenses/linked/gl-transitions/LICENSE",
+  "notice": "Source text for offline reading only. No code or HTML is executed or rendered."
+}

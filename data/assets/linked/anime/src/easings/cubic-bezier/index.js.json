@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "inert-licensed-source-reference",
+  "text": "import {\n  abs,\n} from '../../core/helpers.js';\n\nimport {\n  none,\n} from '../none.js';\n\n/**\n * @import {\n *   EasingFunction,\n * } from '../../types/index.js'\n*/\n\n/**\n * Cubic Bezier solver adapted from https://github.com/gre/bezier-easing\n * (c) 2014 Gaëtan Renaudeau\n */\n\n/**\n * @param  {Number} aT\n * @param  {Number} aA1\n * @param  {Number} aA2\n * @return {Number}\n */\nconst calcBezier = (aT, aA1, aA2) => (((1 - 3 * aA2 + 3 * aA1) * aT + (3 * aA2 - 6 * aA1)) * aT + (3 * aA1)) * aT;\n\n/**\n * @param  {Number} aX\n * @param  {Number} mX1\n * @param  {Number} mX2\n * @return {Number}\n */\nconst binarySubdivide = (aX, mX1, mX2) => {\n  let aA = 0, aB = 1, currentX, currentT, i = 0;\n  do {\n    currentT = aA + (aB - aA) / 2;\n    currentX = calcBezier(currentT, mX1, mX2) - aX;\n    if (currentX > 0) {\n      aB = currentT;\n    } else {\n      aA = currentT;\n    }\n  } while (abs(currentX) > .0000001 && ++i < 100);\n  return currentT;\n}\n\n/**\n * @param  {Number} [mX1] The x coordinate of the first point\n * @param  {Number} [mY1] The y coordinate of the first point\n * @param  {Number} [mX2] The x coordinate of the second point\n * @param  {Number} [mY2] The y coordinate of the second point\n * @return {EasingFunction}\n */\n\nexport const cubicBezier = (mX1 = 0.5, mY1 = 0.0, mX2 = 0.5, mY2 = 1.0) => (mX1 === mY1 && mX2 === mY2) ? none :\n  t => t === 0 || t === 1 ? t :\n  calcBezier(binarySubdivide(t, mX1, mX2), mY1, mY2);\n",
+  "source_url": "https://raw.githubusercontent.com/juliangarnier/anime/01b81be1df6843ccfe0a71c0699a746bf740dd77/src/easings/cubic-bezier/index.js",
+  "revision": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+  "source_path": "src/easings/cubic-bezier/index.js",
+  "source_sha256": "e2402218c018b4f37a307ccb9e15cb521bbc3a5cb037658dfac6aa8dbfd01e98",
+  "original_local_path": "assets/linked/anime/src/easings/cubic-bezier/index.js",
+  "license": "MIT",
+  "license_path": "licenses/linked/anime/LICENSE.md",
+  "notice": "Source text for offline reading only. No code or HTML is executed or rendered."
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "inert-licensed-source-reference",
+  "text": "use rapier_testbed2d::TestbedViewer;\nuse rapier2d::prelude::*;\n\npub async fn run(viewer: &mut TestbedViewer) -> anyhow::Result<()> {\n    /*\n     * World\n     */\n    let mut world = PhysicsWorld::new();\n    world.gravity = Vector::ZERO;\n\n    /*\n     * Create the balls\n     */\n    let num = 10;\n    let rad = 0.2;\n\n    let subdiv = 1.0 / (num as f32);\n\n    for i in 0usize..num {\n        let (x, y) = (i as f32 * subdiv * std::f32::consts::PI * 2.0).sin_cos();\n\n        // Build the rigid body.\n        let rb = RigidBodyBuilder::dynamic()\n            .translation(Vector::new(x, y))\n            .linvel(Vector::new(x * 10.0, y * 10.0))\n            .angvel(100.0)\n            .linear_damping((i + 1) as f32 * subdiv * 10.0)\n            .angular_damping((num - i) as f32 * subdiv * 10.0);\n        // Build the collider.\n        let co = ColliderBuilder::cuboid(rad, rad);\n        let _ = world.insert(rb, co);\n    }\n\n    /*\n     * Set up the testbed.\n     */\n    viewer.set_world(&mut world);\n    viewer.look_at(Vec2::new(3.0, 2.0), 50.0);\n\n    while viewer.render_frame(&mut world).await {\n        if viewer.simulating() {\n            world.step();\n        }\n    }\n    Ok(())\n}\n",
+  "source_url": "https://raw.githubusercontent.com/dimforge/rapier/475caa3ff4646fd9a796b67d14116256f4962bc7/examples2d/damping2.rs",
+  "revision": "475caa3ff4646fd9a796b67d14116256f4962bc7",
+  "source_path": "examples2d/damping2.rs",
+  "source_sha256": "563c300e42a16b43890411dc3c97b5e21fdf25e96d8aaa16ef6dcadf3b8374b6",
+  "original_local_path": "assets/linked/rapier/examples2d/damping2.rs",
+  "license": "Apache-2.0",
+  "license_path": "licenses/linked/rapier/LICENSE",
+  "notice": "Source text for offline reading only. No code or HTML is executed or rendered."
+}

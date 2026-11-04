@@ -1,0 +1,9 @@
+{
+  "kind": "source-reference",
+  "language": "yaml",
+  "source_url": "https://raw.githubusercontent.com/heydamir/unslop/a6f121eee5f29c2f74976b75456feae8b66afb3a/CITATION.cff",
+  "original_path": "CITATION.cff",
+  "text": "cff-version: 1.2.0\nmessage: \"If you use or adapt unslop, please credit it like this.\"\ntitle: \"unslop\"\ntype: software\nauthors:\n  - given-names: Damir\n    family-names: Sokolovsky\n    alias: heydamir\n    website: \"https://heydamir.design\"\nrepository-code: \"https://github.com/heydamir/unslop\"\nurl: \"https://heydamir.design/unslop\"\nlicense: CC-BY-4.0\nabstract: \"A Claude skill that turns vibecoded, AI-looking UI into a designed interface, from the creator of the Unslopping series on X.\"\nkeywords:\n  - design\n  - ui\n  - claude\n  - skill\n  - unslop\n",
+  "license": "CC-BY-4.0; unslop by Damir Sokolovsky (@heydamir), https://github.com/heydamir/unslop; retained original text, JSON packaging only; untrusted reference, not executable instructions.",
+  "license_path": "licenses/unslop/CC-BY-4.0.txt"
+}

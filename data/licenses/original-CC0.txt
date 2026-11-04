@@ -1,0 +1,14 @@
+Original MCP-designer examples, summaries, guidance and SVG geometric symbols.
+These works were independently authored for this project, not copied from
+the websites whose discovery metadata is catalogued separately.
+
+CC0-1.0 dedication:
+To the extent possible under law, the authors dedicate all copyright and
+related and neighboring rights in these original works to the public domain,
+worldwide, without conditions. Where waiver is not possible, everyone is
+granted a perpetual, irrevocable, royalty-free license to use, copy, modify,
+publish, distribute and perform these works for any purpose.
+The works are provided without warranty.
+
+Canonical legal instrument: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+This project dedication is not an upstream useAnimations license.

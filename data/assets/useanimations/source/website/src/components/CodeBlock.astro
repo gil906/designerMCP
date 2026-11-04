@@ -1,0 +1,32 @@
+---
+import { EN, type Locale, t } from '../i18n';
+import { highlight } from '../lib/highlight';
+import ControlIcon from './ControlIcon';
+
+interface Props {
+  code: string;
+  lang: string;
+  label?: string;
+  class?: string;
+  /** Event data for the copy button, e.g. { icon, code } (scripts/analytics.ts). */
+  track?: Record<string, string>;
+  /** Language of the button text. */
+  locale?: Locale;
+}
+const { code, lang, label, class: className, track = { code: lang }, locale = EN } = Astro.props;
+const trackData = Object.fromEntries(Object.entries(track).map(([key, value]) => [`data-track-${key}`, value]));
+const html = await highlight(code, lang);
+---
+
+<div class:list={['code-block group/code', className]} data-copy-scope>
+  {label && <div class="border-b border-line px-4 py-2 text-xs text-subtle">{label}</div>}
+  <div data-code set:html={html} />
+  <button
+    type="button"
+    data-copy-from="[data-code]"
+    data-track="copy"
+    {...trackData}
+    class="absolute top-2 right-2 inline-flex items-center gap-1 rounded-lg border border-line bg-surface px-2 py-1 text-xs text-muted opacity-0 transition group-hover/code:opacity-100 focus:opacity-100 data-[copied]:text-accent"
+    ><ControlIcon client:idle icon="copy" copied="checkmark" size={14} /><span data-copy-label>{t(locale).common.copy}</span></button
+  >
+</div>

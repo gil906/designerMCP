@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from 'astro';
+import type { Interaction } from 'react-useanimations';
+import { EN } from '../../i18n';
+import { interactions } from '../../lib/hubs';
+import InteractionPage from '../../views/InteractionPage.astro';
+
+export const getStaticPaths = (() =>
+  interactions().map(({ interaction }) => ({ params: { slug: interaction }, props: { interaction } }))) satisfies GetStaticPaths;
+
+const { interaction } = Astro.props as { interaction: Interaction };
+---
+
+<InteractionPage locale={EN} interaction={interaction} />

@@ -1,0 +1,1395 @@
+{
+  "version": 1,
+  "generated_at": "2026-11-04T01:04:52.656526+00:00",
+  "discovery_manifest": "discovery.json",
+  "discovery_sha256": "4b80622a986cf8390b8e12083707d77c5c1389dc48a02a0bef29236919bd10a6",
+  "policy": {
+    "file_cap_bytes": 250000,
+    "aggregate_cap_bytes": 25000000,
+    "network": "Public HTTPS API/raw allowlist only; DNS checked for public addresses on every request/redirect.",
+    "selection": "Explicit files only, immutable commit URLs, no archives/clones, no upstream execution.",
+    "scope": "Original summaries/guidance/examples; actual upstream license text and small source-only selections.",
+    "not_a_mirror": true,
+    "original_content": "Original inline examples and editorial guidance dedicated under CC0-1.0; upstream files retain their recorded licenses.",
+    "builder_path": "assets/linked/import-builder.py",
+    "builder_sha256": "fe9678275b6fb3062718a962ef2e168b36f6cec47687dcf1bd2ca0e2b548d264"
+  },
+  "coverage": {
+    "canonical_unique_urls": 35,
+    "linked_destinations": 33,
+    "entries": 33,
+    "primary_library_targets_excluded": [
+      "https://github.com/useAnimations/react-useanimations",
+      "https://useanimations.com/"
+    ],
+    "source_links": [
+      {
+        "entry_id": "linked-motionsites-studio",
+        "url": "https://studio.motionsites.ai",
+        "discovered_in": [
+          "https://x.com/rosemoni18/status/2117759097131176201",
+          "https://x.com/viktoroddy/status/2117585451502719144"
+        ],
+        "discovery_license_assessment": "Proprietary; no separate redistribution license found on the Studio page. Related MotionSites terms permit building projects but prohibit republishing its prompt/source library.",
+        "discovery_license_url": "https://motionsites.ai/terms"
+      },
+      {
+        "entry_id": "linked-motionsites",
+        "url": "https://motionsites.ai",
+        "discovered_in": [
+          "https://x.com/rosemoni18/status/2117759097131176201",
+          "https://x.com/viktoroddy/status/2117585451502719144",
+          "https://x.com/abir35627/status/2117756345311216121"
+        ],
+        "discovery_license_assessment": "Custom terms permit using and modifying prompts/source in projects; prohibit redistributing prompt text or source itself, republishing the library and bulk scraping. Metadata only for this offline library.",
+        "discovery_license_url": "https://motionsites.ai/terms"
+      },
+      {
+        "entry_id": "linked-land-book",
+        "url": "https://land-book.com",
+        "discovered_in": [
+          "https://x.com/rosemoni18/status/2117759097131176201",
+          "https://x.com/MaybeFlorent/status/2117644473567981581",
+          "https://x.com/viktoroddy/status/2117585451502719144",
+          "https://x.com/abir35627/status/2117756345311216121"
+        ],
+        "discovery_license_assessment": "Unknown; inaccessible destination. No permission to copy assets established.",
+        "discovery_license_url": null
+      },
+      {
+        "entry_id": "linked-recent",
+        "url": "https://recent.design",
+        "discovered_in": [
+          "https://x.com/rosemoni18/status/2117759097131176201",
+          "https://x.com/viktoroddy/status/2117585451502719144",
+          "https://x.com/abir35627/status/2117756345311216121"
+        ],
+        "discovery_license_assessment": "No explicit asset redistribution license found on the public landing page. Gallery availability is not permission to copy third-party work.",
+        "discovery_license_url": null
+      },
+      {
+        "entry_id": "linked-landdding",
+        "url": "https://landdding.com",
+        "discovered_in": [
+          "https://x.com/rosemoni18/status/2117759097131176201",
+          "https://x.com/viktoroddy/status/2117585451502719144",
+          "https://x.com/abir35627/status/2117756345311216121"
+        ],
+        "discovery_license_assessment": "Terms reserve site-content intellectual property to Landdding or third parties and limit content use to personal, non-commercial needs. No offline asset redistribution permission established.",
+        "discovery_license_url": "https://landdding.com/terms"
+      },
+      {
+        "entry_id": "linked-font-in-logo",
+        "url": "https://fontinlogo.com",
+        "discovered_in": [
+          "https://x.com/rosemoni18/status/2117759097131176201",
+          "https://x.com/viktoroddy/status/2117585451502719144",
+          "https://x.com/abir35627/status/2117756345311216121"
+        ],
+        "discovery_license_assessment": "No explicit font, logo or screenshot redistribution license found on the landing page. Font and trademark rights require separate verification.",
+        "discovery_license_url": null
+      },
+      {
+        "entry_id": "linked-godly",
+        "url": "https://godly.website",
+        "discovered_in": [
+          "https://x.com/rosemoni18/status/2117759097131176201",
+          "https://x.com/MaybeFlorent/status/2117644473567981581",
+          "https://x.com/viktoroddy/status/2117585451502719144",
+          "https://x.com/abir35627/status/2117756345311216121"
+        ],
+        "discovery_license_assessment": "No explicit redistribution license found on the redirected gallery. Metadata only; third-party designs are not licensed by public visibility.",
+        "discovery_license_url": null
+      },
+      {
+        "entry_id": "linked-60fps",
+        "url": "https://60fps.design",
+        "discovered_in": [
+          "https://x.com/rosemoni18/status/2117759097131176201",
+          "https://x.com/MaybeFlorent/status/2117644473567981581",
+          "https://x.com/viktoroddy/status/2117585451502719144",
+          "https://x.com/abir35627/status/2117756345311216121"
+        ],
+        "discovery_license_assessment": "Proprietary terms explicitly prohibit bulk copying, mirroring, caching, rehosting, standalone reference libraries and redistribution through another product/API. Do not import its library.",
+        "discovery_license_url": "https://60fps.design/terms"
+      },
+      {
+        "entry_id": "linked-modulify",
+        "url": "https://modulify.ai/templates",
+        "discovered_in": [
+          "https://x.com/BardhylBytyqi/status/2117743227293901029"
+        ],
+        "discovery_license_assessment": "Proprietary service terms allow personal/commercial projects and ownership of user-created work, but prohibit scraping/reverse-engineering and redistribution of Modulify features without permission. No blanket license to republish the template catalog or preview media established.",
+        "discovery_license_url": "https://modulify.ai/legal/terms"
+      },
+      {
+        "entry_id": "linked-oversight-sections",
+        "url": "https://supply.madebyoversight.com/sections",
+        "discovered_in": [
+          "https://x.com/MaybeFlorent/status/2117644473567981581"
+        ],
+        "discovery_license_assessment": "Oversight terms permit unlocked templates in own/client projects subject to item/platform terms; prohibit reselling or redistributing template files/access links. 'Free to copy' does not establish catalog redistribution rights.",
+        "discovery_license_url": "https://supply.madebyoversight.com/terms"
+      },
+      {
+        "entry_id": "linked-oversight-videos",
+        "url": "https://supply.madebyoversight.com/videos",
+        "discovered_in": [
+          "https://x.com/MaybeFlorent/status/2117644473567981581"
+        ],
+        "discovery_license_assessment": "No open-source redistribution license established for the video skills. Oversight's access and template terms are not permission to mirror its files or paid content.",
+        "discovery_license_url": "https://supply.madebyoversight.com/terms"
+      },
+      {
+        "entry_id": "linked-oversight-supply",
+        "url": "https://supply.madebyoversight.com",
+        "discovered_in": [
+          "https://x.com/MaybeFlorent/status/2117644473567981581"
+        ],
+        "discovery_license_assessment": "Proprietary terms restrict template use to own/client projects under applicable licenses and prohibit redistribution of template files/access links. No offline catalog redistribution permission established.",
+        "discovery_license_url": "https://supply.madebyoversight.com/terms"
+      },
+      {
+        "entry_id": "linked-refero",
+        "url": "https://refero.design",
+        "discovered_in": [
+          "https://x.com/MaybeFlorent/status/2117644473567981581"
+        ],
+        "discovery_license_assessment": "Unknown; no reuse license found in the public HTML fetched. Do not infer rights over screenshots or paid catalog content.",
+        "discovery_license_url": null
+      },
+      {
+        "entry_id": "linked-remotion",
+        "url": "https://github.com/remotion-dev/remotion",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "Custom Remotion License, not blanket MIT/open-source permission. Free use is limited to eligible entities including individuals and for-profit organizations with up to three employees; other organizations require a company license. Offline redistribution not established.",
+        "discovery_license_url": "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md"
+      },
+      {
+        "entry_id": "linked-hyperframes",
+        "url": "https://github.com/heygen-com/hyperframes",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "Apache-2.0 verified in root LICENSE; redistribution requires license retention and applicable notice/change obligations. Check separately licensed dependencies/assets before copying.",
+        "discovery_license_url": "https://github.com/heygen-com/hyperframes/blob/main/LICENSE"
+      },
+      {
+        "entry_id": "linked-anime",
+        "url": "https://github.com/juliangarnier/anime",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in LICENSE.md; retain copyright and permission notice with copied software. Separate assets/dependencies require their own review.",
+        "discovery_license_url": "https://github.com/juliangarnier/anime/blob/master/LICENSE.md"
+      },
+      {
+        "entry_id": "linked-react-spring",
+        "url": "https://github.com/pmndrs/react-spring",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in LICENSE on the next branch; retain copyright and permission notice.",
+        "discovery_license_url": "https://github.com/pmndrs/react-spring/blob/next/LICENSE"
+      },
+      {
+        "entry_id": "linked-pixijs",
+        "url": "https://github.com/pixijs/pixijs",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in root LICENSE on dev; retain copyright and permission notice. Demo artwork is not automatically covered.",
+        "discovery_license_url": "https://github.com/pixijs/pixijs/blob/dev/LICENSE"
+      },
+      {
+        "entry_id": "linked-p5-js",
+        "url": "https://github.com/processing/p5.js",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "LGPL-2.1 license text verified in license.txt. Redistribution must meet applicable LGPL conditions; not interchangeable with MIT. Check example/media licenses independently.",
+        "discovery_license_url": "https://github.com/processing/p5.js/blob/main/license.txt"
+      },
+      {
+        "entry_id": "linked-paper-js",
+        "url": "https://github.com/paperjs/paper.js",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in LICENSE.txt despite GitHub's generic License badge; retain copyright and permission notice.",
+        "discovery_license_url": "https://github.com/paperjs/paper.js/blob/develop/LICENSE.txt"
+      },
+      {
+        "entry_id": "linked-matter-js",
+        "url": "https://github.com/liabru/matter-js",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in LICENSE; retain copyright and permission notice.",
+        "discovery_license_url": "https://github.com/liabru/matter-js/blob/master/LICENSE"
+      },
+      {
+        "entry_id": "linked-three-js",
+        "url": "https://github.com/mrdoob/three.js",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in LICENSE on dev; retain copyright and permission notice. Models, textures and examples need separate asset-license review.",
+        "discovery_license_url": "https://github.com/mrdoob/three.js/blob/dev/LICENSE"
+      },
+      {
+        "entry_id": "linked-rapier",
+        "url": "https://github.com/dimforge/rapier",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "Apache-2.0 verified in LICENSE; retain license and applicable notices and document modifications.",
+        "discovery_license_url": "https://github.com/dimforge/rapier/blob/master/LICENSE"
+      },
+      {
+        "entry_id": "linked-ogl",
+        "url": "https://github.com/oframe/ogl",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "Unlicense public-domain dedication and unrestricted-use text verified in repository README. The README's linked master/LICENSE returned 404; use the actually visible README evidence, not that broken file.",
+        "discovery_license_url": "https://github.com/oframe/ogl#unlicense"
+      },
+      {
+        "entry_id": "linked-tsparticles",
+        "url": "https://github.com/tsparticles/tsparticles",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in root LICENSE; retain copyright and permission notice. Review external preset/demo media separately.",
+        "discovery_license_url": "https://github.com/tsparticles/tsparticles/blob/main/LICENSE"
+      },
+      {
+        "entry_id": "linked-gltf-transform",
+        "url": "https://github.com/donmccurdy/glTF-Transform",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in LICENSE.md; retain copyright and permission notice. This licenses the tool, not arbitrary 3D assets processed by it.",
+        "discovery_license_url": "https://github.com/donmccurdy/glTF-Transform/blob/main/LICENSE.md"
+      },
+      {
+        "entry_id": "linked-gl-transitions",
+        "url": "https://github.com/gl-transitions/gl-transitions",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in root LICENSE; retain copyright and permission notice and inspect individual contributions/assets for additional notices.",
+        "discovery_license_url": "https://github.com/gl-transitions/gl-transitions/blob/master/LICENSE"
+      },
+      {
+        "entry_id": "linked-obs-studio",
+        "url": "https://github.com/obsproject/obs-studio",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "GPL-2.0 COPYING verified; redistribution has copyleft/source obligations. The license document includes later-version wording; individual file headers/build dependencies determine exact scope.",
+        "discovery_license_url": "https://github.com/obsproject/obs-studio/blob/master/COPYING"
+      },
+      {
+        "entry_id": "linked-chatterbox",
+        "url": "https://github.com/resemble-ai/chatterbox",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in root LICENSE; retain copyright and permission notice. Independently verify model-weight, dependency and voice-input rights before reuse.",
+        "discovery_license_url": "https://github.com/resemble-ai/chatterbox/blob/master/LICENSE"
+      },
+      {
+        "entry_id": "linked-tone-js",
+        "url": "https://github.com/Tonejs/Tone.js",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in LICENSE.md on dev; retain copyright and permission notice. Audio samples remain independently licensed.",
+        "discovery_license_url": "https://github.com/Tonejs/Tone.js/blob/dev/LICENSE.md"
+      },
+      {
+        "entry_id": "linked-faster-whisper",
+        "url": "https://github.com/SYSTRAN/faster-whisper",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT verified in root LICENSE; retain copyright and permission notice. Model weights and other dependencies require separate verification.",
+        "discovery_license_url": "https://github.com/SYSTRAN/faster-whisper/blob/master/LICENSE"
+      },
+      {
+        "entry_id": "linked-opencut",
+        "url": "https://github.com/OpenCut-app/OpenCut",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "MIT grant verified in root LICENSE; retain copyright and permission notice. Imported user media is not licensed by the editor.",
+        "discovery_license_url": "https://github.com/OpenCut-app/OpenCut/blob/main/LICENSE"
+      },
+      {
+        "entry_id": "linked-ffmpeg",
+        "url": "https://github.com/FFmpeg/FFmpeg",
+        "discovered_in": [
+          "https://x.com/e1genqq/status/2114445900131013003"
+        ],
+        "discovery_license_assessment": "LICENSE.md states default combined scope LGPL-2.1-or-later; optional GPL components and version-3 dependencies change obligations, and nonfree configurations can be unredistributable. Evaluate the exact build before distribution.",
+        "discovery_license_url": "https://github.com/FFmpeg/FFmpeg/blob/master/LICENSE.md"
+      }
+    ]
+  },
+  "repositories": [
+    {
+      "entry_id": "hyperframes",
+      "repository": "heygen-com/hyperframes",
+      "revision": "e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2",
+      "license": "Apache-2.0",
+      "license_path": "licenses/linked/hyperframes/LICENSE",
+      "notice_review": [
+        "root NOTICE absent at pinned revision (HTTP 404)"
+      ],
+      "source_files": 2
+    },
+    {
+      "entry_id": "anime",
+      "repository": "juliangarnier/anime",
+      "revision": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+      "license": "MIT",
+      "license_path": "licenses/linked/anime/LICENSE.md",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "react-spring",
+      "repository": "pmndrs/react-spring",
+      "revision": "83e476061290532ab517c4d4dfd60de21589e78e",
+      "license": "MIT",
+      "license_path": "licenses/linked/react-spring/LICENSE",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "pixijs",
+      "repository": "pixijs/pixijs",
+      "revision": "4fabfa6409c35cc114cb4fbfbb812c9cd8abdced",
+      "license": "MIT",
+      "license_path": "licenses/linked/pixijs/LICENSE",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "p5-js",
+      "repository": "processing/p5.js",
+      "revision": "3dd088659b733505f0be9d6eb3f7a61e8142b9f6",
+      "license": "LGPL-2.1",
+      "license_path": "licenses/linked/p5-js/license.txt",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "paper-js",
+      "repository": "paperjs/paper.js",
+      "revision": "f8550b13446b68b8de256f627f28a36737a2a18c",
+      "license": "MIT",
+      "license_path": "licenses/linked/paper-js/LICENSE.txt",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "matter-js",
+      "repository": "liabru/matter-js",
+      "revision": "b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5",
+      "license": "MIT",
+      "license_path": "licenses/linked/matter-js/LICENSE",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "three-js",
+      "repository": "mrdoob/three.js",
+      "revision": "c6a4b78be1a3d7839399410cc157950c5fd6e58b",
+      "license": "MIT",
+      "license_path": "licenses/linked/three-js/LICENSE",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "rapier",
+      "repository": "dimforge/rapier",
+      "revision": "475caa3ff4646fd9a796b67d14116256f4962bc7",
+      "license": "Apache-2.0",
+      "license_path": "licenses/linked/rapier/LICENSE",
+      "notice_review": [
+        "root NOTICE absent at pinned revision (HTTP 404)"
+      ],
+      "source_files": 2
+    },
+    {
+      "entry_id": "ogl",
+      "repository": "oframe/ogl",
+      "revision": "385ce65c352c70734a36dc98c787fdd1d30ddb3b",
+      "license": "Unlicense",
+      "license_path": "licenses/linked/ogl/README.md",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "tsparticles",
+      "repository": "tsparticles/tsparticles",
+      "revision": "19821ac564e3314ae3d188af2778597b8423693b",
+      "license": "MIT",
+      "license_path": "licenses/linked/tsparticles/LICENSE",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "gltf-transform",
+      "repository": "donmccurdy/glTF-Transform",
+      "revision": "8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f",
+      "license": "MIT",
+      "license_path": "licenses/linked/gltf-transform/LICENSE.md",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "gl-transitions",
+      "repository": "gl-transitions/gl-transitions",
+      "revision": "6e235c9649233abda2d2c6cb54a4896aac649175",
+      "license": "MIT",
+      "license_path": "licenses/linked/gl-transitions/LICENSE",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "obs-studio",
+      "repository": "obsproject/obs-studio",
+      "revision": "7a25c3fd8b5eb87c2d2e0606cae36e32014bc6fa",
+      "license": "GPL-2.0",
+      "license_path": "licenses/linked/obs-studio/COPYING",
+      "notice_review": [],
+      "source_files": 0
+    },
+    {
+      "entry_id": "chatterbox",
+      "repository": "resemble-ai/chatterbox",
+      "revision": "5de7a54aa4e5e2baadb0182dde554908b48b85c2",
+      "license": "MIT",
+      "license_path": "licenses/linked/chatterbox/LICENSE",
+      "notice_review": [],
+      "source_files": 0
+    },
+    {
+      "entry_id": "tone-js",
+      "repository": "Tonejs/Tone.js",
+      "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
+      "license": "MIT",
+      "license_path": "licenses/linked/tone-js/LICENSE.md",
+      "notice_review": [],
+      "source_files": 2
+    },
+    {
+      "entry_id": "faster-whisper",
+      "repository": "SYSTRAN/faster-whisper",
+      "revision": "2a3a857737d17d974f30d818ebec69ce11929e5c",
+      "license": "MIT",
+      "license_path": "licenses/linked/faster-whisper/LICENSE",
+      "notice_review": [],
+      "source_files": 0
+    },
+    {
+      "entry_id": "opencut",
+      "repository": "OpenCut-app/OpenCut",
+      "revision": "e668010778568641babef2cc40be4703ae6916d6",
+      "license": "MIT",
+      "license_path": "licenses/linked/opencut/LICENSE",
+      "notice_review": [],
+      "source_files": 0
+    },
+    {
+      "entry_id": "ffmpeg",
+      "repository": "FFmpeg/FFmpeg",
+      "revision": "3a3f5e24a95b744d237d0cb01dccb647e44b9457",
+      "license": "build-dependent LGPL/GPL",
+      "license_path": "licenses/linked/ffmpeg/LICENSE.md",
+      "notice_review": [],
+      "source_files": 0
+    }
+  ],
+  "files": [
+    {
+      "path": "licenses/linked/hyperframes/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/heygen-com/hyperframes/e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2/LICENSE",
+      "revision": "e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2",
+      "upstream_path": "LICENSE",
+      "sha256": "4259155fb06f127687ee7b0a8a3682d45132db0f2da26cbc0b7a2d1e796436b8",
+      "bytes": 10763,
+      "license": "Apache-2.0",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/hyperframes/examples/aws-lambda/README.md",
+      "source_url": "https://raw.githubusercontent.com/heygen-com/hyperframes/e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2/examples/aws-lambda/README.md",
+      "revision": "e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2",
+      "upstream_path": "examples/aws-lambda/README.md",
+      "sha256": "e7c9130d21441c4d5abc7e8d8f39bdff3d07a8d520261c6302c3d8a1312d6f96",
+      "bytes": 11947,
+      "license": "Apache-2.0",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/hyperframes/examples/aws-lambda/README.md.json",
+      "source_url": "https://raw.githubusercontent.com/heygen-com/hyperframes/e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2/examples/aws-lambda/README.md",
+      "revision": "e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2",
+      "upstream_path": "examples/aws-lambda/README.md",
+      "sha256": "3af57a7c7eca99caaf18ee2b6949db056fbbf23893e9ff6354e3b8d2a5ad7d2a",
+      "bytes": 12941,
+      "license": "Apache-2.0",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/hyperframes/examples/gcp-cloud-run/README.md",
+      "source_url": "https://raw.githubusercontent.com/heygen-com/hyperframes/e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2/examples/gcp-cloud-run/README.md",
+      "revision": "e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2",
+      "upstream_path": "examples/gcp-cloud-run/README.md",
+      "sha256": "8b4b64c0135be4efca931e65da3a3d10828e090cdb75dbeab34d4998eb9c8091",
+      "bytes": 4594,
+      "license": "Apache-2.0",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/hyperframes/examples/gcp-cloud-run/README.md.json",
+      "source_url": "https://raw.githubusercontent.com/heygen-com/hyperframes/e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2/examples/gcp-cloud-run/README.md",
+      "revision": "e46ecd850ec49fb2d97d8e4cca71ab30dc1849e2",
+      "upstream_path": "examples/gcp-cloud-run/README.md",
+      "sha256": "0953f5f359347cd8355ab8b71e91dd6f8f0b14d5215df7108f39391ae74b0132",
+      "bytes": 5419,
+      "license": "Apache-2.0",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/anime/LICENSE.md",
+      "source_url": "https://raw.githubusercontent.com/juliangarnier/anime/01b81be1df6843ccfe0a71c0699a746bf740dd77/LICENSE.md",
+      "revision": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+      "upstream_path": "LICENSE.md",
+      "sha256": "3f3e835a9952cfc2a6ca836fb95b3257c981f24fa3ef51249055acb09931897b",
+      "bytes": 1075,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/anime/src/easings/linear/index.js",
+      "source_url": "https://raw.githubusercontent.com/juliangarnier/anime/01b81be1df6843ccfe0a71c0699a746bf740dd77/src/easings/linear/index.js",
+      "revision": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+      "upstream_path": "src/easings/linear/index.js",
+      "sha256": "15a63e51c7b7026f0daf47d76b775d40d676f9c64967cbce316f70f22e986a6c",
+      "bytes": 1515,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/anime/src/easings/linear/index.js.json",
+      "source_url": "https://raw.githubusercontent.com/juliangarnier/anime/01b81be1df6843ccfe0a71c0699a746bf740dd77/src/easings/linear/index.js",
+      "revision": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+      "upstream_path": "src/easings/linear/index.js",
+      "sha256": "e6d477c99bb478eeba4801bfa26f39567aa9c88f3dc4b5eea01895b555283524",
+      "bytes": 2227,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/anime/src/easings/cubic-bezier/index.js",
+      "source_url": "https://raw.githubusercontent.com/juliangarnier/anime/01b81be1df6843ccfe0a71c0699a746bf740dd77/src/easings/cubic-bezier/index.js",
+      "revision": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+      "upstream_path": "src/easings/cubic-bezier/index.js",
+      "sha256": "e2402218c018b4f37a307ccb9e15cb521bbc3a5cb037658dfac6aa8dbfd01e98",
+      "bytes": 1420,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/anime/src/easings/cubic-bezier/index.js.json",
+      "source_url": "https://raw.githubusercontent.com/juliangarnier/anime/01b81be1df6843ccfe0a71c0699a746bf740dd77/src/easings/cubic-bezier/index.js",
+      "revision": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+      "upstream_path": "src/easings/cubic-bezier/index.js",
+      "sha256": "cddcba053a9e7d1678312727025674e446b6ada164e7e91382b76f7a704d9bdb",
+      "bytes": 2153,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/react-spring/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/react-spring/83e476061290532ab517c4d4dfd60de21589e78e/LICENSE",
+      "revision": "83e476061290532ab517c4d4dfd60de21589e78e",
+      "upstream_path": "LICENSE",
+      "sha256": "51863a051d919d260e725327cb58df68d04289919d90fa64283beb9c646a2b02",
+      "bytes": 1110,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/react-spring/packages/core/src/hooks/useSpring.ts",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/react-spring/83e476061290532ab517c4d4dfd60de21589e78e/packages/core/src/hooks/useSpring.ts",
+      "revision": "83e476061290532ab517c4d4dfd60de21589e78e",
+      "upstream_path": "packages/core/src/hooks/useSpring.ts",
+      "sha256": "08402f1904fa7244067ab7dc307b4d0f1a7e6b80e5ff7e2ec7bcfc65142d572a",
+      "bytes": 2175,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/react-spring/packages/core/src/hooks/useSpring.ts.json",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/react-spring/83e476061290532ab517c4d4dfd60de21589e78e/packages/core/src/hooks/useSpring.ts",
+      "revision": "83e476061290532ab517c4d4dfd60de21589e78e",
+      "upstream_path": "packages/core/src/hooks/useSpring.ts",
+      "sha256": "935f681cdca947d6cce67092aee293d7d17a059ab4b2a26a5b3a55aaa1ba123f",
+      "bytes": 2945,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/react-spring/demo/src/sandboxes/chain/src/App.tsx",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/react-spring/83e476061290532ab517c4d4dfd60de21589e78e/demo/src/sandboxes/chain/src/App.tsx",
+      "revision": "83e476061290532ab517c4d4dfd60de21589e78e",
+      "upstream_path": "demo/src/sandboxes/chain/src/App.tsx",
+      "sha256": "2aaba6926c61ecee2ec489ecfaa388ced6d7f0a1125112554274e8a577cd7763",
+      "bytes": 1493,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/react-spring/demo/src/sandboxes/chain/src/App.tsx.json",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/react-spring/83e476061290532ab517c4d4dfd60de21589e78e/demo/src/sandboxes/chain/src/App.tsx",
+      "revision": "83e476061290532ab517c4d4dfd60de21589e78e",
+      "upstream_path": "demo/src/sandboxes/chain/src/App.tsx",
+      "sha256": "34dd5bda69c2d922ad3e494b0a3d8966c503e1a18c29dd2876dbebe9c34448c7",
+      "bytes": 2248,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/pixijs/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/pixijs/pixijs/4fabfa6409c35cc114cb4fbfbb812c9cd8abdced/LICENSE",
+      "revision": "4fabfa6409c35cc114cb4fbfbb812c9cd8abdced",
+      "upstream_path": "LICENSE",
+      "sha256": "5ce7447bc57f7349ffc48338782fbcabe613696e00712b20d66bc58e780f9473",
+      "bytes": 1092,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/pixijs/src/maths/point/Point.ts",
+      "source_url": "https://raw.githubusercontent.com/pixijs/pixijs/4fabfa6409c35cc114cb4fbfbb812c9cd8abdced/src/maths/point/Point.ts",
+      "revision": "4fabfa6409c35cc114cb4fbfbb812c9cd8abdced",
+      "upstream_path": "src/maths/point/Point.ts",
+      "sha256": "14ca3b7bc680fc16d22314046962e29a5582687f6f53bb41d42cde794f32a8e5",
+      "bytes": 7266,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/pixijs/src/maths/point/Point.ts.json",
+      "source_url": "https://raw.githubusercontent.com/pixijs/pixijs/4fabfa6409c35cc114cb4fbfbb812c9cd8abdced/src/maths/point/Point.ts",
+      "revision": "4fabfa6409c35cc114cb4fbfbb812c9cd8abdced",
+      "upstream_path": "src/maths/point/Point.ts",
+      "sha256": "6a10548ec98e6cc9b5cff6d308e76a8e3bd25da9128026be29f3e8ff0b2a4f98",
+      "bytes": 8164,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/pixijs/src/maths/point/ObservablePoint.ts",
+      "source_url": "https://raw.githubusercontent.com/pixijs/pixijs/4fabfa6409c35cc114cb4fbfbb812c9cd8abdced/src/maths/point/ObservablePoint.ts",
+      "revision": "4fabfa6409c35cc114cb4fbfbb812c9cd8abdced",
+      "upstream_path": "src/maths/point/ObservablePoint.ts",
+      "sha256": "edc1ac2b9223f5f2c16430ae0a592d1a3f0e15c0c1fcf24667532272044c11ec",
+      "bytes": 8840,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/pixijs/src/maths/point/ObservablePoint.ts.json",
+      "source_url": "https://raw.githubusercontent.com/pixijs/pixijs/4fabfa6409c35cc114cb4fbfbb812c9cd8abdced/src/maths/point/ObservablePoint.ts",
+      "revision": "4fabfa6409c35cc114cb4fbfbb812c9cd8abdced",
+      "upstream_path": "src/maths/point/ObservablePoint.ts",
+      "sha256": "7100ae9dfa21dc5278523be16ca2e6062b89492224ee1f8f2a68483c4aae988c",
+      "bytes": 9813,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/p5-js/license.txt",
+      "source_url": "https://raw.githubusercontent.com/processing/p5.js/3dd088659b733505f0be9d6eb3f7a61e8142b9f6/license.txt",
+      "revision": "3dd088659b733505f0be9d6eb3f7a61e8142b9f6",
+      "upstream_path": "license.txt",
+      "sha256": "eb2f25f8f165d5f20682c1ce7e99ce69144ecfd80fbed8c17dfd327ecd8b6cb6",
+      "bytes": 24480,
+      "license": "LGPL-2.1",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/p5-js/src/math/trigonometry.js",
+      "source_url": "https://raw.githubusercontent.com/processing/p5.js/3dd088659b733505f0be9d6eb3f7a61e8142b9f6/src/math/trigonometry.js",
+      "revision": "3dd088659b733505f0be9d6eb3f7a61e8142b9f6",
+      "upstream_path": "src/math/trigonometry.js",
+      "sha256": "9a55fc5313d9e8043350705e9b85206c5bafb445c386e1cd9123ec18c78ecb71",
+      "bytes": 33711,
+      "license": "LGPL-2.1",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/p5-js/src/math/trigonometry.js.json",
+      "source_url": "https://raw.githubusercontent.com/processing/p5.js/3dd088659b733505f0be9d6eb3f7a61e8142b9f6/src/math/trigonometry.js",
+      "revision": "3dd088659b733505f0be9d6eb3f7a61e8142b9f6",
+      "upstream_path": "src/math/trigonometry.js",
+      "sha256": "6c3b85bfdfaad0a0cc723994514050f0154c031700db706026e7c850f9fd9252",
+      "bytes": 35595,
+      "license": "LGPL-2.1",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/p5-js/src/math/calculation.js",
+      "source_url": "https://raw.githubusercontent.com/processing/p5.js/3dd088659b733505f0be9d6eb3f7a61e8142b9f6/src/math/calculation.js",
+      "revision": "3dd088659b733505f0be9d6eb3f7a61e8142b9f6",
+      "upstream_path": "src/math/calculation.js",
+      "sha256": "324c7e07f0cf8d3eb4fc84e53534aa86315973b3c2fac0bc10021f6df5f3e3e0",
+      "bytes": 45264,
+      "license": "LGPL-2.1",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/p5-js/src/math/calculation.js.json",
+      "source_url": "https://raw.githubusercontent.com/processing/p5.js/3dd088659b733505f0be9d6eb3f7a61e8142b9f6/src/math/calculation.js",
+      "revision": "3dd088659b733505f0be9d6eb3f7a61e8142b9f6",
+      "upstream_path": "src/math/calculation.js",
+      "sha256": "64c6414d11bbf273cd26fe1af5ec19ea46e524774de3366d8789351cc7ecece7",
+      "bytes": 47533,
+      "license": "LGPL-2.1",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/paper-js/LICENSE.txt",
+      "source_url": "https://raw.githubusercontent.com/paperjs/paper.js/f8550b13446b68b8de256f627f28a36737a2a18c/LICENSE.txt",
+      "revision": "f8550b13446b68b8de256f627f28a36737a2a18c",
+      "upstream_path": "LICENSE.txt",
+      "sha256": "f8833a38807922b4652421eb0cf29065400c55abd6f4832b9c3250dae87e1958",
+      "bytes": 1173,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/paper-js/src/basic/Point.js",
+      "source_url": "https://raw.githubusercontent.com/paperjs/paper.js/f8550b13446b68b8de256f627f28a36737a2a18c/src/basic/Point.js",
+      "revision": "f8550b13446b68b8de256f627f28a36737a2a18c",
+      "upstream_path": "src/basic/Point.js",
+      "sha256": "c34bceefd5b0f1d33eba41d29a30d8e7b5401dbd4e83d41a34c9fd0ebac6ba72",
+      "bytes": 36366,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/paper-js/src/basic/Point.js.json",
+      "source_url": "https://raw.githubusercontent.com/paperjs/paper.js/f8550b13446b68b8de256f627f28a36737a2a18c/src/basic/Point.js",
+      "revision": "f8550b13446b68b8de256f627f28a36737a2a18c",
+      "upstream_path": "src/basic/Point.js",
+      "sha256": "80b633817926cafad60761722d1bcf826177335bf2d46c094dba7cca33de4159",
+      "bytes": 38185,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/paper-js/src/basic/Size.js",
+      "source_url": "https://raw.githubusercontent.com/paperjs/paper.js/f8550b13446b68b8de256f627f28a36737a2a18c/src/basic/Size.js",
+      "revision": "f8550b13446b68b8de256f627f28a36737a2a18c",
+      "upstream_path": "src/basic/Size.js",
+      "sha256": "590589c294a3c4835c9caaff5120b49b30159d381419762419e46af3fd31e6c4",
+      "bytes": 19334,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/paper-js/src/basic/Size.js.json",
+      "source_url": "https://raw.githubusercontent.com/paperjs/paper.js/f8550b13446b68b8de256f627f28a36737a2a18c/src/basic/Size.js",
+      "revision": "f8550b13446b68b8de256f627f28a36737a2a18c",
+      "upstream_path": "src/basic/Size.js",
+      "sha256": "ed01dad8e6a76b84a24a0f0f019569abac8b572aaa198cc43d2e83690355dd54",
+      "bytes": 20622,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/matter-js/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/liabru/matter-js/b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5/LICENSE",
+      "revision": "b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5",
+      "upstream_path": "LICENSE",
+      "sha256": "ed182087be5b26734aa6d4789743de3a97417950e8c1e3ff2e3d19c6462720d3",
+      "bytes": 1092,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/matter-js/examples/constraints.js",
+      "source_url": "https://raw.githubusercontent.com/liabru/matter-js/b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5/examples/constraints.js",
+      "revision": "b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5",
+      "upstream_path": "examples/constraints.js",
+      "sha256": "256b0cb87a42b9b4111c9b9514ff69787af926d3c9d428ebe6112368e2a9c8f3",
+      "bytes": 4946,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/matter-js/examples/constraints.js.json",
+      "source_url": "https://raw.githubusercontent.com/liabru/matter-js/b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5/examples/constraints.js",
+      "revision": "b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5",
+      "upstream_path": "examples/constraints.js",
+      "sha256": "b7b2b1ddd808cc1eac170e4aa2844e5ea1d0c14361034663a084b2d20da999dd",
+      "bytes": 5780,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/matter-js/examples/gravity.js",
+      "source_url": "https://raw.githubusercontent.com/liabru/matter-js/b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5/examples/gravity.js",
+      "revision": "b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5",
+      "upstream_path": "examples/gravity.js",
+      "sha256": "77d6f16e1a96862c855b3cb9b8b53c882df1d53371bf19a3b0c50045ca85df91",
+      "bytes": 2775,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/matter-js/examples/gravity.js.json",
+      "source_url": "https://raw.githubusercontent.com/liabru/matter-js/b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5/examples/gravity.js",
+      "revision": "b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5",
+      "upstream_path": "examples/gravity.js",
+      "sha256": "3e4f5953861ea9948dcbee341d364874bfeb8cff7d13f209d59e50b6339c80c5",
+      "bytes": 3514,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/three-js/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/mrdoob/three.js/c6a4b78be1a3d7839399410cc157950c5fd6e58b/LICENSE",
+      "revision": "c6a4b78be1a3d7839399410cc157950c5fd6e58b",
+      "upstream_path": "LICENSE",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "bytes": 1081,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/three-js/src/math/MathUtils.js",
+      "source_url": "https://raw.githubusercontent.com/mrdoob/three.js/c6a4b78be1a3d7839399410cc157950c5fd6e58b/src/math/MathUtils.js",
+      "revision": "c6a4b78be1a3d7839399410cc157950c5fd6e58b",
+      "upstream_path": "src/math/MathUtils.js",
+      "sha256": "dcb68bacb1d970686b1f19504fbebbe2388b36494380cf946e375705789c90f4",
+      "bytes": 22261,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/three-js/src/math/MathUtils.js.json",
+      "source_url": "https://raw.githubusercontent.com/mrdoob/three.js/c6a4b78be1a3d7839399410cc157950c5fd6e58b/src/math/MathUtils.js",
+      "revision": "c6a4b78be1a3d7839399410cc157950c5fd6e58b",
+      "upstream_path": "src/math/MathUtils.js",
+      "sha256": "a47114a398fff9941a6e8eb9254e042a86524f5a2f82010b330fdb2b1794fa26",
+      "bytes": 24074,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/three-js/src/math/Vector2.js",
+      "source_url": "https://raw.githubusercontent.com/mrdoob/three.js/c6a4b78be1a3d7839399410cc157950c5fd6e58b/src/math/Vector2.js",
+      "revision": "c6a4b78be1a3d7839399410cc157950c5fd6e58b",
+      "upstream_path": "src/math/Vector2.js",
+      "sha256": "ce272e52c89ec0ce53054de08210fde248214938b78fcb07bb72d1b7bb3a7b48",
+      "bytes": 18289,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/three-js/src/math/Vector2.js.json",
+      "source_url": "https://raw.githubusercontent.com/mrdoob/three.js/c6a4b78be1a3d7839399410cc157950c5fd6e58b/src/math/Vector2.js",
+      "revision": "c6a4b78be1a3d7839399410cc157950c5fd6e58b",
+      "upstream_path": "src/math/Vector2.js",
+      "sha256": "2ad736bde3803d08eaff89cb23ed881c815fdb54d373297e167b5f033626d9f0",
+      "bytes": 20576,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/rapier/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/dimforge/rapier/475caa3ff4646fd9a796b67d14116256f4962bc7/LICENSE",
+      "revision": "475caa3ff4646fd9a796b67d14116256f4962bc7",
+      "upstream_path": "LICENSE",
+      "sha256": "ceacfa4d7fa67df64ab09a56fe248c50a3bfc9bc00374d69bd74ad763b14b89c",
+      "bytes": 11347,
+      "license": "Apache-2.0",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/rapier/examples2d/damping2.rs",
+      "source_url": "https://raw.githubusercontent.com/dimforge/rapier/475caa3ff4646fd9a796b67d14116256f4962bc7/examples2d/damping2.rs",
+      "revision": "475caa3ff4646fd9a796b67d14116256f4962bc7",
+      "upstream_path": "examples2d/damping2.rs",
+      "sha256": "563c300e42a16b43890411dc3c97b5e21fdf25e96d8aaa16ef6dcadf3b8374b6",
+      "bytes": 1177,
+      "license": "Apache-2.0",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/rapier/examples2d/damping2.rs.json",
+      "source_url": "https://raw.githubusercontent.com/dimforge/rapier/475caa3ff4646fd9a796b67d14116256f4962bc7/examples2d/damping2.rs",
+      "revision": "475caa3ff4646fd9a796b67d14116256f4962bc7",
+      "upstream_path": "examples2d/damping2.rs",
+      "sha256": "798d857bbfeadcae1127c7961e77848ac8190e69404cba55e3a182e544e2f767",
+      "bytes": 1867,
+      "license": "Apache-2.0",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/rapier/examples2d/restitution2.rs",
+      "source_url": "https://raw.githubusercontent.com/dimforge/rapier/475caa3ff4646fd9a796b67d14116256f4962bc7/examples2d/restitution2.rs",
+      "revision": "475caa3ff4646fd9a796b67d14116256f4962bc7",
+      "upstream_path": "examples2d/restitution2.rs",
+      "sha256": "28a85ba6fdb0fbdcd7d5303bd2cdbb618fcc8a71b07899de01871e7fa9083b0e",
+      "bytes": 1220,
+      "license": "Apache-2.0",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/rapier/examples2d/restitution2.rs.json",
+      "source_url": "https://raw.githubusercontent.com/dimforge/rapier/475caa3ff4646fd9a796b67d14116256f4962bc7/examples2d/restitution2.rs",
+      "revision": "475caa3ff4646fd9a796b67d14116256f4962bc7",
+      "upstream_path": "examples2d/restitution2.rs",
+      "sha256": "ec81c189c3a3839c00284edd5747fe1c39c725ebcd9545f04860901510f2af4a",
+      "bytes": 1921,
+      "license": "Apache-2.0",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/ogl/README.md",
+      "source_url": "https://raw.githubusercontent.com/oframe/ogl/385ce65c352c70734a36dc98c787fdd1d30ddb3b/README.md",
+      "revision": "385ce65c352c70734a36dc98c787fdd1d30ddb3b",
+      "upstream_path": "README.md",
+      "sha256": "431694c5ceee21023d54c8d11663e028d2f845f00fa49e59cce25f43944c7479",
+      "bytes": 8335,
+      "license": "Unlicense",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/ogl/examples/triangle-screen-shader.html",
+      "source_url": "https://raw.githubusercontent.com/oframe/ogl/385ce65c352c70734a36dc98c787fdd1d30ddb3b/examples/triangle-screen-shader.html",
+      "revision": "385ce65c352c70734a36dc98c787fdd1d30ddb3b",
+      "upstream_path": "examples/triangle-screen-shader.html",
+      "sha256": "f28a785174ac924a22d4f320dbdeb67b4f4366e88fab54adff80f1ee2f1ad7e2",
+      "bytes": 3221,
+      "license": "Unlicense",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/ogl/examples/triangle-screen-shader.html.json",
+      "source_url": "https://raw.githubusercontent.com/oframe/ogl/385ce65c352c70734a36dc98c787fdd1d30ddb3b/examples/triangle-screen-shader.html",
+      "revision": "385ce65c352c70734a36dc98c787fdd1d30ddb3b",
+      "upstream_path": "examples/triangle-screen-shader.html",
+      "sha256": "4a3132d179b01e7fdb8537f34a494abfe193dbfaef03233e77fe637cd22393bc",
+      "bytes": 4020,
+      "license": "Unlicense",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/ogl/src/math/Vec2.js",
+      "source_url": "https://raw.githubusercontent.com/oframe/ogl/385ce65c352c70734a36dc98c787fdd1d30ddb3b/src/math/Vec2.js",
+      "revision": "385ce65c352c70734a36dc98c787fdd1d30ddb3b",
+      "upstream_path": "src/math/Vec2.js",
+      "sha256": "82f10e29f5157b755a7db66d67a423f51008a4aef2ccc579a8f12b8b90d33dba",
+      "bytes": 2809,
+      "license": "Unlicense",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/ogl/src/math/Vec2.js.json",
+      "source_url": "https://raw.githubusercontent.com/oframe/ogl/385ce65c352c70734a36dc98c787fdd1d30ddb3b/src/math/Vec2.js",
+      "revision": "385ce65c352c70734a36dc98c787fdd1d30ddb3b",
+      "upstream_path": "src/math/Vec2.js",
+      "sha256": "fa90f8db39e568aa2ae98a7b41b28f4dc835561f2f3ba1477225ef46854d81ac",
+      "bytes": 3572,
+      "license": "Unlicense",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/tsparticles/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/tsparticles/tsparticles/19821ac564e3314ae3d188af2778597b8423693b/LICENSE",
+      "revision": "19821ac564e3314ae3d188af2778597b8423693b",
+      "upstream_path": "LICENSE",
+      "sha256": "c5c18dbc27f490f2ef90e0b574b8c40f534e495d2cb8a6f1c4bb1183a9c381a4",
+      "bytes": 1069,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/tsparticles/presets/confetti/src/options.ts",
+      "source_url": "https://raw.githubusercontent.com/tsparticles/tsparticles/19821ac564e3314ae3d188af2778597b8423693b/presets/confetti/src/options.ts",
+      "revision": "19821ac564e3314ae3d188af2778597b8423693b",
+      "upstream_path": "presets/confetti/src/options.ts",
+      "sha256": "a889c87bb04b1c0202c2c8168c2bebb96640362bcec11a06e8693fe3cb1e2ac7",
+      "bytes": 2153,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/tsparticles/presets/confetti/src/options.ts.json",
+      "source_url": "https://raw.githubusercontent.com/tsparticles/tsparticles/19821ac564e3314ae3d188af2778597b8423693b/presets/confetti/src/options.ts",
+      "revision": "19821ac564e3314ae3d188af2778597b8423693b",
+      "upstream_path": "presets/confetti/src/options.ts",
+      "sha256": "9a7db1c5dd3085e89b14f98e6e687277a1b7a360f29727338850f99e2837140f",
+      "bytes": 2993,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/tsparticles/presets/stars/src/options.ts",
+      "source_url": "https://raw.githubusercontent.com/tsparticles/tsparticles/19821ac564e3314ae3d188af2778597b8423693b/presets/stars/src/options.ts",
+      "revision": "19821ac564e3314ae3d188af2778597b8423693b",
+      "upstream_path": "presets/stars/src/options.ts",
+      "sha256": "debe047736cd4672b58307e626d4ef0250466eb455e31081583b7cbae64a0850",
+      "bytes": 679,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/tsparticles/presets/stars/src/options.ts.json",
+      "source_url": "https://raw.githubusercontent.com/tsparticles/tsparticles/19821ac564e3314ae3d188af2778597b8423693b/presets/stars/src/options.ts",
+      "revision": "19821ac564e3314ae3d188af2778597b8423693b",
+      "upstream_path": "presets/stars/src/options.ts",
+      "sha256": "556093f28aa7298169541adb185bf6f307a5320133491085bd3a2ee919b9b835",
+      "bytes": 1398,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/gltf-transform/LICENSE.md",
+      "source_url": "https://raw.githubusercontent.com/donmccurdy/glTF-Transform/8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f/LICENSE.md",
+      "revision": "8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f",
+      "upstream_path": "LICENSE.md",
+      "sha256": "2c4f111d00dbf22b10d31a14813c5f5de6a828640f7311f26b9dda89b3fce165",
+      "bytes": 1078,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/gltf-transform/packages/functions/src/center.ts",
+      "source_url": "https://raw.githubusercontent.com/donmccurdy/glTF-Transform/8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f/packages/functions/src/center.ts",
+      "revision": "8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f",
+      "upstream_path": "packages/functions/src/center.ts",
+      "sha256": "1abf2f9ec8ed7fdbed1f0b024202fba6cdc84a61ffdbc19f9173e1661f8458c0",
+      "bytes": 2479,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/gltf-transform/packages/functions/src/center.ts.json",
+      "source_url": "https://raw.githubusercontent.com/donmccurdy/glTF-Transform/8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f/packages/functions/src/center.ts",
+      "revision": "8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f",
+      "upstream_path": "packages/functions/src/center.ts",
+      "sha256": "0a888d53a6c1aa530262cf438b4c676da888b6c3ec45158d222ceec3bde99214",
+      "bytes": 3410,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/gltf-transform/packages/functions/src/get-bounds.ts",
+      "source_url": "https://raw.githubusercontent.com/donmccurdy/glTF-Transform/8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f/packages/functions/src/get-bounds.ts",
+      "revision": "8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f",
+      "upstream_path": "packages/functions/src/get-bounds.ts",
+      "sha256": "5bbe99c84a6679b83391021e557e58ec9c7dc983704f04297c53df8423fc1a28",
+      "bytes": 416,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/gltf-transform/packages/functions/src/get-bounds.ts.json",
+      "source_url": "https://raw.githubusercontent.com/donmccurdy/glTF-Transform/8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f/packages/functions/src/get-bounds.ts",
+      "revision": "8e2a94a2616d293c4b503d0fb6a4b42e6ec7c62f",
+      "upstream_path": "packages/functions/src/get-bounds.ts",
+      "sha256": "948503970abd4877fde305384d0e1f9247f74cd4e74b5f44302c24720d5f22d0",
+      "bytes": 1141,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/gl-transitions/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/6e235c9649233abda2d2c6cb54a4896aac649175/LICENSE",
+      "revision": "6e235c9649233abda2d2c6cb54a4896aac649175",
+      "upstream_path": "LICENSE",
+      "sha256": "0db684e0150546743ae96d8ecf083be716786d834af7dbf8170ee8b6c247978d",
+      "bytes": 1297,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/gl-transitions/transitions/Fade.glsl",
+      "source_url": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/6e235c9649233abda2d2c6cb54a4896aac649175/transitions/Fade.glsl",
+      "revision": "6e235c9649233abda2d2c6cb54a4896aac649175",
+      "upstream_path": "transitions/Fade.glsl",
+      "sha256": "4fbafcd1e5b536b37e256c27a6d7a3d217460b3a6dea0cfee343c3db8b06c5ed",
+      "bytes": 215,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/gl-transitions/transitions/Fade.glsl.json",
+      "source_url": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/6e235c9649233abda2d2c6cb54a4896aac649175/transitions/Fade.glsl",
+      "revision": "6e235c9649233abda2d2c6cb54a4896aac649175",
+      "upstream_path": "transitions/Fade.glsl",
+      "sha256": "d1c881e9bb3521b38b2d4821e0f5c96b5d408431001d13b639ad75d10cf16e1f",
+      "bytes": 891,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/gl-transitions/transitions/DirectionalWipe.glsl",
+      "source_url": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/6e235c9649233abda2d2c6cb54a4896aac649175/transitions/DirectionalWipe.glsl",
+      "revision": "6e235c9649233abda2d2c6cb54a4896aac649175",
+      "upstream_path": "transitions/DirectionalWipe.glsl",
+      "sha256": "ab13a278d9a62400fb54ac3c1df98d06b57172ec72f79ec4e8d185614ecfdb52",
+      "bytes": 710,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/gl-transitions/transitions/DirectionalWipe.glsl.json",
+      "source_url": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/6e235c9649233abda2d2c6cb54a4896aac649175/transitions/DirectionalWipe.glsl",
+      "revision": "6e235c9649233abda2d2c6cb54a4896aac649175",
+      "upstream_path": "transitions/DirectionalWipe.glsl",
+      "sha256": "5ac71259e5b16b8877a7b949ff515284cf30c23e206aed7d1d38602892ef2d0a",
+      "bytes": 1428,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/obs-studio/COPYING",
+      "source_url": "https://raw.githubusercontent.com/obsproject/obs-studio/7a25c3fd8b5eb87c2d2e0606cae36e32014bc6fa/COPYING",
+      "revision": "7a25c3fd8b5eb87c2d2e0606cae36e32014bc6fa",
+      "upstream_path": "COPYING",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092,
+      "license": "GPL-2.0",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "licenses/linked/chatterbox/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/resemble-ai/chatterbox/5de7a54aa4e5e2baadb0182dde554908b48b85c2/LICENSE",
+      "revision": "5de7a54aa4e5e2baadb0182dde554908b48b85c2",
+      "upstream_path": "LICENSE",
+      "sha256": "4248e910a928849fe5815a0f9236e17fa07768d95b9193212752c464b93d6caa",
+      "bytes": 1067,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "licenses/linked/tone-js/LICENSE.md",
+      "source_url": "https://raw.githubusercontent.com/Tonejs/Tone.js/105c04cc00289caf49684ac5c7621bce8a042c4c/LICENSE.md",
+      "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
+      "upstream_path": "LICENSE.md",
+      "sha256": "c2f9e2f9fd21639e8f8976e56b7df01d6efcc3b003dfd43ca59d4b10616efce7",
+      "bytes": 1072,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/tone-js/Tone/core/type/Time.ts",
+      "source_url": "https://raw.githubusercontent.com/Tonejs/Tone.js/105c04cc00289caf49684ac5c7621bce8a042c4c/Tone/core/type/Time.ts",
+      "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
+      "upstream_path": "Tone/core/type/Time.ts",
+      "sha256": "ffabdf3423f58fd7e3a8b01055f4d125826eef0da232707a8d740ca41c303140",
+      "bytes": 5316,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/tone-js/Tone/core/type/Time.ts.json",
+      "source_url": "https://raw.githubusercontent.com/Tonejs/Tone.js/105c04cc00289caf49684ac5c7621bce8a042c4c/Tone/core/type/Time.ts",
+      "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
+      "upstream_path": "Tone/core/type/Time.ts",
+      "sha256": "0ade587be9c4a881c9a58026c94315700a406933608838dca828ca010cabf02f",
+      "bytes": 6496,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "assets/linked/tone-js/Tone/core/type/Frequency.ts",
+      "source_url": "https://raw.githubusercontent.com/Tonejs/Tone.js/105c04cc00289caf49684ac5c7621bce8a042c4c/Tone/core/type/Frequency.ts",
+      "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
+      "upstream_path": "Tone/core/type/Frequency.ts",
+      "sha256": "7b069753847a73243a8d271947d3e370bd5221ffe48921a9c751dc0acf78e1c6",
+      "bytes": 7404,
+      "license": "MIT",
+      "kind": "upstream-source-reference",
+      "modified": false
+    },
+    {
+      "path": "assets/linked/tone-js/Tone/core/type/Frequency.ts.json",
+      "source_url": "https://raw.githubusercontent.com/Tonejs/Tone.js/105c04cc00289caf49684ac5c7621bce8a042c4c/Tone/core/type/Frequency.ts",
+      "revision": "105c04cc00289caf49684ac5c7621bce8a042c4c",
+      "upstream_path": "Tone/core/type/Frequency.ts",
+      "sha256": "708d85ead2f29280a10748a8901453db899c147734664a872f1a977cf5e1104b",
+      "bytes": 9082,
+      "license": "MIT",
+      "kind": "inert-source-json-wrapper",
+      "modified": true,
+      "transformation": "Original source bytes retained separately; UTF-8 text placed in a JSON string with provenance. Source implementation unmodified."
+    },
+    {
+      "path": "licenses/linked/faster-whisper/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/SYSTRAN/faster-whisper/2a3a857737d17d974f30d818ebec69ce11929e5c/LICENSE",
+      "revision": "2a3a857737d17d974f30d818ebec69ce11929e5c",
+      "upstream_path": "LICENSE",
+      "sha256": "af6798135e729f8aa6c853936d037dfdea449734d26b8ea6a89805fca758c0d5",
+      "bytes": 1064,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "licenses/linked/opencut/LICENSE",
+      "source_url": "https://raw.githubusercontent.com/OpenCut-app/OpenCut/e668010778568641babef2cc40be4703ae6916d6/LICENSE",
+      "revision": "e668010778568641babef2cc40be4703ae6916d6",
+      "upstream_path": "LICENSE",
+      "sha256": "05ab02fd3151198e3c0a698a3b7abfa6149c7bec26230f47c80c4dc5b6dc263f",
+      "bytes": 1060,
+      "license": "MIT",
+      "kind": "license-evidence",
+      "modified": false
+    },
+    {
+      "path": "licenses/linked/ffmpeg/LICENSE.md",
+      "source_url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/3a3f5e24a95b744d237d0cb01dccb647e44b9457/LICENSE.md",
+      "revision": "3a3f5e24a95b744d237d0cb01dccb647e44b9457",
+      "upstream_path": "LICENSE.md",
+      "sha256": "e6dc72d5665a1ebd6dcc841de59278dad4ca77ecc47b03f1064a55c3e9ea8bb8",
+      "bytes": 4352,
+      "license": "build-dependent LGPL/GPL",
+      "kind": "license-evidence",
+      "modified": false
+    }
+  ],
+  "gaps": [],
+  "constraints": [
+    "Restrictive galleries: factual metadata only; no screenshot, article, template, proprietary prompt or skill copied.",
+    "Remotion: custom commercial eligibility license, NOT MIT; no Remotion software redistributed.",
+    "OBS/FFmpeg: license evidence only; no GPL/LGPL binary or large implementation imported.",
+    "Chatterbox/faster-whisper/OpenCut: license evidence only; no weights, audio, dependencies or application mirror.",
+    "p5: small unmodified LGPL source references, actual license retained; not a MIT relicense.",
+    "OGL: actual README license evidence retained; no invented LICENSE file.",
+    "Archived source snippets can refer to unavailable dependencies; never claimed to be standalone executable examples."
+  ],
+  "counts": {
+    "downloaded_files": 47,
+    "persisted_payload_files": 75,
+    "retained_license_documents": 19,
+    "archived_bytes": 621702,
+    "network_bytes_including_api": 341694,
+    "upstream_source_references": 28,
+    "inert_source_json_wrappers": 28,
+    "original_inline_examples": 37
+  }
+}

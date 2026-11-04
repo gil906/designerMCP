@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "inert-licensed-source-reference",
+  "text": "import {\n  isStr,\n  isUnd,\n  parseNumber,\n} from '../../core/helpers.js';\n\nimport {\n  none,\n} from '../none.js';\n\n/**\n * @import {\n *   EasingFunction,\n * } from '../../types/index.js'\n*/\n\n/**\n * Without parameters, the linear function creates a non-eased transition.\n * Parameters, if used, creates a piecewise linear easing by interpolating linearly between the specified points.\n *\n * @param  {...(String|Number)} args - Points\n * @return {EasingFunction}\n */\nexport const linear = (...args) => {\n  const argsLength = args.length;\n  if (!argsLength) return none;\n  const totalPoints = argsLength - 1;\n  const firstArg = args[0];\n  const lastArg = args[totalPoints];\n  const xPoints = [0];\n  const yPoints = [parseNumber(firstArg)];\n  for (let i = 1; i < totalPoints; i++) {\n    const arg = args[i];\n    const splitValue = isStr(arg) ?\n    /** @type {String} */(arg).trim().split(' ') :\n    [arg];\n    const value = splitValue[0];\n    const percent = splitValue[1];\n    xPoints.push(!isUnd(percent) ? parseNumber(percent) / 100 : i / totalPoints);\n    yPoints.push(parseNumber(value));\n  }\n  yPoints.push(parseNumber(lastArg));\n  xPoints.push(1);\n  return function easeLinear(t) {\n    for (let i = 1, l = xPoints.length; i < l; i++) {\n      const currentX = xPoints[i];\n      if (t <= currentX) {\n        const prevX = xPoints[i - 1];\n        const prevY = yPoints[i - 1];\n        return prevY + (yPoints[i] - prevY) * (t - prevX) / (currentX - prevX);\n      }\n    }\n    return yPoints[yPoints.length - 1];\n  }\n}\n",
+  "source_url": "https://raw.githubusercontent.com/juliangarnier/anime/01b81be1df6843ccfe0a71c0699a746bf740dd77/src/easings/linear/index.js",
+  "revision": "01b81be1df6843ccfe0a71c0699a746bf740dd77",
+  "source_path": "src/easings/linear/index.js",
+  "source_sha256": "15a63e51c7b7026f0daf47d76b775d40d676f9c64967cbce316f70f22e986a6c",
+  "original_local_path": "assets/linked/anime/src/easings/linear/index.js",
+  "license": "MIT",
+  "license_path": "licenses/linked/anime/LICENSE.md",
+  "notice": "Source text for offline reading only. No code or HTML is executed or rendered."
+}

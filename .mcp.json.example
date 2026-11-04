@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "designer": {
+      "command": "/path/to/designerMCP/.venv/bin/designer-mcp",
+      "args": ["--root", "/path/to/designerMCP"]
+    }
+  }
+}

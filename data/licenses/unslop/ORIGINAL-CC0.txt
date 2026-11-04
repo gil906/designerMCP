@@ -1,0 +1,9 @@
+The independently authored code examples in data/unslop-library.json and the
+unslop-original-web-baseline entry are dedicated to the public domain under
+CC0 1.0 Universal, to the extent permitted by law.
+https://creativecommons.org/publicdomain/zero/1.0/
+
+They are illustrative local-project examples, not upstream implementations,
+bundled third-party dependencies, permission grants, or production guarantees.
+No warranty is provided.
+This dedication excludes upstream material and adaptations of unslop.

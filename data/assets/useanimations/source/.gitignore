@@ -1,0 +1,17 @@
+.DS_Store
+.idea
+node_modules
+npm-debug.log
+dist
+
+# local tarballs
+*.tgz
+.release
+
+# Vitest browser-mode failure screenshots
+.vitest
+
+# Website build output
+website/dist
+website/.astro
+website/.netlify
