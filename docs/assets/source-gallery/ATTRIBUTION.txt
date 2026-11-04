@@ -1,0 +1,49 @@
+README source-project gallery
+
+These locally cached upstream visuals illustrate repositories already represented
+in designerMCP. They are README-only demo media, not new complete implementation
+imports, screenshots of the owner's applications, or claims of device testing.
+No affiliation or endorsement is implied.
+
+Adobe React Spectrum / React Aria
+Repository: https://github.com/adobe/react-spectrum
+Revision: 6dec77beccf0545a04318e6a01b8eb9cbe2dccc6
+Files: react-aria-desktop.webp, react-aria-mobile.webp
+License: Apache-2.0
+Retained full license: data/licenses/github-web/react-spectrum/LICENSE.txt
+Retained NOTICE: data/licenses/github-web/react-spectrum/NOTICE.txt
+These assets are upstream project illustrations, not component screenshots.
+
+Android Compose samples
+Repository: https://github.com/android/compose-samples
+Revision: 25631e8f544a9a1e3f01e296eaf1b4c28428196c
+Files: compose-reply-foldables.png, compose-jetlagged.png
+License: Apache-2.0
+Retained full license: data/licenses/github-mobile/compose-reply/LICENSE.txt
+These are screenshots of upstream demonstration applications.
+
+Flutter samples
+Repository: https://github.com/flutter/samples
+Revision: 21c71902bb2c7da3cce328ba5946cba2f35a660a
+File: flutter-sdf-design.png
+License: BSD-3-Clause
+Retained full license: data/licenses/github-mobile/flutter-samples/LICENSE.txt
+This is the upstream simple_sdf demonstration screenshot.
+
+SwiftUI-Shimmer
+Repository: https://github.com/markiv/SwiftUI-Shimmer
+Revision: 0226e21f9bf355d40e07e5f5e1c33679d50e167f
+Files: shimmer-watchos.gif, shimmer-visionos.gif, shimmer-loading.gif
+License: MIT
+Retained full license: data/licenses/github-mobile/watchos-shimmer/LICENSE.txt
+These are upstream animated demonstrations.
+
+Copyright and reuse terms are preserved in the full licenses and NOTICE above.
+Paths above are relative to the repository root. Exact pinned source URLs,
+original Git blob hashes, original SHA256 hashes, and published-file SHA256
+hashes are recorded in provenance.json beside this notice.
+
+Modifications: PNG files were re-encoded to remove EXIF, XMP, and text metadata.
+Their pixels and embedded color profiles were preserved. GIF and WebP files
+are unmodified. Image layouts and HTML display widths in README do not alter
+the cached files.

@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "scope": "Additional README-only upstream media from existing pinned source repositories",
+  "files": [
+    {
+      "file": "docs/assets/source-gallery/react-aria-desktop.webp",
+      "repository": "adobe/react-spectrum",
+      "revision": "6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+      "upstream_path": "packages/dev/docs/pages/assets/ReactAria_976x445_1x.webp",
+      "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/dev/docs/pages/assets/ReactAria_976x445_1x.webp",
+      "sha256": "1d7cdd16239dcc7996c9985e5a3290a6ff815efe7e5652144be6e7743a164946",
+      "bytes": 9258,
+      "format": "WEBP",
+      "width": 976,
+      "height": 445,
+      "frames": 1,
+      "license": "Apache-2.0",
+      "license_path": "data/licenses/github-web/react-spectrum/LICENSE.txt",
+      "modifications": [],
+      "metadata_fields": [
+        "background",
+        "loop"
+      ],
+      "scope": "README source-project gallery; not a new MCP implementation import",
+      "upstream_git_blob_sha1": "39c98c0fe2c7d951f06080eede1154d8abddb8f4",
+      "upstream_sha256": "1d7cdd16239dcc7996c9985e5a3290a6ff815efe7e5652144be6e7743a164946",
+      "upstream_bytes": 9258,
+      "upstream_metadata_fields": [
+        "background",
+        "loop"
+      ]
+    },
+    {
+      "file": "docs/assets/source-gallery/react-aria-mobile.webp",
+      "repository": "adobe/react-spectrum",
+      "revision": "6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+      "upstream_path": "packages/dev/docs/pages/assets/ReactAria_Mobile_976x1025_1x.webp",
+      "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/dev/docs/pages/assets/ReactAria_Mobile_976x1025_1x.webp",
+      "sha256": "99ac89f5c56bb394005355967dae4a9b9c62e1c5a37d27a29055658b55db7070",
+      "bytes": 14656,
+      "format": "WEBP",
+      "width": 976,
+      "height": 1025,
+      "frames": 1,
+      "license": "Apache-2.0",
+      "license_path": "data/licenses/github-web/react-spectrum/LICENSE.txt",
+      "modifications": [],
+      "metadata_fields": [
+        "background",
+        "loop"
+      ],
+      "scope": "README source-project gallery; not a new MCP implementation import",
+      "upstream_git_blob_sha1": "22862ae2c036f662a0d008008d03d4ccc43d42e4",
+      "upstream_sha256": "99ac89f5c56bb394005355967dae4a9b9c62e1c5a37d27a29055658b55db7070",
+      "upstream_bytes": 14656,
+      "upstream_metadata_fields": [
+        "background",
+        "loop"
+      ]
+    },
+    {
+      "file": "docs/assets/source-gallery/compose-reply-foldables.png",
+      "repository": "android/compose-samples",
+      "revision": "25631e8f544a9a1e3f01e296eaf1b4c28428196c",
+      "upstream_path": "Reply/screenshots/fold_unfold.png",
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/screenshots/fold_unfold.png",
+      "sha256": "c62aa260069e1f0be8bb1d7f4b41a1693a95e401f73db836d362078f34a7907b",
+      "bytes": 368191,
+      "format": "PNG",
+      "width": 1083,
+      "height": 887,
+      "frames": 1,
+      "license": "Apache-2.0",
+      "license_path": "data/licenses/github-mobile/compose-reply/LICENSE.txt",
+      "modifications": [
+        "PNG re-encoded without EXIF, XMP, or text metadata; pixels and embedded color profile preserved."
+      ],
+      "metadata_fields": [
+        "icc_profile"
+      ],
+      "scope": "README source-project gallery; not a new MCP implementation import",
+      "upstream_git_blob_sha1": "4deac4da5d577472ff97d993ee7674626bdf4c86",
+      "upstream_sha256": "b134880dc2b5cf5f01d3bfcc16c5dbc9f71b75f4d12e96cc2b84eeaaec4e8605",
+      "upstream_bytes": 421016,
+      "upstream_metadata_fields": [
+        "XML:com.adobe.xmp",
+        "exif",
+        "icc_profile",
+        "xmp"
+      ]
+    },
+    {
+      "file": "docs/assets/source-gallery/compose-jetlagged.png",
+      "repository": "android/compose-samples",
+      "revision": "25631e8f544a9a1e3f01e296eaf1b4c28428196c",
+      "upstream_path": "JetLagged/screenshots/JetLagged_Full.png",
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/JetLagged/screenshots/JetLagged_Full.png",
+      "sha256": "c72af5fdabfcfe12bb7fcaa3c472ea0bdae3e66213efcea2e2fa2867e4347973",
+      "bytes": 206883,
+      "format": "PNG",
+      "width": 1440,
+      "height": 3120,
+      "frames": 1,
+      "license": "Apache-2.0",
+      "license_path": "data/licenses/github-mobile/compose-reply/LICENSE.txt",
+      "modifications": [
+        "PNG re-encoded without EXIF, XMP, or text metadata; pixels and embedded color profile preserved."
+      ],
+      "metadata_fields": [
+        "icc_profile"
+      ],
+      "scope": "README source-project gallery; not a new MCP implementation import",
+      "upstream_git_blob_sha1": "9229bf48a4aa674be41cbb306a2af40485b8c93f",
+      "upstream_sha256": "859466d9e76e347f9c3694695cc2aa7f7229b3da9afbc14e03fba4c67800ea03",
+      "upstream_bytes": 210786,
+      "upstream_metadata_fields": [
+        "icc_profile"
+      ]
+    },
+    {
+      "file": "docs/assets/source-gallery/flutter-sdf-design.png",
+      "repository": "flutter/samples",
+      "revision": "21c71902bb2c7da3cce328ba5946cba2f35a660a",
+      "upstream_path": "simple_sdf/screenshot.png",
+      "source_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/simple_sdf/screenshot.png",
+      "sha256": "46649c1843613b6272d57d2184a399b4c62cc7c233cbefac7ce73e0e1fe8cbc4",
+      "bytes": 84161,
+      "format": "PNG",
+      "width": 912,
+      "height": 740,
+      "frames": 1,
+      "license": "BSD-3-Clause",
+      "license_path": "data/licenses/github-mobile/flutter-samples/LICENSE.txt",
+      "modifications": [
+        "PNG re-encoded without EXIF, XMP, or text metadata; pixels and embedded color profile preserved."
+      ],
+      "metadata_fields": [],
+      "scope": "README source-project gallery; not a new MCP implementation import",
+      "upstream_git_blob_sha1": "405769e3daea7c5fd02400a8506e5a10185195a5",
+      "upstream_sha256": "b524fa99d5bbdb6310b8378d40d249077da5126a69758032649897c52cc5794d",
+      "upstream_bytes": 114722,
+      "upstream_metadata_fields": [
+        "XML:com.adobe.xmp",
+        "exif",
+        "srgb",
+        "xmp"
+      ]
+    },
+    {
+      "file": "docs/assets/source-gallery/shimmer-watchos.gif",
+      "repository": "markiv/SwiftUI-Shimmer",
+      "revision": "0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+      "upstream_path": "docs/Shimmer-watchOS.gif",
+      "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/docs/Shimmer-watchOS.gif",
+      "sha256": "c5ea11bdcebadba8805737a8862a769b0a57d5927ae75b89c2679462cc2bbd49",
+      "bytes": 19169,
+      "format": "GIF",
+      "width": 202,
+      "height": 224,
+      "frames": 19,
+      "license": "MIT",
+      "license_path": "data/licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "modifications": [],
+      "metadata_fields": [
+        "background",
+        "duration",
+        "extension",
+        "loop",
+        "transparency",
+        "version"
+      ],
+      "scope": "README source-project gallery; not a new MCP implementation import",
+      "upstream_git_blob_sha1": "d10dac48999a579c63cf894ecdaa230842535fc7",
+      "upstream_sha256": "c5ea11bdcebadba8805737a8862a769b0a57d5927ae75b89c2679462cc2bbd49",
+      "upstream_bytes": 19169,
+      "upstream_metadata_fields": [
+        "background",
+        "duration",
+        "extension",
+        "loop",
+        "transparency",
+        "version"
+      ]
+    },
+    {
+      "file": "docs/assets/source-gallery/shimmer-visionos.gif",
+      "repository": "markiv/SwiftUI-Shimmer",
+      "revision": "0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+      "upstream_path": "docs/Shimmer-visionOS.gif",
+      "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/docs/Shimmer-visionOS.gif",
+      "sha256": "0d17e1719ebc97c27194938d33a7af6c862ed66004f2f8743e75fb500c794872",
+      "bytes": 85171,
+      "format": "GIF",
+      "width": 328,
+      "height": 274,
+      "frames": 15,
+      "license": "MIT",
+      "license_path": "data/licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "modifications": [],
+      "metadata_fields": [
+        "background",
+        "duration",
+        "extension",
+        "loop",
+        "transparency",
+        "version"
+      ],
+      "scope": "README source-project gallery; not a new MCP implementation import",
+      "upstream_git_blob_sha1": "f7f1c1793e30347ae38830ab447c38a70311f56f",
+      "upstream_sha256": "0d17e1719ebc97c27194938d33a7af6c862ed66004f2f8743e75fb500c794872",
+      "upstream_bytes": 85171,
+      "upstream_metadata_fields": [
+        "background",
+        "duration",
+        "extension",
+        "loop",
+        "transparency",
+        "version"
+      ]
+    },
+    {
+      "file": "docs/assets/source-gallery/shimmer-loading.gif",
+      "repository": "markiv/SwiftUI-Shimmer",
+      "revision": "0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+      "upstream_path": "docs/loading.gif",
+      "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/docs/loading.gif",
+      "sha256": "a9d1d9f457871ce1ccf703ea61e0f8e336fbf0ce2c659e31ae9f753d1539d253",
+      "bytes": 34818,
+      "format": "GIF",
+      "width": 316,
+      "height": 200,
+      "frames": 21,
+      "license": "MIT",
+      "license_path": "data/licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "modifications": [],
+      "metadata_fields": [
+        "background",
+        "duration",
+        "extension",
+        "loop",
+        "transparency",
+        "version"
+      ],
+      "scope": "README source-project gallery; not a new MCP implementation import",
+      "upstream_git_blob_sha1": "1aeae48f60f7732c31b542b17f97e72e2549e3c1",
+      "upstream_sha256": "a9d1d9f457871ce1ccf703ea61e0f8e336fbf0ce2c659e31ae9f753d1539d253",
+      "upstream_bytes": 34818,
+      "upstream_metadata_fields": [
+        "background",
+        "duration",
+        "extension",
+        "loop",
+        "transparency",
+        "version"
+      ]
+    }
+  ],
+  "notice": "Raster input Git blobs verified against pinned repository trees. PNG EXIF/XMP/text metadata removed without changing pixels; other media unmodified. Hash/format checks are not antivirus certification. Existing MCP catalog counts are unchanged."
+}

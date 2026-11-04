@@ -7,8 +7,8 @@ write files, execute examples, or render stored HTML/SVG.
 
 ## Preview gallery
 
-Examples of the **local material an AI can retrieve**, not a promise that every
-generated application will look like these references.
+Examples of **bundled references and their source projects**, not a promise that
+every generated application will look like these references.
 
 ### Screenshots: intentional web design
 
@@ -21,6 +21,64 @@ MCP. Their CC-BY-4.0 attribution and preview modifications are retained in
 [the attribution notice](data/licenses/unslop/ATTRIBUTION.txt).
 See the [additional visual references](#visual-references-and-animations) for
 illustration directions and before/after dashboard frames.
+
+### More sources: Adobe, Android, Flutter, and SwiftUI
+
+These additional upstream images and demos are cached locally for the README.
+They showcase projects already represented in the library; they do **not**
+expand its selected implementation archive or imply that every pictured app or
+platform has a complete imported implementation.
+
+**Adobe React Spectrum / React Aria: illustration and visual composition**
+
+| Wide composition | Portrait composition |
+|---|---|
+| ![Upstream React Aria illustration with blue and yellow desktop, tablet, and phone motifs](docs/assets/source-gallery/react-aria-desktop.webp) | ![Upstream React Aria portrait illustration with geometric visual hierarchy](docs/assets/source-gallery/react-aria-mobile.webp) |
+
+These are Adobe's **source-project illustrations**, not component screenshots.
+The local React Aria reference separately covers dialog naming, focus containment,
+and accessibility contracts.
+
+**Android Compose samples: actual upstream app screenshots**
+
+| Reply: folded and unfolded layouts | JetLagged: a data-rich dashboard |
+|---|---|
+| <img src="docs/assets/source-gallery/compose-reply-foldables.png" width="420" alt="Upstream Reply screenshot comparing phone navigation with an expanded foldable layout"> | <img src="docs/assets/source-gallery/compose-jetlagged.png" width="240" alt="Upstream JetLagged sample dashboard showing charts and sleep-data visualization"> |
+
+Reply illustrates adaptive navigation and content width; JetLagged shows another
+design direction from the same Android sample collection. The pictured content
+belongs to the upstream demos, not the repository owner's accounts.
+
+**Flutter samples: procedural graphics**
+
+![Upstream Flutter simple SDF demo rendering a smooth pink heart](docs/assets/source-gallery/flutter-sdf-design.png)
+
+A different visual direction from Flutter's sample repository: a signed-distance
+field graphic rather than another card-grid interface. This is an upstream
+sample screenshot, not a native application rendered or tested by this MCP.
+
+**SwiftUI-Shimmer: actual upstream animated demos**
+
+| watchOS loading feedback | Spatial-interface shimmer | Skeleton loading |
+|---|---|---|
+| ![Upstream animated SwiftUI shimmer demo on a watch interface](docs/assets/source-gallery/shimmer-watchos.gif) | ![Upstream animated SwiftUI shimmer demo in a visionOS-style interface](docs/assets/source-gallery/shimmer-visionos.gif) | ![Upstream animated skeleton-loading effect from SwiftUI-Shimmer](docs/assets/source-gallery/shimmer-loading.gif) |
+
+These GIFs come from the pinned SwiftUI-Shimmer repository, not useAnimations.
+Their presence is a source-project demonstration, not a claim of device testing
+or an additional MCP platform alias.
+
+The four projects retain their Apache-2.0, BSD-3-Clause, or MIT notices in
+[the source-gallery attribution](docs/assets/source-gallery/ATTRIBUTION.txt).
+[Provenance and hashes](docs/assets/source-gallery/provenance.json) identify each
+pinned upstream file. PNG metadata was removed without changing pixels;
+the other media is unmodified.
+
+```text
+designer_get_bundle("github-web-react-spectrum")
+designer_get_bundle("github-mobile-compose-reply")
+designer_get_bundle("github-mobile-flutter-samples")
+designer_get_bundle("github-mobile-watchos-shimmer")
+```
 
 ### Animations: actual cached Lottie previews
 
