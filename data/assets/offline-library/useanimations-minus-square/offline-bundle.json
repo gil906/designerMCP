@@ -1,0 +1,67 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "minusSquare",
+      "format": "lottie",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "animation-source",
+      "sha256": "f6ab61187db001b32a281be844e705fc8722bc52a506b63c17b2b878ee5bcbb1",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/minusSquare.json"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "image/webp",
+      "origin": "rendered",
+      "role": "visual",
+      "sha256": "ec42e2d7f9fa78f1baccb3c28082f2beddcb388ed86cb713ca85ef98076aec92",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/minusSquare.json"
+    },
+    {
+      "asset_id": "offline-animation-preview",
+      "format": "gif",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "image/gif",
+      "origin": "rendered",
+      "role": "visual",
+      "sha256": "c883d32d55bb0d55bde5462cf7c7a704465d5c0e8a9846fe99800be4916ceb34",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/minusSquare.json"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "39ad5d7eda6160f4c1745e0a1c37fe00612cdf15e08a1640b388e8bfa991ae6d",
+      "source_url": "original://designerMCP/offline/useanimations-minus-square"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "available",
+    "animation": "available",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "available",
+    "visual": "available"
+  },
+  "kind": "animated-icon",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Low-FPS raster preview; use original Lottie JSON for vector fidelity."
+  ],
+  "reference_id": "useanimations-minus-square",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

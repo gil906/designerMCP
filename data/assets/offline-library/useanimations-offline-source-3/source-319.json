@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/MobileMenu.tsx",
+  "filename": "MobileMenu.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-319",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/MobileMenu.tsx",
+    "title": "website/src/components/MobileMenu.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "2425d5ac97493913d3fa17804d57ebb6cc5beeb5341654c88da9ea60d0b2d558",
+  "text": "import { useEffect, useState } from 'react';\nimport UseAnimations from 'react-useanimations';\nimport menu from '../../../icons/menu.json';\nimport { islands } from '../i18n/messages/en/islands';\n\ntype Props = {\n  items: { label: string; href: string }[];\n  /** The menu's text in the page's language: t(locale).islands.mobileMenu. */\n  strings?: typeof islands.mobileMenu;\n};\n\n/** The navigation on small screens, opened by the animated menu icon. */\nexport default function MobileMenu({ items, strings = islands.mobileMenu }: Props) {\n  const [open, setOpen] = useState(false);\n\n  useEffect(() => {\n    if (!open) return undefined;\n    const close = (event: KeyboardEvent) => event.key === 'Escape' && setOpen(false);\n    document.addEventListener('keydown', close);\n    return () => document.removeEventListener('keydown', close);\n  }, [open]);\n\n  return (\n    <div className=\"md:hidden\">\n      <UseAnimations\n        animation={{ animationData: menu, interaction: 'click-toggle' }}\n        active={open}\n        size={22}\n        onClick={() => setOpen(!open)}\n        render={(eventProps, animationProps) => (\n          <button\n            type=\"button\"\n            aria-label={strings.menu}\n            aria-expanded={open}\n            aria-controls=\"mobile-menu\"\n            className=\"inline-flex size-9 items-center justify-center rounded-full text-fg hover:bg-surface-2\"\n            {...eventProps}\n          >\n            <span {...animationProps} />\n          </button>\n        )}\n      />\n      <nav\n        id=\"mobile-menu\"\n        aria-label={strings.nav}\n        hidden={!open}\n        className=\"absolute inset-x-0 top-16 border-b border-line bg-bg px-5 pt-2 pb-5 shadow-xl\"\n      >\n        {items.map((item) => (\n          <a\n            key={item.href}\n            href={item.href}\n            onClick={() => setOpen(false)}\n            className=\"block rounded-xl px-3 py-3 text-base text-fg hover:bg-surface-2\"\n          >\n            {item.label}\n          </a>\n        ))}\n      </nav>\n    </div>\n  );\n}\n",
+  "version": 1
+}

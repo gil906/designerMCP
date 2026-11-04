@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "def original_srt_timestamp(seconds):\n    milliseconds = max(0, round(seconds * 1000))\n    hours, milliseconds = divmod(milliseconds, 3600000)\n    minutes, milliseconds = divmod(milliseconds, 60000)\n    whole_seconds, milliseconds = divmod(milliseconds, 1000)\n    return f'{hours:02}:{minutes:02}:{whole_seconds:02},{milliseconds:03}'\n# Review caption text and timing against authorized source audio.",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "python"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

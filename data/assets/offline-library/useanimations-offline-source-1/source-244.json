@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/.gitignore",
+  "filename": ".gitignore",
+  "format": "text",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-244",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/.gitignore",
+    "title": ".gitignore"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "290e2dee491781d03e490ec5aa712d05e0f74e6444efd96fd28bee360b49dea9",
+  "text": ".DS_Store\n.idea\nnode_modules\nnpm-debug.log\ndist\n\n# local tarballs\n*.tgz\n.release\n\n# Vitest browser-mode failure screenshots\n.vitest\n\n# Website build output\nwebsite/dist\nwebsite/.astro\nwebsite/.netlify\n",
+  "version": 1
+}

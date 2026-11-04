@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/icons/[id]/[state].svg.ts",
+  "filename": "[state].svg.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-496",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/icons/[id]/[state].svg.ts",
+    "title": "website/src/pages/icons/[id]/[state].svg.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "a0ce5bea7b3f104756870c58efaece382abb0521abe7e666b91b823c56c1dde2",
+  "text": "import type { GetStaticPaths } from 'astro';\nimport { icons } from '../../../lib/icons';\nimport { text } from '../../../lib/http';\n\nexport const getStaticPaths = (() =>\n  icons.flatMap((icon) =>\n    Object.entries(icon.svgs).map(([state, svg]) => ({\n      params: { id: icon.id, state },\n      props: { svg },\n    }))\n  )) satisfies GetStaticPaths;\n\nexport const GET = ({ props }: { props: { svg: string } }) => text(props.svg, 'image/svg+xml');\n",
+  "version": 1
+}

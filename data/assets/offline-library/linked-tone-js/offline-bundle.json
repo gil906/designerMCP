@@ -1,0 +1,68 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "tone-js-source-1",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/tone-js/LICENSE.md",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "0ade587be9c4a881c9a58026c94315700a406933608838dca828ca010cabf02f",
+      "source_url": "https://github.com/Tonejs/Tone.js"
+    },
+    {
+      "asset_id": "tone-js-source-2",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/tone-js/LICENSE.md",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "708d85ead2f29280a10748a8901453db899c147734664a872f1a977cf5e1104b",
+      "source_url": "https://github.com/Tonejs/Tone.js"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "6af61d87d7c04539ef956bdea0fed4f3eca652c2128292e3edae0c81191fa4c9",
+      "source_url": "original://designerMCP/offline/linked-tone-js"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "3c3be101f3f445aba92c5fc078b233a204b2e89f92c520647d2041dfb33f24c5",
+      "source_url": "original://designerMCP/offline/linked-tone-js"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "linked-tone-js",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

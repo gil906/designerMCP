@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by pmndrs/drei contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 1815,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "import * as React from 'react'\nimport { ThreeElements, useFrame } from '@react-three/fiber'\nimport * as THREE from 'three'\nimport { ForwardRefComponent } from '../helpers/ts-utils'\n\nexport type FloatProps = Omit<ThreeElements['group'], 'ref'> & {\n  enabled?: boolean\n  speed?: number\n  rotationIntensity?: number\n  floatIntensity?: number\n  children?: React.ReactNode\n  floatingRange?: [number?, number?]\n  autoInvalidate?: boolean\n}\n\nexport const Float: ForwardRefComponent<FloatProps, THREE.Group> = /* @__PURE__ */ React.forwardRef<\n  THREE.Group,\n  FloatProps\n>(\n  (\n    {\n      children,\n      enabled = true,\n      speed = 1,\n      rotationIntensity = 1,\n      floatIntensity = 1,\n      floatingRange = [-0.1, 0.1],\n      autoInvalidate = false,\n      ...props\n    },\n    forwardRef\n  ) => {\n    const ref = React.useRef<THREE.Group>(null!)\n    React.useImperativeHandle(forwardRef, () => ref.current, [])\n    const offset = React.useRef(Math.random() * 10000)\n    useFrame((state) => {\n      if (!enabled || speed === 0) return\n\n      if (autoInvalidate) state.invalidate()\n\n      const t = offset.current + state.clock.elapsedTime\n      ref.current.rotation.x = (Math.cos((t / 4) * speed) / 8) * rotationIntensity\n      ref.current.rotation.y = (Math.sin((t / 4) * speed) / 8) * rotationIntensity\n      ref.current.rotation.z = (Math.sin((t / 4) * speed) / 20) * rotationIntensity\n      let yPosition = Math.sin((t / 4) * speed) / 10\n      yPosition = THREE.MathUtils.mapLinear(yPosition, -0.1, 0.1, floatingRange?.[0] ?? -0.1, floatingRange?.[1] ?? 0.1)\n      ref.current.position.y = yPosition * floatIntensity\n      ref.current.updateMatrix()\n    })\n    return (\n      <group {...props}>\n        <group ref={ref} matrixAutoUpdate={false}>\n          {children}\n        </group>\n      </group>\n    )\n  }\n)\n",
+  "content_sha256": "9cef7b5ec6e0aee408df44dc19bc143991a34d38b1500d927d3b221d4f4f8cd7",
+  "expected_git_blob_sha1": "9ff61cd999a46a5aa168cc3a56f46bb7abd29df1",
+  "filename": "Float.tsx",
+  "full_content_sha256": "9cef7b5ec6e0aee408df44dc19bc143991a34d38b1500d927d3b221d4f4f8cd7",
+  "full_file_complete": true,
+  "full_source_sha256": "9cef7b5ec6e0aee408df44dc19bc143991a34d38b1500d927d3b221d4f4f8cd7",
+  "kind": "source-file",
+  "language": "tsx",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 58,
+    "start": 1,
+    "total": 58
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "tsx",
+  "original_path": "src/core/Float.tsx",
+  "repository": "pmndrs/drei",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/pmndrs--drei/LICENSE",
+      "sha256": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8"
+    }
+  ],
+  "revision": "bf6f4addf47467d3885de272d94ca5127f6ef68f",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 1815,
+  "source_lines": 58,
+  "source_sha256": "9cef7b5ec6e0aee408df44dc19bc143991a34d38b1500d927d3b221d4f4f8cd7",
+  "source_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx",
+  "verified_git_blob_sha1": "9ff61cd999a46a5aa168cc3a56f46bb7abd29df1"
+}

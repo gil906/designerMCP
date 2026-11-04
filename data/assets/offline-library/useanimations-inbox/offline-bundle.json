@@ -1,0 +1,67 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "inbox",
+      "format": "lottie",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "animation-source",
+      "sha256": "a2998f6e73eadd26a9d71b7f63d094f173df76ff7ff94920b6d99ea4b0358adc",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/inbox.json"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "image/webp",
+      "origin": "rendered",
+      "role": "visual",
+      "sha256": "36a4eb3eec67aefa3702eb10cd1d2415cba967a4a3f679b61534d1e50371b7d3",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/inbox.json"
+    },
+    {
+      "asset_id": "offline-animation-preview",
+      "format": "gif",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "image/gif",
+      "origin": "rendered",
+      "role": "visual",
+      "sha256": "4ef4454dc369c9130c6843cb5fec78ccd69e58c8494d1adf12d55d4fd6e3d126",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/inbox.json"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "39ad5d7eda6160f4c1745e0a1c37fe00612cdf15e08a1640b388e8bfa991ae6d",
+      "source_url": "original://designerMCP/offline/useanimations-inbox"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "available",
+    "animation": "available",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "available",
+    "visual": "available"
+  },
+  "kind": "animated-icon",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Low-FPS raster preview; use original Lottie JSON for vector fidelity."
+  ],
+  "reference_id": "useanimations-inbox",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/IconPreview.tsx",
+  "filename": "IconPreview.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-311",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/IconPreview.tsx",
+    "title": "website/src/components/IconPreview.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "6a5a85734ccc494f26d445b6f1f601a8ca4a322219134db22d35cc02e25d8c03",
+  "text": "import { useState } from 'react';\nimport UseAnimations, { type Interaction } from 'react-useanimations';\nimport { islands } from '../i18n/messages/en/islands';\n\nconst COLORS = ['', '#4b5cff', '#e5484d', '#f59e0b', '#12a594', '#a24bff'];\n// Icon pages are English-only; the dialog's strings say how to play the icon.\nconst { hints, colors, color: colorLabel, textColor } = islands.iconDialog;\n\n/** `lottie` is the Lottie JSON as a string. */\ntype Props = { lottie: string; interaction: Interaction; title: string };\n\n/** The large live preview on an icon page, with a color picker. */\nexport default function IconPreview({ lottie, interaction, title }: Props) {\n  const [color, setColor] = useState('');\n  const [animationData] = useState(() => JSON.parse(lottie) as object);\n  return (\n    <div>\n      <div\n        className=\"relative flex aspect-square items-center justify-center rounded-[2rem] border border-line bg-surface-2 bg-grid\"\n        style={{ color: color || 'var(--fg)' }}\n      >\n        <UseAnimations\n          animation={{ animationData, interaction }}\n          size={160}\n          aria-label={`${title} animation`}\n          render={(eventProps, animationProps) => (\n            <div\n              className=\"flex size-full cursor-pointer items-center justify-center\"\n              {...eventProps}\n            >\n              <span {...animationProps} />\n            </div>\n          )}\n        />\n        <span className=\"absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-surface px-3 py-1 text-xs whitespace-nowrap text-muted shadow-sm\">\n          {hints[interaction]}\n        </span>\n      </div>\n      <div className=\"mt-4 flex items-center gap-2\" role=\"group\" aria-label={colors}>\n        {COLORS.map((value) => (\n          <button\n            key={value || 'default'}\n            type=\"button\"\n            aria-label={value ? colorLabel.replace('{color}', value) : textColor}\n            aria-pressed={color === value}\n            onClick={() => setColor(value)}\n            className=\"size-7 rounded-full border border-line-strong ring-offset-2 ring-offset-bg aria-pressed:ring-2 aria-pressed:ring-accent\"\n            style={{ background: value || 'var(--fg)' }}\n          />\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+  "version": 1
+}

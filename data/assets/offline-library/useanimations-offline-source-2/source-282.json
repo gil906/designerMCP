@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/public/_headers",
+  "filename": "_headers",
+  "format": "text",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-282",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/public/_headers",
+    "title": "website/public/_headers"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "dc39a7dd2f689c2ffa71be68c216df6cf731881a59ed550a833b8284ae02c020",
+  "text": "# The same HSTS policy on every response (Netlify's default omits includeSubDomains and preload).\n/*\n  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload\n  X-Frame-Options: SAMEORIGIN\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n\n# The Markdown alternates of pages (Link and Vary: Accept) come from\n# netlify/edge-functions/markdown-negotiation.ts.\n/\n  Link: </robots.txt>; rel=\"robots\"\n  Link: </licencing-and-terms>; rel=\"license\"\n  Link: </icons.json>; rel=\"alternate\"; type=\"application/json\"; title=\"Icon catalog\"\n\n# The social card template, rendered to og.png at build time; not a page.\n/og\n  X-Robots-Tag: noindex, nofollow\n\n/og.html\n  X-Robots-Tag: noindex, nofollow\n\n/icons.json\n  Access-Control-Allow-Origin: *\n  Cache-Control: public, max-age=3600\n\n# The icon files are cached for an hour; the icon pages (/icons/<id>) keep Netlify's HTML caching.\n/icons/*\n  Access-Control-Allow-Origin: *\n\n/icons/*.json\n  Cache-Control: public, max-age=3600\n\n/icons/*.zip\n  Cache-Control: public, max-age=3600\n\n/icons/*/*.svg\n  Cache-Control: public, max-age=3600\n\n/r/*\n  Access-Control-Allow-Origin: *\n  Cache-Control: public, max-age=3600\n\n/*.md\n  Content-Type: text/markdown; charset=utf-8\n  X-Robots-Tag: noindex\n\n/llms.txt\n  Content-Type: text/plain; charset=utf-8\n\n/llms-full.txt\n  Content-Type: text/plain; charset=utf-8\n\n/sitemap*.xml\n  Content-Type: application/xml; charset=utf-8\n\n/_astro/*\n  Cache-Control: public, max-age=31536000, immutable\n",
+  "version": 1
+}

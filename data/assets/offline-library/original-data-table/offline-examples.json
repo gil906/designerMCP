@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<div role=\"region\" aria-label=\"Monthly revenue table\" tabindex=\"0\" style=\"overflow:auto\">\n<table><caption>Revenue by month, USD</caption><thead><tr><th scope=\"col\">Month</th><th scope=\"col\">Revenue</th></tr></thead>\n<tbody><tr><th scope=\"row\">January</th><td>$1,240</td></tr></tbody></table></div>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

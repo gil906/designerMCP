@@ -7,7 +7,7 @@ write files, execute examples, or render stored HTML/SVG.
 
 ## Installed library and integration
 
-Version **0.3.0** contains **426 references**, including **300 useAnimations
+Version **0.4.0** contains **426 references**, including **300 useAnimations
 Lottie animations**, 33 linked-source references, 23 unslop references, and
 **8 original reusable layout starters**, plus **24 new GitHub-derived references**.
 Reference records include local assets, practical examples, guidance, categories,
@@ -39,6 +39,12 @@ Persistent collection and coverage records:
 - `data/github-web-report.json`, `data/github-motion-report.json`, and
   `data/github-mobile-report.json`: selected GitHub repositories, pinned
   revisions, archived file hashes, licenses, exclusions, and scan scope.
+- `data/offline-preview-report.json`: rendered/original/upstream visual origins,
+  source hashes, frame checks, and renderer limitations.
+- `data/offline-source-report.json`: complete selected pinned source files,
+  localized documentation, verification, and exclusions.
+- `data/offline-library-report.json`: per-reference coverage and whole-inventory
+  integrity ledger.
 
 Register the `designer` server in your AI client's local MCP configuration.
 Project guidance in `.github/copilot-instructions.md` directs compatible Copilot
@@ -50,7 +56,7 @@ context-mode; the MCP remains authoritative for current details and assets.
 The automated suite covers search relevance, style matching, filter aliases,
 catalog/cache safety, description-based audits, privacy guards, and installed
 MCP protocol behavior. Ingestion safety and local asset-integrity checks are
-separate. Run the documented tests for current results; the server exposes six
+separate. Run the documented tests for current results; the server exposes seven
 read-only tools.
 
 ### Security review
@@ -58,16 +64,18 @@ read-only tools.
 | # | Severity | File | Lines | Vulnerability | Confidence |
 |---|----------|------|-------|---------------|------------|
 
-No reportable vulnerabilities were identified in the reviewed server, existing
-ingestion boundaries, GitHub collection validator, or newly archived GitHub
-material. The latest review retrieved all 24 new references/assets with DNS,
-network connections, and process execution blocked.
+No reportable vulnerabilities were identified in the v0.4 review of offline
+bundle retrieval, per-asset provenance, collection/rendering helpers, integrity
+checks, and the final ingestion-compatibility patch. Existing tests exercise
+runtime DNS/network/process/write denial. The final suite passed 212 tests;
+the separate original importer suite passed eight.
 
 This is not a guarantee of absence or an antivirus certification. Reviews cover
 the archived text and read-only runtime, not complete upstream repositories or
-their dependencies. Collector Git-blob checks are recorded assertions rather
-than independently repeated upstream-byte verification; five of 82 upstream
-files explicitly lack those checks. No antivirus engine or dependency
+their dependencies. Historical collector Git-blob checks are recorded assertions;
+five of 82 original upstream files lack those checks. Selected full-source files
+were subsequently refetched against their recorded hashes where available.
+No antivirus engine or dependency
 vulnerability audit was used. The earlier unslop collector helper was not
 persisted for review. Local byte hashes and static-risk checks are reproducible.
 
@@ -139,6 +147,68 @@ are bundled under their retained MIT license. Examples include
 [airplay](data/assets/useanimations/airplay.json). Retrieve a reference's local
 animation payload using `designer_get_asset`; no source-site visit is required.
 
+### Organized offline bundles
+
+`designer_get_bundle(id)` organizes a reference's guidance, visual previews,
+animation payloads, code/document files, formats, licenses, and coverage
+limitations. Retrieve files individually with the listed asset IDs; the bundle
+is an index, not an oversized inline repository dump. Source URLs are provenance,
+not dependencies needed to serve a request.
+The organized library exposes **2,363 asset associations** and 708 inline
+examples; not every reference is an executable UI design.
+
+All **426 references have a local visual**: 300 renders of cached Lottie sources,
+121 clearly labeled original CC0 concept diagrams, and five licensed upstream
+previews. The diagrams illustrate a pattern or archive structure; they are
+**not screenshots of upstream products**. Restricted galleries remain summaries
+and original concepts, not copied galleries.
+
+There are **299 genuinely animated GIF previews** alongside all **300 unchanged
+Lottie JSON sources**. The expression-driven `useanimations-error` source has a
+real still preview: the build-only renderer cannot reproduce its expressions.
+It is explicitly marked unsupported, not replaced with fabricated motion.
+
+![Actual cached activity animation](data/assets/offline-visuals/useanimations-activity.gif)
+![Original navigation concept, not an upstream screenshot](data/assets/offline-visuals/original-navigation.webp)
+
+The 24 GitHub references additionally contain **52 selected local source and
+documentation files** in JSON wrappers. These include TS/TSX, JavaScript, Swift,
+Kotlin, Dart,
+and localized documentation, not full framework installations or repository
+mirrors. Verbatim source is distinguished from localized documentation and
+modified adaptations; modifications and completeness limits are recorded.
+Specifically: **25 byte-identical complete upstream implementation files,
+26 localized documentation files, and one whole-module Dart adaptation**.
+The adaptation replaces four callback declarations with Flutter type aliases;
+it was neither compiled nor device-tested. Upstream code is not run.
+Previously unsupported local Markdown, YAML, CSS, SVG, and translation/source
+text is exposed as inert JSON retaining the original filename, format, bytes'
+hash, and attribution. Qt `.ts` translations are XML, not TypeScript.
+Four hash-pinned upstream build/process scripts remain **unserved archives**:
+their static-risk findings and exclusions are recorded rather than silently
+bypassed. The oversized original screenshot also remains archive-only.
+
+```text
+designer_get_bundle("github-mobile-compose-reply")
+designer_get_bundle("useanimations-activity")
+```
+
+Reassemble and validate without accessing the internet:
+
+```sh
+.venv/bin/python scripts/build_offline_library.py
+.venv/bin/python scripts/check_offline_library.py \
+  --min-animation-sources 300 --min-animated-previews 299
+.venv/bin/python scripts/generate_offline_previews.py --check
+```
+
+The explicit 299 threshold acknowledges the one renderer limitation; the
+checker's default requires 300 animated previews and fails honestly. Optional
+preview regeneration uses Pillow, distro `librlottie0-1`, and
+`fonts-dejavu-core`; these are build-only, not MCP runtime requirements.
+The full generator also reports the unmet 300-preview target with exit code 2.
+No browser, native application SDK, or imported upstream code is executed.
+
 The root defaults to `DESIGNER_MCP_ROOT`, then this package's checkout root,
 never the client's current directory. The editable installation works across
 projects without a working-directory override. For wheel installs outside this
@@ -155,7 +225,8 @@ data does not prevent startup or status inspection.
    complains that a design looks AI-generated. Inspect actual matches, or report
    their absence. Adapt recommendations to the user's style, never force one.
 2. **Inspect:** `designer_get_reference(id)` for local guidance, examples,
-   source/license provenance and asset IDs.
+   source/license provenance and asset IDs, then `designer_get_bundle(id)` for
+   its organized offline visual/source/document/license index.
 3. **Inspect eligible assets:** `designer_get_asset(reference_id, asset_id)`.
    If none exist or the format is unsupported, report that and continue.
 4. **Plan:** `designer_brief(goal, platform="web", style?, category?, limit=3)`.
@@ -188,7 +259,7 @@ an unavailable state—never fabricated seeded counts.
 
 The **`design_workflow` prompt** and **`designer://guide` resource** describe this
 workflow. `designer://catalog` exposes status; citations resolve through
-`designer://reference/<id>`. All six tools declare read-only, closed-world hints.
+`designer://reference/<id>`. All seven tools declare read-only, closed-world hints.
 
 ### Category taxonomy
 
@@ -242,7 +313,8 @@ animation APIs, and native/adaptive UI examples. Search by the actual platform
 labels exposed by status, then retrieve a reference and its local JSON source
 asset. The source repository does not need to be visited during design work.
 The collection contains eight web, eight motion, and eight mobile/adaptive
-repositories; these are curated excerpts and guidance, not complete mirrors.
+repositories. Bundles include complete selected source files and localized
+documentation alongside curated excerpts and guidance, not complete mirrors.
 
 | Collection | Repository | License |
 |---|---|---|
@@ -285,7 +357,8 @@ designer_search("spring animation", platform="swiftui")
 
 Each collection records immutable Git revisions, selected source paths, reuse
 conditions, archived-byte hashes, and original adaptation guidance. Copied
-documentation and code excerpts are inert UTF-8 JSON reference data; licenses and
+documentation, complete selected source files, and code excerpts are inert UTF-8
+JSON reference data; licenses and
 required notices are retained separately. These references do not add runtime
 dependencies to the MCP, and code-reference JSON is not a playable animation.
 
@@ -368,7 +441,8 @@ Supported outputs:
 |---|---|
 | PNG/JPEG/GIF/WebP | MCP image plus JSON provenance; bytes verified against MIME |
 | `application/json` animation/reference | Bounded UTF-8 JSON **text**, plus provenance |
-| SVG, HTML, source code, other formats | Metadata in references only; retrieval rejected |
+| Wrapped SVG, HTML, code, XML, Markdown, other source text | Inert JSON text with original format/hash; never rendered or executed |
+| Unwrapped unsupported formats | Retrieval rejected explicitly |
 
 Image inspection verifies format and dimensions without rendering or converting
 content. JSON may contain external URLs or commands as inert text; neither is
@@ -379,7 +453,7 @@ rendering or code execution; the `animation_json` response field contains text
 and is not a guarantee that the payload is a playable animation.
 
 Limits: query/goal 500 characters, filters 100, style 200, result limit 1–10,
-each manifest 4 MiB/combined 1,000 entries, 24 assets and four examples per entry,
+each manifest 4 MiB/combined 1,000 entries, 32 assets and four examples per entry,
 license description 1,000 characters, guidance 8,000
 characters, example code 4,000. Image files are capped at 512 KiB/16 million
 pixels; animation JSON at 128 KiB. Ordinary JSON tool responses are capped at

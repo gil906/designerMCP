@@ -1,0 +1,58 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "cc1ff8b4be45bd2682700cc4e3fc8748b030f6d877f999dff0200921210e2bc1",
+      "source_url": "original://designerMCP/offline/original-foldable-layout"
+    },
+    {
+      "asset_id": "offline-examples",
+      "format": "examples",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "example",
+      "sha256": "c879f0d21427924cb8fa0fe23bd41dbcf686ac4f016bc63c22e79c9c9ff8ac88",
+      "source_url": "original://designerMCP/offline/original-foldable-layout"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "9a6403446fc1ad2e319ed71041f63b71201bfcfa571812b76b2f77209a743349",
+      "source_url": "original://designerMCP/offline/original-foldable-layout"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "examples-only",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "original-foldable-layout",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

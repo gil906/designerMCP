@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/.npmrc",
+  "filename": ".npmrc",
+  "format": "text",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-245",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/.npmrc",
+    "title": ".npmrc"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "0e0afb61c45da15c3b03fd82753de4b3336a07e98d6e6226ae1f39cd3591151a",
+  "text": "git-tag-version=false\n",
+  "version": 1
+}

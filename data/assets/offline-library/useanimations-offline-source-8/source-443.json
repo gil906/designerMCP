@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/vi/index.ts",
+  "filename": "index.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-443",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/vi/index.ts",
+    "title": "website/src/i18n/messages/vi/index.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "92fc61f7993008f41ed42bbf4ec95992665be3ffe574002fe85cd3b628cc7743",
+  "text": "// Tiếng Việt: cùng cấu trúc với messages/en (kiểu Messages).\nimport type { Messages } from '../en';\nimport { common } from './common';\nimport { docs } from './docs';\nimport { home } from './home';\nimport { hubs } from './hubs';\nimport { islands } from './islands';\nimport { licence } from './licence';\nimport { pages } from './pages';\nimport { taxonomy } from './taxonomy';\n\nexport const messages: Messages = { common, taxonomy, hubs, home, docs, licence, pages, islands };\n",
+  "version": 1
+}

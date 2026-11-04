@@ -1,0 +1,58 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "b006db4b750003648b26b67e47735d34039575b3c4875b618de3717ecc0cdef9",
+      "source_url": "original://designerMCP/offline/linked-godly"
+    },
+    {
+      "asset_id": "offline-examples",
+      "format": "examples",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "example",
+      "sha256": "3b8aec01d1f88b1bafe3d206dfb520142eb4f0b275a38556c3dd8d904d0133fd",
+      "source_url": "original://designerMCP/offline/linked-godly"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "bd477f9226093297fd81b4937503b943e949ece3de6460310ce3f0d495475ce8",
+      "source_url": "original://designerMCP/offline/linked-godly"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "examples-only",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "linked-godly",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

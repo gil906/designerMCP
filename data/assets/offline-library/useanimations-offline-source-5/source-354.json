@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/de/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-354",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/de/islands.ts",
+    "title": "website/src/i18n/messages/de/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "253519c2912ecec5997fdb3f9290dab40dd76bde6d8b801309917571a3936ea9",
+  "text": "import type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Loop',\n      'click-toggle': 'Klick',\n      'click-replay': 'Klick',\n      hover: 'Hover',\n      'hover-loop': 'Hover',\n      'hover-replay': 'Hover',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Läuft von selbst',\n      'click-toggle': 'Zum Umschalten klicken',\n      'click-replay': 'Zum Wiederholen klicken',\n      hover: 'Hover spielt ab, Verlassen spielt rückwärts',\n      'hover-loop': 'Hover startet den Loop',\n      'hover-replay': 'Hover spielt ab',\n    },\n    preview: 'Vorschau: {title}',\n    colors: 'Vorschaufarbe',\n    color: 'Farbe {color}',\n    textColor: 'Textfarbe',\n    interaction: 'Interaktion',\n    duration: 'Dauer',\n    seconds: '{seconds} s',\n    import: 'Import',\n    close: 'Schließen',\n    code: 'Code',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Dateien' },\n    copy: 'Kopieren',\n    download: 'Herunterladen',\n    iconPage: 'Zur Icon-Seite',\n  },\n  interactionDemo: {\n    click: 'Auf die Karte klicken',\n    loop: 'Läuft von selbst',\n    hover: 'Mauszeiger auf die Karte',\n  },\n  mobileMenu: {\n    menu: 'Menü',\n    nav: 'Hauptnavigation',\n  },\n  search: {\n    clear: 'Suche löschen',\n  },\n  themeToggle: {\n    toLight: 'Zum hellen Design wechseln',\n    toDark: 'Zum dunklen Design wechseln',\n  },\n};\n",
+  "version": 1
+}

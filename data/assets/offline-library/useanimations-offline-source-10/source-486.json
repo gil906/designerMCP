@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/categories/[slug].md.ts",
+  "filename": "[slug].md.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-486",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/categories/[slug].md.ts",
+    "title": "website/src/pages/categories/[slug].md.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "c3e6ae575057156bb558e1205e5099162b23b41197ccc1c89ec6befcf57cf8c9",
+  "text": "import type { GetStaticPaths } from 'astro';\nimport { text } from '../../lib/http';\nimport { categories, categoryFaq, categoryPath, categoryText } from '../../lib/hubs';\nimport { type Icon, INTERACTIONS, reactExample, shadcnCommand, SITE } from '../../lib/icons';\nimport { type CategoryMeta, INTERACTION_META } from '../../lib/taxonomy';\n\nexport const getStaticPaths = (() =>\n  categories().map(({ meta, icons }) => ({\n    params: { slug: meta.slug },\n    props: { meta, icons },\n  }))) satisfies GetStaticPaths;\n\nexport const GET = ({ props }: { props: { meta: CategoryMeta; icons: Icon[] } }) => {\n  const { meta } = props;\n  const copy = categoryText(meta);\n  const others = categories().filter((other) => other.meta.name !== meta.name);\n  return text(\n    `# ${meta.title}\n\n> ${copy.description}\n\n${meta.intro}\n\n${copy.summary}\n\n## Icons\n\n${props.icons\n  .map(\n    (icon) => `- [${icon.title}](${SITE}/icons/${icon.id}) (\\`${icon.name}\\`, ${icon.interaction})`\n  )\n  .join('\\n')}\n\n## Where to use them\n\n${meta.useCases.map((useCase) => `- ${useCase}`).join('\\n')}\n\n## By interaction\n\n${copy.byInteraction\n  .map(\n    ({ interaction, icons }) =>\n      `- [${INTERACTION_META[interaction].title}](${SITE}/interactions/${interaction}) (${icons.length}): ${INTERACTIONS[interaction].description}`\n  )\n  .join('\\n')}\n\n## Code\n\n\\`\\`\\`jsx\n${reactExample(copy.example.exportName, copy.example.name)}\n\\`\\`\\`\n\n\\`\\`\\`bash\n${shadcnCommand(copy.example)}\n\\`\\`\\`\n\nEvery icon is also a Lottie JSON file at \\`${SITE}/icons/<id>.json\\`: [Lottie icons](${SITE}/lottie-icons).\n\n## FAQ\n\n${categoryFaq(meta)\n  .map(({ question, answer }) => `### ${question}\\n\\n${answer}`)\n  .join('\\n\\n')}\n\n## More categories\n\n${others.map((other) => `- [${other.meta.title}](${SITE}${categoryPath(other.meta)}) (${other.icons.length})`).join('\\n')}\n\nHTML version: ${SITE}${categoryPath(meta)}\n`,\n    'text/markdown'\n  );\n};\n",
+  "version": 1
+}

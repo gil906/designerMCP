@@ -1,0 +1,58 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "0bb75b9fc3c1a9f50495958a92c95c6968345a657c3ab0421030b884ad1999ca",
+      "source_url": "original://designerMCP/offline/original-data-table"
+    },
+    {
+      "asset_id": "offline-examples",
+      "format": "examples",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "example",
+      "sha256": "bcbf58fff8c9a54a62fb4b34387ae68fd5a0bd89c57d8e91ed61ae672b923a35",
+      "source_url": "original://designerMCP/offline/original-data-table"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "9a6403446fc1ad2e319ed71041f63b71201bfcfa571812b76b2f77209a743349",
+      "source_url": "original://designerMCP/offline/original-data-table"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "examples-only",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "original-data-table",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

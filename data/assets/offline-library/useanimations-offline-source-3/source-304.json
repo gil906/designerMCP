@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/Footer.astro",
+  "filename": "Footer.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-304",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/Footer.astro",
+    "title": "website/src/components/Footer.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "4d73a7c151e8167dfc18b9f5da5287c92017b2cfaea886e6c9173b2697f7e906",
+  "text": "---\nimport ControlIcon from './ControlIcon';\nimport Logo from './Logo.astro';\nimport { BUILT, EN, type Locale, localize, t } from '../i18n';\nimport { footer } from '../lib/site';\n\ninterface Props {\n  locale?: Locale;\n  /** hreflang -> path of the page in each language; pages without them link to each home page. */\n  alternates?: Record<string, string>;\n}\n\nconst { locale = EN, alternates } = Astro.props;\nconst m = t(locale).common.footer;\nconst columns = footer(locale);\nconst languages = BUILT.map((l) => ({ locale: l, href: alternates?.[l.hreflang] ?? localize('/', l) }));\n---\n\n<footer class=\"mt-32 border-t border-line\">\n  <div class=\"mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.4fr_repeat(4,1fr)]\">\n    <div class=\"max-w-xs\">\n      <a href={localize('/', locale)} aria-label={t(locale).common.homeLabel}><Logo /></a>\n      <p class=\"mt-4 text-sm leading-relaxed text-muted\">{m.tagline}</p>\n    </div>\n    {\n      columns.map((column) => (\n        <div>\n          <h2 class=\"text-sm font-medium text-fg\">{column.title}</h2>\n          <ul class=\"mt-4 space-y-2.5\">\n            {column.links.map((link) => (\n              <li>\n                <a href={link.href} class=\"inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-fg\">\n                  {link.label}\n                  {link.href.startsWith('https:') && <ControlIcon client:idle icon=\"externalLink\" size={12} className=\"text-subtle\" />}\n                </a>\n              </li>\n            ))}\n          </ul>\n        </div>\n      ))\n    }\n    {\n      languages.length > 1 && (\n        <nav aria-labelledby=\"footer-languages\">\n          <h2 id=\"footer-languages\" class=\"text-sm font-medium text-fg\">{m.languages}</h2>\n          <ul class=\"mt-4 space-y-2.5\">\n            {languages.map(({ locale: l, href }) => (\n              <li>\n                <a\n                  href={href}\n                  hreflang={l.hreflang}\n                  lang={l.hreflang}\n                  aria-current={l === locale ? 'true' : undefined}\n                  class=\"text-sm text-muted transition-colors hover:text-fg aria-[current=true]:text-fg\"\n                >\n                  {l.name}\n                </a>\n              </li>\n            ))}\n          </ul>\n        </nav>\n      )\n    }\n  </div>\n  <div class=\"mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 border-t border-line px-5 py-6 text-xs text-subtle sm:px-8\">\n    <span>© {new Date().getFullYear()} useAnimations · {m.mitLicense}</span>\n    <span>{m.builtWith}</span>\n  </div>\n</footer>\n",
+  "version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "examples": [
+    {
+      "code": "/* Original CC0-1.0; use the project's existing React runtime. */\nimport { useId } from 'react';\nexport function AppointmentSummary({ dateLabel, serviceLabel, bookingHref }) {\n  const titleId = useId();\n  return <section className=\"booking-summary\" aria-labelledby={titleId}>\n    <h2 id={titleId}>Your appointment</h2>\n    <dl><dt>Service</dt><dd>{serviceLabel}</dd><dt>Date</dt><dd>{dateLabel}</dd></dl>\n    <a className=\"primary-action\" href={bookingHref}>Review appointment</a>\n  </section>;\n}",
+      "description": "Original useful product-specific summary with unique heading IDs; bookingHref must be a project-validated navigation URL, and date/service must be truthful application data.",
+      "language": "jsx"
+    },
+    {
+      "code": "/* Original CC0-1.0 companion layout; no external fonts or motion required. */\n.booking-summary { max-inline-size: 38rem; padding: 1.5rem; border: 1px solid var(--border, #a59b8e); border-radius: .75rem; }\n.booking-summary h2 { margin-block: 0 1rem; font-size: 1.5rem; font-weight: 500; }\n.booking-summary dl { display: grid; grid-template-columns: minmax(5rem, 1fr) minmax(0, 2fr); gap: .5rem 1rem; }\n.booking-summary dd { margin: 0; overflow-wrap: anywhere; }\n.booking-summary .primary-action { display: inline-flex; align-items: center; min-block-size: 2.75rem; margin-block-start: 1rem; padding-inline: 1rem; }\n@media (max-width: 25rem) { .booking-summary dl { grid-template-columns: minmax(0, 1fr); } .booking-summary dd { margin-block-end: .5rem; } }",
+      "description": "Original readable semantic definition-list layout with a narrow-screen fallback.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

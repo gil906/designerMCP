@@ -1,0 +1,58 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "5af4146305b4b7e98a194c96acfc6834748e1c575f0279fcc5517934368923a3",
+      "source_url": "original://designerMCP/offline/unslop-original-web-baseline"
+    },
+    {
+      "asset_id": "offline-examples",
+      "format": "examples",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "example",
+      "sha256": "a155631e1c2926d4ab23c0a4c02ee32ed49b77f184033b3d938920231982dddd",
+      "source_url": "original://designerMCP/offline/unslop-original-web-baseline"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "c11b076a9492ee4e0555ab4facb39a3a146ca15e6bfed856e895dd6e00a5ec2d",
+      "source_url": "original://designerMCP/offline/unslop-original-web-baseline"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "examples-only",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "unslop-original-web-baseline",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

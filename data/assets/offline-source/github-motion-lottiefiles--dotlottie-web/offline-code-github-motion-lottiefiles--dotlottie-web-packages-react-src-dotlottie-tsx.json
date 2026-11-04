@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by LottieFiles/dotlottie-web contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 624,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "'use client';\n\nimport type { Config } from '@lottiefiles/dotlottie-web';\nimport { DotLottie } from '@lottiefiles/dotlottie-web';\nimport type { ReactNode } from 'react';\n\nimport type { BaseDotLottieProps } from './base-dotlottie-react';\nimport { BaseDotLottieReact } from './base-dotlottie-react';\n\nexport type DotLottieReactProps = Omit<BaseDotLottieProps<DotLottie>, 'createDotLottie'>;\n\nconst createDotLottie = (config: Config): DotLottie => new DotLottie(config);\n\nexport const DotLottieReact = (props: DotLottieReactProps): ReactNode => {\n  return <BaseDotLottieReact {...props} createDotLottie={createDotLottie} />;\n};\n",
+  "content_sha256": "c91e3368e705ac377e847597b87426188ab67990b96be812544a32f1c2b96c17",
+  "expected_git_blob_sha1": "cf6465d1e7275206e22d217da0499bcf0452fbf9",
+  "filename": "dotlottie.tsx",
+  "full_content_sha256": "c91e3368e705ac377e847597b87426188ab67990b96be812544a32f1c2b96c17",
+  "full_file_complete": true,
+  "full_source_sha256": "c91e3368e705ac377e847597b87426188ab67990b96be812544a32f1c2b96c17",
+  "kind": "source-file",
+  "language": "tsx",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 16,
+    "start": 1,
+    "total": 16
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "tsx",
+  "original_path": "packages/react/src/dotlottie.tsx",
+  "repository": "LottieFiles/dotlottie-web",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+      "sha256": "779cec663b3c6590082566f2a000170d7a4d1a4bfc6f954e61efa4adddc652a8"
+    }
+  ],
+  "revision": "2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 624,
+  "source_lines": 16,
+  "source_sha256": "c91e3368e705ac377e847597b87426188ab67990b96be812544a32f1c2b96c17",
+  "source_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/dotlottie.tsx",
+  "verified_git_blob_sha1": "cf6465d1e7275206e22d217da0499bcf0452fbf9"
+}

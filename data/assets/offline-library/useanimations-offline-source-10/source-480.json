@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/[locale]/interactions/[slug].astro",
+  "filename": "[slug].astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-480",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/[locale]/interactions/[slug].astro",
+    "title": "website/src/pages/[locale]/interactions/[slug].astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "a6aa0ffa7db487495c2119489cdac4ede375ebd1ce7c7ccdafe4f0457f6d4f8b",
+  "text": "---\nimport type { GetStaticPaths } from 'astro';\nimport type { Interaction } from 'react-useanimations';\nimport { type Locale, TRANSLATED } from '../../../i18n';\nimport { interactions } from '../../../lib/hubs';\nimport InteractionPage from '../../../views/InteractionPage.astro';\n\nexport const getStaticPaths = (() =>\n  TRANSLATED.flatMap((locale) =>\n    interactions().map(({ interaction }) => ({\n      params: { locale: locale.code, slug: interaction },\n      props: { locale, interaction },\n    }))\n  )) satisfies GetStaticPaths;\n\nconst { locale, interaction } = Astro.props as { locale: Locale; interaction: Interaction };\n---\n\n<InteractionPage locale={locale} interaction={interaction} />\n",
+  "version": 1
+}

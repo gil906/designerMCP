@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/env.d.ts",
+  "filename": "env.d.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-336",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/env.d.ts",
+    "title": "website/src/env.d.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "77895e00962e7743160f58a68af4df033e6bac7e939cffdcdc4660647d146d0b",
+  "text": "/// <reference types=\"astro/client\" />\n\ninterface ImportMetaEnv {\n  /** Absolute path of the repository root, set in astro.config.ts. */\n  readonly REPO_DIR: string;\n}\n\ntype UmamiTracker = { track: (name: string, data?: Record<string, string>) => unknown };\n\ninterface Window {\n  umami?: UmamiTracker;\n  /** The cloud.umami.is tracker, set aside by Layout.astro so ours can load too. */\n  umamiCloud?: UmamiTracker;\n}\n",
+  "version": 1
+}

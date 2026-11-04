@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "reference",
+      "format": "json",
+      "license": "BSD-3-Clause",
+      "license_path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "558ff30726f865faa57a99916f7b3f22bc3f431b0d171efdc9ea655a6509ba44",
+      "source_url": "https://github.com/flutter/samples/tree/21c71902bb2c7da3cce328ba5946cba2f35a660a"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "e3c7b37a4619cf1d764dfdcfc2366424dfbd07cbe2f766e3abde63021ffc9c87",
+      "source_url": "original://designerMCP/offline/github-mobile-flutter-samples"
+    },
+    {
+      "asset_id": "offline-document-github-mobile-flutter-samples-readme-md",
+      "format": "plaintext",
+      "license": "BSD-3-Clause",
+      "license_path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "c806ef7e93acc7f8e9ca71588a1aae4f8cbd1e856975e1780237e0e3192c3f3f",
+      "source_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-mobile-flutter-samples-material-3-demo-lib-src-home-dart",
+      "format": "dart",
+      "license": "BSD-3-Clause",
+      "license_path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "5011b6ebd9aa8c940d0228216849201c5d67aabbd85a8a6f61bc0e78cce23d86",
+      "source_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/material_3_demo/lib/src/home.dart"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "946bec9c185d8ecf0f9f2bff1b5ec16bbf1a78f10bbc1afcd2fdd6f1679ff699",
+      "source_url": "original://designerMCP/offline/github-mobile-flutter-samples"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-mobile-flutter-samples",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

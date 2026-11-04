@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/[locale]/categories/[slug].astro",
+  "filename": "[slug].astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-475",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/[locale]/categories/[slug].astro",
+    "title": "website/src/pages/[locale]/categories/[slug].astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "e2d2993c4fa71a8f3e61a99dbcb18ae085d10d7c24928e52e5e9576c84e06004",
+  "text": "---\nimport type { GetStaticPaths } from 'astro';\nimport { type Locale, TRANSLATED } from '../../../i18n';\nimport { categories } from '../../../lib/hubs';\nimport CategoryPage from '../../../views/CategoryPage.astro';\n\nexport const getStaticPaths = (() =>\n  TRANSLATED.flatMap((locale) =>\n    categories().map(({ meta }) => ({\n      params: { locale: locale.code, slug: meta.slug },\n      props: { locale, name: meta.name },\n    }))\n  )) satisfies GetStaticPaths;\n\nconst { locale, name } = Astro.props as { locale: Locale; name: string };\n---\n\n<CategoryPage locale={locale} name={name} />\n",
+  "version": 1
+}

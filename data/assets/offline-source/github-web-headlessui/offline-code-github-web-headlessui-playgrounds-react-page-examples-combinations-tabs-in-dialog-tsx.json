@@ -1,0 +1,56 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "Copyright (c) 2020 Tailwind Labs"
+  ],
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 1315,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "import { Dialog, Tab } from '@headlessui/react'\nimport { useState } from 'react'\nimport { Button } from '../../components/button'\n\nexport default function App() {\n  let [open, setOpen] = useState(false)\n\n  return (\n    <div className=\"p-12\">\n      <Button onClick={() => setOpen(true)}>Open dialog</Button>\n      <Dialog open={open} onClose={setOpen} className=\"fixed inset-0 grid place-content-center\">\n        <div className=\"fixed inset-0 bg-gray-500/70\" />\n        <Dialog.Panel className=\"inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle\">\n          <div className=\"bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4\">\n            <Tab.Group>\n              <Tab.List className=\"flex gap-4 py-4\">\n                <Tab as={Button}>Tab 1</Tab>\n                <Tab as={Button}>Tab 2</Tab>\n                <Tab as={Button}>Tab 3</Tab>\n              </Tab.List>\n              <Tab.Panels>\n                <Tab.Panel className=\"px-3 py-2\">Panel 1</Tab.Panel>\n                <Tab.Panel className=\"px-3 py-2\">Panel 2</Tab.Panel>\n                <Tab.Panel className=\"px-3 py-2\">Panel 3</Tab.Panel>\n              </Tab.Panels>\n            </Tab.Group>\n          </div>\n        </Dialog.Panel>\n      </Dialog>\n    </div>\n  )\n}\n",
+  "content_sha256": "a870aa477bd49d755f2f275bc9b01e42d18c82ca58be6c6d0a8ea057666794fc",
+  "expected_git_blob_sha1": "d7b783a612b2f34d8f361577c50d468a47bdb36f",
+  "filename": "tabs-in-dialog.tsx",
+  "full_content_sha256": "a870aa477bd49d755f2f275bc9b01e42d18c82ca58be6c6d0a8ea057666794fc",
+  "full_file_complete": true,
+  "full_source_sha256": "a870aa477bd49d755f2f275bc9b01e42d18c82ca58be6c6d0a8ea057666794fc",
+  "kind": "source-file",
+  "language": "tsx",
+  "license": "MIT",
+  "license_path": "licenses/github-web/headlessui/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 32,
+    "start": 1,
+    "total": 32
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "tsx",
+  "original_path": "playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+  "repository": "tailwindlabs/headlessui",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/headlessui/LICENSE.txt",
+      "sha256": "c0812e5b3b5848765343baffe9e304233fceae7891ba414a10d679aa7eccc0a6"
+    }
+  ],
+  "revision": "eea57cf46fd6767ed1059012f7073b88eb159fba",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 1315,
+  "source_lines": 32,
+  "source_sha256": "a870aa477bd49d755f2f275bc9b01e42d18c82ca58be6c6d0a8ea057666794fc",
+  "source_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+  "verified_git_blob_sha1": "d7b783a612b2f34d8f361577c50d468a47bdb36f"
+}

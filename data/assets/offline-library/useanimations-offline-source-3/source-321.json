@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/SearchIcon.tsx",
+  "filename": "SearchIcon.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-321",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/SearchIcon.tsx",
+    "title": "website/src/components/SearchIcon.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "6acfc933bcf22e3ea77fadcfb7eb3692e0384c97977bab790c0d6e63475d029f",
+  "text": "import { useEffect, useState } from 'react';\nimport UseAnimations from 'react-useanimations';\nimport searchToX from '../../../icons/searchToX.json';\nimport { islands } from '../i18n/messages/en/islands';\n\nconst fieldOf = (button: HTMLButtonElement | null) =>\n  button?.closest('label')?.querySelector<HTMLInputElement>('[data-search]');\n\n/**\n * The icon of the browser's search field (the input with `data-search` in the same label): a\n * magnifier that turns into a clear button while the field has text.\n */\nexport default function SearchIcon({\n  strings = islands.search,\n}: {\n  /** The button's text in the page's language: t(locale).islands.search. */\n  strings?: typeof islands.search;\n}) {\n  const [button, setButton] = useState<HTMLButtonElement | null>(null);\n  const [filled, setFilled] = useState(false);\n\n  useEffect(() => {\n    const input = fieldOf(button);\n    if (!input) return undefined;\n    // scripts/browser.ts may have filled the field from ?q= before this island hydrated.\n    const sync = () => setFilled(input.value !== '');\n    sync();\n    input.addEventListener('input', sync);\n    return () => input.removeEventListener('input', sync);\n  }, [button]);\n\n  // The browser script filters on the field's input event, so clearing goes through it too.\n  const clear = () => {\n    const input = fieldOf(button);\n    if (!input) return;\n    input.value = '';\n    input.dispatchEvent(new Event('input', { bubbles: true }));\n    input.focus();\n  };\n\n  return (\n    <UseAnimations\n      animation={{ animationData: searchToX, interaction: 'click-toggle' }}\n      active={filled}\n      size={18}\n      onClick={clear}\n      render={({ onClick }, animationProps) => (\n        <button\n          type=\"button\"\n          ref={setButton}\n          onClick={onClick}\n          aria-label={strings.clear}\n          // Only the X is a button; the magnifier is a picture.\n          aria-hidden={!filled}\n          tabIndex={filled ? 0 : -1}\n          className={`absolute top-1/2 left-2.5 inline-flex size-6 -translate-y-1/2 items-center justify-center rounded-full text-subtle transition-colors hover:text-fg ${filled ? '' : 'pointer-events-none'}`}\n        >\n          <span {...animationProps} />\n        </button>\n      )}\n    />\n  );\n}\n",
+  "version": 1
+}

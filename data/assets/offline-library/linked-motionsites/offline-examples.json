@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": ".hero { display: grid; gap: 1.5rem; padding: clamp(2rem, 7vw, 6rem); }\n.hero h1 { max-width: 16ch; font-size: clamp(2rem, 5vw, 4rem); line-height: 1.08; }\n.hero p { max-width: 58ch; }\n@media (min-width: 60rem) { .hero { grid-template-columns: 3fr 2fr; align-items: center; } }",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/fr/licence.ts",
+  "filename": "licence.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-382",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/fr/licence.ts",
+    "title": "website/src/i18n/messages/fr/licence.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "99e57b8d317bc94cb17d0261e7ee92acaa705c838a8d725df91d10e55ec21540",
+  "text": "import type { Messages } from '../en';\n\nexport const licence: Messages['licence'] = {\n  title: 'Licence et conditions — useAnimations',\n  description:\n    'Les icônes useAnimations et le package react-useanimations sont sous licence MIT : usage personnel et commercial, redistribution libre, sans attribution.',\n  name: 'Licence et conditions',\n  heading: 'Libre d’utilisation. Sous licence MIT.',\n  introHtml: (mitHref: string) =>\n    `Les icônes useAnimations et le package <code>react-useanimations</code> sont publiés sous <a href=\"${mitHref}\">licence MIT</a>.`,\n  canDo: 'Ce que vous pouvez faire',\n  canDoItemsHtml: [\n    '<strong>Utiliser</strong> les icônes dans des sites, des apps et des produits, personnels comme commerciaux.',\n    '<strong>Les modifier</strong> : changer les couleurs, les tailles, le timing ou le mouvement lui-même.',\n    '<strong>Les redistribuer</strong>, y compris au sein de packs d’icônes, de templates, de thèmes, de kits UI et de registres de composants.',\n  ],\n  attribution: 'Attribution',\n  attributionText:\n    'Elle n’est pas obligatoire, mais elle fait plaisir. Conservez la notice de licence si vous redistribuez les fichiers eux-mêmes, et si vous souhaitez nous citer :',\n  credit: (link: string) => `Icônes animées par ${link}`,\n  noWarranty: 'Absence de garantie',\n  noWarrantyText: 'Les icônes et le code sont fournis tels quels, sans garantie d’aucune sorte.',\n  licenseText: 'Texte de la licence',\n  bindingNote:\n    'Le texte de licence ci-dessous est la version originale en anglais, seule juridiquement contraignante.',\n};\n",
+  "version": 1
+}

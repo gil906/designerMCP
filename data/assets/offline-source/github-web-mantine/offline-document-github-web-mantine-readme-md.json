@@ -1,0 +1,72 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "Copyright (c) 2021 Vitaly Rtishchev"
+  ],
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 2987,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "# Mantine\n\n[](https://github.com/mantinedev/mantine/blob/master/LICENSE)\n[](https://opencollective.com/mantinedev)\n[](https://github.com/mantinedev/mantine/graphs/contributors)\n[](https://www.npmjs.com/package/@mantine/core)\n[](https://www.npmjs.com/package/@mantine/hooks)\n[](https://github.com/mantinedev/mantine/labels/help%20wanted)\n[](https://discord.gg/wbH82zuWMN)\n[](https://x.com/mantinedev)\n\n## Links\n\n- Documentation (https://mantine.dev/)\n- Contribute (https://mantine.dev/contribute)\n- Ask question or give feedback (https://github.com/mantinedev/mantine/discussions)\n- Changelog (https://mantine.dev/changelog/all-releases)\n- Follow on X (https://x.com/mantinedev)\n- Join Discord community (https://discord.gg/wbH82zuWMN)\n\n## Packages\n\n- `@mantine/hooks` (https://mantine.dev/hooks/package/) – collection of 80+ hooks for state and UI management\n- `@mantine/core` (https://mantine.dev/core/package/) – core components library – 100+ components\n- `@mantine/form` (https://mantine.dev/form/use-form) – forms management library\n- `@mantine/charts` (https://mantine.dev/charts/getting-started/) – recharts based charts library\n- `@mantine/notifications` (https://mantine.dev/x/notifications) – a fully featured notifications system\n- `@mantine/spotlight` (https://mantine.dev/x/spotlight) – `Ctrl + K` command center for your application\n- `@mantine/code-highlight` (https://mantine.dev/code-highlight/code-highlight/) – code highlight built with highlight.js (https://highlightjs.org/)\n- `@mantine/tiptap` (https://mantine.dev/x/tiptap) – a Tiptap based rich text editor\n- `@mantine/dropzone` (https://mantine.dev/x/dropzone) – manages files drag 'n' drop to an area or entire screen\n- `@mantine/carousel` (https://mantine.dev/x/carousel) – Carousel component\n- `@mantine/nprogress` (https://mantine.dev/x/nprogress) – navigation progress\n- `@mantine/modals` (https://mantine.dev/x/modals) – centralized modals manager\n- `@mantine/schedule` (https://mantine.dev/x/schedule) – Schedule component for displaying events\n\n## Getting help\n\nMantine has a very friendly community, we are always happy to help you get started:\n\n- Join Discord community (https://discord.gg/wbH82zuWMN) – it is the easiest way to get help, all questions are usually answered in about 30 minutes\n- GitHub Discussions (https://github.com/mantinedev/mantine/discussions) – ask anything about the project or give feedback\n\n## Contributors\n\n<a href=\"https://github.com/mantinedev/mantine/graphs/contributors\">\n  \n</a>\n\nBecome a contributor (https://mantine.dev/contribute)\n\n## Support development\n\n[](https://opencollective.com/mantinedev)\n\nMantine is a MIT-licensed open source project with its ongoing development made possible entirely by the support of these awesome backers (https://opencollective.com/mantinedev). If you'd like to join them, please consider contributing financially on OpenCollective (https://opencollective.com/mantinedev).\n\n[](https://opencollective.com/mantinedev)\n\n## License\n\nMIT\n",
+  "content_sha256": "ddb0c077bc9819909236b3ac28e747c829a12c8a452d44b3788cb94530715293",
+  "expected_git_blob_sha1": "d2eb802b62933bfb934ce29bf59fb7d5d4f69165",
+  "filename": "README.md",
+  "full_content_sha256": "ddb0c077bc9819909236b3ac28e747c829a12c8a452d44b3788cb94530715293",
+  "full_file_complete": false,
+  "full_source_sha256": "ed3f723d83c74199aca418eb2a277f2e5ad3d34442a69fb2e9690cce3572f15e",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-web/mantine/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 62,
+    "start": 1,
+    "total": 62
+  },
+  "modifications": [
+    {
+      "count": 1,
+      "operation": "remove HTML media tags"
+    },
+    {
+      "count": 10,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 25,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "mantinedev/mantine",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/mantine/LICENSE.txt",
+      "sha256": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a"
+    }
+  ],
+  "revision": "0120ad3643a792e59bcb09c3aa254b2d1a312902",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 3799,
+  "source_lines": 62,
+  "source_sha256": "ed3f723d83c74199aca418eb2a277f2e5ad3d34442a69fb2e9690cce3572f15e",
+  "source_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/README.md",
+  "verified_git_blob_sha1": "d2eb802b62933bfb934ce29bf59fb7d5d4f69165"
+}

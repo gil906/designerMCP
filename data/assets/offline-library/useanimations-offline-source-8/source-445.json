@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/vi/licence.ts",
+  "filename": "licence.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-445",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/vi/licence.ts",
+    "title": "website/src/i18n/messages/vi/licence.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "de17025b651046d2334dac4a8ff5889f916bc65272e41af6e0873f70937a157c",
+  "text": "// Trang giấy phép (/licencing-and-terms). Văn bản LICENSE luôn hiển thị bằng tiếng Anh.\nimport type { Messages } from '../en';\n\nexport const licence: Messages['licence'] = {\n  title: 'Giấy phép & Điều khoản — useAnimations',\n  description:\n    'Icon của useAnimations và package react-useanimations dùng giấy phép MIT: miễn phí cho mục đích cá nhân, thương mại và phân phối lại, không cần ghi nguồn.',\n  name: 'Giấy phép & Điều khoản',\n  heading: 'Dùng miễn phí. Giấy phép MIT.',\n  introHtml: (mitHref: string) =>\n    `Bộ icon useAnimations và package <code>react-useanimations</code> được phát hành theo <a href=\"${mitHref}\">giấy phép MIT</a>.`,\n  canDo: 'Bạn được phép',\n  canDoItemsHtml: [\n    '<strong>Sử dụng</strong> icon trong website, ứng dụng và sản phẩm cá nhân lẫn thương mại.',\n    '<strong>Chỉnh sửa</strong> icon: đổi màu, kích thước, thời gian hay chính chuyển động.',\n    '<strong>Phân phối lại</strong> icon, kể cả trong các bộ icon, template, theme, UI kit và component registry.',\n  ],\n  attribution: 'Ghi nguồn',\n  attributionText:\n    'Không bắt buộc, nhưng chúng tôi rất trân trọng. Hãy giữ lại thông báo giấy phép khi bạn phân phối lại chính các tệp icon. Nếu muốn ghi nguồn, bạn có thể dùng dòng sau:',\n  credit: (link: string) => `Icon động của ${link}`,\n  noWarranty: 'Không bảo hành',\n  noWarrantyText:\n    'Icon và mã nguồn được cung cấp nguyên trạng, không kèm bất kỳ hình thức bảo hành nào.',\n  licenseText: 'Văn bản giấy phép',\n  bindingNote:\n    'Văn bản giấy phép dưới đây là bản gốc tiếng Anh, và chỉ bản này có giá trị pháp lý.',\n};\n",
+  "version": 1
+}

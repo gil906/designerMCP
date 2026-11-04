@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "meadow-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "ac5fff12f56441dd2e0427a8bc5b6b763b995a97c9b7ec5aaa2d0a7755058e91",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/meadow-3d.webp"
+    },
+    {
+      "asset_id": "meadow-original",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "84f526b68021a06fc6d32f162406fab6cc8074da1ef76d2ae4530e1b58219b14",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/meadow-3d.webp"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "ac5fff12f56441dd2e0427a8bc5b6b763b995a97c9b7ec5aaa2d0a7755058e91",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/meadow-3d.webp"
+    },
+    {
+      "asset_id": "offline-guidance",
+      "format": "text",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "document",
+      "sha256": "9098b34181d887d0f2dbe4100a3b4d0eb36f3c984f575c446928764e872ee753",
+      "source_url": "original://designerMCP/offline/unslop-meadow-reference"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "6d8867af1e3cd0d634a715b5f7ba16369dcf4338b3cd2184a0891246d5bf28e7",
+      "source_url": "original://designerMCP/offline/unslop-meadow-reference"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "unavailable",
+    "license": "available",
+    "source": "original-guidance",
+    "visual": "available"
+  },
+  "kind": "upstream-preview",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Upstream source/documents are unavailable; the local document is original adaptation guidance.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "unslop-meadow-reference",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

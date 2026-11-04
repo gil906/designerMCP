@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": ":root { --page: #f6f7fb; --surface: #fff; --ink: #202839; --accent: #3153c7; --edge: #c7cedd; }\n.panel { color: var(--ink); background: var(--surface); border: 1px solid var(--edge); border-radius: 1rem; }\n.panel a { color: var(--accent); text-decoration: underline; text-underline-offset: .2em; }",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

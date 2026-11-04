@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/NavIcon.tsx",
+  "filename": "NavIcon.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-320",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/NavIcon.tsx",
+    "title": "website/src/components/NavIcon.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "1dcc223c5bb44cebe784e82f3ade76d31d2f72b10e4c161d6043dd3af5d5e768",
+  "text": "import UseAnimations from 'react-useanimations';\nimport github from '../../../icons/github.json';\n\n/** The GitHub link in the header: its icon loops while the link is hovered or focused. */\nexport default function NavIcon({ href, label }: { href: string; label: string }) {\n  return (\n    <UseAnimations\n      animation={{ animationData: github, interaction: 'hover-loop' }}\n      size={20}\n      render={(eventProps, animationProps) => (\n        <a\n          href={href}\n          aria-label={label}\n          className=\"inline-flex size-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface-2 hover:text-fg\"\n          {...eventProps}\n        >\n          <span {...animationProps} />\n        </a>\n      )}\n    />\n  );\n}\n",
+  "version": 1
+}

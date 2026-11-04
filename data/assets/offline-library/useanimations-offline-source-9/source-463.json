@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/lib/icon-data.ts",
+  "filename": "icon-data.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-463",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/lib/icon-data.ts",
+    "title": "website/src/lib/icon-data.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "73865abe69ed07bd78bc1d8018a87b988ff7d8550d1d3d7086b7373bec069c16",
+  "text": "// Lottie JSON of an icon, fetched once per page from /icons/<id>.json.\nconst cache = new Map<string, Promise<object>>();\n\nexport const loadIconData = (id: string): Promise<object> => {\n  let data = cache.get(id);\n  if (!data) {\n    data = fetch(`/icons/${id}.json`).then((response) => {\n      if (!response.ok) throw new Error(`/icons/${id}.json: HTTP ${response.status}`);\n      return response.json();\n    });\n    cache.set(id, data);\n  }\n  return data;\n};\n",
+  "version": 1
+}

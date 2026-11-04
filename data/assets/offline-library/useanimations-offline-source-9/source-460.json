@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/lib/home.ts",
+  "filename": "home.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-460",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/lib/home.ts",
+    "title": "website/src/lib/home.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "8e04b86ebaa95145dc3b15332ad6c4fab57c8c77b3807e8f3120eee33903be60",
+  "text": "// Data shared by the home page and its Markdown version (index.md): the FAQ and the hub links.\n// Their text lives in i18n/messages/<lang>/home.ts; the exports in capitals are English.\nimport { EN, type Locale, t } from '../i18n';\nimport type { FaqLinks } from '../i18n/messages/en/home';\nimport { icons, VERSION } from './icons';\nimport { CATEGORY_META, iconsByCategory, iconsByInteraction, INTERACTION_META } from './taxonomy';\n\nconst en = t(EN).home;\n\nexport const HOME_TITLE = en.title;\nexport const HOME_DESCRIPTION = en.description(icons.length);\n\n/** Indexable categories with their page path and icon count, in site order. */\nexport const categoryLinks = () =>\n  Object.values(CATEGORY_META)\n    .filter((meta) => meta.indexable)\n    .map((meta) => ({\n      ...meta,\n      href: `/categories/${meta.slug}`,\n      count: iconsByCategory(meta.name).length,\n    }));\n\n/** Every interaction with its page path and icon count. */\nexport const interactionLinks = () =>\n  Object.values(INTERACTION_META).map((meta) => ({\n    ...meta,\n    href: `/interactions/${meta.slug}`,\n    count: iconsByInteraction(meta.interaction).length,\n  }));\n\n/** The collection pages, for \"browse\" link blocks; English paths, labels in the given language. */\nexport const hubLinks = (locale: Locale = EN) => {\n  const labels = t(locale).home.hubs;\n  return [\n    { label: labels.icons, href: '/icons' },\n    { label: labels.categories, href: '/categories' },\n    { label: labels.interactions, href: '/interactions' },\n    { label: labels.lottie, href: '/lottie-icons' },\n    { label: labels.shadcn, href: '/shadcn-animated-icons' },\n  ];\n};\nexport const HUBS = hubLinks();\n\n/** Pages the FAQ answers link to (English paths). */\nexport const FAQ_LINKS: FaqLinks = {\n  serverRendering: '/documentation#nextjs-and-server-rendering',\n  licence: '/licencing-and-terms',\n  lottie: '/lottie-icons',\n};\n\n/** Questions and answers in a language; `link` points to the page that answers in depth. */\nexport const homeFaq = (locale: Locale = EN, links: FaqLinks = FAQ_LINKS) =>\n  t(locale).home.faq({ version: VERSION, links });\nexport const HOME_FAQ = homeFaq();\n",
+  "version": 1
+}

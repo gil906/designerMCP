@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/interactions/index.astro",
+  "filename": "index.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-500",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/interactions/index.astro",
+    "title": "website/src/pages/interactions/index.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "5deb0582063f1b425f52f49de744ed4eb2bc38f144fbf0cd641d70040c8f0fe8",
+  "text": "---\nimport { EN } from '../../i18n';\nimport InteractionIndexPage from '../../views/InteractionIndexPage.astro';\n---\n\n<InteractionIndexPage locale={EN} />\n",
+  "version": 1
+}

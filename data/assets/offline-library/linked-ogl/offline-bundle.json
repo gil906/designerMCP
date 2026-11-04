@@ -1,0 +1,68 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "ogl-source-1",
+      "format": "json",
+      "license": "Upstream selection: Unlicense; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/ogl/README.md",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "4a3132d179b01e7fdb8537f34a494abfe193dbfaef03233e77fe637cd22393bc",
+      "source_url": "https://github.com/oframe/ogl"
+    },
+    {
+      "asset_id": "ogl-source-2",
+      "format": "json",
+      "license": "Upstream selection: Unlicense; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/ogl/README.md",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "fa90f8db39e568aa2ae98a7b41b28f4dc835561f2f3ba1477225ef46854d81ac",
+      "source_url": "https://github.com/oframe/ogl"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "e778f03b1a9508ca518d23a544adfe13d5bf87c5a06e3132be473aa05b78b831",
+      "source_url": "original://designerMCP/offline/linked-ogl"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "4814c6ed05954e9e11c302c8e3715f427755c31930df3fe7f3c23d369dcd0ea9",
+      "source_url": "original://designerMCP/offline/linked-ogl"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "linked-ogl",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

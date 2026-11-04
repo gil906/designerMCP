@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/public/flags/LICENSE",
+  "filename": "LICENSE",
+  "format": "text",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "flag-0",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/public/flags/LICENSE",
+    "title": "LICENSE"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/flags-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/website/public/flags/LICENSE"
+  },
+  "sha256": "8f1195d55a2fd315a07d812328470ca9ba2abb78c8d317ff19619d5125e00cea",
+  "text": "The MIT License (MIT)\n\nCopyright (c) 2013 Panayiotis Lipiridis\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies\nof the Software, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+  "version": 1
+}

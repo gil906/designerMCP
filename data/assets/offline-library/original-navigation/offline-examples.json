@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<nav aria-label=\"Primary\"><details><summary>Browse sections</summary>\n<ul><li><a href=\"#overview\" aria-current=\"page\">Overview</a></li><li><a href=\"#reports\">Reports</a></li></ul>\n</details></nav>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

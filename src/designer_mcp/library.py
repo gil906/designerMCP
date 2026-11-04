@@ -17,7 +17,7 @@ from typing import Annotated, Literal
 from urllib.parse import unquote, urlsplit
 
 from PIL import Image
-from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
+from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
 
 MAX_LIBRARY_BYTES = 4 * 1024 * 1024
 MAX_OUTPUT_BYTES = 64 * 1024
@@ -87,11 +87,30 @@ class Asset(StrictModel):
     path: Annotated[str, Field(min_length=1, max_length=512)]
     mime_type: Annotated[str, Field(min_length=1, max_length=100)]
     title: Annotated[str, Field(min_length=1, max_length=240)]
+    origin: Literal["upstream", "original", "rendered"] | None = None
+    source_url: Annotated[str | None, Field(min_length=1, max_length=2000)] = None
+    license: Annotated[str | None, Field(min_length=1, max_length=1000)] = None
+    license_path: Annotated[str | None, Field(max_length=512)] = None
+    format: Annotated[str | None, Field(min_length=1, max_length=100)] = None
 
     @field_validator("path")
     @classmethod
     def safe_path(cls, value: str) -> str:
         path_parts(value, "assets")
+        return value
+
+    @field_validator("source_url")
+    @classmethod
+    def safe_source(cls, value: str | None) -> str | None:
+        if value is not None:
+            Entry.source(value)
+        return value
+
+    @field_validator("license_path")
+    @classmethod
+    def safe_license(cls, value: str | None) -> str | None:
+        if value is not None:
+            path_parts(value, "licenses")
         return value
 
 
@@ -112,7 +131,8 @@ class Entry(StrictModel):
     source_url: Annotated[str, Field(min_length=1, max_length=2000)]
     license: Annotated[str, Field(min_length=1, max_length=1000)]
     license_path: Annotated[str | None, Field(max_length=512)] = None
-    assets: Annotated[list[Asset], Field(max_length=24)]
+    # 24 selected source files plus previews, animation, license and bundle indexes.
+    assets: Annotated[list[Asset], Field(max_length=32)]
     examples: Annotated[list[Example], Field(max_length=4)]
 
     @field_validator("source_url")
@@ -143,6 +163,19 @@ class Entry(StrictModel):
             raise ValueError("Duplicate asset IDs.")
         return values
 
+    @model_validator(mode="after")
+    def asset_origins(self):
+        for asset in self.assets:
+            effective_source = asset.source_url or self.source_url
+            if asset.origin == "original" and not effective_source.startswith("original://"):
+                raise ValueError("Original assets require original provenance, not upstream attribution.")
+            if asset.origin == "original" and not self.source_url.startswith("original://"):
+                if any(getattr(asset, key) is None for key in ("source_url", "license", "license_path")):
+                    raise ValueError("Original assets of upstream references require explicit individual provenance and licensing.")
+            if asset.origin == "upstream" and effective_source.startswith("original://"):
+                raise ValueError("Upstream assets cannot claim original provenance.")
+        return self
+
 
 class Catalog(StrictModel):
     version: Literal[1]
@@ -161,6 +194,68 @@ class Catalog(StrictModel):
         if len({item.id for item in values}) != len(values):
             raise ValueError("Duplicate reference IDs.")
         return values
+
+
+class BundleItem(StrictModel):
+    asset_id: Identifier
+    role: Literal["visual", "animation-source", "document", "code", "example", "license", "reference"]
+    format: Label
+    mime_type: Label
+    origin: Literal["upstream", "original", "rendered"]
+    source_url: Annotated[str, Field(min_length=1, max_length=2000)]
+    license: Annotated[str, Field(min_length=1, max_length=1000)]
+    license_path: Annotated[str | None, Field(max_length=512)] = None
+    sha256: Annotated[str, Field(pattern=r"^[0-9a-f]{64}$")]
+
+    _source = field_validator("source_url")(Entry.source.__func__)
+    _license = field_validator("license_path")(Entry.safe_license.__func__)
+
+
+class ArchiveItem(StrictModel):
+    path: Annotated[str, Field(min_length=1, max_length=512)]
+    format: Label
+    sha256: Annotated[str, Field(pattern=r"^[0-9a-f]{64}$")]
+    reason: Annotated[str, Field(min_length=1, max_length=1000)]
+    original_asset: Asset | None = None
+
+    @field_validator("path")
+    @classmethod
+    def safe_path(cls, value: str) -> str:
+        area = value.removeprefix("data/").split("/", 1)[0]
+        if area not in {"assets", "licenses", "archives"}:
+            raise ValueError("Invalid archive area.")
+        path_parts(value, area)
+        return value
+
+
+class OfflineBundle(StrictModel):
+    version: Literal[1]
+    reference_id: Identifier
+    scope: Literal["selected-reference-content-not-complete-repository"]
+    kind: Label
+    assets: Annotated[list[BundleItem], Field(max_length=31)]
+    archives: Annotated[list[ArchiveItem], Field(max_length=64)]
+    coverage: dict[Literal["visual", "animation", "animated_preview", "source", "implementation", "license"], Literal[
+        "available", "original-concept", "original-guidance", "selected-files",
+        "examples-only", "archive-only", "unavailable", "not-applicable",
+    ]]
+    limitations: Annotated[list[Annotated[str, Field(min_length=1, max_length=2000)]], Field(max_length=64)]
+
+    _version = field_validator("version", mode="before")(Catalog.exact_version.__func__)
+
+    @field_validator("coverage")
+    @classmethod
+    def complete_coverage(cls, value):
+        if set(value) != {"visual", "animation", "animated_preview", "source", "implementation", "license"}:
+            raise ValueError("Invalid bundle coverage fields.")
+        return value
+
+    @field_validator("assets")
+    @classmethod
+    def unique_assets(cls, value):
+        if len({item.asset_id for item in value}) != len(value):
+            raise ValueError("Duplicate bundle asset IDs.")
+        return value
 
 
 def bounded(value: dict, maximum: int = MAX_OUTPUT_BYTES) -> dict:
@@ -353,6 +448,20 @@ class Library:
             "license_path": entry.license_path,
         }
 
+    @staticmethod
+    def asset_provenance(entry: Entry, asset: Asset) -> dict:
+        result = Library.provenance(entry)
+        for key in ("source_url", "license", "license_path"):
+            override = getattr(asset, key)
+            if override is not None:
+                result[key] = override
+        result["origin"] = asset.origin or (
+            "original" if result["source_url"].startswith("original://") else "upstream"
+        )
+        if asset.format is not None:
+            result["format"] = asset.format
+        return result
+
     def search(
         self, query: str, category: str | None = None, platform: str | None = None,
         limit: int = 5, *, _anti_slop: bool = False, _style: str | None = None,
@@ -471,7 +580,7 @@ class Library:
         maximum = MAX_JSON_BYTES if asset.mime_type == "application/json" else MAX_ASSET_BYTES
         raw = self.read(path_parts(asset.path, "assets"), maximum)
         metadata = {
-            "asset": asset.model_dump(), "provenance": self.provenance(entry),
+            "asset": asset.model_dump(), "provenance": self.asset_provenance(entry, asset),
             "bytes": len(raw), "notice": NOTICE,
         }
         if asset.mime_type == "application/json":
@@ -481,7 +590,10 @@ class Library:
                     raise ValueError
                 metadata["animation_json"] = raw.decode("utf-8")
             except (ValueError, RecursionError, UnicodeError):
-                raise LibraryError("Invalid animation JSON; expected UTF-8 object or array.") from None
+                raise LibraryError("Invalid animation/reference JSON; expected UTF-8 object or array.") from None
+            # The legacy field also carries inert documents/code; json_kind
+            # distinguishes them without duplicating potentially large files.
+            metadata["json_kind"] = value.get("kind", "lottie" if "layers" in value and "v" in value else "reference") if isinstance(value, dict) else "reference"
             return bounded(metadata, MAX_JSON_BYTES + MAX_OUTPUT_BYTES), None
         try:
             with warnings.catch_warnings():
@@ -493,6 +605,33 @@ class Library:
         except Exception:
             raise LibraryError("Invalid, mismatched, or oversized image asset.") from None
         return bounded(metadata), raw
+
+    def bundle(self, reference_id: str) -> dict:
+        entry = self.get(reference_id)
+        assets = [asset for asset in entry.assets if asset.id == "offline-bundle"]
+        if len(assets) != 1 or assets[0].mime_type != "application/json" or assets[0].format != "offline-bundle":
+            raise LibraryError("Offline bundle unavailable for this reference.")
+        try:
+            raw = self.read(path_parts(assets[0].path, "assets"), MAX_OUTPUT_BYTES)
+            bundle = OfflineBundle.model_validate(strict_json(raw))
+            if bundle.reference_id != entry.id:
+                raise ValueError
+            listed = {asset.id: asset for asset in entry.assets if asset.id != "offline-bundle"}
+            if {item.asset_id for item in bundle.assets} != set(listed):
+                raise ValueError
+            for item in bundle.assets:
+                asset = listed[item.asset_id]
+                provenance = self.asset_provenance(entry, asset)
+                if item.mime_type != asset.mime_type or item.format != asset.format:
+                    raise ValueError
+                if any(getattr(item, key) != provenance[key] for key in ("origin", "source_url", "license", "license_path")):
+                    raise ValueError
+            return bounded({
+                "bundle": bundle.model_dump(), "guidance": entry.guidance,
+                "provenance": self.provenance(entry), "notice": NOTICE,
+            })
+        except (ValueError, ValidationError, RecursionError, UnicodeError):
+            raise LibraryError("Offline bundle invalid, unsafe, oversized, or inconsistent with catalog.") from None
 
     def status(self) -> dict:
         try:
@@ -539,12 +678,37 @@ class Library:
                 "repository_count": len(identities),
                 "unverified_entry_count": sum(source is None for _, source in verified),
             }
+        bundle_coverage = Counter()
+        invalid_bundles = 0
+        for entry in entries:
+            asset = next((a for a in entry.assets if a.id == "offline-bundle"), None)
+            if asset is not None:
+                try:
+                    if asset.format != "offline-bundle" or asset.mime_type != "application/json":
+                        raise ValueError
+                    bundle = OfflineBundle.model_validate(strict_json(self.read(path_parts(asset.path, "assets"), MAX_OUTPUT_BYTES)))
+                    if bundle.reference_id != entry.id:
+                        raise ValueError
+                    bundle_coverage.update(f"{feature}:{state}" for feature, state in bundle.coverage.items())
+                except (ValueError, ValidationError, RecursionError, UnicodeError):
+                    invalid_bundles += 1
         return bounded({
             "offline": True, "read_only": True, "transport": "stdio",
             "library_state": state, "error": error, "entry_count": len(entries),
             "manifests": self._manifests,
             "asset_count": sum(len(e.assets) for e in entries),
             "example_count": sum(len(e.examples) for e in entries),
+            "offline_coverage": {
+                "bundle_count": sum(any(a.id == "offline-bundle" and a.format == "offline-bundle" for a in e.assets) for e in entries),
+                "references_with_images": sum(any(a.mime_type in {"image/png", "image/jpeg", "image/gif", "image/webp"} for a in e.assets) for e in entries),
+                "references_with_inline_examples": sum(bool(e.examples) for e in entries),
+                "references_with_assets": sum(bool(e.assets) for e in entries),
+                "format_counts": dict(Counter(a.format or a.mime_type for e in entries for a in e.assets)),
+                "origin_counts": dict(Counter(self.asset_provenance(e, a)["origin"] for e in entries for a in e.assets)),
+                "bundle_declared_coverage_counts": dict(bundle_coverage),
+                "invalid_bundle_count": invalid_bundles,
+            },
+            "supported_asset_formats": ["image/png", "image/jpeg", "image/gif", "image/webp", "application/json"],
             "category_counts": dict(Counter(c for e in entries for c in e.categories)),
             "taxonomy": list(TAXONOMY), "source_count": len(sources),
             "filter_aliases": {"platform": PLATFORM_ALIASES, "category": CATEGORY_ALIASES},

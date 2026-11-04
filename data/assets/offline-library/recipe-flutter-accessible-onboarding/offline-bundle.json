@@ -1,0 +1,58 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source",
+      "format": "dart",
+      "license": "CC0-1.0",
+      "license_path": "licenses/recipes/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "code",
+      "sha256": "567e086d92dc0dc328d0eeebbda29296824fa3d9c39da01781b93c346d4b2f18",
+      "source_url": "original://designerMCP/recipes/flutter-accessible-onboarding"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "d3d7b5741072c625fd2e31d2043ee037a1c941f9d62396c82948ef55a2eaab60",
+      "source_url": "original://designerMCP/offline/recipe-flutter-accessible-onboarding"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "85fd0f6ff455b4c8b9ea3182ba535091b801193e645e1dce6e07457d1991e405",
+      "source_url": "original://designerMCP/offline/recipe-flutter-accessible-onboarding"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "available",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "recipe-flutter-accessible-onboarding",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

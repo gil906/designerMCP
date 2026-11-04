@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "Original brief: A repair shop needs a one-page booking site. Primary action: request a repair. Evidence: opening hours and verified customer quotations. Layout: concise introduction, three service cards, pricing explanation, accessible contact form. No autoplay video. At 320px, labels remain visible and actions never overlap.",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "text"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

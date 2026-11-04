@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "hero-after-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original image unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "c6bb7c887583a4b46f5c6e56b5b0dc5d7cfb17007ffa13ad7677e1a7ee32d993",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-hero-after.webp"
+    },
+    {
+      "asset_id": "hero-after-original",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original image unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "92b2d796c5b6116a2039f5ca2b0f3edf700c92b41846b11b9501a4e32f72af6e",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-hero-after.webp"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original image unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "c6bb7c887583a4b46f5c6e56b5b0dc5d7cfb17007ffa13ad7677e1a7ee32d993",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-hero-after.webp"
+    },
+    {
+      "asset_id": "offline-guidance",
+      "format": "text",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "document",
+      "sha256": "6b276b20b867b955dca13c218ec874ad150eafe639728218c3780abcdcd96b37",
+      "source_url": "original://designerMCP/offline/unslop-hero-finished-reference"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "6d8867af1e3cd0d634a715b5f7ba16369dcf4338b3cd2184a0891246d5bf28e7",
+      "source_url": "original://designerMCP/offline/unslop-hero-finished-reference"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "unavailable",
+    "license": "available",
+    "source": "original-guidance",
+    "visual": "available"
+  },
+  "kind": "upstream-preview",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Upstream source/documents are unavailable; the local document is original adaptation guidance.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "unslop-hero-finished-reference",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/public/flags/ru.svg",
+  "filename": "ru.svg",
+  "format": "svg",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "flag-10",
+    "mime_type": "image/svg+xml",
+    "path": "assets/useanimations/source/website/public/flags/ru.svg",
+    "title": "ru.svg"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/flags-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/website/public/flags/LICENSE"
+  },
+  "sha256": "7100aaae51ff3b6a2bf0ca932b3bc518bdc760814725e7cca31d821a26c3dd7c",
+  "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"flag-icons-ru\" viewBox=\"0 0 640 480\">\n  <path fill=\"#fff\" d=\"M0 0h640v160H0z\"/>\n  <path fill=\"#0039a6\" d=\"M0 160h640v160H0z\"/>\n  <path fill=\"#d52b1e\" d=\"M0 320h640v160H0z\"/>\n</svg>\n",
+  "version": 1
+}

@@ -1,0 +1,70 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 5129,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "<a href=\"https://exyte.com/\"><picture></picture></a>\n\n<a href=\"https://exyte.com/\"><picture></picture></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"https://twitter.com/exyteHQ\"><picture>\n</picture></a> <a href=\"https://exyte.com/contacts\"><picture></picture></a>\n\n\n\n<p><h1 align=\"left\">Animated Tab Bar</h1></p>\n\n<p><h4>AnimatedTabBar is a tabbar with a number of preset animations written in pure SwiftUI</h4></p>\n\n<a href=\"https://exyte.com/blog/swiftui-animated-tabbar\">Read Article »</a>\n\n\n[](https://swiftpackageindex.com/exyte/AnimatedTabBar)\n[](https://swiftpackageindex.com/exyte/AnimatedTabBar)\n[](https://swiftpackageindex.com/exyte/AnimatedTabBar)\n[](https://cocoapods.org/pods/ExyteAnimatedTabBar)\n[](https://opensource.org/licenses/MIT)\n\n# Usage\n1. Add an `Int` to store the current selection    \n2. Pass your buttons to the AnimatedTabBar using one of 2 initializers. For the first one you can pass any view type:  \n```swift\nimport AnimatedTabBar\n\nAnimatedTabBar(selectedIndex: $selectedIndex) {\n    TabButton1()\n    TabButton2()\n    TabButton3()\n}\n```\n\nFor the second one the views must have the same type, or be manually converted to `AnyView`\n```swift\nAnimatedTabBar(selectedIndex: $selectedIndex, views: [TabButton1(), TabButton2(), TabButton3()])\n```\n\n### Required parameters \n`selectedIndex` - binding to the current index     \n`views` - buttons to display in the tabbar  \n\n### Available customizations - modifiers\nuse the `customize` closure in the popup modifier:\n\n`barColor` - Color of the tabbar itself      \n`selectedColor` - Selected tab color (use template rendering for this color to be applied properly)    \n`unselectedColor` - Unselected tab color     \n`ballColor` - Ball indicator color    \n`verticalPadding` - Space from the buttons to the bar's top and bottom edges    \n`cornerRadius` - The corner radius applied to the tabbar background color     \n`ballAnimation` - Animation curve to apply to ball motion, default is .easeOut(duration: 0.6)\n`indentAnimation` - Animation curve for growing/shrinking of the indent in the tabbar       \n`buttonsAnimation` - Animation curve for applying color to tab buttons    \n`didSelectIndex` - Closure which gets called on every tab tap    \n\n`ballTrajectory` - Options for ball indicator animation paths:     \n- `parabolic`  - Jump to the selected button following a parabolic arc     \n- `teleport` - Disappear and quickly re-appear above selected tab\n- `straight` - Slide to the selected tab        \n\n### Built-in animatable tab buttons\nBy default tabs only have a simple color animation, but you can customize that. This library has two built-in button types you can use out-of-the-box: `DropletButton` and `WiggleButton`, and a super custom `ColorButton` type in the Example project. Please feel free to use them in your projects or build your own buttons on top of them.\n\n## Examples\n\nTo try the AnimatedTabBar examples:\n- Clone the repo `https://github.com/exyte/AnimatedTabBar.git`\n- Open `AnimatedTabBarExample.xcodeproj` in the Xcode\n- Try it!\n\n## Installation\n\n### Swift Package Manager (https://swift.org/package-manager/)\n\n```swift\ndependencies: [\n    .package(url: \"https://github.com/exyte/AnimatedTabBar.git\")\n]\n```\n\n## Requirements\n\n* iOS 16+\n* Xcode 14+ \n\n## Acknowledgements\n\nMany thanks to Yeasin Arafat (https://dribbble.com/shots/14883627-Tab-Bar-Animation) for their beautiful original work that we recreated with SwiftUI.\n\n## Our other open source SwiftUI libraries\nPopupView (https://github.com/exyte/PopupView) - Toasts and popups library   \nAnchoredPopup (https://github.com/exyte/AnchoredPopup) - Anchored Popup grows \"out\" of a trigger view (similar to Hero animation)    \nGrid (https://github.com/exyte/Grid) - The most powerful Grid container    \nScalingHeaderScrollView (https://github.com/exyte/ScalingHeaderScrollView) - A scroll view with a sticky header which shrinks as you scroll    \nMediaPicker (https://github.com/exyte/mediapicker) - Customizable media picker     \nChat (https://github.com/exyte/chat) - Chat UI framework with fully customizable message cells, input view, and a built-in media picker  \nCalendarView (https://github.com/exyte/CalendarView) - Calendar view with fully customizable month/day cells     \nOpenAI (https://github.com/exyte/OpenAI) Wrapper lib for OpenAI REST API (https://platform.openai.com/docs/api-reference/introduction)    \nAnimatedGradient (https://github.com/exyte/AnimatedGradient) - Animated linear gradient     \nConcentricOnboarding (https://github.com/exyte/ConcentricOnboarding) - Animated onboarding flow    \nFloatingButton (https://github.com/exyte/FloatingButton) - Floating button menu    \nActivityIndicatorView (https://github.com/exyte/ActivityIndicatorView) - A number of animated loading indicators    \nProgressIndicatorView (https://github.com/exyte/ProgressIndicatorView) - A number of animated progress indicators    \nFlagAndCountryCode (https://github.com/exyte/FlagAndCountryCode) - Phone codes and flags for every country    \nSVGView (https://github.com/exyte/SVGView) - SVG parser    \nLiquidSwipe (https://github.com/exyte/LiquidSwipe) - Liquid navigation animation    \n",
+  "content_sha256": "c8ad5eff3f7fefd0ce4f2cbb8ccaf511244d28291a21048c9598f4d54fab5540",
+  "expected_git_blob_sha1": "22a7e96fddb7215337234ec9c9da80a5f66f87ba",
+  "filename": "README.md",
+  "full_content_sha256": "c8ad5eff3f7fefd0ce4f2cbb8ccaf511244d28291a21048c9598f4d54fab5540",
+  "full_file_complete": false,
+  "full_source_sha256": "bb955e3efdc719eb87db906ac127f7d4274bfa3f8035b77028732f798172a816",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-mobile/animated-tab-bar/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 107,
+    "start": 1,
+    "total": 107
+  },
+  "modifications": [
+    {
+      "count": 8,
+      "operation": "remove HTML media tags"
+    },
+    {
+      "count": 7,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 19,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "exyte/AnimatedTabBar",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/animated-tab-bar/LICENSE.txt",
+      "sha256": "a6a30bbd8459f4ca73084fd67b7462f57363bc424bd98d4f30b7848fe58f124c"
+    }
+  ],
+  "revision": "dcc003243f1fddc019564b08431cf508358f7d58",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 6910,
+  "source_lines": 107,
+  "source_sha256": "bb955e3efdc719eb87db906ac127f7d4274bfa3f8035b77028732f798172a816",
+  "source_url": "https://raw.githubusercontent.com/exyte/AnimatedTabBar/dcc003243f1fddc019564b08431cf508358f7d58/README.md",
+  "verified_git_blob_sha1": "22a7e96fddb7215337234ec9c9da80a5f66f87ba"
+}

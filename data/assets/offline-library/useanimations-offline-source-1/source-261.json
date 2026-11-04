@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/src/player/lottie.ts",
+  "filename": "lottie.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-261",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/src/player/lottie.ts",
+    "title": "src/player/lottie.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "bb88762c890dd449263205a4839b4e65f76e64739669b2889323eaae09319898",
+  "text": "// The subset of the Lottie (bodymovin) JSON format that the player reads.\n\nexport type Vector = number[];\n\nexport type EasingHandle = { x: number | number[]; y: number | number[] };\n\nexport type Keyframe<T> = {\n  t: number;\n  s?: T;\n  e?: T;\n  i?: EasingHandle;\n  o?: EasingHandle;\n  h?: number;\n  to?: Vector;\n  ti?: Vector;\n};\n\nexport type Property<T> = { a?: number; k: T | Keyframe<T>[]; x?: string };\n\nexport type PathData = { c: boolean; i: Vector[]; o: Vector[]; v: Vector[] };\n\nexport type TransformData = {\n  a?: Property<Vector>;\n  p?: Property<Vector> & { s?: boolean; x?: Property<number>; y?: Property<number> };\n  s?: Property<Vector>;\n  r?: Property<number>;\n  o?: Property<number>;\n  sk?: Property<number>;\n  sa?: Property<number>;\n};\n\nexport type ShapeItem = TransformData & {\n  ty: string;\n  hd?: boolean;\n  // group\n  it?: ShapeItem[];\n  // path\n  ks?: Property<PathData | PathData[]>;\n  // rectangle / ellipse (size in `s`, direction in `d`)\n  d?: number;\n  // stroke / fill\n  c?: Property<Vector>;\n  w?: Property<number>;\n  lc?: number;\n  lj?: number;\n  ml?: number;\n  r?: number | Property<number>;\n  // trim paths\n  e?: Property<number>;\n  m?: number;\n};\n\nexport type MaskData = {\n  mode: string;\n  inv?: boolean;\n  pt: Property<PathData | PathData[]>;\n  o?: Property<number>;\n};\n\nexport type LayerData = {\n  ty: number;\n  ind?: number;\n  parent?: number;\n  ip: number;\n  op: number;\n  st?: number;\n  sr?: number;\n  hd?: boolean;\n  ks: TransformData;\n  shapes?: ShapeItem[];\n  masksProperties?: MaskData[];\n  refId?: string;\n  tm?: Property<number>;\n  w?: number;\n  h?: number;\n};\n\nexport type AnimationData = {\n  fr: number;\n  ip: number;\n  op: number;\n  w: number;\n  h: number;\n  layers: LayerData[];\n  assets?: { id: string; layers?: LayerData[] }[];\n};\n",
+  "version": 1
+}

@@ -1,0 +1,87 @@
+{
+  "archives": [
+    {
+      "format": "javascript",
+      "original_asset": {
+        "format": null,
+        "id": "story-source",
+        "license": null,
+        "license_path": null,
+        "mime_type": "application/json",
+        "origin": null,
+        "path": "assets/unslop/skills/unslop/scripts/story.mjs.json",
+        "source_url": null,
+        "title": "Inert upstream story-video script source"
+      },
+      "path": "archives/offline-tooling/unslop/skills/unslop/scripts/story.mjs.json",
+      "reason": "process-execution detected in executable tooling; byte-pinned unserved archive, not complete served source.",
+      "sha256": "e09c8878e0655d3e08b549b089982246bf7819f03c741aa4b04c98abdf11f80b"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "snapshot-source",
+      "format": "javascript",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); source verbatim inside JSON, not executed.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "de0b6ca2a83859475242f4c4ef0fcdc80623ab4065dca5652c742ab223a4e2e4",
+      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/scripts"
+    },
+    {
+      "asset_id": "story-source",
+      "format": "javascript",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); source verbatim inside JSON, not executed.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "aaee337c76fceb965167dcd5a5a71ebebe1554758296d0b7587d6be641ee408a",
+      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/scripts"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "c8a702f62c6405bfd6cfcced0889942b9182a16c6e78d063a6a1c222dc30eca9",
+      "source_url": "original://designerMCP/offline/unslop-story-source"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "6d8867af1e3cd0d634a715b5f7ba16369dcf4338b3cd2184a0891246d5bf28e7",
+      "source_url": "original://designerMCP/offline/unslop-story-source"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "Executable process tooling is excluded from serving; original bytes remain in a hash-pinned unserved archive with process-execution finding."
+  ],
+  "reference_id": "unslop-story-source",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<main>\n  <header><h1>Plan a calmer team week</h1><p>Make responsibilities visible before Monday.</p><a href=\"#plan\">Create a plan</a></header>\n  <section aria-labelledby=\"proof\"><h2 id=\"proof\">What changes</h2><ul><li>One owner per task</li><li>Visible review dates</li></ul></section>\n  <section id=\"plan\"><h2>Start with your next milestone</h2></section>\n</main>",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

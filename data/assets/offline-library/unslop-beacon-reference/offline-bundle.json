@@ -1,0 +1,87 @@
+{
+  "archives": [
+    {
+      "format": "webp",
+      "original_asset": {
+        "format": null,
+        "id": "beacon-original",
+        "license": null,
+        "license_path": null,
+        "mime_type": "image/webp",
+        "origin": null,
+        "path": "assets/unslop/beacon-engraving.webp",
+        "source_url": null,
+        "title": "Retained original beacon engraving, archive-only"
+      },
+      "path": "assets/unslop/beacon-engraving.webp",
+      "reason": "Original exceeds runtime size limit; retained archive-only. Use bounded preview.",
+      "sha256": "44e7680e9c944f03c8fe45df999bdf74077a106925a8189eebf89e751e306e5b"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "beacon-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "4e7952e6cbca0d8bd2b518640345479dbe6559f065cf9e31414a1dd18ef7f9e5",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/beacon-engraving.webp"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "4e7952e6cbca0d8bd2b518640345479dbe6559f065cf9e31414a1dd18ef7f9e5",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/beacon-engraving.webp"
+    },
+    {
+      "asset_id": "offline-guidance",
+      "format": "text",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "document",
+      "sha256": "9444301cdaff316180733740e3797cf256113e8823ae8f33d13f52f346cc45da",
+      "source_url": "original://designerMCP/offline/unslop-beacon-reference"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "6d8867af1e3cd0d634a715b5f7ba16369dcf4338b3cd2184a0891246d5bf28e7",
+      "source_url": "original://designerMCP/offline/unslop-beacon-reference"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "unavailable",
+    "license": "available",
+    "source": "original-guidance",
+    "visual": "available"
+  },
+  "kind": "upstream-preview",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "An oversized original is archive-only, not retrievable through get_asset.",
+    "Upstream source/documents are unavailable; the local document is original adaptation guidance.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "unslop-beacon-reference",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

@@ -1,0 +1,67 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "searchToX",
+      "format": "lottie",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "animation-source",
+      "sha256": "de5a5c24bd652571b707e447c95a39a83123701ffb1b351ea0411109f820a718",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/searchToX.json"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "image/webp",
+      "origin": "rendered",
+      "role": "visual",
+      "sha256": "f754cd6cdd0d9dcdfd220d69c83bc02978db0012eeac52b2a025e25128b6e692",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/searchToX.json"
+    },
+    {
+      "asset_id": "offline-animation-preview",
+      "format": "gif",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "image/gif",
+      "origin": "rendered",
+      "role": "visual",
+      "sha256": "5b08f7e7ee8f960d91e8e79e952aad676c3987b12d9baecb10c2fa874b853acf",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/searchToX.json"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "39ad5d7eda6160f4c1745e0a1c37fe00612cdf15e08a1640b388e8bfa991ae6d",
+      "source_url": "original://designerMCP/offline/useanimations-search-to-x"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "available",
+    "animation": "available",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "available",
+    "visual": "available"
+  },
+  "kind": "animated-icon",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Low-FPS raster preview; use original Lottie JSON for vector fidelity."
+  ],
+  "reference_id": "useanimations-search-to-x",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

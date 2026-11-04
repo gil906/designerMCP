@@ -1,0 +1,80 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "44b07eb92a9c68b8d8050bdf23a0df817e1e999fa6fc02ccd83eaac90b8b334a",
+      "source_url": "https://github.com/primer/react/tree/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "d1cb70818b84cc4fa9a6b593a4ea1ed3a203d3a1e1b2d14ef6f22e179975a254",
+      "source_url": "original://designerMCP/offline/github-web-primer-react"
+    },
+    {
+      "asset_id": "offline-document-github-web-primer-react-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "1ff8295ace48a87577b66d75525c1f4248279f3538ad01b02be3960fb95d34d1",
+      "source_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-web-primer-react-packages-react-src-actionlist-actionlist-stories-tsx",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "e36314a9cee70390daf4140a74ef844023d63aec7d9fbf14d0699e8e743c5a48",
+      "source_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "0db91d39928f4e5a7f631adcc2288b48b4e6bc704a5a0ffd2936907d552e78a0",
+      "source_url": "original://designerMCP/offline/github-web-primer-react"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "packages/react/src/ActionList/ActionList.stories.tsx: no prior expected Git-blob SHA1; prior full-source SHA256 verified."
+  ],
+  "reference_id": "github-web-primer-react",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source-reference",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "12e4ec26c3701b7e8767f99ad2b980f4d06f87f0c2f5ef88b346b20e7f1cac98",
+      "source_url": "https://github.com/pmndrs/drei/blob/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx#L1-L58"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "53edaf9a41e7b874e86fbe932f3036624071f21ad434b573849212da02ab5025",
+      "source_url": "original://designerMCP/offline/github-motion-pmndrs--drei"
+    },
+    {
+      "asset_id": "offline-document-github-motion-pmndrs--drei-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "2c15ea16cbaa2ec8ae4db14e40d1a5862568f6b91ef65b40215cdac7045284b1",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-motion-pmndrs--drei-src-core-float-tsx",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "9cb15daf2f42da99c780d26990607b26f056a7b0e4be5bd5bec0a29578c2b4ac",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "ed91c6af63fd442d05a8b978608c7358dcd10547ec7520ccfcab6ec462a3473a",
+      "source_url": "original://designerMCP/offline/github-motion-pmndrs--drei"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-motion-pmndrs--drei",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

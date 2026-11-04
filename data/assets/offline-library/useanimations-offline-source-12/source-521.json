@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/scripts/tabs.ts",
+  "filename": "tabs.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-521",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/scripts/tabs.ts",
+    "title": "website/src/scripts/tabs.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "af4a6946a4d4983279e5397551f7e849916825b74d6b6573add897c7d28d0232",
+  "text": "// Tabs: [data-tabs] holding role=\"tab\" buttons and role=\"tabpanel\" panels, with arrow-key support.\nimport { tabFromKey } from '../lib/tabs';\n\nfor (const group of document.querySelectorAll<HTMLElement>('[data-tabs]')) {\n  const tabs = [...group.querySelectorAll<HTMLButtonElement>('[role=\"tab\"]')];\n  const select = (tab: HTMLButtonElement) => {\n    for (const other of tabs) {\n      const selected = other === tab;\n      other.setAttribute('aria-selected', String(selected));\n      other.tabIndex = selected ? 0 : -1;\n      const panel = document.getElementById(other.getAttribute('aria-controls')!);\n      if (panel) panel.hidden = !selected;\n    }\n  };\n  tabs.forEach((tab, i) => {\n    tab.tabIndex = i === 0 ? 0 : -1;\n    tab.addEventListener('click', () => select(tab));\n    tab.addEventListener('keydown', (event) => {\n      const next = tabFromKey(event.key, i, tabs.length);\n      if (next === undefined) return;\n      select(tabs[next]);\n      tabs[next].focus();\n    });\n  });\n}\n",
+  "version": 1
+}

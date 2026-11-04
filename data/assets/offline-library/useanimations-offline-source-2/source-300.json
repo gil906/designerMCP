@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/CodeBlock.astro",
+  "filename": "CodeBlock.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-300",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/CodeBlock.astro",
+    "title": "website/src/components/CodeBlock.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "bccd59c783dd84424dada0bb0318ebd73d79ccf64ec743ba41d1dea1b22a5425",
+  "text": "---\nimport { EN, type Locale, t } from '../i18n';\nimport { highlight } from '../lib/highlight';\nimport ControlIcon from './ControlIcon';\n\ninterface Props {\n  code: string;\n  lang: string;\n  label?: string;\n  class?: string;\n  /** Event data for the copy button, e.g. { icon, code } (scripts/analytics.ts). */\n  track?: Record<string, string>;\n  /** Language of the button text. */\n  locale?: Locale;\n}\nconst { code, lang, label, class: className, track = { code: lang }, locale = EN } = Astro.props;\nconst trackData = Object.fromEntries(Object.entries(track).map(([key, value]) => [`data-track-${key}`, value]));\nconst html = await highlight(code, lang);\n---\n\n<div class:list={['code-block group/code', className]} data-copy-scope>\n  {label && <div class=\"border-b border-line px-4 py-2 text-xs text-subtle\">{label}</div>}\n  <div data-code set:html={html} />\n  <button\n    type=\"button\"\n    data-copy-from=\"[data-code]\"\n    data-track=\"copy\"\n    {...trackData}\n    class=\"absolute top-2 right-2 inline-flex items-center gap-1 rounded-lg border border-line bg-surface px-2 py-1 text-xs text-muted opacity-0 transition group-hover/code:opacity-100 focus:opacity-100 data-[copied]:text-accent\"\n    ><ControlIcon client:idle icon=\"copy\" copied=\"checkmark\" size={14} /><span data-copy-label>{t(locale).common.copy}</span></button\n  >\n</div>\n",
+  "version": 1
+}

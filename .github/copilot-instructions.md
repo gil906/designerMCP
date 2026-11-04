@@ -6,9 +6,13 @@ persistent offline library in this project, not live websites.
 
 1. Call `designer_library_status` to understand coverage and blocked sources.
 2. Call `designer_search` using the user's goal, platform, and relevant design
-   terms. Retrieve useful hits with `designer_get_reference`.
+   terms. Retrieve useful hits with `designer_get_reference`, then
+   `designer_get_bundle` for their organized offline content.
 3. Inspect relevant locally stored assets with `designer_get_asset`.
    Prefer preview renditions over large full-resolution archive assets.
+   Retrieve complete selected code/document files individually using the bundle's
+   asset IDs and format labels. Original concept illustrations are not upstream
+   screenshots; a reference bundle is not a complete repository or application.
 4. For existing UI polish, call `designer_audit` with a description of the current
    interface. Treat its output as an inspection plan, not verified visual findings.
 5. Call `designer_brief` and translate its cited references into a coherent

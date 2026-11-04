@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/sitemap-[locale].xml.ts",
+  "filename": "sitemap-[locale].xml.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-512",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/sitemap-[locale].xml.ts",
+    "title": "website/src/pages/sitemap-[locale].xml.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "a5593b53bec77c7f3359949e7b67166ff99f25712fa7e3bbccd46edf0618d798",
+  "text": "import type { GetStaticPaths } from 'astro';\nimport { type Locale, TRANSLATED } from '../i18n';\nimport { text } from '../lib/http';\nimport { localeEntries, urlset } from '../lib/sitemap';\n\n// One sitemap per translated language, so Search Console reports indexing per language.\nexport const getStaticPaths = (() =>\n  TRANSLATED.map((locale) => ({\n    params: { locale: locale.code },\n    props: { locale },\n  }))) satisfies GetStaticPaths;\n\nexport const GET = ({ props }: { props: { locale: Locale } }) =>\n  text(urlset(localeEntries(props.locale)), 'application/xml');\n",
+  "version": 1
+}

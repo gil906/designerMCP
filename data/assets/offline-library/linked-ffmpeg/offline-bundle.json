@@ -1,0 +1,58 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "58fda9cf67d72c1dab4398eb5b1cb51387ee04a1645d53292b3da392be0f05ca",
+      "source_url": "original://designerMCP/offline/linked-ffmpeg"
+    },
+    {
+      "asset_id": "offline-examples",
+      "format": "examples",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "example",
+      "sha256": "065552c602d96f49b08a50c5dac7c3fc824ae0c5ca4a1ee31b747a1004d91ca7",
+      "source_url": "original://designerMCP/offline/linked-ffmpeg"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "48a0447a14f43cdd348733f0b632e7de816cad09f83bcded808513438a28f429",
+      "source_url": "original://designerMCP/offline/linked-ffmpeg"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "examples-only",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "linked-ffmpeg",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

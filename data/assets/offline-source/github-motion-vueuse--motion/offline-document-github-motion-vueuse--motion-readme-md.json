@@ -1,0 +1,74 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by vueuse/motion contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 2782,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "# 🤹 @vueuse/motion\n\n[](https://www.npmjs.com/package/@vueuse/motion)\n[](https://www.npmjs.com/package/vueuse-motion-nightly)\n[](https://npm-stat.com/charts.html?package=@vueuse/motion)\n[](https://www.npmjs.com/package/@vueuse/motion)\n[](https://app.netlify.com/sites/vueuse-motion/deploys)\n\nVue Composables putting your components in motion\n\n- 🏎 **Smooth animations** based on Popmotion (https://popmotion.io/)\n- 🎮 **Declarative** API inspired by Framer Motion (https://www.framer.com/motion/)\n- 🚀 **Plug** & **play** with **20+ presets**\n- 🌐 **SSR Ready**\n- 🚚 First-class support for **Nuxt 3**\n- ✨ Written in **TypeScript**\n- 🏋️♀️ Lightweight with **<25kb** bundle size\n\n🌍 Documentation (https://motion.vueuse.org)\n\n👀 Demos (https://vueuse-motion-demo.netlify.app)\n\n## Quick Start\n\nLet's get started by installing the package and adding the plugin.\n\nFrom your terminal:\n\n```bash\n```\n\nIn your Vue app entry file:\n\n```javascript\nimport { createApp } from \"vue\";\nimport { MotionPlugin } from \"@vueuse/motion\";\nimport App from \"./App.vue\";\n\nconst app = createApp(App);\n\napp.use(MotionPlugin);\n\napp.mount(\"#app\");\n```\n\nYou can now animate any of your component, HTML or SVG elements using `v-motion`.\n\n```vue\n<template>\n  <div\n    v-motion\n    :initial=\"{\n      opacity: 0,\n      y: 100,\n    }\"\n    :enter=\"{\n      opacity: 1,\n      y: 0,\n    }\"\n  />\n</template>\n```\n\nTo see more about how to use directives, check out Directive Usage (https://motion.vueuse.org/features/directive-usage).\n\nTo see more about what properties you can animate, check out Motion Properties (https://motion.vueuse.org/features/motion-properties).\n\nTo see more about how to create your own animation styles, check out Transition Properties (https://motion.vueuse.org/features/transition-properties).\n\nTo see more about what are variants and how you can use them, check out Variants (https://motion.vueuse.org/features/variants).\n\nTo see more about how to control your declared variants, check out Motion Instance (https://motion.vueuse.org/features/motion-instance).\n\n## Nightly release channel\n\nYou can try out the latest changes before a stable release by installing the nightly release channel.\n\n```bash\n```\n\n## Credits\n\nThis package is heavily inspired by Framer Motion (https://www.framer.com/motion/) by @mattgperry (https://twitter.com/mattgperry).\n\nIf you are interested in using WAAPI (https://developer.mozilla.org/fr/docs/Web/API/Web_Animations_API), check out Motion.dev (https://motion.dev/)!\n\nI would also like to thank antfu (https://github.com/antfu), patak-dev (https://github.com/patak-dev) and kazupon (https://github.com/kazupon) for their kind help!\n\nIf you like this package, consider following me on GitHub (https://github.com/Tahul) and on Twitter (https://twitter.com/yaeeelglx).\n\n👋\n",
+  "content_sha256": "6590eac659a947195798284d5ed93639b1a9f50fc17505105c9470f42acb6eb7",
+  "expected_git_blob_sha1": "f2b3b552dde57ecf42a81c7618efc0b26ba1fd29",
+  "filename": "README.md",
+  "full_content_sha256": "6590eac659a947195798284d5ed93639b1a9f50fc17505105c9470f42acb6eb7",
+  "full_file_complete": false,
+  "full_source_sha256": "73351fbb3b16064e68b19b9c63a18323f1a8553993319f4b51893bcb5645156e",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 91,
+    "start": 1,
+    "total": 91
+  },
+  "modifications": [
+    {
+      "count": 1,
+      "operation": "remove U+200D emoji joiners for strict plain-text control policy"
+    },
+    {
+      "count": 5,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 2,
+      "operation": "remove installer commands"
+    },
+    {
+      "count": 18,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "vueuse/motion",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/vueuse--motion/LICENSE",
+      "sha256": "9d1d5673ad90fa6f0dbe7e347e14f3807b5d0120eaee38007bd3df6882308cd5"
+    }
+  ],
+  "revision": "c0efec2b20d546752763919def979f194d41a99b",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 3280,
+  "source_lines": 93,
+  "source_sha256": "73351fbb3b16064e68b19b9c63a18323f1a8553993319f4b51893bcb5645156e",
+  "source_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/README.md",
+  "verified_git_blob_sha1": "f2b3b552dde57ecf42a81c7618efc0b26ba1fd29"
+}

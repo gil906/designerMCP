@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "function EvidenceSection({ title, items }) {\n  return <section aria-labelledby=\"evidence-title\" className=\"evidence\">\n    <h2 id=\"evidence-title\">{title}</h2>\n    <ul>{items.map(item => <li key={item.id}><h3>{item.label}</h3><p>{item.detail}</p></li>)}</ul>\n  </section>;\n}",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "jsx"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

@@ -1,0 +1,70 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 10388,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "\n\n<a href=\"https://play.google.com/store/apps/details?id=com.google.samples.apps.nowinandroid\"></a>\n\nNow in Android App\n==================\n\n**Learn how this app was designed and built in the design case study (https://goo.gle/nia-figma), architecture learning journey (docs/ArchitectureLearningJourney.md) and modularization learning journey (docs/ModularizationLearningJourney.md).**\n\nThis is the repository for the Now in Android (https://developer.android.com/series/now-in-android)\napp. It is a **work in progress** 🚧.\n\n**Now in Android** is a fully functional Android app built entirely with Kotlin and Jetpack Compose. It\nfollows Android design and development best practices and is intended to be a useful reference\nfor developers. As a running app, it's intended to help developers keep up-to-date with the world\nof Android development by providing regular news updates.\n\nThe app is currently in development. The `prodRelease` variant is available on the Play Store (https://play.google.com/store/apps/details?id=com.google.samples.apps.nowinandroid).\n\n# Features\n\n**Now in Android** displays content from the\nNow in Android (https://developer.android.com/series/now-in-android) series. Users can browse for\nlinks to recent videos, articles and other content. Users can also follow topics they are interested\nin, and be notified when new content is published which matches interests they are following.\n\n## Screenshots\n\n\n\n# Development Environment\n\n**Now in Android** uses the Gradle build system and can be imported directly into Android Studio (make sure you are using the latest stable version available here (https://developer.android.com/studio)). \n\nChange the run configuration to `app`.\n\n\n\nThe `demoDebug` and `demoRelease` build variants can be built and run (the `prod` variants use a backend server which is not currently publicly available).\n\n\n\nOnce you're up and running, you can refer to the learning journeys below to get a better\nunderstanding of which libraries and tools are being used, the reasoning behind the approaches to\nUI, testing, architecture and more, and how all of these different pieces of the project fit\ntogether to create a complete app.\n\n# Architecture\n\nThe **Now in Android** app follows the\nofficial architecture guidance (https://developer.android.com/topic/architecture) \nand is described in detail in the\narchitecture learning journey (docs/ArchitectureLearningJourney.md).\n\n# Modularization\n\nThe **Now in Android** app has been fully modularized and you can find the detailed guidance and\ndescription of the modularization strategy used in\nmodularization learning journey (docs/ModularizationLearningJourney.md).\n\n# Build\n\nThe app contains the usual `debug` and `release` build variants. \n\nIn addition, the `benchmark` variant of `app` is used to test startup performance and generate a\nbaseline profile (see below for more information).\n\n`app-nia-catalog` is a standalone app that displays the list of components that are stylized for\n**Now in Android**.\n\nThe app also uses\nproduct flavors (https://developer.android.com/studio/build/build-variants#product-flavors) to\ncontrol where content for the app should be loaded from.\n\nThe `demo` flavor uses static local data to allow immediate building and exploring of the UI.\n\nThe `prod` flavor makes real network calls to a backend server, providing up-to-date content. At \nthis time, there is not a public backend available.\n\nFor normal development use the `demoDebug` variant. For UI performance testing use the\n`demoRelease` variant. \n\n# Testing\n\nTo facilitate testing of components, **Now in Android** uses dependency injection with\nHilt (https://developer.android.com/training/dependency-injection/hilt-android).\n\nMost data layer components are defined as interfaces.\nThen, concrete implementations (with various dependencies) are bound to provide those interfaces to\nother components in the app.\nIn tests, **Now in Android** notably does _not_ use any mocking libraries.\nInstead, the production implementations can be replaced with test doubles using Hilt's testing APIs\n(or via manual constructor injection for `ViewModel` tests).\n\nThese test doubles implement the same interface as the production implementations and generally\nprovide a simplified (but still realistic) implementation with additional testing hooks.\nThis results in less brittle tests that may exercise more production code, instead of just verifying\nspecific calls against mocks.\n\nExamples:\n- In instrumentation tests, a temporary folder is used to store the user's preferences, which is\n  wiped after each test.\n  This allows using the real `DataStore` and exercising all related code, instead of mocking the \n  flow of data updates.\n\n- There are `Test` implementations of each repository, which implement the normal, full repository\n  interface and also provide test-only hooks.\n  `ViewModel` tests use these `Test` repositories, and thus can use the test-only hooks to\n  manipulate the state of the `Test` repository and verify the resulting behavior, instead of\n  checking that specific repository methods were called.\n\nTo run the tests execute the following gradle tasks: \n\n- `testDemoDebug` run all local tests against the `demoDebug` variant. Screenshot tests will fail\n(see below for explanation). To avoid this, run `recordRoborazziDemoDebug` prior to running unit tests.\n- `connectedDemoDebugAndroidTest` run all instrumented tests against the `demoDebug` variant. \n\n> [!NOTE]\n> You should not run `./gradlew test` or `./gradlew connectedAndroidTest` as this will execute \ntests against _all_ build variants which is both unnecessary and will result in failures as only the\n`demoDebug` variant is supported. No other variants have any tests (although this might change in future). \n\n## Screenshot tests\nA screenshot test takes a screenshot of a screen or a UI component within the app, and compares it \nwith a previously recorded screenshot which is known to be rendered correctly. \n\nFor example, Now in Android has screenshot tests (https://github.com/android/nowinandroid/blob/main/app/src/testDemo/kotlin/com/google/samples/apps/nowinandroid/ui/NiaAppScreenSizesScreenshotTests.kt)\nto verify that the navigation is displayed correctly on different screen sizes \n(known correct screenshots (https://github.com/android/nowinandroid/tree/main/app/src/testDemo/screenshots)). \n\nNow In Android uses Roborazzi (https://github.com/takahirom/roborazzi) to run screenshot tests\nof certain screens and UI components. When working with screenshot tests the following gradle tasks are useful:\n\n- `verifyRoborazziDemoDebug` run all screenshot tests, verifying the screenshots against the known\ncorrect screenshots.\n- `recordRoborazziDemoDebug` record new \"known correct\" screenshots. Use this command when you have\nmade changes to the UI and manually verified that they are rendered correctly. Screenshots will be\nstored in `modulename/src/test/screenshots`.\n- `compareRoborazziDemoDebug` create comparison images between failed tests and the known correct\nimages. These can also be found in `modulename/src/test/screenshots`. \n\n> [!NOTE]\n> **Note on failing screenshot tests**   \n> The known correct screenshots stored in this repository are recorded on CI using Linux. Other\nplatforms may (and probably will) generate slightly different images, making the screenshot tests fail. \nWhen working on a non-Linux platform, a workaround to this is to run `recordRoborazziDemoDebug` on the\n`main` branch before starting work. After making changes, `verifyRoborazziDemoDebug` will identify only\nlegitimate changes. \n\nFor more information about screenshot testing \ncheck out this talk (https://www.droidcon.com/2023/11/15/easy-screenshot-testing-with-compose/).\n\n# UI\nThe app was designed using Material 3 guidelines (https://m3.material.io/). Learn more about the design process and \nobtain the design files in the Now in Android Material 3 Case Study (https://goo.gle/nia-figma) (design assets also available as a PDF (docs/Now-In-Android-Design-File.pdf)).\n\nThe Screens and UI elements are built entirely using Jetpack Compose (https://developer.android.com/jetpack/compose). \n\nThe app has two themes: \n\n- Dynamic color - uses colors based on the user's current color theme (https://material.io/blog/announcing-material-you) (if supported)\n- Default theme - uses predefined colors when dynamic color is not supported\n\nEach theme also supports dark mode. \n\nThe app uses adaptive layouts to\nsupport different screen sizes (https://developer.android.com/guide/topics/large-screens/support-different-screen-sizes).\n\nFind out more about the UI architecture here (docs/ArchitectureLearningJourney.md#ui-layer).\n\n# Performance\n\n## Benchmarks\n\nFind all tests written using `Macrobenchmark` (https://developer.android.com/topic/performance/benchmarking/macrobenchmark-overview)\nin the `benchmarks` module. This module also contains the test to generate the Baseline profile.\n\n## Baseline profiles\n\nThe baseline profile for this app is located at `app/src/main/baseline-prof.txt` (app/src/main/baseline-prof.txt).\nIt contains rules that enable AOT compilation of the critical user path taken during app launch.\nFor more information on baseline profiles, read this document (https://developer.android.com/studio/profile/baselineprofiles).\n\n> [!NOTE]\n> The baseline profile needs to be re-generated for release builds that touch code which changes app startup.\n\nTo generate the baseline profile, select the `benchmark` build variant and run the\n`BaselineProfileGenerator` benchmark test on an AOSP Android Emulator.\nThen copy the resulting baseline profile from the emulator to `app/src/main/baseline-prof.txt` (app/src/main/baseline-prof.txt).\n\n## Compose compiler metrics\n\nRun the following command to get and analyze compose compiler metrics:\n\n```bash\n./gradlew assembleRelease -PenableComposeCompilerMetrics=true -PenableComposeCompilerReports=true\n```\n\nThe reports files will be added to build/compose-reports (build/compose-reports). The metrics files will also be \nadded to build/compose-metrics (build/compose-metrics).\n\nFor more information on Compose compiler metrics, see this blog post (https://medium.com/androiddevelopers/jetpack-compose-stability-explained-79c10db270c8).\n\n# License\n\n**Now in Android** is distributed under the terms of the Apache License (Version 2.0). See the\nlicense (LICENSE) for more information.\n",
+  "content_sha256": "c5e7e9a6e94b2d483674c30b37f2cf88d355ca87aa6853d0d2ed3d6f3332cab3",
+  "expected_git_blob_sha1": "7f7613a0d4b43ce43ad6bd5be31f73e540277f6b",
+  "filename": "README.md",
+  "full_content_sha256": "c5e7e9a6e94b2d483674c30b37f2cf88d355ca87aa6853d0d2ed3d6f3332cab3",
+  "full_file_complete": false,
+  "full_source_sha256": "d6eeade4c74e4cb521987ac2fe88b43bf90dd16610c27019b337ff6e04bd5536",
+  "kind": "documentation",
+  "language": "text",
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-mobile/now-in-android/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 207,
+    "start": 1,
+    "total": 207
+  },
+  "modifications": [
+    {
+      "count": 1,
+      "operation": "remove HTML media tags"
+    },
+    {
+      "count": 4,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 31,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "android/nowinandroid",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/now-in-android/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "revision": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 10998,
+  "source_lines": 207,
+  "source_sha256": "d6eeade4c74e4cb521987ac2fe88b43bf90dd16610c27019b337ff6e04bd5536",
+  "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/README.md",
+  "verified_git_blob_sha1": "7f7613a0d4b43ce43ad6bd5be31f73e540277f6b"
+}

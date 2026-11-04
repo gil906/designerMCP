@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/sitemap-pages.xml.ts",
+  "filename": "sitemap-pages.xml.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-515",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/sitemap-pages.xml.ts",
+    "title": "website/src/pages/sitemap-pages.xml.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "2b7f74118325e7722a2180205b9da0dc503ac5f03079891dd42e63b2e1b79ac2",
+  "text": "import { text } from '../lib/http';\nimport { pageEntries, urlset } from '../lib/sitemap';\n\nexport const GET = () => text(urlset(pageEntries()), 'application/xml');\n",
+  "version": 1
+}

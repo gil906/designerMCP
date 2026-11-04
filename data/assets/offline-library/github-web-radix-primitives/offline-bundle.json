@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "5e0218351a71e243ccc44c7000556a20c52017f90cd27081c4d2e7872bb50649",
+      "source_url": "https://github.com/radix-ui/primitives/tree/eb3a2b7091293e27df8f9ba906632d8daa3d81a3"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "e5840cba918594d2d5ccc8fe36dd463e8e32f8f86141469447b091af4865f481",
+      "source_url": "original://designerMCP/offline/github-web-radix-primitives"
+    },
+    {
+      "asset_id": "offline-document-github-web-radix-primitives-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "8160e01526b43de0d86c6ba5e22c7fffe9650e563aa18f63266b73fd440b1635",
+      "source_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-web-radix-primitives-apps-storybook-stories-alert-dialog-stories-tsx",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "92aab9fb6f762379a280037e6b2cd0f5c7a3a708788e5499068deb797679164a",
+      "source_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/apps/storybook/stories/alert-dialog.stories.tsx"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "848904ad26f978e769a1c33a15fed9842b90bc1daa457e66aa1ec2d63b2117ca",
+      "source_url": "original://designerMCP/offline/github-web-radix-primitives"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-web-radix-primitives",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

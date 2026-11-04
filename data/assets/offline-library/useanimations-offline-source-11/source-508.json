@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/r/[name].json.ts",
+  "filename": "[name].json.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-508",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/r/[name].json.ts",
+    "title": "website/src/pages/r/[name].json.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "b1c1200e9680d4b27bb37b436d7cb89c47752f9090b238bb24486987753be3e7",
+  "text": "import type { GetStaticPaths } from 'astro';\nimport { icons } from '../../lib/icons';\nimport { json } from '../../lib/http';\nimport { iconItem, type RegistryItem, useAnimationItem } from '../../lib/registry';\n\nexport const getStaticPaths = (() => [\n  { params: { name: 'use-animation' }, props: { item: useAnimationItem } },\n  ...icons.map((icon) => ({ params: { name: icon.id }, props: { item: iconItem(icon) } })),\n]) satisfies GetStaticPaths;\n\nexport const GET = ({ props }: { props: { item: RegistryItem } }) => json(props.item);\n",
+  "version": 1
+}

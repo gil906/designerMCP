@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/fr/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-381",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/fr/islands.ts",
+    "title": "website/src/i18n/messages/fr/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "43bfc52d00c8edbd6e9d6b281855067ac84c44971b148f3483bfea3382a2cd28",
+  "text": "import type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Boucle',\n      'click-toggle': 'Clic',\n      'click-replay': 'Clic',\n      hover: 'Survol',\n      'hover-loop': 'Survol',\n      'hover-replay': 'Survol',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Se joue toute seule',\n      'click-toggle': 'Cliquez pour basculer',\n      'click-replay': 'Cliquez pour rejouer',\n      hover: 'Survolez pour lancer, sortez pour revenir',\n      'hover-loop': 'Survolez pour boucler',\n      'hover-replay': 'Survolez pour lancer',\n    },\n    preview: 'Aperçu de {title}',\n    colors: 'Couleur de l’aperçu',\n    color: 'Couleur {color}',\n    textColor: 'Couleur du texte',\n    interaction: 'Interaction',\n    duration: 'Durée',\n    seconds: '{seconds} s',\n    import: 'Import',\n    close: 'Fermer',\n    code: 'Code',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Fichiers' },\n    copy: 'Copier',\n    download: 'Télécharger',\n    iconPage: 'Page de l’icône',\n  },\n  interactionDemo: {\n    click: 'Cliquez sur la carte',\n    loop: 'Se joue toute seule',\n    hover: 'Survolez la carte',\n  },\n  mobileMenu: {\n    menu: 'Menu',\n    nav: 'Navigation principale',\n  },\n  search: {\n    clear: 'Effacer la recherche',\n  },\n  themeToggle: {\n    toLight: 'Passer au thème clair',\n    toDark: 'Passer au thème sombre',\n  },\n};\n",
+  "version": 1
+}

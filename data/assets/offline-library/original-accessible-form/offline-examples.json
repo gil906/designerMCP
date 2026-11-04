@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<label for=\"email\">Work email</label>\n<p id=\"email-hint\">Used only for your account.</p>\n<input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" required aria-describedby=\"email-hint email-error\">\n<p id=\"email-error\" aria-live=\"polite\"></p>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

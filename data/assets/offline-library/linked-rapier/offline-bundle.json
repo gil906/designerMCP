@@ -1,0 +1,68 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "rapier-source-1",
+      "format": "json",
+      "license": "Upstream selection: Apache-2.0; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/rapier/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "798d857bbfeadcae1127c7961e77848ac8190e69404cba55e3a182e544e2f767",
+      "source_url": "https://github.com/dimforge/rapier"
+    },
+    {
+      "asset_id": "rapier-source-2",
+      "format": "json",
+      "license": "Upstream selection: Apache-2.0; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/rapier/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "ec81c189c3a3839c00284edd5747fe1c39c725ebcd9545f04860901510f2af4a",
+      "source_url": "https://github.com/dimforge/rapier"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "ad4ecd077a02905b1e7c4ae102c943e9468cc5dbabdda3d7f18937a03182f6a5",
+      "source_url": "original://designerMCP/offline/linked-rapier"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "c371c7a88023cd9f1fa07532b70795affd42aac017c9e91e790eb8b6bd6d36bb",
+      "source_url": "original://designerMCP/offline/linked-rapier"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "linked-rapier",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

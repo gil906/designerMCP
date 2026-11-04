@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/sitemap-hubs.xml.ts",
+  "filename": "sitemap-hubs.xml.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-513",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/sitemap-hubs.xml.ts",
+    "title": "website/src/pages/sitemap-hubs.xml.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "750a28ecf273e830a4dfd8336aeb22cd03b1bf35ba1cea3e24788b90c2eb95b6",
+  "text": "import { text } from '../lib/http';\nimport { hubEntries, urlset } from '../lib/sitemap';\n\nexport const GET = () => text(urlset(hubEntries()), 'application/xml');\n",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/vi/docs.ts",
+  "filename": "docs.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-440",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/vi/docs.ts",
+    "title": "website/src/i18n/messages/vi/docs.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "e6a71bbe480dee1af747cb81620d4846eb0229f522a0398bec7249d44d4576de",
+  "text": "// Khung của trang tài liệu. Nội dung chính nằm ở src/content/documentation.vi.md.\nimport type { Messages } from '../en';\n\nexport const docs: Messages['docs'] = {\n  title: 'Tài liệu — useAnimations',\n  description: (iconCount: number) =>\n    `Cách dùng ${iconCount} icon động trong React và shadcn/ui: tương tác, prop, màu sắc, tệp và khả năng truy cập.`,\n  badge: 'Tài liệu',\n  onThisPage: 'Trên trang này',\n  viewAsMarkdown: 'Xem dạng Markdown',\n  headline: 'Tài liệu useAnimations',\n  summary: 'Cách dùng bộ icon động useAnimations trong React và shadcn/ui.',\n  crumb: 'Tài liệu',\n  faq: [\n    {\n      question: 'useAnimations có miễn phí cho dự án thương mại không?',\n      answer: 'Có. Bộ icon và package React đều dùng giấy phép MIT, không bắt buộc ghi nguồn.',\n    },\n    {\n      question: 'Dùng icon useAnimations trong React như thế nào?',\n      answer:\n        'Cài react-useanimations, import UseAnimations và một icon (ví dụ react-useanimations/lib/checkmark), rồi render <UseAnimations animation={checkmark} size={32} />.',\n    },\n    {\n      question: 'Đổi màu icon bằng cách nào?',\n      answer:\n        'Icon tự lấy theo màu chữ. Bạn có thể đổi màu bằng strokeColor và fillColor, bằng thuộc tính CSS color, hoặc style trực tiếp các path.',\n    },\n    {\n      question: 'Có dùng được khi không có React không?',\n      answer:\n        'Package này dành cho React. Tuy vậy, mỗi icon còn là một tệp Lottie JSON chuẩn mà mọi Lottie player đều phát được (lottie-web, dotLottie, lottie-react-native, lottie-ios, lottie-android, Flutter), kèm một SVG tĩnh. Xem mục Dùng không cần React và useanimations.com/lottie-icons.',\n    },\n  ],\n};\n",
+  "version": 1
+}

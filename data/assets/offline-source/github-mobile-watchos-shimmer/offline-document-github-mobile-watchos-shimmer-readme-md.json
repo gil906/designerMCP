@@ -1,0 +1,66 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 3025,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "# SwiftUI-Shimmer ✨\n\n`Shimmer` is a super-light modifier that adds a \"shimmering\" effect to any SwiftUI `View`, for example, to show that an operation is in progress. It works well on light and dark modes, left-to-right and right-to-left layout directions, and across all Apple platforms: iOS, macOS, tvOS, watchOS and even visionOS! 📱💻🖥️📺⌚️🥽✨\n\n \n\n\n## Usage\n\n```swift\nimport SwiftUI\nimport Shimmer\n⋮\n⋮\nText(\"SwiftUI Shimmer\").modifier(Shimmer())\n```\nor more conveniently\n\n```swift\nText(\"SwiftUI Shimmer\").shimmering()\n```\n\n\n\n\n## Optional Parameters ⚙️\n\n- `active`: Convenience parameter to conditionally enable the effect. Defaults to `true`.\n- `animation`: A custom animation. Defaults to `Shimmer.defaultAnimation`.\n- `gradient`: A custom gradient. Defaults to `Shimmer.defaultGradient`.\n- `bandSize`: The size of the animated mask's \"band\". Defaults to 0.2 unit points, which corresponds to 20% of the extent of the gradient.\n\n### Backward Compatible Parameters\n\n- `active`: Convenience parameter to conditionally enable the effect. Defaults to `true`.\n- `duration`: The duration of a shimmer cycle in seconds. Default: `1.5`.\n- `bounce`: Whether to bounce (reverse) the animation back and forth. Defaults to `false`.\n- `delay`: A delay in seconds. Defaults to `0`.\n\n\n\n## Custom Animations\n\nYou can supply any custom animation:\n\n```swift\nText(\"Loading...\")\n    .shimmering(\n        active: isAnimating,\n        animation: .easeInOut(duration: 2).repeatCount(5, autoreverses: false).delay(1)\n    )\n```\n\n## Gradient Mode\n\nIn addition to the original masking mode (which is still the default), Shimmer now supports additional modes to apply the gradient, including as a background or an overlay with a custom blend mode:\n\n\n\n```swift\nText(\"Custom Gradient Mode\").bold()\n    .font(.largeTitle)\n    .shimmering(\n        gradient: Gradient(colors: [.clear, .orange, .white, .green, .clear]),\n        bandSize: 0.5,\n        mode: .overlay()\n    )\n```\n\n## Animated Skeletons ☠️\n\nOf course, you can combine `.shimmering(...)` with the `.redacted(...)` modifier to create interesting animated skeleton views.\n\n\n\n```swift\nText(\"Some text\")\n    .redacted(reason: .placeholder)\n    .shimmering()\n```\n\n## Right-To-Left (RTL) Support\n\nThe mask and animation now adjusts automatically to the environment's `layoutDirection` in order to better support \ndifferent languages and locales.  \n\n## Installation\n\n### Swift Package Manager\nUse the package URL or search for the SwiftUI-Shimmer package: https://github.com/markiv/SwiftUI-Shimmer (https://github.com/markiv/SwiftUI-Shimmer).\n\nFor how-to integrate package dependencies refer to Adding Package Dependencies to Your App documentation (https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).\n\n### Cocoapods\nAdd this to your Podfile:\n\n```ruby\npod 'SwiftUI-Shimmer', :git => 'https://github.com/markiv/SwiftUI-Shimmer.git'\n```\n\n## What About UIKit?\n\nFor an older, UIKit-based shimmer effect, see UIView-Shimmer (https://github.com/markiv/UIView-Shimmer).\n",
+  "content_sha256": "77cab10b6e9f5b8933eae8a5530c6cbfdcd54947de859da69fd585b304d3157b",
+  "expected_git_blob_sha1": "00968de3fce81ba18221a23eeb3a92452368e08b",
+  "filename": "README.md",
+  "full_content_sha256": "77cab10b6e9f5b8933eae8a5530c6cbfdcd54947de859da69fd585b304d3157b",
+  "full_file_complete": false,
+  "full_source_sha256": "02f9eb6c565341f300d8f639d5ba2c604971750415d377f0bcc5c2faaee65c9d",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 103,
+    "start": 1,
+    "total": 103
+  },
+  "modifications": [
+    {
+      "count": 7,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 3,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "markiv/SwiftUI-Shimmer",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "sha256": "4f77e514d5f70e976c4ba48407db21fb286a1ad2365093105c75206da14ecfbf"
+    }
+  ],
+  "revision": "0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 3293,
+  "source_lines": 103,
+  "source_sha256": "02f9eb6c565341f300d8f639d5ba2c604971750415d377f0bcc5c2faaee65c9d",
+  "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/README.md",
+  "verified_git_blob_sha1": "00968de3fce81ba18221a23eeb3a92452368e08b"
+}

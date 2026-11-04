@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/icons.astro",
+  "filename": "icons.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-490",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/icons.astro",
+    "title": "website/src/pages/icons.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "03a5af2344bb226e92cf3f88942df07fc07b449eab2cb7fb483da37a0bd323d4",
+  "text": "---\nimport { EN } from '../i18n';\nimport IconIndexPage from '../views/IconIndexPage.astro';\n---\n\n<IconIndexPage locale={EN} />\n",
+  "version": 1
+}

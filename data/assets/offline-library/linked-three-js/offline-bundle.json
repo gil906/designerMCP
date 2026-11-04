@@ -1,0 +1,68 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "three-js-source-1",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/three-js/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "a47114a398fff9941a6e8eb9254e042a86524f5a2f82010b330fdb2b1794fa26",
+      "source_url": "https://github.com/mrdoob/three.js"
+    },
+    {
+      "asset_id": "three-js-source-2",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/three-js/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "2ad736bde3803d08eaff89cb23ed881c815fdb54d373297e167b5f033626d9f0",
+      "source_url": "https://github.com/mrdoob/three.js"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "dc6af535d61e35fb3865103153de75571f85779e0457b883fb85cc31273d2d42",
+      "source_url": "original://designerMCP/offline/linked-three-js"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "01c93e5f2230206e90bd29346870c9e4659b483888cd14625f98d30b144ce4cd",
+      "source_url": "original://designerMCP/offline/linked-three-js"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "linked-three-js",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

@@ -1,0 +1,6 @@
+{
+  "kind": "offline-guidance",
+  "purpose": "Original adaptation guide; no upstream implementation or runnable example is claimed.",
+  "text": "Adapted from upstream references/refs.md, CC-BY-4.0: the invoicing visual is made from the product's own material, money. It serves as both the visual moment and signature detail; text sits on calm sky, chrome stays quiet, and the product preview invites scrolling. Learn that relationship between subject, material, copy space and preview, not the finance theme, palette or exact arrangement. This is a screenshot reference, not a finished accessible React template or real invoice data.\n\nSafe retrieval: request hero-after-preview (800x450, 22460 bytes). hero-after-original is the unchanged full-resolution 1920x1080 WebP, 223664 bytes. The original exceeds the 64KiB response budget when encoded and is cataloged for offline archival use only; do not retrieve it through the bounded MCP image channel. Preview modification is local resize/recompression, with CC-BY-4.0 attribution retained.",
+  "version": 1
+}

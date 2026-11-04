@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/views/LicencePage.astro",
+  "filename": "LicencePage.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-530",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/views/LicencePage.astro",
+    "title": "website/src/views/LicencePage.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "b395dafc219f447778895bd4bd44ab7b4a3daceead94f0a9982392f00da91c01",
+  "text": "---\n// The licence page (/licencing-and-terms) in any language; src/pages routes render it.\nimport { readFileSync } from 'node:fs';\nimport { join } from 'node:path';\nimport { alternatesOf, type Locale, localize, t } from '../i18n';\nimport Layout from '../layouts/Layout.astro';\nimport { SITE } from '../lib/icons';\n\ninterface Props {\n  locale: Locale;\n}\n\nconst { locale } = Astro.props;\nconst m = t(locale).licence;\nconst path = '/licencing-and-terms';\nconst href = (p: string) => localize(p, locale);\nconst mit = 'https://opensource.org/license/mit/';\n// The legal text stays English in every language.\nconst license = readFileSync(join(import.meta.env.REPO_DIR, 'LICENSE'), 'utf8');\nconst jsonLd = {\n  '@context': 'https://schema.org',\n  '@graph': [\n    { '@type': 'WebPage', name: m.name, url: `${SITE}${href(path)}`, inLanguage: locale.hreflang, license: mit },\n    {\n      '@type': 'BreadcrumbList',\n      itemListElement: [\n        { '@type': 'ListItem', position: 1, name: 'useAnimations', item: `${SITE}${href('/')}` },\n        { '@type': 'ListItem', position: 2, name: m.name, item: `${SITE}${href(path)}` },\n      ],\n    },\n  ],\n};\nconst markdown = locale.prefix ? [] : [{ rel: 'alternate', type: 'text/markdown', href: '/licencing-and-terms.md', title: 'Licencing & Terms (Markdown)' }];\n---\n\n<Layout title={m.title} description={m.description} path={href(path)} locale={locale} alternates={alternatesOf(path)} jsonLd={jsonLd} head={markdown}>\n  <article class=\"prose mx-auto max-w-3xl px-5 pt-16 sm:px-8\">\n    <p class=\"mb-2 text-sm font-medium text-accent\">{m.name}</p>\n    <h1>{m.heading}</h1>\n    <p class=\"text-lg\" set:html={m.introHtml(mit)} />\n    <h2>{m.canDo}</h2>\n    <ul>\n      {m.canDoItemsHtml.map((item) => <li set:html={item} />)}\n    </ul>\n    <h2>{m.attribution}</h2>\n    <p>{m.attributionText}</p>\n    <pre><code>{m.credit('<a href=\"https://useanimations.com\">useAnimations</a>')}</code></pre>\n    <h2>{m.noWarranty}</h2>\n    <p>{m.noWarrantyText}</p>\n    <h2>{m.licenseText}</h2>\n    {locale.prefix && <p>{m.bindingNote}</p>}\n    <pre class=\"whitespace-pre-wrap\" lang={locale.prefix ? 'en' : undefined}><code>{license}</code></pre>\n  </article>\n</Layout>\n",
+  "version": 1
+}

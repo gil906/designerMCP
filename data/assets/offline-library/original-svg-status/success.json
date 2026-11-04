@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/original/success.svg",
+  "filename": "success.svg",
+  "format": "svg",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "success",
+    "mime_type": "image/svg+xml",
+    "path": "assets/original/success.svg",
+    "title": "Original success check"
+  },
+  "provenance": {
+    "license": "CC0-1.0",
+    "license_path": "licenses/original-CC0.txt",
+    "origin": "original",
+    "source_url": "original://mcp-designer/patterns/svg-status"
+  },
+  "sha256": "c3565e64e8e03c219de31c3b7ad8f64efd917ff6c82973c4805beb76ea759c44",
+  "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m7.5 12 3 3 6-6\"/></svg>\n",
+  "version": 1
+}

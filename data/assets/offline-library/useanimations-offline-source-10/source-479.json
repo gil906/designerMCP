@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/[locale]/index.astro",
+  "filename": "index.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-479",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/[locale]/index.astro",
+    "title": "website/src/pages/[locale]/index.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "2458550fcf11433beb4651a7bf9db21677318579c14299136fae8b58e87fc8ac",
+  "text": "---\nimport type { GetStaticPaths } from 'astro';\nimport { type Locale, TRANSLATED } from '../../i18n';\nimport HomePage from '../../views/HomePage.astro';\n\nexport const getStaticPaths = (() =>\n  TRANSLATED.map((locale) => ({ params: { locale: locale.code }, props: { locale } }))) satisfies GetStaticPaths;\n\nconst { locale } = Astro.props as { locale: Locale };\n---\n\n<HomePage locale={locale} />\n",
+  "version": 1
+}

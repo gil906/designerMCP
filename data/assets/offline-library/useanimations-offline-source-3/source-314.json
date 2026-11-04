@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/InstallCommand.astro",
+  "filename": "InstallCommand.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-314",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/InstallCommand.astro",
+    "title": "website/src/components/InstallCommand.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "b7ffea0eb6fbfb678bb9e133e260148c3a0751284a3e71fdabdd13f1360184f7",
+  "text": "---\nimport { EN, type Locale, t } from '../i18n';\nimport ControlIcon from './ControlIcon';\n\ninterface Props {\n  command?: string;\n  class?: string;\n  /** Language of the button text. */\n  locale?: Locale;\n}\nconst { command = 'npm i react-useanimations', class: className, locale = EN } = Astro.props;\n---\n\n<button\n  type=\"button\"\n  data-copy={command}\n  data-track=\"copy\"\n  data-track-code=\"install\"\n  class:list={[\n    'group inline-flex items-center gap-3 rounded-full border border-line-strong bg-surface/70 py-2.5 pr-3 pl-5 font-mono text-sm text-fg backdrop-blur transition hover:border-accent',\n    className,\n  ]}\n>\n  <!-- No aria-label: the name is the visible text ('npm i react-useanimations Copy'). -->\n  <span class=\"text-subtle select-none\" aria-hidden=\"true\">$</span>\n  <span>{command}</span>\n  <span class=\"inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-2.5 py-1 font-sans text-xs text-muted transition group-hover:text-fg\">\n    <ControlIcon client:idle icon=\"copy\" copied=\"checkmark\" size={14} />\n    <span data-copy-label>{t(locale).common.copy}</span>\n  </span>\n</button>\n",
+  "version": 1
+}

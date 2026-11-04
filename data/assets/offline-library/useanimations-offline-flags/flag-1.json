@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/public/flags/cs.svg",
+  "filename": "cs.svg",
+  "format": "svg",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "flag-1",
+    "mime_type": "image/svg+xml",
+    "path": "assets/useanimations/source/website/public/flags/cs.svg",
+    "title": "cs.svg"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/flags-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/website/public/flags/LICENSE"
+  },
+  "sha256": "d601fcc2e5b1fd48b79d53c55108af4c0e90793f146db51f3ee449d8d69512bc",
+  "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" id=\"flag-icons-cz\" viewBox=\"0 0 640 480\">\n  <path fill=\"#fff\" d=\"M0 0h640v240H0z\"/>\n  <path fill=\"#d7141a\" d=\"M0 240h640v240H0z\"/>\n  <path fill=\"#11457e\" d=\"M360 240 0 0v480z\"/>\n</svg>\n",
+  "version": 1
+}

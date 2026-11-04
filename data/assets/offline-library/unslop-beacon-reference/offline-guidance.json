@@ -1,0 +1,6 @@
+{
+  "kind": "offline-guidance",
+  "purpose": "Original adaptation guide; no upstream implementation or runnable example is claimed.",
+  "text": "Adapted from upstream references/refs.md, CC-BY-4.0: this incident-monitoring hero depicts a lighthouse on a rocky coast as one blue engraving. Its print style works because the whole page shares one ink, one paper tone and matching serif type, while the illustration leaves calm sky for the headline. The lesson is a coherent world across image, palette and type, not a requirement to put lighthouses or engraving on unrelated products. Treat the screenshot as visual evidence rather than a responsive implementation.\n\nSafe retrieval: request beacon-preview (512x288, 21658 bytes). beacon-original is the unchanged 1920x1080 source, 569124 bytes. It exceeds both the current 512KiB server image-read ceiling and the 64KiB response budget, so it is an archive-only local asset and must not be requested through the bounded MCP channel. Keep those limits unchanged and use the preview.",
+  "version": 1
+}

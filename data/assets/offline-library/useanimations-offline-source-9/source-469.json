@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/lib/site.ts",
+  "filename": "site.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-469",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/lib/site.ts",
+    "title": "website/src/lib/site.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "c509eeefc7001fed174ff9c9f3adbf502e1a8b2381f947c75b542dafc5917209",
+  "text": "import { type Locale, localize, t } from '../i18n';\n\nexport const GITHUB = 'https://github.com/useAnimations/react-useanimations';\nexport const NPM = 'https://www.npmjs.com/package/react-useanimations';\n\n/** The site's URL unless SITE_URL sets another one. */\nexport const DEFAULT_SITE = 'https://useanimations.com';\n\n/**\n * The documentation writes its file and registry URLs for useanimations.com; a build for another\n * SITE_URL points them at itself. Only URLs with a path change: a bare https://useanimations.com\n * (e.g. the attribution link) stays the brand's homepage.\n */\nexport const withSite = (text: string, site: string) =>\n  text.replaceAll(`${DEFAULT_SITE}/`, `${site.replace(/\\/$/, '')}/`);\n\n/** The main navigation in a language. */\nexport const nav = (l: Locale) => {\n  const m = t(l).common.nav;\n  return [\n    { label: m.icons, href: localize('/#icons', l) },\n    { label: m.categories, href: localize('/categories', l) },\n    { label: m.documentation, href: localize('/documentation', l) },\n    { label: m.shadcn, href: localize('/shadcn-animated-icons', l) },\n    { label: m.lottie, href: localize('/lottie-icons', l) },\n    { label: m.license, href: localize('/licencing-and-terms', l) },\n  ];\n};\n\n/** The footer's link columns in a language. */\nexport const footer = (l: Locale) => {\n  const m = t(l).common.footer;\n  return [\n    {\n      title: m.product,\n      links: [\n        { label: m.allIcons, href: localize('/icons', l) },\n        { label: m.categories, href: localize('/categories', l) },\n        { label: m.interactions, href: localize('/interactions', l) },\n        { label: m.lottieIcons, href: localize('/lottie-icons', l) },\n        { label: m.shadcnIcons, href: localize('/shadcn-animated-icons', l) },\n        { label: m.documentation, href: localize('/documentation', l) },\n        { label: m.licencing, href: localize('/licencing-and-terms', l) },\n      ],\n    },\n    {\n      title: m.developers,\n      links: [\n        { label: 'react-useanimations', href: NPM },\n        { label: 'GitHub', href: GITHUB },\n        { label: m.shadcnRegistry, href: '/r/registry.json' },\n        { label: 'icons.json', href: '/icons.json' },\n        { label: 'llms.txt', href: '/llms.txt' },\n      ],\n    },\n    {\n      title: m.follow,\n      links: [\n        { label: 'X (Twitter)', href: 'https://twitter.com/useAnimations/' },\n        { label: 'Instagram', href: 'https://www.instagram.com/getuseanimations/' },\n        { label: 'Facebook', href: 'https://www.facebook.com/useanimations/' },\n      ],\n    },\n  ];\n};\n",
+  "version": 1
+}

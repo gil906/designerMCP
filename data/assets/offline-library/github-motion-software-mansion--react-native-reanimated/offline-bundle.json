@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source-reference",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "ef2d790f0aed464058cfa840660631da42cd9a923797801a60ebf9306d6f7ae8",
+      "source_url": "https://github.com/software-mansion/react-native-reanimated/blob/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts#L20-L35"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "1f4352d484f1c130071a3a26d2d178dcf18a2943c8a015dac54fcfff8b437670",
+      "source_url": "original://designerMCP/offline/github-motion-software-mansion--react-native-reanimated"
+    },
+    {
+      "asset_id": "offline-document-github-motion-software-mansion--react-native-reanimated-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "99664b0ee527ce6a1bbcb40df78e718d3f5d6d280b9a9fd63299737c42a16917",
+      "source_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-motion-software-mansion--react-native-reanimated-packages-react-native-reanimated-src-a-b51e293d2ae5",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "e9eebd334aa43c621069e0a68608c4685587d9414545dc802eb109a9e47de486",
+      "source_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "fad5d7bc3c92b97b4a668696edba20d210ae9bf17340664072210d454573461e",
+      "source_url": "original://designerMCP/offline/github-motion-software-mansion--react-native-reanimated"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-motion-software-mansion--react-native-reanimated",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

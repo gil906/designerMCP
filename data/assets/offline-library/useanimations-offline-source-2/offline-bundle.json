@@ -1,0 +1,310 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source-265",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "ae6b5a75c6d8f8096620d75b2aa91c68a70370c7b3259c26bb5729309074226f",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-266",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "1a0fc5d38349adecec011a0fecda7161db98244a246714b313b9e8942c65d394",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-267",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "359d9f97e0b9b38c866137cd734c6180c67f9e5f71499199497c3a1b03757636",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-268",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "df0c02a78c143b9969cbddfe548b094f4fbe40550f0bdd910e75f3d07a26f413",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-269",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "c5b78d408b3ec7298cb9b8e192aadfc62c19ea4aaa65ffd758a7d2718b829222",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-270",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "14f05987f32c24327efccd1030fa9dea48ab1760ca10a289262457139e5f23dc",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-271",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "8a95f474e801eaeada59710fae77d16282c73c91792f8d728afcf20f7982b29d",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-272",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "1d020058758876e1b2b03489475ad78ec1c84c2eeeecb36fe7da96068e76fb55",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-273",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "254980b3126ca71a035d81ec8f78d0b844a5a9b98bc57c4c212320f6a40b0f5f",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-274",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "85104f2b69c8dec90e1411569fe41e00516374901824d7cd587a07c9b00dd95b",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-275",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "25771f17147451a39200c939396e04561bc49d112ac42a176ee275c7e673ceac",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-276",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "82d35478072808ef2b00ab6e1da43401234141fc17aa350877824f7dc4667f84",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-277",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "8010c5f1291104ad5bae605847ae45cacdf946166be6da8f003bbb929e4e1683",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-278",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "c226d713b385bec972c942f99c9026cc3ae1faca1658db584983805a2898a2fd",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-279",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "f831ebadf62a9950b2fb0f41ea805ef6b93e72b23cfd293e0aece50aefe05780",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-280",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "fc2452b27fb1f7f03faf827c969a0d797a71ddda3b65264aeafa4a179eb4b3e5",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-281",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "843342260cd2228a8b8378b247c9aa396c81c8b7712d6722f1c69e826599ef1c",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-282",
+      "format": "text",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "31ca7ac00f07e2d3dd0c1ab2924c6c988bcce40d1f3399794b8553881b73370d",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-283",
+      "format": "text",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "8aa8668509152976f7f2580a3afa7dff226e737eb01d0467a460e7bec9a65f64",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-298",
+      "format": "typescript",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "7a458bbf9a09600b9ab278c800c68124845d4a57c08774ec895e86e0bc11830f",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-299",
+      "format": "astro",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "b62057df40dec6649785ba47babd5c457516b0cd0c8b1778104914130bd1a2f2",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-300",
+      "format": "astro",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "4409f3e3910802022aae7609f801dbe1d63381a3c6a57527b237519f1023a570",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-301",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "06219b726217018dee7d9ccf11a6ebc110a72e7dc90c6573f0718dfb67179595",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "source-302",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "e8e0dc7efca56d0517250213009a31ab0f07b8a1fd9303626d0ae8a7a350b7e1",
+      "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "e4ec3ee448154483a8543f66c427ea7d228f4fe9c756f14eaa85e6942db48f0e",
+      "source_url": "original://designerMCP/offline/useanimations-offline-source-2"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "912cdd16a18fdfba9cadc3f8b76fbe83e4a1e8d006e611970da1b6fe0b214dd0",
+      "source_url": "original://designerMCP/offline/useanimations-offline-source-2"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "useanimations-offline-source-2",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

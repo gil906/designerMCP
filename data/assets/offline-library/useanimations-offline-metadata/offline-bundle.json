@@ -1,0 +1,89 @@
+{
+  "archives": [
+    {
+      "format": "json",
+      "original_asset": {
+        "format": null,
+        "id": "svg-reference",
+        "license": null,
+        "license_path": null,
+        "mime_type": "application/json",
+        "origin": null,
+        "path": "assets/useanimations/svg.json",
+        "source_url": null,
+        "title": "Upstream static SVG strings, reference only"
+      },
+      "path": "assets/useanimations/svg.json",
+      "reason": "Original exceeds runtime size limit; retained archive-only. Use bounded preview.",
+      "sha256": "7ba580a14b1733ab9ab2b89f47d7918db4128f3f52615a8448a74f4c3d5024f2"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "catalog",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/useanimations-MIT.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "051d96aa2c78a38751f5f3c7b4bd5e708d19216463fc99b7db7cf4e327e732ab",
+      "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/icons/catalog.json"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "9989058605c14f12d764d1e20693a850a88bdfdca49b7f4175fc8bbd398c4498",
+      "source_url": "original://designerMCP/offline/useanimations-offline-metadata"
+    },
+    {
+      "asset_id": "offline-guidance",
+      "format": "text",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "document",
+      "sha256": "fb562d6ec3eeee4e664376b6d9641eceb7061e6c851eccddd69fd89f4755f0fd",
+      "source_url": "original://designerMCP/offline/useanimations-offline-metadata"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "912cdd16a18fdfba9cadc3f8b76fbe83e4a1e8d006e611970da1b6fe0b214dd0",
+      "source_url": "original://designerMCP/offline/useanimations-offline-metadata"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "unavailable",
+    "license": "available",
+    "source": "original-guidance",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "An oversized original is archive-only, not retrievable through get_asset.",
+    "Upstream source/documents are unavailable; the local document is original adaptation guidance.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "useanimations-offline-metadata",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

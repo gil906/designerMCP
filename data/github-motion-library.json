@@ -1,16 +1,92 @@
 {
-  "version": 1,
   "entries": [
     {
-      "id": "github-motion-airbnb--lottie-web",
-      "title": "Lottie Web: bounded status motion and lifecycle cleanup",
-      "summary": "Browser vector-animation integration reference: create one local-data player per surface, stop decorative loops, and destroy the instance when its container is removed.",
+      "assets": [
+        {
+          "format": "json",
+          "id": "source-reference",
+          "mime_type": "application/json",
+          "path": "assets/github-motion/airbnb--lottie-web.json",
+          "title": "Inert source excerpt JSON — not animation data"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-motion-airbnb--lottie-web.webp",
+          "source_url": "original://designerMCP/offline/github-motion-airbnb--lottie-web",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-airbnb--lottie-web-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-airbnb--lottie-web/offline-document-github-motion-airbnb--lottie-web-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "javascript",
+          "id": "offline-code-github-motion-airbnb--lottie-web-player-js-animation-animationmanager-js",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-airbnb--lottie-web/offline-code-github-motion-airbnb--lottie-web-player-js-animation-animationmanager-js.json",
+          "source_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/player/js/animation/AnimationManager.js",
+          "title": "Full player/js/animation/AnimationManager.js"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-airbnb--lottie-web/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-motion-airbnb--lottie-web",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-airbnb--lottie-web/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-motion-airbnb--lottie-web",
+          "title": "Offline reference dossier index"
+        }
+      ],
       "categories": [
         "animation",
         "interaction",
         "accessibility",
         "performance"
       ],
+      "examples": [
+        {
+          "code": "function mountStatus(container, animationData, reducedMotion) {\n  const player = lottie.loadAnimation({\n    container, renderer: 'svg', animationData,\n    loop: false, autoplay: !reducedMotion,\n  });\n  if (reducedMotion) player.goToAndStop(0, true);\n  return () => player.destroy();\n}",
+          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically.",
+          "language": "javascript"
+        }
+      ],
+      "guidance": "Original integration guidance: Use small, meaningful confirmation or progress accents rather than motion as the only status signal. Supply your own licensed local animation JSON; this archive contains code reference text, not playable Lottie data. Honor live prefers-reduced-motion changes by pausing and showing a useful still frame. Avoid perpetual decorative loops, pause offscreen players, and destroy instances on teardown. Renderer choice affects browser cost and fidelity; profile complex masks and oversized compositions.",
+      "id": "github-motion-airbnb--lottie-web",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+      "platforms": [
+        "web"
+      ],
+      "source_url": "https://github.com/airbnb/lottie-web/blob/bede03d25d232826e0c9dca1733d542d8a7754fb/player/js/animation/AnimationManager.js#L65-L77",
+      "summary": "Browser vector-animation integration reference: create one local-data player per surface, stop decorative loops, and destroy the instance when its container is removed.",
       "tags": [
         "code-reference",
         "lottie",
@@ -18,39 +94,107 @@
         "lifecycle",
         "status-feedback"
       ],
-      "platforms": [
-        "web"
-      ],
-      "guidance": "Original integration guidance: Use small, meaningful confirmation or progress accents rather than motion as the only status signal. Supply your own licensed local animation JSON; this archive contains code reference text, not playable Lottie data. Honor live prefers-reduced-motion changes by pausing and showing a useful still frame. Avoid perpetual decorative loops, pause offscreen players, and destroy instances on teardown. Renderer choice affects browser cost and fidelity; profile complex masks and oversized compositions.",
-      "source_url": "https://github.com/airbnb/lottie-web/blob/bede03d25d232826e0c9dca1733d542d8a7754fb/player/js/animation/AnimationManager.js#L65-L77",
-      "license": "MIT",
-      "license_path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
-      "assets": [
-        {
-          "id": "source-reference",
-          "path": "assets/github-motion/airbnb--lottie-web.json",
-          "mime_type": "application/json",
-          "title": "Inert source excerpt JSON — not animation data"
-        }
-      ],
-      "examples": [
-        {
-          "language": "javascript",
-          "code": "function mountStatus(container, animationData, reducedMotion) {\n  const player = lottie.loadAnimation({\n    container, renderer: 'svg', animationData,\n    loop: false, autoplay: !reducedMotion,\n  });\n  if (reducedMotion) player.goToAndStop(0, true);\n  return () => player.destroy();\n}",
-          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically."
-        }
-      ]
+      "title": "Lottie Web: bounded status motion and lifecycle cleanup"
     },
     {
-      "id": "github-motion-lottiefiles--dotlottie-web",
-      "title": "dotLottie Web: canvas playback with deliberate runtime ownership",
-      "summary": "Canvas Lottie/dotLottie integration guidance grounded in the React adapter's instance reuse and deferred cleanup, without bundling runtime binaries or animation payloads.",
+      "assets": [
+        {
+          "format": "json",
+          "id": "source-reference",
+          "mime_type": "application/json",
+          "path": "assets/github-motion/LottieFiles--dotlottie-web.json",
+          "title": "Inert source excerpt JSON — not animation data"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-motion-lottiefiles--dotlottie-web.webp",
+          "source_url": "original://designerMCP/offline/github-motion-lottiefiles--dotlottie-web",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-lottiefiles--dotlottie-web-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-document-github-motion-lottiefiles--dotlottie-web-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-dotlottie-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-dotlottie-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/dotlottie.tsx",
+          "title": "Full packages/react/src/dotlottie.tsx"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-base-dotlottie-react-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-base-dotlottie-react-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/base-dotlottie-react.tsx",
+          "title": "Full packages/react/src/base-dotlottie-react.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-lottiefiles--dotlottie-web/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-motion-lottiefiles--dotlottie-web",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-lottiefiles--dotlottie-web/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-motion-lottiefiles--dotlottie-web",
+          "title": "Offline reference dossier index"
+        }
+      ],
       "categories": [
         "animation",
         "interaction",
         "accessibility",
         "performance"
       ],
+      "examples": [
+        {
+          "code": "function mountCanvas(canvas, animationData, reducedMotion) {\n  const player = new DotLottie({\n    canvas, data: JSON.stringify(animationData),\n    loop: false, autoplay: !reducedMotion,\n  });\n  return () => player.destroy();\n}",
+          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically.",
+          "language": "javascript"
+        }
+      ],
+      "guidance": "Original integration guidance: Choose canvas playback for compact vector feedback when its renderer tradeoffs fit your browser targets. Bring separately licensed local animation data and a reviewed locally installed runtime; no .lottie, .wasm, native library, or playable animation is archived here. Disable autoplay and looping for reduced motion, retain an informative still state, and update playback when that preference changes. Destroy manually created players on teardown. The React adapter handles its own lifecycle and StrictMode reuse: do not blindly destroy its managed instance from another cleanup. Profile concurrent canvases and pause invisible motion.",
+      "id": "github-motion-lottiefiles--dotlottie-web",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/LottieFiles/dotlottie-web/blob/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/dotlottie.tsx#L1-L16",
+      "summary": "Canvas Lottie/dotLottie integration guidance grounded in the React adapter's instance reuse and deferred cleanup, without bundling runtime binaries or animation payloads.",
       "tags": [
         "code-reference",
         "dotlottie",
@@ -58,40 +202,97 @@
         "canvas",
         "lifecycle"
       ],
-      "platforms": [
-        "web",
-        "react"
-      ],
-      "guidance": "Original integration guidance: Choose canvas playback for compact vector feedback when its renderer tradeoffs fit your browser targets. Bring separately licensed local animation data and a reviewed locally installed runtime; no .lottie, .wasm, native library, or playable animation is archived here. Disable autoplay and looping for reduced motion, retain an informative still state, and update playback when that preference changes. Destroy manually created players on teardown. The React adapter handles its own lifecycle and StrictMode reuse: do not blindly destroy its managed instance from another cleanup. Profile concurrent canvases and pause invisible motion.",
-      "source_url": "https://github.com/LottieFiles/dotlottie-web/blob/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/dotlottie.tsx#L1-L16",
-      "license": "MIT",
-      "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
-      "assets": [
-        {
-          "id": "source-reference",
-          "path": "assets/github-motion/LottieFiles--dotlottie-web.json",
-          "mime_type": "application/json",
-          "title": "Inert source excerpt JSON — not animation data"
-        }
-      ],
-      "examples": [
-        {
-          "language": "javascript",
-          "code": "function mountCanvas(canvas, animationData, reducedMotion) {\n  const player = new DotLottie({\n    canvas, data: JSON.stringify(animationData),\n    loop: false, autoplay: !reducedMotion,\n  });\n  return () => player.destroy();\n}",
-          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically."
-        }
-      ]
+      "title": "dotLottie Web: canvas playback with deliberate runtime ownership"
     },
     {
-      "id": "github-motion-software-mansion--react-native-reanimated",
-      "title": "Reanimated: preference-aware native timing transitions",
-      "summary": "Native mobile transition guidance from withTiming's configuration and system reduced-motion support, with explicit React Native New Architecture compatibility boundaries.",
+      "assets": [
+        {
+          "format": "json",
+          "id": "source-reference",
+          "mime_type": "application/json",
+          "path": "assets/github-motion/software-mansion--react-native-reanimated.json",
+          "title": "Inert source excerpt JSON — not animation data"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-motion-software-mansion--react-native-reanimated.webp",
+          "source_url": "original://designerMCP/offline/github-motion-software-mansion--react-native-reanimated",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-software-mansion--react-native-reanimated-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-software-mansion--react-native-reanimated/offline-document-github-motion-software-mansion--react-native-reanimated-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "typescript",
+          "id": "offline-code-github-motion-software-mansion--react-native-reanimated-packages-react-native-reanimated-src-a-b51e293d2ae5",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-software-mansion--react-native-reanimated/offline-code-github-motion-software-mansion--react-native-reanimated-packages-react-native-reanimated-src-a-b51e293d2ae5.json",
+          "source_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts",
+          "title": "Full packages/react-native-reanimated/src/animation/timing.ts"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-software-mansion--react-native-reanimated/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-motion-software-mansion--react-native-reanimated",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-software-mansion--react-native-reanimated/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-motion-software-mansion--react-native-reanimated",
+          "title": "Offline reference dossier index"
+        }
+      ],
       "categories": [
         "animation",
         "interaction",
         "accessibility",
         "performance"
       ],
+      "examples": [
+        {
+          "code": "import Animated, { ReduceMotion, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';\nimport { Button, View } from 'react-native';\n\nexport function SlideFeedback() {\n  const offset = useSharedValue(0);\n  const style = useAnimatedStyle(() => ({ transform: [{ translateX: offset.value }] }));\n  return <View>\n    <Button title=\"Move indicator\" onPress={() => {\n      offset.value = withTiming(offset.value === 0 ? 24 : 0,\n        { duration: 180, reduceMotion: ReduceMotion.System });\n    }} />\n    <Animated.View accessibilityLabel=\"Position indicator\" style={[{ width: 20, height: 20, backgroundColor: '#174' }, style]} />\n  </View>;\n}",
+          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Original integration guidance: Use short timing transitions to connect a gesture or explicit state change to its visual result. The pinned README states Reanimated 4.x requires React Native's New Architecture and supported recent React Native versions; verify the exact compatibility matrix before adopting it. Pass ReduceMotion.System instead of overriding the user's accessibility preference. Keep persistent labels and a non-motion indication of state. Prefer transform/opacity work over expensive layout churn, avoid per-frame JS communication, and measure on a real low-end device. No native dependencies or worklet compiler output are included.",
+      "id": "github-motion-software-mansion--react-native-reanimated",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+      "platforms": [
+        "react-native",
+        "ios",
+        "android"
+      ],
+      "source_url": "https://github.com/software-mansion/react-native-reanimated/blob/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts#L20-L35",
+      "summary": "Native mobile transition guidance from withTiming's configuration and system reduced-motion support, with explicit React Native New Architecture compatibility boundaries.",
       "tags": [
         "code-reference",
         "reanimated",
@@ -99,41 +300,96 @@
         "transitions",
         "native-mobile"
       ],
-      "platforms": [
-        "react-native",
-        "ios",
-        "android"
-      ],
-      "guidance": "Original integration guidance: Use short timing transitions to connect a gesture or explicit state change to its visual result. The pinned README states Reanimated 4.x requires React Native's New Architecture and supported recent React Native versions; verify the exact compatibility matrix before adopting it. Pass ReduceMotion.System instead of overriding the user's accessibility preference. Keep persistent labels and a non-motion indication of state. Prefer transform/opacity work over expensive layout churn, avoid per-frame JS communication, and measure on a real low-end device. No native dependencies or worklet compiler output are included.",
-      "source_url": "https://github.com/software-mansion/react-native-reanimated/blob/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts#L20-L35",
-      "license": "MIT",
-      "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
-      "assets": [
-        {
-          "id": "source-reference",
-          "path": "assets/github-motion/software-mansion--react-native-reanimated.json",
-          "mime_type": "application/json",
-          "title": "Inert source excerpt JSON — not animation data"
-        }
-      ],
-      "examples": [
-        {
-          "language": "tsx",
-          "code": "import Animated, { ReduceMotion, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';\nimport { Button, View } from 'react-native';\n\nexport function SlideFeedback() {\n  const offset = useSharedValue(0);\n  const style = useAnimatedStyle(() => ({ transform: [{ translateX: offset.value }] }));\n  return <View>\n    <Button title=\"Move indicator\" onPress={() => {\n      offset.value = withTiming(offset.value === 0 ? 24 : 0,\n        { duration: 180, reduceMotion: ReduceMotion.System });\n    }} />\n    <Animated.View accessibilityLabel=\"Position indicator\" style={[{ width: 20, height: 20, backgroundColor: '#174' }, style]} />\n  </View>;\n}",
-          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically."
-        }
-      ]
+      "title": "Reanimated: preference-aware native timing transitions"
     },
     {
-      "id": "github-motion-pmndrs--react-three-fiber",
-      "title": "React Three Fiber: delta-based render-loop motion",
-      "summary": "React browser 3D motion reference using useFrame subscription, elapsed-frame delta, and static demand rendering for reduced motion.",
+      "assets": [
+        {
+          "format": "json",
+          "id": "source-reference",
+          "mime_type": "application/json",
+          "path": "assets/github-motion/pmndrs--react-three-fiber.json",
+          "title": "Inert source excerpt JSON — not animation data"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-motion-pmndrs--react-three-fiber.webp",
+          "source_url": "original://designerMCP/offline/github-motion-pmndrs--react-three-fiber",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-pmndrs--react-three-fiber-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-pmndrs--react-three-fiber/offline-document-github-motion-pmndrs--react-three-fiber-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/readme.md",
+          "title": "Localized readme.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-pmndrs--react-three-fiber-packages-fiber-src-core-hooks-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-pmndrs--react-three-fiber/offline-code-github-motion-pmndrs--react-three-fiber-packages-fiber-src-core-hooks-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx",
+          "title": "Full packages/fiber/src/core/hooks.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-pmndrs--react-three-fiber/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-motion-pmndrs--react-three-fiber",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-pmndrs--react-three-fiber/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-motion-pmndrs--react-three-fiber",
+          "title": "Offline reference dossier index"
+        }
+      ],
       "categories": [
         "animation",
         "interaction",
         "accessibility",
         "performance"
       ],
+      "examples": [
+        {
+          "code": "function SlowSpin({ reducedMotion }: { reducedMotion: boolean }) {\n  const mesh = useRef<THREE.Mesh>(null!);\n  useFrame((_, delta) => {\n    if (!reducedMotion) mesh.current.rotation.y += Math.min(delta, 0.1) * 0.2;\n  });\n  return <mesh ref={mesh}><boxGeometry /><meshStandardMaterial /></mesh>;\n}\n// Surround with an HTML description; imports are from React, three, and @react-three/fiber.\n<Canvas frameloop={reducedMotion ? 'demand' : 'always'} dpr={[1, 1.5]}>\n  <ambientLight /><SlowSpin reducedMotion={reducedMotion} />\n</Canvas>",
+          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Original integration guidance: Reserve a 3D scene for spatial explanation, product inspection, or an intentional interactive accent rather than making every interface animate. useFrame subscribes a mutable callback to the renderer: mutate object refs, use frame delta, and avoid setState or fresh allocations each frame. Stop motion when reduced motion is requested and use demand rendering for a static scene; other interactive changes must invalidate that scene. Pause or unmount hidden canvases, cap device pixel ratio and scene complexity, and provide a meaningful HTML alternative to visual-only canvas content. Scope here is React in a browser, not a claim of universal renderer support.",
+      "id": "github-motion-pmndrs--react-three-fiber",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/pmndrs/react-three-fiber/blob/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx#L43-L56",
+      "summary": "React browser 3D motion reference using useFrame subscription, elapsed-frame delta, and static demand rendering for reduced motion.",
       "tags": [
         "code-reference",
         "3d",
@@ -141,40 +397,96 @@
         "useframe",
         "delta-time"
       ],
-      "platforms": [
-        "web",
-        "react"
-      ],
-      "guidance": "Original integration guidance: Reserve a 3D scene for spatial explanation, product inspection, or an intentional interactive accent rather than making every interface animate. useFrame subscribes a mutable callback to the renderer: mutate object refs, use frame delta, and avoid setState or fresh allocations each frame. Stop motion when reduced motion is requested and use demand rendering for a static scene; other interactive changes must invalidate that scene. Pause or unmount hidden canvases, cap device pixel ratio and scene complexity, and provide a meaningful HTML alternative to visual-only canvas content. Scope here is React in a browser, not a claim of universal renderer support.",
-      "source_url": "https://github.com/pmndrs/react-three-fiber/blob/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx#L43-L56",
-      "license": "MIT",
-      "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
-      "assets": [
-        {
-          "id": "source-reference",
-          "path": "assets/github-motion/pmndrs--react-three-fiber.json",
-          "mime_type": "application/json",
-          "title": "Inert source excerpt JSON — not animation data"
-        }
-      ],
-      "examples": [
-        {
-          "language": "tsx",
-          "code": "function SlowSpin({ reducedMotion }: { reducedMotion: boolean }) {\n  const mesh = useRef<THREE.Mesh>(null!);\n  useFrame((_, delta) => {\n    if (!reducedMotion) mesh.current.rotation.y += Math.min(delta, 0.1) * 0.2;\n  });\n  return <mesh ref={mesh}><boxGeometry /><meshStandardMaterial /></mesh>;\n}\n// Surround with an HTML description; imports are from React, three, and @react-three/fiber.\n<Canvas frameloop={reducedMotion ? 'demand' : 'always'} dpr={[1, 1.5]}>\n  <ambientLight /><SlowSpin reducedMotion={reducedMotion} />\n</Canvas>",
-          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically."
-        }
-      ]
+      "title": "React Three Fiber: delta-based render-loop motion"
     },
     {
-      "id": "github-motion-pmndrs--drei",
-      "title": "Drei Float: restrained 3D ambient movement",
-      "summary": "Optional product-scene floating motion based on Float's enabled/speed guard, frame-driven transforms, and demand-render invalidation.",
+      "assets": [
+        {
+          "format": "json",
+          "id": "source-reference",
+          "mime_type": "application/json",
+          "path": "assets/github-motion/pmndrs--drei.json",
+          "title": "Inert source excerpt JSON — not animation data"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-motion-pmndrs--drei.webp",
+          "source_url": "original://designerMCP/offline/github-motion-pmndrs--drei",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-pmndrs--drei-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-pmndrs--drei/offline-document-github-motion-pmndrs--drei-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-pmndrs--drei-src-core-float-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-pmndrs--drei/offline-code-github-motion-pmndrs--drei-src-core-float-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx",
+          "title": "Full src/core/Float.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-pmndrs--drei/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-motion-pmndrs--drei",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-pmndrs--drei/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-motion-pmndrs--drei",
+          "title": "Offline reference dossier index"
+        }
+      ],
       "categories": [
         "animation",
         "interaction",
         "accessibility",
         "performance"
       ],
+      "examples": [
+        {
+          "code": "import { Float } from '@react-three/drei';\n\n<Float enabled={!reducedMotion} autoInvalidate={!reducedMotion}\n  speed={0.7} rotationIntensity={0.15} floatIntensity={0.2}>\n  <mesh><boxGeometry /><meshStandardMaterial color=\"#47605a\" /></mesh>\n</Float>",
+          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Original integration guidance: Use a gentle Float treatment only where a 3D object's motion reinforces an intentionally spatial presentation. The inspected component skips updates when disabled or speed is zero and can invalidate a demand-rendered scene while active. Feed it a reactive reduced-motion preference and disable float entirely for that preference. Keep camera and text stable, do not encode essential state through bobbing alone, and avoid stacking multiple looping effects. Budget GPU work and stop hidden scenes. This curated example is for browser React Three Fiber; native exports have different helpers and are not represented by this entry.",
+      "id": "github-motion-pmndrs--drei",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/pmndrs/drei/blob/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx#L1-L58",
+      "summary": "Optional product-scene floating motion based on Float's enabled/speed guard, frame-driven transforms, and demand-render invalidation.",
       "tags": [
         "code-reference",
         "3d",
@@ -182,40 +494,96 @@
         "ambient-motion",
         "demand-rendering"
       ],
-      "platforms": [
-        "web",
-        "react"
-      ],
-      "guidance": "Original integration guidance: Use a gentle Float treatment only where a 3D object's motion reinforces an intentionally spatial presentation. The inspected component skips updates when disabled or speed is zero and can invalidate a demand-rendered scene while active. Feed it a reactive reduced-motion preference and disable float entirely for that preference. Keep camera and text stable, do not encode essential state through bobbing alone, and avoid stacking multiple looping effects. Budget GPU work and stop hidden scenes. This curated example is for browser React Three Fiber; native exports have different helpers and are not represented by this entry.",
-      "source_url": "https://github.com/pmndrs/drei/blob/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx#L1-L58",
-      "license": "MIT",
-      "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
-      "assets": [
-        {
-          "id": "source-reference",
-          "path": "assets/github-motion/pmndrs--drei.json",
-          "mime_type": "application/json",
-          "title": "Inert source excerpt JSON — not animation data"
-        }
-      ],
-      "examples": [
-        {
-          "language": "tsx",
-          "code": "import { Float } from '@react-three/drei';\n\n<Float enabled={!reducedMotion} autoInvalidate={!reducedMotion}\n  speed={0.7} rotationIntensity={0.15} floatIntensity={0.2}>\n  <mesh><boxGeometry /><meshStandardMaterial color=\"#47605a\" /></mesh>\n</Float>",
-          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically."
-        }
-      ]
+      "title": "Drei Float: restrained 3D ambient movement"
     },
     {
-      "id": "github-motion-rive-app--rive-react",
-      "title": "Rive React: local interactive canvas with managed cleanup",
-      "summary": "React Rive integration reference grounded in useRive's canvas lifecycle and instance cleanup, not a bundled Rive animation or runtime.",
+      "assets": [
+        {
+          "format": "json",
+          "id": "source-reference",
+          "mime_type": "application/json",
+          "path": "assets/github-motion/rive-app--rive-react.json",
+          "title": "Inert source excerpt JSON — not animation data"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-motion-rive-app--rive-react.webp",
+          "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-react",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-rive-app--rive-react-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-rive-app--rive-react/offline-document-github-motion-rive-app--rive-react-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-rive-app--rive-react-src-hooks-userive-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-rive-app--rive-react/offline-code-github-motion-rive-app--rive-react-src-hooks-userive-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/src/hooks/useRive.tsx",
+          "title": "Full src/hooks/useRive.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-rive-app--rive-react/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-react",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-rive-app--rive-react/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-react",
+          "title": "Offline reference dossier index"
+        }
+      ],
       "categories": [
         "animation",
         "interaction",
         "accessibility",
         "performance"
       ],
+      "examples": [
+        {
+          "code": "import { useEffect } from 'react';\nimport { useRive } from '@rive-app/react-canvas';\n\nfunction LocalFeedback({ buffer, reducedMotion }) {\n  const { rive, RiveComponent } = useRive({ buffer, autoplay: !reducedMotion });\n  useEffect(() => {\n    if (!rive) return;\n    if (reducedMotion) rive.pause();\n    else rive.play();\n  }, [rive, reducedMotion]);\n  return <div aria-hidden=\"true\"><RiveComponent /></div>;\n}",
+          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Original integration guidance: Use a Rive state machine for intentionally interactive visual feedback that would otherwise require many disconnected transitions. Bring your own licensed animation buffer; neither .riv files nor WebAssembly are archived. The hook creates the instance after the canvas exists and owns replacement/cleanup; avoid separately cleaning up its managed instance. Disable autoplay and pause when reduced motion changes, with a useful static alternative. Stop offscreen playback and profile canvas/runtime memory before adding many instances. Give adjacent accessible controls and text the actual interaction semantics; a canvas alone is not a sufficient accessible interface.",
+      "id": "github-motion-rive-app--rive-react",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/rive-app/rive-react/blob/5ae214890c2d4bd14fcaa275c550abd389be975b/src/hooks/useRive.tsx#L200-L229",
+      "summary": "React Rive integration reference grounded in useRive's canvas lifecycle and instance cleanup, not a bundled Rive animation or runtime.",
       "tags": [
         "code-reference",
         "rive",
@@ -223,40 +591,95 @@
         "interactive-animation",
         "lifecycle"
       ],
-      "platforms": [
-        "web",
-        "react"
-      ],
-      "guidance": "Original integration guidance: Use a Rive state machine for intentionally interactive visual feedback that would otherwise require many disconnected transitions. Bring your own licensed animation buffer; neither .riv files nor WebAssembly are archived. The hook creates the instance after the canvas exists and owns replacement/cleanup; avoid separately cleaning up its managed instance. Disable autoplay and pause when reduced motion changes, with a useful static alternative. Stop offscreen playback and profile canvas/runtime memory before adding many instances. Give adjacent accessible controls and text the actual interaction semantics; a canvas alone is not a sufficient accessible interface.",
-      "source_url": "https://github.com/rive-app/rive-react/blob/5ae214890c2d4bd14fcaa275c550abd389be975b/src/hooks/useRive.tsx#L200-L229",
-      "license": "MIT",
-      "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
-      "assets": [
-        {
-          "id": "source-reference",
-          "path": "assets/github-motion/rive-app--rive-react.json",
-          "mime_type": "application/json",
-          "title": "Inert source excerpt JSON — not animation data"
-        }
-      ],
-      "examples": [
-        {
-          "language": "tsx",
-          "code": "import { useEffect } from 'react';\nimport { useRive } from '@rive-app/react-canvas';\n\nfunction LocalFeedback({ buffer, reducedMotion }) {\n  const { rive, RiveComponent } = useRive({ buffer, autoplay: !reducedMotion });\n  useEffect(() => {\n    if (!rive) return;\n    if (reducedMotion) rive.pause();\n    else rive.play();\n  }, [rive, reducedMotion]);\n  return <div aria-hidden=\"true\"><RiveComponent /></div>;\n}",
-          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically."
-        }
-      ]
+      "title": "Rive React: local interactive canvas with managed cleanup"
     },
     {
-      "id": "github-motion-rive-app--rive-flutter",
-      "title": "Rive Flutter: explicit pause/play and loader disposal",
-      "summary": "Flutter animation lifecycle reference from the pause/play example: bind controller activation to deliberate playback intent and dispose the owned FileLoader.",
+      "assets": [
+        {
+          "format": "json",
+          "id": "source-reference",
+          "mime_type": "application/json",
+          "path": "assets/github-motion/rive-app--rive-flutter.json",
+          "title": "Inert source excerpt JSON — not animation data"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-motion-rive-app--rive-flutter.webp",
+          "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-flutter",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-rive-app--rive-flutter-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-rive-app--rive-flutter/offline-document-github-motion-rive-app--rive-flutter-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "dart",
+          "id": "offline-code-github-motion-rive-app--rive-flutter-example-lib-examples-pause-play-dart",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-rive-app--rive-flutter/offline-code-github-motion-rive-app--rive-flutter-example-lib-examples-pause-play-dart.json",
+          "source_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/example/lib/examples/pause_play.dart",
+          "title": "Full example/lib/examples/pause_play.dart"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-rive-app--rive-flutter/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-flutter",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-rive-app--rive-flutter/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-flutter",
+          "title": "Offline reference dossier index"
+        }
+      ],
       "categories": [
         "animation",
         "interaction",
         "accessibility",
         "performance"
       ],
+      "examples": [
+        {
+          "code": "// Integration fragment: controller is available only after RiveLoaded.\nvoid updatePlayback(BuildContext context) {\n  final reduce = MediaQuery.of(context).disableAnimations;\n  controller.active = userRequestedPlayback && !reduce;\n}\n\n@override\nvoid dispose() {\n  fileLoader.dispose();\n  super.dispose();\n}",
+          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically.",
+          "language": "dart"
+        }
+      ],
+      "guidance": "Original integration guidance: Use controllable Rive playback for Flutter illustrations and state-machine feedback, while keeping semantic controls and meaningful status text outside the animation. The inspected example uses FileLoader.fromAsset, RiveWidgetBuilder, controller.active, and loader disposal; it references an upstream .riv that is deliberately not downloaded. Supply your own licensed bundled animation and reviewed runtime. Derive playback from explicit user intent and MediaQuery.disableAnimations; reapply it when settings change and pause invisible routes. Dispose the owned loader and follow the exact pinned runtime's ownership rules for controllers. Measure renderer memory and frame cost on target devices; Flutter framework scope is not a promise that every runtime renderer feature works on every deployment platform.",
+      "id": "github-motion-rive-app--rive-flutter",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+      "platforms": [
+        "flutter"
+      ],
+      "source_url": "https://github.com/rive-app/rive-flutter/blob/cec7801eab6d24d0a6ea193e66243223488c8f51/example/lib/examples/pause_play.dart#L1-L77",
+      "summary": "Flutter animation lifecycle reference from the pause/play example: bind controller activation to deliberate playback intent and dispose the owned FileLoader.",
       "tags": [
         "code-reference",
         "rive",
@@ -264,39 +687,96 @@
         "pause-play",
         "lifecycle"
       ],
-      "platforms": [
-        "flutter"
-      ],
-      "guidance": "Original integration guidance: Use controllable Rive playback for Flutter illustrations and state-machine feedback, while keeping semantic controls and meaningful status text outside the animation. The inspected example uses FileLoader.fromAsset, RiveWidgetBuilder, controller.active, and loader disposal; it references an upstream .riv that is deliberately not downloaded. Supply your own licensed bundled animation and reviewed runtime. Derive playback from explicit user intent and MediaQuery.disableAnimations; reapply it when settings change and pause invisible routes. Dispose the owned loader and follow the exact pinned runtime's ownership rules for controllers. Measure renderer memory and frame cost on target devices; Flutter framework scope is not a promise that every runtime renderer feature works on every deployment platform.",
-      "source_url": "https://github.com/rive-app/rive-flutter/blob/cec7801eab6d24d0a6ea193e66243223488c8f51/example/lib/examples/pause_play.dart#L1-L77",
-      "license": "MIT",
-      "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
-      "assets": [
-        {
-          "id": "source-reference",
-          "path": "assets/github-motion/rive-app--rive-flutter.json",
-          "mime_type": "application/json",
-          "title": "Inert source excerpt JSON — not animation data"
-        }
-      ],
-      "examples": [
-        {
-          "language": "dart",
-          "code": "// Integration fragment: controller is available only after RiveLoaded.\nvoid updatePlayback(BuildContext context) {\n  final reduce = MediaQuery.of(context).disableAnimations;\n  controller.active = userRequestedPlayback && !reduce;\n}\n\n@override\nvoid dispose() {\n  fileLoader.dispose();\n  super.dispose();\n}",
-          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically."
-        }
-      ]
+      "title": "Rive Flutter: explicit pause/play and loader disposal"
     },
     {
-      "id": "github-motion-vueuse--motion",
-      "title": "VueUse Motion: reactive reduced-motion-aware entrances",
-      "summary": "Vue browser motion reference combining directive variants with the library's reactive prefers-reduced-motion helper.",
+      "assets": [
+        {
+          "format": "json",
+          "id": "source-reference",
+          "mime_type": "application/json",
+          "path": "assets/github-motion/vueuse--motion.json",
+          "title": "Inert source excerpt JSON — not animation data"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-motion-vueuse--motion.webp",
+          "source_url": "original://designerMCP/offline/github-motion-vueuse--motion",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-vueuse--motion-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-vueuse--motion/offline-document-github-motion-vueuse--motion-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "typescript",
+          "id": "offline-code-github-motion-vueuse--motion-src-usereducedmotion-ts",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-vueuse--motion/offline-code-github-motion-vueuse--motion-src-usereducedmotion-ts.json",
+          "source_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/src/useReducedMotion.ts",
+          "title": "Full src/useReducedMotion.ts"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-vueuse--motion/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-motion-vueuse--motion",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-motion-vueuse--motion/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-motion-vueuse--motion",
+          "title": "Offline reference dossier index"
+        }
+      ],
       "categories": [
         "animation",
         "interaction",
         "accessibility",
         "performance"
       ],
+      "examples": [
+        {
+          "code": "<script setup>\nimport { useReducedMotion } from '@vueuse/motion'\nconst reducedMotion = useReducedMotion()\n</script>\n\n<template>\n  <section v-motion\n    :initial=\"reducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }\"\n    :enter=\"{ opacity: 1, y: 0, transition: { duration: reducedMotion ? 0 : 180 } }\">\n    <h2>Saved changes</h2>\n    <p>Your updated settings are available.</p>\n  </section>\n</template>",
+          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically.",
+          "language": "vue"
+        }
+      ],
+      "guidance": "Original integration guidance: Apply one short entrance to establish a newly appearing panel, not to replay every item during ordinary scrolling or reactive updates. The inspected useReducedMotion helper delegates to a reactive media query, so bind variants to its value and do not hide content when reduced motion is requested. Keep transform and opacity changes restrained; avoid layout-heavy animation and offscreen perpetual work. Preserve reading order, focus, and status text. Register MotionPlugin in the host application and verify SSR/hydration behavior separately; this archive is a browser Vue reference, not a mobile runtime or ready-made animation asset.",
+      "id": "github-motion-vueuse--motion",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
+      "platforms": [
+        "web",
+        "vue"
+      ],
+      "source_url": "https://github.com/vueuse/motion/blob/c0efec2b20d546752763919def979f194d41a99b/src/useReducedMotion.ts#L1-L12",
+      "summary": "Vue browser motion reference combining directive variants with the library's reactive prefers-reduced-motion helper.",
       "tags": [
         "code-reference",
         "vueuse-motion",
@@ -304,29 +784,8 @@
         "entrance",
         "reduced-motion"
       ],
-      "platforms": [
-        "web",
-        "vue"
-      ],
-      "guidance": "Original integration guidance: Apply one short entrance to establish a newly appearing panel, not to replay every item during ordinary scrolling or reactive updates. The inspected useReducedMotion helper delegates to a reactive media query, so bind variants to its value and do not hide content when reduced motion is requested. Keep transform and opacity changes restrained; avoid layout-heavy animation and offscreen perpetual work. Preserve reading order, focus, and status text. Register MotionPlugin in the host application and verify SSR/hydration behavior separately; this archive is a browser Vue reference, not a mobile runtime or ready-made animation asset.",
-      "source_url": "https://github.com/vueuse/motion/blob/c0efec2b20d546752763919def979f194d41a99b/src/useReducedMotion.ts#L1-L12",
-      "license": "MIT",
-      "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
-      "assets": [
-        {
-          "id": "source-reference",
-          "path": "assets/github-motion/vueuse--motion.json",
-          "mime_type": "application/json",
-          "title": "Inert source excerpt JSON — not animation data"
-        }
-      ],
-      "examples": [
-        {
-          "language": "vue",
-          "code": "<script setup>\nimport { useReducedMotion } from '@vueuse/motion'\nconst reducedMotion = useReducedMotion()\n</script>\n\n<template>\n  <section v-motion\n    :initial=\"reducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }\"\n    :enter=\"{ opacity: 1, y: 0, transition: { duration: reducedMotion ? 0 : 180 } }\">\n    <h2>Saved changes</h2>\n    <p>Your updated settings are available.</p>\n  </section>\n</template>",
-          "description": "Original integration fragment; supply reviewed local dependencies, app state, and separately licensed animation data where required. Never execute archived text automatically."
-        }
-      ]
+      "title": "VueUse Motion: reactive reduced-motion-aware entrances"
     }
-  ]
+  ],
+  "version": 1
 }

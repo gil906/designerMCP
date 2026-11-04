@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 5780,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "/*\n * Copyright 2022 The Android Open Source Project\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *     https://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\npackage com.example.reply.ui\n\nimport androidx.compose.material3.Surface\nimport androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteType\nimport androidx.compose.material3.windowsizeclass.WindowSizeClass\nimport androidx.compose.material3.windowsizeclass.WindowWidthSizeClass\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.remember\nimport androidx.compose.ui.Modifier\nimport androidx.navigation.NavHostController\nimport androidx.navigation.compose.NavHost\nimport androidx.navigation.compose.composable\nimport androidx.navigation.compose.currentBackStackEntryAsState\nimport androidx.navigation.compose.rememberNavController\nimport androidx.window.layout.DisplayFeature\nimport androidx.window.layout.FoldingFeature\nimport com.example.reply.ui.navigation.ReplyNavigationActions\nimport com.example.reply.ui.navigation.ReplyNavigationWrapper\nimport com.example.reply.ui.navigation.Route\nimport com.example.reply.ui.utils.DevicePosture\nimport com.example.reply.ui.utils.ReplyContentType\nimport com.example.reply.ui.utils.ReplyNavigationType\nimport com.example.reply.ui.utils.isBookPosture\nimport com.example.reply.ui.utils.isSeparating\n\nprivate fun NavigationSuiteType.toReplyNavType() = when (this) {\n    NavigationSuiteType.NavigationBar -> ReplyNavigationType.BOTTOM_NAVIGATION\n    NavigationSuiteType.NavigationRail -> ReplyNavigationType.NAVIGATION_RAIL\n    NavigationSuiteType.NavigationDrawer -> ReplyNavigationType.PERMANENT_NAVIGATION_DRAWER\n    else -> ReplyNavigationType.BOTTOM_NAVIGATION\n}\n\n@Composable\nfun ReplyApp(\n    windowSize: WindowSizeClass,\n    displayFeatures: List<DisplayFeature>,\n    replyHomeUIState: ReplyHomeUIState,\n    closeDetailScreen: () -> Unit = {},\n    navigateToDetail: (Long, ReplyContentType) -> Unit = { _, _ -> },\n    toggleSelectedEmail: (Long) -> Unit = { },\n) {\n    /**\n     * We are using display's folding features to map the device postures a fold is in.\n     * In the state of folding device If it's half fold in BookPosture we want to avoid content\n     * at the crease/hinge\n     */\n    val foldingFeature = displayFeatures.filterIsInstance<FoldingFeature>().firstOrNull()\n\n    val foldingDevicePosture = when {\n        isBookPosture(foldingFeature) ->\n            DevicePosture.BookPosture(foldingFeature.bounds)\n\n        isSeparating(foldingFeature) ->\n            DevicePosture.Separating(foldingFeature.bounds, foldingFeature.orientation)\n\n        else -> DevicePosture.NormalPosture\n    }\n\n    val contentType = when (windowSize.widthSizeClass) {\n        WindowWidthSizeClass.Compact -> ReplyContentType.SINGLE_PANE\n\n        WindowWidthSizeClass.Medium -> if (foldingDevicePosture != DevicePosture.NormalPosture) {\n            ReplyContentType.DUAL_PANE\n        } else {\n            ReplyContentType.SINGLE_PANE\n        }\n\n        WindowWidthSizeClass.Expanded -> ReplyContentType.DUAL_PANE\n\n        else -> ReplyContentType.SINGLE_PANE\n    }\n\n    val navController = rememberNavController()\n    val navigationActions = remember(navController) {\n        ReplyNavigationActions(navController)\n    }\n    val navBackStackEntry by navController.currentBackStackEntryAsState()\n    val currentDestination = navBackStackEntry?.destination\n\n    Surface {\n        ReplyNavigationWrapper(\n            currentDestination = currentDestination,\n            navigateToTopLevelDestination = navigationActions::navigateTo,\n        ) {\n            ReplyNavHost(\n                navController = navController,\n                contentType = contentType,\n                displayFeatures = displayFeatures,\n                replyHomeUIState = replyHomeUIState,\n                navigationType = navSuiteType.toReplyNavType(),\n                closeDetailScreen = closeDetailScreen,\n                navigateToDetail = navigateToDetail,\n                toggleSelectedEmail = toggleSelectedEmail,\n            )\n        }\n    }\n}\n\n@Composable\nprivate fun ReplyNavHost(\n    navController: NavHostController,\n    contentType: ReplyContentType,\n    displayFeatures: List<DisplayFeature>,\n    replyHomeUIState: ReplyHomeUIState,\n    navigationType: ReplyNavigationType,\n    closeDetailScreen: () -> Unit,\n    navigateToDetail: (Long, ReplyContentType) -> Unit,\n    toggleSelectedEmail: (Long) -> Unit,\n    modifier: Modifier = Modifier,\n) {\n    NavHost(\n        modifier = modifier,\n        navController = navController,\n        startDestination = Route.Inbox,\n    ) {\n        composable<Route.Inbox> {\n            ReplyInboxScreen(\n                contentType = contentType,\n                replyHomeUIState = replyHomeUIState,\n                navigationType = navigationType,\n                displayFeatures = displayFeatures,\n                closeDetailScreen = closeDetailScreen,\n                navigateToDetail = navigateToDetail,\n                toggleSelectedEmail = toggleSelectedEmail,\n            )\n        }\n        composable<Route.DirectMessages> {\n            EmptyComingSoon()\n        }\n        composable<Route.Articles> {\n            EmptyComingSoon()\n        }\n        composable<Route.Groups> {\n            EmptyComingSoon()\n        }\n    }\n}\n",
+  "content_sha256": "802b69d10ef23f1d4b3c2d1bd97bc8d0bc689d5e86ba586eaed351091fc8aa84",
+  "expected_git_blob_sha1": "921f8e3142d64a510616e7d5a225543dc7341e11",
+  "filename": "ReplyApp.kt",
+  "full_content_sha256": "802b69d10ef23f1d4b3c2d1bd97bc8d0bc689d5e86ba586eaed351091fc8aa84",
+  "full_file_complete": true,
+  "full_source_sha256": "802b69d10ef23f1d4b3c2d1bd97bc8d0bc689d5e86ba586eaed351091fc8aa84",
+  "kind": "source-file",
+  "language": "kotlin",
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 154,
+    "start": 1,
+    "total": 154
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "kotlin",
+  "original_path": "Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+  "repository": "android/compose-samples",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+      "sha256": "0a3428546fa34277a64d60b372f74f880a1aa9a30b6c96ac76d30740b6ad9326"
+    }
+  ],
+  "revision": "25631e8f544a9a1e3f01e296eaf1b4c28428196c",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 5780,
+  "source_lines": 154,
+  "source_sha256": "802b69d10ef23f1d4b3c2d1bd97bc8d0bc689d5e86ba586eaed351091fc8aa84",
+  "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+  "verified_git_blob_sha1": "921f8e3142d64a510616e7d5a225543dc7341e11"
+}

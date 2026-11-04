@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/shadcn-animated-icons.astro",
+  "filename": "shadcn-animated-icons.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-511",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/shadcn-animated-icons.astro",
+    "title": "website/src/pages/shadcn-animated-icons.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "facf478907f77212f81353a57fa857f377901bc9a148328412baa2bd9f96b5f7",
+  "text": "---\nimport { EN } from '../i18n';\nimport ShadcnIconsPage from '../views/ShadcnIconsPage.astro';\n---\n\n<ShadcnIconsPage locale={EN} />\n",
+  "version": 1
+}

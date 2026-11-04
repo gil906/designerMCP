@@ -1,0 +1,92 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source",
+      "format": "json",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "11f6bd335f56b3e94f9eead249955b198f55f50483f5f955285a1c3f7c61591f",
+      "source_url": "https://github.com/adobe/react-spectrum/tree/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "6efd2c5280093a8f9cd7a6e717a11590ed2a50c280dc120da3832b19134c7548",
+      "source_url": "original://designerMCP/offline/github-web-react-spectrum"
+    },
+    {
+      "asset_id": "offline-document-github-web-react-spectrum-readme-md",
+      "format": "plaintext",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "fe6dde866674e1d417d730ec3daa34f073a5cc06646832a632b9cbf3849a09e4",
+      "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/README.md"
+    },
+    {
+      "asset_id": "offline-document-github-web-react-spectrum-packages-react-spectrum-dialog-readme-md",
+      "format": "plaintext",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "5fda472b174d0e7baa6d8bd178c70a3e7e3644147ffa75ae53d98898ca060fd4",
+      "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/@react-spectrum/dialog/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-web-react-spectrum-packages-react-aria-src-dialog-usedialog-ts",
+      "format": "typescript",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "8a5f477818b7c23330d1fb00d67ba6bfe8ea6df9f6cbbf09ffb0aba9f2857400",
+      "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "26c0253fbc4abd1d4c009d5a829bee38c14ceb7aecf6288113b80b92ec4e6bee",
+      "source_url": "original://designerMCP/offline/github-web-react-spectrum"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "packages/@react-spectrum/dialog/README.md: no prior expected Git-blob SHA1; prior full-source SHA256 verified.",
+    "packages/react-aria/src/dialog/useDialog.ts: no prior expected Git-blob SHA1; prior full-source SHA256 verified."
+  ],
+  "reference_id": "github-web-react-spectrum",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

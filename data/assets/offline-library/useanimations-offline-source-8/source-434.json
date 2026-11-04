@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/tr/index.ts",
+  "filename": "index.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-434",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/tr/index.ts",
+    "title": "website/src/i18n/messages/tr/index.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "c8f391d03dc70c03ed583278296f20c3e620f13ead3dc3ff76c667319de811f6",
+  "text": "// Turkish.\nimport type { Messages } from '../en';\nimport { common } from './common';\nimport { docs } from './docs';\nimport { home } from './home';\nimport { hubs } from './hubs';\nimport { islands } from './islands';\nimport { licence } from './licence';\nimport { pages } from './pages';\nimport { taxonomy } from './taxonomy';\n\nexport const messages: Messages = { common, taxonomy, hubs, home, docs, licence, pages, islands };\n",
+  "version": 1
+}

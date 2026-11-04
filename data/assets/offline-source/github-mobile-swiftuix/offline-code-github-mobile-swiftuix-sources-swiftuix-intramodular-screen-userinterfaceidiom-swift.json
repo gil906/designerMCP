@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 2271,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "//\n// Copyright (c) Vatsal Manot\n//\n\nimport Swift\nimport SwiftUI\n\n@_documentation(visibility: internal)\npublic enum UserInterfaceIdiom: Hashable {\n    case carPlay\n    case mac\n    case phone\n    case pad\n    case vision\n    case tv\n    case watch\n    \n    case unspecified\n    \n    public static var current: UserInterfaceIdiom {\n        #if targetEnvironment(macCatalyst)\n        return .mac\n        #elseif os(iOS) || os(tvOS) || os(visionOS)\n        switch UIDevice.current.userInterfaceIdiom {\n            case .carPlay:\n                return .carPlay\n            case .phone:\n                return .phone\n            case .pad:\n                return .pad\n            #if swift(>=5.9)\n            case .vision:\n                return .vision\n            #endif\n            case .tv:\n                return .tv\n            case .mac:\n                return .mac\n            case .unspecified:\n                return .unspecified\n                \n            @unknown default:\n                return .unspecified\n        }\n        #elseif os(macOS)\n        return .mac\n        #elseif os(watchOS)\n        return .watch\n        #endif\n    }\n    \n    public var _isMacCatalyst: Bool {\n        #if targetEnvironment(macCatalyst)\n        return true\n        #else\n        return false\n        #endif\n    }\n}\n\n// MARK: - API\n\nextension View {\n    /// Hides this view on the given user interface idiom.\n    public func hidden(on idiom: UserInterfaceIdiom) -> some View {\n        withEnvironmentValue(\\.userInterfaceIdiom) { userInterfaceIdiom in\n            hidden(idiom == userInterfaceIdiom)\n        }\n    }\n\n    /// Remove this view on the given user interface idiom.\n    public func remove(on idiom: UserInterfaceIdiom) -> some View {\n        withEnvironmentValue(\\.userInterfaceIdiom) { userInterfaceIdiom in\n            if idiom != userInterfaceIdiom {\n                self\n            } else {\n                EmptyView()\n            }\n        }\n    }\n}\n\n// MARK: - Auxiliary\n\nextension EnvironmentValues {\n    public var userInterfaceIdiom: UserInterfaceIdiom {\n        get {\n            self[DefaultEnvironmentKey<UserInterfaceIdiom>.self] ?? .current\n        } set {\n            self[DefaultEnvironmentKey<UserInterfaceIdiom>.self] = newValue\n        }\n    }\n}\n",
+  "content_sha256": "7a7480b1afd21cfed63fa897a021102d477fa44da2b870cbc8049cf8f44e00e2",
+  "expected_git_blob_sha1": "9dd9689a5805572f69a389a6c2df044cdf114f27",
+  "filename": "UserInterfaceIdiom.swift",
+  "full_content_sha256": "7a7480b1afd21cfed63fa897a021102d477fa44da2b870cbc8049cf8f44e00e2",
+  "full_file_complete": true,
+  "full_source_sha256": "7a7480b1afd21cfed63fa897a021102d477fa44da2b870cbc8049cf8f44e00e2",
+  "kind": "source-file",
+  "language": "swift",
+  "license": "MIT",
+  "license_path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 93,
+    "start": 1,
+    "total": 93
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "swift",
+  "original_path": "Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift",
+  "repository": "SwiftUIX/SwiftUIX",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+      "sha256": "47a5444bc943a3d73f2d3ec637818ac486f599607a56b89efa98ad504f5c74c4"
+    }
+  ],
+  "revision": "3a99044b7045fb5907a7df18c7fe323e5656c6ab",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 2271,
+  "source_lines": 93,
+  "source_sha256": "7a7480b1afd21cfed63fa897a021102d477fa44da2b870cbc8049cf8f44e00e2",
+  "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift",
+  "verified_git_blob_sha1": "9dd9689a5805572f69a389a6c2df044cdf114f27"
+}

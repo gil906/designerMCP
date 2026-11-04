@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "body { font:1rem/1.6 system-ui,sans-serif; color:var(--text); }\nh1 { font-size:clamp(2rem,1.2rem + 4vw,4.5rem); line-height:1.1; letter-spacing:-.025em; }\nh2 { font-size:clamp(1.5rem,1rem + 2vw,2.5rem); line-height:1.2; }\np { max-width:65ch; }",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

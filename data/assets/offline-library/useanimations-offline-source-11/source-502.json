@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/licencing-and-terms.md.ts",
+  "filename": "licencing-and-terms.md.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-502",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/licencing-and-terms.md.ts",
+    "title": "website/src/pages/licencing-and-terms.md.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "5aa4f66ae0ae5121f7d2704ed8382c99ef60a6a028077057039cbb0fc12c8c08",
+  "text": "import { readFileSync } from 'node:fs';\nimport { join } from 'node:path';\nimport { SITE } from '../lib/icons';\nimport { text } from '../lib/http';\n\nconst license = readFileSync(join(import.meta.env.REPO_DIR, 'LICENSE'), 'utf8').trim();\n\nexport const GET = () =>\n  text(\n    `# Licencing & Terms: free to use, MIT licensed\n\nThe useAnimations icons and the \\`react-useanimations\\` package are released under the [MIT license](https://opensource.org/license/mit/).\n\n## What you can do\n\n- **Use** the icons in personal and commercial websites, apps and products.\n- **Modify** them: change colors, sizes, timing or the motion itself.\n- **Redistribute** them, including inside icon packs, templates, themes, UI kits and component registries.\n\n## Attribution\n\nNot required, but appreciated. Keep the license notice when you redistribute the files themselves, and if you'd like to credit us:\n\n\\`\\`\\`html\nAnimated icons by <a href=\"https://useanimations.com\">useAnimations</a>\n\\`\\`\\`\n\n## No warranty\n\nThe icons and the code are provided as-is, without warranty of any kind.\n\n## License text\n\n\\`\\`\\`\n${license}\n\\`\\`\\`\n\nHTML version: ${SITE}/licencing-and-terms\n`,\n    'text/markdown'\n  );\n",
+  "version": 1
+}

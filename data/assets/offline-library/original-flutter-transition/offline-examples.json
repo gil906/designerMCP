@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "final reduce = MediaQuery.of(context).disableAnimations;\nAnimatedSwitcher(\n  duration: reduce ? Duration.zero : const Duration(milliseconds: 180),\n  child: Text(statusLabel, key: ValueKey(statusLabel)),\n);",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "dart"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/cs/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-340",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/cs/common.ts",
+    "title": "website/src/i18n/messages/cs/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "414508c6a7af1b5a7904932f23a56dd9694b710cdcc50e6ab69d1b1b58013fc3",
+  "text": "import type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: 'Přejít na obsah',\n  ogImageAlt: 'useAnimations: animované ikony zdarma pro React, shadcn/ui, Lottie a SVG',\n  homeLabel: 'useAnimations – úvodní stránka',\n  mainNav: 'Hlavní navigace',\n  browseIcons: 'Procházet ikony',\n  nav: {\n    icons: 'Ikony',\n    categories: 'Kategorie',\n    documentation: 'Dokumentace',\n    shadcn: 'shadcn',\n    lottie: 'Lottie ikony',\n    license: 'Licence',\n  },\n  footer: {\n    tagline:\n      'Animované ikony zdarma s vestavěnými interakcemi. Pod licencí MIT, vytvořené pro React.',\n    product: 'Produkt',\n    developers: 'Pro vývojáře',\n    follow: 'Sledujte nás',\n    languages: 'Jazyky',\n    allIcons: 'Všechny ikony',\n    categories: 'Kategorie',\n    interactions: 'Interakce',\n    lottieIcons: 'Lottie ikony',\n    shadcnIcons: 'Ikony pro shadcn/ui',\n    documentation: 'Dokumentace',\n    licencing: 'Licence a podmínky',\n    shadcnRegistry: 'Registr shadcn',\n    mitLicense: 'Licence MIT',\n    builtWith: 'Web postavený na Astru',\n  },\n  breadcrumb: 'Drobečková navigace',\n  crumbs: { icons: 'Ikony', categories: 'Kategorie', interactions: 'Interakce' },\n  faq: 'Časté dotazy',\n  copy: 'Kopírovat',\n  copied: 'Zkopírováno',\n  pressCtrlC: 'Stiskněte Ctrl+C',\n  languageBanner: {\n    text: 'Tato stránka je dostupná i v češtině.',\n    action: 'Přepnout do češtiny',\n    dismiss: 'Zavřít',\n  },\n};\n",
+  "version": 1
+}

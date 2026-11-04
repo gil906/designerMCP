@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/es/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-367",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/es/common.ts",
+    "title": "website/src/i18n/messages/es/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "aa407a9bf617f94f975c29964a26a6ef017b4d2e2a6d33518e8130ee7eb9b4ee",
+  "text": "// Texto común a todas las páginas: layout, cabecera, pie, migas de pan, FAQ y botones de copiar.\nimport type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: 'Saltar al contenido',\n  ogImageAlt: 'useAnimations: iconos animados gratis para React, shadcn/ui, Lottie y SVG',\n  homeLabel: 'Inicio de useAnimations',\n  mainNav: 'Principal',\n  browseIcons: 'Explorar iconos',\n  nav: {\n    icons: 'Iconos',\n    categories: 'Categorías',\n    documentation: 'Documentación',\n    shadcn: 'shadcn',\n    lottie: 'Iconos Lottie',\n    license: 'Licencia',\n  },\n  footer: {\n    tagline:\n      'Iconos animados gratis con interacciones integradas. Con licencia MIT, hechos para React.',\n    product: 'Producto',\n    developers: 'Desarrolladores',\n    follow: 'Síguenos',\n    languages: 'Idiomas',\n    allIcons: 'Todos los iconos',\n    categories: 'Categorías',\n    interactions: 'Interacciones',\n    lottieIcons: 'Iconos Lottie',\n    shadcnIcons: 'Iconos para shadcn/ui',\n    documentation: 'Documentación',\n    licencing: 'Licencia y condiciones',\n    shadcnRegistry: 'Registro de shadcn',\n    mitLicense: 'Licencia MIT',\n    builtWith: 'Sitio creado con Astro',\n  },\n  breadcrumb: 'Ruta de navegación',\n  crumbs: { icons: 'Iconos', categories: 'Categorías', interactions: 'Interacciones' },\n  faq: 'Preguntas frecuentes',\n  copy: 'Copiar',\n  copied: 'Copiado',\n  pressCtrlC: 'Pulsa Ctrl+C',\n  languageBanner: {\n    text: 'Esta página también está disponible en español.',\n    action: 'Ver en español',\n    dismiss: 'Cerrar',\n  },\n};\n",
+  "version": 1
+}

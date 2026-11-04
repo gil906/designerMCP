@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/scripts/hover-icons.ts",
+  "filename": "hover-icons.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-520",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/scripts/hover-icons.ts",
+    "title": "website/src/scripts/hover-icons.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "1ca9b55e79a986b9391164f7e1dea42116f3c02fde25b4564782cee656c78bd6",
+  "text": "// Icon stills (components/IconStill.astro) come alive on the first hover or keyboard focus of\n// their link: the icon's Lottie JSON loads then, so a page of stills costs nothing until used.\nimport { createElement } from 'react';\nimport { createRoot } from 'react-dom/client';\nimport type { Interaction } from 'react-useanimations';\nimport HoverIcon from '../components/HoverIcon';\nimport { loadIconData } from '../lib/icon-data';\n\nconst reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');\n\nconst wake = (trigger: HTMLElement) => {\n  // Hover animations don't play with reduced motion, so the stills stay.\n  if (reducedMotion.matches) return;\n  // Icons whose first frame is empty keep their still: at rest they would show nothing.\n  const stills = trigger.querySelectorAll<HTMLElement>(\n    '[data-hover-icon]:not([data-live], [data-blank-start])'\n  );\n  for (const still of stills) {\n    still.dataset.live = '';\n    void loadIconData(still.dataset.hoverIcon!).then((animationData) => {\n      const interaction = still.dataset.interaction as Interaction;\n      createRoot(still).render(createElement(HoverIcon, { animationData, interaction, trigger }));\n    });\n  }\n};\n\ndocument.addEventListener('pointerover', (event) => {\n  const trigger = (event.target as Element).closest<HTMLElement>('a');\n  if (trigger && event.pointerType === 'mouse') wake(trigger);\n});\ndocument.addEventListener('focusin', (event) => {\n  const trigger = (event.target as Element).closest<HTMLElement>('a');\n  if (trigger?.matches(':focus-visible')) wake(trigger);\n});\n",
+  "version": 1
+}

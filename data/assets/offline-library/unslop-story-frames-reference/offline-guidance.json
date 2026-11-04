@@ -1,0 +1,6 @@
+{
+  "kind": "offline-guidance",
+  "purpose": "Original adaptation guide; no upstream implementation or runnable example is claimed.",
+  "text": "Adapted from upstream references/refs.md, CC-BY-4.0: the contact sheet shows eight frames from a roughly ten-second dashboard story. Elements morph in place in a wave, red redlines become white when corrected, copy rolls letter by letter, and the story is cropped close to sidebar and first cards. This communicates a redesign process; it is not a recommendation to animate every production screen that way. No upstream story/snapshot script was executed and no video was generated. For normal project work, a factual written before/after audit remains sufficient.\n\nSafe retrieval: request story-frames-preview (800x400, 24278 bytes). story-frames-original is the unchanged 2400x1200 WebP contact sheet, 187334 bytes. Its encoded output exceeds the 64KiB response budget, so keep it for offline archival use and request the preview through MCP. The preview may make small text less legible; the complete source descriptions and story section remain available as passive JSON references.",
+  "version": 1
+}

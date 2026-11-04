@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/id/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-390",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/id/islands.ts",
+    "title": "website/src/i18n/messages/id/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "e0552862678a009d2134187a580b1c844b681a35f2dfc0fa42dea4dfa060e51b",
+  "text": "import type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Loop',\n      'click-toggle': 'Klik',\n      'click-replay': 'Klik',\n      hover: 'Hover',\n      'hover-loop': 'Hover',\n      'hover-replay': 'Hover',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Berputar dengan sendirinya',\n      'click-toggle': 'Klik untuk beralih',\n      'click-replay': 'Klik untuk memutar ulang',\n      hover: 'Hover untuk memutar, keluar untuk membalik',\n      'hover-loop': 'Hover untuk memutar berulang',\n      'hover-replay': 'Hover untuk memutar',\n    },\n    preview: 'Pratinjau {title}',\n    colors: 'Warna pratinjau',\n    color: 'Warna {color}',\n    textColor: 'Warna teks',\n    interaction: 'Interaksi',\n    duration: 'Durasi',\n    seconds: '{seconds} dtk',\n    import: 'Import',\n    close: 'Tutup',\n    code: 'Kode',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'File' },\n    copy: 'Salin',\n    download: 'Unduh',\n    iconPage: 'Halaman ikon',\n  },\n  interactionDemo: {\n    click: 'Klik kartunya',\n    loop: 'Berputar dengan sendirinya',\n    hover: 'Arahkan kursor ke kartu',\n  },\n  mobileMenu: {\n    menu: 'Menu',\n    nav: 'Utama',\n  },\n  search: {\n    clear: 'Hapus pencarian',\n  },\n  themeToggle: {\n    toLight: 'Beralih ke tema terang',\n    toDark: 'Beralih ke tema gelap',\n  },\n};\n",
+  "version": 1
+}

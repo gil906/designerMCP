@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<section id=\"errors\" tabindex=\"-1\" aria-labelledby=\"error-title\">\n<h2 id=\"error-title\">Check one field</h2><ul><li><a href=\"#email\">Enter an email address including @</a></li></ul></section>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

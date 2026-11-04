@@ -1,0 +1,80 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source",
+      "format": "json",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/carbon/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "0efe67f66cbab662404a83ea59fdac3da75edbec8cc7ce74a2e322c4d222905d",
+      "source_url": "https://github.com/carbon-design-system/carbon/tree/2efc91b00c814e390bfa431f0f5555f3028e7100"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "a113043d726c339a845bf4218d5e7491c1afe389a285bd54e8f1e2da84777260",
+      "source_url": "original://designerMCP/offline/github-web-carbon"
+    },
+    {
+      "asset_id": "offline-document-github-web-carbon-readme-md",
+      "format": "plaintext",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/carbon/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "cd8ffeb2792335e2b9dd4459d6f5cae8f811ec981a8698f6921834027993dc2c",
+      "source_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/README.md"
+    },
+    {
+      "asset_id": "offline-document-github-web-carbon-packages-react-src-components-accordion-accordion-mdx",
+      "format": "plaintext",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/carbon/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "0b12820404dda1f09f477de991858e0d34cb1062c9b7c93ef2325b036a39e9fa",
+      "source_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/packages/react/src/components/Accordion/Accordion.mdx"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "8de3642fd0dc0eef118baa6e066627252864b01abe7de199109a330840e91cb0",
+      "source_url": "original://designerMCP/offline/github-web-carbon"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "packages/react/src/components/Accordion/Accordion.mdx: no prior expected Git-blob SHA1; prior full-source SHA256 verified."
+  ],
+  "reference_id": "github-web-carbon",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

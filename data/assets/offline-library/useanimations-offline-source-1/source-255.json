@@ -1,0 +1,18 @@
+{
+  "archive_path": "archives/offline-tooling/useanimations/source/scripts/release.ts",
+  "complete": false,
+  "content_omitted": true,
+  "filename": "release.ts",
+  "format": "typescript",
+  "kind": "offline-excluded-source",
+  "original_asset": {
+    "id": "source-255",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/scripts/release.ts",
+    "title": "scripts/release.ts"
+  },
+  "purpose": "Original tooling is not returned or executed. This is an omission index, not source implementation.",
+  "sha256": "e11f0ff0a82e6c111768737a3948ae007bc19f524b88b2cfa5d0dab409d74893",
+  "static_risk": "process-execution",
+  "version": 1
+}

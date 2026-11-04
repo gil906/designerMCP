@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/astro.config.ts",
+  "filename": "astro.config.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-278",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/astro.config.ts",
+    "title": "website/astro.config.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "d1893719b734390e95b61c1a42411ed570402f3377ca986fe54a9b44e396ac5e",
+  "text": "import { satteri } from '@astrojs/markdown-satteri';\nimport react from '@astrojs/react';\nimport tailwindcss from '@tailwindcss/vite';\nimport { defineConfig } from 'astro/config';\nimport { fileURLToPath } from 'node:url';\n\nconst allowedHosts = process.env.ASTRO_ALLOWED_HOSTS?.split(',').filter(Boolean) ?? [];\n\nexport default defineConfig({\n  // The site's own URL: canonical links, sitemap and the file URLs in icons.json and the registry.\n  site: process.env.SITE_URL ?? 'https://useanimations.com',\n  output: 'static',\n  // A separate output folder, e.g. for builds running side by side: ASTRO_OUT_DIR=/tmp/dist-a\n  ...(process.env.ASTRO_OUT_DIR ? { outDir: process.env.ASTRO_OUT_DIR } : {}),\n  // Pages are written as documentation.html, so hosts serve /documentation without a trailing slash,\n  // matching the canonical URLs and the previous site.\n  trailingSlash: 'never',\n  build: { format: 'file' },\n  integrations: [react()],\n  markdown: {\n    // `## Überschrift {#english-id}`: translated documentation keeps the English heading ids.\n    processor: satteri({ features: { headingAttributes: true } }),\n    // The same themes as lib/highlight.ts.\n    shikiConfig: {\n      themes: { light: 'github-light-high-contrast', dark: 'github-dark-dimmed' },\n      defaultColor: false,\n    },\n  },\n  vite: {\n    // @tailwindcss/vite brings its own copy of Vite's types.\n    plugins: [tailwindcss() as never],\n    // Extra hostnames for the dev and preview servers, e.g. a private network name:\n    // ASTRO_ALLOWED_HOSTS=my-machine.example npm run dev -w website\n    server: { allowedHosts },\n    preview: { allowedHosts },\n    // The repository the site is built from: the icon set in icons/ and the package version.\n    define: {\n      'import.meta.env.REPO_DIR': JSON.stringify(fileURLToPath(new URL('../', import.meta.url))),\n    },\n    resolve: {\n      // The site uses the library from this repository, as apps use the npm package.\n      alias: { 'react-useanimations': fileURLToPath(new URL('../src/index.tsx', import.meta.url)) },\n    },\n  },\n});\n",
+  "version": 1
+}

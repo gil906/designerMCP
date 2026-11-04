@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/src/interactions.ts",
+  "filename": "interactions.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-258",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/src/interactions.ts",
+    "title": "src/interactions.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "73557d962af286d1b31a0de0a76db64adbf2b21409ebe9a9d7e304eebae4c9de",
+  "text": "import type { Player } from './player';\nimport type { Interaction } from './types';\n\nexport const isHover = (interaction: Interaction): boolean =>\n  interaction === 'hover' || interaction === 'hover-loop' || interaction === 'hover-replay';\n\nexport const toggle = (animation: Player, toEnd: boolean, reducedMotion: boolean): void => {\n  if (reducedMotion) {\n    animation.goToAndStop(toEnd ? animation.totalFrames - 1 : 0);\n    return;\n  }\n  animation.setDirection(toEnd ? 1 : -1);\n  animation.play();\n};\n\nexport const replay = (animation: Player): void => {\n  animation.setDirection(1);\n  animation.playSegments([0, animation.totalFrames]);\n};\n\nexport const hoverStart = (animation: Player, interaction: Interaction): void => {\n  if (interaction === 'hover-replay') {\n    // Let a running replay finish instead of restarting it on every re-enter.\n    if (animation.isPaused) replay(animation);\n    return;\n  }\n  animation.setDirection(1);\n  animation.play();\n};\n\n// Returns whether a `hover-loop` animation should stop once its current cycle completes.\nexport const hoverEnd = (animation: Player, interaction: Interaction): boolean => {\n  if (interaction === 'hover') {\n    animation.setDirection(-1);\n    animation.play();\n  } else if (interaction === 'hover-loop') {\n    if (!animation.isPaused) return true;\n    animation.goToAndStop(0);\n  }\n  return false;\n};\n",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/lib/markdown.ts",
+  "filename": "markdown.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-465",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/lib/markdown.ts",
+    "title": "website/src/lib/markdown.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "3acc37c05a09b8eed2fb81b7e4fc84253a853fa258b31e13dfaa9f3b429e974b",
+  "text": "import { readFileSync } from 'node:fs';\nimport { join } from 'node:path';\nimport type { MarkdownHeading } from 'astro';\nimport { type Locale, localize } from '../i18n';\nimport { SITE } from './icons';\nimport { withSite } from './site';\n\n/** The documentation as Markdown, without the HTML anchors that keep old links working. */\nexport const documentationMarkdown = () =>\n  withSite(\n    readFileSync(join(import.meta.env.REPO_DIR, 'website/src/content/documentation.md'), 'utf8')\n      .replace(/^(<div id=\"[^\"]+\"><\\/div>)+\\n\\n/gm, '')\n      .replace(/^# Documentation/, '# useAnimations documentation'),\n    SITE\n  );\n\ntype MarkdownModule = {\n  compiledContent: () => Promise<string>;\n  getHeadings: () => MarkdownHeading[];\n};\n\nconst DOCUMENTATION = import.meta.glob<MarkdownModule>('../content/documentation*.md', {\n  eager: true,\n});\n\n/**\n * The documentation body in a language: content/documentation.<code>.md, or the English one until\n * that translation exists. Translated headings keep their English ids with `## Heading {#english-id}`\n * (headingAttributes in astro.config.ts), so links to /documentation#props work in every language.\n */\nexport const documentationIn = async (l: Locale) => {\n  const file = l.prefix ? `documentation.${l.code}.md` : 'documentation.md';\n  let source = DOCUMENTATION[`../content/${file}`];\n  const fallback = !source;\n  if (!source) {\n    console.warn(\n      `i18n: src/content/${file} is missing; /${l.code}/documentation shows the English body.`\n    );\n    source = DOCUMENTATION['../content/documentation.md'];\n  }\n  // The file and registry URLs point at this site (SITE_URL).\n  const html = withSite(await source.compiledContent(), SITE);\n  return {\n    file: `website/src/content/${fallback ? 'documentation.md' : file}`,\n    html: l.prefix ? localizeLinks(html, l) : html,\n    headings: source.getHeadings(),\n    /** The English body stands in for a missing translation. */\n    fallback,\n  };\n};\n\n// Site paths that have a translated version; icon pages, files and anything else stay English.\nconst TRANSLATED_PATH =\n  /^\\/(?:|documentation|licencing-and-terms|icons|lottie-icons|shadcn-animated-icons|(?:categories|interactions)(?:\\/[a-z0-9-]+)?)$/;\n\n/** Points the links of a translated body at the pages in its language: /categories -> /de/categories. */\nexport const localizeLinks = (html: string, l: Locale) =>\n  html.replace(/href=\"(\\/[^\"#?]*)([^\"]*)\"/g, (link, path: string, rest: string) =>\n    TRANSLATED_PATH.test(path) ? `href=\"${localize(path + rest, l)}\"` : link\n  );\n",
+  "version": 1
+}

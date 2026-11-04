@@ -1,0 +1,60 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 8436,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": false,
+  "completeness_scope": "full adapted module except explicit modifications",
+  "content": "// Copyright 2021 The Flutter team. All rights reserved.\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\nimport 'package:flutter/material.dart';\n\nimport 'buttons.dart';\nimport 'color_palettes_screen.dart';\nimport 'component_screen.dart';\nimport 'constants.dart';\nimport 'elevation_screen.dart';\nimport 'expanded_trailing_actions.dart';\nimport 'navigation_transition.dart';\nimport 'one_two_transition.dart';\nimport 'typography_screen.dart';\n\nclass Home extends StatefulWidget {\n  const Home({\n    super.key,\n    required this.useLightMode,\n    required this.useMaterial3,\n    required this.colorSelected,\n    required this.handleBrightnessChange,\n    required this.handleMaterialVersionChange,\n    required this.handleColorSelect,\n    required this.handleImageSelect,\n    required this.colorSelectionMethod,\n    required this.imageSelected,\n  });\n\n  final bool useLightMode;\n  final bool useMaterial3;\n  final ColorSeed colorSelected;\n  final ColorImageProvider imageSelected;\n  final ColorSelectionMethod colorSelectionMethod;\n\n  final ValueChanged<bool> handleBrightnessChange;\n  final VoidCallback handleMaterialVersionChange;\n  final ValueChanged<int> handleColorSelect;\n  final ValueChanged<int> handleImageSelect;\n\n  @override\n  State<Home> createState() => _HomeState();\n}\n\nclass _HomeState extends State<Home> with SingleTickerProviderStateMixin {\n  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();\n  late final AnimationController controller;\n  late final CurvedAnimation railAnimation;\n  bool controllerInitialized = false;\n  bool showMediumSizeLayout = false;\n  bool showLargeSizeLayout = false;\n\n  int screenIndex = ScreenSelected.component.value;\n\n  @override\n  initState() {\n    super.initState();\n    controller = AnimationController(\n      duration: Duration(milliseconds: transitionLength.toInt() * 2),\n      value: 0,\n      vsync: this,\n    );\n    railAnimation = CurvedAnimation(\n      parent: controller,\n      curve: const Interval(0.5, 1.0),\n    );\n  }\n\n  @override\n  void dispose() {\n    controller.dispose();\n    super.dispose();\n  }\n\n  @override\n  void didChangeDependencies() {\n    super.didChangeDependencies();\n\n    final double width = MediaQuery.of(context).size.width;\n    final AnimationStatus status = controller.status;\n    if (width > mediumWidthBreakpoint) {\n      if (width > largeWidthBreakpoint) {\n        showMediumSizeLayout = false;\n        showLargeSizeLayout = true;\n      } else {\n        showMediumSizeLayout = true;\n        showLargeSizeLayout = false;\n      }\n      if (status != AnimationStatus.forward &&\n          status != AnimationStatus.completed) {\n        controller.forward();\n      }\n    } else {\n      showMediumSizeLayout = false;\n      showLargeSizeLayout = false;\n      if (status != AnimationStatus.reverse &&\n          status != AnimationStatus.dismissed) {\n        controller.reverse();\n      }\n    }\n    if (!controllerInitialized) {\n      controllerInitialized = true;\n      controller.value = width > mediumWidthBreakpoint ? 1 : 0;\n    }\n  }\n\n  void handleScreenChanged(int screenSelected) {\n    setState(() {\n      screenIndex = screenSelected;\n    });\n  }\n\n  Widget createScreenFor(\n    ScreenSelected screenSelected,\n    bool showNavBarExample,\n  ) => switch (screenSelected) {\n    ScreenSelected.component => Expanded(\n      child: OneTwoTransition(\n        animation: railAnimation,\n        one: FirstComponentList(\n          showNavBottomBar: showNavBarExample,\n          scaffoldKey: scaffoldKey,\n          showSecondList: showMediumSizeLayout || showLargeSizeLayout,\n        ),\n        two: SecondComponentList(scaffoldKey: scaffoldKey),\n      ),\n    ),\n    ScreenSelected.color => const ColorPalettesScreen(),\n    ScreenSelected.typography => const TypographyScreen(),\n    ScreenSelected.elevation => const ElevationScreen(),\n  };\n\n  PreferredSizeWidget _createAppBar() {\n    return AppBar(\n      title: widget.useMaterial3\n          ? const Text('Material 3')\n          : const Text('Material 2'),\n      actions: !showMediumSizeLayout && !showLargeSizeLayout\n          ? [\n              BrightnessButton(\n                handleBrightnessChange: widget.handleBrightnessChange,\n              ),\n              Material3Button(\n                handleMaterialVersionChange:\n                    widget.handleMaterialVersionChange,\n              ),\n              ColorSeedButton(\n                handleColorSelect: widget.handleColorSelect,\n                colorSelected: widget.colorSelected,\n                colorSelectionMethod: widget.colorSelectionMethod,\n              ),\n              ColorImageButton(\n                handleImageSelect: widget.handleImageSelect,\n                imageSelected: widget.imageSelected,\n                colorSelectionMethod: widget.colorSelectionMethod,\n              ),\n            ]\n          : [Container()],\n    );\n  }\n\n  Widget _trailingActions() => Column(\n    mainAxisAlignment: MainAxisAlignment.end,\n    children: [\n      Flexible(\n        child: BrightnessButton(\n          handleBrightnessChange: widget.handleBrightnessChange,\n          showTooltipBelow: false,\n        ),\n      ),\n      Flexible(\n        child: Material3Button(\n          handleMaterialVersionChange: widget.handleMaterialVersionChange,\n          showTooltipBelow: false,\n        ),\n      ),\n      Flexible(\n        child: ColorSeedButton(\n          handleColorSelect: widget.handleColorSelect,\n          colorSelected: widget.colorSelected,\n          colorSelectionMethod: widget.colorSelectionMethod,\n        ),\n      ),\n      Flexible(\n        child: ColorImageButton(\n          handleImageSelect: widget.handleImageSelect,\n          imageSelected: widget.imageSelected,\n          colorSelectionMethod: widget.colorSelectionMethod,\n        ),\n      ),\n    ],\n  );\n\n  @override\n  Widget build(BuildContext context) {\n    return AnimatedBuilder(\n      animation: controller,\n      builder: (context, child) {\n        return NavigationTransition(\n          scaffoldKey: scaffoldKey,\n          animationController: controller,\n          railAnimation: railAnimation,\n          appBar: _createAppBar(),\n          body: createScreenFor(\n            ScreenSelected.values[screenIndex],\n            controller.value == 1,\n          ),\n          navigationRail: NavigationRail(\n            extended: showLargeSizeLayout,\n            destinations: _navRailDestinations,\n            selectedIndex: screenIndex,\n            onDestinationSelected: (index) {\n              setState(() {\n                screenIndex = index;\n                handleScreenChanged(screenIndex);\n              });\n            },\n            trailing: Expanded(\n              child: Padding(\n                padding: const EdgeInsets.only(bottom: 20),\n                child: showLargeSizeLayout\n                    ? ExpandedTrailingActions(\n                        useLightMode: widget.useLightMode,\n                        handleBrightnessChange: widget.handleBrightnessChange,\n                        useMaterial3: widget.useMaterial3,\n                        handleMaterialVersionChange:\n                            widget.handleMaterialVersionChange,\n                        handleImageSelect: widget.handleImageSelect,\n                        handleColorSelect: widget.handleColorSelect,\n                        colorSelectionMethod: widget.colorSelectionMethod,\n                        imageSelected: widget.imageSelected,\n                        colorSelected: widget.colorSelected,\n                      )\n                    : _trailingActions(),\n              ),\n            ),\n          ),\n          navigationBar: NavigationBars(\n            onSelectItem: (index) {\n              setState(() {\n                screenIndex = index;\n                handleScreenChanged(screenIndex);\n              });\n            },\n            selectedIndex: screenIndex,\n            isExampleBar: false,\n          ),\n        );\n      },\n    );\n  }\n}\n\nfinal List<NavigationRailDestination> _navRailDestinations = appBarDestinations\n    .map(\n      (destination) => NavigationRailDestination(\n        icon: Tooltip(\n          message: destination.label,\n          child: destination.icon,\n        ),\n        selectedIcon: Tooltip(\n          message: destination.label,\n          child: destination.selectedIcon,\n        ),\n        label: Text(destination.label),\n      ),\n    )\n    .toList(growable: false);\n",
+  "content_sha256": "3045faaf32aeebfdc7858338ed0a89fa5ef80e41fedaa70569948e1217d30d16",
+  "expected_git_blob_sha1": "8b2cadfe3e7b156710e77941b51e1d5423d39061",
+  "filename": "home.dart",
+  "full_content_sha256": "3045faaf32aeebfdc7858338ed0a89fa5ef80e41fedaa70569948e1217d30d16",
+  "full_file_complete": false,
+  "full_source_sha256": "bd77cbe0beacb2a9805e759d02d5a5f35fb48d00c08a1f4f2c3d9268a03e44c2",
+  "kind": "source-file",
+  "language": "dart",
+  "license": "BSD-3-Clause",
+  "license_path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 269,
+    "start": 1,
+    "total": 269
+  },
+  "modifications": [
+    {
+      "count": 4,
+      "operation": "replace four Dart callable declarations with equivalent existing Flutter ValueChanged and VoidCallback type aliases",
+      "reason": "valid Dart callable-type syntax collides with strict language-neutral dynamic-execution detector"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "dart",
+  "original_path": "material_3_demo/lib/src/home.dart",
+  "repository": "flutter/samples",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+      "sha256": "687c3d4c3a553c0fa995e9d3c35b245872fa4a0f5c2bd6494decc2fa410f7ce9"
+    }
+  ],
+  "revision": "21c71902bb2c7da3cce328ba5946cba2f35a660a",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 8467,
+  "source_lines": 269,
+  "source_sha256": "bd77cbe0beacb2a9805e759d02d5a5f35fb48d00c08a1f4f2c3d9268a03e44c2",
+  "source_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/material_3_demo/lib/src/home.dart",
+  "verified_git_blob_sha1": "8b2cadfe3e7b156710e77941b51e1d5423d39061"
+}

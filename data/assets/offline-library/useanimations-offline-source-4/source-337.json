@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/format.ts",
+  "filename": "format.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-337",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/format.ts",
+    "title": "website/src/i18n/format.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "8312a6451b8a61f1a72261b1adf7d99cd497b01338cce6fd3efcc7cda4bcf426",
+  "text": "// Grammar helpers for message files, so no language builds sentences with English rules.\n\n/** 'a, b and c' in the language's own style (Intl.ListFormat). */\nexport const listIn =\n  (intl: string) =>\n  (items: string[]): string =>\n    new Intl.ListFormat(intl, { style: 'long', type: 'conjunction' }).format(items);\n\n/**\n * A count with the right noun form: pluralIn('cs')(n, { one: 'ikona', few: 'ikony', other: 'ikon' }).\n * Forms follow Intl.PluralRules; `other` is required and covers any form left out.\n */\nexport const pluralIn =\n  (intl: string) =>\n  (n: number, forms: Partial<Record<Intl.LDMLPluralRule, string>> & { other: string }): string =>\n    `${n} ${forms[new Intl.PluralRules(intl).select(n)] ?? forms.other}`;\n\n/** The noun form alone, without the number. */\nexport const formIn =\n  (intl: string) =>\n  (n: number, forms: Partial<Record<Intl.LDMLPluralRule, string>> & { other: string }): string =>\n    forms[new Intl.PluralRules(intl).select(n)] ?? forms.other;\n",
+  "version": 1
+}

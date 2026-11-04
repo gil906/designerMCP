@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "async function save(button, status, persist) {\n  button.disabled = true; status.textContent = \"Saving…\";\n  try { await persist(); status.textContent = \"Saved\"; }\n  catch { status.textContent = \"Save failed. Your changes are still here; try again.\"; }\n  finally { button.disabled = false; }\n}",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "javascript"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

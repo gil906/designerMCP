@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "{\"narrationJob\":\"original-demo\",\"speakerPermission\":{\"status\":\"required\",\"purposes\":[\"product explainer\"],\"impersonationAllowed\":false},\"scriptReview\":[\"factual accuracy\",\"pronunciation\",\"caption parity\"],\"modelsBundled\":false,\"outputReview\":[\"audible artifacts\",\"disclosure\",\"rights scope\"],\"retention\":\"delete unneeded voice inputs\"}",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "json"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

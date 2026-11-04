@@ -1,0 +1,70 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by rive-app/rive-react contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 4025,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "\n\n\n\n# Rive React\n\n\n\nRive (https://rive.app) combines an interactive design tool, a new stateful graphics format, a lightweight multi-platform runtime, and a blazing-fast vector renderer. This end-to-end pipeline guarantees that what you build in the Rive Editor is exactly what ships in your apps, games, and websites.\n\nThis library is a wrapper around the JS/Wasm runtime (https://github.com/rive-app/rive-wasm), giving full control over the JS/Wasm runtime while providing components and hooks for React applications.\n\nFor more information, check out the following resources:\n\n- Homepage (https://rive.app/)\n- General Docs (https://rive.app/docs/)\n- React Docs (https://rive.app/docs/runtimes/react/react)\n- Rive Community / Support (https://community.rive.app/c/support/)\n\n## Table of contents\n\n- :star: Rive Overview (#rive-overview)\n- 🚀 Getting Started & API docs (#getting-started)\n- :mag: Supported Versions (#supported-versions)\n- :books: Examples (#examples)\n- :runner: Migration Guides (#migration-guides)\n- 👨💻 Contributing (#contributing)\n- :question: Issues (#issues)\n\n## Rive overview\n\nRive (https://rive.app) is a real-time interactive design and animation tool that helps teams create and run interactive animations anywhere. Designers and developers use our collaborative editor to create motion graphics that respond to different states and user inputs. Our lightweight open-source runtime libraries allow them to load their animations into apps, games, and websites.\n\n:house_with_garden: Homepage (https://rive.app/)\n\n:blue_book: General help docs (https://rive.app/community/doc/)\n\n🛠 Rive Forums (https://rive.app/community/forums/home)\n\n## Getting started\n\nFollow along with the link below for a quick start in getting Rive React integrated into your React apps.\n\n- Getting Started with Rive in React (https://rive.app/community/doc/react/docRfaSQ0eaE)\n- API documentation (https://rive.app/community/doc/parameters-and-return-values/docJlDMNulDh)\n\nFor more information, see the Runtime sections of the Rive help documentation:\n\n- Animation Playback (https://rive.app/community/doc/animation-playback/docDKKxsr7ko)\n- Layout (https://rive.app/community/doc/layout/docBl81zd1GB)\n- State Machines (https://rive.app/community/doc/state-machines/docxeznG7iiK)\n- Rive Text (https://rive.app/community/doc/text/docn2E6y1lXo)\n- Rive Events (https://rive.app/community/doc/rive-events/docbOnaeffgr)\n- Loading Assets (https://rive.app/community/doc/loading-assets/doct4wVHGPgC)\n\n## Supported versions\n\nThis library supports React versions `^16.8.0` through `^19.0.0`.\n\n## Examples\n\nCheck out our Storybook instance that shows how to use the library in small examples, along with code snippets! This includes examples using the basic component, as well as the convenient hooks exported to take advantage of state machines.\n\n- Mouse tracking (https://codesandbox.io/s/rive-mouse-track-test-t0y965?file=/src/App.js)\n- Accessibility concerns (https://rive.app/blog/accesible-web-animations-aria-live-regions)\n\n### Awesome Rive\n\nFor even more examples and resources on using Rive at runtime or in other tools, checkout the awesome-rive (https://github.com/rive-app/awesome-rive) repo.\n\n## Migration guides\n\nUsing an older version of the runtime and need to learn how to upgrade to the latest version? Check out the migration guides below in our help center that help guide you through version bumps; breaking changes and all!\n\nMigration guides (https://rive.app/community/doc/migrating-from-v3-to-v4/dociIPXVHKFF)\n\n## Contributing\n\nWe love contributions! Check out our contributing docs (./CONTRIBUTING.md) to get more details into how to run this project, the examples, and more all locally.\n\n## Issues\n\nHave an issue with using the runtime, or want to suggest a feature/API to help make your development life better? Log an issue in our issues (https://github.com/rive-app/rive-react/issues) tab! You can also browse older issues and discussion threads there to see solutions that may have worked for common problems.\n",
+  "content_sha256": "48f6ccf06add711359e87b9f99a0f22b85bc9fe93130537cc8c9ea5ea4dd8f0e",
+  "expected_git_blob_sha1": "0d987315bae95530f344915345a95ae7ca675545",
+  "filename": "README.md",
+  "full_content_sha256": "48f6ccf06add711359e87b9f99a0f22b85bc9fe93130537cc8c9ea5ea4dd8f0e",
+  "full_file_complete": false,
+  "full_source_sha256": "d3db576862ff069a0889157166a11e3f3136ec74a4736cb6acbac172ab835262",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 83,
+    "start": 1,
+    "total": 83
+  },
+  "modifications": [
+    {
+      "count": 1,
+      "operation": "remove U+200D emoji joiners for strict plain-text control policy"
+    },
+    {
+      "count": 4,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 31,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "rive-app/rive-react",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+      "sha256": "cf81859d85e99ff2fad83d51d9dfd85ca5189b23c4442aacf1890c54665d92f4"
+    }
+  ],
+  "revision": "5ae214890c2d4bd14fcaa275c550abd389be975b",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 4388,
+  "source_lines": 83,
+  "source_sha256": "d3db576862ff069a0889157166a11e3f3136ec74a4736cb6acbac172ab835262",
+  "source_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/README.md",
+  "verified_git_blob_sha1": "0d987315bae95530f344915345a95ae7ca675545"
+}

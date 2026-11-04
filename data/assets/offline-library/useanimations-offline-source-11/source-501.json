@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/licencing-and-terms.astro",
+  "filename": "licencing-and-terms.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-501",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/licencing-and-terms.astro",
+    "title": "website/src/pages/licencing-and-terms.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "8b85129e05bef66d5fb2ee2aa21560731f340b678a3b197bd9fa0e24a65c257c",
+  "text": "---\nimport { EN } from '../i18n';\nimport LicencePage from '../views/LicencePage.astro';\n---\n\n<LicencePage locale={EN} />\n",
+  "version": 1
+}

@@ -1,0 +1,6 @@
+{
+  "kind": "offline-guidance",
+  "purpose": "Original adaptation guide; no upstream implementation or runnable example is claimed.",
+  "text": "Sourced MIT catalog metadata. SVG strings are reference data only, never automatically executed or rendered. Use local Lottie JSON for animation. Branded icon availability does not grant trademark rights.",
+  "version": 1
+}

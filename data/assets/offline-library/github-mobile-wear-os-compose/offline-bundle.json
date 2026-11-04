@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "reference",
+      "format": "json",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "9ce8a6e7e93dbe46bf6e1a22319dad42a1e676edcefc4817787f97e7b18444c7",
+      "source_url": "https://github.com/android/wear-os-samples/tree/665d6a48466d472a4d928661dd865364d5073799"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "999b36d20656ece8e72486138938249966886fc3d89f25bdfc5c1604e14cb4a6",
+      "source_url": "original://designerMCP/offline/github-mobile-wear-os-compose"
+    },
+    {
+      "asset_id": "offline-document-github-mobile-wear-os-compose-readme-md",
+      "format": "plaintext",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "b8cdd245ecae8d78a438482ff980a2c1cbce09ff3130377790859b3c4d682056",
+      "source_url": "https://raw.githubusercontent.com/android/wear-os-samples/665d6a48466d472a4d928661dd865364d5073799/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-mobile-wear-os-compose-composestarter-app-src-main-java-com-example-android-wearable-co-899705a9e4df",
+      "format": "kotlin",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "5fb6a9a0b95cfce3d88b236492c80b33aba119fe3c7d6df812094c7ecee09c67",
+      "source_url": "https://raw.githubusercontent.com/android/wear-os-samples/665d6a48466d472a4d928661dd865364d5073799/ComposeStarter/app/src/main/java/com/example/android/wearable/composestarter/presentation/MainActivity.kt"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "2b4c8fa124dfb9c625863ed3eb94944f6a4d23586b2371ab03b7dd3a153b698f",
+      "source_url": "original://designerMCP/offline/github-mobile-wear-os-compose"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-mobile-wear-os-compose",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

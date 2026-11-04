@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source-reference",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "4195cbcf1fcf0d1f8c83abb9e3963ff7b5e1f2ba9f69d312c3632326fc1ebb0a",
+      "source_url": "https://github.com/pmndrs/react-three-fiber/blob/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx#L43-L56"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "8471705c919ff85b495b919ecac1c419c1d4df5c5b9aebc9c1878e6ad9515c59",
+      "source_url": "original://designerMCP/offline/github-motion-pmndrs--react-three-fiber"
+    },
+    {
+      "asset_id": "offline-document-github-motion-pmndrs--react-three-fiber-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "31002eb767bcf94a0bcc706664c1f07a73e808b2184d56c2f6dd446ac33f4e36",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/readme.md"
+    },
+    {
+      "asset_id": "offline-code-github-motion-pmndrs--react-three-fiber-packages-fiber-src-core-hooks-tsx",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "f8d4c1e8cf47c8d59cbe7c00d95a20354c41bcab5d72bdfe24efb5c25ebc2167",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "0b716171e04664d038f4eb6324da5671178f82afe8b3cbe637687fa92f861033",
+      "source_url": "original://designerMCP/offline/github-motion-pmndrs--react-three-fiber"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-motion-pmndrs--react-three-fiber",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

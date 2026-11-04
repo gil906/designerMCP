@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by vueuse/motion contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 367,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "import { computed } from 'vue'\nimport type { Ref } from 'vue'\nimport { useMediaQuery } from '@vueuse/core'\n\n/**\n * Reactive prefers-reduced-motion.\n */\nexport function useReducedMotion(options: { window?: Window } = {}): Ref<boolean> {\n  const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)', options)\n\n  return computed(() => reducedMotion.value)\n}\n",
+  "content_sha256": "8b0d144233d1209bcbdfaf9dda253ac3e402ada8910f2d0657f75480c930c037",
+  "expected_git_blob_sha1": "c7e49f3e77594ed5b4440bb1559b933f40743a30",
+  "filename": "useReducedMotion.ts",
+  "full_content_sha256": "8b0d144233d1209bcbdfaf9dda253ac3e402ada8910f2d0657f75480c930c037",
+  "full_file_complete": true,
+  "full_source_sha256": "8b0d144233d1209bcbdfaf9dda253ac3e402ada8910f2d0657f75480c930c037",
+  "kind": "source-file",
+  "language": "typescript",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 12,
+    "start": 1,
+    "total": 12
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "typescript",
+  "original_path": "src/useReducedMotion.ts",
+  "repository": "vueuse/motion",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/vueuse--motion/LICENSE",
+      "sha256": "9d1d5673ad90fa6f0dbe7e347e14f3807b5d0120eaee38007bd3df6882308cd5"
+    }
+  ],
+  "revision": "c0efec2b20d546752763919def979f194d41a99b",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 367,
+  "source_lines": 12,
+  "source_sha256": "8b0d144233d1209bcbdfaf9dda253ac3e402ada8910f2d0657f75480c930c037",
+  "source_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/src/useReducedMotion.ts",
+  "verified_git_blob_sha1": "c7e49f3e77594ed5b4440bb1559b933f40743a30"
+}

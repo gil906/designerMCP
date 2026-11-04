@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/tr/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-430",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/tr/common.ts",
+    "title": "website/src/i18n/messages/tr/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "3d2997ebc0f0d406390e97a9712020266faf0b4123edda54a8bc060e7a39baf0",
+  "text": "import type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: 'İçeriğe geç',\n  ogImageAlt: 'useAnimations: React, shadcn/ui, Lottie ve SVG için ücretsiz animasyonlu ikonlar',\n  homeLabel: 'useAnimations ana sayfa',\n  mainNav: 'Ana menü',\n  browseIcons: 'İkonlara göz at',\n  nav: {\n    icons: 'İkonlar',\n    categories: 'Kategoriler',\n    documentation: 'Dokümantasyon',\n    shadcn: 'shadcn',\n    lottie: 'Lottie ikonları',\n    license: 'Lisans',\n  },\n  footer: {\n    tagline:\n      'Etkileşimleri hazır gelen ücretsiz animasyonlu ikonlar. MIT lisanslı, React için yapıldı.',\n    product: 'Ürün',\n    developers: 'Geliştiriciler',\n    follow: 'Takip edin',\n    languages: 'Diller',\n    allIcons: 'Tüm ikonlar',\n    categories: 'Kategoriler',\n    interactions: 'Etkileşimler',\n    lottieIcons: 'Lottie ikonları',\n    shadcnIcons: 'shadcn/ui ikonları',\n    documentation: 'Dokümantasyon',\n    licencing: 'Lisans ve koşullar',\n    shadcnRegistry: 'shadcn registry',\n    mitLicense: 'MIT lisansı',\n    builtWith: 'Site Astro ile yapıldı',\n  },\n  breadcrumb: 'Sayfa yolu',\n  crumbs: { icons: 'İkonlar', categories: 'Kategoriler', interactions: 'Etkileşimler' },\n  faq: 'Sık sorulan sorular',\n  copy: 'Kopyala',\n  copied: 'Kopyalandı',\n  pressCtrlC: 'Ctrl+C tuşlarına basın',\n  languageBanner: {\n    text: 'Bu sayfanın Türkçe sürümü de var.',\n    action: 'Türkçeye geç',\n    dismiss: 'Kapat',\n  },\n};\n",
+  "version": 1
+}

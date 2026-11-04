@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/id/licence.ts",
+  "filename": "licence.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-391",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/id/licence.ts",
+    "title": "website/src/i18n/messages/id/licence.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "7342628b1ed9cb99db61854710ed9f6368b1ee252b83870e7d2e25fb979266c4",
+  "text": "import type { Messages } from '../en';\n\nexport const licence: Messages['licence'] = {\n  title: 'Lisensi & Ketentuan — useAnimations',\n  description:\n    'Ikon useAnimations dan paket react-useanimations berlisensi MIT: gratis untuk proyek pribadi dan komersial, boleh didistribusikan ulang, tanpa atribusi.',\n  name: 'Lisensi & Ketentuan',\n  heading: 'Bebas dipakai. Berlisensi MIT.',\n  introHtml: (mitHref: string) =>\n    `Ikon useAnimations dan paket <code>react-useanimations</code> dirilis di bawah <a href=\"${mitHref}\">lisensi MIT</a>.`,\n  canDo: 'Yang boleh Anda lakukan',\n  canDoItemsHtml: [\n    '<strong>Memakai</strong> ikon di situs web, aplikasi, dan produk pribadi maupun komersial.',\n    '<strong>Mengubahnya</strong>: warna, ukuran, timing, bahkan gerakannya sendiri.',\n    '<strong>Mendistribusikan ulang</strong>, termasuk di dalam paket ikon, template, tema, UI kit, dan registry komponen.',\n  ],\n  attribution: 'Atribusi',\n  attributionText:\n    'Tidak wajib, tetapi kami hargai. Sertakan pemberitahuan lisensi jika Anda mendistribusikan ulang file-nya, dan jika ingin mencantumkan kredit:',\n  credit: (link: string) => `Ikon animasi oleh ${link}`,\n  noWarranty: 'Tanpa jaminan',\n  noWarrantyText: 'Ikon dan kode disediakan apa adanya, tanpa jaminan dalam bentuk apa pun.',\n  licenseText: 'Teks lisensi',\n  bindingNote:\n    'Teks lisensi di bawah ini adalah versi asli berbahasa Inggris, yang merupakan versi yang mengikat secara hukum.',\n};\n",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/.github/dependabot.yml",
+  "filename": "dependabot.yml",
+  "format": "yaml",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-242",
+    "mime_type": "application/yaml",
+    "path": "assets/useanimations/source/.github/dependabot.yml",
+    "title": ".github/dependabot.yml"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "bb92a95c9577c1bca258888aed6779896e34b75d9a92c0d914b6f95f3630b0e3",
+  "text": "version: 2\nupdates:\n  - package-ecosystem: github-actions\n    directory: /\n    schedule:\n      interval: monthly\n  - package-ecosystem: npm\n    directory: /\n    schedule:\n      interval: monthly\n    groups:\n      dev-dependencies:\n        dependency-type: development\n",
+  "version": 1
+}

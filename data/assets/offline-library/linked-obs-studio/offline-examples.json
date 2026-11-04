@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "Original recording preflight:\n- Use a demo account with synthetic data.\n- Hide notifications and credential-bearing terminals.\n- Capture at a resolution where UI text remains readable after scaling.\n- Record 10 seconds; check framing, peaks and caption readability.\n- Save a clean master and a delivery copy.\n- Record consent, media licenses and export settings.",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "text"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

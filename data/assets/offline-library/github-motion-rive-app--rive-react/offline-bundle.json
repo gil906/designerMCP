@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source-reference",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "e444a84afffa426959e48349be026bfa972d825f020fb2538fe590f188a12e06",
+      "source_url": "https://github.com/rive-app/rive-react/blob/5ae214890c2d4bd14fcaa275c550abd389be975b/src/hooks/useRive.tsx#L200-L229"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "5d952e752f0be00c4b85b37718f4d2fc00309d6571e0be5918332496d0ce37ed",
+      "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-react"
+    },
+    {
+      "asset_id": "offline-document-github-motion-rive-app--rive-react-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "23c368baec773b24969e847a88698ff41bdd932e1ff40a7a1becdbebe6266ea5",
+      "source_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-motion-rive-app--rive-react-src-hooks-userive-tsx",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "4b3f24716e9df0ddb3f5caa53dba01d0f34d16189bbe1b356697d4705879f3f5",
+      "source_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/src/hooks/useRive.tsx"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "31db8cd091e4812609a54e755e2a64c0c683e56f94a1bb6956b9465fbe381064",
+      "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-react"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-motion-rive-app--rive-react",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

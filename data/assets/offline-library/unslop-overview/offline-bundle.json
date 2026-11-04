@@ -1,0 +1,90 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "readme",
+      "format": "markdown",
+      "license": "Adapted guidance and upstream references: CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original example code: CC0-1.0. Retain attribution; packaging and summaries are adaptations.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "54395f7107977e6d35b1ecba949bd57d29c0e87dd5c41b92d6faa009fa58db0c",
+      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a"
+    },
+    {
+      "asset_id": "citation",
+      "format": "yaml",
+      "license": "Adapted guidance and upstream references: CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original example code: CC0-1.0. Retain attribution; packaging and summaries are adaptations.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "e79c5ae257fc391c3c490cb4130f3944ad523d90d3357dfdded9ae8fc0c78a66",
+      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a"
+    },
+    {
+      "asset_id": "skill",
+      "format": "markdown",
+      "license": "Adapted guidance and upstream references: CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original example code: CC0-1.0. Retain attribution; packaging and summaries are adaptations.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "ca204ef58759ef67d8e7e8c7a1ff202db39a6f0607992ee0adf8c34aced68fc4",
+      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a"
+    },
+    {
+      "asset_id": "agent-metadata",
+      "format": "yaml",
+      "license": "Adapted guidance and upstream references: CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original example code: CC0-1.0. Retain attribution; packaging and summaries are adaptations.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "5205e7098f513d9207ad01f2658c41f9072e21e4d3a0c5e4becbfe1c55963f5d",
+      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "2a760c49b353accbda5b2194a84fe8dea6642207567cb0fe5a4ec9ca70dce51c",
+      "source_url": "original://designerMCP/offline/unslop-overview"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "6d8867af1e3cd0d634a715b5f7ba16369dcf4338b3cd2184a0891246d5bf28e7",
+      "source_url": "original://designerMCP/offline/unslop-overview"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "unavailable",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "unslop-overview",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

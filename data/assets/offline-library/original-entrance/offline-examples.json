@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "@keyframes arrive { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }\n@media(prefers-reduced-motion:no-preference) { .enter { animation:arrive 220ms ease-out both; } }",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

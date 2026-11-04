@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/cs/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-345",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/cs/islands.ts",
+    "title": "website/src/i18n/messages/cs/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "8fda1bd91171f9d59efaef53194c63c4190ccd7a086a60488d66848536b4996c",
+  "text": "import type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Smyčka',\n      'click-toggle': 'Klik',\n      'click-replay': 'Klik',\n      hover: 'Hover',\n      'hover-loop': 'Hover',\n      'hover-replay': 'Hover',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Přehrává se sama',\n      'click-toggle': 'Kliknutím přepnete',\n      'click-replay': 'Kliknutím přehrajete znovu',\n      hover: 'Najetím myší přehrajete, odjetím vrátíte zpět',\n      'hover-loop': 'Najetím myší spustíte smyčku',\n      'hover-replay': 'Najetím myší přehrajete',\n    },\n    preview: 'Náhled ikony {title}',\n    colors: 'Barva náhledu',\n    color: 'Barva {color}',\n    textColor: 'Barva textu',\n    interaction: 'Interakce',\n    duration: 'Délka',\n    seconds: '{seconds} s',\n    import: 'Import',\n    close: 'Zavřít',\n    code: 'Kód',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Soubory' },\n    copy: 'Kopírovat',\n    download: 'Stáhnout',\n    iconPage: 'Stránka ikony (anglicky)',\n  },\n  interactionDemo: {\n    click: 'Klikněte na kartu',\n    loop: 'Přehrává se sama',\n    hover: 'Najeďte myší na kartu',\n  },\n  mobileMenu: {\n    menu: 'Menu',\n    nav: 'Hlavní navigace',\n  },\n  search: {\n    clear: 'Vymazat hledání',\n  },\n  themeToggle: {\n    toLight: 'Přepnout na světlý motiv',\n    toDark: 'Přepnout na tmavý motiv',\n  },\n};\n",
+  "version": 1
+}

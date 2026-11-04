@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by airbnb/lottie-web contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 6212,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "import createTag from '../utils/helpers/html_elements';\nimport AnimationItem from './AnimationItem';\n\nconst animationManager = (function () {\n  var moduleOb = {};\n  var registeredAnimations = [];\n  var initTime = 0;\n  var len = 0;\n  var playingAnimationsNum = 0;\n  var _stopped = true;\n  var _isFrozen = false;\n\n  function removeElement(ev) {\n    var i = 0;\n    var animItem = ev.target;\n    while (i < len) {\n      if (registeredAnimations[i].animation === animItem) {\n        registeredAnimations.splice(i, 1);\n        i -= 1;\n        len -= 1;\n        if (!animItem.isPaused) {\n          subtractPlayingCount();\n        }\n      }\n      i += 1;\n    }\n  }\n\n  function registerAnimation(element, animationData) {\n    if (!element) {\n      return null;\n    }\n    var i = 0;\n    while (i < len) {\n      if (registeredAnimations[i].elem === element && registeredAnimations[i].elem !== null) {\n        return registeredAnimations[i].animation;\n      }\n      i += 1;\n    }\n    var animItem = new AnimationItem();\n    setupAnimation(animItem, element);\n    animItem.setData(element, animationData);\n    return animItem;\n  }\n\n  function getRegisteredAnimations() {\n    var i;\n    var lenAnims = registeredAnimations.length;\n    var animations = [];\n    for (i = 0; i < lenAnims; i += 1) {\n      animations.push(registeredAnimations[i].animation);\n    }\n    return animations;\n  }\n\n  function addPlayingCount() {\n    playingAnimationsNum += 1;\n    activate();\n  }\n\n  function subtractPlayingCount() {\n    playingAnimationsNum -= 1;\n  }\n\n  function setupAnimation(animItem, element) {\n    animItem.addEventListener('destroy', removeElement);\n    animItem.addEventListener('_active', addPlayingCount);\n    animItem.addEventListener('_idle', subtractPlayingCount);\n    registeredAnimations.push({ elem: element, animation: animItem });\n    len += 1;\n  }\n\n  function loadAnimation(params) {\n    var animItem = new AnimationItem();\n    setupAnimation(animItem, null);\n    animItem.setParams(params);\n    return animItem;\n  }\n\n  function setSpeed(val, animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.setSpeed(val, animation);\n    }\n  }\n\n  function setDirection(val, animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.setDirection(val, animation);\n    }\n  }\n\n  function play(animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.play(animation);\n    }\n  }\n  function resume(nowTime) {\n    var elapsedTime = nowTime - initTime;\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.advanceTime(elapsedTime);\n    }\n    initTime = nowTime;\n    if (playingAnimationsNum && !_isFrozen) {\n      window.requestAnimationFrame(resume);\n    } else {\n      _stopped = true;\n    }\n  }\n\n  function first(nowTime) {\n    initTime = nowTime;\n    window.requestAnimationFrame(resume);\n  }\n\n  function pause(animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.pause(animation);\n    }\n  }\n\n  function goToAndStop(value, isFrame, animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.goToAndStop(value, isFrame, animation);\n    }\n  }\n\n  function stop(animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.stop(animation);\n    }\n  }\n\n  function togglePause(animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.togglePause(animation);\n    }\n  }\n\n  function destroy(animation) {\n    var i;\n    for (i = (len - 1); i >= 0; i -= 1) {\n      registeredAnimations[i].animation.destroy(animation);\n    }\n  }\n\n  function searchAnimations(animationData, standalone, renderer) {\n    var animElements = [].concat([].slice.call(document.getElementsByClassName('lottie')),\n      [].slice.call(document.getElementsByClassName('bodymovin')));\n    var i;\n    var lenAnims = animElements.length;\n    for (i = 0; i < lenAnims; i += 1) {\n      if (renderer) {\n        animElements[i].setAttribute('data-bm-type', renderer);\n      }\n      registerAnimation(animElements[i], animationData);\n    }\n    if (standalone && lenAnims === 0) {\n      if (!renderer) {\n        renderer = 'svg';\n      }\n      var body = document.getElementsByTagName('body')[0];\n      body.innerText = '';\n      var div = createTag('div');\n      div.style.width = '100%';\n      div.style.height = '100%';\n      div.setAttribute('data-bm-type', renderer);\n      body.appendChild(div);\n      registerAnimation(div, animationData);\n    }\n  }\n\n  function resize() {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.resize();\n    }\n  }\n\n  function activate() {\n    if (!_isFrozen && playingAnimationsNum) {\n      if (_stopped) {\n        window.requestAnimationFrame(first);\n        _stopped = false;\n      }\n    }\n  }\n\n  function freeze() {\n    _isFrozen = true;\n  }\n\n  function unfreeze() {\n    _isFrozen = false;\n    activate();\n  }\n\n  function setVolume(val, animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.setVolume(val, animation);\n    }\n  }\n\n  function mute(animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.mute(animation);\n    }\n  }\n\n  function unmute(animation) {\n    var i;\n    for (i = 0; i < len; i += 1) {\n      registeredAnimations[i].animation.unmute(animation);\n    }\n  }\n\n  moduleOb.registerAnimation = registerAnimation;\n  moduleOb.loadAnimation = loadAnimation;\n  moduleOb.setSpeed = setSpeed;\n  moduleOb.setDirection = setDirection;\n  moduleOb.play = play;\n  moduleOb.pause = pause;\n  moduleOb.stop = stop;\n  moduleOb.togglePause = togglePause;\n  moduleOb.searchAnimations = searchAnimations;\n  moduleOb.resize = resize;\n  // moduleOb.start = start;\n  moduleOb.goToAndStop = goToAndStop;\n  moduleOb.destroy = destroy;\n  moduleOb.freeze = freeze;\n  moduleOb.unfreeze = unfreeze;\n  moduleOb.setVolume = setVolume;\n  moduleOb.mute = mute;\n  moduleOb.unmute = unmute;\n  moduleOb.getRegisteredAnimations = getRegisteredAnimations;\n  return moduleOb;\n}());\n\nexport default animationManager;\n",
+  "content_sha256": "8286b262d4f5396913a230d1a5b1c197102caa50123b3fe5580f1499e8d735f0",
+  "expected_git_blob_sha1": "0aa2babb87bc25e35fe94b712cf34e37db9c65c6",
+  "filename": "AnimationManager.js",
+  "full_content_sha256": "8286b262d4f5396913a230d1a5b1c197102caa50123b3fe5580f1499e8d735f0",
+  "full_file_complete": true,
+  "full_source_sha256": "8286b262d4f5396913a230d1a5b1c197102caa50123b3fe5580f1499e8d735f0",
+  "kind": "source-file",
+  "language": "javascript",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 248,
+    "start": 1,
+    "total": 248
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "javascript",
+  "original_path": "player/js/animation/AnimationManager.js",
+  "repository": "airbnb/lottie-web",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+      "sha256": "9d8d4d8b4bb99572ee8b51025a30b8493d949798cac465c6c15b1b29420bcb06"
+    }
+  ],
+  "revision": "bede03d25d232826e0c9dca1733d542d8a7754fb",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 6212,
+  "source_lines": 248,
+  "source_sha256": "8286b262d4f5396913a230d1a5b1c197102caa50123b3fe5580f1499e8d735f0",
+  "source_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/player/js/animation/AnimationManager.js",
+  "verified_git_blob_sha1": "0aa2babb87bc25e35fe94b712cf34e37db9c65c6"
+}

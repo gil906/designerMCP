@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "{\"fps\":30,\"canvas\":[1280,720],\"tracks\":[{\"type\":\"visual\",\"clips\":[{\"source\":\"own-title-card\",\"in\":0,\"out\":90},{\"source\":\"own-demo-capture\",\"in\":90,\"out\":300}]},{\"type\":\"captions\",\"clips\":[{\"in\":0,\"out\":90,\"text\":\"Make the handoff explicit\"}]}],\"mediaRights\":\"verify each input\",\"exportChecks\":[\"duration\",\"caption margins\",\"audio peaks\",\"final frame\"]}",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "json"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

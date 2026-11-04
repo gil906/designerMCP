@@ -1,0 +1,80 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-web/mantine/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "fcd0acd35d1e08d16705d183d31155cef6e79362aa7712ce27b73abce5c25e43",
+      "source_url": "https://github.com/mantinedev/mantine/tree/0120ad3643a792e59bcb09c3aa254b2d1a312902"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "d38db04aba35fc5ba98da5c572af125f2790bce7a2e56591d9599d8df075f1e7",
+      "source_url": "original://designerMCP/offline/github-web-mantine"
+    },
+    {
+      "asset_id": "offline-document-github-web-mantine-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-web/mantine/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "d2dda0203b2a222394cafc7df18a52c2bd258009224e9d51a7177aea4f5a81ba",
+      "source_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-web-mantine-packages-mantine-core-src-components-accordion-accordion-tsx",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/github-web/mantine/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "43697365f470891cc1ba39ce5488e419554fdcf6997db8828eba12df71884832",
+      "source_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/packages/@mantine/core/src/components/Accordion/Accordion.tsx"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "cb4c05de11b936ed7130ad29fc734a4154b31f3eec6033c9afbb7aeb83a6a045",
+      "source_url": "original://designerMCP/offline/github-web-mantine"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "packages/@mantine/core/src/components/Accordion/Accordion.tsx: no prior expected Git-blob SHA1; prior full-source SHA256 verified."
+  ],
+  "reference_id": "github-web-mantine",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

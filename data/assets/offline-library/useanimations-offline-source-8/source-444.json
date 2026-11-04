@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/vi/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-444",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/vi/islands.ts",
+    "title": "website/src/i18n/messages/vi/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "72168f4786a1ec55497eb9ec6a9558f979a938cb35616b5b414b1d8a363a3f6f",
+  "text": "// Văn bản trong các React island (components/*.tsx); placeholder '{name}' do component điền vào.\nimport type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Lặp',\n      'click-toggle': 'Click',\n      'click-replay': 'Click',\n      hover: 'Hover',\n      'hover-loop': 'Hover',\n      'hover-replay': 'Hover',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Tự phát liên tục',\n      'click-toggle': 'Click để bật/tắt',\n      'click-replay': 'Click để phát lại',\n      hover: 'Hover để phát, rời chuột để chạy ngược',\n      'hover-loop': 'Hover để lặp',\n      'hover-replay': 'Hover để phát',\n    },\n    preview: 'Xem trước {title}',\n    colors: 'Màu xem trước',\n    color: 'Màu {color}',\n    textColor: 'Màu chữ',\n    interaction: 'Tương tác',\n    duration: 'Thời lượng',\n    seconds: '{seconds} giây',\n    import: 'Import',\n    close: 'Đóng',\n    code: 'Mã nguồn',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Tệp' },\n    copy: 'Sao chép',\n    download: 'Tải xuống',\n    iconPage: 'Trang icon',\n  },\n  interactionDemo: {\n    click: 'Click vào thẻ',\n    loop: 'Tự phát liên tục',\n    hover: 'Hover lên thẻ',\n  },\n  mobileMenu: {\n    menu: 'Menu',\n    nav: 'Điều hướng chính',\n  },\n  search: {\n    clear: 'Xóa tìm kiếm',\n  },\n  themeToggle: {\n    toLight: 'Chuyển sang giao diện sáng',\n    toDark: 'Chuyển sang giao diện tối',\n  },\n};\n",
+  "version": 1
+}

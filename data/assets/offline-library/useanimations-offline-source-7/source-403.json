@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/ko/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-403",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/ko/common.ts",
+    "title": "website/src/i18n/messages/ko/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "07332cd3ab5f76c366b3847da40b38a6d18e886f806ef856a75b92a7655451f9",
+  "text": "// 모든 페이지에 공통으로 쓰이는 텍스트: 레이아웃, 헤더, 푸터, 이동 경로, FAQ, 복사 버튼.\nimport type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: '본문으로 건너뛰기',\n  ogImageAlt: 'useAnimations: React, shadcn/ui, Lottie, SVG용 무료 애니메이션 아이콘',\n  homeLabel: 'useAnimations 홈',\n  mainNav: '주 메뉴',\n  browseIcons: '아이콘 둘러보기',\n  nav: {\n    icons: '아이콘',\n    categories: '카테고리',\n    documentation: '문서',\n    shadcn: 'shadcn',\n    lottie: 'Lottie 아이콘',\n    license: '라이선스',\n  },\n  footer: {\n    tagline: '인터랙션이 내장된 무료 애니메이션 아이콘. React용으로 만들었고 MIT 라이선스입니다.',\n    product: '제품',\n    developers: '개발자',\n    follow: '팔로우',\n    languages: '언어',\n    allIcons: '전체 아이콘',\n    categories: '카테고리',\n    interactions: '인터랙션',\n    lottieIcons: 'Lottie 아이콘',\n    shadcnIcons: 'shadcn/ui 아이콘',\n    documentation: '문서',\n    licencing: '라이선스 및 이용 약관',\n    shadcnRegistry: 'shadcn 레지스트리',\n    mitLicense: 'MIT 라이선스',\n    builtWith: 'Astro로 만든 사이트',\n  },\n  breadcrumb: '이동 경로',\n  crumbs: { icons: '아이콘', categories: '카테고리', interactions: '인터랙션' },\n  faq: '자주 묻는 질문',\n  copy: '복사',\n  copied: '복사됨',\n  pressCtrlC: 'Ctrl+C를 누르세요',\n  languageBanner: {\n    text: '이 페이지는 한국어로도 볼 수 있습니다.',\n    action: '한국어로 보기',\n    dismiss: '닫기',\n  },\n};\n",
+  "version": 1
+}

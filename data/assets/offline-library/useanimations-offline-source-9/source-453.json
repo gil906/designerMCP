@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/zh/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-453",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/zh/islands.ts",
+    "title": "website/src/i18n/messages/zh/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "65788285633e4059f604836bfffd39f4ca7c2b2cf6bd71c9545c08380a456cbf",
+  "text": "// React 岛组件（components/*.tsx）中的文字；'{name}' 占位符由组件填充。\nimport type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: '循环',\n      'click-toggle': '点击',\n      'click-replay': '点击',\n      hover: '悬停',\n      'hover-loop': '悬停',\n      'hover-replay': '悬停',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: '自动播放',\n      'click-toggle': '点击切换',\n      'click-replay': '点击重播',\n      hover: '悬停播放，移开倒放',\n      'hover-loop': '悬停循环播放',\n      'hover-replay': '悬停播放',\n    },\n    preview: '{title} 预览',\n    colors: '预览颜色',\n    color: '颜色 {color}',\n    textColor: '文字颜色',\n    interaction: '交互方式',\n    duration: '时长',\n    seconds: '{seconds} 秒',\n    import: '导入',\n    close: '关闭',\n    code: '代码',\n    tabs: { react: 'React', shadcn: 'shadcn', files: '文件' },\n    copy: '复制',\n    download: '下载',\n    iconPage: '图标页面',\n  },\n  interactionDemo: {\n    click: '点击卡片',\n    loop: '自动播放',\n    hover: '将指针移到卡片上',\n  },\n  mobileMenu: {\n    menu: '菜单',\n    nav: '主导航',\n  },\n  search: {\n    clear: '清除搜索',\n  },\n  themeToggle: {\n    toLight: '切换到浅色主题',\n    toDark: '切换到深色主题',\n  },\n};\n",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/public/flags/ko.svg",
+  "filename": "ko.svg",
+  "format": "svg",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "flag-8",
+    "mime_type": "image/svg+xml",
+    "path": "assets/useanimations/source/website/public/flags/ko.svg",
+    "title": "ko.svg"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/flags-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://raw.githubusercontent.com/UseAnimations/react-useanimations/f7af6f53f6f1a97486ad95756b281a34e9f7c670/website/public/flags/LICENSE"
+  },
+  "sha256": "7a6cd5b51d0e2841ed8b79b1147ad8a66cf3c09f6344d4a63b5e4413ffa5d15b",
+  "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" id=\"flag-icons-kr\" viewBox=\"0 0 640 480\">\n  <defs>\n    <clipPath id=\"kr-a\">\n      <path fill-opacity=\".7\" d=\"M-95.8-.4h682.7v512H-95.8z\"/>\n    </clipPath>\n  </defs>\n  <g fill-rule=\"evenodd\" clip-path=\"url(#kr-a)\" transform=\"translate(89.8 .4)scale(.9375)\">\n    <path fill=\"#fff\" d=\"M-95.8-.4H587v512H-95.8Z\"/>\n    <g transform=\"rotate(-56.3 361.6 -101.3)scale(10.66667)\">\n      <g id=\"kr-c\">\n        <path id=\"kr-b\" fill=\"#000001\" d=\"M-6-26H6v2H-6Zm0 3H6v2H-6Zm0 3H6v2H-6Z\"/>\n        <use xlink:href=\"#kr-b\" width=\"100%\" height=\"100%\" y=\"44\"/>\n      </g>\n      <path stroke=\"#fff\" d=\"M0 17v10\"/>\n      <path fill=\"#cd2e3a\" d=\"M0-12a12 12 0 0 1 0 24Z\"/>\n      <path fill=\"#0047a0\" d=\"M0-12a12 12 0 0 0 0 24A6 6 0 0 0 0 0Z\"/>\n      <circle cy=\"-6\" r=\"6\" fill=\"#cd2e3a\"/>\n    </g>\n    <g transform=\"rotate(-123.7 191.2 62.2)scale(10.66667)\">\n      <use xlink:href=\"#kr-c\" width=\"100%\" height=\"100%\"/>\n      <path stroke=\"#fff\" d=\"M0-23.5v3M0 17v3.5m0 3v3\"/>\n    </g>\n  </g>\n</svg>\n",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/en/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-363",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/en/islands.ts",
+    "title": "website/src/i18n/messages/en/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "a64063174ab333daa52a07a25cdfe73994cd8d5a8d7989873734736128ca1510",
+  "text": "// Text inside the React islands (components/*.tsx). Astro passes it to them as JSON props, so every\n// entry is a plain string; '{name}' placeholders are filled in by the component.\nimport type { Interaction } from 'react-useanimations';\n\nexport const islands = {\n  /** The badge on an icon card: how its icon plays. */\n  iconCard: {\n    hints: {\n      loop: 'Loop',\n      'click-toggle': 'Click',\n      'click-replay': 'Click',\n      hover: 'Hover',\n      'hover-loop': 'Hover',\n      'hover-replay': 'Hover',\n    } satisfies Record<Interaction, string>,\n  },\n  /** The icon details dialog on the home page. */\n  iconDialog: {\n    /** Under the live preview: how to play the icon. */\n    hints: {\n      loop: 'Plays on its own',\n      'click-toggle': 'Click to toggle',\n      'click-replay': 'Click to replay',\n      hover: 'Hover to play, leave to reverse',\n      'hover-loop': 'Hover to loop',\n      'hover-replay': 'Hover to play',\n    } satisfies Record<Interaction, string>,\n    /** Accessible name of the live preview; {title} is the icon's (English) title. */\n    preview: '{title} preview',\n    /** The color swatches: the group, one color ({color} is a hex code), the text color. */\n    colors: 'Preview color',\n    color: 'Color {color}',\n    textColor: 'Text color',\n    interaction: 'Interaction',\n    duration: 'Duration',\n    /** {seconds} is a number such as 0.80. */\n    seconds: '{seconds} s',\n    import: 'Import',\n    close: 'Close',\n    /** The code tabs and their group. */\n    code: 'Code',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Files' },\n    copy: 'Copy',\n    download: 'Download',\n    iconPage: 'Icon page',\n  },\n  /** The interaction demo cards (home page and interaction pages): what to do with the card. */\n  interactionDemo: {\n    click: 'Click the card',\n    loop: 'Plays on its own',\n    hover: 'Hover the card',\n  },\n  /** The navigation on small screens. */\n  mobileMenu: {\n    menu: 'Menu',\n    nav: 'Main',\n  },\n  /** The search field of the icon browser: its X clears the search. */\n  search: {\n    clear: 'Clear search',\n  },\n  themeToggle: {\n    toLight: 'Switch to light theme',\n    toDark: 'Switch to dark theme',\n  },\n};\n",
+  "version": 1
+}

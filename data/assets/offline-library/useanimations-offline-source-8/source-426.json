@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/ru/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-426",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/ru/islands.ts",
+    "title": "website/src/i18n/messages/ru/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "7619b2338947500cf61d3f95c14c1d6c3c1f2babc5bba2b870e768fc57d2977c",
+  "text": "import type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Цикл',\n      'click-toggle': 'Клик',\n      'click-replay': 'Клик',\n      hover: 'Наведение',\n      'hover-loop': 'Наведение',\n      'hover-replay': 'Наведение',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Проигрывается сама',\n      'click-toggle': 'Кликните, чтобы переключить',\n      'click-replay': 'Кликните, чтобы повторить',\n      hover: 'Наведите, чтобы запустить, уведите — чтобы вернуть назад',\n      'hover-loop': 'Наведите, чтобы запустить цикл',\n      'hover-replay': 'Наведите, чтобы запустить',\n    },\n    preview: 'Превью {title}',\n    colors: 'Цвет превью',\n    color: 'Цвет {color}',\n    textColor: 'Цвет текста',\n    interaction: 'Взаимодействие',\n    duration: 'Длительность',\n    seconds: '{seconds} с',\n    import: 'Импорт',\n    close: 'Закрыть',\n    code: 'Код',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Файлы' },\n    copy: 'Копировать',\n    download: 'Скачать',\n    iconPage: 'Страница иконки',\n  },\n  interactionDemo: {\n    click: 'Кликните по карточке',\n    loop: 'Проигрывается сама',\n    hover: 'Наведите на карточку',\n  },\n  mobileMenu: {\n    menu: 'Меню',\n    nav: 'Основная навигация',\n  },\n  search: {\n    clear: 'Очистить поиск',\n  },\n  themeToggle: {\n    toLight: 'Включить светлую тему',\n    toDark: 'Включить тёмную тему',\n  },\n};\n",
+  "version": 1
+}

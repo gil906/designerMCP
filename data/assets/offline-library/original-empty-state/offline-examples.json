@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<section aria-labelledby=\"empty-title\"><h2 id=\"empty-title\">No matching projects</h2>\n<p>Your filters hide all current projects.</p><button type=\"button\" id=\"clear-filters\">Clear filters</button></section>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

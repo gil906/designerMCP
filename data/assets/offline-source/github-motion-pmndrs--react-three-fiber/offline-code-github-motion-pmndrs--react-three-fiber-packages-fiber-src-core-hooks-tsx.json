@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by pmndrs/react-three-fiber contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 6253,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "import * as THREE from 'three'\nimport * as React from 'react'\nimport { suspend, preload, clear } from 'suspend-react'\nimport { context, RootState, RenderCallback, RootStore } from './store'\nimport { buildGraph, ObjectMap, is, isObject3D } from './utils'\nimport { useMutableCallback, useIsomorphicLayoutEffect } from './utils/react'\nimport type { Instance } from './reconciler'\nimport type { ConstructorRepresentation } from './extend'\n\n/**\n * Exposes an object's {@link Instance}.\n * @see https://docs.pmnd.rs/react-three-fiber/api/additional-exports#useInstanceHandle\n *\n * **Note**: this is an escape hatch to react-internal fields. Expect this to change significantly between versions.\n */\nexport function useInstanceHandle<T>(ref: React.RefObject<T>): React.RefObject<Instance<T>> {\n  const instance = React.useRef<Instance>(null!)\n  React.useImperativeHandle(instance, () => (ref.current as unknown as Instance<T>['object']).__r3f!, [ref])\n  return instance\n}\n\n/**\n * Returns the R3F Canvas' Zustand store. Useful for [transient updates](https://github.com/pmndrs/zustand#transient-updates-for-often-occurring-state-changes).\n * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#usestore\n */\nexport function useStore(): RootStore {\n  const store = React.useContext(context)\n  if (!store) throw new Error('R3F: Hooks can only be used within the Canvas component!')\n  return store\n}\n\n/**\n * Accesses R3F's internal state, containing renderer, canvas, scene, etc.\n * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#usethree\n */\nexport function useThree<T = RootState>(\n  selector: (state: RootState) => T = (state) => state as unknown as T,\n  equalityFn?: <T>(state: T, newState: T) => boolean,\n): T {\n  return useStore()(selector, equalityFn)\n}\n\n/**\n * Executes a callback before render in a shared frame loop.\n * Can order effects with render priority or manually render with a positive priority.\n * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#useframe\n */\nexport function useFrame(callback: RenderCallback, renderPriority: number = 0): null {\n  const store = useStore()\n  const subscribe = store.getState().internal.subscribe\n  // Memoize ref\n  const ref = useMutableCallback(callback)\n  // Subscribe on mount, unsubscribe on unmount\n  useIsomorphicLayoutEffect(() => subscribe(ref, renderPriority, store), [renderPriority, subscribe, store])\n  return null\n}\n\n/**\n * Returns a node graph of an object with named nodes & materials.\n * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#usegraph\n */\nexport function useGraph(object: THREE.Object3D): ObjectMap {\n  return React.useMemo(() => buildGraph(object), [object])\n}\n\ntype InputLike = string | string[] | string[][] | Readonly<string | string[] | string[][]>\ntype LoaderLike = THREE.Loader<any, InputLike>\ntype GLTFLike = { scene: THREE.Object3D }\n\ntype LoaderInstance<T extends LoaderLike | ConstructorRepresentation<LoaderLike>> =\n  T extends ConstructorRepresentation<LoaderLike> ? InstanceType<T> : T\n\nexport type LoaderResult<T extends LoaderLike | ConstructorRepresentation<LoaderLike>> = Awaited<\n  ReturnType<LoaderInstance<T>['loadAsync']>\n> extends infer R\n  ? R extends GLTFLike\n    ? R & ObjectMap\n    : R\n  : never\n\nexport type Extensions<T extends LoaderLike | ConstructorRepresentation<LoaderLike>> = (\n  loader: LoaderInstance<T>,\n) => void\n\nconst memoizedLoaders = new WeakMap<ConstructorRepresentation<LoaderLike>, LoaderLike>()\n\nconst isConstructor = <T,>(\n  value: unknown,\n): value is ConstructorRepresentation<THREE.Loader<T, string | string[] | string[][]>> =>\n  typeof value === 'function' && value?.prototype?.constructor === value\n\nfunction loadingFn<L extends LoaderLike | ConstructorRepresentation<THREE.Loader<any>>>(\n  extensions?: Extensions<L>,\n  onProgress?: (event: ProgressEvent<EventTarget>) => void,\n) {\n  return function (Proto: L, ...input: string[]) {\n    let loader: LoaderLike\n\n    // Construct and cache loader if constructor was passed\n    if (isConstructor(Proto)) {\n      loader = memoizedLoaders.get(Proto)!\n      if (!loader) {\n        loader = new Proto()\n        memoizedLoaders.set(Proto, loader)\n      }\n    } else {\n      loader = Proto as any\n    }\n\n    // Apply loader extensions\n    if (extensions) extensions(loader as any)\n\n    // Go through the urls and load them\n    return Promise.all(\n      input.map(\n        (input) =>\n          new Promise<LoaderResult<L>>((res, reject) =>\n            loader.load(\n              input,\n              (data) => {\n                if (isObject3D(data?.scene)) Object.assign(data, buildGraph(data.scene))\n                res(data)\n              },\n              onProgress,\n              (error) => reject(new Error(`Could not load ${input}: ${(error as ErrorEvent)?.message}`)),\n            ),\n          ),\n      ),\n    )\n  }\n}\n\n/**\n * Synchronously loads and caches assets with a three loader.\n *\n * Note: this hook's caller must be wrapped with `React.Suspense`\n * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#useloader\n */\nexport function useLoader<I extends InputLike, L extends LoaderLike | ConstructorRepresentation<LoaderLike>>(\n  loader: L,\n  input: I,\n  extensions?: Extensions<L>,\n  onProgress?: (event: ProgressEvent<EventTarget>) => void,\n) {\n  // Use suspense to load async assets\n  const keys = (Array.isArray(input) ? input : [input]) as string[]\n  const results = suspend(loadingFn(extensions, onProgress), [loader, ...keys], { equal: is.equ })\n  // Return the object(s)\n  return (Array.isArray(input) ? results : results[0]) as I extends any[] ? LoaderResult<L>[] : LoaderResult<L>\n}\n\n/**\n * Preloads an asset into cache as a side-effect.\n */\nuseLoader.preload = function <I extends InputLike, L extends LoaderLike | ConstructorRepresentation<LoaderLike>>(\n  loader: L,\n  input: I,\n  extensions?: Extensions<L>,\n): void {\n  const keys = (Array.isArray(input) ? input : [input]) as string[]\n  return preload(loadingFn(extensions), [loader, ...keys])\n}\n\n/**\n * Removes a loaded asset from cache.\n */\nuseLoader.clear = function <I extends InputLike, L extends LoaderLike | ConstructorRepresentation<LoaderLike>>(\n  loader: L,\n  input: I,\n): void {\n  const keys = (Array.isArray(input) ? input : [input]) as string[]\n  return clear([loader, ...keys])\n}\n",
+  "content_sha256": "59cbff8faf629332a397cf64663d7984817a466597a408a9918d4986a9a4e351",
+  "expected_git_blob_sha1": "9ba61fd988be2749b36cadd3d4aea891ab64b5ff",
+  "filename": "hooks.tsx",
+  "full_content_sha256": "59cbff8faf629332a397cf64663d7984817a466597a408a9918d4986a9a4e351",
+  "full_file_complete": true,
+  "full_source_sha256": "59cbff8faf629332a397cf64663d7984817a466597a408a9918d4986a9a4e351",
+  "kind": "source-file",
+  "language": "tsx",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 173,
+    "start": 1,
+    "total": 173
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "tsx",
+  "original_path": "packages/fiber/src/core/hooks.tsx",
+  "repository": "pmndrs/react-three-fiber",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+      "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a"
+    }
+  ],
+  "revision": "d74622ea8ed717f7212d7e19d65ff3e325508389",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 6253,
+  "source_lines": 173,
+  "source_sha256": "59cbff8faf629332a397cf64663d7984817a466597a408a9918d4986a9a4e351",
+  "source_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx",
+  "verified_git_blob_sha1": "9ba61fd988be2749b36cadd3d4aea891ab64b5ff"
+}

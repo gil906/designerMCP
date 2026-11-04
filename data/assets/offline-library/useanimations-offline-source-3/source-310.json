@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/IconGrid.astro",
+  "filename": "IconGrid.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-310",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/IconGrid.astro",
+    "title": "website/src/components/IconGrid.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "d4be3c4b3cd42686b19b6994907331f6a18c2ef08cb6178287408f3863b434bb",
+  "text": "---\nimport { EN, type Locale } from '../i18n';\nimport IconStill from './IconStill.astro';\nimport type { Icon } from '../lib/icons';\n\ninterface Props {\n  icons: Icon[];\n  class?: string;\n  /** Language of the page; icon pages and titles are English, so other languages mark them. */\n  locale?: Locale;\n}\n\n// Static cards: a link to the icon page with its still (lib/icons.ts), so every icon is crawlable without\n// scripts. Same markup as the related icons on icon pages.\nconst { icons, class: className, locale = EN } = Astro.props;\nconst lang = locale === EN ? undefined : 'en';\n---\n\n<ul class:list={['grid grid-cols-[repeat(auto-fill,minmax(7.5rem,1fr))] gap-3', className]}>\n  {\n    icons.map((icon) => (\n      <li>\n        <a\n          href={`/icons/${icon.id}`}\n          hreflang={lang}\n          class=\"flex aspect-[1/1.08] flex-col items-center justify-center gap-3 rounded-2xl border border-line bg-surface px-2 text-center text-[13px] text-muted transition hover:border-line-strong hover:text-fg\"\n        >\n          <IconStill icon={icon} class=\"size-10 text-fg\" />\n          {lang ? <span lang={lang}>{icon.title}</span> : icon.title}\n        </a>\n      </li>\n    ))\n  }\n</ul>\n",
+  "version": 1
+}

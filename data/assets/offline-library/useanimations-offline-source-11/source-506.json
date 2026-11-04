@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/og.astro",
+  "filename": "og.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-506",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/og.astro",
+    "title": "website/src/pages/og.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "d4dcb87f7ac637707b42502cfbee5e66439fa40b3ceb71689971a5391f6bc195",
+  "text": "---\n// The social card (og.png), rendered to an image by scripts/images.ts. Not linked from the site.\nimport Logo from '../components/Logo.astro';\nimport '../styles/global.css';\nimport { icons } from '../lib/icons';\n\nconst names = ['heart', 'menu', 'github', 'download', 'settings', 'star', 'notification', 'visibility', 'zap', 'bookmark', 'mail', 'lock', 'trash', 'share', 'home', 'music', 'camera', 'cloud', 'send', 'calendar', 'checkBox', 'thumbUp', 'search', 'globe'];\nconst grid = names.map((name) => icons.find((icon) => icon.name === name)).filter(Boolean);\nconst colors = ['#e5484d', '#f59e0b', '#12a594', '#7b8bff', '#c084fc', '#eef0f6'];\n---\n\n<html lang=\"en\" class=\"dark\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"robots\" content=\"noindex\" />\n    <title>useAnimations</title>\n  </head>\n  <body class=\"m-0 bg-bg\">\n    <div id=\"card\" class=\"relative h-[630px] w-[1200px] overflow-hidden bg-bg\">\n      <div class=\"hero-glow absolute inset-0\"></div>\n      <div class=\"absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_left,black_10%,transparent_75%)]\"></div>\n      <div class=\"relative flex h-full\">\n        <div class=\"flex w-[640px] flex-col justify-center pl-20\">\n          <Logo class=\"scale-[1.6] origin-left\" />\n          <h1 class=\"mt-14 text-[76px] leading-[0.98] font-semibold tracking-[-0.045em] text-fg\">\n            Icons that<br /><span class=\"text-gradient\">come alive.</span>\n          </h1>\n          <p class=\"mt-7 text-2xl text-muted\">{icons.length} free animated icons</p>\n          <p class=\"mt-2 text-xl text-subtle\">React · shadcn · MIT · Zero dependencies</p>\n        </div>\n        <div class=\"grid flex-1 grid-cols-4 content-center gap-4 pr-16 pl-4\">\n          {\n            grid.slice(0, 20).map((icon, i) => (\n              <span\n                class=\"flex aspect-square items-center justify-center rounded-3xl border border-line bg-surface/80\"\n                style={{ color: i % 3 === 0 ? colors[(i / 3) % colors.length] : 'var(--muted)' }}\n              >\n                <span data-useanimations=\"\" class=\"block size-11\" set:html={icon!.preview} />\n              </span>\n            ))\n          }\n        </div>\n      </div>\n    </div>\n  </body>\n</html>\n",
+  "version": 1
+}

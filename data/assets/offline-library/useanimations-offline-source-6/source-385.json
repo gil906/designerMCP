@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/id/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-385",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/id/common.ts",
+    "title": "website/src/i18n/messages/id/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "802040ef13988bbfcf7a8323299b771c699cb4a3dff739f434d83c66d66cf639",
+  "text": "import type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: 'Langsung ke konten',\n  ogImageAlt: 'useAnimations: ikon animasi gratis untuk React, shadcn/ui, Lottie, dan SVG',\n  homeLabel: 'Beranda useAnimations',\n  mainNav: 'Utama',\n  browseIcons: 'Jelajahi ikon',\n  nav: {\n    icons: 'Ikon',\n    categories: 'Kategori',\n    documentation: 'Dokumentasi',\n    shadcn: 'shadcn',\n    lottie: 'Ikon Lottie',\n    license: 'Lisensi',\n  },\n  footer: {\n    tagline: 'Ikon animasi gratis dengan interaksi bawaan. Berlisensi MIT, dibuat untuk React.',\n    product: 'Produk',\n    developers: 'Developer',\n    follow: 'Ikuti',\n    languages: 'Bahasa',\n    allIcons: 'Semua ikon',\n    categories: 'Kategori',\n    interactions: 'Interaksi',\n    lottieIcons: 'Ikon Lottie',\n    shadcnIcons: 'Ikon shadcn/ui',\n    documentation: 'Dokumentasi',\n    licencing: 'Lisensi & Ketentuan',\n    shadcnRegistry: 'Registry shadcn',\n    mitLicense: 'Lisensi MIT',\n    builtWith: 'Situs dibuat dengan Astro',\n  },\n  breadcrumb: 'Breadcrumb',\n  crumbs: { icons: 'Ikon', categories: 'Kategori', interactions: 'Interaksi' },\n  faq: 'FAQ',\n  copy: 'Salin',\n  copied: 'Tersalin',\n  pressCtrlC: 'Tekan Ctrl+C',\n  languageBanner: {\n    text: 'Halaman ini juga tersedia dalam bahasa Indonesia.',\n    action: 'Buka versi bahasa Indonesia',\n    dismiss: 'Tutup',\n  },\n};\n",
+  "version": 1
+}

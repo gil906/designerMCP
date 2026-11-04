@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/ThemeToggle.tsx",
+  "filename": "ThemeToggle.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-322",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/ThemeToggle.tsx",
+    "title": "website/src/components/ThemeToggle.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "e66eb584e80f9e733fcd3a4443b56eb4415231c841a531c04344bfc7c9218a27",
+  "text": "import { useSyncExternalStore } from 'react';\nimport UseAnimations from 'react-useanimations';\nimport moon from '../../../icons/moon.json';\nimport sun from '../../../icons/sun.json';\nimport { islands } from '../i18n/messages/en/islands';\n\nconst isDark = () => document.documentElement.classList.contains('dark');\n\n// The theme is the `dark` class on <html>, set before the first paint by Layout.astro.\nconst subscribe = (onChange: () => void) => {\n  const observer = new MutationObserver(onChange);\n  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });\n  return () => observer.disconnect();\n};\n\n/** Switches between light and dark; the choice is saved, otherwise the system theme applies. */\nexport default function ThemeToggle({\n  strings = islands.themeToggle,\n}: {\n  /** The button's text in the page's language: t(locale).islands.themeToggle. */\n  strings?: typeof islands.themeToggle;\n}) {\n  const dark = useSyncExternalStore(subscribe, isDark, () => false);\n\n  const toggle = () => {\n    const next = !isDark();\n    document.documentElement.classList.toggle('dark', next);\n    localStorage.setItem('theme', next ? 'dark' : 'light');\n  };\n\n  return (\n    <UseAnimations\n      key={dark ? 'sun' : 'moon'}\n      animation={{ animationData: dark ? sun : moon, interaction: 'hover-replay' }}\n      size={20}\n      onClick={toggle}\n      render={(eventProps, animationProps) => (\n        <button\n          type=\"button\"\n          aria-label={dark ? strings.toLight : strings.toDark}\n          className=\"inline-flex size-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface-2 hover:text-fg\"\n          {...eventProps}\n        >\n          <span {...animationProps} />\n        </button>\n      )}\n    />\n  );\n}\n",
+  "version": 1
+}

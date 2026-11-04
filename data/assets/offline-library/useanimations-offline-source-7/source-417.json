@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/pt-br/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-417",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/pt-br/islands.ts",
+    "title": "website/src/i18n/messages/pt-br/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "d27af89f2d4c8e44df4761460d8c2d8b391226608b3aedcb150b4fbc1b87194a",
+  "text": "import type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Loop',\n      'click-toggle': 'Clique',\n      'click-replay': 'Clique',\n      hover: 'Hover',\n      'hover-loop': 'Hover',\n      'hover-replay': 'Hover',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Toca sozinho',\n      'click-toggle': 'Clique para alternar',\n      'click-replay': 'Clique para tocar de novo',\n      hover: 'Passe o mouse para tocar e tire para voltar',\n      'hover-loop': 'Passe o mouse para tocar em loop',\n      'hover-replay': 'Passe o mouse para tocar',\n    },\n    preview: 'Prévia de {title}',\n    colors: 'Cor da prévia',\n    color: 'Cor {color}',\n    textColor: 'Cor do texto',\n    interaction: 'Interação',\n    duration: 'Duração',\n    seconds: '{seconds} s',\n    import: 'Import',\n    close: 'Fechar',\n    code: 'Código',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Arquivos' },\n    copy: 'Copiar',\n    download: 'Baixar',\n    iconPage: 'Página do ícone',\n  },\n  interactionDemo: {\n    click: 'Clique no card',\n    loop: 'Toca sozinho',\n    hover: 'Passe o mouse no card',\n  },\n  mobileMenu: {\n    menu: 'Menu',\n    nav: 'Principal',\n  },\n  search: {\n    clear: 'Limpar a pesquisa',\n  },\n  themeToggle: {\n    toLight: 'Mudar para o tema claro',\n    toDark: 'Mudar para o tema escuro',\n  },\n};\n",
+  "version": 1
+}

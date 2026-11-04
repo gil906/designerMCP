@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "Independent landing-page worksheet:\n1. Audience and immediate question.\n2. One-sentence answer and primary action.\n3. Three claims with evidence owners.\n4. Common objections and truthful answers.\n5. Mobile reading order.\n6. Completion metric and accessible fallback.\nDo not attach third-party screenshots.",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "text"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

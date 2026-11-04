@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/icons/[id].zip.ts",
+  "filename": "[id].zip.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-495",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/icons/[id].zip.ts",
+    "title": "website/src/pages/icons/[id].zip.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "dd8dbacbad9176b94aceb5740052de14f05f868c492006db4c1fe531900285a4",
+  "text": "// The download package: the Lottie JSON and the static SVGs, named after the icon.\nimport type { GetStaticPaths } from 'astro';\nimport { strToU8, zipSync } from 'fflate';\nimport { type Icon, icons } from '../../lib/icons';\n\nexport const getStaticPaths = (() =>\n  icons.map((icon) => ({ params: { id: icon.id }, props: { icon } }))) satisfies GetStaticPaths;\n\n// A fixed date keeps the archives identical between builds.\nconst mtime = new Date('2026-01-01T00:00:00Z');\n\nexport const GET = ({ props: { icon } }: { props: { icon: Icon } }) => {\n  const files: Record<string, [Uint8Array, { mtime: Date }]> = {\n    [`${icon.id}.json`]: [strToU8(icon.lottie), { mtime }],\n  };\n  for (const [state, svg] of Object.entries(icon.svgs))\n    files[`${state}.svg`] = [strToU8(svg), { mtime }];\n  return new Response(zipSync(files, { level: 9 }), {\n    headers: { 'Content-Type': 'application/zip' },\n  });\n};\n",
+  "version": 1
+}

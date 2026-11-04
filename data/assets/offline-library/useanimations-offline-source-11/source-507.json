@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/og/icons/[id].png.ts",
+  "filename": "[id].png.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-507",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/og/icons/[id].png.ts",
+    "title": "website/src/pages/og/icons/[id].png.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "586d8b02fb81d7fc4674923baf7db337743753f1a0e5542cfe3439fc960706a7",
+  "text": "// The social card of each icon page, 1200 × 630, drawn at build time (lib/og-image.ts).\nimport type { GetStaticPaths } from 'astro';\nimport { type Icon, icons } from '../../../lib/icons';\nimport { ogPng } from '../../../lib/og-image';\n\nexport const getStaticPaths = (() =>\n  icons.map((icon) => ({ params: { id: icon.id }, props: { icon } }))) satisfies GetStaticPaths;\n\nexport const GET = ({ props: { icon } }: { props: { icon: Icon } }) =>\n  new Response(ogPng(icon), { headers: { 'Content-Type': 'image/png' } });\n",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/src/player/matrix.ts",
+  "filename": "matrix.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-262",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/src/player/matrix.ts",
+    "title": "src/player/matrix.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "9b87ed936436a5995a2a117e87c2bbf18b47dbf0d50aef6f2d2a6481fadda076",
+  "text": "// 2D affine matrix in lottie-web's convention: points are row vectors, so `a.multiply(b)` applies `a`\n// first. `[a, b, c, d, e, f]` maps (x, y) to (a·x + c·y + e, b·x + d·y + f), like SVG's matrix().\nexport type Matrix = [number, number, number, number, number, number];\n\nexport const identity = (): Matrix => [1, 0, 0, 1, 0, 0];\n\nexport const isIdentity = (m: Matrix): boolean =>\n  m[0] === 1 && m[1] === 0 && m[2] === 0 && m[3] === 1 && m[4] === 0 && m[5] === 0;\n\nexport const multiply = (m: Matrix, n: Matrix): Matrix => [\n  m[0] * n[0] + m[1] * n[2],\n  m[0] * n[1] + m[1] * n[3],\n  m[2] * n[0] + m[3] * n[2],\n  m[2] * n[1] + m[3] * n[3],\n  m[4] * n[0] + m[5] * n[2] + n[4],\n  m[4] * n[1] + m[5] * n[3] + n[5],\n];\n\nexport const translate = (m: Matrix, x: number, y: number): Matrix =>\n  x === 0 && y === 0 ? m : [m[0], m[1], m[2], m[3], m[4] + x, m[5] + y];\n\nexport const scale = (m: Matrix, x: number, y: number): Matrix =>\n  x === 1 && y === 1 ? m : multiply(m, [x, 0, 0, y, 0, 0]);\n\n// Rotates clockwise on screen by `angle` radians.\nexport const rotate = (m: Matrix, angle: number): Matrix => {\n  if (angle === 0) return m;\n  const cos = Math.cos(angle);\n  const sin = Math.sin(angle);\n  return multiply(m, [cos, sin, -sin, cos, 0, 0]);\n};\n\n// After Effects skew: `skew` radians along the axis at `axis` radians.\nexport const skewFromAxis = (m: Matrix, skew: number, axis: number): Matrix => {\n  if (skew === 0) return m;\n  const cos = Math.cos(axis);\n  const sin = Math.sin(axis);\n  const rotated = multiply(m, [cos, sin, -sin, cos, 0, 0]);\n  return multiply(multiply(rotated, [1, 0, Math.tan(skew), 1, 0, 0]), [cos, -sin, sin, cos, 0, 0]);\n};\n\nexport const invert = (m: Matrix): Matrix => {\n  const det = m[0] * m[3] - m[1] * m[2];\n  return [\n    m[3] / det,\n    -m[1] / det,\n    -m[2] / det,\n    m[0] / det,\n    (m[2] * m[5] - m[3] * m[4]) / det,\n    -(m[0] * m[5] - m[1] * m[4]) / det,\n  ];\n};\n\nconst round = (value: number) => Math.round(value * 100) / 100;\n\nexport const applyToPoint = (m: Matrix, x: number, y: number): string =>\n  isIdentity(m)\n    ? `${x},${y}`\n    : `${round(x * m[0] + y * m[2] + m[4])},${round(x * m[1] + y * m[3] + m[5])}`;\n\nconst round4 = (value: number) => Math.round(value * 10000) / 10000;\n\nexport const toCss = (m: Matrix) => `matrix(${m.map(round4).join(',')})`;\n",
+  "version": 1
+}

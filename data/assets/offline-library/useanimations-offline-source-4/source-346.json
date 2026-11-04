@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/cs/licence.ts",
+  "filename": "licence.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-346",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/cs/licence.ts",
+    "title": "website/src/i18n/messages/cs/licence.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "f0c42a9aad620a4a304636f12c3575f7f946ad9551327710c21a8795f77fcce3",
+  "text": "import type { Messages } from '../en';\n\nexport const licence: Messages['licence'] = {\n  title: 'Licence a podmínky — useAnimations',\n  description:\n    'Ikony useAnimations i balíček react-useanimations jsou pod licencí MIT: zdarma pro osobní i komerční použití a další šíření, bez nutnosti uvádět autora.',\n  name: 'Licence a podmínky',\n  heading: 'Volně k použití. Pod licencí MIT.',\n  introHtml: (mitHref: string) =>\n    `Ikony useAnimations a balíček <code>react-useanimations</code> jsou vydané pod <a href=\"${mitHref}\">licencí MIT</a>.`,\n  canDo: 'Co můžete',\n  canDoItemsHtml: [\n    '<strong>Používat</strong> ikony na osobních i komerčních webech, v aplikacích a produktech.',\n    '<strong>Upravovat</strong> je: měnit barvy, velikosti, časování i samotný pohyb.',\n    '<strong>Dále je šířit</strong>, a to i v rámci sad ikon, šablon, motivů, UI kitů a registrů komponent.',\n  ],\n  attribution: 'Uvedení autora',\n  attributionText:\n    'Není povinné, ale potěší nás. Když šíříte samotné soubory, ponechte u nich licenční doložku, a pokud nás chcete uvést:',\n  credit: (link: string) => `Animované ikony od ${link}`,\n  noWarranty: 'Bez záruky',\n  noWarrantyText: 'Ikony i kód se poskytují tak, jak jsou, bez jakékoli záruky.',\n  licenseText: 'Text licence',\n  bindingNote: 'Níže je původní anglické znění licence, které je právně závazné.',\n};\n",
+  "version": 1
+}

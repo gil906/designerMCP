@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/en/taxonomy.ts",
+  "filename": "taxonomy.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-366",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/en/taxonomy.ts",
+    "title": "website/src/i18n/messages/en/taxonomy.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "483557c3def99584e4648fb532a877236a7f06846666d94990ca1721022d0c43",
+  "text": "// Categories and interactions as shown to readers. The English copy lives in lib/taxonomy.ts and\n// lib/icons.ts (icon pages and Markdown use it too); other languages translate this shape.\nimport type { Interaction } from 'react-useanimations';\nimport { INTERACTIONS } from '../../../lib/icons';\nimport { CATEGORY_COPY, INTERACTION_COPY, PLAY, REDUCED_MOTION } from '../../../lib/taxonomy';\n\nexport type CategoryText = {\n  /** Display name, e.g. 'Maps & location'. */\n  name: string;\n  /** Page heading, e.g. 'Animated loading icons'. */\n  title: string;\n  intro: string;\n  useCases: string[];\n};\n\nexport type InteractionText = {\n  /** Short name, e.g. 'Click toggle'. */\n  label: string;\n  /** Page heading, e.g. 'Click-to-toggle animated icons'. */\n  title: string;\n  intro: string;\n  useCases: string[];\n  /** One sentence of typical uses. */\n  example: string;\n  /** What the interaction does, one or two sentences. */\n  description: string;\n  /** What it does when the user prefers reduced motion, one sentence. */\n  reducedMotion: string;\n  /** How a group of icons plays, as a plural verb phrase: \"<n> icons <plays>\". */\n  plays: string;\n};\n\nexport const taxonomy = {\n  categories: Object.fromEntries(\n    Object.entries(CATEGORY_COPY).map(([name, copy]) => [\n      name,\n      { name, title: copy.title, intro: copy.intro, useCases: copy.useCases },\n    ])\n  ) as Record<string, CategoryText>,\n  interactions: Object.fromEntries(\n    (Object.keys(INTERACTIONS) as Interaction[]).map((interaction) => [\n      interaction,\n      {\n        label: INTERACTIONS[interaction].label,\n        title: INTERACTION_COPY[interaction].title,\n        intro: INTERACTION_COPY[interaction].intro,\n        useCases: INTERACTION_COPY[interaction].useCases,\n        example: INTERACTION_COPY[interaction].example,\n        description: INTERACTIONS[interaction].description,\n        reducedMotion: REDUCED_MOTION[interaction],\n        plays: PLAY[interaction],\n      },\n    ])\n  ) as Record<Interaction, InteractionText>,\n};\n",
+  "version": 1
+}

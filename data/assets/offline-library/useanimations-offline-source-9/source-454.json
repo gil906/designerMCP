@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/zh/licence.ts",
+  "filename": "licence.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-454",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/zh/licence.ts",
+    "title": "website/src/i18n/messages/zh/licence.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "aaa05c6592d95eb014d752fddf183285022b34342b0ea42aaa415479ba70c544",
+  "text": "// 许可页面（/licencing-and-terms）。LICENSE 原文在所有语言中都以英文显示。\nimport type { Messages } from '../en';\n\nexport const licence: Messages['licence'] = {\n  title: '许可与条款 — useAnimations',\n  description:\n    'useAnimations 图标和 react-useanimations 软件包采用 MIT 许可证：个人和商业用途均可免费使用和再分发，无需署名。',\n  name: '许可与条款',\n  heading: '免费使用，MIT 许可。',\n  introHtml: (mitHref: string) =>\n    `useAnimations 图标和 <code>react-useanimations</code> 软件包均以 <a href=\"${mitHref}\">MIT 许可证</a>发布。`,\n  canDo: '您可以',\n  canDoItemsHtml: [\n    '<strong>使用</strong>：在个人和商业网站、应用及产品中使用这些图标。',\n    '<strong>修改</strong>：调整颜色、尺寸、节奏，甚至动效本身。',\n    '<strong>再分发</strong>：包括放进图标包、模板、主题、UI 套件和组件注册表中分发。',\n  ],\n  attribution: '署名',\n  attributionText:\n    '不强制要求，但我们很欢迎。直接再分发这些文件时，请保留许可声明；如果您愿意注明出处，可以使用：',\n  credit: (link: string) => `动态图标来自 ${link}`,\n  noWarranty: '无担保',\n  noWarrantyText: '图标和代码均按“原样”提供，不附带任何形式的担保。',\n  licenseText: '许可证文本',\n  bindingNote: '以下许可证文本为英文原版，具有法律效力的以该版本为准。',\n};\n",
+  "version": 1
+}

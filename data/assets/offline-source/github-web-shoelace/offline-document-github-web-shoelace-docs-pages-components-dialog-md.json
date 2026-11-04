@@ -1,0 +1,68 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "Copyright (c) 2020 A Beautiful Site, LLC"
+  ],
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 8235,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "---\nmeta:\n  title: Dialog\n  description: 'Dialogs, sometimes called \"modals\", appear above the page and require the user''s immediate attention.'\nlayout: component\n---\n\n<!-- cspell:dictionaries lorem-ipsum -->\n\n```html:preview\n<sl-dialog label=\"Dialog\" class=\"dialog-overview\">\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n  <sl-button slot=\"footer\" variant=\"primary\">Close</sl-button>\n</sl-dialog>\n\n<sl-button>Open Dialog</sl-button>\n\n\n```\n\n```jsx:react\nimport { useState } from 'react';\nimport SlButton from '@shoelace-style/shoelace/dist/react/button';\nimport SlDialog from '@shoelace-style/shoelace/dist/react/dialog';\n\nconst App = () => {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <SlDialog label=\"Dialog\" open={open} onSlAfterHide={() => setOpen(false)}>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        <SlButton slot=\"footer\" variant=\"primary\" onClick={() => setOpen(false)}>\n          Close\n        </SlButton>\n      </SlDialog>\n\n      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>\n    </>\n  );\n};\n```\n\n## Examples\n\n### Custom Width\n\nUse the `--width` custom property to set the dialog's width.\n\n```html:preview\n<sl-dialog label=\"Dialog\" class=\"dialog-width\" style=\"--width: 50vw;\">\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n  <sl-button slot=\"footer\" variant=\"primary\">Close</sl-button>\n</sl-dialog>\n\n<sl-button>Open Dialog</sl-button>\n\n\n```\n\n{% raw %}\n\n```jsx:react\nimport { useState } from 'react';\nimport SlButton from '@shoelace-style/shoelace/dist/react/button';\nimport SlDialog from '@shoelace-style/shoelace/dist/react/dialog';\n\nconst App = () => {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <SlDialog label=\"Dialog\" open={open} style={{ '--width': '50vw' }} onSlAfterHide={() => setOpen(false)}>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        <SlButton slot=\"footer\" variant=\"primary\" onClick={() => setOpen(false)}>\n          Close\n        </SlButton>\n      </SlDialog>\n\n      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>\n    </>\n  );\n};\n```\n\n{% endraw %}\n\n### Scrolling\n\nBy design, a dialog's height will never exceed that of the viewport. As such, dialogs will not scroll with the page ensuring the header and footer are always accessible to the user.\n\n```html:preview\n<sl-dialog label=\"Dialog\" class=\"dialog-scrolling\">\n  <div style=\"height: 150vh; border: dashed 2px var(--sl-color-neutral-200); padding: 0 1rem;\">\n    <p>Scroll down and give it a try! 👇</p>\n  </div>\n  <sl-button slot=\"footer\" variant=\"primary\">Close</sl-button>\n</sl-dialog>\n\n<sl-button>Open Dialog</sl-button>\n\n\n```\n\n{% raw %}\n\n```jsx:react\nimport { useState } from 'react';\nimport SlButton from '@shoelace-style/shoelace/dist/react/button';\nimport SlDialog from '@shoelace-style/shoelace/dist/react/dialog';\n\nconst App = () => {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <SlDialog label=\"Dialog\" open={open} onSlAfterHide={() => setOpen(false)}>\n        <div\n          style={{\n            height: '150vh',\n            border: 'dashed 2px var(--sl-color-neutral-200)',\n            padding: '0 1rem'\n          }}\n        >\n          <p>Scroll down and give it a try! 👇</p>\n        </div>\n\n        <SlButton slot=\"footer\" variant=\"primary\" onClick={() => setOpen(false)}>\n          Close\n        </SlButton>\n      </SlDialog>\n\n      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>\n    </>\n  );\n};\n```\n\n{% endraw %}\n\n### Header Actions\n\nThe header shows a functional close button by default. You can use the `header-actions` slot to add additional icon buttons (/components/icon-button) if needed.\n\n```html:preview\n<sl-dialog label=\"Dialog\" class=\"dialog-header-actions\">\n  <sl-icon-button class=\"new-window\" slot=\"header-actions\" name=\"box-arrow-up-right\"></sl-icon-button>\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n  <sl-button slot=\"footer\" variant=\"primary\">Close</sl-button>\n</sl-dialog>\n\n<sl-button>Open Dialog</sl-button>\n\n\n```\n\n```jsx:react\nimport { useState } from 'react';\nimport SlButton from '@shoelace-style/shoelace/dist/react/button';\nimport SlDialog from '@shoelace-style/shoelace/dist/react/dialog';\nimport SlIconButton from '@shoelace-style/shoelace/dist/react/icon-button';\n\nconst App = () => {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <SlDialog label=\"Dialog\" open={open} onSlAfterHide={() => setOpen(false)}>\n        <SlIconButton\n          class=\"new-window\"\n          slot=\"header-actions\"\n          name=\"box-arrow-up-right\"\n          onClick={() => window.open(location.href)}\n        />\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        <SlButton slot=\"footer\" variant=\"primary\" onClick={() => setOpen(false)}>\n          Close\n        </SlButton>\n      </SlDialog>\n\n      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>\n    </>\n  );\n};\n```\n\n### Preventing the Dialog from Closing\n\nBy default, dialogs will close when the user clicks the close button, clicks the overlay, or presses the [[Escape]] key. In most cases, the default behavior is the best behavior in terms of UX. However, there are situations where this may be undesirable, such as when data loss will occur.\n\nTo keep the dialog open in such cases, you can cancel the `sl-request-close` event. When canceled, the dialog will remain open and pulse briefly to draw the user's attention to it.\n\nYou can use `event.detail.source` to determine what triggered the request to close. This example prevents the dialog from closing when the overlay is clicked, but allows the close button or [[Escape]] to dismiss it.\n\n```html:preview\n<sl-dialog label=\"Dialog\" class=\"dialog-deny-close\">\n  This dialog will not close when you click on the overlay.\n  <sl-button slot=\"footer\" variant=\"primary\">Close</sl-button>\n</sl-dialog>\n\n<sl-button>Open Dialog</sl-button>\n\n\n```\n\n```jsx:react\nimport { useState } from 'react';\nimport SlButton from '@shoelace-style/shoelace/dist/react/button';\nimport SlDialog from '@shoelace-style/shoelace/dist/react/dialog';\n\nconst App = () => {\n  const [open, setOpen] = useState(false);\n\n  // Prevent the dialog from closing when the user clicks on the overlay\n  function handleRequestClose(event) {\n    if (event.detail.source === 'overlay') {\n      event.preventDefault();\n    }\n  }\n\n  return (\n    <>\n      <SlDialog label=\"Dialog\" open={open} onSlRequestClose={handleRequestClose} onSlAfterHide={() => setOpen(false)}>\n        This dialog will not close when you click on the overlay.\n        <SlButton slot=\"footer\" variant=\"primary\" onClick={() => setOpen(false)}>\n          Close\n        </SlButton>\n      </SlDialog>\n\n      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>\n    </>\n  );\n};\n```\n\n### Customizing Initial Focus\n\nBy default, the dialog's panel will gain focus when opened. This allows a subsequent tab press to focus on the first tabbable element in the dialog. If you want a different element to have focus, add the `autofocus` attribute to it as shown below.\n\n```html:preview\n<sl-dialog label=\"Dialog\" class=\"dialog-focus\">\n  <sl-input autofocus placeholder=\"I will have focus when the dialog is opened\"></sl-input>\n  <sl-button slot=\"footer\" variant=\"primary\">Close</sl-button>\n</sl-dialog>\n\n<sl-button>Open Dialog</sl-button>\n\n\n```\n\n```jsx:react\nimport { useState } from 'react';\nimport SlButton from '@shoelace-style/shoelace/dist/react/button';\nimport SlDialog from '@shoelace-style/shoelace/dist/react/dialog';\nimport SlInput from '@shoelace-style/shoelace/dist/react/input';\n\nconst App = () => {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <SlDialog label=\"Dialog\" open={open} onSlAfterHide={() => setOpen(false)}>\n        <SlInput autofocus placeholder=\"I will have focus when the dialog is opened\" />\n        <SlButton slot=\"footer\" variant=\"primary\" onClick={() => setOpen(false)}>\n          Close\n        </SlButton>\n      </SlDialog>\n\n      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>\n    </>\n  );\n};\n```\n\n:::tip\nYou can further customize initial focus behavior by canceling the `sl-initial-focus` event and setting focus yourself inside the event handler.\n:::\n",
+  "content_sha256": "3e565f005303a6d9f49490146e28f290c086f7d26bb4880cf65bee5bdf43aaa2",
+  "expected_git_blob_sha1": "46dca36f410769ee655b817be24d35cf4108929c",
+  "filename": "dialog.md",
+  "full_content_sha256": "3e565f005303a6d9f49490146e28f290c086f7d26bb4880cf65bee5bdf43aaa2",
+  "full_file_complete": false,
+  "full_source_sha256": "0aa8a42b9362b7d7e8ee21f960a5b4e8c2f0eef10d5c146bc4cee3c5b5883783",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 277,
+    "start": 1,
+    "total": 277
+  },
+  "modifications": [
+    {
+      "count": 6,
+      "operation": "remove raw script blocks"
+    },
+    {
+      "count": 1,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "docs/pages/components/dialog.md",
+  "repository": "shoelace-style/shoelace",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/shoelace/LICENSE.txt",
+      "sha256": "ac9ffacbfc877b6f4253a481b3c0edbad0c019ac3506a3b51415b336f4a0c054"
+    }
+  ],
+  "revision": "25bd8ec776609670a932f21390be59a495df497d",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 10593,
+  "source_lines": 329,
+  "source_sha256": "0aa8a42b9362b7d7e8ee21f960a5b4e8c2f0eef10d5c146bc4cee3c5b5883783",
+  "source_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/docs/pages/components/dialog.md",
+  "verified_git_blob_sha1": "46dca36f410769ee655b817be24d35cf4108929c"
+}

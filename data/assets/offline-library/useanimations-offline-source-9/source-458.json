@@ -1,0 +1,18 @@
+{
+  "archive_path": "archives/offline-tooling/useanimations/source/website/src/lib/git.ts",
+  "complete": false,
+  "content_omitted": true,
+  "filename": "git.ts",
+  "format": "typescript",
+  "kind": "offline-excluded-source",
+  "original_asset": {
+    "id": "source-458",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/lib/git.ts",
+    "title": "website/src/lib/git.ts"
+  },
+  "purpose": "Original tooling is not returned or executed. This is an omission index, not source implementation.",
+  "sha256": "322e9311980ec84286f663a8b49f07b712383d65feeec3ebc41d0cec20adff50",
+  "static_risk": "process-execution",
+  "version": 1
+}

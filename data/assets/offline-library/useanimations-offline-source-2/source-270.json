@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/test/fakePlayer.ts",
+  "filename": "fakePlayer.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-270",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/test/fakePlayer.ts",
+    "title": "test/fakePlayer.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "b74acdcabc6029ca994699fc7647e6aa0f1b5630ef2c3637e11884d98293b2ea",
+  "text": "import type { PlayerOptions } from '../src/player';\n\n// Minimal stand-in for the player that records what the component asks it to do.\nexport class FakeAnimation {\n  calls: string[] = [];\n  destroyed = false;\n  direction = 1;\n  speed = 1;\n  totalFrames = 60;\n  isPaused = true;\n  listeners: Record<string, (() => void)[]> = {};\n  svg: SVGSVGElement;\n  config: PlayerOptions;\n\n  constructor(config: PlayerOptions) {\n    this.config = config;\n    this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');\n    config.container.appendChild(this.svg);\n  }\n\n  play() {\n    this.calls.push(`play:${this.direction}`);\n    this.isPaused = false;\n  }\n\n  pause() {\n    this.isPaused = true;\n  }\n\n  goToAndStop(frame: number) {\n    this.calls.push(`goto:${frame}`);\n    this.isPaused = true;\n  }\n\n  setDirection(direction: number) {\n    this.direction = direction;\n  }\n\n  setSpeed(speed: number) {\n    this.speed = speed;\n  }\n\n  playSegments(segments: [number, number]) {\n    this.calls.push(`segments:${segments.join('-')}`);\n    this.isPaused = false;\n  }\n\n  addEventListener(name: string, callback: () => void) {\n    (this.listeners[name] ??= []).push(callback);\n    return () => undefined;\n  }\n\n  trigger(name: string) {\n    this.listeners[name]?.forEach((callback) => callback());\n  }\n\n  destroy() {\n    this.destroyed = true;\n    this.svg.remove();\n  }\n}\n\nexport const instances: FakeAnimation[] = [];\n\nexport const fakePlayerModule = {\n  loadAnimation: (options: PlayerOptions) => {\n    const animation = new FakeAnimation(options);\n    instances.push(animation);\n    return animation;\n  },\n};\n",
+  "version": 1
+}

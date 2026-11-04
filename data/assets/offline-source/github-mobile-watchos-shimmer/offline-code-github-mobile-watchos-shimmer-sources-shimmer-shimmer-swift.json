@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 7491,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "//\n//  Shimmer.swift\n//  SwiftUI-Shimmer\n//  Created by Vikram Kriplaney on 23.03.21.\n//\n\nimport SwiftUI\n\n/// A view modifier that applies an animated \"shimmer\" to any view, typically to show that an operation is in progress.\npublic struct Shimmer: ViewModifier {\n    public enum Mode {\n        /// Masks the content with the gradient (this is the usual, default mode).\n        case mask\n        /// Overlays the gradient with a given `BlendMode` (`.sourceAtop` by default).\n        case overlay(blendMode: BlendMode = .sourceAtop)\n        /// Places the gradient behind the content.\n        case background\n    }\n\n    private let animation: Animation\n    private let gradient: Gradient\n    private let min, max: CGFloat\n    private let mode: Mode\n    @State private var isInitialState = true\n    @Environment(\\.layoutDirection) private var layoutDirection\n\n    /// Initializes his modifier with a custom animation,\n    /// - Parameters:\n    ///   - animation: A custom animation. Defaults to ``Shimmer/defaultAnimation``.\n    ///   - gradient: A custom gradient. Defaults to ``Shimmer/defaultGradient``.\n    ///   - bandSize: The size of the animated mask's \"band\". Defaults to 0.3 unit points, which corresponds to\n    /// 30% of the extent of the gradient.\n    public init(\n        animation: Animation = Self.defaultAnimation,\n        gradient: Gradient = Self.defaultGradient,\n        bandSize: CGFloat = 0.3,\n        mode: Mode = .mask\n    ) {\n        self.animation = animation\n        self.gradient = gradient\n        // Calculate unit point dimensions beyond the gradient's edges by the band size\n        self.min = 0 - bandSize\n        self.max = 1 + bandSize\n        self.mode = mode\n    }\n\n    /// The default animation effect.\n    public static let defaultAnimation = Animation.linear(duration: 1.5).delay(0.25).repeatForever(autoreverses: false)\n\n    // A default gradient for the animated mask.\n    public static let defaultGradient = Gradient(colors: [\n        .black.opacity(0.3), // translucent\n        .black, // opaque\n        .black.opacity(0.3) // translucent\n    ])\n\n    /*\n     Calculating the gradient's animated start and end unit points:\n     min,min\n        \\\n         ┌───────┐         ┌───────┐\n         │0,0    │ Animate │       │  \"forward\" gradient\n     LTR │       │ ───────►│    1,1│  / // /\n         └───────┘         └───────┘\n                                    \\\n                                  max,max\n                max,min\n                  /\n         ┌───────┐         ┌───────┐\n         │    1,0│ Animate │       │  \"backward\" gradient\n     RTL │       │ ───────►│0,1    │  \\ \\\\ \\\n         └───────┘         └───────┘\n                          /\n                       min,max\n     */\n\n    /// The start unit point of our gradient, adjusting for layout direction.\n    var startPoint: UnitPoint {\n        if layoutDirection == .rightToLeft {\n            isInitialState ? UnitPoint(x: max, y: min) : UnitPoint(x: 0, y: 1)\n        } else {\n            isInitialState ? UnitPoint(x: min, y: min) : UnitPoint(x: 1, y: 1)\n        }\n    }\n\n    /// The end unit point of our gradient, adjusting for layout direction.\n    var endPoint: UnitPoint {\n        if layoutDirection == .rightToLeft {\n            isInitialState ? UnitPoint(x: 1, y: 0) : UnitPoint(x: min, y: max)\n        } else {\n            isInitialState ? UnitPoint(x: 0, y: 0) : UnitPoint(x: max, y: max)\n        }\n    }\n\n    public func body(content: Content) -> some View {\n        applyingGradient(to: content)\n            .animation(animation, value: isInitialState)\n            .onAppear {\n                // Delay the animation until the initial layout is established\n                // to prevent animating the appearance of the view\n                DispatchQueue.main.asyncAfter(deadline: .now()) {\n                    isInitialState = false\n                }\n            }\n    }\n\n    @ViewBuilder public func applyingGradient(to content: Content) -> some View {\n        let gradient = LinearGradient(gradient: gradient, startPoint: startPoint, endPoint: endPoint)\n        switch mode {\n        case .mask:\n            content.mask(gradient)\n        case let .overlay(blendMode: blendMode):\n            content.overlay(gradient.blendMode(blendMode))\n        case .background:\n            content.background(gradient)\n        }\n    }\n}\n\npublic extension View {\n    /// Adds an animated shimmering effect to any view, typically to show that an operation is in progress.\n    /// - Parameters:\n    ///   - active: Convenience parameter to conditionally enable the effect. Defaults to `true`.\n    ///   - animation: A custom animation. Defaults to ``Shimmer/defaultAnimation``.\n    ///   - gradient: A custom gradient. Defaults to ``Shimmer/defaultGradient``.\n    ///   - bandSize: The size of the animated mask's \"band\". Defaults to 0.3 unit points, which corresponds to\n    /// 20% of the extent of the gradient.\n    @ViewBuilder func shimmering(\n        active: Bool = true,\n        animation: Animation = Shimmer.defaultAnimation,\n        gradient: Gradient = Shimmer.defaultGradient,\n        bandSize: CGFloat = 0.3,\n        mode: Shimmer.Mode = .mask\n    ) -> some View {\n        if active {\n            modifier(Shimmer(animation: animation, gradient: gradient, bandSize: bandSize, mode: mode))\n        } else {\n            self\n        }\n    }\n\n    /// Adds an animated shimmering effect to any view, typically to show that an operation is in progress.\n    /// - Parameters:\n    ///   - active: Convenience parameter to conditionally enable the effect. Defaults to `true`.\n    ///   - duration: The duration of a shimmer cycle in seconds.\n    ///   - bounce: Whether to bounce (reverse) the animation back and forth. Defaults to `false`.\n    ///   - delay:A delay in seconds. Defaults to `0.25`.\n    @available(*, deprecated, message: \"Use shimmering(active:animation:gradient:bandSize:) instead.\")\n    @ViewBuilder func shimmering(\n        active: Bool = true, duration: Double, bounce: Bool = false, delay: Double = 0.25\n    ) -> some View {\n        shimmering(\n            active: active,\n            animation: .linear(duration: duration).delay(delay).repeatForever(autoreverses: bounce)\n        )\n    }\n}\n\n#if DEBUG\nstruct Shimmer_Previews: PreviewProvider {\n    static var previews: some View {\n        Group {\n            Text(\"SwiftUI Shimmer\")\n            if #available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *) {\n                Text(\"SwiftUI Shimmer\").preferredColorScheme(.light)\n                Text(\"SwiftUI Shimmer\").preferredColorScheme(.dark)\n                VStack(alignment: .leading) {\n                    Text(\"Loading...\").font(.title)\n                    Text(String(repeating: \"Shimmer\", count: 12))\n                        .redacted(reason: .placeholder)\n                }.frame(maxWidth: 200)\n            }\n        }\n        .padding()\n        .shimmering()\n        .previewLayout(.sizeThatFits)\n\n        VStack(alignment: .leading) {\n            Text(\"مرحبًا\")\n            Text(\"← Right-to-left layout direction\").font(.body)\n            Text(\"שלום\")\n        }\n        .font(.largeTitle)\n        .shimmering()\n        .environment(\\.layoutDirection, .rightToLeft)\n\n        Text(\"Custom Gradient Mode\").bold()\n            .font(.largeTitle)\n            .shimmering(\n                gradient: Gradient(colors: [.clear, .orange, .white, .green, .clear]),\n                bandSize: 0.5,\n                mode: .overlay()\n            )\n    }\n}\n#endif\n",
+  "content_sha256": "46ca88941025e4f83da18e1f94bbec59702fca0dc2654ab84ff5766e6dc898dc",
+  "expected_git_blob_sha1": "80ef5a51f05a3ebe4cf52787e235a1cf88c77f55",
+  "filename": "Shimmer.swift",
+  "full_content_sha256": "46ca88941025e4f83da18e1f94bbec59702fca0dc2654ab84ff5766e6dc898dc",
+  "full_file_complete": true,
+  "full_source_sha256": "46ca88941025e4f83da18e1f94bbec59702fca0dc2654ab84ff5766e6dc898dc",
+  "kind": "source-file",
+  "language": "swift",
+  "license": "MIT",
+  "license_path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 196,
+    "start": 1,
+    "total": 196
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "swift",
+  "original_path": "Sources/Shimmer/Shimmer.swift",
+  "repository": "markiv/SwiftUI-Shimmer",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "sha256": "4f77e514d5f70e976c4ba48407db21fb286a1ad2365093105c75206da14ecfbf"
+    }
+  ],
+  "revision": "0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 7711,
+  "source_lines": 196,
+  "source_sha256": "46ca88941025e4f83da18e1f94bbec59702fca0dc2654ab84ff5766e6dc898dc",
+  "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/Sources/Shimmer/Shimmer.swift",
+  "verified_git_blob_sha1": "80ef5a51f05a3ebe4cf52787e235a1cf88c77f55"
+}

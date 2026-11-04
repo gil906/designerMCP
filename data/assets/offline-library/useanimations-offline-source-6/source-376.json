@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/fr/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-376",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/fr/common.ts",
+    "title": "website/src/i18n/messages/fr/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "807e8763f2b7b2d645f0a8d03bb3939e9051f3a295727052b8ba2c269b0c8b4b",
+  "text": "import type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: 'Aller au contenu',\n  ogImageAlt: 'useAnimations : icônes animées gratuites pour React, shadcn/ui, Lottie et SVG',\n  homeLabel: 'Accueil useAnimations',\n  mainNav: 'Navigation principale',\n  browseIcons: 'Parcourir les icônes',\n  nav: {\n    icons: 'Icônes',\n    categories: 'Catégories',\n    documentation: 'Documentation',\n    shadcn: 'shadcn',\n    lottie: 'Icônes Lottie',\n    license: 'Licence',\n  },\n  footer: {\n    tagline:\n      'Des icônes animées gratuites, interactions incluses. Sous licence MIT, conçues pour React.',\n    product: 'Produit',\n    developers: 'Développeurs',\n    follow: 'Suivre',\n    languages: 'Langues',\n    allIcons: 'Toutes les icônes',\n    categories: 'Catégories',\n    interactions: 'Interactions',\n    lottieIcons: 'Icônes Lottie',\n    shadcnIcons: 'Icônes shadcn/ui',\n    documentation: 'Documentation',\n    licencing: 'Licence et conditions',\n    shadcnRegistry: 'Registre shadcn',\n    mitLicense: 'Licence MIT',\n    builtWith: 'Site réalisé avec Astro',\n  },\n  breadcrumb: 'Fil d’Ariane',\n  crumbs: { icons: 'Icônes', categories: 'Catégories', interactions: 'Interactions' },\n  faq: 'Questions fréquentes',\n  copy: 'Copier',\n  copied: 'Copié',\n  pressCtrlC: 'Appuyez sur Ctrl+C',\n  languageBanner: {\n    text: 'Cette page existe aussi en français.',\n    action: 'Passer en français',\n    dismiss: 'Fermer',\n  },\n};\n",
+  "version": 1
+}

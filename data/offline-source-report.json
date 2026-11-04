@@ -1,0 +1,789 @@
+{
+  "artifact_hashes": {
+    "assets/offline-source/github-mobile-animated-tab-bar/offline-code-github-mobile-animated-tab-bar-sources-animatedtabbar-animatedtabbar-swift.json": "51466d7dc1572f45f248103c610696bd11403489eb2ba0b7caa3dc4a6e30e97d",
+    "assets/offline-source/github-mobile-animated-tab-bar/offline-document-github-mobile-animated-tab-bar-readme-md.json": "d17b8e7f5a564e75eec322e8d03273564cdcd9232d13a4b6c0ccd10d32220cbb",
+    "assets/offline-source/github-mobile-compose-reply/offline-code-github-mobile-compose-reply-reply-app-src-main-java-com-example-reply-ui-replyapp-kt.json": "52dd237d894d3cb0066be0c3caeee6395d2c31ff1ef03833e32d831cae6eb5fd",
+    "assets/offline-source/github-mobile-compose-reply/offline-code-github-mobile-compose-reply-reply-app-src-main-java-com-example-reply-ui-replylistcontent-kt.json": "8fa5284a44d686e8975af0a0ab7640ed5b9afcf042ff0c76a6391ab095bee419",
+    "assets/offline-source/github-mobile-flutter-samples/offline-code-github-mobile-flutter-samples-material-3-demo-lib-src-home-dart.json": "5011b6ebd9aa8c940d0228216849201c5d67aabbd85a8a6f61bc0e78cce23d86",
+    "assets/offline-source/github-mobile-flutter-samples/offline-document-github-mobile-flutter-samples-readme-md.json": "c806ef7e93acc7f8e9ca71588a1aae4f8cbd1e856975e1780237e0e3192c3f3f",
+    "assets/offline-source/github-mobile-now-in-android/offline-code-github-mobile-now-in-android-app-src-main-kotlin-com-google-samples-apps-nowinandroid-ui-niaapp-kt.json": "b4380fba4b1dd6623f82b2d37a1b20a6e8763a51220d7e4991909eff077b4b51",
+    "assets/offline-source/github-mobile-now-in-android/offline-document-github-mobile-now-in-android-readme-md.json": "9c15c197a7486f58ec606d1ae1c67431dde031edbfbe4006fb8d36df26594210",
+    "assets/offline-source/github-mobile-popup-view/offline-code-github-mobile-popup-view-sources-popupview-popupbody-swift.json": "7b91dd14b4a517f8c4c22483312131d77ad6cbd29c3aac25083ae7bf86e1e399",
+    "assets/offline-source/github-mobile-popup-view/offline-code-github-mobile-popup-view-sources-popupview-publicapi-swift.json": "22b1b23384b256a2671da0961e3904696b69be1f98cd4fe8a04d89df53e9f569",
+    "assets/offline-source/github-mobile-popup-view/offline-document-github-mobile-popup-view-readme-md.json": "2e4224605083def9f18721bdb2232df6dc5237362f99ca323f449e77abf9249e",
+    "assets/offline-source/github-mobile-swiftuix/offline-code-github-mobile-swiftuix-sources-swiftuix-intramodular-layout-automaticaxisstack-swift.json": "fb11f756bade1231b7003d4d5a05cfd654532d11a3b84e18df7c3eb50d4ec4fe",
+    "assets/offline-source/github-mobile-swiftuix/offline-code-github-mobile-swiftuix-sources-swiftuix-intramodular-screen-userinterfaceidiom-swift.json": "28e2ef69803082f8c90736d8e7e8e29c441302eb1488af98cbc1ebd348a53601",
+    "assets/offline-source/github-mobile-swiftuix/offline-document-github-mobile-swiftuix-readme-md.json": "43a611cf1adc12bbf2a342e4b604a20e1868fa0e0e798179be0e5db51543fd76",
+    "assets/offline-source/github-mobile-watchos-shimmer/offline-code-github-mobile-watchos-shimmer-sources-shimmer-shimmer-swift.json": "8faa5f622a9af8af51e94858ee093656b0994ad4c6e7a33a11aa6d51eca1d56e",
+    "assets/offline-source/github-mobile-watchos-shimmer/offline-document-github-mobile-watchos-shimmer-readme-md.json": "e98779d6adc84f84a4ab87c110f4ef3e6ed62566fcec60919bac90a633e8dc00",
+    "assets/offline-source/github-mobile-wear-os-compose/offline-code-github-mobile-wear-os-compose-composestarter-app-src-main-java-com-example-android-wearable-co-899705a9e4df.json": "5fb6a9a0b95cfce3d88b236492c80b33aba119fe3c7d6df812094c7ecee09c67",
+    "assets/offline-source/github-mobile-wear-os-compose/offline-document-github-mobile-wear-os-compose-readme-md.json": "b8cdd245ecae8d78a438482ff980a2c1cbce09ff3130377790859b3c4d682056",
+    "assets/offline-source/github-motion-airbnb--lottie-web/offline-code-github-motion-airbnb--lottie-web-player-js-animation-animationmanager-js.json": "9c565c99eb71e9650a4b6c68309d530b427d17427718a91a43a371169ce1c814",
+    "assets/offline-source/github-motion-airbnb--lottie-web/offline-document-github-motion-airbnb--lottie-web-readme-md.json": "5f81ca9e757b7a8f5967a3a2083b21d762d989c9a30d9045ed3d98f8d2d16459",
+    "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-base-dotlottie-react-tsx.json": "1b1596b9e3810e09cf8bd1ab588a5e1485764a7061d0b4a0b01337bdcb053b1c",
+    "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-dotlottie-tsx.json": "09e586f97e460973ac4ad4c7da2c80e5055fb966a135f4dbce0e0ed61c6e06b1",
+    "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-document-github-motion-lottiefiles--dotlottie-web-readme-md.json": "6d467c1d891cd9c82619834be1dd6536236a39b7b2aa0c0ee8c9c1d9d4989920",
+    "assets/offline-source/github-motion-pmndrs--drei/offline-code-github-motion-pmndrs--drei-src-core-float-tsx.json": "9cb15daf2f42da99c780d26990607b26f056a7b0e4be5bd5bec0a29578c2b4ac",
+    "assets/offline-source/github-motion-pmndrs--drei/offline-document-github-motion-pmndrs--drei-readme-md.json": "2c15ea16cbaa2ec8ae4db14e40d1a5862568f6b91ef65b40215cdac7045284b1",
+    "assets/offline-source/github-motion-pmndrs--react-three-fiber/offline-code-github-motion-pmndrs--react-three-fiber-packages-fiber-src-core-hooks-tsx.json": "f8d4c1e8cf47c8d59cbe7c00d95a20354c41bcab5d72bdfe24efb5c25ebc2167",
+    "assets/offline-source/github-motion-pmndrs--react-three-fiber/offline-document-github-motion-pmndrs--react-three-fiber-readme-md.json": "31002eb767bcf94a0bcc706664c1f07a73e808b2184d56c2f6dd446ac33f4e36",
+    "assets/offline-source/github-motion-rive-app--rive-flutter/offline-code-github-motion-rive-app--rive-flutter-example-lib-examples-pause-play-dart.json": "04552bc0969fedbddc7b6842a476031938bc10856b2715619efa3eadad8e3cf7",
+    "assets/offline-source/github-motion-rive-app--rive-flutter/offline-document-github-motion-rive-app--rive-flutter-readme-md.json": "d472c64e440a6378222437c3d789067120bdf00c22e720dd2a63c98bfb0e5ae6",
+    "assets/offline-source/github-motion-rive-app--rive-react/offline-code-github-motion-rive-app--rive-react-src-hooks-userive-tsx.json": "4b3f24716e9df0ddb3f5caa53dba01d0f34d16189bbe1b356697d4705879f3f5",
+    "assets/offline-source/github-motion-rive-app--rive-react/offline-document-github-motion-rive-app--rive-react-readme-md.json": "23c368baec773b24969e847a88698ff41bdd932e1ff40a7a1becdbebe6266ea5",
+    "assets/offline-source/github-motion-software-mansion--react-native-reanimated/offline-code-github-motion-software-mansion--react-native-reanimated-packages-react-native-reanimated-src-a-b51e293d2ae5.json": "e9eebd334aa43c621069e0a68608c4685587d9414545dc802eb109a9e47de486",
+    "assets/offline-source/github-motion-software-mansion--react-native-reanimated/offline-document-github-motion-software-mansion--react-native-reanimated-readme-md.json": "99664b0ee527ce6a1bbcb40df78e718d3f5d6d280b9a9fd63299737c42a16917",
+    "assets/offline-source/github-motion-vueuse--motion/offline-code-github-motion-vueuse--motion-src-usereducedmotion-ts.json": "9a8eac5151436b470fbecc4780dc376e55e7a6c527abbfcab69a8ea692c74bf2",
+    "assets/offline-source/github-motion-vueuse--motion/offline-document-github-motion-vueuse--motion-readme-md.json": "a929238e5af82357130ecbab92e187a43ab13145a4412e837bf585aa3712c9a6",
+    "assets/offline-source/github-web-carbon/offline-document-github-web-carbon-packages-react-src-components-accordion-accordion-mdx.json": "0b12820404dda1f09f477de991858e0d34cb1062c9b7c93ef2325b036a39e9fa",
+    "assets/offline-source/github-web-carbon/offline-document-github-web-carbon-readme-md.json": "cd8ffeb2792335e2b9dd4459d6f5cae8f811ec981a8698f6921834027993dc2c",
+    "assets/offline-source/github-web-chakra-ui/offline-code-github-web-chakra-ui-apps-compositions-src-examples-accordion-with-subtext-tsx.json": "46417e681bad747d2235622a6bd46b9835d0bb911e7adc5ae9d11128971f0489",
+    "assets/offline-source/github-web-chakra-ui/offline-document-github-web-chakra-ui-readme-md.json": "ae4bcf11fdf61f17043d3721475d4dbfd272a53e2a08fd54e9edcb196b0da2cc",
+    "assets/offline-source/github-web-headlessui/offline-code-github-web-headlessui-playgrounds-react-page-examples-combinations-tabs-in-dialog-tsx.json": "0cf64e6536ef0cc8735373f04b4032ddf3e4bdef660cd5b3853676987fe4fa1c",
+    "assets/offline-source/github-web-headlessui/offline-document-github-web-headlessui-readme-md.json": "550c446ae2647c5b3ba8db981cae70701cc7b97dee3cbfbef22428af796d524e",
+    "assets/offline-source/github-web-mantine/offline-code-github-web-mantine-packages-mantine-core-src-components-accordion-accordion-tsx.json": "43697365f470891cc1ba39ce5488e419554fdcf6997db8828eba12df71884832",
+    "assets/offline-source/github-web-mantine/offline-document-github-web-mantine-readme-md.json": "d2dda0203b2a222394cafc7df18a52c2bd258009224e9d51a7177aea4f5a81ba",
+    "assets/offline-source/github-web-primer-react/offline-code-github-web-primer-react-packages-react-src-actionlist-actionlist-stories-tsx.json": "e36314a9cee70390daf4140a74ef844023d63aec7d9fbf14d0699e8e743c5a48",
+    "assets/offline-source/github-web-primer-react/offline-document-github-web-primer-react-readme-md.json": "1ff8295ace48a87577b66d75525c1f4248279f3538ad01b02be3960fb95d34d1",
+    "assets/offline-source/github-web-radix-primitives/offline-code-github-web-radix-primitives-apps-storybook-stories-alert-dialog-stories-tsx.json": "92aab9fb6f762379a280037e6b2cd0f5c7a3a708788e5499068deb797679164a",
+    "assets/offline-source/github-web-radix-primitives/offline-document-github-web-radix-primitives-readme-md.json": "8160e01526b43de0d86c6ba5e22c7fffe9650e563aa18f63266b73fd440b1635",
+    "assets/offline-source/github-web-react-spectrum/offline-code-github-web-react-spectrum-packages-react-aria-src-dialog-usedialog-ts.json": "8a5f477818b7c23330d1fb00d67ba6bfe8ea6df9f6cbbf09ffb0aba9f2857400",
+    "assets/offline-source/github-web-react-spectrum/offline-document-github-web-react-spectrum-packages-react-spectrum-dialog-readme-md.json": "5fda472b174d0e7baa6d8bd178c70a3e7e3644147ffa75ae53d98898ca060fd4",
+    "assets/offline-source/github-web-react-spectrum/offline-document-github-web-react-spectrum-readme-md.json": "fe6dde866674e1d417d730ec3daa34f073a5cc06646832a632b9cbf3849a09e4",
+    "assets/offline-source/github-web-shoelace/offline-document-github-web-shoelace-docs-pages-components-dialog-md.json": "ad00926999aca75ae1fd84dbae5abcc949c8af8c4e194f5abe9020cca9b48008",
+    "assets/offline-source/github-web-shoelace/offline-document-github-web-shoelace-readme-md.json": "7f6c3e93ed74fdcbf0b0249f4962fcfef0a6d41d516d5da6008d0ef25e999051"
+  },
+  "collection": {
+    "archived_verified_git_blobs": 47,
+    "fetched_files": 53,
+    "full_selected_files": 52,
+    "references": 24,
+    "repositories": 24,
+    "transport": "trusted ingest_useanimations.Fetcher; exact immutable request-target guard; redirects rejected",
+    "verified_git_blobs": 48,
+    "wrappers": 52
+  },
+  "limitations": [
+    "Selected complete modules/sample documents only, not complete repositories, websites, frameworks or dependency closures.",
+    "Imported text is inert JSON data and was not executed; no upstream/dependency malware-free or drop-in-compatibility guarantee.",
+    "Static secret/control/injection/loader scans are heuristic; synthetic empty private denylist used without accessing private configuration.",
+    "READMEs/component documents are localized plain text with explicit modifications; source hashes describe original fetched bytes, content hashes describe localized bytes.",
+    "Complete selected-file counts include adapted/localized text; modified wrappers do not claim complete or byte-identical upstream source. Flutter callback type aliases are an explicitly documented adaptation, not compiled or executed.",
+    "Five previously recorded files lack expected Git-blob SHA1; prior SHA256 is verified without fabricating missing tree proof.",
+    "Existing retained LICENSE/NOTICE files and public attribution remain applicable; no licensing obligations waived."
+  ],
+  "references": {
+    "github-mobile-animated-tab-bar": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-mobile-animated-tab-bar-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/animated-tab-bar/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-animated-tab-bar/offline-document-github-mobile-animated-tab-bar-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/exyte/AnimatedTabBar/dcc003243f1fddc019564b08431cf508358f7d58/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "swift",
+          "id": "offline-code-github-mobile-animated-tab-bar-sources-animatedtabbar-animatedtabbar-swift",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/animated-tab-bar/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-animated-tab-bar/offline-code-github-mobile-animated-tab-bar-sources-animatedtabbar-animatedtabbar-swift.json",
+          "source_url": "https://raw.githubusercontent.com/exyte/AnimatedTabBar/dcc003243f1fddc019564b08431cf508358f7d58/Sources/AnimatedTabBar/AnimatedTabbar.swift",
+          "title": "Full Sources/AnimatedTabBar/AnimatedTabbar.swift"
+        }
+      ],
+      "limitations": [
+        "Package.swift: dependency manifest not archived as executable implementation; retained selected Swift modules instead."
+      ]
+    },
+    "github-mobile-compose-reply": {
+      "assets": [
+        {
+          "format": "kotlin",
+          "id": "offline-code-github-mobile-compose-reply-reply-app-src-main-java-com-example-reply-ui-replyapp-kt",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-compose-reply/offline-code-github-mobile-compose-reply-reply-app-src-main-java-com-example-reply-ui-replyapp-kt.json",
+          "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+          "title": "Full Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt"
+        },
+        {
+          "format": "kotlin",
+          "id": "offline-code-github-mobile-compose-reply-reply-app-src-main-java-com-example-reply-ui-replylistcontent-kt",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-compose-reply/offline-code-github-mobile-compose-reply-reply-app-src-main-java-com-example-reply-ui-replylistcontent-kt.json",
+          "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+          "title": "Full Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt"
+        }
+      ],
+      "limitations": [
+        "README.md: unsafe upstream text: README.md:61: private-home-path, README.md:67: private-home-path; full file not archived."
+      ]
+    },
+    "github-mobile-flutter-samples": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-mobile-flutter-samples-readme-md",
+          "license": "BSD-3-Clause",
+          "license_path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-flutter-samples/offline-document-github-mobile-flutter-samples-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "dart",
+          "id": "offline-code-github-mobile-flutter-samples-material-3-demo-lib-src-home-dart",
+          "license": "BSD-3-Clause",
+          "license_path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-flutter-samples/offline-code-github-mobile-flutter-samples-material-3-demo-lib-src-home-dart.json",
+          "source_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/material_3_demo/lib/src/home.dart",
+          "title": "Adapted material_3_demo/lib/src/home.dart"
+        }
+      ],
+      "limitations": []
+    },
+    "github-mobile-now-in-android": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-mobile-now-in-android-readme-md",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-mobile/now-in-android/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-now-in-android/offline-document-github-mobile-now-in-android-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "kotlin",
+          "id": "offline-code-github-mobile-now-in-android-app-src-main-kotlin-com-google-samples-apps-nowinandroid-ui-niaapp-kt",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-mobile/now-in-android/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-now-in-android/offline-code-github-mobile-now-in-android-app-src-main-kotlin-com-google-samples-apps-nowinandroid-ui-niaapp-kt.json",
+          "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/main/kotlin/com/google/samples/apps/nowinandroid/ui/NiaApp.kt",
+          "title": "Full app/src/main/kotlin/com/google/samples/apps/nowinandroid/ui/NiaApp.kt"
+        }
+      ],
+      "limitations": []
+    },
+    "github-mobile-popup-view": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-mobile-popup-view-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/popup-view/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-popup-view/offline-document-github-mobile-popup-view-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "swift",
+          "id": "offline-code-github-mobile-popup-view-sources-popupview-publicapi-swift",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/popup-view/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-popup-view/offline-code-github-mobile-popup-view-sources-popupview-publicapi-swift.json",
+          "source_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/Sources/PopupView/PublicAPI.swift",
+          "title": "Full Sources/PopupView/PublicAPI.swift"
+        },
+        {
+          "format": "swift",
+          "id": "offline-code-github-mobile-popup-view-sources-popupview-popupbody-swift",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/popup-view/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-popup-view/offline-code-github-mobile-popup-view-sources-popupview-popupbody-swift.json",
+          "source_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/Sources/PopupView/PopupBody.swift",
+          "title": "Full Sources/PopupView/PopupBody.swift"
+        }
+      ],
+      "limitations": [
+        "Package.swift: dependency manifest not archived as executable implementation; retained selected Swift modules instead."
+      ]
+    },
+    "github-mobile-swiftuix": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-mobile-swiftuix-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-swiftuix/offline-document-github-mobile-swiftuix-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "swift",
+          "id": "offline-code-github-mobile-swiftuix-sources-swiftuix-intramodular-layout-automaticaxisstack-swift",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-swiftuix/offline-code-github-mobile-swiftuix-sources-swiftuix-intramodular-layout-automaticaxisstack-swift.json",
+          "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift",
+          "title": "Full Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift"
+        },
+        {
+          "format": "swift",
+          "id": "offline-code-github-mobile-swiftuix-sources-swiftuix-intramodular-screen-userinterfaceidiom-swift",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-swiftuix/offline-code-github-mobile-swiftuix-sources-swiftuix-intramodular-screen-userinterfaceidiom-swift.json",
+          "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift",
+          "title": "Full Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift"
+        }
+      ],
+      "limitations": [
+        "Package.swift: dependency manifest not archived as executable implementation; retained selected Swift modules instead."
+      ]
+    },
+    "github-mobile-watchos-shimmer": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-mobile-watchos-shimmer-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-watchos-shimmer/offline-document-github-mobile-watchos-shimmer-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "swift",
+          "id": "offline-code-github-mobile-watchos-shimmer-sources-shimmer-shimmer-swift",
+          "license": "MIT",
+          "license_path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-watchos-shimmer/offline-code-github-mobile-watchos-shimmer-sources-shimmer-shimmer-swift.json",
+          "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/Sources/Shimmer/Shimmer.swift",
+          "title": "Full Sources/Shimmer/Shimmer.swift"
+        }
+      ],
+      "limitations": [
+        "Package.swift: dependency manifest not archived as executable implementation; retained selected Swift modules instead."
+      ]
+    },
+    "github-mobile-wear-os-compose": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-mobile-wear-os-compose-readme-md",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-wear-os-compose/offline-document-github-mobile-wear-os-compose-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/android/wear-os-samples/665d6a48466d472a4d928661dd865364d5073799/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "kotlin",
+          "id": "offline-code-github-mobile-wear-os-compose-composestarter-app-src-main-java-com-example-android-wearable-co-899705a9e4df",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-mobile-wear-os-compose/offline-code-github-mobile-wear-os-compose-composestarter-app-src-main-java-com-example-android-wearable-co-899705a9e4df.json",
+          "source_url": "https://raw.githubusercontent.com/android/wear-os-samples/665d6a48466d472a4d928661dd865364d5073799/ComposeStarter/app/src/main/java/com/example/android/wearable/composestarter/presentation/MainActivity.kt",
+          "title": "Full ComposeStarter/app/src/main/java/com/example/android/wearable/composestarter/presentation/MainActivity.kt"
+        }
+      ],
+      "limitations": []
+    },
+    "github-motion-airbnb--lottie-web": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-airbnb--lottie-web-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-airbnb--lottie-web/offline-document-github-motion-airbnb--lottie-web-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "javascript",
+          "id": "offline-code-github-motion-airbnb--lottie-web-player-js-animation-animationmanager-js",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-airbnb--lottie-web/offline-code-github-motion-airbnb--lottie-web-player-js-animation-animationmanager-js.json",
+          "source_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/player/js/animation/AnimationManager.js",
+          "title": "Full player/js/animation/AnimationManager.js"
+        }
+      ],
+      "limitations": []
+    },
+    "github-motion-lottiefiles--dotlottie-web": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-lottiefiles--dotlottie-web-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-document-github-motion-lottiefiles--dotlottie-web-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-dotlottie-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-dotlottie-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/dotlottie.tsx",
+          "title": "Full packages/react/src/dotlottie.tsx"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-base-dotlottie-react-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-lottiefiles--dotlottie-web/offline-code-github-motion-lottiefiles--dotlottie-web-packages-react-src-base-dotlottie-react-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/base-dotlottie-react.tsx",
+          "title": "Full packages/react/src/base-dotlottie-react.tsx"
+        }
+      ],
+      "limitations": []
+    },
+    "github-motion-pmndrs--drei": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-pmndrs--drei-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-pmndrs--drei/offline-document-github-motion-pmndrs--drei-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-pmndrs--drei-src-core-float-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-pmndrs--drei/offline-code-github-motion-pmndrs--drei-src-core-float-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx",
+          "title": "Full src/core/Float.tsx"
+        }
+      ],
+      "limitations": []
+    },
+    "github-motion-pmndrs--react-three-fiber": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-pmndrs--react-three-fiber-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-pmndrs--react-three-fiber/offline-document-github-motion-pmndrs--react-three-fiber-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/readme.md",
+          "title": "Localized readme.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-pmndrs--react-three-fiber-packages-fiber-src-core-hooks-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-pmndrs--react-three-fiber/offline-code-github-motion-pmndrs--react-three-fiber-packages-fiber-src-core-hooks-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx",
+          "title": "Full packages/fiber/src/core/hooks.tsx"
+        }
+      ],
+      "limitations": []
+    },
+    "github-motion-rive-app--rive-flutter": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-rive-app--rive-flutter-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-rive-app--rive-flutter/offline-document-github-motion-rive-app--rive-flutter-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "dart",
+          "id": "offline-code-github-motion-rive-app--rive-flutter-example-lib-examples-pause-play-dart",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-rive-app--rive-flutter/offline-code-github-motion-rive-app--rive-flutter-example-lib-examples-pause-play-dart.json",
+          "source_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/example/lib/examples/pause_play.dart",
+          "title": "Full example/lib/examples/pause_play.dart"
+        }
+      ],
+      "limitations": []
+    },
+    "github-motion-rive-app--rive-react": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-rive-app--rive-react-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-rive-app--rive-react/offline-document-github-motion-rive-app--rive-react-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-motion-rive-app--rive-react-src-hooks-userive-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-rive-app--rive-react/offline-code-github-motion-rive-app--rive-react-src-hooks-userive-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/src/hooks/useRive.tsx",
+          "title": "Full src/hooks/useRive.tsx"
+        }
+      ],
+      "limitations": []
+    },
+    "github-motion-software-mansion--react-native-reanimated": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-software-mansion--react-native-reanimated-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-software-mansion--react-native-reanimated/offline-document-github-motion-software-mansion--react-native-reanimated-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "typescript",
+          "id": "offline-code-github-motion-software-mansion--react-native-reanimated-packages-react-native-reanimated-src-a-b51e293d2ae5",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-software-mansion--react-native-reanimated/offline-code-github-motion-software-mansion--react-native-reanimated-packages-react-native-reanimated-src-a-b51e293d2ae5.json",
+          "source_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts",
+          "title": "Full packages/react-native-reanimated/src/animation/timing.ts"
+        }
+      ],
+      "limitations": []
+    },
+    "github-motion-vueuse--motion": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-motion-vueuse--motion-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-vueuse--motion/offline-document-github-motion-vueuse--motion-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "typescript",
+          "id": "offline-code-github-motion-vueuse--motion-src-usereducedmotion-ts",
+          "license": "MIT",
+          "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-motion-vueuse--motion/offline-code-github-motion-vueuse--motion-src-usereducedmotion-ts.json",
+          "source_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/src/useReducedMotion.ts",
+          "title": "Full src/useReducedMotion.ts"
+        }
+      ],
+      "limitations": []
+    },
+    "github-web-carbon": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-carbon-readme-md",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/carbon/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-carbon/offline-document-github-web-carbon-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-carbon-packages-react-src-components-accordion-accordion-mdx",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/carbon/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-carbon/offline-document-github-web-carbon-packages-react-src-components-accordion-accordion-mdx.json",
+          "source_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/packages/react/src/components/Accordion/Accordion.mdx",
+          "title": "Localized packages/react/src/components/Accordion/Accordion.mdx"
+        }
+      ],
+      "limitations": [
+        "packages/react/src/components/Accordion/Accordion.mdx: no prior expected Git-blob SHA1; prior full-source SHA256 verified."
+      ]
+    },
+    "github-web-chakra-ui": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-chakra-ui-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-chakra-ui/offline-document-github-web-chakra-ui-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-chakra-ui-apps-compositions-src-examples-accordion-with-subtext-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-chakra-ui/offline-code-github-web-chakra-ui-apps-compositions-src-examples-accordion-with-subtext-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/apps/compositions/src/examples/accordion-with-subtext.tsx",
+          "title": "Full apps/compositions/src/examples/accordion-with-subtext.tsx"
+        }
+      ],
+      "limitations": []
+    },
+    "github-web-headlessui": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-headlessui-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/headlessui/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-headlessui/offline-document-github-web-headlessui-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-headlessui-playgrounds-react-page-examples-combinations-tabs-in-dialog-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/headlessui/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-headlessui/offline-code-github-web-headlessui-playgrounds-react-page-examples-combinations-tabs-in-dialog-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+          "title": "Full playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx"
+        }
+      ],
+      "limitations": []
+    },
+    "github-web-mantine": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-mantine-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/mantine/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-mantine/offline-document-github-web-mantine-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-mantine-packages-mantine-core-src-components-accordion-accordion-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/mantine/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-mantine/offline-code-github-web-mantine-packages-mantine-core-src-components-accordion-accordion-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+          "title": "Full packages/@mantine/core/src/components/Accordion/Accordion.tsx"
+        }
+      ],
+      "limitations": [
+        "packages/@mantine/core/src/components/Accordion/Accordion.tsx: no prior expected Git-blob SHA1; prior full-source SHA256 verified."
+      ]
+    },
+    "github-web-primer-react": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-primer-react-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-primer-react/offline-document-github-web-primer-react-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-primer-react-packages-react-src-actionlist-actionlist-stories-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-primer-react/offline-code-github-web-primer-react-packages-react-src-actionlist-actionlist-stories-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx",
+          "title": "Full packages/react/src/ActionList/ActionList.stories.tsx"
+        }
+      ],
+      "limitations": [
+        "packages/react/src/ActionList/ActionList.stories.tsx: no prior expected Git-blob SHA1; prior full-source SHA256 verified."
+      ]
+    },
+    "github-web-radix-primitives": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-radix-primitives-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-radix-primitives/offline-document-github-web-radix-primitives-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-radix-primitives-apps-storybook-stories-alert-dialog-stories-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-radix-primitives/offline-code-github-web-radix-primitives-apps-storybook-stories-alert-dialog-stories-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/apps/storybook/stories/alert-dialog.stories.tsx",
+          "title": "Full apps/storybook/stories/alert-dialog.stories.tsx"
+        }
+      ],
+      "limitations": []
+    },
+    "github-web-react-spectrum": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-react-spectrum-readme-md",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-react-spectrum/offline-document-github-web-react-spectrum-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-react-spectrum-packages-react-spectrum-dialog-readme-md",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-react-spectrum/offline-document-github-web-react-spectrum-packages-react-spectrum-dialog-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/@react-spectrum/dialog/README.md",
+          "title": "Localized packages/@react-spectrum/dialog/README.md"
+        },
+        {
+          "format": "typescript",
+          "id": "offline-code-github-web-react-spectrum-packages-react-aria-src-dialog-usedialog-ts",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-react-spectrum/offline-code-github-web-react-spectrum-packages-react-aria-src-dialog-usedialog-ts.json",
+          "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts",
+          "title": "Full packages/react-aria/src/dialog/useDialog.ts"
+        }
+      ],
+      "limitations": [
+        "packages/@react-spectrum/dialog/README.md: no prior expected Git-blob SHA1; prior full-source SHA256 verified.",
+        "packages/react-aria/src/dialog/useDialog.ts: no prior expected Git-blob SHA1; prior full-source SHA256 verified."
+      ]
+    },
+    "github-web-shoelace": {
+      "assets": [
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-shoelace-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-shoelace/offline-document-github-web-shoelace-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-shoelace-docs-pages-components-dialog-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-shoelace/offline-document-github-web-shoelace-docs-pages-components-dialog-md.json",
+          "source_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/docs/pages/components/dialog.md",
+          "title": "Localized docs/pages/components/dialog.md"
+        }
+      ],
+      "limitations": []
+    }
+  },
+  "version": 1
+}

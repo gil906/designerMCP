@@ -23,6 +23,7 @@ async def test_real_stdio_protocol(populated):
             assert names == {
                 "designer_search", "designer_get_reference", "designer_get_asset",
                 "designer_brief", "designer_audit", "designer_library_status",
+                "designer_get_bundle",
             }
             assert all(t.annotations.readOnlyHint and not t.annotations.openWorldHint for t in tools.tools)
             search_tool = next(t for t in tools.tools if t.name == "designer_search")

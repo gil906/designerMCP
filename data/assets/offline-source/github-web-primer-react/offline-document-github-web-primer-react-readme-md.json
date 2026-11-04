@@ -1,0 +1,72 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "Copyright (c) 2018 GitHub, Inc."
+  ],
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 1777,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "<p align=\"center\">\n  \n</p>\n\n<h1 align=\"center\">Primer React</h1>\n\n<p align=\"center\">A React implementation of GitHub's Primer Design System</p>\n\n<p align=\"center\">\n  <a aria-label=\"npm package\" href=\"https://www.npmjs.com/package/@primer/react\">\n    \n  </a>\n  <a aria-label=\"contributors graph\" href=\"https://github.com/primer/react/graphs/contributors\">\n    \n  </a>\n  <a aria-label=\"last commit\" href=\"https://github.com/primer/react/commits/main\">\n    \n  </a>\n  <a aria-label=\"license\" href=\"https://github.com/primer/react/blob/main/LICENSE\">\n    \n  </a>\n</p>\n\n## Documentation\n\nOur documentation site lives at primer.style/react (https://primer.style/react). You'll be able to find detailed documentation on getting started, all of the components, our theme, our principles, and more.\n\n## Installation\n\nInstall @primer/react in your project with your package manager of choice:\n\n```console\n```\n\n```console\n```\n\n## Template\n\nThe fastest way to make a prototype or try Primer React without setting up a new project is by using our react template (https://github.com/primer/react-template).\n\n## Contributing\n\nWe love collaborating with folks inside and outside of GitHub and welcome contributions!\n\n> 👉 See the contributing docs (contributor-docs/CONTRIBUTING.md) for more info on code style, testing, coverage, and troubleshooting.\n\n## New Component Proposals\n\nWe welcome and encourage new component proposals from internal GitHub teams! Our best work comes from collaborating directly with the teams using Primer React Components in their projects. If you'd like to kick off a new component proposal, please submit an issue using the component proposal issue template (https://github.com/primer/react/issues/new?template=new-component-proposal.md) and we will get in touch!\n",
+  "content_sha256": "0f490b3454dcb9ad847f130c46955ee21693320e3a9c75778f7e36462954be35",
+  "expected_git_blob_sha1": "946a3d98763008ec2976204de5f3540ab024d90e",
+  "filename": "README.md",
+  "full_content_sha256": "0f490b3454dcb9ad847f130c46955ee21693320e3a9c75778f7e36462954be35",
+  "full_file_complete": false,
+  "full_source_sha256": "f8b5033456f1c210a24e06958e2adc8e3194709fed1414848c63d62785041fbb",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 50,
+    "start": 1,
+    "total": 50
+  },
+  "modifications": [
+    {
+      "count": 5,
+      "operation": "remove HTML media tags"
+    },
+    {
+      "count": 2,
+      "operation": "remove installer commands"
+    },
+    {
+      "count": 4,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "primer/react",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/primer-react/LICENSE.txt",
+      "sha256": "bf4f127cb7d82ed5c00d7095616440211225f4ca3b0195a0ecd0051720df5c18"
+    }
+  ],
+  "revision": "57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 2327,
+  "source_lines": 53,
+  "source_sha256": "f8b5033456f1c210a24e06958e2adc8e3194709fed1414848c63d62785041fbb",
+  "source_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/README.md",
+  "verified_git_blob_sha1": "946a3d98763008ec2976204de5f3540ab024d90e"
+}

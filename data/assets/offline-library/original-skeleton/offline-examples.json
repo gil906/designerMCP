@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": ".skeleton { background:var(--border); border-radius:var(--radius); min-height:1rem; }\n@keyframes breathe { 50% { opacity:.55; } }\n@media(prefers-reduced-motion:no-preference) { .skeleton { animation:breathe 1.5s ease-in-out infinite; } }",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

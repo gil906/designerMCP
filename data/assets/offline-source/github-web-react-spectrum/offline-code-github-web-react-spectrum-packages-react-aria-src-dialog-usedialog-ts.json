@@ -1,0 +1,62 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "      copyright notice that is included in or attached to the work",
+    "      copyright license to reproduce, prepare Derivative Works of,",
+    "   Copyright 2019 Adobe",
+    " * Copyright 2020 Adobe. All rights reserved."
+  ],
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 5581,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "/*\n * Copyright 2020 Adobe. All rights reserved.\n * This file is licensed to you under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License. You may obtain a copy\n * of the License at http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software distributed under\n * the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS\n * OF ANY KIND, either express or implied. See the License for the specific language\n * governing permissions and limitations under the License.\n */\n\nimport {\n  AriaLabelingProps,\n  DOMAttributes,\n  DOMProps,\n  FocusableElement,\n  RefObject\n} from '@react-types/shared';\nimport {filterDOMProps} from '../utils/filterDOMProps';\nimport {focusSafely} from '../interactions/focusSafely';\nimport {getActiveElement, isFocusWithin} from '../utils/shadowdom/DOMFunctions';\nimport {useEffect, useRef} from 'react';\nimport {useOverlayFocusContain} from '../overlays/Overlay';\nimport {useSlotId} from '../utils/useId';\n\nexport interface AriaDialogProps extends DOMProps, AriaLabelingProps {\n  /**\n   * The accessibility role for the dialog.\n   *\n   * @default 'dialog'\n   */\n  role?: 'dialog' | 'alertdialog';\n  /**\n   * Whether the dialog is currently performing an entry animation. Focus is not moved into the\n   * dialog until the animation completes, since moving the screen reader cursor may cause scrolling\n   * that interrupts the animation.\n   */\n  isEntering?: boolean;\n}\n\nexport interface DialogAria {\n  /** Props for the dialog container element. */\n  dialogProps: DOMAttributes;\n\n  /** Props for the dialog title element. */\n  titleProps: DOMAttributes;\n\n  /** Props for the dialog content/description element. Used for aria-describedby on alertdialogs. */\n  contentProps: DOMAttributes;\n}\n\n/**\n * Provides the behavior and accessibility implementation for a dialog component.\n * A dialog is an overlay shown above other content in an application.\n */\nexport function useDialog(\n  props: AriaDialogProps,\n  ref: RefObject<FocusableElement | null>\n): DialogAria {\n  let {role = 'dialog', isEntering} = props;\n  let titleId: string | undefined = useSlotId();\n  titleId = props['aria-label'] ? undefined : titleId;\n\n  let contentId: string | undefined = useSlotId();\n  contentId = role === 'alertdialog' && !props['aria-describedby'] ? contentId : undefined;\n\n  let isRefocusing = useRef(false);\n\n  // Focus the dialog itself on mount (or once it has entered), unless a child element is already focused.\n  useEffect(() => {\n    if (!isEntering && ref.current && !isFocusWithin(ref.current)) {\n      focusSafely(ref.current);\n\n      // Safari on iOS does not move the VoiceOver cursor to the dialog\n      // or announce that it has opened until it has rendered. A workaround\n      // is to wait for half a second, then blur and re-focus the dialog.\n      let timeout = setTimeout(() => {\n        // Check that the dialog is still focused, or focused was lost to the body.\n        if (getActiveElement() === ref.current || getActiveElement() === document.body) {\n          isRefocusing.current = true;\n          if (ref.current) {\n            ref.current.blur();\n            focusSafely(ref.current);\n          }\n          isRefocusing.current = false;\n        }\n      }, 500);\n\n      return () => {\n        clearTimeout(timeout);\n      };\n    }\n  }, [ref, isEntering]);\n\n  useOverlayFocusContain();\n\n  // Warn in dev mode if the dialog has no accessible title.\n  // This catches a common mistake where useDialog and useOverlayTriggerState\n  // are used in the same component, causing the title element to not be\n  // in the DOM when useSlotId queries for it.\n  // Check the DOM element directly since aria-labelledby may be added by\n  // wrapper components (e.g. RAC Dialog uses trigger ID as a fallback).\n  let hasWarned = useRef(false);\n  useEffect(() => {\n    if (process.env.NODE_ENV !== 'production' && !hasWarned.current && ref.current) {\n      let el = ref.current;\n      let hasAriaLabel = el.hasAttribute('aria-label');\n      let hasAriaLabelledby = el.hasAttribute('aria-labelledby');\n      if (!hasAriaLabel && !hasAriaLabelledby) {\n        console.warn(\n          'A dialog must have a title for accessibility. ' +\n            'Either provide an aria-label or aria-labelledby prop, or render a heading element inside the dialog.'\n        );\n        hasWarned.current = true;\n      }\n    }\n  });\n\n  let ariaDescribedby = props['aria-describedby'] ?? contentId;\n\n  // We do not use aria-modal due to a Safari bug which forces the first focusable element to be focused\n  // on mount when inside an iframe, no matter which element we programmatically focus.\n  // See https://bugs.webkit.org/show_bug.cgi?id=211934.\n  // useModal sets aria-hidden on all elements outside the dialog, so the dialog will behave as a modal\n  // even without aria-modal on the dialog itself.\n  return {\n    dialogProps: {\n      ...filterDOMProps(props, {labelable: true}),\n      role,\n      tabIndex: -1,\n      'aria-labelledby': props['aria-labelledby'] ?? titleId,\n      'aria-describedby': ariaDescribedby,\n      // Prevent blur events from reaching useOverlay, which may cause\n      // popovers to close. Since focus is contained within the dialog,\n      // we don't want this to occur due to the above useEffect.\n      onBlur: e => {\n        if (isRefocusing.current) {\n          e.stopPropagation();\n        }\n      }\n    },\n    titleProps: {\n      id: titleId\n    },\n    contentProps: {\n      id: contentId\n    }\n  };\n}\n",
+  "content_sha256": "538887eca22e1662dbaa2a23ad9ea5758102f1078a0c5e289e0d06c9682ac111",
+  "filename": "useDialog.ts",
+  "full_content_sha256": "538887eca22e1662dbaa2a23ad9ea5758102f1078a0c5e289e0d06c9682ac111",
+  "full_file_complete": true,
+  "full_source_sha256": "538887eca22e1662dbaa2a23ad9ea5758102f1078a0c5e289e0d06c9682ac111",
+  "git_blob_proof": "unavailable in prior collector; SHA256 matches recorded upstream",
+  "kind": "source-file",
+  "language": "typescript",
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 150,
+    "start": 1,
+    "total": 150
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "typescript",
+  "original_path": "packages/react-aria/src/dialog/useDialog.ts",
+  "repository": "adobe/react-spectrum",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/react-spectrum/LICENSE.txt",
+      "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+    },
+    {
+      "path": "licenses/github-web/react-spectrum/NOTICE.txt",
+      "sha256": "378e1af1aac41d8383e9da1b2acbd2adca2ff8a4c4ad5fdecc8fbffff831eaf7"
+    }
+  ],
+  "revision": "6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 5581,
+  "source_lines": 150,
+  "source_sha256": "538887eca22e1662dbaa2a23ad9ea5758102f1078a0c5e289e0d06c9682ac111",
+  "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts"
+}

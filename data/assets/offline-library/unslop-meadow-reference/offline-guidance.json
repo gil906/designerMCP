@@ -1,0 +1,6 @@
+{
+  "kind": "offline-guidance",
+  "purpose": "Original adaptation guide; no upstream implementation or runnable example is claimed.",
+  "text": "Adapted from upstream references/refs.md, CC-BY-4.0: the meadow footer uses friendly stylized 3D with a restrained palette, matte shapes, a huge wordmark standing behind hills, and quiet links placed in open sky. The useful quality is that typography becomes part of the visual scene while navigation remains calm. Do not copy the meadow subject or convert every footer into decorative 3D; choose a scene only when it fits the actual product and retains useful links and reading order. The raster is a reference, not a functional footer component.\n\nSafe retrieval: request meadow-preview (800x500, 23614 bytes). meadow-original is unchanged at 1920x1200 and 286608 bytes; its encoded output exceeds the 64KiB response budget. Keep the full-res asset for offline archival use and retrieve only the small preview through MCP. CC-BY-4.0 credit applies to both.",
+  "version": 1
+}

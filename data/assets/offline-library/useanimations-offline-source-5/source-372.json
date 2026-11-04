@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/es/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-372",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/es/islands.ts",
+    "title": "website/src/i18n/messages/es/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "c1708d4d63b32cba19ad6b9702623495b63fd1c0a4fdfef8697fca08a2a22eea",
+  "text": "// Texto de las islas de React (components/*.tsx); '{name}' lo rellena el componente.\nimport type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Bucle',\n      'click-toggle': 'Clic',\n      'click-replay': 'Clic',\n      hover: 'Hover',\n      'hover-loop': 'Hover',\n      'hover-replay': 'Hover',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Se reproduce solo',\n      'click-toggle': 'Haz clic para alternar',\n      'click-replay': 'Haz clic para repetir',\n      hover: 'Pasa el cursor para reproducir; al salir, se invierte',\n      'hover-loop': 'Pasa el cursor para repetir en bucle',\n      'hover-replay': 'Pasa el cursor para reproducir',\n    },\n    preview: 'Vista previa de {title}',\n    colors: 'Color de la vista previa',\n    color: 'Color {color}',\n    textColor: 'Color del texto',\n    interaction: 'Interacción',\n    duration: 'Duración',\n    seconds: '{seconds} s',\n    import: 'Importar',\n    close: 'Cerrar',\n    code: 'Código',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Archivos' },\n    copy: 'Copiar',\n    download: 'Descargar',\n    iconPage: 'Página del icono',\n  },\n  interactionDemo: {\n    click: 'Haz clic en la tarjeta',\n    loop: 'Se reproduce solo',\n    hover: 'Pasa el cursor sobre la tarjeta',\n  },\n  mobileMenu: {\n    menu: 'Menú',\n    nav: 'Principal',\n  },\n  search: {\n    clear: 'Borrar la búsqueda',\n  },\n  themeToggle: {\n    toLight: 'Cambiar al tema claro',\n    toDark: 'Cambiar al tema oscuro',\n  },\n};\n",
+  "version": 1
+}

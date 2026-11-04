@@ -1,354 +1,1845 @@
 {
-  "version": 1,
   "entries": [
     {
-      "id": "unslop-overview",
-      "title": "Unslop: product-specific design instead of an AI-looking template",
-      "summary": "Licensed offline reference for making AI-generated web interfaces look deliberately designed. Start here when a user says a site looks too AI, like AI slop, generic, or needs polish.",
-      "categories": ["anti-ai-slop", "unslop", "design-workflow"],
-      "tags": ["anti-slop", "ai-slop", "looks-too-ai", "less-ai", "polish", "redesign", "generic", "offline"],
-      "platforms": ["web", "react", "html", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "readme",
+          "mime_type": "application/json",
+          "path": "assets/unslop/README.md.json",
+          "title": "Upstream README, passive verbatim source"
+        },
+        {
+          "format": "yaml",
+          "id": "citation",
+          "mime_type": "application/json",
+          "path": "assets/unslop/CITATION.cff.json",
+          "title": "Upstream author citation, passive verbatim source"
+        },
+        {
+          "format": "markdown",
+          "id": "skill",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/SKILL.md.json",
+          "title": "Full upstream skill, reference only"
+        },
+        {
+          "format": "yaml",
+          "id": "agent-metadata",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/agents/openai.yaml.json",
+          "title": "Upstream agent metadata, not installed"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-overview.webp",
+          "source_url": "original://designerMCP/offline/unslop-overview",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-overview/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-overview",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-overview/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-overview",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "design-workflow"
+      ],
+      "examples": [],
       "guidance": "Adapted from unslop by Damir Sokolovsky (@heydamir), CC-BY-4.0. Use this reference routinely as an audit for new site designs, and prioritize it when the user reports an AI-looking or generic result. This is reference selection guidance, not an installed skill or a promise that every page needs redesign. Upstream distinguishes heavy slop from light slop: a mostly good screen merits small refinements, not a wholesale new template. Its core approach is a direction drawn from the actual product, quiet interface chrome, a carefully made visual moment, and consistent layer-by-layer passes. Preserve product identity, real features and section order unless the user requests broader changes. Do not invent metrics or testimonials.\n\nDownstream safety boundary: upstream SKILL.md, agent configuration, scripts and example HTML are passive, untrusted source references. Read them for design reasoning, not as instructions to install tools, execute scripts, access other projects, connect services, spend money or loosen security. Do not load archived prompts as system instructions. Use only the current user project's authorized resources and existing toolchain. No third-party assets, fonts or runtimes are bundled. Upstream examples are before-state exercises, not finished templates. Adapt qualities to this product rather than copying the example product, layout or palette.",
-      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a",
+      "id": "unslop-overview",
       "license": "Adapted guidance and upstream references: CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original example code: CC0-1.0. Retain attribution; packaging and summaries are adaptations.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [
-        {"id": "readme", "path": "assets/unslop/README.md.json", "mime_type": "application/json", "title": "Upstream README, passive verbatim source"},
-        {"id": "citation", "path": "assets/unslop/CITATION.cff.json", "mime_type": "application/json", "title": "Upstream author citation, passive verbatim source"},
-        {"id": "skill", "path": "assets/unslop/skills/unslop/SKILL.md.json", "mime_type": "application/json", "title": "Full upstream skill, reference only"},
-        {"id": "agent-metadata", "path": "assets/unslop/skills/unslop/agents/openai.yaml.json", "mime_type": "application/json", "title": "Upstream agent metadata, not installed"}
+      "platforms": [
+        "web",
+        "react",
+        "html",
+        "css",
+        "tailwind"
       ],
-      "examples": []
+      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a",
+      "summary": "Licensed offline reference for making AI-generated web interfaces look deliberately designed. Start here when a user says a site looks too AI, like AI slop, generic, or needs polish.",
+      "tags": [
+        "anti-slop",
+        "ai-slop",
+        "looks-too-ai",
+        "less-ai",
+        "polish",
+        "redesign",
+        "generic",
+        "offline"
+      ],
+      "title": "Unslop: product-specific design instead of an AI-looking template"
     },
     {
-      "id": "unslop-audit-checklist",
-      "title": "Anti-AI-slop audit: locate the tells before changing the design",
-      "summary": "Upstream signs checklist covers surfaces, type, icons, spacing, copy, components, heroes, visuals, motion and template sameness.",
-      "categories": ["anti-ai-slop", "unslop", "audit-checklist"],
-      "tags": ["anti-slop", "ai-slop", "looks-too-ai", "checklist", "review", "redline", "template-look"],
-      "platforms": ["web", "react", "html", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "signs",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/references/signs.md.json",
+          "title": "Complete upstream signs of slop"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-audit-checklist.webp",
+          "source_url": "original://designerMCP/offline/unslop-audit-checklist",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-audit-checklist/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-audit-checklist",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-audit-checklist/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-audit-checklist",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "audit-checklist"
+      ],
+      "examples": [
+        {
+          "code": "Original audit record:\nLocation: invoice list / amount column\nObserved: mixed decimal precision and amounts centered within unequal cards\nImpact: difficult to compare balances\nChange: keep the existing data, use one amount formatter and a right-aligned tabular column\nVerify: smallest supported viewport, long currency values, keyboard access to each invoice",
+          "description": "Independently authored CC0-1.0 audit format; record observed facts, not invented measurements.",
+          "language": "text"
+        }
+      ],
       "guidance": "Adapted CC-BY-4.0 guidance: record each actual issue with its location and effect on the user's task. Inspect hue-to-hue gradient surfaces, gradient text, glows and colored shadows; weight-800/900 headlines and widely tracked uppercase labels; emoji navigation and sparkle badges; inconsistent gaps or sibling padding; generic claims and greeting headlines; count pills and repeated promotional badges; generic hero headlines and glossy decorative blobs; unnecessary pulsing or bouncing; and a screen that still fits any product after a name swap. These are contextual diagnostic tells, not universal prohibitions on gradients, emoji, Inter or expressive brands. Upstream keeps real brand colors and fonts.\n\nFinal upstream checklist asks for a written direction, consistent 4px spacing, aligned icon/label/number columns, one tinted neutral ramp with three text roles, consistent icons, restrained type weights, factual copy, formatted tabular numbers, coherent nested radii, a meaningful visual or product preview, a composed first screen, and purposeful motion. Original downstream addition: preserve keyboard focus, text contrast, native semantics, responsive behavior and existing task flows while polishing. Collect evidence before changing anything; a screenshot alone cannot prove interaction behavior.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/signs.md",
+      "id": "unslop-audit-checklist",
       "license": "CC-BY-4.0 adaptation; unslop by Damir Sokolovsky (@heydamir); original example: CC0-1.0.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "signs", "path": "assets/unslop/skills/unslop/references/signs.md.json", "mime_type": "application/json", "title": "Complete upstream signs of slop"}],
-      "examples": [{"language": "text", "code": "Original audit record:\nLocation: invoice list / amount column\nObserved: mixed decimal precision and amounts centered within unequal cards\nImpact: difficult to compare balances\nChange: keep the existing data, use one amount formatter and a right-aligned tabular column\nVerify: smallest supported viewport, long currency values, keyboard access to each invoice", "description": "Independently authored CC0-1.0 audit format; record observed facts, not invented measurements."}]
+      "platforms": [
+        "web",
+        "react",
+        "html",
+        "css",
+        "tailwind"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/signs.md",
+      "summary": "Upstream signs checklist covers surfaces, type, icons, spacing, copy, components, heroes, visuals, motion and template sameness.",
+      "tags": [
+        "anti-slop",
+        "ai-slop",
+        "looks-too-ai",
+        "checklist",
+        "review",
+        "redline",
+        "template-look"
+      ],
+      "title": "Anti-AI-slop audit: locate the tells before changing the design"
     },
     {
-      "id": "unslop-direction",
-      "title": "Design direction: character, world and one signature detail",
-      "summary": "Derive a concrete visual direction from what the product does and who uses it, instead of choosing a fashionable style preset.",
-      "categories": ["anti-ai-slop", "unslop", "composition", "design-direction"],
-      "tags": ["anti-slop", "product-specific", "character", "signature", "brand", "template-check"],
-      "platforms": ["web", "react"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "direction-source",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/SKILL.md.json",
+          "title": "Direction and product-preservation constraints"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-direction.webp",
+          "source_url": "original://designerMCP/offline/unslop-direction",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-direction/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-direction",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-direction/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-direction",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "composition",
+        "design-direction"
+      ],
+      "examples": [
+        {
+          "code": "Original direction for an existing neighborhood repair shop:\nProduct: schedule a repair appointment with a local technician.\nCharacter: practical, welcoming, exact.\nWorld: tools, service tickets, opening hours.\nSignature: an understated service-ticket rule separating the booking details.\nMoment: a verified photo of the workshop, if the project already owns one.\nDo not add fake turnaround guarantees or decorative robots.",
+          "description": "Original CC0-1.0 direction example; the business facts remain subject to verification.",
+          "language": "text"
+        }
+      ],
       "guidance": "Adapted from upstream Direction: write the product and audience in one plain sentence; choose two or three concrete character words; identify the real-world material or setting the product belongs to; decide which one or two moments carry the color; and select a restrained signature detail. 'Modern', 'sleek' and 'premium' alone do not decide a screen. Quiet chrome should support the actual product moment rather than competing with it. Keep a real logo and brand font when they are meaningful. Do not replace purple glow with another automatic trend such as glass, neon, grain or a bento grid. Apply the template check: if the product name can be swapped and every claim, visual and detail still fits, make the direction more specific. Downstream use: write this short direction as project-local design notes or a response, not as new global instructions; do not require image generation to have a direction.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#direction",
+      "id": "unslop-direction",
       "license": "CC-BY-4.0 adaptation, Damir Sokolovsky (@heydamir). Original example: CC0-1.0.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "direction-source", "path": "assets/unslop/skills/unslop/SKILL.md.json", "mime_type": "application/json", "title": "Direction and product-preservation constraints"}],
-      "examples": [{"language": "text", "code": "Original direction for an existing neighborhood repair shop:\nProduct: schedule a repair appointment with a local technician.\nCharacter: practical, welcoming, exact.\nWorld: tools, service tickets, opening hours.\nSignature: an understated service-ticket rule separating the booking details.\nMoment: a verified photo of the workshop, if the project already owns one.\nDo not add fake turnaround guarantees or decorative robots.", "description": "Original CC0-1.0 direction example; the business facts remain subject to verification."}]
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#direction",
+      "summary": "Derive a concrete visual direction from what the product does and who uses it, instead of choosing a fashionable style preset.",
+      "tags": [
+        "anti-slop",
+        "product-specific",
+        "character",
+        "signature",
+        "brand",
+        "template-check"
+      ],
+      "title": "Design direction: character, world and one signature detail"
     },
     {
-      "id": "unslop-typography",
-      "title": "Typography: character-driven families and a restrained hierarchy",
-      "summary": "Upstream type guidance maps precise, warm, editorial and playful character to families, scale, tracking, weights and numeric alignment.",
-      "categories": ["anti-ai-slop", "unslop", "typography"],
-      "tags": ["anti-slop", "font-pairing", "type-scale", "tabular-numbers", "sentence-case", "readability"],
-      "platforms": ["web", "react", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "type-tokens",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/references/tokens.md.json",
+          "title": "Upstream type families and scale"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-typography.webp",
+          "source_url": "original://designerMCP/offline/unslop-typography",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-typography/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-typography",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-typography/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-typography",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "typography"
+      ],
+      "examples": [
+        {
+          "code": "/* Original CC0-1.0: retain the project's licensed brand font if present. */\nbody { font-family: var(--brand-font, system-ui), sans-serif; line-height: 1.5; }\n.page-title { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem); font-weight: 500; line-height: 1.15; }\n.prose { max-inline-size: 65ch; }\n.amount { font-variant-numeric: tabular-nums; text-align: end; }\n.meta { font-size: .875rem; letter-spacing: 0; }",
+          "description": "Original responsive typography fragment; not upstream font-loading code.",
+          "language": "css"
+        }
+      ],
       "guidance": "Adapted CC-BY-4.0: choose a family for the product character rather than changing fonts for novelty. Upstream suggests Geist/Inter/IBM Plex Sans for precise interfaces; Instrument Sans/DM Sans/Figtree for warm interfaces; Newsreader/Instrument Serif/Fraunces for editorial headlines; and Space Grotesk/Bricolage Grotesque for playful work. A mono partner is optional for figures and meta. These are recommendations, not bundled fonts or verified font licenses.\n\nThe upstream scale uses labels 12/16, captions 13–14/20, body/nav 14–15/20–22, figures 28–32, page titles 28–36, desktop hero headlines 56–72 and mobile headlines 36–44. Prefer weights 400 and 500, with rare 600 emphasis, rather than uniformly heavy display text. Avoid negative tracking under 16px and excessive uppercase tracking. Align comparable numbers with tabular figures and a consistent formatter. Preserve a real brand font. Original downstream addition: scale and line length must still serve zoom, localization and readability; upstream sizes are starting ranges, not mandatory accessibility targets.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/tokens.md#type-families",
+      "id": "unslop-typography",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original CSS example: CC0-1.0. Font files excluded.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "type-tokens", "path": "assets/unslop/skills/unslop/references/tokens.md.json", "mime_type": "application/json", "title": "Upstream type families and scale"}],
-      "examples": [{"language": "css", "code": "/* Original CC0-1.0: retain the project's licensed brand font if present. */\nbody { font-family: var(--brand-font, system-ui), sans-serif; line-height: 1.5; }\n.page-title { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem); font-weight: 500; line-height: 1.15; }\n.prose { max-inline-size: 65ch; }\n.amount { font-variant-numeric: tabular-nums; text-align: end; }\n.meta { font-size: .875rem; letter-spacing: 0; }", "description": "Original responsive typography fragment; not upstream font-loading code."}]
+      "platforms": [
+        "web",
+        "react",
+        "css",
+        "tailwind"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/tokens.md#type-families",
+      "summary": "Upstream type guidance maps precise, warm, editorial and playful character to families, scale, tracking, weights and numeric alignment.",
+      "tags": [
+        "anti-slop",
+        "font-pairing",
+        "type-scale",
+        "tabular-numbers",
+        "sentence-case",
+        "readability"
+      ],
+      "title": "Typography: character-driven families and a restrained hierarchy"
     },
     {
-      "id": "unslop-layout-spacing",
-      "title": "Layout and spacing: aligned columns, grouped rhythm and real app proportions",
-      "summary": "Replace arbitrary gaps and equal-priority card grids with consistent spacing and task-appropriate proportions.",
-      "categories": ["anti-ai-slop", "unslop", "layout", "spacing"],
-      "tags": ["anti-slop", "4px-grid", "responsive", "alignment", "dashboard", "grouping"],
-      "platforms": ["web", "react", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "layout-tokens",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/references/tokens.md.json",
+          "title": "Spacing scale and app-layout ranges"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-layout-spacing.webp",
+          "source_url": "original://designerMCP/offline/unslop-layout-spacing",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-layout-spacing/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-layout-spacing",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-layout-spacing/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-layout-spacing",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "layout",
+        "spacing"
+      ],
+      "examples": [
+        {
+          "code": "/* Original CC0-1.0 responsive app shell. */\n.app-shell { display: grid; grid-template-columns: 16rem minmax(0, 1fr); min-block-size: 100dvh; }\n.app-main { min-inline-size: 0; padding: clamp(1rem, 3vw, 2rem); }\n.task-list { display: grid; gap: .5rem; }\n.task-row { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr) auto; gap: .75rem; align-items: center; padding: .75rem 0; border-block-end: 1px solid var(--border); }\n@media (max-width: 48rem) { .app-shell { grid-template-columns: minmax(0, 1fr); } }",
+          "description": "Original responsive structure; supply semantic navigation and task data from the project.",
+          "language": "css"
+        }
+      ],
       "guidance": "Adapted CC-BY-4.0: upstream uses a 4px spacing grid, identical heights/gaps for list rows and identical padding for sibling cards. Keep related items closer together than neighboring groups. Align icon boxes, labels and numeric columns. Apps retain real app proportions: suggested sidebar 240–280px, page padding 24–32px, fluid content capped roughly 1440–1600px, and header 56–64px. These are upstream desktop ranges, not a reason to preserve a sidebar on a phone. Keep existing section order; improve proportions and alignment inside sections. Original downstream addition: collapse the shell when space is insufficient, allow content to wrap and avoid horizontal page scrolling at narrow widths. Test long labels and localized content. Do not force an entire page into identical rounded cards merely to achieve consistent spacing.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/tokens.md#app-layout",
+      "id": "unslop-layout-spacing",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original CSS: CC0-1.0.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "layout-tokens", "path": "assets/unslop/skills/unslop/references/tokens.md.json", "mime_type": "application/json", "title": "Spacing scale and app-layout ranges"}],
-      "examples": [{"language": "css", "code": "/* Original CC0-1.0 responsive app shell. */\n.app-shell { display: grid; grid-template-columns: 16rem minmax(0, 1fr); min-block-size: 100dvh; }\n.app-main { min-inline-size: 0; padding: clamp(1rem, 3vw, 2rem); }\n.task-list { display: grid; gap: .5rem; }\n.task-row { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr) auto; gap: .75rem; align-items: center; padding: .75rem 0; border-block-end: 1px solid var(--border); }\n@media (max-width: 48rem) { .app-shell { grid-template-columns: minmax(0, 1fr); } }", "description": "Original responsive structure; supply semantic navigation and task data from the project."}]
+      "platforms": [
+        "web",
+        "react",
+        "css",
+        "tailwind"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/tokens.md#app-layout",
+      "summary": "Replace arbitrary gaps and equal-priority card grids with consistent spacing and task-appropriate proportions.",
+      "tags": [
+        "anti-slop",
+        "4px-grid",
+        "responsive",
+        "alignment",
+        "dashboard",
+        "grouping"
+      ],
+      "title": "Layout and spacing: aligned columns, grouped rhythm and real app proportions"
     },
     {
-      "id": "unslop-color",
-      "title": "Color: tinted neutrals, semantic accents and useful depth",
-      "summary": "Upstream includes dark/light graphite, warm and ink ramps, three text roles, accent rules and restrained surface depth.",
-      "categories": ["anti-ai-slop", "unslop", "color", "design-tokens"],
-      "tags": ["anti-slop", "neutral-ramp", "contrast", "no-gradient-text", "semantic-color", "depth"],
-      "platforms": ["web", "react", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "color-tokens",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/references/tokens.md.json",
+          "title": "Complete upstream neutral ramps, accent and depth"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-color.webp",
+          "source_url": "original://designerMCP/offline/unslop-color",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-color/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-color",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-color/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-color",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "color",
+        "design-tokens"
+      ],
+      "examples": [
+        {
+          "code": "/* Independently authored CC0-1.0 palette; check contrast in the final screen. */\n:root { --page: #f8f5ef; --surface: #ffffff; --text: #25211c; --secondary: #625a50; --border: #b9b0a4; --accent: #7b3b16; }\nbody { background: var(--page); color: var(--text); }\n.primary-action { color: #fff; background: var(--accent); border: 1px solid var(--accent); }\n.secondary-copy { color: var(--secondary); }\n:where(button, a, input, select, textarea):focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }",
+          "description": "Original quiet light theme and explicit focus treatment, not an upstream token-table copy.",
+          "language": "css"
+        }
+      ],
       "guidance": "Adapted CC-BY-4.0: build page, card, raised surface and border roles from one neutral ramp; use primary, secondary and muted text roles. Upstream provides graphite, warm and ink variants in dark and light modes. Tint toward the product world rather than always making a pure gray dark template. A real brand accent may stay, including purple; the diagnostic issue is meaningless glow or hue-to-hue gradients, not a forbidden hue. Keep persistent dashboard chrome quiet for prolonged use and place meaningful color in selected actions, status or chart series. Preserve non-color labels for status. Depth comes from subtle surface steps, hairlines and small neutral shadows instead of colored shadows and glows. Original downstream addition: verify contrast against actual rendered backgrounds for every text, focus and status role; the provided upstream ramp is not an accessibility certification. Do not hide disabled or secondary content by making it unreadable.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/tokens.md#neutral-ramps",
+      "id": "unslop-color",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original CSS example: CC0-1.0.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "color-tokens", "path": "assets/unslop/skills/unslop/references/tokens.md.json", "mime_type": "application/json", "title": "Complete upstream neutral ramps, accent and depth"}],
-      "examples": [{"language": "css", "code": "/* Independently authored CC0-1.0 palette; check contrast in the final screen. */\n:root { --page: #f8f5ef; --surface: #ffffff; --text: #25211c; --secondary: #625a50; --border: #b9b0a4; --accent: #7b3b16; }\nbody { background: var(--page); color: var(--text); }\n.primary-action { color: #fff; background: var(--accent); border: 1px solid var(--accent); }\n.secondary-copy { color: var(--secondary); }\n:where(button, a, input, select, textarea):focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }", "description": "Original quiet light theme and explicit focus treatment, not an upstream token-table copy."}]
+      "platforms": [
+        "web",
+        "react",
+        "css",
+        "tailwind"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/tokens.md#neutral-ramps",
+      "summary": "Upstream includes dark/light graphite, warm and ink ramps, three text roles, accent rules and restrained surface depth.",
+      "tags": [
+        "anti-slop",
+        "neutral-ramp",
+        "contrast",
+        "no-gradient-text",
+        "semantic-color",
+        "depth"
+      ],
+      "title": "Color: tinted neutrals, semantic accents and useful depth"
     },
     {
-      "id": "unslop-composition",
-      "title": "First-screen composition: calm text space and a meaningful product moment",
-      "summary": "Compose the hero as a whole rather than stacking a generic headline, decorative blob and disconnected preview.",
-      "categories": ["anti-ai-slop", "unslop", "composition", "hero", "layout"],
-      "tags": ["anti-slop", "landing-page", "visual-hierarchy", "negative-space", "product-preview"],
-      "platforms": ["web", "react", "css"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "composition-source",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/SKILL.md.json",
+          "title": "Layout, visuals and final composition checklist"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-composition.webp",
+          "source_url": "original://designerMCP/offline/unslop-composition",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-composition/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-composition",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-composition/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-composition",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "composition",
+        "hero",
+        "layout"
+      ],
+      "examples": [
+        {
+          "code": "/* Original CC0-1.0: meaningful copy first in the DOM, local preview second. */\n.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(1.5rem, 5vw, 4rem); align-items: center; padding-block: clamp(2rem, 7vw, 5rem); }\n.hero-copy { max-inline-size: 36rem; }\n.hero-preview { min-inline-size: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; }\n@media (max-width: 48rem) { .hero { grid-template-columns: minmax(0, 1fr); } }",
+          "description": "Original two-column composition fragment; use existing true product content, not decorative filler.",
+          "language": "css"
+        }
+      ],
       "guidance": "Adapted CC-BY-4.0: upstream wants the first screen judged as a single composition with no dead empty band. A hero has something true: the product in use, a plausible product preview built in code, or a concrete metaphor tied to the product world. Leave calm space where the headline and action sit. Quiet navigation and buttons should not compete with the visual. One bright element is the stated baseline; some finance references concentrate color in two purposeful moments, a payment object and a data chart. Do not turn this into a rigid count that prevents useful information. Keep the visual and headline in one direction and maintain the existing section order. Original downstream addition: keep the reading and focus order logical in the DOM even if the desktop visual is offset; show important copy and actions without requiring animation or a large image.",
+      "id": "unslop-composition",
+      "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original CSS: CC0-1.0.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "platforms": [
+        "web",
+        "react",
+        "css"
+      ],
       "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#6-layout",
-      "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original CSS: CC0-1.0.",
-      "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "composition-source", "path": "assets/unslop/skills/unslop/SKILL.md.json", "mime_type": "application/json", "title": "Layout, visuals and final composition checklist"}],
-      "examples": [{"language": "css", "code": "/* Original CC0-1.0: meaningful copy first in the DOM, local preview second. */\n.hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(1.5rem, 5vw, 4rem); align-items: center; padding-block: clamp(2rem, 7vw, 5rem); }\n.hero-copy { max-inline-size: 36rem; }\n.hero-preview { min-inline-size: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; }\n@media (max-width: 48rem) { .hero { grid-template-columns: minmax(0, 1fr); } }", "description": "Original two-column composition fragment; use existing true product content, not decorative filler."}]
+      "summary": "Compose the hero as a whole rather than stacking a generic headline, decorative blob and disconnected preview.",
+      "tags": [
+        "anti-slop",
+        "landing-page",
+        "visual-hierarchy",
+        "negative-space",
+        "product-preview"
+      ],
+      "title": "First-screen composition: calm text space and a meaningful product moment"
     },
     {
-      "id": "unslop-motion",
-      "title": "Motion: feedback and orientation instead of perpetual attention grabs",
-      "summary": "Use selective transition properties, short feedback durations and restrained entrances; remove meaningless pulse, bounce and hover-scale effects.",
-      "categories": ["anti-ai-slop", "unslop", "motion", "animation"],
-      "tags": ["anti-slop", "reduced-motion", "microinteraction", "performance", "no-transition-all"],
-      "platforms": ["web", "react", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "motion-source",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/SKILL.md.json",
+          "title": "Purposeful motion pass"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-motion.webp",
+          "source_url": "original://designerMCP/offline/unslop-motion",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-motion/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-motion",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-motion/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-motion",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "motion",
+        "animation"
+      ],
+      "examples": [
+        {
+          "code": "/* Original CC0-1.0: no loop, no catch-all transition. */\n.action { transition: background-color 150ms ease-out, border-color 150ms ease-out, transform 150ms ease-out; }\n.action:active { transform: scale(.98); }\n.notice { animation: notice-in 180ms ease-out both; }\n@keyframes notice-in { from { opacity: 0; transform: translateY(.25rem); } to { opacity: 1; transform: none; } }\n@media (prefers-reduced-motion: reduce) { .action { transition: none; } .action:active { transform: none; } .notice { animation: none; } }",
+          "description": "Original bounded feedback and entrance CSS with a reduced-motion static state.",
+          "language": "css"
+        }
+      ],
       "guidance": "Adapted CC-BY-4.0: upstream removes animate-pulse/animate-ping on non-live content, breathing glows, floating filler, excessive parallax and bouncy hover scaling. Retain motion that explains a press, menu opening or changed number. Name transitioned properties rather than using transition-all. The token ranges are 120–180ms feedback, 160–220ms menus/popovers, 300–500ms entrances/layout changes, and 40–60ms stagger for at most six items; this describes intent, not permission to animate expensive layout. Upstream cautions against animating width, height, top, left, margins and large blur. Keep one easing family and at most one modest main-content entrance.\n\nOriginal downstream addition: respect prefers-reduced-motion and render a useful still state; do not force entrance animation onto essential information. Semantic loading feedback may animate only while a real operation is pending and still needs text. Stop any optional effect when offscreen or inactive. Animation scripts in the archive are source references only.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#9-motion",
+      "id": "unslop-motion",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original CSS: CC0-1.0.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "motion-source", "path": "assets/unslop/skills/unslop/SKILL.md.json", "mime_type": "application/json", "title": "Purposeful motion pass"}],
-      "examples": [{"language": "css", "code": "/* Original CC0-1.0: no loop, no catch-all transition. */\n.action { transition: background-color 150ms ease-out, border-color 150ms ease-out, transform 150ms ease-out; }\n.action:active { transform: scale(.98); }\n.notice { animation: notice-in 180ms ease-out both; }\n@keyframes notice-in { from { opacity: 0; transform: translateY(.25rem); } to { opacity: 1; transform: none; } }\n@media (prefers-reduced-motion: reduce) { .action { transition: none; } .action:active { transform: none; } .notice { animation: none; } }", "description": "Original bounded feedback and entrance CSS with a reduced-motion static state."}]
+      "platforms": [
+        "web",
+        "react",
+        "css",
+        "tailwind"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#9-motion",
+      "summary": "Use selective transition properties, short feedback durations and restrained entrances; remove meaningless pulse, bounce and hover-scale effects.",
+      "tags": [
+        "anti-slop",
+        "reduced-motion",
+        "microinteraction",
+        "performance",
+        "no-transition-all"
+      ],
+      "title": "Motion: feedback and orientation instead of perpetual attention grabs"
     },
     {
-      "id": "unslop-content",
-      "title": "Content: specific product nouns, truthful claims and consistent amounts",
-      "summary": "Replace generic AI marketing and decorative enthusiasm with factual interface language while preserving actual product features.",
-      "categories": ["anti-ai-slop", "unslop", "content", "copywriting"],
-      "tags": ["anti-slop", "microcopy", "claims", "no-fake-metrics", "numbers", "product-specific"],
-      "platforms": ["web", "react"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "content-source",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/SKILL.md.json",
+          "title": "Copy pass and factual-content constraints"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-content.webp",
+          "source_url": "original://designerMCP/offline/unslop-content",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-content/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-content",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-content/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-content",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "content",
+        "copywriting"
+      ],
+      "examples": [
+        {
+          "code": "/* Original CC0-1.0; React must already be part of the project. */\nimport { useId } from 'react';\nexport function BalanceSummary({ amount, currency, locale }) {\n  const titleId = useId();\n  const formatter = new Intl.NumberFormat(locale, { style: 'currency', currency });\n  return <section aria-labelledby={titleId}>\n    <h2 id={titleId}>Outstanding balance</h2>\n    <p className=\"amount\">{formatter.format(amount)}</p>\n    <p>Invoices awaiting payment</p>\n  </section>;\n}",
+          "description": "Original React fragment with distinct instance IDs. Supply verified data and valid locale/currency.",
+          "language": "jsx"
+        }
+      ],
       "guidance": "Adapted CC-BY-4.0: headlines should explain what this product does for whom, using verified facts already present. Avoid a name-swappable 'supercharge your workflow' headline, unnecessary greeting headline, excessive exclamation marks and punctuation on short labels. Remove empty AI buzzwords and badge noise without renaming a product whose actual name includes AI. Keep real features and useful content; do not invent business claims, testimonials, savings, customer logos or performance numbers to improve a visual. Use the same number formatting and tabular figures for comparable amounts. Original downstream addition: distinguish an explicitly labeled demo from real account data; label loading, empty and error states truthfully and keep important warnings. Currency formatting must respect the account's actual currency and locale.",
+      "id": "unslop-content",
+      "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original React example: CC0-1.0.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
       "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#4-copy",
-      "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original React example: CC0-1.0.",
-      "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "content-source", "path": "assets/unslop/skills/unslop/SKILL.md.json", "mime_type": "application/json", "title": "Copy pass and factual-content constraints"}],
-      "examples": [{"language": "jsx", "code": "/* Original CC0-1.0; React must already be part of the project. */\nimport { useId } from 'react';\nexport function BalanceSummary({ amount, currency, locale }) {\n  const titleId = useId();\n  const formatter = new Intl.NumberFormat(locale, { style: 'currency', currency });\n  return <section aria-labelledby={titleId}>\n    <h2 id={titleId}>Outstanding balance</h2>\n    <p className=\"amount\">{formatter.format(amount)}</p>\n    <p>Invoices awaiting payment</p>\n  </section>;\n}", "description": "Original React fragment with distinct instance IDs. Supply verified data and valid locale/currency."}]
+      "summary": "Replace generic AI marketing and decorative enthusiasm with factual interface language while preserving actual product features.",
+      "tags": [
+        "anti-slop",
+        "microcopy",
+        "claims",
+        "no-fake-metrics",
+        "numbers",
+        "product-specific"
+      ],
+      "title": "Content: specific product nouns, truthful claims and consistent amounts"
     },
     {
-      "id": "unslop-ui-components",
-      "title": "UI components: quiet states, nested radii and hierarchy without badge noise",
-      "summary": "Upstream details cover counts, keycaps, badges, buttons, stat cards, active rows, focus states and coherent nested radii.",
-      "categories": ["anti-ai-slop", "unslop", "ui-components", "details"],
-      "tags": ["anti-slop", "buttons", "badges", "stat-cards", "radius", "focus", "states"],
-      "platforms": ["web", "react", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "component-source",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/SKILL.md.json",
+          "title": "Details, buttons and status treatment"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-ui-components.webp",
+          "source_url": "original://designerMCP/offline/unslop-ui-components",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-ui-components/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-ui-components",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-ui-components/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-ui-components",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "ui-components",
+        "details"
+      ],
+      "examples": [
+        {
+          "code": "/* Original CC0-1.0 native disclosure; React is supplied by the project. */\nimport { useId, useState } from 'react';\nexport function InvoiceDetails({ children }) {\n  const panelId = useId();\n  const [open, setOpen] = useState(false);\n  return <section>\n    <button type=\"button\" aria-expanded={open} aria-controls={panelId} onClick={() => setOpen(value => !value)}>\n      {open ? 'Hide invoice details' : 'Show invoice details'}\n    </button>\n    <div id={panelId} hidden={!open}>{children}</div>\n  </section>;\n}",
+          "description": "Original functional disclosure with distinct instance IDs and an explicit state label; no decoration or runtime installation.",
+          "language": "jsx"
+        }
+      ],
       "guidance": "Adapted CC-BY-4.0: counts and metadata become quiet text, often mono, rather than glowing pills. Remove ubiquitous PRO/New/Beta decorations unless they communicate something real. Stat cards need a label, figure and a meaningful comparison, not extra decorative charts. Active rows use a small surface or hairline change. Upstream control radii are 8–10px, cards 12–16px and panels 14–20px; inner radius equals outer minus padding, with a 4px floor. Hero buttons are suggested at 44–48px high; small navigation controls at 32–36px. Use one primary action hierarchy, preserve hover and keyboard focus and avoid gradient wordmarks or sparkle tiles. Original downstream addition: do not delete real status, beta notices or warnings just to meet an aesthetic checklist. Preserve native button and link behavior, visible labels, disabled/error states and appropriate target sizes.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#7-details",
+      "id": "unslop-ui-components",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Original React example: CC0-1.0.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "component-source", "path": "assets/unslop/skills/unslop/SKILL.md.json", "mime_type": "application/json", "title": "Details, buttons and status treatment"}],
-      "examples": [{"language": "jsx", "code": "/* Original CC0-1.0 native disclosure; React is supplied by the project. */\nimport { useId, useState } from 'react';\nexport function InvoiceDetails({ children }) {\n  const panelId = useId();\n  const [open, setOpen] = useState(false);\n  return <section>\n    <button type=\"button\" aria-expanded={open} aria-controls={panelId} onClick={() => setOpen(value => !value)}>\n      {open ? 'Hide invoice details' : 'Show invoice details'}\n    </button>\n    <div id={panelId} hidden={!open}>{children}</div>\n  </section>;\n}", "description": "Original functional disclosure with distinct instance IDs and an explicit state label; no decoration or runtime installation."}]
+      "platforms": [
+        "web",
+        "react",
+        "css",
+        "tailwind"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#7-details",
+      "summary": "Upstream details cover counts, keycaps, badges, buttons, stat cards, active rows, focus states and coherent nested radii.",
+      "tags": [
+        "anti-slop",
+        "buttons",
+        "badges",
+        "stat-cards",
+        "radius",
+        "focus",
+        "states"
+      ],
+      "title": "UI components: quiet states, nested radii and hierarchy without badge noise"
     },
     {
-      "id": "unslop-icons",
-      "title": "Icons: one existing set, aligned boxes and text that still explains",
-      "summary": "Remove decorative emoji and AI sparkles while retaining useful meaning through a consistent icon family and visible labels.",
-      "categories": ["anti-ai-slop", "unslop", "ui-components", "icons"],
-      "tags": ["anti-slop", "emoji", "sparkles", "icon-alignment", "labels"],
-      "platforms": ["web", "react", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "icon-signs",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/references/signs.md.json",
+          "title": "Icon tells and alternatives"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-icons.webp",
+          "source_url": "original://designerMCP/offline/unslop-icons",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-icons/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-icons",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-icons/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-icons",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "ui-components",
+        "icons"
+      ],
+      "examples": [],
       "guidance": "Adapted CC-BY-4.0: use the project's existing line-icon family; upstream suggests lucide only when no set is present, with 16 or 18px icons, stroke 1.5 and the muted or secondary text role. Equal icon-box widths and a consistent label gap keep navigation aligned. Replace emoji decoration in labels, counts and pills with plain text or a meaningful line icon, not a different gratuitous symbol. A sparkle is not an explanation of an AI feature. Original downstream addition: this archive does not bundle lucide or install it; a text-only control is a valid alternative. Do not copy external SVG into the archive as active assets. Hide purely decorative icons from assistive technology and ensure icon-only controls have a meaningful accessible name. A verified brand illustration or user-authored emoji is not automatically a defect.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#3-icons",
+      "id": "unslop-icons",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). Third-party icon files excluded.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "icon-signs", "path": "assets/unslop/skills/unslop/references/signs.md.json", "mime_type": "application/json", "title": "Icon tells and alternatives"}],
-      "examples": []
+      "platforms": [
+        "web",
+        "react",
+        "css",
+        "tailwind"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#3-icons",
+      "summary": "Remove decorative emoji and AI sparkles while retaining useful meaning through a consistent icon family and visible labels.",
+      "tags": [
+        "anti-slop",
+        "emoji",
+        "sparkles",
+        "icon-alignment",
+        "labels"
+      ],
+      "title": "Icons: one existing set, aligned boxes and text that still explains"
     },
     {
-      "id": "unslop-implementation-priorities",
-      "title": "Implementation priorities: audit, decide scope, then nine ordered passes",
-      "summary": "Upstream order is spacing, color, icons, copy, type, layout, details, visuals and motion. Preserve functional behavior and stop when the problem is resolved.",
-      "categories": ["anti-ai-slop", "unslop", "implementation-priorities", "audit-checklist"],
-      "tags": ["anti-slop", "workflow", "scope", "light-slop", "heavy-slop", "verification"],
-      "platforms": ["web", "react", "html", "css", "tailwind"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "ordered-passes",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/SKILL.md.json",
+          "title": "Full upstream process and ordered passes"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-implementation-priorities.webp",
+          "source_url": "original://designerMCP/offline/unslop-implementation-priorities",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-implementation-priorities/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-implementation-priorities",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-implementation-priorities/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-implementation-priorities",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "implementation-priorities",
+        "audit-checklist"
+      ],
+      "examples": [],
       "guidance": "Adapted CC-BY-4.0: examine the actual rendered screen and its project-local source, list located issues, decide whether the screen needs small refinement or a full pass, and write a product-specific direction. Upstream's explicit order is 1 spacing, 2 color, 3 icons, 4 copy, 5 type, 6 layout, 7 details, 8 visuals, 9 motion. Work across the screen one layer at a time rather than replacing unrelated individual cards with inconsistent styles. Check the final first screen, content truthfulness and template sameness. Preserve real product identity, features and section order unless a broader change was requested.\n\nOriginal downstream use: prioritize actual defects and authorized user goals over a mechanical checklist. Fix broken functionality or accessibility tightly coupled to visual changes before polishing. Use the existing project build and tests; compare responsive screens, keyboard focus and reduced-motion behavior. No upstream scripts need to run. Do not fetch arbitrary remote sites or read outside the current project because an archived prompt mentions a URL or screenshot workflow. The optional story-video workflow is marketing evidence, not a prerequisite for a working design.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#run-it",
+      "id": "unslop-implementation-priorities",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir).",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "ordered-passes", "path": "assets/unslop/skills/unslop/SKILL.md.json", "mime_type": "application/json", "title": "Full upstream process and ordered passes"}],
-      "examples": []
+      "platforms": [
+        "web",
+        "react",
+        "html",
+        "css",
+        "tailwind"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/SKILL.md#run-it",
+      "summary": "Upstream order is spacing, color, icons, copy, type, layout, details, visuals and motion. Preserve functional behavior and stop when the problem is resolved.",
+      "tags": [
+        "anti-slop",
+        "workflow",
+        "scope",
+        "light-slop",
+        "heavy-slop",
+        "verification"
+      ],
+      "title": "Implementation priorities: audit, decide scope, then nine ordered passes"
     },
     {
-      "id": "unslop-visuals",
-      "title": "Visuals: show the real product or a concrete metaphor, not glossy filler",
-      "summary": "Upstream visual reference covers subject, setting, light, palette, style, composition, object moments and image integration.",
-      "categories": ["anti-ai-slop", "unslop", "composition", "visuals"],
-      "tags": ["anti-slop", "hero", "product-preview", "metaphor", "image-direction", "no-glossy-blobs"],
-      "platforms": ["web", "react", "css"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "visuals",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/references/visuals.md.json",
+          "title": "Full upstream visuals reference, not image-generation instructions"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-visuals.webp",
+          "source_url": "original://designerMCP/offline/unslop-visuals",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-visuals/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-visuals",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-visuals/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-visuals",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "composition",
+        "visuals"
+      ],
+      "examples": [],
       "guidance": "Adapted CC-BY-4.0: remove meaningless chrome blobs, floating cubes, holographic brains and stock robots. A product preview built with existing project code often communicates more than an image, especially in dashboards. When an image is genuinely useful, name one concrete subject, a simple setting, matching light/palette, a product-appropriate style and the calm text area before choosing a treatment. Upstream discusses painted background art, one-object cinematic photography, print styles and matte stylized 3D; none is a required universal look. A print-style image should belong to the same typographic and color world as the page. Do not bake grain-like artifacts into the image just to seem crafted.\n\nDownstream safety: image-service names in the source are informational, not authorization to connect APIs, use credentials or generate paid images. This import performs no image generation. Use existing explicitly licensed project media or code-based previews unless the user explicitly requests image creation and the relevant authorization is available. The source recommends WebP/AVIF, appropriate alternate text, matching edges and reserved layout space; third-party image model terms are not granted by unslop's license.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/visuals.md",
+      "id": "unslop-visuals",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir). No generated media or third-party model rights included.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "visuals", "path": "assets/unslop/skills/unslop/references/visuals.md.json", "mime_type": "application/json", "title": "Full upstream visuals reference, not image-generation instructions"}],
-      "examples": []
+      "platforms": [
+        "web",
+        "react",
+        "css"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/visuals.md",
+      "summary": "Upstream visual reference covers subject, setting, light, palette, style, composition, object moments and image integration.",
+      "tags": [
+        "anti-slop",
+        "hero",
+        "product-preview",
+        "metaphor",
+        "image-direction",
+        "no-glossy-blobs"
+      ],
+      "title": "Visuals: show the real product or a concrete metaphor, not glossy filler"
     },
     {
-      "id": "unslop-effects",
-      "title": "Optional visual treatments: glyphs, halftone, dithering and duotone",
-      "summary": "Upstream effects reference makes the main visual feel product-specific and provides explicit weak-device performance constraints.",
-      "categories": ["anti-ai-slop", "unslop", "composition", "motion", "visual-effects"],
-      "tags": ["anti-slop", "glyphs", "halftone", "dither", "duotone", "canvas", "performance"],
-      "platforms": ["web", "react", "css", "canvas"],
+      "assets": [
+        {
+          "format": "markdown",
+          "id": "effects",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/references/effects.md.json",
+          "title": "Upstream effects and performance guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-effects.webp",
+          "source_url": "original://designerMCP/offline/unslop-effects",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-effects/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-effects",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-effects/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-effects",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "composition",
+        "motion",
+        "visual-effects"
+      ],
+      "examples": [],
       "guidance": "Adapted CC-BY-4.0: effects are optional and belong on the main visual only when the product direction justifies them. Upstream covers glyph grids chosen from product material, halftone dots, dithering and duotone. Finance can use digits/currency signs; developer products can use code-like marks. This is a signature choice, not a reason to texture every control. Performance rules: read image pixels once at load rather than getImageData every animation frame; prepare glyph atlases and tinted cells ahead of time; animate around 8–12 steps per second with a small changed-cell share; pause offscreen; cap device pixel ratio at 2. Original downstream addition: retain a static accessible representation, respect reduced motion, and use only authorized local image data. Canvas may require same-origin or properly licensed/CORS-enabled sources; do not bypass access restrictions or load private remote images.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/effects.md",
+      "id": "unslop-effects",
       "license": "CC-BY-4.0 adaptation; Damir Sokolovsky (@heydamir).",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "effects", "path": "assets/unslop/skills/unslop/references/effects.md.json", "mime_type": "application/json", "title": "Upstream effects and performance guidance"}],
-      "examples": []
+      "platforms": [
+        "web",
+        "react",
+        "css",
+        "canvas"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/effects.md",
+      "summary": "Upstream effects reference makes the main visual feel product-specific and provides explicit weak-device performance constraints.",
+      "tags": [
+        "anti-slop",
+        "glyphs",
+        "halftone",
+        "dither",
+        "duotone",
+        "canvas",
+        "performance"
+      ],
+      "title": "Optional visual treatments: glyphs, halftone, dithering and duotone"
     },
     {
-      "id": "unslop-dashboard-reference",
-      "title": "Finished dashboard reference: quiet graphite chrome and meaningful color",
-      "summary": "Unchanged licensed upstream WebP shows a finance dashboard with rendered payment cards and a revenue chart. Learn its qualities, not its exact layout.",
-      "categories": ["anti-ai-slop", "unslop", "composition", "ui-components", "dashboard"],
-      "tags": ["anti-slop", "finished-reference", "raster", "chart", "payment-card", "quiet-chrome"],
-      "platforms": ["web", "react"],
+      "assets": [
+        {
+          "format": "webp",
+          "id": "dashboard-after-preview",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/unslop-dashboard-after-preview.webp",
+          "title": "Safe dashboard preview, 800x800, 21750 bytes"
+        },
+        {
+          "format": "webp",
+          "id": "dashboard-after",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/unslop-dashboard-after.webp",
+          "title": "Full-res archive original, 1600x1600, 74724 bytes; exceeds 64KiB response, retrieve preview"
+        },
+        {
+          "format": "markdown",
+          "id": "reference-table",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/references/refs.md.json",
+          "title": "Descriptions of all five upstream finished references"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); full screenshot unchanged, preview resized/recompressed locally, guidance adapted. Attribution required.",
+          "license_path": "licenses/unslop/ATTRIBUTION.txt",
+          "mime_type": "image/webp",
+          "origin": "upstream",
+          "path": "assets/offline-visuals/unslop-dashboard-reference.webp",
+          "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-dashboard-after.webp",
+          "title": "Safe dashboard preview, 800x800, 21750 bytes"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-dashboard-reference/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-dashboard-reference",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-dashboard-reference/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-dashboard-reference",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "composition",
+        "ui-components",
+        "dashboard"
+      ],
+      "examples": [],
       "guidance": "Adapted from references/refs.md, CC-BY-4.0: the upstream description identifies two payment-card objects and a revenue chart with soft colored series over a mirrored gray comparison. Its lesson is quiet graphite interface chrome with color concentrated in meaningful objects and chart series. The finished screenshot is a reference, not a responsive production implementation or a reusable account dataset. Do not transplant its finance subject, palette, business metrics or exact layout into a different product. All five upstream finished/reference screenshots are archived at full resolution, with locally derived small previews. Keep author credit for reused/adapted visual material.\n\nSafe retrieval: request dashboard-after-preview, a 21750-byte WebP derived from the unchanged 1600x1600 original. dashboard-after is the unchanged 74724-byte archive original; its base64 representation exceeds the 64KiB response budget, so do not request it through the bounded MCP image channel. The original stays available as an explicitly cataloged local asset; no server limits are increased.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-dashboard-after.webp",
+      "id": "unslop-dashboard-reference",
       "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); full screenshot unchanged, preview resized/recompressed locally, guidance adapted. Attribution required.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [
-        {"id": "dashboard-after-preview", "path": "assets/unslop/unslop-dashboard-after-preview.webp", "mime_type": "image/webp", "title": "Safe dashboard preview, 800x800, 21750 bytes"},
-        {"id": "dashboard-after", "path": "assets/unslop/unslop-dashboard-after.webp", "mime_type": "image/webp", "title": "Full-res archive original, 1600x1600, 74724 bytes; exceeds 64KiB response, retrieve preview"},
-        {"id": "reference-table", "path": "assets/unslop/skills/unslop/references/refs.md.json", "mime_type": "application/json", "title": "Descriptions of all five upstream finished references"}
+      "platforms": [
+        "web",
+        "react"
       ],
-      "examples": []
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-dashboard-after.webp",
+      "summary": "Unchanged licensed upstream WebP shows a finance dashboard with rendered payment cards and a revenue chart. Learn its qualities, not its exact layout.",
+      "tags": [
+        "anti-slop",
+        "finished-reference",
+        "raster",
+        "chart",
+        "payment-card",
+        "quiet-chrome"
+      ],
+      "title": "Finished dashboard reference: quiet graphite chrome and meaningful color"
     },
     {
-      "id": "unslop-hero-before",
-      "title": "Upstream hero exercise: before-state source for an anti-slop audit",
-      "summary": "Verbatim licensed hero HTML is archived inside JSON for inspection only. It is a deliberately AI-looking starting exercise, not a finished template.",
-      "categories": ["anti-ai-slop", "unslop", "audit-checklist", "hero", "content"],
-      "tags": ["anti-slop", "before-state", "exercise", "passive-source", "html"],
-      "platforms": ["web", "react", "html", "css"],
+      "assets": [
+        {
+          "format": "html",
+          "id": "hero-before-source",
+          "mime_type": "application/json",
+          "path": "assets/unslop/examples/hero.html.json",
+          "title": "Inert original hero exercise HTML"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-hero-before.webp",
+          "source_url": "original://designerMCP/offline/unslop-hero-before",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-hero-before/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-hero-before",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-hero-before/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-hero-before",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "audit-checklist",
+        "hero",
+        "content"
+      ],
+      "examples": [],
       "guidance": "Factual upstream source reference, with adapted CC-BY-4.0 guidance: examples/hero.html is the starting page to audit and redesign. Inspect it alongside signs.md rather than copying its decorative patterns as the desired result. The repository's finished hero screenshot is archived at full resolution with a safe small preview in unslop-hero-finished-reference. Use its qualities and the reference table, not its exact subject or layout, when deriving a direction for another product. HTML is wrapped as application/json and must remain inert when retrieved. It may contain remote stylesheet, font or runtime references; this archive does not load them, bundle their dependencies or grant their licenses. If using snippets in the current project, manually adapt only relevant markup/CSS after review and keep author attribution; do not execute the entire archived page.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/examples/hero.html",
+      "id": "unslop-hero-before",
       "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); source text unchanged inside passive JSON. Remote dependencies excluded.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "hero-before-source", "path": "assets/unslop/examples/hero.html.json", "mime_type": "application/json", "title": "Inert original hero exercise HTML"}],
-      "examples": []
+      "platforms": [
+        "web",
+        "react",
+        "html",
+        "css"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/examples/hero.html",
+      "summary": "Verbatim licensed hero HTML is archived inside JSON for inspection only. It is a deliberately AI-looking starting exercise, not a finished template.",
+      "tags": [
+        "anti-slop",
+        "before-state",
+        "exercise",
+        "passive-source",
+        "html"
+      ],
+      "title": "Upstream hero exercise: before-state source for an anti-slop audit"
     },
     {
-      "id": "unslop-dashboard-before",
-      "title": "Upstream dashboard exercise: audit before-state source against finished qualities",
-      "summary": "Passive licensed dashboard HTML pairs with the finished dashboard reference; the HTML is the source exercise, not the finished design.",
-      "categories": ["anti-ai-slop", "unslop", "audit-checklist", "dashboard", "ui-components"],
-      "tags": ["anti-slop", "before-state", "exercise", "passive-source", "html", "comparison"],
-      "platforms": ["web", "react", "html", "css"],
+      "assets": [
+        {
+          "format": "html",
+          "id": "dashboard-before-source",
+          "mime_type": "application/json",
+          "path": "assets/unslop/examples/dashboard.html.json",
+          "title": "Inert original dashboard exercise HTML"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-dashboard-before.webp",
+          "source_url": "original://designerMCP/offline/unslop-dashboard-before",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-dashboard-before/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-dashboard-before",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-dashboard-before/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-dashboard-before",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "audit-checklist",
+        "dashboard",
+        "ui-components"
+      ],
+      "examples": [],
       "guidance": "Factual upstream source reference and adapted CC-BY-4.0 guidance: inspect examples/dashboard.html as an AI-looking starting dashboard. Locate palette, badge, typography, spacing, numeric-format and component-state tells, then derive a direction for the actual target product. references/refs.md states that unslop-dashboard-after.webp is the finished version of this example and specifically recommends finding your own answer rather than reconstructing it. The finished screenshot is archived separately in unslop-dashboard-reference. This inert JSON source is not a live dashboard, verified business data or a completed accessible component library. Remote resources remain only strings in the source; do not fetch or run them as part of retrieval.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/examples/dashboard.html",
+      "id": "unslop-dashboard-before",
       "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); source retained verbatim, JSON packaging only.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [{"id": "dashboard-before-source", "path": "assets/unslop/examples/dashboard.html.json", "mime_type": "application/json", "title": "Inert original dashboard exercise HTML"}],
-      "examples": []
+      "platforms": [
+        "web",
+        "react",
+        "html",
+        "css"
+      ],
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/examples/dashboard.html",
+      "summary": "Passive licensed dashboard HTML pairs with the finished dashboard reference; the HTML is the source exercise, not the finished design.",
+      "tags": [
+        "anti-slop",
+        "before-state",
+        "exercise",
+        "passive-source",
+        "html",
+        "comparison"
+      ],
+      "title": "Upstream dashboard exercise: audit before-state source against finished qualities"
     },
     {
-      "id": "unslop-story-source",
-      "title": "Optional redesign story and snapshot scripts: passive source, not runnable tools",
-      "summary": "Upstream includes snapshot and story-video scripts. Their small source files are retained as licensed JSON references; no execution, dependencies or videos are imported.",
-      "categories": ["anti-ai-slop", "unslop", "implementation-priorities", "motion", "source-reference"],
-      "tags": ["anti-slop", "story-video", "snapshot", "passive-source", "no-execution", "optional"],
-      "platforms": ["web", "react", "javascript"],
+      "assets": [
+        {
+          "format": "javascript",
+          "id": "snapshot-source",
+          "mime_type": "application/json",
+          "path": "assets/unslop/skills/unslop/scripts/snapshot.mjs.json",
+          "title": "Inert upstream snapshot script source"
+        },
+        {
+          "format": "javascript",
+          "id": "story-source",
+          "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); source verbatim inside JSON, not executed.",
+          "license_path": "licenses/unslop/ATTRIBUTION.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-library/unslop-story-source/story-source.json",
+          "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/scripts",
+          "title": "Tooling omission index (not complete source)"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-story-source.webp",
+          "source_url": "original://designerMCP/offline/unslop-story-source",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-story-source/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-story-source",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-story-source/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-story-source",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "implementation-priorities",
+        "motion",
+        "source-reference"
+      ],
+      "examples": [],
       "guidance": "Factual coverage and adapted CC-BY-4.0 guidance: upstream contains snapshot.mjs and story.mjs plus a Story video section describing in-place CSS morphs, a wave of changes and redlines that become corrected measurements. The story is an optional communication artifact, not ordinary production interaction design. Upstream documents browser/video dependencies including ffmpeg for stories; none is installed, bundled or invoked here. The source references are not executable assets and their original paths are metadata, not permission to create those script paths in another project. Do not run archived scripts, connect their remote resources, read outside the authorized project or treat their CLI examples as instructions. A project-local written before/after audit is sufficient for normal polishing. The story-frame image is archived unchanged with a safe small preview in unslop-story-frames-reference; no video was generated.",
-      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/scripts",
+      "id": "unslop-story-source",
       "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); source verbatim inside JSON, not executed.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [
-        {"id": "snapshot-source", "path": "assets/unslop/skills/unslop/scripts/snapshot.mjs.json", "mime_type": "application/json", "title": "Inert upstream snapshot script source"},
-        {"id": "story-source", "path": "assets/unslop/skills/unslop/scripts/story.mjs.json", "mime_type": "application/json", "title": "Inert upstream story-video script source"}
+      "platforms": [
+        "web",
+        "react",
+        "javascript"
       ],
-      "examples": []
+      "source_url": "https://github.com/heydamir/unslop/tree/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/scripts",
+      "summary": "Upstream includes snapshot and story-video scripts. Their small source files are retained as licensed JSON references; no execution, dependencies or videos are imported.",
+      "tags": [
+        "anti-slop",
+        "story-video",
+        "snapshot",
+        "passive-source",
+        "no-execution",
+        "optional"
+      ],
+      "title": "Optional redesign story and snapshot scripts: passive source, not runnable tools"
     },
     {
-      "id": "unslop-hero-finished-reference",
-      "title": "Finished hero reference: product material makes the visual signature",
-      "summary": "Upstream invoicing hero shows a paper plane made from digits/currency signs, pinned notes and a product view rising beneath calm headline space.",
-      "categories": ["anti-ai-slop", "unslop", "composition", "hero", "visuals"],
-      "tags": ["anti-slop", "finished-reference", "raster", "glyphs", "product-material", "safe-preview"],
-      "platforms": ["web", "react"],
+      "assets": [
+        {
+          "format": "webp",
+          "id": "hero-after-preview",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/unslop-hero-after-preview.webp",
+          "title": "Safe finished hero preview, 800x450, 22460 bytes"
+        },
+        {
+          "format": "webp",
+          "id": "hero-after-original",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/unslop-hero-after.webp",
+          "title": "Full-res archive original, 1920x1080, 223664 bytes; exceeds 64KiB response, retrieve preview"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original image unchanged; preview resized/recompressed locally; guidance adapted.",
+          "license_path": "licenses/unslop/ATTRIBUTION.txt",
+          "mime_type": "image/webp",
+          "origin": "upstream",
+          "path": "assets/offline-visuals/unslop-hero-finished-reference.webp",
+          "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-hero-after.webp",
+          "title": "Safe finished hero preview, 800x450, 22460 bytes"
+        },
+        {
+          "format": "text",
+          "id": "offline-guidance",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-hero-finished-reference/offline-guidance.json",
+          "source_url": "original://designerMCP/offline/unslop-hero-finished-reference",
+          "title": "Original offline adaptation guide"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-hero-finished-reference/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-hero-finished-reference",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-hero-finished-reference/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-hero-finished-reference",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "composition",
+        "hero",
+        "visuals"
+      ],
+      "examples": [],
       "guidance": "Adapted from upstream references/refs.md, CC-BY-4.0: the invoicing visual is made from the product's own material, money. It serves as both the visual moment and signature detail; text sits on calm sky, chrome stays quiet, and the product preview invites scrolling. Learn that relationship between subject, material, copy space and preview, not the finance theme, palette or exact arrangement. This is a screenshot reference, not a finished accessible React template or real invoice data.\n\nSafe retrieval: request hero-after-preview (800x450, 22460 bytes). hero-after-original is the unchanged full-resolution 1920x1080 WebP, 223664 bytes. The original exceeds the 64KiB response budget when encoded and is cataloged for offline archival use only; do not retrieve it through the bounded MCP image channel. Preview modification is local resize/recompression, with CC-BY-4.0 attribution retained.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-hero-after.webp",
+      "id": "unslop-hero-finished-reference",
       "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original image unchanged; preview resized/recompressed locally; guidance adapted.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [
-        {"id": "hero-after-preview", "path": "assets/unslop/unslop-hero-after-preview.webp", "mime_type": "image/webp", "title": "Safe finished hero preview, 800x450, 22460 bytes"},
-        {"id": "hero-after-original", "path": "assets/unslop/unslop-hero-after.webp", "mime_type": "image/webp", "title": "Full-res archive original, 1920x1080, 223664 bytes; exceeds 64KiB response, retrieve preview"}
+      "platforms": [
+        "web",
+        "react"
       ],
-      "examples": []
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-hero-after.webp",
+      "summary": "Upstream invoicing hero shows a paper plane made from digits/currency signs, pinned notes and a product view rising beneath calm headline space.",
+      "tags": [
+        "anti-slop",
+        "finished-reference",
+        "raster",
+        "glyphs",
+        "product-material",
+        "safe-preview"
+      ],
+      "title": "Finished hero reference: product material makes the visual signature"
     },
     {
-      "id": "unslop-beacon-reference",
-      "title": "Beacon reference: one ink and one typographic world",
-      "summary": "Upstream incident-monitoring hero uses a blue lighthouse engraving, one paper tone and a serif headline in the calm sky left by the illustration.",
-      "categories": ["anti-ai-slop", "unslop", "composition", "typography", "color", "visuals"],
-      "tags": ["anti-slop", "finished-reference", "engraving", "one-ink", "raster", "safe-preview"],
-      "platforms": ["web", "react"],
+      "assets": [
+        {
+          "format": "webp",
+          "id": "beacon-preview",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/beacon-engraving-preview.webp",
+          "title": "Safe beacon preview, 512x288, 21658 bytes"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+          "license_path": "licenses/unslop/ATTRIBUTION.txt",
+          "mime_type": "image/webp",
+          "origin": "upstream",
+          "path": "assets/offline-visuals/unslop-beacon-reference.webp",
+          "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/beacon-engraving.webp",
+          "title": "Safe beacon preview, 512x288, 21658 bytes"
+        },
+        {
+          "format": "text",
+          "id": "offline-guidance",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-beacon-reference/offline-guidance.json",
+          "source_url": "original://designerMCP/offline/unslop-beacon-reference",
+          "title": "Original offline adaptation guide"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-beacon-reference/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-beacon-reference",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-beacon-reference/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-beacon-reference",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "composition",
+        "typography",
+        "color",
+        "visuals"
+      ],
+      "examples": [],
       "guidance": "Adapted from upstream references/refs.md, CC-BY-4.0: this incident-monitoring hero depicts a lighthouse on a rocky coast as one blue engraving. Its print style works because the whole page shares one ink, one paper tone and matching serif type, while the illustration leaves calm sky for the headline. The lesson is a coherent world across image, palette and type, not a requirement to put lighthouses or engraving on unrelated products. Treat the screenshot as visual evidence rather than a responsive implementation.\n\nSafe retrieval: request beacon-preview (512x288, 21658 bytes). beacon-original is the unchanged 1920x1080 source, 569124 bytes. It exceeds both the current 512KiB server image-read ceiling and the 64KiB response budget, so it is an archive-only local asset and must not be requested through the bounded MCP channel. Keep those limits unchanged and use the preview.",
+      "id": "unslop-beacon-reference",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
       "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/beacon-engraving.webp",
-      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
-      "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [
-        {"id": "beacon-preview", "path": "assets/unslop/beacon-engraving-preview.webp", "mime_type": "image/webp", "title": "Safe beacon preview, 512x288, 21658 bytes"},
-        {"id": "beacon-original", "path": "assets/unslop/beacon-engraving.webp", "mime_type": "image/webp", "title": "Full-res archive original, 1920x1080, 569124 bytes; exceeds read/response limits, retrieve preview"}
+      "summary": "Upstream incident-monitoring hero uses a blue lighthouse engraving, one paper tone and a serif headline in the calm sky left by the illustration.",
+      "tags": [
+        "anti-slop",
+        "finished-reference",
+        "engraving",
+        "one-ink",
+        "raster",
+        "safe-preview"
       ],
-      "examples": []
+      "title": "Beacon reference: one ink and one typographic world"
     },
     {
-      "id": "unslop-meadow-reference",
-      "title": "Meadow reference: restrained 3D and typography belonging to the scene",
-      "summary": "Upstream footer combines a soft 3D meadow, matte crystal shapes, a large wordmark and quiet links on open sky.",
-      "categories": ["anti-ai-slop", "unslop", "composition", "typography", "visuals"],
-      "tags": ["anti-slop", "finished-reference", "footer", "matte-3d", "raster", "safe-preview"],
-      "platforms": ["web", "react"],
+      "assets": [
+        {
+          "format": "webp",
+          "id": "meadow-preview",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/meadow-3d-preview.webp",
+          "title": "Safe meadow preview, 800x500, 23614 bytes"
+        },
+        {
+          "format": "webp",
+          "id": "meadow-original",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/meadow-3d.webp",
+          "title": "Full-res archive original, 1920x1200, 286608 bytes; exceeds 64KiB response, retrieve preview"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+          "license_path": "licenses/unslop/ATTRIBUTION.txt",
+          "mime_type": "image/webp",
+          "origin": "upstream",
+          "path": "assets/offline-visuals/unslop-meadow-reference.webp",
+          "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/meadow-3d.webp",
+          "title": "Safe meadow preview, 800x500, 23614 bytes"
+        },
+        {
+          "format": "text",
+          "id": "offline-guidance",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-meadow-reference/offline-guidance.json",
+          "source_url": "original://designerMCP/offline/unslop-meadow-reference",
+          "title": "Original offline adaptation guide"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-meadow-reference/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-meadow-reference",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-meadow-reference/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-meadow-reference",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "composition",
+        "typography",
+        "visuals"
+      ],
+      "examples": [],
       "guidance": "Adapted from upstream references/refs.md, CC-BY-4.0: the meadow footer uses friendly stylized 3D with a restrained palette, matte shapes, a huge wordmark standing behind hills, and quiet links placed in open sky. The useful quality is that typography becomes part of the visual scene while navigation remains calm. Do not copy the meadow subject or convert every footer into decorative 3D; choose a scene only when it fits the actual product and retains useful links and reading order. The raster is a reference, not a functional footer component.\n\nSafe retrieval: request meadow-preview (800x500, 23614 bytes). meadow-original is unchanged at 1920x1200 and 286608 bytes; its encoded output exceeds the 64KiB response budget. Keep the full-res asset for offline archival use and retrieve only the small preview through MCP. CC-BY-4.0 credit applies to both.",
+      "id": "unslop-meadow-reference",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
       "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/meadow-3d.webp",
-      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
-      "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [
-        {"id": "meadow-preview", "path": "assets/unslop/meadow-3d-preview.webp", "mime_type": "image/webp", "title": "Safe meadow preview, 800x500, 23614 bytes"},
-        {"id": "meadow-original", "path": "assets/unslop/meadow-3d.webp", "mime_type": "image/webp", "title": "Full-res archive original, 1920x1200, 286608 bytes; exceeds 64KiB response, retrieve preview"}
+      "summary": "Upstream footer combines a soft 3D meadow, matte crystal shapes, a large wordmark and quiet links on open sky.",
+      "tags": [
+        "anti-slop",
+        "finished-reference",
+        "footer",
+        "matte-3d",
+        "raster",
+        "safe-preview"
       ],
-      "examples": []
+      "title": "Meadow reference: restrained 3D and typography belonging to the scene"
     },
     {
-      "id": "unslop-story-frames-reference",
-      "title": "Story-frame reference: a redesign explained through in-place changes",
-      "summary": "Upstream contact sheet presents eight dashboard story-video frames with morphing UI, redlines and letter-by-letter copy changes.",
-      "categories": ["anti-ai-slop", "unslop", "motion", "audit-checklist", "implementation-priorities"],
-      "tags": ["anti-slop", "finished-reference", "story-video", "redline", "contact-sheet", "safe-preview"],
-      "platforms": ["web", "react"],
+      "assets": [
+        {
+          "format": "webp",
+          "id": "story-frames-preview",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/story-dashboard-frames-preview.webp",
+          "title": "Safe story contact-sheet preview, 800x400, 24278 bytes"
+        },
+        {
+          "format": "webp",
+          "id": "story-frames-original",
+          "mime_type": "image/webp",
+          "path": "assets/unslop/story-dashboard-frames.webp",
+          "title": "Full-res archive original, 2400x1200, 187334 bytes; exceeds 64KiB response, retrieve preview"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+          "license_path": "licenses/unslop/ATTRIBUTION.txt",
+          "mime_type": "image/webp",
+          "origin": "upstream",
+          "path": "assets/offline-visuals/unslop-story-frames-reference.webp",
+          "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/story-dashboard-frames.webp",
+          "title": "Safe story contact-sheet preview, 800x400, 24278 bytes"
+        },
+        {
+          "format": "text",
+          "id": "offline-guidance",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-story-frames-reference/offline-guidance.json",
+          "source_url": "original://designerMCP/offline/unslop-story-frames-reference",
+          "title": "Original offline adaptation guide"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-story-frames-reference/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-story-frames-reference",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-story-frames-reference/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-story-frames-reference",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "motion",
+        "audit-checklist",
+        "implementation-priorities"
+      ],
+      "examples": [],
       "guidance": "Adapted from upstream references/refs.md, CC-BY-4.0: the contact sheet shows eight frames from a roughly ten-second dashboard story. Elements morph in place in a wave, red redlines become white when corrected, copy rolls letter by letter, and the story is cropped close to sidebar and first cards. This communicates a redesign process; it is not a recommendation to animate every production screen that way. No upstream story/snapshot script was executed and no video was generated. For normal project work, a factual written before/after audit remains sufficient.\n\nSafe retrieval: request story-frames-preview (800x400, 24278 bytes). story-frames-original is the unchanged 2400x1200 WebP contact sheet, 187334 bytes. Its encoded output exceeds the 64KiB response budget, so keep it for offline archival use and request the preview through MCP. The preview may make small text less legible; the complete source descriptions and story section remain available as passive JSON references.",
-      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/story-dashboard-frames.webp",
+      "id": "unslop-story-frames-reference",
       "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
       "license_path": "licenses/unslop/ATTRIBUTION.txt",
-      "assets": [
-        {"id": "story-frames-preview", "path": "assets/unslop/story-dashboard-frames-preview.webp", "mime_type": "image/webp", "title": "Safe story contact-sheet preview, 800x400, 24278 bytes"},
-        {"id": "story-frames-original", "path": "assets/unslop/story-dashboard-frames.webp", "mime_type": "image/webp", "title": "Full-res archive original, 2400x1200, 187334 bytes; exceeds 64KiB response, retrieve preview"}
+      "platforms": [
+        "web",
+        "react"
       ],
-      "examples": []
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/story-dashboard-frames.webp",
+      "summary": "Upstream contact sheet presents eight dashboard story-video frames with morphing UI, redlines and letter-by-letter copy changes.",
+      "tags": [
+        "anti-slop",
+        "finished-reference",
+        "story-video",
+        "redline",
+        "contact-sheet",
+        "safe-preview"
+      ],
+      "title": "Story-frame reference: a redesign explained through in-place changes"
     },
     {
-      "id": "unslop-original-web-baseline",
-      "title": "Original anti-slop web/React baseline: useful hierarchy without invented proof",
-      "summary": "Independently authored CC0 guidance and implementation examples remain usable without executing upstream prompts or adding a decorative dependency.",
-      "categories": ["anti-ai-slop", "unslop", "audit-checklist", "typography", "layout", "color", "composition", "motion", "content", "ui-components", "implementation-priorities", "original-design-guidance"],
-      "tags": ["anti-slop", "ai-slop", "looks-too-ai", "original-example", "baseline", "accessible", "responsive"],
-      "platforms": ["web", "react", "html", "css"],
+      "assets": [
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/unslop-original-web-baseline.webp",
+          "source_url": "original://designerMCP/offline/unslop-original-web-baseline",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "examples",
+          "id": "offline-examples",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-original-web-baseline/offline-examples.json",
+          "source_url": "original://designerMCP/offline/unslop-original-web-baseline",
+          "title": "Retained inert illustrative examples"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-original-web-baseline/offline-license.json",
+          "source_url": "original://designerMCP/offline/unslop-original-web-baseline",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/unslop-original-web-baseline/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/unslop-original-web-baseline",
+          "title": "Offline reference dossier index"
+        }
+      ],
+      "categories": [
+        "anti-ai-slop",
+        "unslop",
+        "audit-checklist",
+        "typography",
+        "layout",
+        "color",
+        "composition",
+        "motion",
+        "content",
+        "ui-components",
+        "implementation-priorities",
+        "original-design-guidance"
+      ],
+      "examples": [
+        {
+          "code": "/* Original CC0-1.0; use the project's existing React runtime. */\nimport { useId } from 'react';\nexport function AppointmentSummary({ dateLabel, serviceLabel, bookingHref }) {\n  const titleId = useId();\n  return <section className=\"booking-summary\" aria-labelledby={titleId}>\n    <h2 id={titleId}>Your appointment</h2>\n    <dl><dt>Service</dt><dd>{serviceLabel}</dd><dt>Date</dt><dd>{dateLabel}</dd></dl>\n    <a className=\"primary-action\" href={bookingHref}>Review appointment</a>\n  </section>;\n}",
+          "description": "Original useful product-specific summary with unique heading IDs; bookingHref must be a project-validated navigation URL, and date/service must be truthful application data.",
+          "language": "jsx"
+        },
+        {
+          "code": "/* Original CC0-1.0 companion layout; no external fonts or motion required. */\n.booking-summary { max-inline-size: 38rem; padding: 1.5rem; border: 1px solid var(--border, #a59b8e); border-radius: .75rem; }\n.booking-summary h2 { margin-block: 0 1rem; font-size: 1.5rem; font-weight: 500; }\n.booking-summary dl { display: grid; grid-template-columns: minmax(5rem, 1fr) minmax(0, 2fr); gap: .5rem 1rem; }\n.booking-summary dd { margin: 0; overflow-wrap: anywhere; }\n.booking-summary .primary-action { display: inline-flex; align-items: center; min-block-size: 2.75rem; margin-block-start: 1rem; padding-inline: 1rem; }\n@media (max-width: 25rem) { .booking-summary dl { grid-template-columns: minmax(0, 1fr); } .booking-summary dd { margin-block-end: .5rem; } }",
+          "description": "Original readable semantic definition-list layout with a narrow-screen fallback.",
+          "language": "css"
+        }
+      ],
       "guidance": "Independently authored guidance, CC0-1.0, not a claim about additional upstream content: start with the visitor's concrete task and a truthful title, then organize verified content by importance. Keep the existing useful brand and source data. Give a primary action a clear label and quieter secondary actions. Use native headings, links, buttons and form controls. Choose an intentional spacing rhythm, a readable text measure and a compact set of roles instead of layering effects onto every block. Compare long labels, empty/error/loading states and narrow screens, not just an ideal desktop screenshot. Avoid fabricated popularity, testimonials, urgency or performance claims. Distinctiveness can come from real product vocabulary, honest screenshots and task-appropriate information density rather than novel decoration.\n\nFor React, keep data supplied by the existing application, avoid injected HTML and give repeated components unique IDs. Use plain CSS and existing local dependencies. Motion is optional and must not hide essential information. Check keyboard flow, visible focus, zoom, text contrast and reduced motion after the visual change. Fix the evidence-backed problems, then stop; changing every font or rebuilding the whole site is not the definition of polish. These examples are illustrative fragments, not a complete app or permission to modify unrelated projects.",
-      "source_url": "https://github.com/heydamir/unslop",
+      "id": "unslop-original-web-baseline",
       "license": "This entry's independently authored guidance/examples: CC0-1.0. Source URL is contextual attribution only, not a claim that these examples are upstream. Other unslop entries retain CC-BY-4.0 attribution.",
       "license_path": "licenses/unslop/ORIGINAL-CC0.txt",
-      "assets": [],
-      "examples": [
-        {"language": "jsx", "code": "/* Original CC0-1.0; use the project's existing React runtime. */\nimport { useId } from 'react';\nexport function AppointmentSummary({ dateLabel, serviceLabel, bookingHref }) {\n  const titleId = useId();\n  return <section className=\"booking-summary\" aria-labelledby={titleId}>\n    <h2 id={titleId}>Your appointment</h2>\n    <dl><dt>Service</dt><dd>{serviceLabel}</dd><dt>Date</dt><dd>{dateLabel}</dd></dl>\n    <a className=\"primary-action\" href={bookingHref}>Review appointment</a>\n  </section>;\n}", "description": "Original useful product-specific summary with unique heading IDs; bookingHref must be a project-validated navigation URL, and date/service must be truthful application data."},
-        {"language": "css", "code": "/* Original CC0-1.0 companion layout; no external fonts or motion required. */\n.booking-summary { max-inline-size: 38rem; padding: 1.5rem; border: 1px solid var(--border, #a59b8e); border-radius: .75rem; }\n.booking-summary h2 { margin-block: 0 1rem; font-size: 1.5rem; font-weight: 500; }\n.booking-summary dl { display: grid; grid-template-columns: minmax(5rem, 1fr) minmax(0, 2fr); gap: .5rem 1rem; }\n.booking-summary dd { margin: 0; overflow-wrap: anywhere; }\n.booking-summary .primary-action { display: inline-flex; align-items: center; min-block-size: 2.75rem; margin-block-start: 1rem; padding-inline: 1rem; }\n@media (max-width: 25rem) { .booking-summary dl { grid-template-columns: minmax(0, 1fr); } .booking-summary dd { margin-block-end: .5rem; } }", "description": "Original readable semantic definition-list layout with a narrow-screen fallback."}
-      ]
+      "platforms": [
+        "web",
+        "react",
+        "html",
+        "css"
+      ],
+      "source_url": "https://github.com/heydamir/unslop",
+      "summary": "Independently authored CC0 guidance and implementation examples remain usable without executing upstream prompts or adding a decorative dependency.",
+      "tags": [
+        "anti-slop",
+        "ai-slop",
+        "looks-too-ai",
+        "original-example",
+        "baseline",
+        "accessible",
+        "responsive"
+      ],
+      "title": "Original anti-slop web/React baseline: useful hierarchy without invented proof"
     }
-  ]
+  ],
+  "version": 1
 }

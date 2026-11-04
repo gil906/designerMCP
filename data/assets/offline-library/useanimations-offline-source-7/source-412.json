@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/pt-br/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-412",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/pt-br/common.ts",
+    "title": "website/src/i18n/messages/pt-br/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "87fba835cf215d87da16a0d0f5cbd20f000ec2acb90184ff30a13db27d498f4a",
+  "text": "import type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: 'Pular para o conteúdo',\n  ogImageAlt: 'useAnimations: ícones animados gratuitos para React, shadcn/ui, Lottie e SVG',\n  homeLabel: 'Página inicial do useAnimations',\n  mainNav: 'Principal',\n  browseIcons: 'Ver ícones',\n  nav: {\n    icons: 'Ícones',\n    categories: 'Categorias',\n    documentation: 'Documentação',\n    shadcn: 'shadcn',\n    lottie: 'Ícones Lottie',\n    license: 'Licença',\n  },\n  footer: {\n    tagline: 'Ícones animados gratuitos com interações prontas. Licença MIT, feitos para React.',\n    product: 'Produto',\n    developers: 'Desenvolvedores',\n    follow: 'Siga',\n    languages: 'Idiomas',\n    allIcons: 'Todos os ícones',\n    categories: 'Categorias',\n    interactions: 'Interações',\n    lottieIcons: 'Ícones Lottie',\n    shadcnIcons: 'Ícones para shadcn/ui',\n    documentation: 'Documentação',\n    licencing: 'Licença e termos',\n    shadcnRegistry: 'Registry do shadcn',\n    mitLicense: 'Licença MIT',\n    builtWith: 'Site feito com Astro',\n  },\n  breadcrumb: 'Trilha de navegação',\n  crumbs: { icons: 'Ícones', categories: 'Categorias', interactions: 'Interações' },\n  faq: 'Perguntas frequentes',\n  copy: 'Copiar',\n  copied: 'Copiado',\n  pressCtrlC: 'Pressione Ctrl+C',\n  languageBanner: {\n    text: 'Esta página também está disponível em português.',\n    action: 'Ver em português',\n    dismiss: 'Dispensar',\n  },\n};\n",
+  "version": 1
+}

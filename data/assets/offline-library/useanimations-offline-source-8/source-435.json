@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/tr/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-435",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/tr/islands.ts",
+    "title": "website/src/i18n/messages/tr/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "9cbeb05a12a667b4304c4fc60a209546359ae8a530b51a9358ecacef82b7650a",
+  "text": "import type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'Döngü',\n      'click-toggle': 'Tıkla',\n      'click-replay': 'Tıkla',\n      hover: 'Hover',\n      'hover-loop': 'Hover',\n      'hover-replay': 'Hover',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: 'Kendiliğinden oynar',\n      'click-toggle': 'Durumu değiştirmek için tıklayın',\n      'click-replay': 'Tekrar oynatmak için tıklayın',\n      hover: 'Hover’da oynar, imleç ayrılınca geri sarar',\n      'hover-loop': 'Hover süresince döngüde oynar',\n      'hover-replay': 'Hover’da oynar',\n    },\n    preview: '{title} önizlemesi',\n    colors: 'Önizleme rengi',\n    color: 'Renk {color}',\n    textColor: 'Metin rengi',\n    interaction: 'Etkileşim',\n    duration: 'Süre',\n    seconds: '{seconds} sn',\n    import: 'Import',\n    close: 'Kapat',\n    code: 'Kod',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'Dosyalar' },\n    copy: 'Kopyala',\n    download: 'İndir',\n    iconPage: 'İkon sayfası',\n  },\n  interactionDemo: {\n    click: 'Karta tıklayın',\n    loop: 'Kendiliğinden oynar',\n    hover: 'İmleci kartın üzerine getirin',\n  },\n  mobileMenu: {\n    menu: 'Menü',\n    nav: 'Ana menü',\n  },\n  search: {\n    clear: 'Aramayı temizle',\n  },\n  themeToggle: {\n    toLight: 'Açık temaya geç',\n    toDark: 'Koyu temaya geç',\n  },\n};\n",
+  "version": 1
+}

@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 4333,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "//\n// Copyright (c) Vatsal Manot\n//\n\nimport Swift\nimport SwiftUI\n\n/// A view that arranges its children in a vertical/horizontal line.\n///\n/// The axis is determined in accordance to the size proposed by the parent container.\n@_documentation(visibility: internal)\npublic struct AutomaticAxisStack<Content: View>: View {\n    public let preferredAxis: Axis\n    public let alignment: Alignment\n    public let spacing: CGFloat?\n    public let content: Content\n    \n    @usableFromInline\n    @State var intrinsicGeometrySize: CGSize = .zero\n    \n    @usableFromInline\n    @State var geometrySize: CGSize = .zero\n    \n    @usableFromInline\n    @State var wantsRealign: Bool = false\n    \n    public init(\n        preferredAxis: Axis,\n        alignment: Alignment = .center,\n        spacing: CGFloat? = nil,\n        @ViewBuilder content: () -> Content\n    ) {\n        self.preferredAxis = preferredAxis\n        self.alignment = alignment\n        self.spacing = spacing\n        self.content = content()\n    }\n    \n    @inlinable\n    public var body: some View {\n        PassthroughView {\n            if wantsRealign {\n                AxisStack(\n                    axis: self.preferredAxis.orthogonal,\n                    alignment: self.alignment,\n                    spacing: self.spacing\n                ) {\n                    self.content\n                }\n            } else {\n                GeometryReader { geometry in\n                    AxisStack(\n                        axis: self.preferredAxis,\n                        alignment: self.alignment,\n                        spacing: self.spacing\n                    ) {\n                        self.content\n                    }\n                    .fixedSize()\n                    .background(GeometryReader { intrinsicGeometry in\n                        ZeroSizeView().then { _ in\n                            DispatchQueue.main.async {\n                                if intrinsicGeometry.size.dimensionLength(for: self.preferredAxis) > geometry.size.dimensionLength(for: self.preferredAxis) {\n                                    self.intrinsicGeometrySize = intrinsicGeometry.size\n                                    self.geometrySize = geometry.size\n                                    self.wantsRealign = true\n                                }\n                            }\n                        }\n                    })\n                }\n                .frame(\n                    min: intrinsicGeometrySize.dimensionLength(for: preferredAxis),\n                    axis: preferredAxis\n                )\n            }\n        }\n    }\n}\n\n/// A view that arranges its children in a vertical/horizontal line.\n///\n/// The axis is determined in accordance to the size proposed by the parent container.\n/// The preferred line is horizontal.\n@_documentation(visibility: internal)\npublic struct HVStack<Content: View>: View {\n    public let alignment: Alignment\n    public let spacing: CGFloat?\n    public let content: Content\n    \n    public init(\n        alignment: Alignment = .center,\n        spacing: CGFloat? = nil,\n        @ViewBuilder content: () -> Content\n    ) {\n        self.alignment = alignment\n        self.spacing = spacing\n        self.content = content()\n    }\n    \n    @inlinable\n    public var body: some View {\n        AutomaticAxisStack(\n            preferredAxis: .horizontal,\n            alignment: alignment,\n            spacing: spacing,\n            content: { content }\n        )\n    }\n}\n\n/// A view that arranges its children in a vertical/horizontal line.\n///\n/// The axis is determined in accordance to the size proposed by the parent container.\n/// The preferred line is vertical.\n@_documentation(visibility: internal)\npublic struct VHStack<Content: View>: View {\n    public let alignment: Alignment\n    public let spacing: CGFloat?\n    public let content: Content\n    \n    public init(\n        alignment: Alignment = .center,\n        spacing: CGFloat? = nil,\n        @ViewBuilder content: () -> Content\n    ) {\n        self.alignment = alignment\n        self.spacing = spacing\n        self.content = content()\n    }\n    \n    @inlinable\n    public var body: some View {\n        AutomaticAxisStack(\n            preferredAxis: .vertical,\n            alignment: alignment,\n            spacing: spacing,\n            content: { content }\n        )\n    }\n}\n",
+  "content_sha256": "14732da3aed75edffa1eaf6c067d412fda55cd18c15d207aa418cbe4e384333a",
+  "expected_git_blob_sha1": "1a7c0e0f14406c85568bc57100ebcede51a8315a",
+  "filename": "AutomaticAxisStack.swift",
+  "full_content_sha256": "14732da3aed75edffa1eaf6c067d412fda55cd18c15d207aa418cbe4e384333a",
+  "full_file_complete": true,
+  "full_source_sha256": "14732da3aed75edffa1eaf6c067d412fda55cd18c15d207aa418cbe4e384333a",
+  "kind": "source-file",
+  "language": "swift",
+  "license": "MIT",
+  "license_path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 141,
+    "start": 1,
+    "total": 141
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "swift",
+  "original_path": "Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift",
+  "repository": "SwiftUIX/SwiftUIX",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+      "sha256": "47a5444bc943a3d73f2d3ec637818ac486f599607a56b89efa98ad504f5c74c4"
+    }
+  ],
+  "revision": "3a99044b7045fb5907a7df18c7fe323e5656c6ab",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 4333,
+  "source_lines": 141,
+  "source_sha256": "14732da3aed75edffa1eaf6c067d412fda55cd18c15d207aa418cbe4e384333a",
+  "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift",
+  "verified_git_blob_sha1": "1a7c0e0f14406c85568bc57100ebcede51a8315a"
+}

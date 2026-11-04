@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/lib/tabs.ts",
+  "filename": "tabs.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-472",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/lib/tabs.ts",
+    "title": "website/src/lib/tabs.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "b73e6d9d679c61be176b6fe92cbca2875ecbdba51a1df3d3d89a30fa7b10019e",
+  "text": "/** Arrow keys move between tabs and wrap around; returns the index of the next tab, or undefined. */\nexport const tabFromKey = (key: string, index: number, count: number): number | undefined => {\n  const step = key === 'ArrowRight' ? 1 : key === 'ArrowLeft' ? -1 : 0;\n  return step ? (index + step + count) % count : undefined;\n};\n",
+  "version": 1
+}

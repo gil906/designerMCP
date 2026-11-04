@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/vi/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-439",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/vi/common.ts",
+    "title": "website/src/i18n/messages/vi/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "6242f259b59a627b36b11beffcc1be0d327ea2c3cd0884556436f6a216ae80b0",
+  "text": "// Văn bản dùng chung cho mọi trang: layout, header, footer, breadcrumb, FAQ và nút sao chép.\nimport type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: 'Chuyển đến nội dung chính',\n  ogImageAlt: 'useAnimations: icon động miễn phí cho React, shadcn/ui, Lottie và SVG',\n  homeLabel: 'Trang chủ useAnimations',\n  mainNav: 'Điều hướng chính',\n  browseIcons: 'Xem icon',\n  nav: {\n    icons: 'Icon',\n    categories: 'Danh mục',\n    documentation: 'Tài liệu',\n    shadcn: 'shadcn',\n    lottie: 'Icon Lottie',\n    license: 'Giấy phép',\n  },\n  footer: {\n    tagline: 'Icon động miễn phí, có sẵn tương tác. Giấy phép MIT, làm cho React.',\n    product: 'Sản phẩm',\n    developers: 'Lập trình viên',\n    follow: 'Theo dõi',\n    languages: 'Ngôn ngữ',\n    allIcons: 'Tất cả icon',\n    categories: 'Danh mục',\n    interactions: 'Tương tác',\n    lottieIcons: 'Icon Lottie',\n    shadcnIcons: 'Icon cho shadcn/ui',\n    documentation: 'Tài liệu',\n    licencing: 'Giấy phép & Điều khoản',\n    shadcnRegistry: 'shadcn registry',\n    mitLicense: 'Giấy phép MIT',\n    builtWith: 'Trang web xây dựng bằng Astro',\n  },\n  breadcrumb: 'Đường dẫn',\n  crumbs: { icons: 'Icon', categories: 'Danh mục', interactions: 'Tương tác' },\n  faq: 'Câu hỏi thường gặp',\n  copy: 'Sao chép',\n  copied: 'Đã sao chép',\n  pressCtrlC: 'Nhấn Ctrl+C',\n  languageBanner: {\n    text: 'Trang này cũng có bản tiếng Việt.',\n    action: 'Chuyển sang tiếng Việt',\n    dismiss: 'Đóng',\n  },\n};\n",
+  "version": 1
+}

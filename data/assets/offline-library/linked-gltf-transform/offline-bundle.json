@@ -1,0 +1,68 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "gltf-transform-source-1",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/gltf-transform/LICENSE.md",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "0a888d53a6c1aa530262cf438b4c676da888b6c3ec45158d222ceec3bde99214",
+      "source_url": "https://github.com/donmccurdy/glTF-Transform"
+    },
+    {
+      "asset_id": "gltf-transform-source-2",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/gltf-transform/LICENSE.md",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "948503970abd4877fde305384d0e1f9247f74cd4e74b5f44302c24720d5f22d0",
+      "source_url": "https://github.com/donmccurdy/glTF-Transform"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "293ce6a7efa4bfa9f7285f454644ea5b449eba4b66fad5f2c6689d6ff2a62648",
+      "source_url": "original://designerMCP/offline/linked-gltf-transform"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "fb9dc20ecc8bff0e19efc15318882d501e473839ed7e2424b163ed79386d4f2f",
+      "source_url": "original://designerMCP/offline/linked-gltf-transform"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "linked-gltf-transform",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

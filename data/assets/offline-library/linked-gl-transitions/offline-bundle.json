@@ -1,0 +1,68 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "gl-transitions-source-1",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/gl-transitions/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "d1c881e9bb3521b38b2d4821e0f5c96b5d408431001d13b639ad75d10cf16e1f",
+      "source_url": "https://github.com/gl-transitions/gl-transitions"
+    },
+    {
+      "asset_id": "gl-transitions-source-2",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/gl-transitions/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "5ac71259e5b16b8877a7b949ff515284cf30c23e206aed7d1d38602892ef2d0a",
+      "source_url": "https://github.com/gl-transitions/gl-transitions"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "11afbef62327ed28f96d51ed74d33336e275cde48a296706e4a88ff92257ec7b",
+      "source_url": "original://designerMCP/offline/linked-gl-transitions"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "b54e8d175bc6d0a8072137dc495a234590174bffd9f7ea5be06909d1fd65fcc3",
+      "source_url": "original://designerMCP/offline/linked-gl-transitions"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "linked-gl-transitions",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

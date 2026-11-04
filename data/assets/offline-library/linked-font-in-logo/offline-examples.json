@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": ".specimen { font-family: system-ui, sans-serif; font-variant-numeric: tabular-nums; }\n.specimen__title { font-size: clamp(1.8rem, 4vw, 3.2rem); letter-spacing: -.025em; }\n.specimen__body { max-width: 65ch; line-height: 1.6; }\n/* Test with original text: Harbor 2026 — Invoice #1048; I/l/1; O/0. */",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

@@ -1,0 +1,70 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "      copyright notice that is included in or attached to the work",
+    "      copyright license to reproduce, prepare Derivative Works of,",
+    "   Copyright 2019 Adobe",
+    " * Copyright 2020 Adobe. All rights reserved."
+  ],
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 139,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "# @react-spectrum/dialog\n\nThis package is part of react-spectrum (https://github.com/adobe/react-spectrum). See the repo for more details.\n",
+  "content_sha256": "83054195a34e85e803bb65dab3e872c10d2e3c834288be3618e964d9a1b85746",
+  "filename": "README.md",
+  "full_content_sha256": "83054195a34e85e803bb65dab3e872c10d2e3c834288be3618e964d9a1b85746",
+  "full_file_complete": false,
+  "full_source_sha256": "37245553dc199c1f541ae34afeeb468b8cee0c634faf8d7884c006271c139965",
+  "git_blob_proof": "unavailable in prior collector; SHA256 matches recorded upstream",
+  "kind": "documentation",
+  "language": "text",
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 3,
+    "start": 1,
+    "total": 3
+  },
+  "modifications": [
+    {
+      "count": 1,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "packages/@react-spectrum/dialog/README.md",
+  "repository": "adobe/react-spectrum",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/react-spectrum/LICENSE.txt",
+      "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+    },
+    {
+      "path": "licenses/github-web/react-spectrum/NOTICE.txt",
+      "sha256": "378e1af1aac41d8383e9da1b2acbd2adca2ff8a4c4ad5fdecc8fbffff831eaf7"
+    }
+  ],
+  "revision": "6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 140,
+  "source_lines": 3,
+  "source_sha256": "37245553dc199c1f541ae34afeeb468b8cee0c634faf8d7884c006271c139965",
+  "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/@react-spectrum/dialog/README.md"
+}

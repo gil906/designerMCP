@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/test/ssr.test.tsx",
+  "filename": "ssr.test.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-275",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/test/ssr.test.tsx",
+    "title": "test/ssr.test.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "79678a69018ea4dfb2c3da9e4661e65b2588254246cab97d8cc3281cd1096790",
+  "text": "// @vitest-environment node\nimport React from 'react';\nimport { renderToString } from 'react-dom/server';\nimport { expect, it } from 'vite-plus/test';\n\nimport UseAnimations from '../src';\nimport { icon } from './icons';\n\nconst heart = icon('heart');\n\nit('renders on the server without touching the DOM (#86)', () => {\n  expect(typeof document).toBe('undefined');\n  const html = renderToString(<UseAnimations animation={heart} size={32} strokeColor=\"red\" />);\n  expect(html).toBe(\n    '<span aria-hidden=\"true\" data-useanimations=\"\" style=\"display:inline-block;flex-shrink:0;overflow:hidden;width:32px;height:32px;--ua-stroke:red\"></span>'\n  );\n});\n",
+  "version": 1
+}

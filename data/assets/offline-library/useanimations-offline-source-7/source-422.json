@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/ru/docs.ts",
+  "filename": "docs.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-422",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/ru/docs.ts",
+    "title": "website/src/i18n/messages/ru/docs.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "fb1556fb78ac83d5e1b1ffd95354f3b1f4251dbc0fb1c89edaeb6ac64cafa9ec",
+  "text": "import type { Messages } from '../en';\nimport { pluralIn } from '../../format';\n\nconst animated = (n: number) =>\n  pluralIn('ru')(n, {\n    one: 'анимированную иконку',\n    few: 'анимированные иконки',\n    many: 'анимированных иконок',\n    other: 'анимированной иконки',\n  });\n\nexport const docs: Messages['docs'] = {\n  title: 'Документация — useAnimations',\n  description: (iconCount: number) =>\n    `Как использовать ${animated(iconCount)} в React и shadcn/ui: взаимодействия, пропсы, цвета, файлы и доступность.`,\n  badge: 'Документация',\n  onThisPage: 'На этой странице',\n  viewAsMarkdown: 'Открыть в Markdown',\n  headline: 'Документация useAnimations',\n  summary: 'Как использовать анимированные иконки useAnimations в React и shadcn/ui.',\n  crumb: 'Документация',\n  faq: [\n    {\n      question: 'Можно ли бесплатно использовать useAnimations в коммерческих проектах?',\n      answer:\n        'Да. Иконки и React-пакет распространяются по лицензии MIT, указывать авторство не нужно.',\n    },\n    {\n      question: 'Как использовать иконки useAnimations в React?',\n      answer:\n        'Установите react-useanimations, импортируйте UseAnimations и иконку (например, react-useanimations/lib/checkmark), затем отрендерите <UseAnimations animation={checkmark} size={32} />.',\n    },\n    {\n      question: 'Как изменить цвет иконки?',\n      answer:\n        'Иконки берут цвет текста. Его можно поменять через strokeColor и fillColor, CSS-свойство color или стили для path.',\n    },\n    {\n      question: 'Работает ли это без React?',\n      answer:\n        'Сам пакет сделан для React. Но каждая иконка есть и в виде стандартного файла Lottie JSON, который воспроизводит любой Lottie-плеер (lottie-web, dotLottie, lottie-react-native, lottie-ios, lottie-android, Flutter), и в виде статичного SVG. Подробнее — в разделе «Использование без React» и на useanimations.com/lottie-icons.',\n    },\n  ],\n};\n",
+  "version": 1
+}

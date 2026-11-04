@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/original/loading.svg",
+  "filename": "loading.svg",
+  "format": "svg",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "loading",
+    "mime_type": "image/svg+xml",
+    "path": "assets/original/loading.svg",
+    "title": "Original static loading arc"
+  },
+  "provenance": {
+    "license": "CC0-1.0",
+    "license_path": "licenses/original-CC0.txt",
+    "origin": "original",
+    "source_url": "original://mcp-designer/patterns/svg-status"
+  },
+  "sha256": "9b4abf3e1e846731cd53440028966c97809b7cb4d562dfc394e0af09047b3548",
+  "text": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\" opacity=\".2\"/><path d=\"M12 3a9 9 0 0 1 9 9\"/></svg>\n",
+  "version": 1
+}

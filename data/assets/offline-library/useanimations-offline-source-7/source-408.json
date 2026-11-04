@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/ko/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-408",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/ko/islands.ts",
+    "title": "website/src/i18n/messages/ko/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "1084bda0127524183a164cbdc1c9d15c73f02b8f4fd17df73b0fe374c15b92f0",
+  "text": "// React 아일랜드(components/*.tsx) 안의 텍스트. '{name}' 자리표시자는 컴포넌트가 채웁니다.\nimport type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: '루프',\n      'click-toggle': '클릭',\n      'click-replay': '클릭',\n      hover: '호버',\n      'hover-loop': '호버',\n      'hover-replay': '호버',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: '자동으로 재생됩니다',\n      'click-toggle': '클릭하면 전환됩니다',\n      'click-replay': '클릭하면 다시 재생됩니다',\n      hover: '호버하면 재생되고, 벗어나면 되돌아갑니다',\n      'hover-loop': '호버하는 동안 반복 재생됩니다',\n      'hover-replay': '호버하면 재생됩니다',\n    },\n    preview: '{title} 미리보기',\n    colors: '미리보기 색상',\n    color: '색상 {color}',\n    textColor: '텍스트 색상',\n    interaction: '인터랙션',\n    duration: '재생 시간',\n    seconds: '{seconds}초',\n    import: '가져오기',\n    close: '닫기',\n    code: '코드',\n    tabs: { react: 'React', shadcn: 'shadcn', files: '파일' },\n    copy: '복사',\n    download: '다운로드',\n    iconPage: '아이콘 페이지',\n  },\n  interactionDemo: {\n    click: '카드를 클릭해 보세요',\n    loop: '자동으로 재생됩니다',\n    hover: '카드에 마우스를 올려 보세요',\n  },\n  mobileMenu: {\n    menu: '메뉴',\n    nav: '주 메뉴',\n  },\n  search: {\n    clear: '검색어 지우기',\n  },\n  themeToggle: {\n    toLight: '라이트 테마로 전환',\n    toDark: '다크 테마로 전환',\n  },\n};\n",
+  "version": 1
+}

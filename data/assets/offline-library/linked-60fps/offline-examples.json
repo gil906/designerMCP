@@ -1,0 +1,17 @@
+{
+  "examples": [
+    {
+      "code": ".notice { opacity: 1; transform: translateY(0); transition: opacity 140ms ease-out, transform 180ms ease-out; }\n.notice[data-entering=\"true\"] { opacity: 0; transform: translateY(.4rem); }\n@media (prefers-reduced-motion: reduce) { .notice { transition: none; transform: none; } }",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "css"
+    },
+    {
+      "code": "Widget originalSelection(bool selected, Widget child, BuildContext context) {\n  final reduced = MediaQuery.disableAnimationsOf(context);\n  return Semantics(selected: selected, child: AnimatedContainer(\n    duration: reduced ? Duration.zero : const Duration(milliseconds: 160),\n    curve: Curves.easeOut,\n    padding: const EdgeInsets.all(16),\n    decoration: BoxDecoration(\n      color: selected ? const Color(0xffe8edff) : const Color(0xffffffff),\n      border: Border.all(color: selected ? const Color(0xff3153c7) : const Color(0xffb8c0cf)),\n      borderRadius: BorderRadius.circular(12),\n    ), child: child,\n  ));\n}",
+      "description": "Original Flutter state animation. Motion is decorative; state and semantics update immediately.",
+      "language": "dart"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

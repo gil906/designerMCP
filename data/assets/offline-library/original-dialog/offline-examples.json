@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<button id=\"open-settings\">Settings</button>\n<dialog id=\"settings\" aria-labelledby=\"settings-title\">\n<h2 id=\"settings-title\">Settings</h2>\n<form method=\"dialog\"><button>Close</button></form>\n</dialog>\n<script>\nconst opener=document.querySelector(\"#open-settings\");\nconst dialog=document.querySelector(\"#settings\");\nopener.addEventListener(\"click\",()=>dialog.showModal());\ndialog.addEventListener(\"close\",()=>opener.focus());\n</script>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

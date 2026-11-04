@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/HoverIcon.tsx",
+  "filename": "HoverIcon.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-306",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/HoverIcon.tsx",
+    "title": "website/src/components/HoverIcon.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "92be6142d9db116ed7bec956dbc51ca931975130f2726578cb3615ea9bbe14fe",
+  "text": "import { useEffect, useRef, useState } from 'react';\nimport UseAnimations, { type EventProps, type Interaction } from 'react-useanimations';\n\n// Inside a link a click navigates, so every icon plays on hover, in its closest hover form.\nconst ON_HOVER: Record<Interaction, Interaction> = {\n  hover: 'hover',\n  'hover-loop': 'hover-loop',\n  'hover-replay': 'hover-replay',\n  loop: 'hover-loop',\n  'click-replay': 'hover-replay',\n  'click-toggle': 'hover',\n};\n\n/**\n * An icon that plays while `trigger`, a link in Astro markup (not React's), is hovered or has\n * keyboard focus. It mounts on the first hover (scripts/hover-icons.ts), so it starts right away\n * when that hover is still going on.\n */\nexport default function HoverIcon({\n  animationData,\n  interaction,\n  trigger,\n}: {\n  animationData: object;\n  interaction: Interaction;\n  trigger: HTMLElement;\n}) {\n  const handlers = useRef<EventProps | null>(null);\n  const [wrapper, setWrapper] = useState<HTMLElement | null>(null);\n\n  useEffect(() => {\n    if (!wrapper) return undefined;\n    // The component's own hover and focus handlers, fed from the trigger's native events.\n    const call = (name: 'onMouseEnter' | 'onMouseLeave' | 'onFocus' | 'onBlur') =>\n      handlers.current?.[name]({ defaultPrevented: false, currentTarget: trigger } as never);\n    // Touch devices fire pointer events on tap; only a mouse hovers.\n    const enter = (event: PointerEvent) => event.pointerType === 'mouse' && call('onMouseEnter');\n    const leave = (event: PointerEvent) => event.pointerType === 'mouse' && call('onMouseLeave');\n    const focus = () => call('onFocus');\n    const blur = () => call('onBlur');\n    const events = [\n      ['pointerenter', enter],\n      ['pointerleave', leave],\n      ['focusin', focus],\n      ['focusout', blur],\n    ] as [string, EventListener][];\n    for (const [type, listener] of events) trigger.addEventListener(type, listener);\n    if (trigger.matches(':hover')) call('onMouseEnter');\n    else if (trigger.matches(':focus-visible')) call('onFocus');\n    return () => {\n      for (const [type, listener] of events) trigger.removeEventListener(type, listener);\n    };\n  }, [wrapper, trigger]);\n\n  return (\n    <UseAnimations\n      animation={{ animationData, interaction: ON_HOVER[interaction] }}\n      size=\"100%\"\n      render={(eventProps, animationProps) => {\n        handlers.current = eventProps;\n        return (\n          <span ref={setWrapper} className=\"contents\">\n            <span {...animationProps} />\n          </span>\n        );\n      }}\n    />\n  );\n}\n",
+  "version": 1
+}

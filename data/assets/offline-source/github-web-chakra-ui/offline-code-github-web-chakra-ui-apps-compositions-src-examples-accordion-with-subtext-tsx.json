@@ -1,0 +1,57 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "Copyright (c) 2019 Chakra Systems Inc.",
+    "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+  ],
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 969,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "import { Accordion, Stack, Text } from \"@chakra-ui/react\"\nimport { LoremIpsum } from \"react-lorem-ipsum\"\n\nconst items = [\n  { value: \"a\", title: \"First Item\", text: <LoremIpsum p={1} /> },\n  { value: \"b\", title: \"Second Item\", text: <LoremIpsum p={1} /> },\n  { value: \"c\", title: \"Third Item\", text: <LoremIpsum p={1} /> },\n]\n\nexport const AccordionWithSubtext = () => {\n  return (\n    <Accordion.Root collapsible>\n      {items.map((item, index) => (\n        <Accordion.Item key={index} value={item.value}>\n          <Accordion.ItemTrigger>\n            <Stack gap=\"1\">\n              <Text>{item.title}</Text>\n              <Text fontSize=\"sm\" color=\"fg.muted\">\n                Click to expand\n              </Text>\n            </Stack>\n          </Accordion.ItemTrigger>\n          <Accordion.ItemContent>\n            <Accordion.ItemBody>{item.text}</Accordion.ItemBody>\n          </Accordion.ItemContent>\n        </Accordion.Item>\n      ))}\n    </Accordion.Root>\n  )\n}\n",
+  "content_sha256": "b75016129ef26291f782c27b83c499c0d7f601b5ff5d1e1210c1aec6c5b072ad",
+  "expected_git_blob_sha1": "d17e4bc1239d3bff47f1d3c0aa1d2654854815ac",
+  "filename": "accordion-with-subtext.tsx",
+  "full_content_sha256": "b75016129ef26291f782c27b83c499c0d7f601b5ff5d1e1210c1aec6c5b072ad",
+  "full_file_complete": true,
+  "full_source_sha256": "b75016129ef26291f782c27b83c499c0d7f601b5ff5d1e1210c1aec6c5b072ad",
+  "kind": "source-file",
+  "language": "tsx",
+  "license": "MIT",
+  "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 30,
+    "start": 1,
+    "total": 30
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "tsx",
+  "original_path": "apps/compositions/src/examples/accordion-with-subtext.tsx",
+  "repository": "chakra-ui/chakra-ui",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/chakra-ui/LICENSE.txt",
+      "sha256": "9763e8439364e3663d1c41ac4c2a2bb44af407e3f28d9a079919d7a574d868f8"
+    }
+  ],
+  "revision": "3eda54cae8d4a08b557917a233d1af3728e8d4b4",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 969,
+  "source_lines": 30,
+  "source_sha256": "b75016129ef26291f782c27b83c499c0d7f601b5ff5d1e1210c1aec6c5b072ad",
+  "source_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/apps/compositions/src/examples/accordion-with-subtext.tsx",
+  "verified_git_blob_sha1": "d17e4bc1239d3bff47f1d3c0aa1d2654854815ac"
+}

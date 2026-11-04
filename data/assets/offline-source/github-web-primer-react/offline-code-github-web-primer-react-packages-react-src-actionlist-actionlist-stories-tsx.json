@@ -1,0 +1,55 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "Copyright (c) 2018 GitHub, Inc."
+  ],
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 7612,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "import type {StoryFn, Meta} from '@storybook/react-vite'\nimport type {ActionListProps, ActionListGroupProps} from '.'\nimport {ActionList} from '.'\nimport {Item} from './Item'\nimport {LinkItem} from './LinkItem'\nimport {Group} from './Group'\nimport {Divider} from './Divider'\nimport {Description} from './Description'\nimport {TypographyIcon, VersionsIcon, SearchIcon, ArrowRightIcon, ArrowLeftIcon} from '@primer/octicons-react'\n\nexport default {\n  title: 'Components/ActionList',\n  component: ActionList,\n  subcomponents: {Item, LinkItem, Group, Divider, Description},\n} as Meta<typeof ActionList>\n\nexport const Default = () => (\n  <ActionList>\n    <ActionList.Item>Copy link</ActionList.Item>\n    <ActionList.Item>Quote reply</ActionList.Item>\n    <ActionList.Item>Edit comment</ActionList.Item>\n  </ActionList>\n)\n\nexport const Playground: StoryFn<ActionListProps> = args => (\n  <ActionList {...args}>\n    <ActionList.Item>Copy link</ActionList.Item>\n    <ActionList.Item>Quote reply</ActionList.Item>\n    <ActionList.Item>Edit comment</ActionList.Item>\n  </ActionList>\n)\nPlayground.args = {\n  showDividers: false,\n  selectionVariant: undefined,\n  variant: 'inset',\n}\nPlayground.argTypes = {\n  showDividers: {\n    control: {\n      type: 'boolean',\n    },\n  },\n  variant: {\n    control: {\n      type: 'radio',\n    },\n    options: ['inset', 'horizontal-inset', 'full'],\n  },\n  selectionVariant: {\n    control: {\n      type: 'radio',\n      labels: ['single', 'multiple', 'unset'],\n    },\n    options: [0, 1, 2],\n    mapping: ['single', 'multiple', null],\n  },\n  role: {\n    type: 'string',\n  },\n}\n\nconst icons = ['unset', 'TypographyIcon', 'VersionsIcon', 'SearchIcon', 'ArrowRightIcon', 'ArrowLeftIcon']\n\n// @ts-ignore ignoring types here to pass in options for icon selection in Storybook\nexport const ItemPlayground = args => {\n  let leadingVisual\n  if (args.leadingVisual === 'TypographyIcon') {\n    leadingVisual = <TypographyIcon />\n  } else if (args.leadingVisual === 'VersionsIcon') {\n    leadingVisual = <VersionsIcon />\n  } else if (args.leadingVisual === 'SearchIcon') {\n    leadingVisual = <SearchIcon />\n  } else if (args.leadingVisual === 'ArrowRightIcon') {\n    leadingVisual = <ArrowRightIcon />\n  } else if (args.leadingVisual === 'ArrowLeftIcon') {\n    leadingVisual = <ArrowLeftIcon />\n  } else if (args.leadingVisual === 'unset') {\n    leadingVisual = null\n  }\n\n  let trailingVisual\n  if (args.trailingVisual === 'TypographyIcon') {\n    trailingVisual = <TypographyIcon />\n  } else if (args.trailingVisual === 'VersionsIcon') {\n    trailingVisual = <VersionsIcon />\n  } else if (args.trailingVisual === 'SearchIcon') {\n    trailingVisual = <SearchIcon />\n  } else if (args.trailingVisual === 'ArrowRightIcon') {\n    trailingVisual = <ArrowRightIcon />\n  } else if (args.trailingVisual === 'ArrowLeftIcon') {\n    trailingVisual = <ArrowLeftIcon />\n  } else if (args.trailingVisual === 'unset') {\n    trailingVisual = null\n  }\n\n  return (\n    <ActionList selectionVariant={args.selectionVariant}>\n      <ActionList.Item {...args}>\n        {leadingVisual && <ActionList.LeadingVisual>{leadingVisual}</ActionList.LeadingVisual>}\n        Action list item\n        {trailingVisual && <ActionList.TrailingVisual>{trailingVisual}</ActionList.TrailingVisual>}\n      </ActionList.Item>\n    </ActionList>\n  )\n}\nItemPlayground.argTypes = {\n  selected: {\n    control: {\n      type: 'boolean',\n    },\n  },\n  active: {\n    control: {\n      type: 'boolean',\n    },\n  },\n  disabled: {\n    control: {\n      type: 'boolean',\n    },\n  },\n  inactiveText: {\n    control: {\n      type: 'text',\n    },\n  },\n  variant: {\n    control: 'radio',\n    options: ['default', 'danger'],\n  },\n  size: {\n    control: {\n      type: 'radio',\n    },\n    options: ['small', 'medium', 'large'],\n  },\n  role: {\n    type: 'string',\n  },\n  id: {\n    type: 'string',\n  },\n  leadingVisual: {\n    control: {\n      type: 'select',\n    },\n    options: icons,\n  },\n  loading: {\n    control: {\n      type: 'boolean',\n    },\n  },\n  trailingVisual: {\n    control: {\n      type: 'select',\n    },\n    options: icons,\n  },\n  selectionVariant: {\n    control: 'radio',\n    if: {arg: 'selected'},\n    options: ['single', 'multiple'],\n    table: {\n      category: 'ActionList',\n    },\n  },\n}\nItemPlayground.args = {\n  selected: false,\n  active: false,\n  disabled: false,\n  inactiveText: '',\n  variant: 'default',\n  size: 'medium',\n  id: 'item-1',\n  leadingVisual: null,\n  loading: false,\n  trailingVisual: null,\n  selectionVariant: 'single',\n}\n\n// @ts-ignore ignoring types here to pass in options for icon selection in Storybook\nexport const LinkItemPlayground = args => {\n  let leadingVisual\n  if (args.leadingVisual === 'TypographyIcon') {\n    leadingVisual = <TypographyIcon />\n  } else if (args.leadingVisual === 'VersionsIcon') {\n    leadingVisual = <VersionsIcon />\n  } else if (args.leadingVisual === 'SearchIcon') {\n    leadingVisual = <SearchIcon />\n  } else if (args.leadingVisual === 'ArrowRightIcon') {\n    leadingVisual = <ArrowRightIcon />\n  } else if (args.leadingVisual === 'ArrowLeftIcon') {\n    leadingVisual = <ArrowLeftIcon />\n  } else if (args.leadingVisual === 'unset') {\n    leadingVisual = null\n  }\n\n  let trailingVisual\n  if (args.trailingVisual === 'TypographyIcon') {\n    trailingVisual = <TypographyIcon />\n  } else if (args.trailingVisual === 'VersionsIcon') {\n    trailingVisual = <VersionsIcon />\n  } else if (args.trailingVisual === 'SearchIcon') {\n    trailingVisual = <SearchIcon />\n  } else if (args.trailingVisual === 'ArrowRightIcon') {\n    trailingVisual = <ArrowRightIcon />\n  } else if (args.trailingVisual === 'ArrowLeftIcon') {\n    trailingVisual = <ArrowLeftIcon />\n  } else if (args.trailingVisual === 'unset') {\n    trailingVisual = null\n  }\n\n  return (\n    <ActionList>\n      <ActionList.LinkItem {...args}>\n        {leadingVisual && <ActionList.LeadingVisual>{leadingVisual}</ActionList.LeadingVisual>}\n        Action list item\n        {trailingVisual && <ActionList.TrailingVisual>{trailingVisual}</ActionList.TrailingVisual>}\n      </ActionList.LinkItem>\n    </ActionList>\n  )\n}\nLinkItemPlayground.args = {\n  active: false,\n  disabled: false,\n  id: 'item-1',\n  variant: 'default',\n  size: 'medium',\n  inactiveText: '',\n  leadingVisual: null,\n  loading: false,\n  trailingVisual: null,\n}\nLinkItemPlayground.argTypes = {\n  active: {\n    control: {\n      type: 'boolean',\n    },\n  },\n  variant: {\n    control: 'radio',\n    options: ['default', 'danger'],\n  },\n  size: {\n    control: {\n      type: 'radio',\n    },\n    options: ['small', 'medium', 'large'],\n  },\n  role: {\n    type: 'string',\n  },\n  id: {\n    type: 'string',\n  },\n  inactiveText: {\n    control: {\n      type: 'text',\n    },\n  },\n  leadingVisual: {\n    control: {\n      type: 'select',\n    },\n    options: icons,\n  },\n  loading: {\n    control: {\n      type: 'boolean',\n    },\n  },\n  trailingVisual: {\n    control: {\n      type: 'select',\n    },\n    options: icons,\n  },\n  href: {\n    type: 'string',\n  },\n}\n\nexport const GroupPlayground: StoryFn<ActionListGroupProps> = args => (\n  <ActionList>\n    <ActionList.Group {...args}>\n      <ActionList.Item>Item 1</ActionList.Item>\n      <ActionList.Item>Item 2</ActionList.Item>\n    </ActionList.Group>\n  </ActionList>\n)\nGroupPlayground.argTypes = {\n  variant: {\n    control: {\n      type: 'radio',\n    },\n    options: ['subtle', 'filled'],\n  },\n  role: {\n    type: 'string',\n  },\n  title: {\n    type: 'string',\n  },\n  'aria-label': {\n    type: 'string',\n  },\n  auxiliaryText: {\n    type: 'string',\n  },\n}\nGroupPlayground.args = {\n  variant: 'subtle',\n  title: 'Group title',\n  auxiliaryText: '',\n}\n",
+  "content_sha256": "80c1de217a63ced716582286352c62dd67369c75a341c6152a65feb63aa04aab",
+  "filename": "ActionList.stories.tsx",
+  "full_content_sha256": "80c1de217a63ced716582286352c62dd67369c75a341c6152a65feb63aa04aab",
+  "full_file_complete": true,
+  "full_source_sha256": "80c1de217a63ced716582286352c62dd67369c75a341c6152a65feb63aa04aab",
+  "git_blob_proof": "unavailable in prior collector; SHA256 matches recorded upstream",
+  "kind": "source-file",
+  "language": "tsx",
+  "license": "MIT",
+  "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 317,
+    "start": 1,
+    "total": 317
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "tsx",
+  "original_path": "packages/react/src/ActionList/ActionList.stories.tsx",
+  "repository": "primer/react",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/primer-react/LICENSE.txt",
+      "sha256": "bf4f127cb7d82ed5c00d7095616440211225f4ca3b0195a0ecd0051720df5c18"
+    }
+  ],
+  "revision": "57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 7612,
+  "source_lines": 317,
+  "source_sha256": "80c1de217a63ced716582286352c62dd67369c75a341c6152a65feb63aa04aab",
+  "source_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx"
+}

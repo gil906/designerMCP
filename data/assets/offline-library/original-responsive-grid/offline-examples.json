@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": ".grid { display:grid; gap:clamp(1rem,2vw,2rem); grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr)); }\n.page { width:min(100% - 2rem,76rem); margin-inline:auto; }",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

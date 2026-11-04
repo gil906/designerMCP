@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/test/integration.test.tsx",
+  "filename": "integration.test.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-272",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/test/integration.test.tsx",
+    "title": "test/integration.test.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "a80d108eab0dbcc13efa99720f7450e1ea3f2c5faf35130759e8f6ec8ffc0d06",
+  "text": "import React, { StrictMode } from 'react';\nimport { render, waitFor } from '@testing-library/react';\nimport { describe, expect, it } from 'vite-plus/test';\n\nimport UseAnimations from '../src';\nimport { catalog, icon } from './icons';\n\nconst error = icon('error');\nconst menu2 = icon('menu2');\nconst twitter = icon('twitter');\n\n// Uses the real player.\ndescribe('with the player', () => {\n  it('renders exactly one <svg> in StrictMode (#68, #84)', async () => {\n    const { container } = render(\n      <StrictMode>\n        <UseAnimations animation={menu2} strokeColor=\"red\" />\n      </StrictMode>\n    );\n    await waitFor(() => expect(container.querySelectorAll('svg')).toHaveLength(1));\n  });\n\n  it('renders icons that use expressions', async () => {\n    const { container } = render(\n      <>\n        <UseAnimations animation={error} />\n        <UseAnimations animation={twitter} />\n      </>\n    );\n    await waitFor(() => expect(container.querySelectorAll('svg path')).not.toHaveLength(0));\n    expect(container.querySelectorAll('svg')).toHaveLength(2);\n  });\n});\n\ndescribe('icon set', () => {\n  it.each(catalog)('$name renders', async ({ name }) => {\n    const { container } = render(<UseAnimations animation={icon(name)} />);\n    await waitFor(() => expect(container.querySelector('svg path')).not.toBeNull());\n  });\n});\n",
+  "version": 1
+}

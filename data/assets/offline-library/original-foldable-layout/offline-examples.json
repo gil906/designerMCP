@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "LayoutBuilder(builder: (context, constraints) {\n  final hinges = MediaQuery.of(context).displayFeatures.where(\n    (f) => f.type == DisplayFeatureType.hinge &&\n      f.bounds.height > f.bounds.width && f.bounds.width > 0).toList();\n  if (constraints.maxWidth < 720) return buildStacked();\n  if (hinges.isNotEmpty) {\n    final gap = hinges.first.bounds;\n    return Row(children: [\n      SizedBox(width: gap.left, child: buildList()),\n      SizedBox(width: gap.width), Expanded(child: buildDetail()),\n    ]);\n  }\n  return Row(children: [Expanded(child: buildList()), Expanded(child: buildDetail())]);\n});",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "dart"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

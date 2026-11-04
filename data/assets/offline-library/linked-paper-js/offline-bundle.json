@@ -1,0 +1,68 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "paper-js-source-1",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/paper-js/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "80b633817926cafad60761722d1bcf826177335bf2d46c094dba7cca33de4159",
+      "source_url": "https://github.com/paperjs/paper.js"
+    },
+    {
+      "asset_id": "paper-js-source-2",
+      "format": "json",
+      "license": "Upstream selection: MIT; retained license applies. Original inline guidance/examples: CC0-1.0. No dependencies/media or binaries bundled.",
+      "license_path": "licenses/linked/paper-js/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "ed01dad8e6a76b84a24a0f0f019569abac8b572aaa198cc43d2e83690355dd54",
+      "source_url": "https://github.com/paperjs/paper.js"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "d437cb24c59c96131291049d6a0f37ac126bfd12d8c22a3e4eddd291310c2b43",
+      "source_url": "original://designerMCP/offline/linked-paper-js"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "b4b15574102c56eb0105c85e9562471f1d2c348bd03c6cc93d81cfa8a5cfbf81",
+      "source_url": "original://designerMCP/offline/linked-paper-js"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "linked-paper-js",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

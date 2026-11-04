@@ -1,0 +1,76 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "Copyright (c) 2022 WorkOS"
+  ],
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 1471,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "[](https://radix-ui.com/primitives)\n\n# Radix Primitives\n\n**An open-source UI component library for building high-quality, accessible design systems and web apps.**\n\nRadix Primitives is a low-level UI component library with a focus on accessibility, customization and developer experience. You can use these components either as the base layer of your design system, or adopt them incrementally.\n\n---\n\n## Installation\n\nFirst, install pnpm if you haven't already. Open your terminal and run:\n\n```bash\n```\n\nThen, install the dependencies:\n\n```bash\n```\n\n## Documentation\n\nFor full documentation, visit radix-ui.com/primitives/docs (https://www.radix-ui.com/primitives/docs).\n\n## Releases\n\nFor changelog, visit radix-ui.com/primitives/docs/overview/releases (https://www.radix-ui.com/primitives/docs/overview/releases).\n\n## Contributing\n\nPlease follow our contributing guidelines (./.github/CONTRIBUTING.md).\n\n---\n\n## Community\n\n- Discord (https://discord.com/invite/7Xb99uG) - To get involved with the Radix community, ask questions and share tips.\n- Twitter (https://twitter.com/radix_ui) - To receive updates, announcements, blog posts, and general Radix tips.\n\n## Thanks\n\n<a href=\"https://www.chromatic.com/\"></a>\n\nThanks to Chromatic (https://www.chromatic.com/) for providing the visual testing platform that helps us review UI changes and catch visual regressions.\n\n---\n\n## License\n\nLicensed under the MIT License, Copyright © 2022-present WorkOS (https://workos.com).\n",
+  "content_sha256": "5623b69d97fe23add4a2c45136bdc1b695d52ac4c33d5aac3009bbc6d76b4c5b",
+  "expected_git_blob_sha1": "1c9ac6cbfea839808d9bd0390389b09ffafb82d2",
+  "filename": "README.md",
+  "full_content_sha256": "5623b69d97fe23add4a2c45136bdc1b695d52ac4c33d5aac3009bbc6d76b4c5b",
+  "full_file_complete": false,
+  "full_source_sha256": "20cbda0a49f12fb8d23bc41106611cd89d8ff3c6950059b4a3092b58f357656d",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 52,
+    "start": 1,
+    "total": 52
+  },
+  "modifications": [
+    {
+      "count": 1,
+      "operation": "remove HTML media tags"
+    },
+    {
+      "count": 1,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 2,
+      "operation": "remove installer commands"
+    },
+    {
+      "count": 7,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "radix-ui/primitives",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/radix-primitives/LICENSE.txt",
+      "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+    }
+  ],
+  "revision": "eb3a2b7091293e27df8f9ba906632d8daa3d81a3",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 1704,
+  "source_lines": 54,
+  "source_sha256": "20cbda0a49f12fb8d23bc41106611cd89d8ff3c6950059b4a3092b58f357656d",
+  "source_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/README.md",
+  "verified_git_blob_sha1": "1c9ac6cbfea839808d9bd0390389b09ffafb82d2"
+}

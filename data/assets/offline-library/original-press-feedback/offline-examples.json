@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "button { min-height:44px; padding:.65rem 1rem; }\n@media(prefers-reduced-motion:no-preference) { button { transition:transform 100ms ease-out; } button:active:not(:disabled) { transform:scale(.98); } }\nbutton:disabled { opacity:.65; cursor:not-allowed; }",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

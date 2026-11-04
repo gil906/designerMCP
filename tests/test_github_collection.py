@@ -77,6 +77,37 @@ def test_valid_offline_archive_and_cli_minimum(root, entry, capsys, monkeypatch)
     assert "FAILED" in capsys.readouterr().err
 
 
+def test_generated_assets_do_not_change_immutable_source_ledger(root, entry):
+    value, report = archive(root, entry)
+    path = "assets/offline-library/generated/preview.json"
+    target = root / "data" / path
+    target.parent.mkdir(parents=True)
+    target.write_text('{"kind":"offline-bundle"}')
+    value["assets"].append({"id": "offline-bundle", "path": path, "mime_type": "application/json",
+                            "title": "Generated index", "origin": "original",
+                            "source_url": "original://designerMCP/generated",
+                            "license": "CC0-1.0", "license_path": "licenses/offline/CC0.txt",
+                            "format": "offline-bundle"})
+    save(root, value, report)
+    assert checker.validate(root, ("web",), 1)["artifact_count"] == 2
+    value["assets"][0]["origin"] = "rendered"
+    content = b'{"text":"eval(unsafe)"}'
+    original = root / "data" / value["assets"][0]["path"]
+    original.write_bytes(content)
+    report["repositories"][0]["artifacts"][0]["sha256"] = hashlib.sha256(content).hexdigest()
+    save(root, value, report)
+    with pytest.raises(checker.CollectionError, match="dynamic-execution"):
+        checker.validate(root, ("web",), 1)
+
+
+def test_generated_asset_cannot_replace_original_catalog_source(root, entry):
+    value, report = archive(root, entry)
+    value["assets"][0]["path"] = "assets/offline-library/generated/source.json"
+    save(root, value, report)
+    with pytest.raises(checker.CollectionError, match="original catalog source"):
+        checker.validate(root, ("web",), 1)
+
+
 @pytest.mark.parametrize("mutation", [
     "hash", "bytes", "license", "catalog-license", "duplicate-repo", "duplicate-id",
     "duplicate-artifact", "duplicate-upstream", "revision", "source", "upstream",

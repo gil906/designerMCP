@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/lottie-icons.astro",
+  "filename": "lottie-icons.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-505",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/lottie-icons.astro",
+    "title": "website/src/pages/lottie-icons.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "e43269e9f49cfb5ce220d03b6c5cdc09cf35eb015b4cd375334ddb6e80ee2f61",
+  "text": "---\nimport { EN } from '../i18n';\nimport LottieIconsPage from '../views/LottieIconsPage.astro';\n---\n\n<LottieIconsPage locale={EN} />\n",
+  "version": 1
+}

@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "c32323a2519521b7f054945a83bce72d763ec8405d89a7d3e8a46d944acef9a9",
+      "source_url": "https://github.com/chakra-ui/chakra-ui/tree/3eda54cae8d4a08b557917a233d1af3728e8d4b4"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "3653f668b5b4d660c747a2e100ee5e0613a60f80210a4e65b67c587236b843af",
+      "source_url": "original://designerMCP/offline/github-web-chakra-ui"
+    },
+    {
+      "asset_id": "offline-document-github-web-chakra-ui-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "ae4bcf11fdf61f17043d3721475d4dbfd272a53e2a08fd54e9edcb196b0da2cc",
+      "source_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-web-chakra-ui-apps-compositions-src-examples-accordion-with-subtext-tsx",
+      "format": "tsx",
+      "license": "MIT",
+      "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "46417e681bad747d2235622a6bd46b9835d0bb911e7adc5ae9d11128971f0489",
+      "source_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/apps/compositions/src/examples/accordion-with-subtext.tsx"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "bea10524181be15de6f9d39f8dde23f79bbb2cafc1c6f2064005b678c6b12fc8",
+      "source_url": "original://designerMCP/offline/github-web-chakra-ui"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-web-chakra-ui",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

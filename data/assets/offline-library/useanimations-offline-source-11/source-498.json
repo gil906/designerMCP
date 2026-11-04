@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/index.md.ts",
+  "filename": "index.md.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-498",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/index.md.ts",
+    "title": "website/src/pages/index.md.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "db67099ec1d52a9c75b34d0de36f5e4f1c166b157460944be1a7a14c6c1e3836",
+  "text": "import { categoryLinks, HOME_FAQ, HUBS, interactionLinks } from '../lib/home';\nimport { CATEGORIES, icons, INTERACTIONS, SITE } from '../lib/icons';\nimport { text } from '../lib/http';\nimport { CATEGORY_META } from '../lib/taxonomy';\n\nconst heading = (category: string) => {\n  const meta = CATEGORY_META[category];\n  return meta.indexable ? `### [${category}](${SITE}/categories/${meta.slug})` : `### ${category}`;\n};\n\nexport const GET = () =>\n  text(\n    `# useAnimations: free animated icons for React, shadcn/ui and Lottie\n\n> ${icons.length} free micro animations (Lottie) with hover, click and loop interactions built in, for React, shadcn/ui and any Lottie player. MIT licensed.\n\n- React: \\`npm install react-useanimations\\`, then \\`import github from 'react-useanimations/lib/github'\\` and \\`<UseAnimations animation={github} size={32} />\\`.\n- shadcn/ui: \\`npx shadcn@latest add ${SITE}/r/<id>.json\\`.\n- Lottie: \\`${SITE}/icons/<id>.json\\`, static SVGs at \\`${SITE}/icons/<id>/<state>.svg\\`, ZIP at \\`${SITE}/icons/<id>.zip\\`.\n- Catalog of every icon: [icons.json](${SITE}/icons.json). Documentation: [Markdown](${SITE}/documentation.md), [HTML](${SITE}/documentation). Everything in one file: [llms-full.txt](${SITE}/llms-full.txt).\n\n## Browse\n\n${HUBS.map((hub) => `- [${hub.label}](${SITE}${hub.href})`).join('\\n')}\n- Categories: ${categoryLinks()\n      .map((link) => `[${link.name}](${SITE}${link.href})`)\n      .join(', ')}\n- Interactions: ${interactionLinks()\n      .map((link) => `[${INTERACTIONS[link.interaction].label}](${SITE}${link.href})`)\n      .join(', ')}\n\n## Interactions\n\n${Object.entries(INTERACTIONS)\n  .map(([key, value]) => `- \\`${key}\\`: ${value.description}`)\n  .join('\\n')}\n\n## Icons\n\nEach icon links to its page; the Markdown version of a page is at the same URL plus \\`.md\\`.\n\n${CATEGORIES.map(\n  (category) =>\n    `${heading(category)}\\n\\n${icons\n      .filter((icon) => icon.category === category)\n      .map(\n        (icon) =>\n          `- [${icon.title}](${SITE}/icons/${icon.id}) ([Markdown](${SITE}/icons/${icon.id}.md); \\`${icon.name}\\`, ${icon.interaction})`\n      )\n      .join('\\n')}`\n).join('\\n\\n')}\n\n## FAQ\n\n${HOME_FAQ.map((item) => `### ${item.question}\\n\\n${item.answer}${item.link ? ` See [${item.link.label}](${SITE}${item.link.href}).` : ''}`).join('\\n\\n')}\n\n## License\n\nMIT. Attribution is optional: [Licencing & Terms](${SITE}/licencing-and-terms).\n`,\n    'text/markdown'\n  );\n",
+  "version": 1
+}

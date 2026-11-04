@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "Original reusable page contract:\nSlots: title, description, primary action, evidence list, FAQ, contact details.\nConstraints: title <= 80 characters; one primary action per section; images require alt decisions; no fixed-height copy containers.\nStates: loading, empty, error, success.\nAcceptance: 320px width, 200% zoom, keyboard-only navigation, no motion.",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "text"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

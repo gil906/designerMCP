@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "{\"project\":\"original-client-site\",\"inputs\":[{\"kind\":\"layout\",\"origin\":\"in-house\",\"redistributable\":true},{\"kind\":\"font\",\"origin\":\"system stack\",\"filesBundled\":false},{\"kind\":\"photography\",\"origin\":\"client-provided\",\"permissionStatus\":\"verify before publication\"}],\"reviewBeforeExport\":[\"template scope\",\"font embedding\",\"stock media\",\"client consent\"]}",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "json"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

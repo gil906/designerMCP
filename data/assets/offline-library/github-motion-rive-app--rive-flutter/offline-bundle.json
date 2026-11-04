@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source-reference",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "df91b7412c0291533712408f0af7ab46f3a8de8b2bc3ebda81f2813ba36cd383",
+      "source_url": "https://github.com/rive-app/rive-flutter/blob/cec7801eab6d24d0a6ea193e66243223488c8f51/example/lib/examples/pause_play.dart#L1-L77"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "0200fadc57cc796bffa24fe70975d03277b1af60f018d901bb2d6c4e51cde0ca",
+      "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-flutter"
+    },
+    {
+      "asset_id": "offline-document-github-motion-rive-app--rive-flutter-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "d472c64e440a6378222437c3d789067120bdf00c22e720dd2a63c98bfb0e5ae6",
+      "source_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-motion-rive-app--rive-flutter-example-lib-examples-pause-play-dart",
+      "format": "dart",
+      "license": "MIT",
+      "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "04552bc0969fedbddc7b6842a476031938bc10856b2715619efa3eadad8e3cf7",
+      "source_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/example/lib/examples/pause_play.dart"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "e13e99d167114f77b85a2bcba19f20a4547171d400fa50632322901f777bdb04",
+      "source_url": "original://designerMCP/offline/github-motion-rive-app--rive-flutter"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-motion-rive-app--rive-flutter",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

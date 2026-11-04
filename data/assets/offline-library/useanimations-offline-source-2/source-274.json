@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/test/setup.ts",
+  "filename": "setup.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-274",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/test/setup.ts",
+    "title": "test/setup.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "5c09b931afa1c87e570ac8f6618357fcc1130263c88fc260a7163d374f600bf3",
+  "text": "import { cleanup } from '@testing-library/react';\nimport { afterEach } from 'vite-plus/test';\n\n// Keeps rendered icons away from the browser's resting mouse position (0, 0), which would hover them.\ndocument.body.style.margin = '100px';\n\nafterEach(cleanup);\n",
+  "version": 1
+}

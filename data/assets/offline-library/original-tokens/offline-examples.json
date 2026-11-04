@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": ":root { --surface:#fff; --text:#15243a; --muted:#4d5c72; --accent:#2559b6; --border:#c6cfdb; --space:0.5rem; --radius:0.75rem; }\n[data-theme=dark] { --surface:#111a29; --text:#edf2fa; --muted:#b5c2d5; --accent:#9bbbff; --border:#40516b; }\n:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

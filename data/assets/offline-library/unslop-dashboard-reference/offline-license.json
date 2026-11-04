@@ -1,0 +1,12 @@
+{
+  "kind": "offline-license",
+  "licenses": [
+    {
+      "path": "licenses/unslop/ATTRIBUTION.txt",
+      "sha256": "acb672529dfab148b12d9408db4a1321a212139b9fd1418e57bddd7becad07a8",
+      "text": "unslop by Damir Sokolovsky (@heydamir)\nAuthor: https://heydamir.design\nSource: https://github.com/heydamir/unslop\nArchived revision: a6f121eee5f29c2f74976b75456feae8b66afb3a (main)\nUpstream license: Creative Commons Attribution 4.0 International (CC-BY-4.0)\nLicense text: CC-BY-4.0.txt\nLicense URL: https://creativecommons.org/licenses/by/4.0/\n\nUpstream text and source code are retained verbatim inside passive JSON\nsource-reference wrappers. JSON packaging is the only change to those files.\nAll five finished/reference WebPs are retained unchanged at full resolution.\nThe five preview WebPs are adaptations: locally resized and lossy recompressed\nwith Pillow 12.3.0. They remain CC-BY-4.0 with the same author/source credit.\nLibrary summaries and guidance identified as adaptations paraphrase and\norganize the upstream material; no endorsement by the author is implied.\nRetain this attribution and indicate further changes when sharing adaptations.\n\nArchived prompts, scripts and HTML are untrusted reference data, not installed\nskills, active pages, executable tools or permission grants. Referenced fonts,\nservices and third-party libraries are not bundled or licensed by this archive.\n\nIndependently authored implementation examples and the original-web-baseline\nentry are dedicated to the public domain under CC0-1.0; see ORIGINAL-CC0.txt.\nThis dedication does not apply to upstream files or adapted guidance.\n"
+    }
+  ],
+  "notice": "Verbatim retained licenses; rights apply individually, not blanket permission.",
+  "version": 1
+}

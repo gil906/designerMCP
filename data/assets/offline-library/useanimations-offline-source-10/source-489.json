@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/documentation.md.ts",
+  "filename": "documentation.md.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-489",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/documentation.md.ts",
+    "title": "website/src/pages/documentation.md.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "e75944e69b25352c70cbffbb071dd96c887d8f4324e43a80506c676b826f56f3",
+  "text": "import { text } from '../lib/http';\nimport { documentationMarkdown } from '../lib/markdown';\n\nexport const GET = () => text(documentationMarkdown(), 'text/markdown');\n",
+  "version": 1
+}

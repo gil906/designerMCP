@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/index.astro",
+  "filename": "index.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-497",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/index.astro",
+    "title": "website/src/pages/index.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "eb397e7e5a66af9179c8c9610efaf2b9363b6e50dd0cc1053be72684443357b5",
+  "text": "---\nimport { EN } from '../i18n';\nimport HomePage from '../views/HomePage.astro';\n---\n\n<HomePage locale={EN} />\n",
+  "version": 1
+}

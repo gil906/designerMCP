@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<section aria-labelledby=\"plans\"><h2 id=\"plans\">Compare plans</h2>\n<article><h3>Starter</h3><p><strong>$12 USD</strong> per month</p>\n<ul><li>One workspace</li><li>Cancel before the next renewal</li></ul>\n<a href=\"#checkout\">Choose Starter</a></article></section>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "const motion = matchMedia(\"(prefers-reduced-motion: reduce)\");\nfunction applyMotion() {\n  document.documentElement.dataset.motion = motion.matches ? \"reduced\" : \"full\";\n}\napplyMotion();\nmotion.addEventListener(\"change\", applyMotion);",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "javascript"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

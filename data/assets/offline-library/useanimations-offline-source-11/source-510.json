@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/robots.txt.ts",
+  "filename": "robots.txt.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-510",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/robots.txt.ts",
+    "title": "website/src/pages/robots.txt.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "512ba861e155369e78c6a5e058b235967072a2e46aec438e979b7cb89ad17306",
+  "text": "import { SITE } from '../lib/icons';\nimport { text } from '../lib/http';\n\n// Search and AI crawlers are welcome, named so their access is explicit. The Content Signals\n// preference (contentsignals.org) is a comment: Lighthouse flags it as an unknown directive.\nconst AI_CRAWLERS = ['GPTBot', 'OAI-SearchBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended'];\n\nexport const GET = () =>\n  text(`# Content-Signal: ai-train=yes, search=yes, ai-input=yes\nUser-agent: *\nAllow: /\n\n${AI_CRAWLERS.map((agent) => `User-agent: ${agent}`).join('\\n')}\nAllow: /\n\nUser-agent: Bytespider\nDisallow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);\n",
+  "version": 1
+}

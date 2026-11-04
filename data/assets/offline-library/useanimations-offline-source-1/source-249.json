@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/netlify.toml",
+  "filename": "netlify.toml",
+  "format": "toml",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-249",
+    "mime_type": "application/toml",
+    "path": "assets/useanimations/source/netlify.toml",
+    "title": "netlify.toml"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "9c53a3b40e5db1c0d19c93a8c29dceee591b970e06e34963f7b3371cb7410d7c",
+  "text": "# useanimations.com: the Astro site in website/, built from the icon set in icons/.\n[build]\ncommand = \"npm run website:build\"\npublish = \"website/dist\"\nedge_functions = \"website/netlify/edge-functions\"\n\n[build.environment]\nNODE_VERSION = \"24\"\n",
+  "version": 1
+}

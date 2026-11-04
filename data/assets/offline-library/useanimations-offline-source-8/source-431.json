@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/tr/docs.ts",
+  "filename": "docs.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-431",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/tr/docs.ts",
+    "title": "website/src/i18n/messages/tr/docs.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "82c35fa762f6a58cd7bd8592c4e4767de9767ce09924efaab00351eb5fe55ff3",
+  "text": "import type { Messages } from '../en';\n\nexport const docs: Messages['docs'] = {\n  title: 'Dokümantasyon — useAnimations',\n  description: (iconCount: number) =>\n    `${iconCount} animasyonlu ikonu React ve shadcn/ui’da kullanma rehberi: etkileşimler, prop’lar, renkler, dosyalar ve erişilebilirlik.`,\n  badge: 'Dokümantasyon',\n  onThisPage: 'Bu sayfada',\n  viewAsMarkdown: 'Markdown olarak görüntüle',\n  headline: 'useAnimations dokümantasyonu',\n  summary: 'useAnimations animasyonlu ikonlarını React ve shadcn/ui’da kullanma rehberi.',\n  crumb: 'Dokümantasyon',\n  faq: [\n    {\n      question: 'useAnimations ticari projelerde ücretsiz mi?',\n      answer: 'Evet. İkonlar ve React paketi MIT lisanslıdır; atıf gerekmez.',\n    },\n    {\n      question: 'useAnimations ikonlarını React’te nasıl kullanırım?',\n      answer:\n        'react-useanimations paketini kurun, UseAnimations’ı ve bir ikonu (ör. react-useanimations/lib/checkmark) import edin, ardından <UseAnimations animation={checkmark} size={32} /> ile render edin.',\n    },\n    {\n      question: 'Bir ikonun rengini nasıl değiştiririm?',\n      answer:\n        'İkonlar metin rengini izler. Rengi strokeColor ve fillColor ile, CSS color ile ya da path’lere stil vererek değiştirebilirsiniz.',\n    },\n    {\n      question: 'React olmadan da çalışır mı?',\n      answer:\n        'Paket React içindir. Ancak her ikon aynı zamanda herhangi bir Lottie oynatıcısının (lottie-web, dotLottie, lottie-react-native, lottie-ios, lottie-android, Flutter) oynatabildiği standart bir Lottie JSON dosyası ve statik bir SVG’dir. Ayrıntılar “React olmadan kullanım” bölümünde ve useanimations.com/lottie-icons sayfasında.',\n    },\n  ],\n};\n",
+  "version": 1
+}

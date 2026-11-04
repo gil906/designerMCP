@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "source",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "ca46bc83b93bd5726367ae1978fafa2248cc4102bc3bfc28f3a7d250bcd87ee2",
+      "source_url": "https://github.com/shoelace-style/shoelace/tree/25bd8ec776609670a932f21390be59a495df497d"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "872774675f52cd38b6937ad43d6d69e440a30ef35aeab3f42f4d21c6b3324e85",
+      "source_url": "original://designerMCP/offline/github-web-shoelace"
+    },
+    {
+      "asset_id": "offline-document-github-web-shoelace-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "7f6c3e93ed74fdcbf0b0249f4962fcfef0a6d41d516d5da6008d0ef25e999051",
+      "source_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/README.md"
+    },
+    {
+      "asset_id": "offline-document-github-web-shoelace-docs-pages-components-dialog-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "ad00926999aca75ae1fd84dbae5abcc949c8af8c4e194f5abe9020cca9b48008",
+      "source_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/docs/pages/components/dialog.md"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "717f34167c8c6bc83dc0ea29fecd096e04d750c4169aabe6d447da4c0a35012e",
+      "source_url": "original://designerMCP/offline/github-web-shoelace"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "examples-only",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed."
+  ],
+  "reference_id": "github-web-shoelace",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

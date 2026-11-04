@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/de/licence.ts",
+  "filename": "licence.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-355",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/de/licence.ts",
+    "title": "website/src/i18n/messages/de/licence.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "b28bc90590f2dfce2c4a719ab9911a2901a387d6e2970f346e6daac9d75463bd",
+  "text": "import type { Messages } from '../en';\n\nexport const licence: Messages['licence'] = {\n  title: 'Lizenz & Nutzungsbedingungen — useAnimations',\n  description:\n    'useAnimations-Icons und react-useanimations stehen unter der MIT-Lizenz: kostenlos nutzbar und weitergebbar, privat wie kommerziell, ohne Namensnennung.',\n  name: 'Lizenz & Nutzungsbedingungen',\n  heading: 'Frei nutzbar. MIT-lizenziert.',\n  introHtml: (mitHref: string) =>\n    `Die useAnimations-Icons und das Paket <code>react-useanimations</code> werden unter der <a href=\"${mitHref}\">MIT-Lizenz</a> veröffentlicht.`,\n  canDo: 'Was Sie dürfen',\n  canDoItemsHtml: [\n    '<strong>Nutzen:</strong> die Icons in privaten und kommerziellen Websites, Apps und Produkten einsetzen.',\n    '<strong>Verändern:</strong> Farben, Größen, Timing oder die Bewegung selbst anpassen.',\n    '<strong>Weitergeben:</strong> auch als Teil von Icon-Paketen, Templates, Themes, UI-Kits und Komponenten-Registries.',\n  ],\n  attribution: 'Namensnennung',\n  attributionText:\n    'Nicht erforderlich, aber willkommen. Wenn Sie die Dateien selbst weitergeben, behalten Sie den Lizenzhinweis bei. Und falls Sie uns nennen möchten:',\n  credit: (link: string) => `Animierte Icons von ${link}`,\n  noWarranty: 'Keine Gewährleistung',\n  noWarrantyText:\n    'Die Icons und der Code werden ohne Mängelgewähr und ohne jegliche Gewährleistung bereitgestellt.',\n  licenseText: 'Lizenztext',\n  bindingNote:\n    'Der folgende Lizenztext ist die englische Originalfassung; nur sie ist rechtlich verbindlich.',\n};\n",
+  "version": 1
+}

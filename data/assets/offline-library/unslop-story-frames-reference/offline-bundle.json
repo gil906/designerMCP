@@ -1,0 +1,79 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "story-frames-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "96f8018e138af71e15dd5f7eb087895748094e38a525d5b3c89c514a0b67cc61",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/story-dashboard-frames.webp"
+    },
+    {
+      "asset_id": "story-frames-original",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "cfbf837e40b7626d5a5789dbce54f5c197aab303aa350d13a042048310717137",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/story-dashboard-frames.webp"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir). Original unchanged; preview resized/recompressed locally; guidance adapted.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "96f8018e138af71e15dd5f7eb087895748094e38a525d5b3c89c514a0b67cc61",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/story-dashboard-frames.webp"
+    },
+    {
+      "asset_id": "offline-guidance",
+      "format": "text",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "document",
+      "sha256": "dc575cf12a8cfd7d6bf94cf0f7610aab3f3c37a89367d5321b6d038c845037e2",
+      "source_url": "original://designerMCP/offline/unslop-story-frames-reference"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "6d8867af1e3cd0d634a715b5f7ba16369dcf4338b3cd2184a0891246d5bf28e7",
+      "source_url": "original://designerMCP/offline/unslop-story-frames-reference"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "unavailable",
+    "license": "available",
+    "source": "original-guidance",
+    "visual": "available"
+  },
+  "kind": "upstream-preview",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Upstream source/documents are unavailable; the local document is original adaptation guidance.",
+    "No complete upstream implementation is claimed; any examples are illustrative only."
+  ],
+  "reference_id": "unslop-story-frames-reference",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

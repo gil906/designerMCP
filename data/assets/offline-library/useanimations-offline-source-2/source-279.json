@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/netlify/edge-functions/canonical-url.ts",
+  "filename": "canonical-url.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-279",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/netlify/edge-functions/canonical-url.ts",
+    "title": "website/netlify/edge-functions/canonical-url.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "5bac946e51c49e6d44548a97ae3cd7a15bc926d3e4c1b63a8882c48936a6ccb8",
+  "text": "// One 301 to the canonical URL for the variants static hosting would otherwise serve as copies:\n// a trailing slash (/zh/, /icons/menu/), the .html file (/icons/menu.html) and old or misspelled\n// paths (/docs, /licensing). A rule in _redirects can't do this: Netlify matches its rules with and\n// without the trailing slash alike, so /documentation/ -> /documentation would loop.\ntype Context = { next: () => Promise<Response> };\n\nconst ALIASES: Record<string, string> = {\n  '/docs': '/documentation',\n  '/license': '/licencing-and-terms',\n  '/licence': '/licencing-and-terms',\n  '/licensing': '/licencing-and-terms',\n  '/licensing-and-terms': '/licencing-and-terms',\n};\n\n/** The canonical path of a pathname, e.g. /icons/menu.html/ -> /icons/menu. */\nconst canonicalPath = (pathname: string) => {\n  let path = pathname.replace(/\\/+$/, '') || '/';\n  if (path.endsWith('.html') && path !== '/404.html') path = path.slice(0, -'.html'.length);\n  path = path.replace(/\\/index$/, '') || '/';\n  return ALIASES[path] ?? path;\n};\n\nexport default async (request: Request, context: Context) => {\n  const url = new URL(request.url);\n  const path = canonicalPath(url.pathname);\n  if (path === url.pathname) return context.next();\n  return new Response(null, {\n    status: 301,\n    headers: { Location: `${path}${url.search}`, 'Cache-Control': 'public, max-age=3600' },\n  });\n};\n\n// Paths with a trailing slash, .html pages and the aliases; files (.json, .zip, .svg, .md, .png,\n// .txt, .xml) never match, and /404.html is served as it is.\nexport const config = {\n  pattern: ['^/.+/$', '^/.+\\\\.html$', '^/(docs|license|licence|licensing|licensing-and-terms)$'],\n  excludedPattern: ['^/404\\\\.html$', '^/\\\\.netlify/'],\n};\n",
+  "version": 1
+}

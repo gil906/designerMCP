@@ -1,0 +1,65 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "      copyright notice that is included in or attached to the work",
+    "      copyright license to reproduce, prepare Derivative Works of,",
+    "   Copyright 2015 IBM Corp."
+  ],
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 7043,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "import Accordion, { AccordionItem, AccordionSkeleton } from '../Accordion';\nimport { ArgTypes, Canvas, Meta } from '@storybook/addon-docs/blocks';\nimport * as AccordionStories from './Accordion.stories';\nimport { stackblitzPrefillConfig } from '../../../previewer/codePreviewer';\n\n<Meta isTemplate />\n\n# Accordion\n\nSource code (https://github.com/carbon-design-system/carbon/tree/main/packages/react/src/components/Accordion)\n&nbsp;|&nbsp;\nUsage guidelines (https://www.carbondesignsystem.com/components/accordion/usage)\n&nbsp;|&nbsp;\nAccessibility (https://www.carbondesignsystem.com/components/accordion/accessibility)\n\n{/* <!-- START doctoc generated TOC please keep comment here to allow auto update --> <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> */}\n\n## Table of Contents\n\n- Overview (#overview)\n- Controlled (#controlled)\n- Skeleton state (#skeleton-state)\n- Component API (#component-api)\n  - Accordion align (#accordion-align)\n  - Accordion className (#accordion-classname)\n  - AccordionItem props (#accordionitem-props)\n  - AccordionItem className (#accordionitem-classname)\n  - AccordionItem onHeadingClick (#accordionitem-onheadingclick)\n  - AccordionItem title (#accordionitem-title)\n  - AccordionSkeleton props (#accordionskeleton-props)\n  - AccordionSkeleton className (#accordionskeleton-classname)\n- References (#references)\n  - Why is interactive content in a heading considered an accessibility violation? (#why-is-interactive-content-in-a-heading-considered-an-accessibility-violation)\n- Feedback (#feedback)\n\n{/* <!-- END doctoc generated TOC please keep comment here to allow auto update --> */}\n\n## Overview\n\nYou can build an accordion using a combination of the `Accordion` and\n`AccordionItem` components. The `Accordion` components accepts a list of\n`AccordionItem` components as `children` and each `AccordionItem` is responsible\nfor displaying the accordion's heading and panel content.\n\nYou can configure the accordion item's heading using the `title` prop.\nEverything you pass in as a child of `AccordionItem` will be rendered in the\naccordion's panel.\n\n<Canvas\n  of={AccordionStories.Default}\n  additionalActions={[\n    {\n      title: 'Open in Stackblitz',\n      onClick: () =>\n        stackblitzPrefillConfig({ story: AccordionStories.Default }),\n    },\n  ]}\n/>\n\n## Controlled\n\n<Canvas\n  of={AccordionStories.Controlled}\n  additionalActions={[\n    {\n      title: 'Open in Stackblitz',\n      onClick: () =>\n        stackblitzPrefillConfig({ story: AccordionStories.Controlled }),\n    },\n  ]}\n/>\n\n## Skeleton state\n\nYou can use the `AccordionSkeleton` component to render a skeleton variant of an\naccordion. This is useful to display while content in your accordion is being\nfetched from an external resource like an API.\n\n<Canvas\n  of={AccordionStories.Skeleton}\n  additionalActions={[\n    {\n      title: 'Open in Stackblitz',\n      onClick: () =>\n        stackblitzPrefillConfig({ story: AccordionStories.Skeleton }),\n    },\n  ]}\n/>\n\n## Component API\n\n<ArgTypes />\n\nAdditional props passed into `Accordion` will be forwarded along to the\nunderlying accordion container.\n\n### Accordion align\n\nIn rare cases, you may need to specify the alignment of the icon in the\naccordion. You can use the `align` prop to specify the side where the icon\nshould be placed.\n\n_Note: This prop must not be used to create a tree view or set of nested\naccordions._\n\n```jsx\n<Accordion align=\"start\">\n  <AccordionItem title=\"Panel A\">Panel A</AccordionItem>\n  <AccordionItem title=\"Panel B\">Panel B</AccordionItem>\n  <AccordionItem title=\"Panel C\">Panel C</AccordionItem>\n</Accordion>\n```\n\n### Accordion className\n\nThe `className` prop passed into `Accordion` will be forwarded along to the\nunderlying accordion container. This is useful for specifying a custom class\nname for layout.\n\n```jsx\n<Accordion className=\"custom-class\">\n  <AccordionItem title=\"Panel A\">Panel A</AccordionItem>\n  <AccordionItem title=\"Panel B\">Panel B</AccordionItem>\n  <AccordionItem title=\"Panel C\">Panel C</AccordionItem>\n</Accordion>\n```\n\n### AccordionItem props\n\nAdditional props passed into `AccordionItem`, such as `onClick`, will be passed\nthrough to the underlying accordion header.\n\n### AccordionItem className\n\nThe `className` prop passed into `AccordionItem` will be forwarded along to the\nunderlying accordion header. This is useful for specifying a custom class name\nfor layout. As a reminder, the callback signature will look like\n`({ isOpen: boolean, event: Event })` rather than the usual\n`(event: Event, state: { isOpen: boolean })` until the next major version.\n\n```jsx\n<Accordion>\n  <AccordionItem title=\"Panel A\" className=\"custom-class\">\n    Panel A\n  </AccordionItem>\n  <AccordionItem title=\"Panel B\">Panel B</AccordionItem>\n  <AccordionItem title=\"Panel C\">Panel C</AccordionItem>\n</Accordion>\n```\n\n### AccordionItem onHeadingClick\n\nYou can use the `onHeadingClick` prop to determine the state of the\n`AccordionItem` when it is clicked. it will return\n\n```jsx\n<Accordion>\n  <AccordionItem onHeadingClick={({ isOpen }) => console.log(isOpen)}>\n    Panel A\n  </AccordionItem>\n</Accordion>\n```\n\n### AccordionItem title\n\nYou can use the `title` prop to specify the accordion item's heading. The\ndefault behavior is to pass in a `string` as the title, however you can also\npass in a `node`.\n\n_Note: A custom title prop that renders an interactive element is considered an\naccessibility violation. For more information, visit our\nreference section (#why-is-interactive-content-in-a-heading-considered-an-accessibility-violation)\nbelow._\n\n```jsx\n<Accordion align=\"start\">\n  <AccordionItem title={() => <span>Panel A</span>}>Panel A</AccordionItem>\n  <AccordionItem title=\"Panel B\">Panel B</AccordionItem>\n  <AccordionItem title=\"Panel C\">Panel C</AccordionItem>\n</Accordion>\n```\n\n### AccordionSkeleton props\n\nAdditional props passed into `AccordionSkeleton` will be forwarded along to the\nunderlying skeleton container.\n\n### AccordionSkeleton className\n\nThe `className` prop passed into `AccordionSkeleton` will be forwarded along to\nthe underlying skeleton container. This is useful for specifying a custom class\nname for layout.\n\n```jsx\n<AccordionSkeleton className=\"custom-class\" open count={3} />\n```\n\n## References\n\n### Why is interactive content in a heading considered an accessibility violation?\n\nWhen using the `title` prop from `Accordion`, it is possible to render arbitrary\nmarkup within the accordion header. The accordion header itself is rendered as a\n`<button>` and is considered an interactive element.\n\nIf you render an interactive element inside this header, then it becomes nested\ninside the `<button>`. Common examples of this are buttons or links. Rendering\ninteractive content inside the accordion heading is not reachable via a keyboard\nor screen reader.\n\n## Feedback\n\nHelp us improve this component by providing feedback, asking questions on Slack,\nor updating this file on\nGitHub (https://github.com/carbon-design-system/carbon/edit/main/packages/react/src/components/Accordion/Accordion.mdx).\n",
+  "content_sha256": "53770a14c7c820d44be636cb8089554421999e75ac6ce5ad081257592b66feca",
+  "filename": "Accordion.mdx",
+  "full_content_sha256": "53770a14c7c820d44be636cb8089554421999e75ac6ce5ad081257592b66feca",
+  "full_file_complete": false,
+  "full_source_sha256": "0f7a1327c096f731b19e70b1f6a47b996c25abcf0cf22a3f843fb8181bbf747c",
+  "git_blob_proof": "unavailable in prior collector; SHA256 matches recorded upstream",
+  "kind": "documentation",
+  "language": "text",
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-web/carbon/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 215,
+    "start": 1,
+    "total": 215
+  },
+  "modifications": [
+    {
+      "count": 20,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "mdx",
+  "original_path": "packages/react/src/components/Accordion/Accordion.mdx",
+  "repository": "carbon-design-system/carbon",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/carbon/LICENSE.txt",
+      "sha256": "037b3e9eaff51477b270e9082f54b99175e4dd893548654f00995045b68294b8"
+    }
+  ],
+  "revision": "2efc91b00c814e390bfa431f0f5555f3028e7100",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 7063,
+  "source_lines": 215,
+  "source_sha256": "0f7a1327c096f731b19e70b1f6a47b996c25abcf0cf22a3f843fb8181bbf747c",
+  "source_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/packages/react/src/components/Accordion/Accordion.mdx"
+}

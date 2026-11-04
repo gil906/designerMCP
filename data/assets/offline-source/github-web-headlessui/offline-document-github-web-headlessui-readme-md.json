@@ -1,0 +1,72 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "Copyright (c) 2020 Tailwind Labs"
+  ],
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 2579,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "<h3 align=\"center\">\n  Headless UI\n</h3>\n\n<p align=\"center\">\n  A set of completely unstyled, fully accessible UI components, designed to integrate\n  beautifully with Tailwind CSS.\n</p>\n\n---\n\n## Documentation\n\nFor full documentation, visit headlessui.com (https://headlessui.com).\n\n### Installing the latest version\n\nYou can install the latest version by using:\n\n\n### Installing the insiders version\n\nYou can install the insiders version (which points to whatever the latest commit on the `main` branch is) by using:\n\n\n**Note:** The insiders build doesn't follow semver and therefore doesn't guarantee that the APIs will be the same once they are released.\n\n## Packages\n\n| Name                                                                                                                 |                                                              Version                                                              |                                                              Downloads                                                               |\n| :------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |\n| `@headlessui/react` (https://github.com/tailwindlabs/headlessui/tree/main/packages/%40headlessui-react)             |       [](https://www.npmjs.com/package/@headlessui/react)       |       [](https://www.npmjs.com/package/@headlessui/react)       |\n| `@headlessui/vue` (https://github.com/tailwindlabs/headlessui/tree/main/packages/%40headlessui-vue)                 |         [](https://www.npmjs.com/package/@headlessui/vue)         |         [](https://www.npmjs.com/package/@headlessui/vue)         |\n| `@headlessui/tailwindcss` (https://github.com/tailwindlabs/headlessui/tree/main/packages/%40headlessui-tailwindcss) | [](https://www.npmjs.com/package/@headlessui/tailwindcss) | [](https://www.npmjs.com/package/@headlessui/tailwindcss) |\n\n## Community\n\nFor help, discussion about best practices, or feature ideas:\n\nDiscuss Headless UI on GitHub (https://github.com/tailwindlabs/headlessui/discussions)\n\n## Contributing\n\nIf you're interested in contributing to Headless UI, please read our contributing docs (https://github.com/tailwindlabs/headlessui/blob/main/.github/CONTRIBUTING.md) **before submitting a pull request**.\n",
+  "content_sha256": "2b4354f7e1ad3aab86f1349ca12f9785dc190b3ac2bf78411fccd9361f7a9b5a",
+  "expected_git_blob_sha1": "4d8575d7370dd619d6ad6008a67eb9f07baa9290",
+  "filename": "README.md",
+  "full_content_sha256": "2b4354f7e1ad3aab86f1349ca12f9785dc190b3ac2bf78411fccd9361f7a9b5a",
+  "full_file_complete": false,
+  "full_source_sha256": "51274a5aa2646697e84926c3929b3b988a0d610d861b4abf1f805893aa2c8d09",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-web/headlessui/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 44,
+    "start": 1,
+    "total": 44
+  },
+  "modifications": [
+    {
+      "count": 6,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 4,
+      "operation": "remove installer commands"
+    },
+    {
+      "count": 6,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "tailwindlabs/headlessui",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/headlessui/LICENSE.txt",
+      "sha256": "c0812e5b3b5848765343baffe9e304233fceae7891ba414a10d679aa7eccc0a6"
+    }
+  ],
+  "revision": "eea57cf46fd6767ed1059012f7073b88eb159fba",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 3162,
+  "source_lines": 48,
+  "source_sha256": "51274a5aa2646697e84926c3929b3b988a0d610d861b4abf1f805893aa2c8d09",
+  "source_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/README.md",
+  "verified_git_blob_sha1": "4d8575d7370dd619d6ad6008a67eb9f07baa9290"
+}

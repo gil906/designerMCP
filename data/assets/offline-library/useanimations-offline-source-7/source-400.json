@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/ja/licence.ts",
+  "filename": "licence.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-400",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/ja/licence.ts",
+    "title": "website/src/i18n/messages/ja/licence.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "fc609d8961e2a94d69a2b9563d8a72e40ce303e8caa0480fd5ba3cb19ed50736",
+  "text": "import type { Messages } from '../en';\n\nexport const licence: Messages['licence'] = {\n  title: 'ライセンスと利用規約 — useAnimations',\n  description:\n    'useAnimations のアイコンと react-useanimations は MIT ライセンス。個人・商用利用も再配布も無料、クレジット表記は不要。',\n  name: 'ライセンスと利用規約',\n  heading: '自由に使える MIT ライセンス。',\n  introHtml: (mitHref: string) =>\n    `useAnimations のアイコンと <code>react-useanimations</code> パッケージは、<a href=\"${mitHref}\">MIT ライセンス</a>で公開しています。`,\n  canDo: 'できること',\n  canDoItemsHtml: [\n    '個人・商用のウェブサイト、アプリ、製品でアイコンを<strong>使用</strong>できます。',\n    '色、サイズ、タイミング、動きそのものを<strong>改変</strong>できます。',\n    'アイコンパック、テンプレート、テーマ、UI キット、コンポーネントレジストリに含めるなど、<strong>再配布</strong>もできます。',\n  ],\n  attribution: 'クレジット表記',\n  attributionText:\n    '必須ではありませんが、表記していただけるとうれしいです。ファイルそのものを再配布する場合はライセンス表示を残してください。クレジットを入れる場合は次のように記載できます：',\n  credit: (link: string) => `アニメーションアイコン提供：${link}`,\n  noWarranty: '無保証',\n  noWarrantyText: 'アイコンとコードは現状のまま提供され、いかなる保証もありません。',\n  licenseText: 'ライセンス本文',\n  bindingNote: '以下のライセンス本文は英語の原文で、こちらが法的拘束力を持ちます。',\n};\n",
+  "version": 1
+}

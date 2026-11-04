@@ -1,0 +1,70 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by software-mansion/react-native-reanimated contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 5074,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "\n\n[](https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-react-native-reanimated-1\\&n=1)\n[](https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-react-native-reanimated-2\\&n=1)\n[](https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-react-native-reanimated-3\\&n=1)\n\n# Reanimated & Worklets\n\nThis repository contains two main packages:\n\n- React Native Reanimated (/packages/react-native-reanimated) — a library for creating smooth animations and interactions in React Native,\n- React Native Worklets (/packages/react-native-worklets) — a library that enables multi-threaded JavaScript execution in React Native applications.\n\n### Create smooth animations with an excellent developer experience.\n\n> Reanimated 4 is here! Check out our documentation page (https://docs.swmansion.com/react-native-reanimated/) for more information\n\n## Nightly CI state\n\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/main-branch-build.yml)\n[![NPM Reanimated publish \\[Nightly\\]](https://github.com/software-mansion/react-native-reanimated/actions/workflows/npm-reanimated-publish.yml/badge.svg)](https://github.com/software-mansion/react-native-reanimated/actions/workflows/npm-reanimated-publish.yml)\n[![NPM Worklets publish \\[Nightly\\]](https://github.com/software-mansion/react-native-reanimated/actions/workflows/npm-worklets-publish.yml/badge.svg)](https://github.com/software-mansion/react-native-reanimated/actions/workflows/npm-worklets-publish.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/reanimated-worklets-compatibility-check.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/reanimated-compatibility-check-nightly.yml)\n[![Use frameworks Reanimated build check \\[Nightly\\]](https://github.com/software-mansion/react-native-reanimated/actions/workflows/use-frameworks-reanimated-build-check-nightly.yml/badge.svg)](https://github.com/software-mansion/react-native-reanimated/actions/workflows/use-frameworks-reanimated-build-check-nightly.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/react-native-nightly-reanimated-build-check-nightly.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/expo-devclient-build-check-nightly.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/reanimated-typescript-compatibility-test-nightly.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/windows-hosted-app-reanimated-build-check-nightly.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/url-validation-nightly.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/runtime-tests-nightly.yml)\n[](https://github.com/software-mansion/react-native-reanimated/actions/workflows/runtime-tests-sanitizers-nightly.yml)\n\n## Installation\n\nCheck out the detailed installation instructions for Reanimated (https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/#installation) and instructions for Worklets (https://docs.swmansion.com/react-native-worklets/docs/fundamentals/getting-started/#installation) on their dedicated documentation pages.\n\n## Compatibility\n\nReanimated 4.x and Worklets support only the New React Native architecture (https://reactnative.dev/architecture/landing-page) and three latest React Native versions.\n\nIf your app still runs on the old architecture, please consider adopting the New Architecture or stay with latest 3.x release.\n\n## Documentation\n\nYou can find more information about Reanimated and Worklets, their API references and more in their dedicated documentation pages:\n\n- Reanimated — https://docs.swmansion.com/react-native-reanimated/ (https://docs.swmansion.com/react-native-reanimated/)\n- Worklets — https://docs.swmansion.com/react-native-worklets/ (https://docs.swmansion.com/react-native-worklets/)\n\n## Examples\n\nThe source code for the example (showcase) app is under the `apps/common-app` (https://github.com/software-mansion/react-native-reanimated/blob/main/apps/common-app/) directory.\nIf you want to play with the API but don't feel like trying it on a real app, you can run the example project. Check Example README (apps/fabric-example/README.md) for installation instructions.\n\n## License\n\nReanimated and Worklets libraries are licensed under The MIT License (LICENSE).\n\n## Community Discord\n\nJoin the Software Mansion Community Discord (https://discord.swmansion.com) to chat about Reanimated, Worklets or other Software Mansion libraries.\n\n## Reanimated and Worklets are created by Software Mansion\n\nSince 2012 Software Mansion (https://swmansion.com) is a software agency with experience in building web and mobile apps. We are Core React Native Contributors and experts in dealing with all kinds of React Native issues. We can help you build your next dream product – Hire us (https://swmansion.com/contact/projects?utm_source=reanimated\\&utm_medium=readme).\n",
+  "content_sha256": "5f958cf5b828d6777c12683ee4143ea1a943e8d7489b4780fff07d466d356fa5",
+  "expected_git_blob_sha1": "200033226f6a049d9a28c3217e40de1161a4b47e",
+  "filename": "README.md",
+  "full_content_sha256": "5f958cf5b828d6777c12683ee4143ea1a943e8d7489b4780fff07d466d356fa5",
+  "full_file_complete": false,
+  "full_source_sha256": "f69b5125861f90a7f0f275ee013ae97f83a1923eeaebcded6eee06a8022ae678",
+  "kind": "documentation",
+  "language": "text",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 66,
+    "start": 1,
+    "total": 66
+  },
+  "modifications": [
+    {
+      "count": 1,
+      "operation": "remove HTML media tags"
+    },
+    {
+      "count": 13,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 14,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "software-mansion/react-native-reanimated",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+      "sha256": "f1ae22eddd3a96c3b7b8a494ef03749ae6a1e19574bacc9c195d83c916de09e2"
+    }
+  ],
+  "revision": "8f38c4e379ac5dd9faf693139800bbef3e2d924c",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 7144,
+  "source_lines": 66,
+  "source_sha256": "f69b5125861f90a7f0f275ee013ae97f83a1923eeaebcded6eee06a8022ae678",
+  "source_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/README.md",
+  "verified_git_blob_sha1": "200033226f6a049d9a28c3217e40de1161a4b47e"
+}

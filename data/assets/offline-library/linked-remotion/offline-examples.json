@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "export function originalShotState(frame, fps) {\n  const seconds = frame / fps;\n  const t = Math.max(0, Math.min(1, seconds / 0.6));\n  const eased = 1 - (1 - t) ** 3;\n  return { opacity: eased, translateY: 18 * (1 - eased), caption: seconds < 3 ? 'Make the next step visible' : 'Give it an owner' };\n}",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "javascript"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

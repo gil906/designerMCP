@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/zh/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-448",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/zh/common.ts",
+    "title": "website/src/i18n/messages/zh/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "e798951a46e483a6a730acf91c0cadfb076f6da68c5de954a8788d38da582b53",
+  "text": "// 每个页面共用的文字：布局、页眉、页脚、面包屑导航、常见问题和复制按钮。\nimport type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: '跳到主要内容',\n  ogImageAlt: 'useAnimations：适用于 React、shadcn/ui、Lottie 和 SVG 的免费动态图标',\n  homeLabel: 'useAnimations 首页',\n  mainNav: '主导航',\n  browseIcons: '浏览图标',\n  nav: {\n    icons: '图标',\n    categories: '类别',\n    documentation: '文档',\n    shadcn: 'shadcn',\n    lottie: 'Lottie 图标',\n    license: '许可证',\n  },\n  footer: {\n    tagline: '内置交互的免费动态图标，采用 MIT 许可证，专为 React 打造。',\n    product: '产品',\n    developers: '开发者',\n    follow: '关注',\n    languages: '语言',\n    allIcons: '全部图标',\n    categories: '类别',\n    interactions: '交互方式',\n    lottieIcons: 'Lottie 图标',\n    shadcnIcons: 'shadcn/ui 图标',\n    documentation: '文档',\n    licencing: '许可与条款',\n    shadcnRegistry: 'shadcn 注册表',\n    mitLicense: 'MIT 许可证',\n    builtWith: '本站使用 Astro 构建',\n  },\n  breadcrumb: '面包屑导航',\n  crumbs: { icons: '图标', categories: '类别', interactions: '交互方式' },\n  faq: '常见问题',\n  copy: '复制',\n  copied: '已复制',\n  pressCtrlC: '请按 Ctrl+C 复制',\n  languageBanner: {\n    text: '此页面也提供简体中文版本。',\n    action: '切换到简体中文',\n    dismiss: '关闭',\n  },\n};\n",
+  "version": 1
+}

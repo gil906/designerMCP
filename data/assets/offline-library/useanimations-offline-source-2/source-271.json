@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/test/icons.ts",
+  "filename": "icons.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-271",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/test/icons.ts",
+    "title": "test/icons.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "8dcc0a921be989c3108ebaef4e18a2d7b23a70e6a89de0d491e2a41eca1d52a6",
+  "text": "/// <reference types=\"vite-plus/client\" />\nimport type { Animation, Interaction } from '../src';\n\n// The same icons as `react-useanimations/lib/<name>`, read from the icon set in icons/.\nconst files = import.meta.glob<object>('../icons/*.json', { eager: true, import: 'default' });\n\nexport const catalog = files['../icons/catalog.json'] as {\n  name: string;\n  interaction: Interaction;\n}[];\n\nexport const icon = (name: string): Animation => {\n  const entry = catalog.find((item) => item.name === name);\n  if (!entry) throw new Error(`Unknown icon ${name}`);\n  return { animationData: files[`../icons/${name}.json`], interaction: entry.interaction };\n};\n",
+  "version": 1
+}

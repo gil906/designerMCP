@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/ColorRow.tsx",
+  "filename": "ColorRow.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-301",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/ColorRow.tsx",
+    "title": "website/src/components/ColorRow.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "05cdded44639ee5df00eb97c6d2f9af489d9a27854fedcb2af92a47b7a37bc87",
+  "text": "import { Fragment, useEffect, useState } from 'react';\nimport UseAnimations, { type Interaction } from 'react-useanimations';\nimport { loadIconData } from '../lib/icon-data';\n\n/** `id` is the icon id; its Lottie JSON loads from /icons/<id>.json once the row is visible. */\ntype Icon = { id: string; title: string; color: string; interaction: Interaction };\n\nconst SIZE = 32;\n\n/** Icons in different colors: each plays when its tile is hovered or clicked. */\nexport default function ColorRow({ icons }: { icons: Icon[] }) {\n  const [data, setData] = useState<object[]>();\n  useEffect(() => {\n    void Promise.all(icons.map((icon) => loadIconData(icon.id))).then(setData, () => undefined);\n  }, [icons]);\n\n  const tile = (icon: Icon, eventProps: object, animationProps: object) => (\n    <span\n      {...eventProps}\n      title={icon.title}\n      className=\"flex size-16 cursor-pointer items-center justify-center rounded-2xl bg-surface-2 transition hover:scale-105\"\n      style={{ color: icon.color }}\n    >\n      <span {...animationProps} />\n    </span>\n  );\n\n  // Until the animations load, empty boxes of the icons' size keep the layout still.\n  return (\n    <div className=\"mt-8 flex flex-wrap gap-3\">\n      {icons.map((icon, i) =>\n        data ? (\n          <UseAnimations\n            key={icon.id}\n            animation={{ animationData: data[i], interaction: icon.interaction }}\n            size={SIZE}\n            render={(eventProps, animationProps) => tile(icon, eventProps, animationProps)}\n          />\n        ) : (\n          <Fragment key={icon.id}>\n            {tile(icon, {}, { style: { display: 'inline-block', width: SIZE, height: SIZE } })}\n          </Fragment>\n        )\n      )}\n    </div>\n  );\n}\n",
+  "version": 1
+}

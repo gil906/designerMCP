@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/scripts/copy.ts",
+  "filename": "copy.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-519",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/scripts/copy.ts",
+    "title": "website/src/scripts/copy.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "b0a44b246f138a17dcbba56935617d7906fdd5f88eb2408c7f32c1b1c8d05b46",
+  "text": "// Copy buttons: <button data-copy=\"text\"> or <button data-copy-from=\"#selector\">. The feedback\n// text comes from <body data-copied-text data-copy-failed-text> (Layout.astro), in the page's language.\n// A successful copy also sets `data-copied` for a moment (accent color, copy icon to checkmark).\nconst label = (button: HTMLElement, text: string, copied: boolean) => {\n  const target = button.querySelector('[data-copy-label]') ?? button;\n  const previous = target.textContent;\n  target.textContent = text;\n  if (copied) button.dataset.copied = '';\n  setTimeout(() => {\n    target.textContent = previous;\n    delete button.dataset.copied;\n  }, 1600);\n};\n\ndocument.addEventListener('click', async (event) => {\n  const button = (event.target as Element).closest<HTMLElement>('[data-copy], [data-copy-from]');\n  if (!button) return;\n  const source = button.dataset.copyFrom\n    ? (button.closest('[data-copy-scope]') ?? document).querySelector(button.dataset.copyFrom)\n    : null;\n  const text = button.dataset.copy ?? source?.textContent ?? '';\n  try {\n    await navigator.clipboard.writeText(text.trim());\n    label(button, document.body.dataset.copiedText ?? 'Copied', true);\n  } catch {\n    label(button, document.body.dataset.copyFailedText ?? 'Press Ctrl+C', false);\n  }\n});\n",
+  "version": 1
+}

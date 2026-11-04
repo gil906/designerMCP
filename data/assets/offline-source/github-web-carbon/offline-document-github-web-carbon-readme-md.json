@@ -1,0 +1,74 @@
+{
+  "adapted_content_complete": true,
+  "attribution": [
+    "      copyright notice that is included in or attached to the work",
+    "      copyright license to reproduce, prepare Derivative Works of,",
+    "   Copyright 2015 IBM Corp."
+  ],
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 6885,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "<div align=\"center\">\n  <a href=\"https://www.carbondesignsystem.com\">\n    \n  </a>\n\n  <h1>Carbon Design System</h1>\n\n  <p>\n    <a href=\"https://www.carbondesignsystem.com\">Website</a> ·\n    <a href=\"https://carbondesignsystem.com/designing/get-started/\">Design</a> ·\n    <a href=\"https://carbondesignsystem.com/developing/get-started/\">Develop</a> ·\n    <a href=\"https://carbondesignsystem.com/contributing/get-started/overview/\">Contribute</a> ·\n    <a href=\"https://carbondesignsystem.com/migrating/guide/overview/\">Migrate</a>\n  </p>\n\n  <p>\n    <a href=\"https://github.com/carbon-design-system/carbon/actions/workflows/ci.yml\">\n      \n    </a>\n    <a href=\"https://bestpractices.coreinfrastructure.org/projects/7034\">\n      \n    </a>\n    <a href=\"./LICENSE\">\n      \n    </a>\n    <a href=\"https://discord.gg/J7JEUEkTRX\">\n      \n    </a>\n  </p>\n</div>\n\nCarbon is IBM's open-source design system for products and experiences. This\nmonorepo includes the React and web components libraries, Sass styles, design\ntokens, icons, pictograms, and tooling used to build with Carbon.\n\n## Packages\n\n| Package                                   | Version                                                                                                                 | Downloads                                                                  | Description                                                   | Links                                                                          |\n| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------ |\n| [`@carbon/react`][react-source]           | [](https://www.npmjs.com/package/@carbon/react)                   |           | React components and styles.                                  | [Docs][react-docs] · [Storybook][react-storybook] · [Source][react-source]     |\n| [`@carbon/web-components`][wc-source]     | [](https://www.npmjs.com/package/@carbon/web-components) |  | Standards-based web components.                               | [Docs][wc-docs] · [Storybook][wc-storybook] · [Source][wc-source]              |\n| [`@carbon/colors`][colors-source]         | [](https://www.npmjs.com/package/@carbon/colors)                 |          | Color scales and color token utilities.                       | [Source][colors-source]                                                        |\n| [`@carbon/elements`][elements-source]     | [](https://www.npmjs.com/package/@carbon/elements)             |        | IBM Design Language foundations, including tokens and assets. | [Source][elements-source]                                                      |\n| [`@carbon/grid`][grid-source]             | [](https://www.npmjs.com/package/@carbon/grid)                     |            | Layouts built on Carbon's grid.                               | [Source][grid-source]                                                          |\n| [`@carbon/icons`][icons-source]           | [](https://www.npmjs.com/package/@carbon/icons)                   |           | Icon assets and framework packages.                           | [React][icons-react-source] · [Vue][icons-vue-source] · [Source][icons-source] |\n| [`@carbon/layout`][layout-source]         | [](https://www.npmjs.com/package/@carbon/layout)                 |          | Layout units and spacing scale tokens.                        | [Source][layout-source]                                                        |\n| [`@carbon/motion`][motion-source]         | [](https://www.npmjs.com/package/@carbon/motion)                 |          | Productive and expressive motion curves.                      | [Source][motion-source]                                                        |\n| [`@carbon/pictograms`][pictograms-source] | [](https://www.npmjs.com/package/@carbon/pictograms)         |      | Pictogram assets.                                             | [React][pictograms-react-source] · [Source][pictograms-source]                 |\n| [`@carbon/styles`][styles-source]         | [](https://www.npmjs.com/package/@carbon/styles)                 |          | Sass styles for Carbon components.                            | [Source][styles-source]                                                        |\n| [`@carbon/themes`][themes-source]         | [](https://www.npmjs.com/package/@carbon/themes)                 |          | Theme tokens for Carbon color systems.                        | [Source][themes-source]                                                        |\n| [`@carbon/type`][type-source]             | [](https://www.npmjs.com/package/@carbon/type)                     |            | Type tokens designed to pair with IBM Plex.                   | [Source][type-source]                                                          |\n\n[colors-source]: ./packages/colors\n[elements-source]: ./packages/elements\n[grid-source]: ./packages/grid\n[icons-react-source]: ./packages/icons-react\n[icons-source]: ./packages/icons\n[icons-vue-source]: ./packages/icons-vue\n[layout-source]: ./packages/layout\n[motion-source]: ./packages/motion\n[pictograms-react-source]: ./packages/pictograms-react\n[pictograms-source]: ./packages/pictograms\n[react-docs]: https://carbondesignsystem.com/developing/frameworks/react/\n[react-source]: ./packages/react\n[react-storybook]: https://react.carbondesignsystem.com/\n[styles-source]: ./packages/styles\n[themes-source]: ./packages/themes\n[type-source]: ./packages/type\n[wc-docs]: https://carbondesignsystem.com/developing/frameworks/web-components/\n[wc-source]: ./packages/web-components\n[wc-storybook]: https://web-components.carbondesignsystem.com\n\nCommunity-maintained packages are also available for\nAngular (https://github.com/IBM/carbon-components-angular),\nSvelte (https://github.com/IBM/carbon-components-svelte), and\nVue (https://github.com/carbon-design-system/carbon-components-vue).\n\n## Contributing\n\nContributions are welcome. See CONTRIBUTING.md (./.github/CONTRIBUTING.md) for\ncontribution guidelines and repository expectations.\n\n## Community\n\nThe Carbon community can be found on\nGitHub Discussions (https://github.com/carbon-design-system/carbon/discussions),\nwhere you can ask questions, share ideas, and connect with other contributors.\n\nTo chat with other community members, join the\nCarbon Discord server (https://discord.gg/J7JEUEkTRX).\n\nNote that our Code of Conduct (./.github/CODE_OF_CONDUCT.md) applies to all\nCarbon community channels.\n\n## License\n\nLicensed under the Apache 2.0 License (./LICENSE).\n\n## Contributors\n\n[](https://github.com/carbon-design-system/carbon/graphs/contributors)\n",
+  "content_sha256": "aa3e2832a0430c7f966e2a9eefeb58f34b23f1ca17922e8188613c88583a9f3c",
+  "expected_git_blob_sha1": "f8db2b80a8e14257ce61715822b141d81049f3ad",
+  "filename": "README.md",
+  "full_content_sha256": "aa3e2832a0430c7f966e2a9eefeb58f34b23f1ca17922e8188613c88583a9f3c",
+  "full_file_complete": false,
+  "full_source_sha256": "1379b2bc49aae94c6dcd2b76cdb4f165a18220c2c613faf431fee74b18f3baa2",
+  "kind": "documentation",
+  "language": "text",
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-web/carbon/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 101,
+    "start": 1,
+    "total": 101
+  },
+  "modifications": [
+    {
+      "count": 5,
+      "operation": "remove HTML media tags"
+    },
+    {
+      "count": 25,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "count": 8,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "carbon-design-system/carbon",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-web/carbon/LICENSE.txt",
+      "sha256": "037b3e9eaff51477b270e9082f54b99175e4dd893548654f00995045b68294b8"
+    }
+  ],
+  "revision": "2efc91b00c814e390bfa431f0f5555f3028e7100",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 9081,
+  "source_lines": 105,
+  "source_sha256": "1379b2bc49aae94c6dcd2b76cdb4f165a18220c2c613faf431fee74b18f3baa2",
+  "source_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/README.md",
+  "verified_git_blob_sha1": "f8db2b80a8e14257ce61715822b141d81049f3ad"
+}

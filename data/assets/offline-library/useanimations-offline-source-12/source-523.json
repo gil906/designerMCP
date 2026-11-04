@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/views/CategoryIndexPage.astro",
+  "filename": "CategoryIndexPage.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-523",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/views/CategoryIndexPage.astro",
+    "title": "website/src/views/CategoryIndexPage.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "65b93afd70428304c23aa6aef686fd522f79ec53fd106fa81b062447748cc2aa",
+  "text": "---\n// The list of categories (/categories) in any language; src/pages routes render it.\nimport Breadcrumbs from '../components/Breadcrumbs.astro';\nimport IconStill from '../components/IconStill.astro';\nimport { alternatesOf, type Locale, localize, t } from '../i18n';\nimport Layout from '../layouts/Layout.astro';\nimport { breadcrumbNode, categories, categoryPath, localDescription, localTitle } from '../lib/hubs';\nimport { icons, SITE } from '../lib/icons';\nimport { websiteNode, WEBSITE_ID } from '../lib/seo';\n\ninterface Props {\n  locale: Locale;\n}\n\nconst { locale } = Astro.props;\nconst m = t(locale);\nconst p = m.pages.categories;\nconst href = (path: string) => localize(path, locale);\nconst path = '/categories';\nconst all = categories();\nconst title = localTitle(locale, p.titles(all.length));\nconst description = localDescription(locale, p.descriptions(icons.length, all.length));\nconst crumbs = [\n  { name: m.common.crumbs.icons, path: href('/icons') },\n  { name: m.common.crumbs.categories, path: href(path) },\n];\nconst jsonLd = {\n  '@context': 'https://schema.org',\n  '@graph': [\n    {\n      '@type': 'CollectionPage',\n      '@id': `${SITE}${href(path)}`,\n      url: `${SITE}${href(path)}`,\n      name: p.title,\n      description,\n      inLanguage: locale.hreflang,\n      isPartOf: { '@id': WEBSITE_ID },\n      mainEntity: {\n        '@type': 'ItemList',\n        numberOfItems: all.length,\n        itemListElement: all.map(({ meta }, index) => ({\n          '@type': 'ListItem',\n          position: index + 1,\n          url: `${SITE}${href(categoryPath(meta))}`,\n          name: m.taxonomy.categories[meta.name].title,\n        })),\n      },\n    },\n    breadcrumbNode(crumbs),\n    websiteNode(),\n  ],\n};\n---\n\n<Layout title={title} description={description} path={href(path)} locale={locale} alternates={alternatesOf(path)} jsonLd={jsonLd}>\n  <div class=\"mx-auto max-w-6xl px-5 pt-10 sm:px-8\">\n    <Breadcrumbs crumbs={crumbs} label={m.common.breadcrumb} />\n    <header class=\"mt-8 max-w-3xl\">\n      <p class=\"text-sm font-medium text-accent\">{p.badge(icons.length, all.length)}</p>\n      <h1 class=\"mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl\">{p.title}</h1>\n      <p class=\"mt-4 text-lg leading-relaxed text-muted\" set:html={p.introHtml(href('/interactions'))} />\n    </header>\n\n    <ul class=\"mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3\">\n      {\n        all.map(({ meta, icons: group }) => (\n          <li>\n            <a\n              href={href(categoryPath(meta))}\n              class=\"group flex h-full flex-col rounded-3xl border border-line bg-surface p-6 transition hover:border-line-strong\"\n            >\n              <span class=\"flex gap-2 text-fg\" aria-hidden=\"true\">\n                {group.slice(0, 5).map((icon) => (\n                  <IconStill icon={icon} class=\"size-8\" />\n                ))}\n              </span>\n              <span class=\"mt-5 flex items-baseline justify-between gap-3\">\n                <span class=\"text-lg font-semibold tracking-tight text-fg\">{m.taxonomy.categories[meta.name].name}</span>\n                <span class=\"text-sm text-subtle\">{p.iconCount(group.length)}</span>\n              </span>\n              <span class=\"mt-2 line-clamp-3 text-sm leading-relaxed text-muted\">{m.taxonomy.categories[meta.name].intro}</span>\n            </a>\n          </li>\n        ))\n      }\n    </ul>\n  </div>\n</Layout>\n",
+  "version": 1
+}

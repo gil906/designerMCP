@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "function announceRoute(title) {\n  document.title = title;\n  const heading = document.querySelector(\"main h1\");\n  if (heading) { heading.tabIndex = -1; heading.focus(); }\n}",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "javascript"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

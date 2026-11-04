@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/llms-full.txt.ts",
+  "filename": "llms-full.txt.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-503",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/llms-full.txt.ts",
+    "title": "website/src/pages/llms-full.txt.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "ffa61a071a04e32f174cee65915d33b6a9e8b05c09dbc9baf01dcc43d8555778",
+  "text": "// Everything an AI agent needs in one file: the documentation, then a compact entry per icon.\nimport { CATEGORIES, icons, libImport, shadcnCommand, SITE, urls } from '../lib/icons';\nimport { text } from '../lib/http';\nimport { documentationMarkdown } from '../lib/markdown';\nimport { synonyms } from '../lib/seo';\n\nconst entry = (icon: (typeof icons)[number]) => {\n  const u = urls(icon);\n  const states = Object.keys(icon.svgs);\n  const aka = synonyms(icon);\n  return [\n    `### ${icon.title} (\\`${icon.id}\\`)`,\n    '',\n    `- Category: ${icon.category}; interaction: \\`${icon.interaction}\\`${states.length ? `; states: ${states.join(', ')}` : ''}`,\n    aka.length ? `- Also known as: ${aka.join(', ')}` : '',\n    `- React: \\`${libImport(icon)}\\``,\n    `- shadcn: \\`${shadcnCommand(icon)}\\``,\n    `- Lottie JSON: ${u.lottie}`,\n    `- Page: ${u.page} (Markdown: ${u.page}.md)`,\n  ]\n    .filter(Boolean)\n    .join('\\n');\n};\n\nexport const GET = () =>\n  text(\n    `${documentationMarkdown()}\n\n# Icons\n\nAll ${icons.length} icons by category. Static SVGs: \\`${SITE}/icons/<id>/<state>.svg\\` (one per state listed); ZIP of everything: \\`${SITE}/icons/<id>.zip\\`. Full metadata: ${SITE}/icons.json\n\n${CATEGORIES.map(\n  (category) =>\n    `## ${category}\\n\\n${icons\n      .filter((icon) => icon.category === category)\n      .map(entry)\n      .join('\\n\\n')}`\n).join('\\n\\n')}\n`,\n    'text/markdown'\n  );\n",
+  "version": 1
+}

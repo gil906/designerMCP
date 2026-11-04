@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/fr/docs.ts",
+  "filename": "docs.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-377",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/fr/docs.ts",
+    "title": "website/src/i18n/messages/fr/docs.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "0c38d4f5906063276604d5eb4bf64f0b432d68f91ccc727d4030bbf252ff0098",
+  "text": "import type { Messages } from '../en';\n\nexport const docs: Messages['docs'] = {\n  title: 'Documentation — useAnimations',\n  description: (iconCount: number) =>\n    `Utiliser ${iconCount} icônes animées dans React et shadcn/ui : interactions, props, couleurs, fichiers et accessibilité.`,\n  badge: 'Documentation',\n  onThisPage: 'Sur cette page',\n  viewAsMarkdown: 'Voir en Markdown',\n  headline: 'Documentation de useAnimations',\n  summary: 'Comment utiliser les icônes animées useAnimations dans React et shadcn/ui.',\n  crumb: 'Documentation',\n  faq: [\n    {\n      question: 'useAnimations est-il gratuit pour les projets commerciaux ?',\n      answer:\n        'Oui. Les icônes et le package React sont sous licence MIT, sans attribution obligatoire.',\n    },\n    {\n      question: 'Comment utiliser les icônes useAnimations dans React ?',\n      answer:\n        'Installez react-useanimations, importez UseAnimations et une icône (par exemple react-useanimations/lib/checkmark), puis affichez <UseAnimations animation={checkmark} size={32} />.',\n    },\n    {\n      question: 'Comment changer la couleur d’une icône ?',\n      answer:\n        'Les icônes suivent la couleur du texte. Changez-la avec strokeColor et fillColor, avec la propriété CSS color ou en stylant les tracés.',\n    },\n    {\n      question: 'Est-ce que ça fonctionne sans React ?',\n      answer:\n        'Le package est destiné à React. Chaque icône existe aussi en fichier Lottie JSON standard, lisible par n’importe quel lecteur Lottie (lottie-web, dotLottie, lottie-react-native, lottie-ios, lottie-android, Flutter), et en SVG statique. Voir la section Utiliser sans React et useanimations.com/lottie-icons.',\n    },\n  ],\n};\n",
+  "version": 1
+}

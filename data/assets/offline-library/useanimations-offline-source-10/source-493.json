@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/icons/[id].json.ts",
+  "filename": "[id].json.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-493",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/icons/[id].json.ts",
+    "title": "website/src/pages/icons/[id].json.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "66ef9cc3227060fd8d5244a790a63e1e71c72d64b5aa81edc10e988ef6957fad",
+  "text": "import type { GetStaticPaths } from 'astro';\nimport { type Icon, icons } from '../../lib/icons';\nimport { text } from '../../lib/http';\n\nexport const getStaticPaths = (() =>\n  icons.map((icon) => ({ params: { id: icon.id }, props: { icon } }))) satisfies GetStaticPaths;\n\nexport const GET = ({ props }: { props: { icon: Icon } }) =>\n  text(props.icon.lottie, 'application/json');\n",
+  "version": 1
+}

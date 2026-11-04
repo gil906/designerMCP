@@ -392,11 +392,71 @@ def import_corpus():
 
 
 def validate():
-    library = json.loads(safe_path("library.json").read_text())
-    report = json.loads(safe_path("import-report.json").read_text())
+    # Lazy imports keep the opt-in network importer independent of MCP startup.
+    from designer_mcp.library import (
+        Asset, Catalog, Library, MAX_LIBRARY_BYTES, MAX_OUTPUT_BYTES,
+        OfflineBundle, path_parts, strict_json,
+    )
+
+    local = Library(DATA.parent)
+    catalog = Catalog.model_validate(strict_json(local.read(("data", "library.json"), MAX_LIBRARY_BYTES)))
+    report = strict_json(local.read(("data", "import-report.json"), MAX_LIBRARY_BYTES))
+    relocated = {}
+    for entry in catalog.entries:
+        bundle_asset = next((a for a in entry.assets if a.id == "offline-bundle"), None)
+        if bundle_asset is None:
+            continue
+        if bundle_asset.mime_type != "application/json" or bundle_asset.format != "offline-bundle":
+            raise ValueError("invalid offline bundle asset")
+        bundle = OfflineBundle.model_validate(strict_json(local.read(path_parts(bundle_asset.path, "assets"), MAX_OUTPUT_BYTES)))
+        if bundle.reference_id != entry.id:
+            raise ValueError("offline bundle reference mismatch")
+        for archive in bundle.archives:
+            if not archive.path.startswith("archives/"):
+                continue
+            if archive.original_asset is None:
+                raise ValueError("archived source lacks original asset metadata")
+            original = archive.original_asset
+            original_path = "/".join(path_parts(original.path, "assets")[1:])
+            expected_path = "archives/offline-tooling/" + original_path.removeprefix("assets/")
+            if archive.path != expected_path or original_path in relocated:
+                raise ValueError("invalid or duplicate archived source mapping")
+            served = next((a for a in entry.assets if a.id == original.id), None)
+            if served is None or served.mime_type != "application/json":
+                raise ValueError("archived source lacks catalog omission index")
+            index = strict_json(local.read(path_parts(served.path, "assets"), MAX_OUTPUT_BYTES))
+            if (
+                not isinstance(index, dict) or index.get("kind") != "offline-excluded-source"
+                or index.get("archive_path") != archive.path or index.get("sha256") != archive.sha256
+                or index.get("complete") is not False or index.get("content_omitted") is not True
+                or Asset.model_validate(index.get("original_asset")) != original
+            ):
+                raise ValueError("archived source omission index mismatch")
+            relocated[original_path] = (path_parts(archive.path, "archives"), archive.sha256)
+
+    def original_bytes(path, expected_sha256):
+        # Historical reports still authenticate the ORIGINAL bytes with both
+        # SHA256 and Git blob SHA1. Only an explicit catalog omission/archive
+        # mapping can replace a missing old path; missing files are never skipped.
+        safe_path(path)
+        parts = path_parts(path, "assets")
+        body = local.read(parts, MAX_FILE, optional=True)
+        canonical = "/".join(parts[1:])
+        if canonical in relocated and body is not None:
+            raise ValueError("archived tooling source restored beneath serving assets")
+        if body is None:
+            if canonical not in relocated:
+                raise ValueError("missing original asset without archive mapping")
+            archive_parts, archive_sha256 = relocated[canonical]
+            if archive_sha256 != expected_sha256:
+                raise ValueError("historical/archive checksum metadata mismatch")
+            body = local.read(archive_parts, MAX_FILE)
+        return body
+
     ids = set()
     assets = set()
-    for entry in library["entries"]:
+    for model in catalog.entries:
+        entry = model.model_dump(exclude_none=True)
         if entry["id"] in ids:
             raise ValueError("duplicate entry id")
         ids.add(entry["id"])
@@ -405,22 +465,19 @@ def validate():
             if field not in entry:
                 raise ValueError("missing entry field: " + field)
         if entry.get("license_path"):
-            if not safe_path(entry["license_path"]).is_file():
-                raise ValueError("missing license")
+            local.read(path_parts(entry["license_path"], "licenses"), MAX_FILE)
         for asset in entry["assets"]:
-            path = safe_path(asset["path"])
-            if not path.is_file():
-                raise ValueError("missing asset: " + asset["path"])
+            local.read(path_parts(asset["path"], "assets"), MAX_FILE)
             assets.add(asset["path"])
     for asset in report["assets"]:
-        body = safe_path(asset["path"]).read_bytes()
+        body = original_bytes(asset["path"], asset["sha256"])
         if hashlib.sha256(body).hexdigest() != asset["sha256"] or git_hash(body) != asset["git_blob_sha1"]:
             raise ValueError("checksum mismatch: " + asset["path"])
         if asset["upstream_path"].startswith("icons/") and asset["upstream_path"] not in {"icons/catalog.json", "icons/svg.json"}:
             if not lottie_safe(json.loads(body)):
                 raise ValueError("invalid Lottie")
     for asset in report.get("original_assets", []):
-        if hashlib.sha256(safe_path(asset["path"]).read_bytes()).hexdigest() != asset["sha256"]:
+        if hashlib.sha256(original_bytes(asset["path"], asset["sha256"])).hexdigest() != asset["sha256"]:
             raise ValueError("original asset checksum mismatch")
     print(json.dumps({"valid": True, "entries": len(ids), "referenced_assets": len(assets),
                       "downloaded_files": report["downloaded_files"],

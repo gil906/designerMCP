@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/vite.config.ts",
+  "filename": "vite.config.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-277",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/vite.config.ts",
+    "title": "vite.config.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "8e429f1a9a081714e60d2979e78e2c4fab91c466c4826f7963503461d02023fc",
+  "text": "import { defineConfig } from 'vite-plus';\nimport { playwright } from 'vite-plus/test/browser-playwright';\n\nexport default defineConfig({\n  // vp check: oxfmt, oxlint and type checking (TypeScript 7 through tsgolint).\n  fmt: {\n    printWidth: 100,\n    singleQuote: true,\n    trailingComma: 'es5',\n    sortPackageJson: false,\n    ignorePatterns: ['icons/**', 'package-lock.json', 'website/dist/**', 'website/.astro/**'],\n  },\n  lint: {\n    plugins: ['typescript', 'unicorn', 'oxc', 'react'],\n    categories: { correctness: 'error', suspicious: 'error' },\n    rules: {\n      'react/rules-of-hooks': 'error',\n      'react/exhaustive-deps': 'error',\n      'react/refs': 'error',\n      'react/set-state-in-effect': 'error',\n      'react/set-state-in-render': 'error',\n      'react/purity': 'error',\n      'react/immutability': 'error',\n      // JSX uses the automatic runtime (tsconfig \"jsx\": \"react-jsx\").\n      'react/react-in-jsx-scope': 'off',\n      // The player reads Lottie JSON and the scripts read JSON files: both are typed by assertion.\n      'typescript/no-unsafe-type-assertion': 'off',\n    },\n    ignorePatterns: ['dist', 'website/dist', 'website/.astro'],\n    options: { typeAware: true, typeCheck: true },\n  },\n\n  // vp test: Chromium, Firefox and WebKit through Playwright, plus server rendering in Node.\n  test: {\n    projects: [\n      {\n        test: {\n          name: 'browser',\n          include: ['test/**/*.test.tsx'],\n          exclude: ['test/ssr.test.tsx'],\n          setupFiles: ['test/setup.ts'],\n          browser: {\n            enabled: true,\n            headless: true,\n            provider: playwright(),\n            instances: [{ browser: 'chromium' }, { browser: 'firefox' }, { browser: 'webkit' }],\n          },\n        },\n      },\n      {\n        test: { name: 'node', include: ['test/ssr.test.tsx'], environment: 'node' },\n      },\n    ],\n  },\n\n  // vp pack: the component. scripts/prepare-dist.ts adds the icon modules and package.json.\n  pack: {\n    entry: { index: 'src/index.tsx' },\n    format: ['cjs', 'esm'],\n    target: 'es2020',\n    platform: 'neutral',\n    // Keep `exports.default` in the CommonJS build, matching its `export default` declaration.\n    cjsDefault: false,\n    outExtensions: ({ format }) =>\n      format === 'es' ? { js: '.mjs', dts: '.d.mts' } : { js: '.js', dts: '.d.ts' },\n    // Declarations come from oxc: the exports have explicit types (isolatedDeclarations).\n    dts: { generator: 'oxc' },\n    // The component uses hooks and the DOM; mark it as a client component for React Server Components.\n    banner: { js: \"'use client';\" },\n  },\n});\n",
+  "version": 1
+}

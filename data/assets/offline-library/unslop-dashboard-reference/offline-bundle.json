@@ -1,0 +1,77 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "dashboard-after-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); full screenshot unchanged, preview resized/recompressed locally, guidance adapted. Attribution required.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "436172f97e356fbf9499fd6247461e3a56764f2bd10b0a01be94f4fff553a483",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-dashboard-after.webp"
+    },
+    {
+      "asset_id": "dashboard-after",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); full screenshot unchanged, preview resized/recompressed locally, guidance adapted. Attribution required.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "48067794f86b43dab20515b3810f245d67bff05d10bfa83c0f5885bee93cea52",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-dashboard-after.webp"
+    },
+    {
+      "asset_id": "reference-table",
+      "format": "markdown",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); full screenshot unchanged, preview resized/recompressed locally, guidance adapted. Attribution required.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "03acd3bc6bd85c15bc01ca49c794dada33f93b7a5719f71579a55dc6ed5e656b",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-dashboard-after.webp"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC-BY-4.0, unslop by Damir Sokolovsky (@heydamir); full screenshot unchanged, preview resized/recompressed locally, guidance adapted. Attribution required.",
+      "license_path": "licenses/unslop/ATTRIBUTION.txt",
+      "mime_type": "image/webp",
+      "origin": "upstream",
+      "role": "visual",
+      "sha256": "436172f97e356fbf9499fd6247461e3a56764f2bd10b0a01be94f4fff553a483",
+      "source_url": "https://github.com/heydamir/unslop/blob/a6f121eee5f29c2f74976b75456feae8b66afb3a/skills/unslop/references/refs/unslop-dashboard-after.webp"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "fa7c11ed3022706c681a95f8a8a1771bf090ad74a5875b37e64f6c0cf94dda89",
+      "source_url": "original://designerMCP/offline/unslop-dashboard-reference"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "unavailable",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "available"
+  },
+  "kind": "upstream-preview",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries."
+  ],
+  "reference_id": "unslop-dashboard-reference",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

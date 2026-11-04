@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by rive-app/rive-flutter contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 2112,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "import 'package:flutter/material.dart';\nimport 'package:rive/rive.dart';\nimport 'package:rive_example/main.dart' show RiveExampleApp;\n\nclass ExamplePausePlay extends StatefulWidget {\n  const ExamplePausePlay({super.key});\n\n  @override\n  State<ExamplePausePlay> createState() => _ExamplePausePlayState();\n}\n\nclass _ExamplePausePlayState extends State<ExamplePausePlay> {\n  final fileLoader = FileLoader.fromAsset(\n    'assets/rewards.riv',\n    riveFactory: RiveExampleApp.getCurrentFactory,\n  );\n  late RiveWidgetController controller;\n  bool isPlaying = false;\n\n  @override\n  void initState() {\n    super.initState();\n  }\n\n  void togglePlayPause() {\n    setState(() {\n      isPlaying = !isPlaying;\n      controller.active = isPlaying;\n    });\n  }\n\n  @override\n  void dispose() {\n    fileLoader.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      mainAxisAlignment: MainAxisAlignment.center,\n      children: [\n        Expanded(\n          child: RiveWidgetBuilder(\n            fileLoader: fileLoader,\n            onLoaded: (state) {\n              controller = state.controller;\n              controller.active = isPlaying;\n            },\n            builder: (context, state) => switch (state) {\n              RiveLoading() => const Center(\n                  child: Center(child: CircularProgressIndicator()),\n                ),\n              RiveFailed() => ErrorWidget.withDetails(\n                  message: state.error.toString(),\n                  error: FlutterError(state.error.toString()),\n                ),\n              RiveLoaded() => RiveWidget(\n                  controller: state.controller,\n                  fit: Fit.layout,\n                  layoutScaleFactor: 1 / 3,\n                )\n            },\n          ),\n        ),\n        Padding(\n          padding: const EdgeInsets.all(8.0),\n          child: ElevatedButton.icon(\n            onPressed: togglePlayPause,\n            icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),\n            label: Text(isPlaying ? 'Pause' : 'Play'),\n          ),\n        ),\n      ],\n    );\n  }\n}\n",
+  "content_sha256": "a9536512415cdd086a3fe02b2e10f63326f19de04a30855c99bc273051fb5f89",
+  "expected_git_blob_sha1": "c60ce2b16455fde500764aa873a992a066c8e383",
+  "filename": "pause_play.dart",
+  "full_content_sha256": "a9536512415cdd086a3fe02b2e10f63326f19de04a30855c99bc273051fb5f89",
+  "full_file_complete": true,
+  "full_source_sha256": "a9536512415cdd086a3fe02b2e10f63326f19de04a30855c99bc273051fb5f89",
+  "kind": "source-file",
+  "language": "dart",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 77,
+    "start": 1,
+    "total": 77
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "dart",
+  "original_path": "example/lib/examples/pause_play.dart",
+  "repository": "rive-app/rive-flutter",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+      "sha256": "4effdb117f7a3cf3a65d50fa25496b39634403e6fcedcc2c3cb3e1cb15fd5b43"
+    }
+  ],
+  "revision": "cec7801eab6d24d0a6ea193e66243223488c8f51",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 2112,
+  "source_lines": 77,
+  "source_sha256": "a9536512415cdd086a3fe02b2e10f63326f19de04a30855c99bc273051fb5f89",
+  "source_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/example/lib/examples/pause_play.dart",
+  "verified_git_blob_sha1": "c60ce2b16455fde500764aa873a992a066c8e383"
+}

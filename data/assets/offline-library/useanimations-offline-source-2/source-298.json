@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/scripts/images.ts",
+  "filename": "images.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-298",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/scripts/images.ts",
+    "title": "website/scripts/images.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "34030b756cd8f9376bdfc6c727bf7bfcaff698f766b22c8dee0ad13751b3347d",
+  "text": "// Renders the brand images in public/ from the running site (npm run build && npx astro preview):\n//   og.png (1200×630), apple-touch-icon.png (180×180) and favicon.ico (16, 32 and 48 px).\n//\n//   node scripts/images.ts [http://127.0.0.1:4321]\nimport { writeFileSync } from 'node:fs';\nimport { chromium } from 'playwright';\n\nconst origin = process.argv[2] ?? 'http://127.0.0.1:4321';\nconst out = (file: string) => new URL(`../public/${file}`, import.meta.url);\nconst browser = await chromium.launch();\n\nconst og = await browser.newPage({ viewport: { width: 1200, height: 630 } });\nawait og.goto(`${origin}/og`, { waitUntil: 'networkidle' });\nawait og.locator('#card').screenshot({ path: out('og.png').pathname });\n\n// The mark on a dark rounded tile, for the home screen; plain for the favicon.\nconst mark = async (size: number, tile: boolean) => {\n  const page = await browser.newPage({ viewport: { width: size, height: size } });\n  const svg = await (await fetch(`${origin}/favicon.svg`)).text();\n  await page.setContent(\n    `<body style=\"margin:0;background:${tile ? '#08090c' : 'transparent'};display:grid;place-items:center;width:${size}px;height:${size}px\">\n      <div style=\"width:${tile ? size * 0.62 : size}px;height:${tile ? size * 0.62 : size}px\">${svg.replace('<svg ', '<svg width=\"100%\" height=\"100%\" ')}</div>\n    </body>`\n  );\n  return page.screenshot({\n    omitBackground: !tile,\n    clip: { x: 0, y: 0, width: size, height: size },\n  });\n};\n\nwriteFileSync(out('apple-touch-icon.png'), await mark(180, true));\n\n// ICO with embedded PNG images (supported by every current browser).\nconst images = await Promise.all(\n  [16, 32, 48].map((size) => mark(size, false).then((png) => ({ size, png })))\n);\nconst header = Buffer.alloc(6 + images.length * 16);\nheader.writeUInt16LE(0, 0);\nheader.writeUInt16LE(1, 2);\nheader.writeUInt16LE(images.length, 4);\nlet offset = header.length;\nimages.forEach(({ size, png }, i) => {\n  const entry = 6 + i * 16;\n  header.writeUInt8(size, entry);\n  header.writeUInt8(size, entry + 1);\n  header.writeUInt16LE(1, entry + 4);\n  header.writeUInt16LE(32, entry + 6);\n  header.writeUInt32LE(png.length, entry + 8);\n  header.writeUInt32LE(offset, entry + 12);\n  offset += png.length;\n});\nwriteFileSync(out('favicon.ico'), Buffer.concat([header, ...images.map(({ png }) => png)]));\n\nawait browser.close();\nconsole.log('Wrote public/og.png, public/apple-touch-icon.png and public/favicon.ico');\n",
+  "version": 1
+}

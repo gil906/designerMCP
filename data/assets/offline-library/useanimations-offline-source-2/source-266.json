@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/src/styles.ts",
+  "filename": "styles.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-266",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/src/styles.ts",
+    "title": "src/styles.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "eae1d5a2fbaaeb270571d53a05f80c9b7f8232f2047099b66aa044f866e70a41",
+  "text": "import { useSyncExternalStore } from 'react';\n\nconst STYLE_ID = 'useanimations-styles';\n\n// Recolors the icon's ink: dark strokes and black fills. White strokes and fills are knockouts that\n// show the background through the icon (the gap next to a slash in eye-off, the check in download's\n// box, the ring around notification3's badge): they take `--ua-knockout`, or `Canvas`, which is white\n// on light pages and dark with `color-scheme: dark`. Mask paths use hex colors, so they keep theirs.\n// `:where()` keeps the specificity at zero, so any CSS of yours (e.g. `.icon path { stroke: red }`)\n// wins.\nconst css =\n  ':where([data-useanimations] path[stroke^=\"rgb\"]:not([stroke=\"rgb(255,255,255)\"])){stroke:var(--ua-stroke,currentColor)}' +\n  ':where([data-useanimations] path[fill=\"rgb(0,0,0)\"]){fill:var(--ua-fill,var(--ua-stroke,currentColor))}' +\n  ':where([data-useanimations] path[stroke=\"rgb(255,255,255)\"]){stroke:var(--ua-knockout,Canvas)}' +\n  ':where([data-useanimations] path[fill=\"rgb(255,255,255)\"]){fill:var(--ua-knockout,Canvas)}';\n\n/** Adds the stylesheet once per document, or once per shadow root for icons inside one. */\nexport const injectStyles = (element: Element): void => {\n  const doc = element.ownerDocument;\n  const root = element.getRootNode();\n  // Duck-typed (11 is DOCUMENT_FRAGMENT_NODE), so shadow roots of other windows count too.\n  const shadow = root.nodeType === 11 && 'host' in root ? (root as ShadowRoot) : null;\n  if ((shadow ?? doc).getElementById(STYLE_ID)) return;\n  const style = doc.createElement('style');\n  style.id = STYLE_ID;\n  style.textContent = css;\n  (shadow ?? doc.head).appendChild(style);\n};\n\nconst QUERY = '(prefers-reduced-motion: reduce)';\nconst hasMatchMedia = () =>\n  typeof window !== 'undefined' && typeof window.matchMedia === 'function';\n\nconst subscribe = (onChange: () => void) => {\n  if (!hasMatchMedia()) return () => {};\n  const media = window.matchMedia(QUERY);\n  media.addEventListener('change', onChange);\n  return () => media.removeEventListener('change', onChange);\n};\n\nexport const usePrefersReducedMotion = (): boolean =>\n  useSyncExternalStore(\n    subscribe,\n    () => hasMatchMedia() && window.matchMedia(QUERY).matches,\n    () => false\n  );\n",
+  "version": 1
+}

@@ -3,10 +3,66 @@
     {
       "assets": [
         {
+          "format": "json",
           "id": "source",
           "mime_type": "application/json",
           "path": "assets/github-web/carbon/source.json",
           "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-web-carbon.webp",
+          "source_url": "original://designerMCP/offline/github-web-carbon",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-carbon-readme-md",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/carbon/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-carbon/offline-document-github-web-carbon-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-carbon-packages-react-src-components-accordion-accordion-mdx",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/carbon/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-carbon/offline-document-github-web-carbon-packages-react-src-components-accordion-accordion-mdx.json",
+          "source_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/packages/react/src/components/Accordion/Accordion.mdx",
+          "title": "Localized packages/react/src/components/Accordion/Accordion.mdx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-carbon/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-web-carbon",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-carbon/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-web-carbon",
+          "title": "Offline reference dossier index"
         }
       ],
       "categories": [
@@ -47,10 +103,66 @@
     {
       "assets": [
         {
+          "format": "json",
           "id": "source",
           "mime_type": "application/json",
           "path": "assets/github-web/chakra-ui/source.json",
           "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-web-chakra-ui.webp",
+          "source_url": "original://designerMCP/offline/github-web-chakra-ui",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-chakra-ui-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-chakra-ui/offline-document-github-web-chakra-ui-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-chakra-ui-apps-compositions-src-examples-accordion-with-subtext-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-chakra-ui/offline-code-github-web-chakra-ui-apps-compositions-src-examples-accordion-with-subtext-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/apps/compositions/src/examples/accordion-with-subtext.tsx",
+          "title": "Full apps/compositions/src/examples/accordion-with-subtext.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-chakra-ui/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-web-chakra-ui",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-chakra-ui/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-web-chakra-ui",
+          "title": "Offline reference dossier index"
         }
       ],
       "categories": [
@@ -86,10 +198,66 @@
     {
       "assets": [
         {
+          "format": "json",
           "id": "source",
           "mime_type": "application/json",
           "path": "assets/github-web/headlessui/source.json",
           "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-web-headlessui.webp",
+          "source_url": "original://designerMCP/offline/github-web-headlessui",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-headlessui-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/headlessui/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-headlessui/offline-document-github-web-headlessui-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-headlessui-playgrounds-react-page-examples-combinations-tabs-in-dialog-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/headlessui/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-headlessui/offline-code-github-web-headlessui-playgrounds-react-page-examples-combinations-tabs-in-dialog-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+          "title": "Full playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-headlessui/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-web-headlessui",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-headlessui/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-web-headlessui",
+          "title": "Offline reference dossier index"
         }
       ],
       "categories": [
@@ -125,10 +293,66 @@
     {
       "assets": [
         {
+          "format": "json",
           "id": "source",
           "mime_type": "application/json",
           "path": "assets/github-web/mantine/source.json",
           "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-web-mantine.webp",
+          "source_url": "original://designerMCP/offline/github-web-mantine",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-mantine-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/mantine/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-mantine/offline-document-github-web-mantine-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-mantine-packages-mantine-core-src-components-accordion-accordion-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/mantine/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-mantine/offline-code-github-web-mantine-packages-mantine-core-src-components-accordion-accordion-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+          "title": "Full packages/@mantine/core/src/components/Accordion/Accordion.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-mantine/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-web-mantine",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-mantine/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-web-mantine",
+          "title": "Offline reference dossier index"
         }
       ],
       "categories": [
@@ -169,10 +393,66 @@
     {
       "assets": [
         {
+          "format": "json",
           "id": "source",
           "mime_type": "application/json",
           "path": "assets/github-web/primer-react/source.json",
           "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-web-primer-react.webp",
+          "source_url": "original://designerMCP/offline/github-web-primer-react",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-primer-react-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-primer-react/offline-document-github-web-primer-react-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-primer-react-packages-react-src-actionlist-actionlist-stories-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-primer-react/offline-code-github-web-primer-react-packages-react-src-actionlist-actionlist-stories-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx",
+          "title": "Full packages/react/src/ActionList/ActionList.stories.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-primer-react/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-web-primer-react",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-primer-react/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-web-primer-react",
+          "title": "Offline reference dossier index"
         }
       ],
       "categories": [
@@ -213,10 +493,66 @@
     {
       "assets": [
         {
+          "format": "json",
           "id": "source",
           "mime_type": "application/json",
           "path": "assets/github-web/radix-primitives/source.json",
           "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-web-radix-primitives.webp",
+          "source_url": "original://designerMCP/offline/github-web-radix-primitives",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-radix-primitives-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-radix-primitives/offline-document-github-web-radix-primitives-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "tsx",
+          "id": "offline-code-github-web-radix-primitives-apps-storybook-stories-alert-dialog-stories-tsx",
+          "license": "MIT",
+          "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-radix-primitives/offline-code-github-web-radix-primitives-apps-storybook-stories-alert-dialog-stories-tsx.json",
+          "source_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/apps/storybook/stories/alert-dialog.stories.tsx",
+          "title": "Full apps/storybook/stories/alert-dialog.stories.tsx"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-radix-primitives/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-web-radix-primitives",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-radix-primitives/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-web-radix-primitives",
+          "title": "Offline reference dossier index"
         }
       ],
       "categories": [
@@ -252,10 +588,77 @@
     {
       "assets": [
         {
+          "format": "json",
           "id": "source",
           "mime_type": "application/json",
           "path": "assets/github-web/react-spectrum/source.json",
           "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-web-react-spectrum.webp",
+          "source_url": "original://designerMCP/offline/github-web-react-spectrum",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-react-spectrum-readme-md",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-react-spectrum/offline-document-github-web-react-spectrum-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-react-spectrum-packages-react-spectrum-dialog-readme-md",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-react-spectrum/offline-document-github-web-react-spectrum-packages-react-spectrum-dialog-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/@react-spectrum/dialog/README.md",
+          "title": "Localized packages/@react-spectrum/dialog/README.md"
+        },
+        {
+          "format": "typescript",
+          "id": "offline-code-github-web-react-spectrum-packages-react-aria-src-dialog-usedialog-ts",
+          "license": "Apache-2.0",
+          "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-react-spectrum/offline-code-github-web-react-spectrum-packages-react-aria-src-dialog-usedialog-ts.json",
+          "source_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts",
+          "title": "Full packages/react-aria/src/dialog/useDialog.ts"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-react-spectrum/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-web-react-spectrum",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-react-spectrum/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-web-react-spectrum",
+          "title": "Offline reference dossier index"
         }
       ],
       "categories": [
@@ -296,10 +699,66 @@
     {
       "assets": [
         {
+          "format": "json",
           "id": "source",
           "mime_type": "application/json",
           "path": "assets/github-web/shoelace/source.json",
           "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        },
+        {
+          "format": "webp",
+          "id": "offline-preview",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "image/webp",
+          "origin": "original",
+          "path": "assets/offline-visuals/github-web-shoelace.webp",
+          "source_url": "original://designerMCP/offline/github-web-shoelace",
+          "title": "Original concept illustration — not upstream screenshot"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-shoelace-readme-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-shoelace/offline-document-github-web-shoelace-readme-md.json",
+          "source_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/README.md",
+          "title": "Localized README.md"
+        },
+        {
+          "format": "plaintext",
+          "id": "offline-document-github-web-shoelace-docs-pages-components-dialog-md",
+          "license": "MIT",
+          "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+          "mime_type": "application/json",
+          "origin": "upstream",
+          "path": "assets/offline-source/github-web-shoelace/offline-document-github-web-shoelace-docs-pages-components-dialog-md.json",
+          "source_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/docs/pages/components/dialog.md",
+          "title": "Localized docs/pages/components/dialog.md"
+        },
+        {
+          "format": "license",
+          "id": "offline-license",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-shoelace/offline-license.json",
+          "source_url": "original://designerMCP/offline/github-web-shoelace",
+          "title": "Full retained local license texts"
+        },
+        {
+          "format": "offline-bundle",
+          "id": "offline-bundle",
+          "license": "CC0-1.0",
+          "license_path": "licenses/offline/CC0.txt",
+          "mime_type": "application/json",
+          "origin": "original",
+          "path": "assets/offline-library/github-web-shoelace/offline-bundle.json",
+          "source_url": "original://designerMCP/offline/github-web-shoelace",
+          "title": "Offline reference dossier index"
         }
       ],
       "categories": [

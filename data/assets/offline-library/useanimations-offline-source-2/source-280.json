@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/netlify/edge-functions/markdown-negotiation.ts",
+  "filename": "markdown-negotiation.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-280",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/netlify/edge-functions/markdown-negotiation.ts",
+    "title": "website/netlify/edge-functions/markdown-negotiation.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "18867bf4744484bf4618b8b99d626942f23cb5ea63431fcd02c258e5031b4f73",
+  "text": "// Serves the Markdown version of a page to clients that ask for it (Accept: text/markdown),\n// such as AI agents. Everyone else gets the HTML page, which announces the Markdown version in a\n// Link header. Both vary by Accept, so caches keep them apart.\ntype Context = { next: () => Promise<Response> };\n\n/** The Markdown file of a page: / -> /index.md, /icons/menu -> /icons/menu.md. */\nconst markdownPath = (pathname: string) => (pathname === '/' ? '/index.md' : `${pathname}.md`);\n\nexport default async (request: Request, context: Context) => {\n  const markdown = markdownPath(new URL(request.url).pathname);\n  if (request.headers.get('accept')?.includes('text/markdown')) {\n    const response = await fetch(new URL(markdown, request.url));\n    if (response.ok) {\n      return new Response(await response.text(), {\n        headers: {\n          'Content-Type': 'text/markdown; charset=utf-8',\n          'Cache-Control': 'public, max-age=3600',\n          Vary: 'Accept',\n        },\n      });\n    }\n  }\n  const response = await context.next();\n  // Only pages that exist have a Markdown version; a 404 stays as it is.\n  if (!response.ok) return response;\n  const headers = new Headers(response.headers);\n  headers.append('Link', `<${markdown}>; rel=\"alternate\"; type=\"text/markdown\"`);\n  headers.append('Vary', 'Accept');\n  return new Response(response.body, { status: response.status, headers });\n};\n\n// Exact pages only, so files such as /icons/menu.json, .zip or .svg never run this function.\nexport const config = {\n  pattern: [\n    '^/$',\n    '^/(documentation|licencing-and-terms)$',\n    '^/icons/[a-z0-9-]+$',\n    '^/categories/[a-z0-9-]+$',\n  ],\n};\n",
+  "version": 1
+}

@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<main><section aria-labelledby=\"hero-title\">\n<p>Workflow toolkit</p><h1 id=\"hero-title\">Turn scattered tasks into a clear next step</h1>\n<p>Organize your team’s work without hiding ownership or deadlines.</p>\n<a href=\"#demo\">See a sample workspace</a><a href=\"#pricing\">Compare plans</a>\n</section></main>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

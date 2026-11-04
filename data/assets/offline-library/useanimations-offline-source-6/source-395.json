@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/ja/docs.ts",
+  "filename": "docs.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-395",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/ja/docs.ts",
+    "title": "website/src/i18n/messages/ja/docs.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "27e896b03a816bdc4d87862ce5f3352aa55a2c093299ae7c3563eb14ec543dce",
+  "text": "import type { Messages } from '../en';\n\nexport const docs: Messages['docs'] = {\n  title: 'ドキュメント — useAnimations',\n  description: (iconCount: number) =>\n    `${iconCount} 個のアニメーションアイコンを React と shadcn/ui で使う方法。インタラクション、props、色、ファイル、アクセシビリティを解説。`,\n  badge: 'ドキュメント',\n  onThisPage: 'このページの内容',\n  viewAsMarkdown: 'Markdown で表示',\n  headline: 'useAnimations ドキュメント',\n  summary: 'useAnimations のアニメーションアイコンを React と shadcn/ui で使う方法。',\n  crumb: 'ドキュメント',\n  faq: [\n    {\n      question: 'useAnimations は商用プロジェクトでも無料で使えますか？',\n      answer:\n        'はい。アイコンと React パッケージは MIT ライセンスで、クレジット表記も必要ありません。',\n    },\n    {\n      question: 'useAnimations のアイコンを React で使うには？',\n      answer:\n        'react-useanimations をインストールし、UseAnimations とアイコン（例：react-useanimations/lib/checkmark）をインポートして、<UseAnimations animation={checkmark} size={32} /> をレンダリングします。',\n    },\n    {\n      question: 'アイコンの色を変えるには？',\n      answer:\n        'アイコンはテキストの色に追従します。strokeColor と fillColor、CSS の color、またはパスへのスタイル指定で変更できます。',\n    },\n    {\n      question: 'React なしでも使えますか？',\n      answer:\n        'パッケージは React 向けです。ただし、どのアイコンも標準的な Lottie JSON ファイルなので、Lottie プレーヤー（lottie-web、dotLottie、lottie-react-native、lottie-ios、lottie-android、Flutter）で再生でき、静的 SVG も用意しています。詳しくはドキュメントの「React なしで使う」と useanimations.com/lottie-icons を参照してください。',\n    },\n  ],\n};\n",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/en/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-358",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/en/common.ts",
+    "title": "website/src/i18n/messages/en/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "495c646509e1be17b964615d05945ed9251ff0edcb36b3ba7fdd88c2d1ddd5eb",
+  "text": "// Text shared by every page: layout, header, footer, breadcrumbs, FAQ and copy buttons.\nexport const common = {\n  skipToContent: 'Skip to content',\n  ogImageAlt: 'useAnimations: free animated icons for React, shadcn/ui, Lottie and SVG',\n  homeLabel: 'useAnimations home',\n  mainNav: 'Main',\n  browseIcons: 'Browse icons',\n  nav: {\n    icons: 'Icons',\n    categories: 'Categories',\n    documentation: 'Documentation',\n    shadcn: 'shadcn',\n    lottie: 'Lottie icons',\n    license: 'License',\n  },\n  footer: {\n    tagline: 'Free animated icons with interactions built in. MIT licensed, made for React.',\n    product: 'Product',\n    developers: 'Developers',\n    follow: 'Follow',\n    languages: 'Languages',\n    allIcons: 'All icons',\n    categories: 'Categories',\n    interactions: 'Interactions',\n    lottieIcons: 'Lottie icons',\n    shadcnIcons: 'shadcn/ui icons',\n    documentation: 'Documentation',\n    licencing: 'Licencing & Terms',\n    shadcnRegistry: 'shadcn registry',\n    mitLicense: 'MIT License',\n    builtWith: 'Site built with Astro',\n  },\n  breadcrumb: 'Breadcrumb',\n  crumbs: { icons: 'Icons', categories: 'Categories', interactions: 'Interactions' },\n  faq: 'FAQ',\n  copy: 'Copy',\n  copied: 'Copied',\n  pressCtrlC: 'Press Ctrl+C',\n  /** The suggestion bar for visitors whose browser prefers this language; shown in this language. */\n  languageBanner: {\n    text: 'This page is also available in English.',\n    action: 'Switch to English',\n    dismiss: 'Dismiss',\n  },\n};\n",
+  "version": 1
+}

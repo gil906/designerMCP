@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "{\"fps\":30,\"shots\":[{\"start\":0,\"frames\":90,\"message\":\"Tasks disappear between meetings\",\"visual\":\"three original labeled cards\"},{\"start\":90,\"frames\":120,\"message\":\"Assign one owner and review date\",\"visual\":\"cards align into an original timeline\"},{\"start\":210,\"frames\":90,\"message\":\"Start with your next milestone\",\"visual\":\"plain call-to-action and captions\"}]}",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "json"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

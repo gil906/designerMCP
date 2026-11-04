@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/icons/[id].md.ts",
+  "filename": "[id].md.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-494",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/pages/icons/[id].md.ts",
+    "title": "website/src/pages/icons/[id].md.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "32650dc64bdf4608a71d3137425504f428bfdc6ecae439b42467b56553f8a498",
+  "text": "// The icon page as Markdown, for AI agents and anyone who wants the facts without the page.\nimport type { GetStaticPaths } from 'astro';\nimport {\n  htmlLottieExample,\n  type Icon,\n  icons,\n  INTERACTIONS,\n  reactExample,\n  shadcnCommand,\n  shadcnExample,\n  SITE,\n  urls,\n} from '../../lib/icons';\nimport { text } from '../../lib/http';\nimport {\n  iconDescription,\n  iconFaq,\n  iconIntro,\n  related,\n  variantFamily,\n  variantNote,\n} from '../../lib/seo';\nimport { CATEGORY_META, INTERACTION_META } from '../../lib/taxonomy';\n\nexport const getStaticPaths = (() =>\n  icons.map((icon) => ({ params: { id: icon.id }, props: { icon } }))) satisfies GetStaticPaths;\n\nconst code = (lang: string, body: string) => `\\`\\`\\`${lang}\\n${body}\\n\\`\\`\\``;\n\nexport const GET = ({ props: { icon } }: { props: { icon: Icon } }) => {\n  const u = urls(icon);\n  const category = CATEGORY_META[icon.category];\n  const interaction = INTERACTION_META[icon.interaction];\n  const family = variantFamily(icon);\n  const others = related(icon, 12 + family.length).filter((other) => !family.includes(other));\n  const kb = (Buffer.byteLength(icon.lottie) / 1024).toFixed(1);\n  const states = Object.keys(icon.svgs);\n  const sections = [\n    `# ${icon.title} animated icon\n\n> ${iconDescription(icon)}\n\n${iconIntro(icon)}`,\n    `## Facts\n\n- Interaction: [${INTERACTIONS[icon.interaction].label}](${SITE}/interactions/${interaction.slug}). ${INTERACTIONS[icon.interaction].description}\n- Category: [${icon.category}](${SITE}/categories/${category.slug})\n- Duration: ${(icon.durationMs / 1000).toFixed(2)} s at ${Number(icon.fps.toFixed(2))} fps\n- Artboard: ${icon.width} × ${icon.height} px\n- Lottie size: ${kb} kB${icon.requiresFullPlayer ? ' (uses After Effects expressions: needs the full lottie-web build)' : ''}\n- License: MIT, attribution optional ([Licencing & Terms](${SITE}/licencing-and-terms))`,\n    `## Files\n\n${[\n  `- Lottie JSON: ${u.lottie}`,\n  ...states.map((state, i) => `- Static SVG (${state}): ${u.svg[i]}`),\n  `- ZIP (Lottie JSON and SVGs): ${u.zip}`,\n  `- shadcn registry item: ${u.registry}`,\n  `- Web page: ${u.page}`,\n].join('\\n')}`,\n    `## React\n\n${code('bash', 'npm install react-useanimations')}\n\n${code('jsx', reactExample(icon.exportName, icon.name))}`,\n    `## shadcn/ui\n\n${code('bash', shadcnCommand(icon))}\n\n${code('tsx', shadcnExample(icon.id, icon.component))}`,\n    `## HTML and lottie-web\n\n${code('html', htmlLottieExample(icon))}`,\n    family.length\n      ? `## Other versions\n\n${family.map((other) => `- [${other.title}](${SITE}/icons/${other.id}): ${variantNote(icon, other)}`).join('\\n')}`\n      : '',\n    `## FAQ\n\n${iconFaq(icon)\n  .map(({ question, answer }) => `### ${question}\\n\\n${answer}`)\n  .join('\\n\\n')}`,\n    `## Related icons\n\n${others\n  .slice(0, 12)\n  .map((other) => `- [${other.title}](${SITE}/icons/${other.id}) (${other.interaction})`)\n  .join('\\n')}\n\n[All ${icon.category.toLowerCase()} icons](${SITE}/categories/${category.slug}) · [All icons](${SITE}/icons)`,\n  ];\n  return text(`${sections.filter(Boolean).join('\\n\\n')}\\n`, 'text/markdown');\n};\n",
+  "version": 1
+}

@@ -27,9 +27,18 @@ Adapt advice to the user's requirements/style, not a forced aesthetic, and retai
 accessibility, responsive, reduced-motion and performance requirements.
 Required workflow:
 1. designer_search(goal keywords, category?, platform?): find actual LOCAL matches.
-2. designer_get_reference(id): inspect guidance, examples, licenses and provenance.
+2. designer_get_bundle(id): inspect the compact offline dossier: guidance, exact
+   formats, per-asset origins/licenses, previews, animation source and coverage.
+   Animation source availability and actual animated-preview availability are
+   separate; expression-only sources may have a still and no executable preview.
+   Original concepts are NOT upstream screenshots or implementations. Selected
+   reference files are NOT complete repositories/apps. Report unavailable and
+   not-applicable coverage honestly. If no bundle exists, designer_get_reference(id).
 3. designer_get_asset(reference_id, asset_id): inspect an eligible local image or
-   bounded JSON text if assets exist. If none exist/format is unsupported, report
+   PNG/JPEG/GIF/WebP or bounded JSON text. Code, Markdown, CSS, SVG, YAML and XML
+   are inert per-file JSON text wrappers, not executable/rendered assets. Retrieve
+   each indexed file separately for FULL text; the bundle is only an index.
+   If none exist/format is unsupported, report
    that explicitly and continue without invented assets.
 4. designer_brief(goal, platform, style?): create an actionable plan, cite
    designer://reference/<id>, and apply responsive, accessibility, reduced-motion
@@ -126,6 +135,11 @@ def create_server(root: Path) -> FastMCP:
         return library.reference(id)
 
     @mcp.tool(annotations=READ_ONLY)
+    def designer_get_bundle(id: ID) -> dict[str, Any]:
+        """Read a catalog-listed offline dossier index with actual formats, origins, licensing and honest coverage."""
+        return library.bundle(id)
+
+    @mcp.tool(annotations=READ_ONLY)
     def designer_get_asset(reference_id: ID, asset_id: ID) -> CallToolResult:
         """Read a known local design image or animation/reference JSON with provenance; no SVG/HTML rendering."""
         metadata, raw = library.asset(reference_id, asset_id)
@@ -198,7 +212,7 @@ def create_server(root: Path) -> FastMCP:
 
     @mcp.prompt(name="design_workflow")
     def design_workflow(goal: Query, platform: Platform = "web") -> str:
-        """Start the local search → reference → asset → brief workflow, plus a description-based audit for visual polish."""
+        """Start local search → bundle → inert assets → brief, plus a description-based audit for visual polish."""
         text_input(goal, "goal", 500)
         text_input(platform, "platform", 100)
         return GUIDE + "\nUntrusted user design request:\n" + json.dumps({"goal": goal, "platform": platform})

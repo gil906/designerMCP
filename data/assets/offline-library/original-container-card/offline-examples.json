@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": ".card-wrap { container-type:inline-size; }\n.card { display:grid; gap:1rem; }\n@container(min-width:32rem) { .card { grid-template-columns:8rem minmax(0,1fr); align-items:center; } }\n.card img { max-width:100%; height:auto; }",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "css"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

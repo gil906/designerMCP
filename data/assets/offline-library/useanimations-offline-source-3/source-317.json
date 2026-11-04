@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/LanguageSwitcher.astro",
+  "filename": "LanguageSwitcher.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-317",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/LanguageSwitcher.astro",
+    "title": "website/src/components/LanguageSwitcher.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "1262bce4c7298fefdfccc0f70097a8ea9e566f2cf7d4b1f74b635c59a533f60f",
+  "text": "---\n// The language menu in the header, with a flag per language: the same page in each built language, or that language's home\n// page where the page exists only in English (icon pages). Plain links in a <details>, so it works\n// without JavaScript and crawlers see every language version.\nimport { BUILT, type Locale, localize, t } from '../i18n';\nimport ControlIcon from './ControlIcon';\n\ninterface Props {\n  locale: Locale;\n  /** hreflang -> path of this page in each language. */\n  alternates?: Record<string, string>;\n}\n\nconst { locale, alternates } = Astro.props;\nconst label = t(locale).common.footer.languages;\nconst languages = BUILT.map((l) => ({ locale: l, href: alternates?.[l.hreflang] ?? localize('/', l) }));\nconst short = (l: Locale) => l.hreflang.split('-')[0].toUpperCase();\n/** The flag shown with a language (public/flags, from flag-icons): en -> US, pt-br -> BR, zh -> CN. */\nconst flag = (l: Locale) => `/flags/${l.code}.svg`;\nconst flagClass = 'h-[15px] w-5 shrink-0 rounded-[3px] object-cover ring-1 ring-line';\n---\n\n{\n  languages.length > 1 && (\n    <details class=\"language-switcher relative\">\n      <summary\n        class=\"flex h-9 cursor-pointer list-none items-center gap-2 rounded-full px-2.5 text-sm text-muted transition-colors hover:bg-surface-2 hover:text-fg [&::-webkit-details-marker]:hidden\"\n        aria-label={`${label}: ${locale.name}`}\n      >\n        <img src={flag(locale)} alt=\"\" width=\"20\" height=\"15\" class={flagClass} />\n        <span class=\"font-mono text-xs\">{short(locale)}</span>\n        <ControlIcon client:idle icon=\"chevronDown\" on=\"open\" size={14} className=\"-ml-1 text-subtle\" />\n      </summary>\n      <ul class=\"absolute right-0 z-50 mt-2 max-h-[70vh] w-60 overflow-y-auto rounded-2xl border border-line bg-bg p-1.5 shadow-xl\">\n        {languages.map(({ locale: l, href }) => (\n          <li>\n            <a\n              href={href}\n              hreflang={l.hreflang}\n              lang={l.hreflang}\n              aria-current={l === locale ? 'true' : undefined}\n              data-track=\"language-switch\"\n              data-track-lang={l.hreflang}\n              class=\"flex items-center justify-between gap-3 rounded-xl px-3 py-2 text-sm text-muted transition-colors hover:bg-surface-2 hover:text-fg aria-[current=true]:bg-surface-2 aria-[current=true]:font-medium aria-[current=true]:text-fg\"\n            >\n              <span class=\"flex items-center gap-2.5\">\n                <img src={flag(l)} alt=\"\" width=\"20\" height=\"15\" loading=\"lazy\" class={flagClass} />\n                {l.name}\n              </span>\n              <span class=\"font-mono text-[11px] text-subtle\">{short(l)}</span>\n            </a>\n          </li>\n        ))}\n      </ul>\n    </details>\n  )\n}\n\n<script>\n  // Close the menu on a click outside it or on Escape.\n  document.addEventListener('click', (event) => {\n    for (const menu of document.querySelectorAll<HTMLDetailsElement>('.language-switcher[open]')) {\n      if (!menu.contains(event.target as Node)) menu.open = false;\n    }\n  });\n  document.addEventListener('keydown', (event) => {\n    if (event.key !== 'Escape') return;\n    for (const menu of document.querySelectorAll<HTMLDetailsElement>('.language-switcher[open]')) {\n      menu.open = false;\n      menu.querySelector('summary')?.focus();\n    }\n  });\n</script>\n",
+  "version": 1
+}

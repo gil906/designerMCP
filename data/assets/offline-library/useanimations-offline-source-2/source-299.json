@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/Breadcrumbs.astro",
+  "filename": "Breadcrumbs.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-299",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/Breadcrumbs.astro",
+    "title": "website/src/components/Breadcrumbs.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "134c9d00bc09e136fd8598e87a1b010777e6a281a815a85e10de5605153cacf6",
+  "text": "---\nimport type { Crumb } from '../lib/hubs';\n\ninterface Props {\n  /** Every level, the current page last. */\n  crumbs: Crumb[];\n  /** Accessible name of the trail, in the page's language. */\n  label?: string;\n}\n\nconst { crumbs, label = 'Breadcrumb' } = Astro.props;\n---\n\n<nav aria-label={label} class=\"text-sm text-muted\">\n  {\n    crumbs.map((crumb, index) =>\n      index < crumbs.length - 1 ? (\n        <>\n          <a href={crumb.path} class=\"hover:text-fg\">{crumb.name}</a>\n          <span class=\"mx-1.5 text-subtle\">/</span>\n        </>\n      ) : (\n        <span class=\"text-fg\" aria-current=\"page\">{crumb.name}</span>\n      )\n    )\n  }\n</nav>\n",
+  "version": 1
+}

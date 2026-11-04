@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/src/typings.d.ts",
+  "filename": "typings.d.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-268",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/src/typings.d.ts",
+    "title": "src/typings.d.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "28ac45554f98655f3a9ef9bc1406ff654fa6e663ab379df9f695bb700a651429",
+  "text": "// The Lottie files are large; typing them as `object` keeps type-checking fast.\ndeclare module '*.json' {\n  const value: object;\n  export default value;\n}\n",
+  "version": 1
+}

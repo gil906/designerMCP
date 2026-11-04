@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/en/licence.ts",
+  "filename": "licence.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-364",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/en/licence.ts",
+    "title": "website/src/i18n/messages/en/licence.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "e8b009cb3a5ce434ba3aec98687bade6f0e2da5bf1dec5c3eb539f94ae83b9bb",
+  "text": "// The licence page (/licencing-and-terms). The LICENSE text itself is shown in English on every page.\nexport const licence = {\n  title: 'Licencing & Terms — useAnimations',\n  description:\n    'useAnimations icons and the react-useanimations package are MIT licensed: free for personal and commercial use and redistribution, no attribution needed.',\n  /** Small label above the heading, the breadcrumb and the JSON-LD page name. */\n  name: 'Licencing & Terms',\n  heading: 'Free to use. MIT licensed.',\n  introHtml: (mitHref: string) =>\n    `The useAnimations icons and the <code>react-useanimations</code> package are released under the <a href=\"${mitHref}\">MIT license</a>.`,\n  canDo: 'What you can do',\n  canDoItemsHtml: [\n    '<strong>Use</strong> the icons in personal and commercial websites, apps and products.',\n    '<strong>Modify</strong> them: change colors, sizes, timing or the motion itself.',\n    '<strong>Redistribute</strong> them, including inside icon packs, templates, themes, UI kits and component registries.',\n  ],\n  attribution: 'Attribution',\n  attributionText:\n    \"Not required, but appreciated. Keep the license notice when you redistribute the files themselves, and if you'd like to credit us:\",\n  /** The credit line people paste into their site; `link` is the HTML link to useAnimations. */\n  credit: (link: string) => `Animated icons by ${link}`,\n  noWarranty: 'No warranty',\n  noWarrantyText: 'The icons and the code are provided as-is, without warranty of any kind.',\n  licenseText: 'License text',\n  /** Shown above the LICENSE text on translated pages only. */\n  bindingNote:\n    'The license text below is the original English version, which is the legally binding one.',\n};\n",
+  "version": 1
+}

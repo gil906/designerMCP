@@ -1,0 +1,80 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "reference",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "528eb1717565f3ca8e25d8eb28d4c42debe88f26235589923e41c96554ac9b7b",
+      "source_url": "https://github.com/markiv/SwiftUI-Shimmer/tree/0226e21f9bf355d40e07e5f5e1c33679d50e167f"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "5eeec3e8a00f846701320a7dcbcde4d9e7579d5121693cf8b0ba86fdcd7426ae",
+      "source_url": "original://designerMCP/offline/github-mobile-watchos-shimmer"
+    },
+    {
+      "asset_id": "offline-document-github-mobile-watchos-shimmer-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "e98779d6adc84f84a4ab87c110f4ef3e6ed62566fcec60919bac90a633e8dc00",
+      "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-mobile-watchos-shimmer-sources-shimmer-shimmer-swift",
+      "format": "swift",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "8faa5f622a9af8af51e94858ee093656b0994ad4c6e7a33a11aa6d51eca1d56e",
+      "source_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/Sources/Shimmer/Shimmer.swift"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "80c845382564639549c0b345e3d72ddc8f185e92f8617ca77cfba7dd922025dd",
+      "source_url": "original://designerMCP/offline/github-mobile-watchos-shimmer"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "Package.swift: dependency manifest not archived as executable implementation; retained selected Swift modules instead."
+  ],
+  "reference_id": "github-mobile-watchos-shimmer",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

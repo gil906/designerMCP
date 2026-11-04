@@ -1,0 +1,17 @@
+{
+  "examples": [
+    {
+      "code": "Widget originalInfoCard(String title, String detail) => Padding(\n  padding: const EdgeInsets.all(20),\n  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [\n    Text(title, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),\n    const SizedBox(height: 12), Text(detail),\n  ]),\n);",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "dart"
+    },
+    {
+      "code": "function OriginalInfoCard({ title, detail, headingId }) {\n  return <article aria-labelledby={headingId} className=\"original-info-card\">\n    <h2 id={headingId}>{title}</h2><p>{detail}</p>\n  </article>;\n}\n// Use a unique headingId per instance; adapt typography with CSS tokens.",
+      "description": "Original React semantic information card; parallel to the independent Flutter composition.",
+      "language": "jsx"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

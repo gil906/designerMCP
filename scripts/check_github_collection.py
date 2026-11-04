@@ -260,9 +260,18 @@ def validate(root: Path, shards=GITHUB_SHARDS, min_repositories: int = 20) -> di
                 require(entry.license_path is not None and bool(entry.assets), "Archived reference requires license and assets.")
                 license_parts = path_parts(entry.license_path, "licenses")
                 required_paths.add("/".join(license_parts[1:]))
+                original_assets = 0
                 for asset in entry.assets:
+                    # Immutable shard reports cover their original source artifacts.
+                    # Generated offline content is independently checked by the
+                    # combined offline validator, never exempted by an origin label.
+                    parts = path_parts(asset.path, "assets")
+                    if len(parts) < 4 or parts[2] != f"github-{shard}":
+                        continue
+                    original_assets += 1
                     require(asset.mime_type == "application/json", "Shard asset MIME must be application/json.")
-                    required_paths.add("/".join(path_parts(asset.path, "assets")[1:]))
+                    required_paths.add("/".join(parts[1:]))
+                require(original_assets > 0, "Archived reference requires its original catalog source assets.")
             records = repository["artifacts"]
             require(sequence(records, 100, nonempty=True), "Invalid artifact list.")
             local_paths = set()

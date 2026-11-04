@@ -1,0 +1,80 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "reference",
+      "format": "json",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "b73237dfab5d02b5eac906e4318f1c924eaa171a42e23ece119ad68d177304ea",
+      "source_url": "https://github.com/android/compose-samples/tree/25631e8f544a9a1e3f01e296eaf1b4c28428196c"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "ad76f1c728e256242391588b242e88e993c39d3fc42285ef7d257e2984e4aaac",
+      "source_url": "original://designerMCP/offline/github-mobile-compose-reply"
+    },
+    {
+      "asset_id": "offline-code-github-mobile-compose-reply-reply-app-src-main-java-com-example-reply-ui-replyapp-kt",
+      "format": "kotlin",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "52dd237d894d3cb0066be0c3caeee6395d2c31ff1ef03833e32d831cae6eb5fd",
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt"
+    },
+    {
+      "asset_id": "offline-code-github-mobile-compose-reply-reply-app-src-main-java-com-example-reply-ui-replylistcontent-kt",
+      "format": "kotlin",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "8fa5284a44d686e8975af0a0ab7640ed5b9afcf042ff0c76a6391ab095bee419",
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "5111129d7895dd07b8970b5b6696b53861be5643a69aff71c4ff5be88006474d",
+      "source_url": "original://designerMCP/offline/github-mobile-compose-reply"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "README.md: unsafe upstream text: README.md:61: private-home-path, README.md:67: private-home-path; full file not archived."
+  ],
+  "reference_id": "github-mobile-compose-reply",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

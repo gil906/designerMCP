@@ -1,0 +1,91 @@
+{
+  "archives": [],
+  "assets": [
+    {
+      "asset_id": "reference",
+      "format": "json",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/popup-view/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "reference",
+      "sha256": "239c624bf0a91225c357975ea98293cb08bf7fc19e806708201848bb50de2ec1",
+      "source_url": "https://github.com/exyte/PopupView/tree/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f"
+    },
+    {
+      "asset_id": "offline-preview",
+      "format": "webp",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "image/webp",
+      "origin": "original",
+      "role": "visual",
+      "sha256": "1795ba92e1c79db682307631c5ab865d6b0d6ad6f3fd307358296a4799d321e7",
+      "source_url": "original://designerMCP/offline/github-mobile-popup-view"
+    },
+    {
+      "asset_id": "offline-document-github-mobile-popup-view-readme-md",
+      "format": "plaintext",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/popup-view/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "document",
+      "sha256": "2e4224605083def9f18721bdb2232df6dc5237362f99ca323f449e77abf9249e",
+      "source_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/README.md"
+    },
+    {
+      "asset_id": "offline-code-github-mobile-popup-view-sources-popupview-publicapi-swift",
+      "format": "swift",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/popup-view/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "22b1b23384b256a2671da0961e3904696b69be1f98cd4fe8a04d89df53e9f569",
+      "source_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/Sources/PopupView/PublicAPI.swift"
+    },
+    {
+      "asset_id": "offline-code-github-mobile-popup-view-sources-popupview-popupbody-swift",
+      "format": "swift",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/popup-view/LICENSE.txt",
+      "mime_type": "application/json",
+      "origin": "upstream",
+      "role": "code",
+      "sha256": "7b91dd14b4a517f8c4c22483312131d77ad6cbd29c3aac25083ae7bf86e1e399",
+      "source_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/Sources/PopupView/PopupBody.swift"
+    },
+    {
+      "asset_id": "offline-license",
+      "format": "license",
+      "license": "CC0-1.0",
+      "license_path": "licenses/offline/CC0.txt",
+      "mime_type": "application/json",
+      "origin": "original",
+      "role": "license",
+      "sha256": "b531459cf125e89a7ca2c7e13ffc06b6c0c558a74df7caecda32574748292814",
+      "source_url": "original://designerMCP/offline/github-mobile-popup-view"
+    }
+  ],
+  "coverage": {
+    "animated_preview": "not-applicable",
+    "animation": "not-applicable",
+    "implementation": "selected-files",
+    "license": "available",
+    "source": "selected-files",
+    "visual": "original-concept"
+  },
+  "kind": "original-concept",
+  "limitations": [
+    "Selected reference content only; not complete repositories, applications, dependencies or runnable environments.",
+    "All source/code/HTML/SVG is inert reference text. No network access, code execution or SVG rendering is performed.",
+    "Original concepts illustrate guidance; they are not copies or screenshots of unavailable upstream galleries.",
+    "Original explanatory diagram, not an upstream UI screenshot or animation.",
+    "Archived source/metadata remains inert; no HTML, SVG, or code executed.",
+    "Package.swift: dependency manifest not archived as executable implementation; retained selected Swift modules instead."
+  ],
+  "reference_id": "github-mobile-popup-view",
+  "scope": "selected-reference-content-not-complete-repository",
+  "version": 1
+}

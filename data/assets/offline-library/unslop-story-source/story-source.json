@@ -1,0 +1,18 @@
+{
+  "archive_path": "archives/offline-tooling/unslop/skills/unslop/scripts/story.mjs.json",
+  "complete": false,
+  "content_omitted": true,
+  "filename": "story.mjs.json",
+  "format": "javascript",
+  "kind": "offline-excluded-source",
+  "original_asset": {
+    "id": "story-source",
+    "mime_type": "application/json",
+    "path": "assets/unslop/skills/unslop/scripts/story.mjs.json",
+    "title": "Inert upstream story-video script source"
+  },
+  "purpose": "Original tooling is not returned or executed. This is an omission index, not source implementation.",
+  "sha256": "e09c8878e0655d3e08b549b089982246bf7819f03c741aa4b04c98abdf11f80b",
+  "static_risk": "process-execution",
+  "version": 1
+}

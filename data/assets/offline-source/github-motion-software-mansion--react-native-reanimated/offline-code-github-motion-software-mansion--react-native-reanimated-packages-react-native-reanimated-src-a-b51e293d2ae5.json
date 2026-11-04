@@ -1,0 +1,54 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Selected source excerpts by software-mansion/react-native-reanimated contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "byte_identical_upstream": true,
+  "chunk": {
+    "character_end": 5936,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "implementation",
+  "complete": true,
+  "completeness_scope": "all original source bytes",
+  "content": "'use strict';\nimport type {\n  AnimatableValue,\n  Animation,\n  AnimationCallback,\n  EasingFunction,\n  ReduceMotion,\n  Timestamp,\n} from '../commonTypes';\nimport type { EasingFunctionFactory } from '../Easing';\nimport { Easing } from '../Easing';\nimport {\n  assertEasingIsWorklet,\n  defineAnimation,\n  getReduceMotionForAnimation,\n} from './util';\n\n/**\n * The timing animation configuration.\n *\n * @param duration - Length of the animation (in milliseconds). Defaults to 300.\n * @param easing - An easing function which defines the animation curve.\n *   Defaults to `Easing.inOut(Easing.quad)`.\n * @param reduceMotion - Determines how the animation responds to the device's\n *   reduced motion accessibility setting. Default to `ReduceMotion.System` -\n *   {@link ReduceMotion}.\n * @see https://docs.swmansion.com/react-native-reanimated/docs/animations/withTiming#config-\n */\ninterface TimingConfig {\n  duration?: number;\n  reduceMotion?: ReduceMotion;\n  easing?: EasingFunction | EasingFunctionFactory;\n}\n\nexport type WithTimingConfig = TimingConfig;\n\nexport interface TimingAnimation extends Animation<TimingAnimation> {\n  type: string;\n  easing: EasingFunction;\n  startValue: AnimatableValue;\n  startTime: Timestamp;\n  progress: number;\n  toValue: AnimatableValue;\n  current: AnimatableValue;\n}\n\ninterface InnerTimingAnimation extends Omit<\n  TimingAnimation,\n  'toValue' | 'current'\n> {\n  toValue: number;\n  current: number;\n}\n\n// TODO TYPESCRIPT This is temporary type put in here to get rid of our .d.ts file\ntype withTimingType = <T extends AnimatableValue>(\n  toValue: T,\n  userConfig?: TimingConfig,\n  callback?: AnimationCallback\n) => T;\n\n/**\n * Lets you create an animation based on duration and easing.\n *\n * @param toValue - The value on which the animation will come at rest -\n *   {@link AnimatableValue}.\n * @param config - The timing animation configuration - {@link TimingConfig}.\n *   Defaults to {@link TimingConfig} default values.\n * @param callback - A function called on animation complete -\n *   {@link AnimationCallback}.\n * @returns An [animation\n *   object](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/glossary#animation-object)\n *   which holds the current state of the animation.\n * @see https://docs.swmansion.com/react-native-reanimated/docs/animations/withTiming\n */\nexport const withTiming = function (\n  toValue: AnimatableValue,\n  userConfig?: TimingConfig,\n  callback?: AnimationCallback\n): Animation<TimingAnimation> {\n  'worklet';\n\n  if (__DEV__ && userConfig?.easing) {\n    assertEasingIsWorklet(userConfig.easing);\n  }\n\n  return defineAnimation<TimingAnimation>(toValue, () => {\n    'worklet';\n    const config: Required<Omit<TimingConfig, 'reduceMotion'>> = {\n      duration: 300,\n      easing: Easing.inOut(Easing.quad),\n    };\n    if (userConfig) {\n      Object.keys(userConfig).forEach(\n        (key) =>\n          // eslint-disable-next-line @typescript-eslint/no-explicit-any\n          ((config as any)[key] = userConfig[key as keyof typeof userConfig])\n      );\n    }\n\n    function timing(animation: InnerTimingAnimation, now: Timestamp): boolean {\n      // eslint-disable-next-line @typescript-eslint/no-shadow\n      const { toValue, startTime, startValue } = animation;\n      let runtime = now - startTime;\n\n      if (runtime < 0) {\n        // `startTime` comes from `global.__frameTimestamp ||\n        // global._getAnimationTimestamp()` (see `valueSetter`). An animation\n        // started outside a frame flush - from a gesture callback, for\n        // instance - takes the second branch and reads the clock at that\n        // instant, while the frame that first progresses it passes its vsync\n        // timestamp, which is earlier. The first tick then sees a small\n        // negative runtime. This can potentially cause glitches during\n        // animations.\n        animation.startTime = now;\n        runtime = 0;\n      }\n\n      if (runtime >= config.duration) {\n        // reset startTime to avoid reusing finished animation config in `start` method\n        animation.startTime = 0;\n        animation.current = toValue;\n        return true;\n      }\n\n      const normalizedTime = Math.min(\n        Math.max(runtime / config.duration, 0),\n        1\n      );\n      const progress = animation.easing(normalizedTime);\n      animation.current =\n        (startValue as number) + (toValue - (startValue as number)) * progress;\n      return false;\n    }\n\n    function onStart(\n      animation: TimingAnimation,\n      value: number,\n      now: Timestamp,\n      previousAnimation: Animation<TimingAnimation>\n    ): void {\n      if (\n        previousAnimation &&\n        (previousAnimation as TimingAnimation).type === 'timing' &&\n        (previousAnimation as TimingAnimation).toValue === toValue &&\n        (previousAnimation as TimingAnimation).startTime\n      ) {\n        // to maintain continuity of timing animations we check if we are starting\n        // new timing over the old one with the same parameters. If so, we want\n        // to copy animation timeline properties\n        animation.startTime = (previousAnimation as TimingAnimation).startTime;\n        animation.startValue = (\n          previousAnimation as TimingAnimation\n        ).startValue;\n      } else {\n        animation.startTime = now;\n        animation.startValue = value;\n      }\n      animation.current = value;\n      if (typeof config.easing === 'object') {\n        animation.easing = config.easing.factory();\n      } else {\n        animation.easing = config.easing;\n      }\n    }\n\n    return {\n      type: 'timing',\n      onFrame: timing,\n      onStart: onStart as (animation: TimingAnimation, now: number) => boolean,\n      progress: 0,\n      toValue,\n      startValue: 0,\n      startTime: 0,\n      easing: () => 0,\n      current: toValue,\n      callback,\n      reduceMotion: getReduceMotionForAnimation(userConfig?.reduceMotion),\n    } as TimingAnimation;\n  });\n} as withTimingType;\n",
+  "content_sha256": "d5c9694e9a2fa3ab7745d168465c573d8285b4addb20f87734db0dfb52af9076",
+  "expected_git_blob_sha1": "286c740f518ab5fcb5cd21a955570fa7c6b45663",
+  "filename": "timing.ts",
+  "full_content_sha256": "d5c9694e9a2fa3ab7745d168465c573d8285b4addb20f87734db0dfb52af9076",
+  "full_file_complete": true,
+  "full_source_sha256": "d5c9694e9a2fa3ab7745d168465c573d8285b4addb20f87734db0dfb52af9076",
+  "kind": "source-file",
+  "language": "typescript",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+  "line_coverage": {
+    "all_source_lines_retained": true,
+    "basis": "upstream source",
+    "end": 181,
+    "start": 1,
+    "total": 181
+  },
+  "modifications": [],
+  "origin": "upstream",
+  "original_format": "typescript",
+  "original_path": "packages/react-native-reanimated/src/animation/timing.ts",
+  "repository": "software-mansion/react-native-reanimated",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+      "sha256": "f1ae22eddd3a96c3b7b8a494ef03749ae6a1e19574bacc9c195d83c916de09e2"
+    }
+  ],
+  "revision": "8f38c4e379ac5dd9faf693139800bbef3e2d924c",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 5936,
+  "source_lines": 181,
+  "source_sha256": "d5c9694e9a2fa3ab7745d168465c573d8285b4addb20f87734db0dfb52af9076",
+  "source_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts",
+  "verified_git_blob_sha1": "286c740f518ab5fcb5cd21a955570fa7c6b45663"
+}

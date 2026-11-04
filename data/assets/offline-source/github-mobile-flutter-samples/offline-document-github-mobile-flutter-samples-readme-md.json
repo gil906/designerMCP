@@ -1,0 +1,62 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 7905,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "# Flutter samples\n\n[](https://github.com/flutter/samples/actions?workflow=Main%20Branch%20CI)\n\nA collection of open source samples that illustrate best practices for\n[Flutter].\n\n## Contributing\n\nWe appreciate fixes and necessary improvements to existing samples. **But in most cases, we're not currently adding new samples to this repository** while we rethink sample code in the new LLM world.\n\nPlease read the [contributor's guide] if you have contributions.\n\nGooglers, you can freely add samples to the [flutter/demos] repository.\n\n## Index\n\n### Quickstarts\n\n* [`asset_transformation`] - Demonstrates how to transform images' color scales and formats.\n* [`background_isolate_channels`] - Demonstrates how to use long-lived isolates.\n* [`cupertino_gallery`] - A gallery of Cupertino widgets, demonstrating iOS-style UI components in Flutter.\n* [`date_planner`] - An in-progress exploration of an iOS-style Date Planner app, similar to the SwiftUI Tutorial app.\n* [`desktop_photo_search`] - Demonstrates desktop features in both Material and FluentUI design systems.\n* [`dynamic_theme`] - A developer sample demonstrating how to call on-device Flutter APIs based on output from the Gemini API.\n* [`form_app`] - A sample demonstrating different types of forms and best practices.\n* [`google_maps`] - Demonstrates the Google Maps for Flutter plugin.\n* [`navigation_and_routing`] - A sample that shows how to use [go_router] API to handle common navigation scenarios.\n* [`pedometer`] - A demo of a plugin that leverages FFIgen & JNIgen to call platform APIs directly from Dart code.\n* [`platform_design`] - This sample project shows a Flutter app that maximizes application code reuse while adhering to different design patterns on Android and iOS.\n* [`simple_sdf`] - A simple [Flutter fragment shaders] sample project showing how to draw Signed Distance Functions with the FragmentShader API.\n* [`simple_shader`] - A simple [Flutter fragment shaders] sample project.\n* [`testing_app`] - A sample app that shows different types of testing in Flutter.\n* [`web_embedding`] - This directory contains examples of how to embed Flutter in web apps (without iframes).\n  * [`element_embedding_demo`] - Modifies the index.html of a flutter app so it is launched in a custom hostElement. This is the most basic embedding example.\n  * [`ng-flutter`] - A simple Angular app (and component) that replicates the above example, but in an Angular style.\n\n### Native platform samples\n\n* [`add-to-app`] - Collection of samples that demonstrate embedding Flutter a view into a native app.\n  * [`fullscreen`] — Embeds a full screen instance of\n  Flutter into an existing iOS or Android app.\n  * [`prebuilt_module`] — Embeds a full screen\n  instance of Flutter as a prebuilt library that can be loaded into an existing\n  iOS or Android app.\n  * [`plugin`] — Embeds a full screen Flutter instance that\n  is using plugins into an existing iOS or Android app.\n  * [`books`] — Mimics a real world use-case of embedding Flutter into an\n  existing Android app and demonstrates using [Pigeon] to communicate between Flutter and\n  the host application.\n  * [`multiple_flutters`] — Shows the usage of the Flutter\n  Engine Group APIs to embed multiple instances of Flutter into an existing app\n  with low memory cost.\n  * [`android_view`] — Shows how to integrate a Flutter\n  add-to-app module at a view level for Android.\n* [`android_splash_screen`]\n* [`ios_app_clip`]\n* [`platform_channels`] - A sample app which demonstrates how to use MethodChannel, EventChannel, BasicMessageChannel and MessageCodec in Flutter.\n* [`platform_view_swift`] - A Flutter sample app that combines a native iOS UIViewController with a full-screen Flutter view.\n\n### Demo galleries\n\n* [`animations`] - Showcases Flutter's animation features\n* [`material_3_demo`] - showcases [Material 3] features in the Flutter Material library.\n\n### Demo apps\n\n* [`compass_app`] - A sample application that implements MVVM architecture.\n* [`veggie_seasons`] - A demo application.\n\n## Flutter sample code\n\nSamples are **correct and concise code** that developers\ncan **quickly understand** and **easily reuse** with minimal side effects.\nSamples teach developers how to be successful using Flutter and Dart.\nThey are maintained on an ongoing basis\nto reflect changing APIs and best practices.\n\n### Types of samples\n\nThere are two types of sample code in this repository:\n\n* **Quickstarts** provide a starting point to extend. They answer the question,\n  \"What is the minimal amount of code needed to implement this feature?\"\n* **Demo apps** are meant to be built and ran. They demo the _product_,\n   not how to write code.\n\nA majority of samples in this repository are quickstarts.\n\n## Usage\n\nEvery sample in this repo is fully runnable. To run an example,\nuse `flutter run` inside that example's directory.\nSee the [getting started guide] to install the `flutter` tool.\n\n> [!IMPORTANT]\n> If you want to run an add-to-app sample, there are additional requirements.\n> We suggest reading the [add-to-app documentation].\n\n## Interested in contributing?\n\nSee the [contributor's guide]!\n\n## Questions or issues?\n\nIf you have a general question about one of these samples or how to adapt its\ntechniques for one of your own apps, try one of these resources:\n\n* [The FlutterDev Discord]\n* [The Flutter Community forum]\n\nIf you run into a bug in one of the samples, please file an issue in the\n[`flutter/samples` issue tracker].\n\n\n[`asset_transformation`]: ./asset_transformation\n[`background_isolate_channels`]: ./background_isolate_channels\n[`cupertino_gallery`]: ./cupertino_gallery\n[`date_planner`]: ./date_planner\n[`desktop_photo_search`]: ./desktop_photo_search\n[`dynamic_theme`]: ./dynamic_theme\n[`form_app`]: ./form_app\n[`google_maps`]: ./google_maps\n[`navigation_and_routing`]: ./navigation_and_routing\n[`pedometer`]: ./pedometer\n[`platform_design`]: ./platform_design\n[`simple_sdf`]: ./simple_sdf\n[`simple_shader`]: ./simple_shader\n[`testing_app`]: ./testing_app\n[`web_embedding`]: ./web_embedding\n[`element_embedding_demo`]: ./web_embedding/element_embedding_demo\n[`ng-flutter`]: ./web_embedding/ng-flutter\n[`add-to-app`]: ./add_to_app\n[`fullscreen`]: ./add_to_app/fullscreen\n[`prebuilt_module`]: ./add_to_app/prebuilt_module\n[`plugin`]: ./add_to_app/plugin\n[`books`]: ./add_to_app/books\n[`multiple_flutters`]: ./add_to_app/multiple_flutters\n[`android_view`]: ./add_to_app/android_view\n[`android_splash_screen`]: ./android_splash_screen\n[`ios_app_clip`]: ./ios_app_clip\n[`platform_channels`]: ./platform_channels\n[`platform_view_swift`]: ./platform_view_swift\n[`animations`]: ./animations\n[`material_3_demo`]: ./material_3_demo\n[`compass_app`]: ./compass_app\n[`veggie_seasons`]: ./veggieseasons\n\n[Flutter]: https://flutter.dev\n[getting started guide]: https://docs.flutter.dev/get-started/install\n[add-to-app documentation]: https://docs.flutter.dev/add-to-app\n[isolates]: https://api.dart.dev/dart-isolate/Isolate-class.html\n[Material 3]: https://m3.material.io\n[go_router]: https://pub.dev/packages/go_router\n[google_maps_flutter plugin]: https://github.com/flutter/plugins/tree/master/packages/google_maps_flutter\n[package:provider]: https://pub.dev/packages/provider\n[Flutter fragment shaders]: https://docs.flutter.dev/development/ui/advanced/shaders\n[TextEditingDeltas]: https://api.flutter.dev/flutter/services/TextEditingDelta-class.html\n[Pigeon]: https://pub.dev/packages/pigeon\n[`package:shelf`]: https://pub.dev/packages/shelf\n[svn]: https://subversion.apache.org/\n[partial clone]: https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/\n[contributor's guide]: CONTRIBUTING.md\n[The FlutterDev Discord]: https://discord.gg/rflutterdev\n[The Flutter Community forum]: https://forum.itsallwidgets.com/latest\n[`flutter/samples` issue tracker]: https://github.com/flutter/samples/issues\n[flutter/demos]: https://github.com/flutter/demos\n",
+  "content_sha256": "64c1cc2f0efc1393a1811122981555453e56cf6da56f275df857fe23c7899334",
+  "expected_git_blob_sha1": "12b4b493f1af624ba3afa4665aca55be3578b8a0",
+  "filename": "README.md",
+  "full_content_sha256": "64c1cc2f0efc1393a1811122981555453e56cf6da56f275df857fe23c7899334",
+  "full_file_complete": false,
+  "full_source_sha256": "068bc60cf20eb351c46c08f0f4bac25d0ed53a0243f04ccd6d9962830d60bd7f",
+  "kind": "documentation",
+  "language": "text",
+  "license": "BSD-3-Clause",
+  "license_path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 167,
+    "start": 1,
+    "total": 167
+  },
+  "modifications": [
+    {
+      "count": 1,
+      "operation": "remove Markdown image embeds"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "flutter/samples",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+      "sha256": "687c3d4c3a553c0fa995e9d3c35b245872fa4a0f5c2bd6494decc2fa410f7ce9"
+    }
+  ],
+  "revision": "21c71902bb2c7da3cce328ba5946cba2f35a660a",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 8007,
+  "source_lines": 167,
+  "source_sha256": "068bc60cf20eb351c46c08f0f4bac25d0ed53a0243f04ccd6d9962830d60bd7f",
+  "source_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/README.md",
+  "verified_git_blob_sha1": "12b4b493f1af624ba3afa4665aca55be3578b8a0"
+}

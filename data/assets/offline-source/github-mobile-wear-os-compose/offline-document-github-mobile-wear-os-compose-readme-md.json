@@ -1,0 +1,62 @@
+{
+  "adapted_content_complete": true,
+  "attribution": "Public upstream authors; preserve original copyright headers and retained license/notice.",
+  "byte_identical_upstream": false,
+  "chunk": {
+    "character_end": 2261,
+    "character_start": 0,
+    "number": 1,
+    "total": 1
+  },
+  "classification": "documentation",
+  "complete": false,
+  "completeness_scope": "full localized document except explicit modifications",
+  "content": "Wear OS Samples Repository\n======================\n\nThis repository contains a set of individual Android Studio projects to help you get started writing Wear OS apps and watch faces.\n\nRead below for a description of each sample.\n\n\nSamples\n----------\n\n* **ComposeStarter (ComposeStarter)** (Compose/Kotlin) - Demonstrates simple Compose for Wear OS app devs can use as a starting point for their own Compose app.\n\n* **DataLayer (DataLayer)** (Compose/Kotlin) - Demonstrates communicating via the data layer between the watch and the phone. Guide (https://developer.android.com/training/wearables/data-layer)\n\n* **WatchFaceFormat (WatchFaceFormat)** - Demos the new Watch Face Format which allows quick development of performant watch\n    faces in XML Guide (https://developer.android.com/training/wearables/wff)\n\n* **Complications (Complications)** (Kotlin) - If you are writing a watch face with complications, this app gives you a full suite of data sources to test against your implementation of complications to make sure it looks good. Complication Guide (https://developer.android.com/training/wearables/watch-faces/adding-complications)\n\n* **WearOAuth (WearOAuth)** (Kotlin) - Demonstrates how developers can authenticate a user on their Wear OS app via the user's mobile/phone device without requiring a mobile app (Wear OS companion app handles the request on the mobile side). The sample uses OAuth. Guide (https://developer.android.com/training/wearables/apps/auth-wear)\n\n* **WearSpeakerSample (WearSpeakerSample)** (Compose/Kotlin) - Demonstrates audio recording and playback if the wearable device has a speaker. This is also demonstrate how to handling permissions. Guide (https://developer.android.com/training/wearables/wearable-sounds)\n\n* **WearTilesKotlin (WearTilesKotlin)** (Kotlin) - Demonstrates tiles using the AndroidX library. Guide (https://developer.android.com/training/articles/wear-tiles)\n\n* **WatchFacePush (WatchFacePush)** (Kotlin) - Demonstrates the Watch Face Push AndroidX Library. Guide (https://developer.android.com/training/wearables/watch-face-push)\n\n* **WearWidget (WearWidget)** (Compose/Kotlin) - Demonstrates building Wear Widgets using Remote Compose. Guide (https://developer.android.com/training/wearables/widgets)\n",
+  "content_sha256": "21f37fe15c11011b332cb917ca99d0dcceb8f212d6ed200e08e4bd503b6090e4",
+  "expected_git_blob_sha1": "f110daabb997fd5593eda313486de8b74ceae905",
+  "filename": "README.md",
+  "full_content_sha256": "21f37fe15c11011b332cb917ca99d0dcceb8f212d6ed200e08e4bd503b6090e4",
+  "full_file_complete": false,
+  "full_source_sha256": "cc111337c5f0e4b7eb86f958cfba15d11cfde064ce5ba45f238a05423bec26f0",
+  "kind": "documentation",
+  "language": "text",
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+  "line_coverage": {
+    "all_source_lines_retained": false,
+    "basis": "localized text",
+    "end": 29,
+    "start": 1,
+    "total": 29
+  },
+  "modifications": [
+    {
+      "count": 17,
+      "operation": "make Markdown hyperlinks plain text"
+    },
+    {
+      "operation": "plain-text localization; not byte-identical to upstream"
+    }
+  ],
+  "origin": "upstream",
+  "original_format": "markdown",
+  "original_path": "README.md",
+  "repository": "android/wear-os-samples",
+  "retained_license_notices": [
+    {
+      "path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+      "sha256": "b493568bcbcaf50e888f66642878374ede50f7f12adb4e3f64d6f9c093de9ca4"
+    }
+  ],
+  "revision": "665d6a48466d472a4d928661dd865364d5073799",
+  "safety": {
+    "dependency_audit": "not performed",
+    "execution": "not executed",
+    "static_scan": "passed"
+  },
+  "source_bytes": 2278,
+  "source_lines": 29,
+  "source_sha256": "cc111337c5f0e4b7eb86f958cfba15d11cfde064ce5ba45f238a05423bec26f0",
+  "source_url": "https://raw.githubusercontent.com/android/wear-os-samples/665d6a48466d472a4d928661dd865364d5073799/README.md",
+  "verified_git_blob_sha1": "f110daabb997fd5593eda313486de8b74ceae905"
+}

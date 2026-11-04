@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/pages/categories/index.astro",
+  "filename": "index.astro",
+  "format": "astro",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-487",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/pages/categories/index.astro",
+    "title": "website/src/pages/categories/index.astro"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "d3f2fdda7788f91b4e02550ebc0787a00babc21349ebc5d76e02ad93430b6962",
+  "text": "---\nimport { EN } from '../../i18n';\nimport CategoryIndexPage from '../../views/CategoryIndexPage.astro';\n---\n\n<CategoryIndexPage locale={EN} />\n",
+  "version": 1
+}

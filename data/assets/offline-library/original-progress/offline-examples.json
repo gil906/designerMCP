@@ -1,0 +1,12 @@
+{
+  "examples": [
+    {
+      "code": "<label for=\"upload\">Uploading files</label>\n<progress id=\"upload\" max=\"100\" value=\"35\">35%</progress>\n<p role=\"status\">35% uploaded; keep this page open.</p>",
+      "description": "Original reusable starting point; adapt and test in your application.",
+      "language": "html"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}

@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/lib/http.ts",
+  "filename": "http.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-461",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/lib/http.ts",
+    "title": "website/src/lib/http.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "cbe423e9efb648d5302447ab40c6dbac971a8c53262ae85d9b6a3197e1163602",
+  "text": "export const json = (data: unknown, pretty = true) =>\n  new Response(pretty ? `${JSON.stringify(data, null, 2)}\\n` : JSON.stringify(data), {\n    headers: { 'Content-Type': 'application/json; charset=utf-8' },\n  });\n\nexport const text = (body: string, type = 'text/plain') =>\n  new Response(body, { headers: { 'Content-Type': `${type}; charset=utf-8` } });\n",
+  "version": 1
+}

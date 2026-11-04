@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/ru/common.ts",
+  "filename": "common.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-421",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/ru/common.ts",
+    "title": "website/src/i18n/messages/ru/common.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "a86511e079c578be01b3a70eb865d9dc6dc958c0edbfee8532c4d83d960f0b32",
+  "text": "import type { Messages } from '../en';\n\nexport const common: Messages['common'] = {\n  skipToContent: 'Перейти к содержимому',\n  ogImageAlt: 'useAnimations: бесплатные анимированные иконки для React, shadcn/ui, Lottie и SVG',\n  homeLabel: 'Главная страница useAnimations',\n  mainNav: 'Основная навигация',\n  browseIcons: 'Смотреть иконки',\n  nav: {\n    icons: 'Иконки',\n    categories: 'Категории',\n    documentation: 'Документация',\n    shadcn: 'shadcn',\n    lottie: 'Lottie-иконки',\n    license: 'Лицензия',\n  },\n  footer: {\n    tagline:\n      'Бесплатные анимированные иконки со встроенными взаимодействиями. Лицензия MIT, сделаны для React.',\n    product: 'Продукт',\n    developers: 'Разработчикам',\n    follow: 'Мы в сети',\n    languages: 'Языки',\n    allIcons: 'Все иконки',\n    categories: 'Категории',\n    interactions: 'Взаимодействия',\n    lottieIcons: 'Lottie-иконки',\n    shadcnIcons: 'Иконки для shadcn/ui',\n    documentation: 'Документация',\n    licencing: 'Лицензия и условия',\n    shadcnRegistry: 'Реестр shadcn',\n    mitLicense: 'Лицензия MIT',\n    builtWith: 'Сайт сделан на Astro',\n  },\n  breadcrumb: 'Навигационная цепочка',\n  crumbs: { icons: 'Иконки', categories: 'Категории', interactions: 'Взаимодействия' },\n  faq: 'Частые вопросы',\n  copy: 'Копировать',\n  copied: 'Скопировано',\n  pressCtrlC: 'Нажмите Ctrl+C',\n  languageBanner: {\n    text: 'Эта страница есть и на русском языке.',\n    action: 'Открыть на русском',\n    dismiss: 'Закрыть',\n  },\n};\n",
+  "version": 1
+}

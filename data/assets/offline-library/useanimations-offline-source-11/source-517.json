@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/scripts/analytics.ts",
+  "filename": "analytics.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-517",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/scripts/analytics.ts",
+    "title": "website/src/scripts/analytics.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "6e06ab47e8ceadbccebaa6e3845c52e368c56251a68d5a54e3b35eb7fc75856d",
+  "text": "// Umami events for every call to action. <el data-track=\"download\" data-track-format=\"svg\"> sends\n// \"download\" with { format: 'svg' } when it (or anything inside it) is clicked; other links send\n// \"link\" with their label and href. Not data-umami-event: Umami turns tracked links into a\n// redirect, which breaks `download` links and the links that open the icon dialog.\nexport const track = (name: string, data: Record<string, string>) => {\n  for (const tracker of new Set([window.umamiCloud, window.umami])) tracker?.track(name, data);\n};\n\nconst dataOf = (element: HTMLElement) => {\n  const data: Record<string, string> = {};\n  for (const [key, value] of Object.entries(element.dataset))\n    if (key.startsWith('track') && key.length > 5 && value !== undefined)\n      data[key[5].toLowerCase() + key.slice(6)] = value;\n  return data;\n};\n\ndocument.addEventListener(\n  'click',\n  (event) => {\n    const target = event.target as Element;\n    const tracked = target.closest<HTMLElement>('[data-track]');\n    if (tracked) {\n      track(tracked.dataset.track!, dataOf(tracked));\n      return;\n    }\n    const link = target.closest<HTMLAnchorElement>('a[href]');\n    if (!link) return;\n    const label = (link.getAttribute('aria-label') ?? link.textContent ?? '').replace(/\\s+/g, ' ');\n    track('link', { label: label.trim().slice(0, 60), href: link.getAttribute('href')! });\n  },\n  true\n);\n",
+  "version": 1
+}

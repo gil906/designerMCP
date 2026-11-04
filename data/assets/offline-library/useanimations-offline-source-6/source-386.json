@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/id/docs.ts",
+  "filename": "docs.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-386",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/id/docs.ts",
+    "title": "website/src/i18n/messages/id/docs.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "3ebae237391d507b99622b2344fb042ca085165a3d99d0409d2f2b6378201603",
+  "text": "import type { Messages } from '../en';\n\nexport const docs: Messages['docs'] = {\n  title: 'Dokumentasi — useAnimations',\n  description: (iconCount: number) =>\n    `Cara memakai ${iconCount} ikon animasi di React dan shadcn/ui: interaksi, props, warna, file, dan aksesibilitas.`,\n  badge: 'Dokumentasi',\n  onThisPage: 'Di halaman ini',\n  viewAsMarkdown: 'Lihat sebagai Markdown',\n  headline: 'Dokumentasi useAnimations',\n  summary: 'Cara memakai ikon animasi useAnimations di React dan shadcn/ui.',\n  crumb: 'Dokumentasi',\n  faq: [\n    {\n      question: 'Apakah useAnimations gratis untuk proyek komersial?',\n      answer: 'Ya. Ikon dan paket React-nya berlisensi MIT, tanpa kewajiban atribusi.',\n    },\n    {\n      question: 'Bagaimana cara memakai ikon useAnimations di React?',\n      answer:\n        'Instal react-useanimations, import UseAnimations dan sebuah ikon (misalnya react-useanimations/lib/checkmark), lalu render <UseAnimations animation={checkmark} size={32} />.',\n    },\n    {\n      question: 'Bagaimana cara mengubah warna ikon?',\n      answer:\n        'Ikon mengikuti warna teks. Ubah dengan strokeColor dan fillColor, properti CSS color, atau dengan memberi style pada path-nya.',\n    },\n    {\n      question: 'Apakah bisa dipakai tanpa React?',\n      answer:\n        'Paketnya khusus untuk React. Namun setiap ikon juga tersedia sebagai file Lottie JSON standar yang bisa diputar oleh Lottie player mana pun (lottie-web, dotLottie, lottie-react-native, lottie-ios, lottie-android, Flutter), serta sebagai SVG statis. Lihat bagian Memakai tanpa React dan useanimations.com/lottie-icons.',\n    },\n  ],\n};\n",
+  "version": 1
+}

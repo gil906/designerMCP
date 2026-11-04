@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/src/types.ts",
+  "filename": "types.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-267",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/src/types.ts",
+    "title": "src/types.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "961d3f1a429c28b5e7fd6d210210af589fbb3babb1e13b46e679737ea1271ba3",
+  "text": "/**\n * How an icon reacts to the user, matching the `interaction` field of the useAnimations catalog.\n * When reduced motion is preferred, icons stay still or jump straight to their new state.\n * - `loop`: plays continuously.\n * - `click-toggle`: toggles between two states on click (forward, then backward).\n * - `click-replay`: replays from the start on every click.\n * - `hover`: plays forward on mouse enter and backward on mouse leave.\n * - `hover-loop`: loops while hovered and finishes the current cycle on mouse leave.\n * - `hover-replay`: plays once from the start on mouse enter.\n */\nexport type Interaction =\n  | 'loop'\n  | 'click-toggle'\n  | 'click-replay'\n  | 'hover'\n  | 'hover-loop'\n  | 'hover-replay';\n\n/** An icon imported from `react-useanimations/lib/<name>`, or your own Lottie animation. */\nexport type Animation = {\n  /** Lottie JSON of the animation. */\n  animationData: object;\n  /** How the animation plays unless the `interaction` prop overrides it. Defaults to `'click-replay'`. */\n  interaction?: Interaction;\n};\n",
+  "version": 1
+}

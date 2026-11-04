@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/components/InteractionDemo.tsx",
+  "filename": "InteractionDemo.tsx",
+  "format": "tsx",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-315",
+    "mime_type": "text/plain",
+    "path": "assets/useanimations/source/website/src/components/InteractionDemo.tsx",
+    "title": "website/src/components/InteractionDemo.tsx"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "83a7ca0d3379ce6e8cd450900c5f7af9affc24d62c7303dcc5abe477c8a81d99",
+  "text": "import { useEffect, useState } from 'react';\nimport UseAnimations, { type Interaction } from 'react-useanimations';\nimport { islands } from '../i18n/messages/en/islands';\nimport { loadIconData } from '../lib/icon-data';\n\ntype Props = {\n  /** Icon id; its Lottie JSON loads from /icons/<id>.json once the card is visible. */\n  id: string;\n  interaction: Interaction;\n  title: string;\n  description: string;\n  hint: string;\n  /** The card's text in the page's language: t(locale).islands.interactionDemo. */\n  strings?: typeof islands.interactionDemo;\n};\n\nconst SIZE = 56;\n\n/** A card that plays its icon's interaction when the card itself is hovered, clicked or focused. */\nexport default function InteractionDemo({\n  id,\n  interaction,\n  title,\n  description,\n  hint,\n  strings = islands.interactionDemo,\n}: Props) {\n  const clickable = interaction.startsWith('click');\n  const [animationData, setAnimationData] = useState<object>();\n  useEffect(() => {\n    void loadIconData(id).then(setAnimationData, () => undefined);\n  }, [id]);\n\n  const card = (eventProps: object, animationProps: object) => (\n    <button\n      type=\"button\"\n      className=\"demo-card group relative flex h-full w-full flex-col items-start rounded-3xl border border-line bg-surface p-6 text-left transition duration-300 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[0_24px_60px_-30px_var(--glow)]\"\n      aria-label={`${title}: ${hint}`}\n      {...eventProps}\n    >\n      <span className=\"flex size-24 items-center justify-center rounded-2xl bg-surface-2 text-fg transition-colors group-hover:text-accent\">\n        <span {...animationProps} />\n      </span>\n      <span className=\"mt-6 font-mono text-xs text-accent\">\n        interaction=&quot;{interaction}&quot;\n      </span>\n      <span className=\"mt-2 text-lg font-semibold tracking-tight text-fg\">{title}</span>\n      <span className=\"mt-1.5 text-sm leading-relaxed text-muted\">{description}</span>\n      <span className=\"mt-auto pt-5 text-xs font-medium text-subtle\">\n        {clickable ? strings.click : interaction === 'loop' ? strings.loop : strings.hover}\n      </span>\n    </button>\n  );\n\n  // Until the animation loads, an empty box of the icon's size keeps the layout still.\n  if (!animationData) {\n    return card(\n      {},\n      {\n        'aria-hidden': true,\n        style: { display: 'inline-block', flexShrink: 0, width: SIZE, height: SIZE },\n      }\n    );\n  }\n  return <UseAnimations animation={{ animationData, interaction }} size={SIZE} render={card} />;\n}\n",
+  "version": 1
+}

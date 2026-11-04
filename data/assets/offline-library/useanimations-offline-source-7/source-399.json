@@ -1,0 +1,22 @@
+{
+  "archive_path": "assets/useanimations/source/website/src/i18n/messages/ja/islands.ts",
+  "filename": "islands.ts",
+  "format": "typescript",
+  "kind": "offline-text",
+  "notice": "Full original text retained verbatim; inert reference, not executable or rendered.",
+  "original_asset": {
+    "id": "source-399",
+    "mime_type": "text/vnd.trolltech.linguist",
+    "path": "assets/useanimations/source/website/src/i18n/messages/ja/islands.ts",
+    "title": "website/src/i18n/messages/ja/islands.ts"
+  },
+  "provenance": {
+    "license": "MIT",
+    "license_path": "licenses/useanimations-MIT.txt",
+    "origin": "upstream",
+    "source_url": "https://github.com/UseAnimations/react-useanimations/tree/f7af6f53f6f1a97486ad95756b281a34e9f7c670"
+  },
+  "sha256": "4d7c03db1fb6874af2c4c3093e27f17ee8c9af0d9326ed1dd027dee34cc68fda",
+  "text": "import type { Messages } from '../en';\n\nexport const islands: Messages['islands'] = {\n  iconCard: {\n    hints: {\n      loop: 'ループ',\n      'click-toggle': 'クリック',\n      'click-replay': 'クリック',\n      hover: 'ホバー',\n      'hover-loop': 'ホバー',\n      'hover-replay': 'ホバー',\n    },\n  },\n  iconDialog: {\n    hints: {\n      loop: '自動で再生されます',\n      'click-toggle': 'クリックで切り替え',\n      'click-replay': 'クリックでもう一度再生',\n      hover: 'ホバーで再生、離れると逆再生',\n      'hover-loop': 'ホバー中はループ',\n      'hover-replay': 'ホバーで再生',\n    },\n    preview: '{title} のプレビュー',\n    colors: 'プレビューの色',\n    color: '色 {color}',\n    textColor: 'テキストの色',\n    interaction: 'インタラクション',\n    duration: '再生時間',\n    seconds: '{seconds} 秒',\n    import: 'インポート',\n    close: '閉じる',\n    code: 'コード',\n    tabs: { react: 'React', shadcn: 'shadcn', files: 'ファイル' },\n    copy: 'コピー',\n    download: 'ダウンロード',\n    iconPage: 'アイコンのページ',\n  },\n  interactionDemo: {\n    click: 'カードをクリック',\n    loop: '自動で再生されます',\n    hover: 'カードにホバー',\n  },\n  mobileMenu: {\n    menu: 'メニュー',\n    nav: 'メイン',\n  },\n  search: {\n    clear: '検索をクリア',\n  },\n  themeToggle: {\n    toLight: 'ライトテーマに切り替える',\n    toDark: 'ダークテーマに切り替える',\n  },\n};\n",
+  "version": 1
+}

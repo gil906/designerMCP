@@ -1,0 +1,17 @@
+{
+  "examples": [
+    {
+      "code": "<form>\n  <label for=\"workspace\">Workspace name</label>\n  <input id=\"workspace\" name=\"workspace\" aria-describedby=\"workspace-help\" required maxlength=\"60\">\n  <p id=\"workspace-help\">Use a name your teammates recognize.</p>\n  <button type=\"submit\">Create workspace</button>\n  <p role=\"status\" aria-live=\"polite\"></p>\n</form>",
+      "description": "Original illustrative example; not copied upstream. Review integration requirements before use.",
+      "language": "html"
+    },
+    {
+      "code": "Widget originalWorkspaceField(TextEditingController controller) => TextFormField(\n  controller: controller,\n  maxLength: 60,\n  decoration: const InputDecoration(\n    labelText: 'Workspace name',\n    helperText: 'Use a name your teammates recognize.',\n  ),\n  validator: (value) => (value == null || value.trim().isEmpty)\n    ? 'Enter a workspace name.' : null,\n);\n// Keep the controller in caller state and dispose it when that state ends.",
+      "description": "Original Flutter labeled input. Requires Material imports and a caller-owned controller.",
+      "language": "dart"
+    }
+  ],
+  "kind": "offline-examples",
+  "purpose": "Existing illustrative fragments, not complete upstream implementation.",
+  "version": 1
+}
