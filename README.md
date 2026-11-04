@@ -7,8 +7,9 @@ write files, execute examples, or render stored HTML/SVG.
 
 ## Installed library and integration
 
-The collected library contains **394 references**, including **300 useAnimations
-Lottie animations**, 33 linked-source references, and 23 unslop references.
+Version **0.2.0** contains **402 references**, including **300 useAnimations
+Lottie animations**, 33 linked-source references, 23 unslop references, and
+**8 original reusable layout starters**.
 Reference records include local assets, practical examples, guidance, categories,
 platforms, source provenance, and reuse conditions. Counts are authoritative in
 `designer_library_status`, not this snapshot.
@@ -43,11 +44,11 @@ Other clients should use the equivalent workflow guidance. Machine-specific
 registration stays outside version control. The catalog can also be indexed in
 context-mode; the MCP remains authoritative for current details and assets.
 
-Verification passed: **62 server tests**, **8 ingestion safety tests**, local
-file-integrity validation, and an independent installed-console MCP protocol
-check from another working directory. The protocol check exercised all five
-tools, local animation and WebP retrieval, no-match and traversal errors,
-anti-slop searches/brief citations, and the guide/workflow prompt.
+The automated suite covers search relevance, style matching, filter aliases,
+catalog/cache safety, description-based audits, privacy guards, and installed
+MCP protocol behavior. Ingestion safety and local asset-integrity checks are
+separate. Run the documented tests for current results; the server exposes six
+read-only tools.
 
 ### Security review
 
@@ -150,12 +151,25 @@ data does not prevent startup or status inspection.
    If none exist or the format is unsupported, report that and continue.
 4. **Plan:** `designer_brief(goal, platform="web", style?, category?, limit=3)`.
 
+For existing UI polish, use `designer_audit(description, platform, limit=3)` to
+prioritize concrete inspections before implementing changes. It selects relevant
+local anti-slop guidance and suggests verification criteria; it does **not**
+inspect screenshots/DOM, verify violations, or invent visual quality scores.
+
 Briefs provide concrete structure, visual-system, responsive, accessibility,
 reduced-motion, performance and validation sections, plus cited local guidance.
-Search uses deterministic lexical matching, not embeddings or online search;
-category/platform filters are exact, case-insensitive labels. Brief matching
-uses goal keywords; style can additionally route anti-slop intent to actual local
-anti-slop references. Style is never an invented citation.
+Search uses cached, inverse-frequency-weighted lexical matching, not embeddings
+or online search. Distinctive title terms matter more than repeated generic text.
+Layout requests favor original starters over incidental animated icons; explicitly
+requested icon names remain discoverable. Results explain matched terms, identify
+starter/icon/reference kinds, and list available preview asset IDs.
+
+Filters accept exact case-insensitive labels plus documented aliases: `website`
+or `browser` for `web`; `next.js`, `nextjs`, or `reactjs` for `react`; `flutter app`
+for `flutter`; `templates` for `template`; and `animations` for `animation`.
+Status exposes the complete alias mapping. Unknown filters still report no-match.
+Briefs use both goal and requested style when selecting references, without
+truncating either input or inventing style citations.
 No-match results explicitly distinguish general guidance from sourced matches.
 
 `designer_library_status()` reports actual entry/asset/example counts,
@@ -165,13 +179,13 @@ an unavailable state—never fabricated seeded counts.
 
 The **`design_workflow` prompt** and **`designer://guide` resource** describe this
 workflow. `designer://catalog` exposes status; citations resolve through
-`designer://reference/<id>`. All five tools declare read-only, closed-world hints.
+`designer://reference/<id>`. All six tools declare read-only, closed-world hints.
 
 ### Category taxonomy
 
 Recommended labels: `layout`, `typography`, `color`, `components`, `navigation`,
 `forms`, `accessibility`, `responsive`, `animation`, `interaction`, `performance`,
-`anti-slop`.
+`anti-slop`, `template`.
 Other bounded category/platform labels are supported; status reports the actual
 labels rather than assuming a catalog.
 
@@ -190,6 +204,27 @@ licensed references from [heydamir/unslop](https://github.com/heydamir/unslop).
 Presence, counts, licenses and provenance come from that actual manifest; the
 server never fetches the repository or assumes it is installed. Stored source
 documentation remains untrusted reference data, not promoted to instructions.
+
+### Original layout starters
+
+Search `category="template"` for six self-contained web layouts: editorial landing,
+SaaS landing, analytics dashboard, portfolio/case study, commerce catalog, and
+accessible settings. Two Flutter starters cover adaptive/foldable dashboards and
+accessible onboarding/empty states. Each has a distinct visual direction,
+responsive/accessibility guidance, a CC0 dedication, and a complete inert JSON
+source asset alongside its concise inline example.
+
+```text
+designer_search("warm editorial landing page", category="template", platform="web")
+designer_get_reference("recipe-editorial-landing")
+designer_get_asset("recipe-editorial-landing", "source")
+designer_audit("Repeating cards, glow gradients and unclear heading hierarchy", platform="web")
+```
+
+These are adaptable UI starters, not production backends or automatically executed
+templates. Web source received structural, JavaScript behavior, and contrast checks.
+Flutter source received static checks; compilation/device validation requires a
+Flutter SDK and is not claimed by this repository.
 
 ## Data contract and safety
 
@@ -230,14 +265,15 @@ rejected. Provenance URLs accept HTTP(S) or `original://` for locally authored
 material; they are never fetched.
 
 An optional `data/linked-library.json` uses the identical schema and is merged
-with the primary catalog, as does optional `data/unslop-library.json`. These are
+with the primary catalog, as do optional `data/unslop-library.json` and
+`data/recipes-library.json`. These are
 the only fixed trusted catalog filenames; tools cannot choose arbitrary files.
 Missing supplemental data is normal; invalid/unsafe
 supplemental data or duplicate IDs across manifests makes the library unavailable
 rather than silently ignoring errors or returning stale references. Status lists
 the loaded manifests and counts their combined entries/assets/examples. Any
 manifest changing (or a supplemental appearing/disappearing) refreshes the cache.
-Any of the three manifests changing refreshes the combined cache.
+Any of the four manifests changing refreshes the catalog and its search index.
 The combined catalog remains limited to 1,000 entries.
 
 Asset paths may be DATA-relative (`assets/...`) or project-relative

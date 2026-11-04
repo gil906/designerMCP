@@ -22,11 +22,18 @@ async def test_real_stdio_protocol(populated):
             names = {t.name for t in tools.tools}
             assert names == {
                 "designer_search", "designer_get_reference", "designer_get_asset",
-                "designer_brief", "designer_library_status",
+                "designer_brief", "designer_audit", "designer_library_status",
             }
             assert all(t.annotations.readOnlyHint and not t.annotations.openWorldHint for t in tools.tools)
             search_tool = next(t for t in tools.tools if t.name == "designer_search")
             assert search_tool.inputSchema["properties"]["limit"]["maximum"] == 10
+            audit_tool = next(t for t in tools.tools if t.name == "designer_audit")
+            assert audit_tool.inputSchema["properties"]["description"]["maxLength"] == 500
+            assert audit_tool.inputSchema["properties"]["platform"]["maxLength"] == 100
+            audit = await client.call_tool("designer_audit", {"description": "This dashboard looks AI"})
+            assert not audit.isError
+            assert audit.structuredContent["checks"][0]["id"] == "layout"
+            assert not audit.structuredContent["matched"]
             result = await client.call_tool("designer_search", {"query": "grid"})
             assert not result.isError
             assert result.structuredContent["results"][0]["id"] == "dashboard"
@@ -56,12 +63,15 @@ async def test_real_stdio_protocol(populated):
             assert {str(r.uri) for r in resources.resources} >= {"designer://guide", "designer://catalog"}
             guide = await client.read_resource("designer://guide")
             assert "designer_get_asset" in guide.contents[0].text
+            assert "designer_audit" in guide.contents[0].text
+            assert "original starter layout" in guide.contents[0].text
             reference = await client.read_resource("designer://reference/dashboard")
             assert json.loads(reference.contents[0].text)["reference"]["id"] == "dashboard"
             prompts = await client.list_prompts()
             assert [p.name for p in prompts.prompts] == ["design_workflow"]
             prompt = await client.get_prompt("design_workflow", {"goal": "dashboard"})
             assert "Required workflow" in prompt.messages[0].content.text
+            assert "designer_audit" in prompt.messages[0].content.text
             status = await client.call_tool("designer_library_status", {})
             assert status.structuredContent["entry_count"] == 1
             assert status.structuredContent["source_status_counts"]["blocked"] == 1

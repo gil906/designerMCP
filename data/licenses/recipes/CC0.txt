@@ -1,0 +1,17 @@
+CC0 1.0 Universal — original designerMCP starter recipes
+
+The author dedicates the original source code and recipe descriptions in
+data/assets/recipes/ and data/recipes-library.json to the public domain under
+CC0 1.0 Universal, waiving copyright and related rights to the fullest extent
+permitted by law. Where waiver is not possible, the author grants an
+unconditional, irrevocable, nonexclusive, royalty-free license to exercise
+those rights for any purpose, including commercial use and modification.
+
+These originals are provided without warranty. No trademark rights, patent
+rights, or rights belonging to other people are granted. There is no implied
+endorsement. Example content is fictional demonstration data, not a business
+claim or a production-ready service.
+
+License identifier: CC0-1.0
+Canonical terms: https://creativecommons.org/publicdomain/zero/1.0/
+Legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode

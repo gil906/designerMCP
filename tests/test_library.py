@@ -48,7 +48,7 @@ def test_reference_provenance_and_cache_signatures(populated):
         library.reference("missing")
 
 
-@pytest.mark.parametrize("manifest", ["linked-library.json", "unslop-library.json"])
+@pytest.mark.parametrize("manifest", ["linked-library.json", "unslop-library.json", "recipes-library.json"])
 def test_supplemental_merge_and_refresh(populated, entry, manifest):
     library = Library(populated)
     assert library.status()["manifests"] == ["data/library.json"]
@@ -69,7 +69,7 @@ def test_supplemental_merge_and_refresh(populated, entry, manifest):
 
 
 @pytest.mark.parametrize("invalid", ["duplicate", "schema", "symlink"])
-@pytest.mark.parametrize("manifest", ["linked-library.json", "unslop-library.json"])
+@pytest.mark.parametrize("manifest", ["linked-library.json", "unslop-library.json", "recipes-library.json"])
 def test_supplemental_invalid_rejects_stale_cache(populated, entry, invalid, manifest):
     library = Library(populated)
     assert library.status()["entry_count"] == 1
@@ -122,6 +122,62 @@ def test_anti_slop_no_reference_is_honest(populated):
     assert not brief["matched"] and brief["references"] == []
     assert "No matching local anti-slop" in brief["match_message"]
     assert "anti_slop" in brief["sections"]
+
+
+def test_design_requests_prefer_starters_without_hiding_named_icons(populated, entry):
+    starter = copy.deepcopy(entry)
+    starter.update(
+        id="starter-editorial", title="Warm editorial landing page",
+        categories=["layout", "template"], tags=["warm", "editorial", "landing", "page", "website"],
+        source_url="original://designerMCP/recipes/editorial",
+    )
+    icon = copy.deepcopy(entry)
+    icon.update(
+        id="website-icon", title="Website animated icon",
+        categories=["animation"], tags=["website", "icon"],
+    )
+    gallery = copy.deepcopy(starter)
+    gallery.update(
+        id="a-gallery", title="Warm editorial landing page gallery",
+        categories=["layout"], source_url="https://example.org/gallery",
+    )
+    write_catalog(populated, [gallery, icon, starter])
+    library = Library(populated)
+    result = library.search("warm editorial landing page")["results"][0]
+    assert result["id"] == "starter-editorial" and result["kind"] == "starter"
+    assert result["has_examples"] and "editorial" in result["match_terms"]
+    assert library.search("website animated icon")["results"][0]["id"] == "website-icon"
+
+
+def test_natural_filter_aliases_plural_terms_and_cache_refresh(populated, entry):
+    starter = copy.deepcopy(entry)
+    starter.update(
+        id="recipe-grid", title="Editorial dashboard card",
+        categories=["layout", "template"], tags=["card", "editorial"],
+        platforms=["web", "react"], source_url="original://designerMCP/recipes/grid",
+    )
+    write_catalog(populated, [starter])
+    library = Library(populated)
+    assert library.search("cards", category="templates", platform="  Website  ")["matched"]
+    assert library.search("editorial", platform="next.js")["matched"]
+    assert not library.search("editorial", platform="unknown-platform")["matched"]
+    starter.update(title="Catalog storefront", tags=["catalog"], guidance="Product catalog.")
+    write_catalog(populated, [starter])
+    assert not library.search("editorial")["matched"]
+    assert library.search("catalog")["results"][0]["id"] == "recipe-grid"
+
+
+def test_brief_uses_requested_style_for_reference_selection(populated, entry):
+    cool = copy.deepcopy(entry)
+    cool.update(
+        id="a-cool", title="Landing page layout", tags=["landing", "page", "cool"],
+        categories=["layout", "template"], source_url="original://designerMCP/recipes/cool",
+        guidance="Use cool restrained colors.",
+    )
+    warm = copy.deepcopy(cool)
+    warm.update(id="z-warm", tags=["landing", "page", "warm", "editorial"], guidance="Use warm editorial colors.")
+    write_catalog(populated, [cool, warm])
+    assert Library(populated).brief("landing page", style="warm editorial")["references"][0]["id"] == "z-warm"
 
 
 def test_actual_status_and_absent_data(root, populated):

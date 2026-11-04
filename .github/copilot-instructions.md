@@ -9,8 +9,14 @@ persistent offline library in this project, not live websites.
    terms. Retrieve useful hits with `designer_get_reference`.
 3. Inspect relevant locally stored assets with `designer_get_asset`.
    Prefer preview renditions over large full-resolution archive assets.
-4. Call `designer_brief` and translate its cited references into a coherent
+4. For existing UI polish, call `designer_audit` with a description of the current
+   interface. Treat its output as an inspection plan, not verified visual findings.
+5. Call `designer_brief` and translate its cited references into a coherent
    design suitable for the existing application and the user's request.
+
+For a new layout, search `category="template"` for an original starter matching
+the product and platform, then inspect its local source and adaptation guidance.
+Use the requested style when obtaining a brief; do not blindly copy a starter.
 
 For visual design and polish, consult the local `unslop` / `anti-slop` references.
 Give them priority when asked to make a site less AI-looking or less generic.
