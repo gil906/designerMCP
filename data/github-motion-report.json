@@ -1,0 +1,1146 @@
+{
+  "version": 1,
+  "repositories": [
+    {
+      "repository": "airbnb/lottie-web",
+      "revision": "bede03d25d232826e0c9dca1733d542d8a7754fb",
+      "license": "MIT",
+      "source_url": "https://github.com/airbnb/lottie-web/tree/bede03d25d232826e0c9dca1733d542d8a7754fb",
+      "reference_ids": [
+        "github-motion-airbnb--lottie-web"
+      ],
+      "selection_reason": "Browser vector-animation integration reference: create one local-data player per surface, stop decorative loops, and destroy the instance when its container is removed.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-motion/airbnb--lottie-web.json",
+          "sha256": "92aab0a0fdce51392489b50d4de00f6cdd54165488af713877e9cabf8e287062"
+        },
+        {
+          "path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+          "sha256": "9d8d4d8b4bb99572ee8b51025a30b8493d949798cac465c6c15b1b29420bcb06"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "c65c2b4ebb100e75b9145d1822019cc5d1d9679a2646b84db266a8719d7696f9",
+          "pinned_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/README.md",
+          "expected_git_blob_sha1": "98de95b9459860384d8c42c129df278d94883ac4",
+          "verified_git_blob_sha1": "98de95b9459860384d8c42c129df278d94883ac4"
+        },
+        {
+          "path": "player/js/animation/AnimationManager.js",
+          "sha256": "8286b262d4f5396913a230d1a5b1c197102caa50123b3fe5580f1499e8d735f0",
+          "pinned_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/player/js/animation/AnimationManager.js",
+          "expected_git_blob_sha1": "0aa2babb87bc25e35fe94b712cf34e37db9c65c6",
+          "verified_git_blob_sha1": "0aa2babb87bc25e35fe94b712cf34e37db9c65c6"
+        },
+        {
+          "path": "LICENSE.md",
+          "sha256": "9d8d4d8b4bb99572ee8b51025a30b8493d949798cac465c6c15b1b29420bcb06",
+          "pinned_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/LICENSE.md",
+          "expected_git_blob_sha1": "9c1cd7cb84357f4aa3d57ff961cd37d993055ef5",
+          "verified_git_blob_sha1": "9c1cd7cb84357f4aa3d57ff961cd37d993055ef5"
+        }
+      ],
+      "scans": {
+        "scope": "Fetched UTF-8 README and selected module text; archived JSON, license, and original inline examples. No whole-repository claim.",
+        "archived_text_static_scan": {
+          "status": "passed",
+          "checks": [
+            "secrets_or_private_keys",
+            "controls",
+            "bidi",
+            "instruction_injection",
+            "obfuscated_execution",
+            "execution_or_active_network"
+          ],
+          "findings": []
+        },
+        "source_provenance_urls": "HTTPS documentation links, imports, and provenance strings are inert text, not network calls; never followed at runtime.",
+        "full_fetched_text_initial_scan": [
+          {
+            "path": "README.md",
+            "findings": {
+              "network_execution": [
+                1,
+                3,
+                9,
+                32,
+                36,
+                44,
+                69,
+                74,
+                97,
+                101,
+                104,
+                107,
+                124,
+                147,
+                193,
+                282,
+                307,
+                317,
+                328,
+                332,
+                336,
+                340,
+                342,
+                343,
+                344,
+                345,
+                346,
+                347,
+                348,
+                349,
+                350,
+                351
+              ]
+            }
+          },
+          {
+            "path": "player/js/animation/AnimationManager.js",
+            "findings": {}
+          },
+          {
+            "path": "LICENSE.md",
+            "findings": {}
+          }
+        ],
+        "not_performed": [
+          "antivirus",
+          "dependency audit",
+          "native runtime execution",
+          "whole repository malware assessment"
+        ],
+        "git_blob_integrity": {
+          "verified_files": 3,
+          "total_upstream_files": 3,
+          "status": "passed",
+          "limit": null
+        }
+      }
+    },
+    {
+      "repository": "LottieFiles/dotlottie-web",
+      "revision": "2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb",
+      "license": "MIT",
+      "source_url": "https://github.com/LottieFiles/dotlottie-web/tree/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb",
+      "reference_ids": [
+        "github-motion-lottiefiles--dotlottie-web"
+      ],
+      "selection_reason": "Canvas Lottie/dotLottie integration guidance grounded in the React adapter's instance reuse and deferred cleanup, without bundling runtime binaries or animation payloads.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-motion/LottieFiles--dotlottie-web.json",
+          "sha256": "8eb5149d74e461976f8763773f86472d072c9bec49ec45484e4984326f174def"
+        },
+        {
+          "path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+          "sha256": "779cec663b3c6590082566f2a000170d7a4d1a4bfc6f954e61efa4adddc652a8"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "e7d69a113aca3d59655d4f085e6c790f1ff9c5cc87077176a9eabd9b1c9ab0c3",
+          "pinned_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/README.md",
+          "expected_git_blob_sha1": "7a5936676d125f2a4bad7cd67b611b5af199afeb",
+          "verified_git_blob_sha1": "7a5936676d125f2a4bad7cd67b611b5af199afeb"
+        },
+        {
+          "path": "packages/react/src/dotlottie.tsx",
+          "sha256": "c91e3368e705ac377e847597b87426188ab67990b96be812544a32f1c2b96c17",
+          "pinned_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/dotlottie.tsx",
+          "expected_git_blob_sha1": "cf6465d1e7275206e22d217da0499bcf0452fbf9",
+          "verified_git_blob_sha1": "cf6465d1e7275206e22d217da0499bcf0452fbf9"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "779cec663b3c6590082566f2a000170d7a4d1a4bfc6f954e61efa4adddc652a8",
+          "pinned_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/LICENSE",
+          "expected_git_blob_sha1": "1ed117dcaafbf5692dd0d19999dd11f311aa1a1c",
+          "verified_git_blob_sha1": "1ed117dcaafbf5692dd0d19999dd11f311aa1a1c"
+        },
+        {
+          "path": "packages/react/src/base-dotlottie-react.tsx",
+          "sha256": "be639ca68652e0bae6c3466788699a77660579b1549d530eb38452d1a470017f",
+          "pinned_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/base-dotlottie-react.tsx",
+          "expected_git_blob_sha1": "4f02ccb0c4c658425383befe1e69d09a2c19b8b0",
+          "verified_git_blob_sha1": "4f02ccb0c4c658425383befe1e69d09a2c19b8b0"
+        }
+      ],
+      "scans": {
+        "scope": "Fetched UTF-8 README and selected module text; archived JSON, license, and original inline examples. No whole-repository claim.",
+        "archived_text_static_scan": {
+          "status": "passed",
+          "checks": [
+            "secrets_or_private_keys",
+            "controls",
+            "bidi",
+            "instruction_injection",
+            "obfuscated_execution",
+            "execution_or_active_network"
+          ],
+          "findings": []
+        },
+        "source_provenance_urls": "HTTPS documentation links, imports, and provenance strings are inert text, not network calls; never followed at runtime.",
+        "full_fetched_text_initial_scan": [
+          {
+            "path": "README.md",
+            "findings": {
+              "network_execution": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                8,
+                16,
+                18,
+                23,
+                24,
+                25,
+                26,
+                31,
+                32,
+                33,
+                59,
+                102,
+                149,
+                156,
+                244,
+                275,
+                279,
+                280,
+                281,
+                282,
+                283,
+                290,
+                291,
+                292,
+                293,
+                294,
+                295,
+                296,
+                297,
+                298,
+                301,
+                302,
+                305,
+                347,
+                363
+              ]
+            }
+          },
+          {
+            "path": "packages/react/src/dotlottie.tsx",
+            "findings": {}
+          },
+          {
+            "path": "LICENSE",
+            "findings": {}
+          },
+          {
+            "path": "packages/react/src/base-dotlottie-react.tsx",
+            "findings": {}
+          }
+        ],
+        "not_performed": [
+          "antivirus",
+          "dependency audit",
+          "native runtime execution",
+          "whole repository malware assessment"
+        ],
+        "git_blob_integrity": {
+          "verified_files": 4,
+          "total_upstream_files": 4,
+          "status": "passed",
+          "limit": null
+        }
+      }
+    },
+    {
+      "repository": "software-mansion/react-native-reanimated",
+      "revision": "8f38c4e379ac5dd9faf693139800bbef3e2d924c",
+      "license": "MIT",
+      "source_url": "https://github.com/software-mansion/react-native-reanimated/tree/8f38c4e379ac5dd9faf693139800bbef3e2d924c",
+      "reference_ids": [
+        "github-motion-software-mansion--react-native-reanimated"
+      ],
+      "selection_reason": "Native mobile transition guidance from withTiming's configuration and system reduced-motion support, with explicit React Native New Architecture compatibility boundaries.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-motion/software-mansion--react-native-reanimated.json",
+          "sha256": "ef2d790f0aed464058cfa840660631da42cd9a923797801a60ebf9306d6f7ae8"
+        },
+        {
+          "path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+          "sha256": "f1ae22eddd3a96c3b7b8a494ef03749ae6a1e19574bacc9c195d83c916de09e2"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "f69b5125861f90a7f0f275ee013ae97f83a1923eeaebcded6eee06a8022ae678",
+          "pinned_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/README.md",
+          "expected_git_blob_sha1": "200033226f6a049d9a28c3217e40de1161a4b47e",
+          "verified_git_blob_sha1": "200033226f6a049d9a28c3217e40de1161a4b47e"
+        },
+        {
+          "path": "packages/react-native-reanimated/src/animation/timing.ts",
+          "sha256": "d5c9694e9a2fa3ab7745d168465c573d8285b4addb20f87734db0dfb52af9076",
+          "pinned_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts",
+          "expected_git_blob_sha1": "286c740f518ab5fcb5cd21a955570fa7c6b45663",
+          "verified_git_blob_sha1": "286c740f518ab5fcb5cd21a955570fa7c6b45663"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "f1ae22eddd3a96c3b7b8a494ef03749ae6a1e19574bacc9c195d83c916de09e2",
+          "pinned_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/LICENSE",
+          "expected_git_blob_sha1": "c2ce3c170e0e63e80a25da3fde99706abd959afd",
+          "verified_git_blob_sha1": "c2ce3c170e0e63e80a25da3fde99706abd959afd"
+        }
+      ],
+      "scans": {
+        "scope": "Fetched UTF-8 README and selected module text; archived JSON, license, and original inline examples. No whole-repository claim.",
+        "archived_text_static_scan": {
+          "status": "passed",
+          "checks": [
+            "secrets_or_private_keys",
+            "controls",
+            "bidi",
+            "instruction_injection",
+            "obfuscated_execution",
+            "execution_or_active_network"
+          ],
+          "findings": []
+        },
+        "source_provenance_urls": "HTTPS documentation links, imports, and provenance strings are inert text, not network calls; never followed at runtime.",
+        "full_fetched_text_initial_scan": [
+          {
+            "path": "README.md",
+            "findings": {
+              "network_execution": [
+                1,
+                3,
+                4,
+                5,
+                16,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                36,
+                40,
+                48,
+                49,
+                53,
+                62,
+                66
+              ]
+            }
+          },
+          {
+            "path": "packages/react-native-reanimated/src/animation/timing.ts",
+            "findings": {
+              "network_execution": [
+                27,
+                72,
+                74
+              ]
+            }
+          },
+          {
+            "path": "LICENSE",
+            "findings": {}
+          }
+        ],
+        "not_performed": [
+          "antivirus",
+          "dependency audit",
+          "native runtime execution",
+          "whole repository malware assessment"
+        ],
+        "git_blob_integrity": {
+          "verified_files": 3,
+          "total_upstream_files": 3,
+          "status": "passed",
+          "limit": null
+        }
+      }
+    },
+    {
+      "repository": "pmndrs/react-three-fiber",
+      "revision": "d74622ea8ed717f7212d7e19d65ff3e325508389",
+      "license": "MIT",
+      "source_url": "https://github.com/pmndrs/react-three-fiber/tree/d74622ea8ed717f7212d7e19d65ff3e325508389",
+      "reference_ids": [
+        "github-motion-pmndrs--react-three-fiber"
+      ],
+      "selection_reason": "React browser 3D motion reference using useFrame subscription, elapsed-frame delta, and static demand rendering for reduced motion.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-motion/pmndrs--react-three-fiber.json",
+          "sha256": "4195cbcf1fcf0d1f8c83abb9e3963ff7b5e1f2ba9f69d312c3632326fc1ebb0a"
+        },
+        {
+          "path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+          "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "readme.md",
+          "sha256": "29c7319a41a30b95319e68d540672efaa31a2c3bd44bad6ef2e48b93d00d4ab6",
+          "pinned_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/readme.md",
+          "expected_git_blob_sha1": "d14eaf7e8981c0692b438bb24f0ae8df5b2c58cd",
+          "verified_git_blob_sha1": "d14eaf7e8981c0692b438bb24f0ae8df5b2c58cd"
+        },
+        {
+          "path": "packages/fiber/src/core/hooks.tsx",
+          "sha256": "59cbff8faf629332a397cf64663d7984817a466597a408a9918d4986a9a4e351",
+          "pinned_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx",
+          "expected_git_blob_sha1": "9ba61fd988be2749b36cadd3d4aea891ab64b5ff",
+          "verified_git_blob_sha1": "9ba61fd988be2749b36cadd3d4aea891ab64b5ff"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a",
+          "pinned_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/LICENSE",
+          "expected_git_blob_sha1": "493cfb3c8335c31bea327e0e27a8cb22004111d7",
+          "verified_git_blob_sha1": "493cfb3c8335c31bea327e0e27a8cb22004111d7"
+        }
+      ],
+      "scans": {
+        "scope": "Fetched UTF-8 README and selected module text; archived JSON, license, and original inline examples. No whole-repository claim.",
+        "archived_text_static_scan": {
+          "status": "passed",
+          "checks": [
+            "secrets_or_private_keys",
+            "controls",
+            "bidi",
+            "instruction_injection",
+            "obfuscated_execution",
+            "execution_or_active_network"
+          ],
+          "findings": []
+        },
+        "source_provenance_urls": "HTTPS documentation links, imports, and provenance strings are inert text, not network calls; never followed at runtime.",
+        "full_fetched_text_initial_scan": [
+          {
+            "path": "readme.md",
+            "findings": {
+              "network_execution": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                11,
+                13,
+                43,
+                45,
+                135,
+                208,
+                212,
+                214,
+                215,
+                216,
+                217,
+                221,
+                222,
+                223,
+                225,
+                231,
+                232,
+                233,
+                234,
+                235,
+                236,
+                237,
+                238,
+                239,
+                240,
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                259,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                286,
+                292,
+                293,
+                300,
+                301
+              ]
+            }
+          },
+          {
+            "path": "packages/fiber/src/core/hooks.tsx",
+            "findings": {
+              "network_execution": [
+                12,
+                23,
+                24,
+                34,
+                46,
+                60,
+                137
+              ]
+            }
+          },
+          {
+            "path": "LICENSE",
+            "findings": {}
+          }
+        ],
+        "not_performed": [
+          "antivirus",
+          "dependency audit",
+          "native runtime execution",
+          "whole repository malware assessment"
+        ],
+        "git_blob_integrity": {
+          "verified_files": 3,
+          "total_upstream_files": 3,
+          "status": "passed",
+          "limit": null
+        }
+      }
+    },
+    {
+      "repository": "pmndrs/drei",
+      "revision": "bf6f4addf47467d3885de272d94ca5127f6ef68f",
+      "license": "MIT",
+      "source_url": "https://github.com/pmndrs/drei/tree/bf6f4addf47467d3885de272d94ca5127f6ef68f",
+      "reference_ids": [
+        "github-motion-pmndrs--drei"
+      ],
+      "selection_reason": "Optional product-scene floating motion based on Float's enabled/speed guard, frame-driven transforms, and demand-render invalidation.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-motion/pmndrs--drei.json",
+          "sha256": "12e4ec26c3701b7e8767f99ad2b980f4d06f87f0c2f5ef88b346b20e7f1cac98"
+        },
+        {
+          "path": "licenses/github-motion/pmndrs--drei/LICENSE",
+          "sha256": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "26718342352d21f3d2011829bb58bc515f06d25d51b19025df5a9eb3ab66299a",
+          "pinned_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/README.md",
+          "expected_git_blob_sha1": "3c9c2f48995fab5f1dfcecd0c1ac728cf7c54397",
+          "verified_git_blob_sha1": "3c9c2f48995fab5f1dfcecd0c1ac728cf7c54397"
+        },
+        {
+          "path": "src/core/Float.tsx",
+          "sha256": "9cef7b5ec6e0aee408df44dc19bc143991a34d38b1500d927d3b221d4f4f8cd7",
+          "pinned_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx",
+          "expected_git_blob_sha1": "9ff61cd999a46a5aa168cc3a56f46bb7abd29df1",
+          "verified_git_blob_sha1": "9ff61cd999a46a5aa168cc3a56f46bb7abd29df1"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8",
+          "pinned_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/LICENSE",
+          "expected_git_blob_sha1": "55e1bd7f9a4bcd86361e735f17d740ee35757c7b",
+          "verified_git_blob_sha1": "55e1bd7f9a4bcd86361e735f17d740ee35757c7b"
+        }
+      ],
+      "scans": {
+        "scope": "Fetched UTF-8 README and selected module text; archived JSON, license, and original inline examples. No whole-repository claim.",
+        "archived_text_static_scan": {
+          "status": "passed",
+          "checks": [
+            "secrets_or_private_keys",
+            "controls",
+            "bidi",
+            "instruction_injection",
+            "obfuscated_execution",
+            "execution_or_active_network"
+          ],
+          "findings": []
+        },
+        "source_provenance_urls": "HTTPS documentation links, imports, and provenance strings are inert text, not network calls; never followed at runtime.",
+        "full_fetched_text_initial_scan": [
+          {
+            "path": "README.md",
+            "findings": {
+              "network_execution": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                8,
+                10,
+                19,
+                37,
+                259,
+                263,
+                267,
+                273,
+                277,
+                281,
+                285,
+                289,
+                293,
+                299,
+                303,
+                307,
+                311,
+                315,
+                319,
+                325,
+                329,
+                333,
+                337,
+                341,
+                345,
+                349,
+                353,
+                359,
+                363,
+                367,
+                371,
+                375,
+                379,
+                383,
+                387,
+                391,
+                395,
+                399,
+                403,
+                407,
+                411,
+                415,
+                419,
+                423,
+                427,
+                431,
+                435,
+                439,
+                445,
+                449,
+                453,
+                457,
+                461,
+                465,
+                469,
+                473,
+                477,
+                483,
+                489,
+                493,
+                497,
+                501,
+                505,
+                509,
+                513,
+                517,
+                521,
+                525,
+                529,
+                533,
+                537,
+                541,
+                545,
+                549,
+                553,
+                557,
+                561,
+                565,
+                569,
+                575,
+                579,
+                583,
+                587,
+                591,
+                595,
+                599,
+                603,
+                607,
+                611,
+                615,
+                621,
+                625,
+                629,
+                633,
+                637,
+                641,
+                645,
+                649,
+                653,
+                657,
+                661,
+                665,
+                671,
+                675,
+                679,
+                683,
+                687,
+                691,
+                695,
+                701,
+                705,
+                709,
+                713,
+                717,
+                721,
+                725,
+                729,
+                733,
+                737,
+                741,
+                745,
+                749,
+                753,
+                757,
+                761,
+                765,
+                769,
+                773,
+                777,
+                781,
+                785,
+                789,
+                793,
+                797,
+                807
+              ]
+            }
+          },
+          {
+            "path": "src/core/Float.tsx",
+            "findings": {}
+          },
+          {
+            "path": "LICENSE",
+            "findings": {}
+          }
+        ],
+        "not_performed": [
+          "antivirus",
+          "dependency audit",
+          "native runtime execution",
+          "whole repository malware assessment"
+        ],
+        "git_blob_integrity": {
+          "verified_files": 3,
+          "total_upstream_files": 3,
+          "status": "passed",
+          "limit": null
+        }
+      }
+    },
+    {
+      "repository": "rive-app/rive-react",
+      "revision": "5ae214890c2d4bd14fcaa275c550abd389be975b",
+      "license": "MIT",
+      "source_url": "https://github.com/rive-app/rive-react/tree/5ae214890c2d4bd14fcaa275c550abd389be975b",
+      "reference_ids": [
+        "github-motion-rive-app--rive-react"
+      ],
+      "selection_reason": "React Rive integration reference grounded in useRive's canvas lifecycle and instance cleanup, not a bundled Rive animation or runtime.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-motion/rive-app--rive-react.json",
+          "sha256": "e444a84afffa426959e48349be026bfa972d825f020fb2538fe590f188a12e06"
+        },
+        {
+          "path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+          "sha256": "cf81859d85e99ff2fad83d51d9dfd85ca5189b23c4442aacf1890c54665d92f4"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "d3db576862ff069a0889157166a11e3f3136ec74a4736cb6acbac172ab835262",
+          "pinned_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/README.md",
+          "expected_git_blob_sha1": "0d987315bae95530f344915345a95ae7ca675545",
+          "verified_git_blob_sha1": "0d987315bae95530f344915345a95ae7ca675545"
+        },
+        {
+          "path": "src/hooks/useRive.tsx",
+          "sha256": "132b75eadb9fe937d1c08115a1fae2c064a310cbcc4c8911b49de1a7d6a34b9e",
+          "pinned_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/src/hooks/useRive.tsx",
+          "expected_git_blob_sha1": "db568636fe4e09b4c79751d132aedd2480541ca9",
+          "verified_git_blob_sha1": "db568636fe4e09b4c79751d132aedd2480541ca9"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "cf81859d85e99ff2fad83d51d9dfd85ca5189b23c4442aacf1890c54665d92f4",
+          "pinned_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/LICENSE",
+          "expected_git_blob_sha1": "56f08fbe282718247fff92d6651d0d8c55750af0",
+          "verified_git_blob_sha1": "56f08fbe282718247fff92d6651d0d8c55750af0"
+        }
+      ],
+      "scans": {
+        "scope": "Fetched UTF-8 README and selected module text; archived JSON, license, and original inline examples. No whole-repository claim.",
+        "archived_text_static_scan": {
+          "status": "passed",
+          "checks": [
+            "secrets_or_private_keys",
+            "controls",
+            "bidi",
+            "instruction_injection",
+            "obfuscated_execution",
+            "execution_or_active_network"
+          ],
+          "findings": []
+        },
+        "source_provenance_urls": "HTTPS documentation links, imports, and provenance strings are inert text, not network calls; never followed at runtime.",
+        "full_fetched_text_initial_scan": [
+          {
+            "path": "README.md",
+            "findings": {
+              "network_execution": [
+                1,
+                2,
+                3,
+                7,
+                9,
+                11,
+                15,
+                16,
+                17,
+                18,
+                32,
+                34,
+                36,
+                38,
+                44,
+                45,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                64,
+                65,
+                69,
+                75,
+                83
+              ]
+            }
+          },
+          {
+            "path": "src/hooks/useRive.tsx",
+            "findings": {}
+          },
+          {
+            "path": "LICENSE",
+            "findings": {}
+          }
+        ],
+        "not_performed": [
+          "antivirus",
+          "dependency audit",
+          "native runtime execution",
+          "whole repository malware assessment"
+        ],
+        "git_blob_integrity": {
+          "verified_files": 3,
+          "total_upstream_files": 3,
+          "status": "passed",
+          "limit": null
+        }
+      }
+    },
+    {
+      "repository": "rive-app/rive-flutter",
+      "revision": "cec7801eab6d24d0a6ea193e66243223488c8f51",
+      "license": "MIT",
+      "source_url": "https://github.com/rive-app/rive-flutter/tree/cec7801eab6d24d0a6ea193e66243223488c8f51",
+      "reference_ids": [
+        "github-motion-rive-app--rive-flutter"
+      ],
+      "selection_reason": "Flutter animation lifecycle reference from the pause/play example: bind controller activation to deliberate playback intent and dispose the owned FileLoader.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-motion/rive-app--rive-flutter.json",
+          "sha256": "df91b7412c0291533712408f0af7ab46f3a8de8b2bc3ebda81f2813ba36cd383"
+        },
+        {
+          "path": "licenses/github-motion/rive-app--rive-flutter/LICENSE",
+          "sha256": "4effdb117f7a3cf3a65d50fa25496b39634403e6fcedcc2c3cb3e1cb15fd5b43"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "b4e4b448bf18377ff1da611d4cba33252fe334e59e84e66fd92b01a8e25651c6",
+          "pinned_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/README.md",
+          "expected_git_blob_sha1": "fb82c3dd660f3533bad0ac35a94eabe3d3e18211",
+          "verified_git_blob_sha1": "fb82c3dd660f3533bad0ac35a94eabe3d3e18211"
+        },
+        {
+          "path": "example/lib/examples/pause_play.dart",
+          "sha256": "a9536512415cdd086a3fe02b2e10f63326f19de04a30855c99bc273051fb5f89",
+          "pinned_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/example/lib/examples/pause_play.dart",
+          "expected_git_blob_sha1": "c60ce2b16455fde500764aa873a992a066c8e383",
+          "verified_git_blob_sha1": "c60ce2b16455fde500764aa873a992a066c8e383"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "4effdb117f7a3cf3a65d50fa25496b39634403e6fcedcc2c3cb3e1cb15fd5b43",
+          "pinned_url": "https://raw.githubusercontent.com/rive-app/rive-flutter/cec7801eab6d24d0a6ea193e66243223488c8f51/LICENSE",
+          "expected_git_blob_sha1": "aec1d1737466b866004918c57baf671f491d29e7",
+          "verified_git_blob_sha1": "aec1d1737466b866004918c57baf671f491d29e7"
+        }
+      ],
+      "scans": {
+        "scope": "Fetched UTF-8 README and selected module text; archived JSON, license, and original inline examples. No whole-repository claim.",
+        "archived_text_static_scan": {
+          "status": "passed",
+          "checks": [
+            "secrets_or_private_keys",
+            "controls",
+            "bidi",
+            "instruction_injection",
+            "obfuscated_execution",
+            "execution_or_active_network"
+          ],
+          "findings": []
+        },
+        "source_provenance_urls": "HTTPS documentation links, imports, and provenance strings are inert text, not network calls; never followed at runtime.",
+        "full_fetched_text_initial_scan": [
+          {
+            "path": "README.md",
+            "findings": {
+              "network_execution": [
+                1,
+                2,
+                3,
+                4,
+                8,
+                10,
+                33,
+                37,
+                38,
+                39,
+                40,
+                44,
+                48,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                86,
+                90,
+                99,
+                116,
+                144,
+                174,
+                175,
+                179,
+                183
+              ]
+            }
+          },
+          {
+            "path": "example/lib/examples/pause_play.dart",
+            "findings": {}
+          },
+          {
+            "path": "LICENSE",
+            "findings": {}
+          }
+        ],
+        "not_performed": [
+          "antivirus",
+          "dependency audit",
+          "native runtime execution",
+          "whole repository malware assessment"
+        ],
+        "git_blob_integrity": {
+          "verified_files": 3,
+          "total_upstream_files": 3,
+          "status": "passed",
+          "limit": null
+        }
+      }
+    },
+    {
+      "repository": "vueuse/motion",
+      "revision": "c0efec2b20d546752763919def979f194d41a99b",
+      "license": "MIT",
+      "source_url": "https://github.com/vueuse/motion/tree/c0efec2b20d546752763919def979f194d41a99b",
+      "reference_ids": [
+        "github-motion-vueuse--motion"
+      ],
+      "selection_reason": "Vue browser motion reference combining directive variants with the library's reactive prefers-reduced-motion helper.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-motion/vueuse--motion.json",
+          "sha256": "c6ed03e40cb448e6a886566fb48d366671e6c1c4f5b007dfb379f3fd20faeef3"
+        },
+        {
+          "path": "licenses/github-motion/vueuse--motion/LICENSE",
+          "sha256": "9d1d5673ad90fa6f0dbe7e347e14f3807b5d0120eaee38007bd3df6882308cd5"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "73351fbb3b16064e68b19b9c63a18323f1a8553993319f4b51893bcb5645156e",
+          "pinned_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/README.md",
+          "expected_git_blob_sha1": "f2b3b552dde57ecf42a81c7618efc0b26ba1fd29",
+          "verified_git_blob_sha1": "f2b3b552dde57ecf42a81c7618efc0b26ba1fd29"
+        },
+        {
+          "path": "src/useReducedMotion.ts",
+          "sha256": "8b0d144233d1209bcbdfaf9dda253ac3e402ada8910f2d0657f75480c930c037",
+          "pinned_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/src/useReducedMotion.ts",
+          "expected_git_blob_sha1": "c7e49f3e77594ed5b4440bb1559b933f40743a30",
+          "verified_git_blob_sha1": "c7e49f3e77594ed5b4440bb1559b933f40743a30"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "9d1d5673ad90fa6f0dbe7e347e14f3807b5d0120eaee38007bd3df6882308cd5",
+          "pinned_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/LICENSE",
+          "expected_git_blob_sha1": "ea51dc716ca247497e1e95a1d2a59c19de863738",
+          "verified_git_blob_sha1": "ea51dc716ca247497e1e95a1d2a59c19de863738"
+        }
+      ],
+      "scans": {
+        "scope": "Fetched UTF-8 README and selected module text; archived JSON, license, and original inline examples. No whole-repository claim.",
+        "archived_text_static_scan": {
+          "status": "passed",
+          "checks": [
+            "secrets_or_private_keys",
+            "controls",
+            "bidi",
+            "instruction_injection",
+            "obfuscated_execution",
+            "execution_or_active_network"
+          ],
+          "findings": []
+        },
+        "source_provenance_urls": "HTTPS documentation links, imports, and provenance strings are inert text, not network calls; never followed at runtime.",
+        "full_fetched_text_initial_scan": [
+          {
+            "path": "README.md",
+            "findings": {
+              "network_execution": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                11,
+                12,
+                19,
+                21,
+                65,
+                67,
+                69,
+                71,
+                73,
+                85,
+                87,
+                89,
+                91
+              ]
+            }
+          },
+          {
+            "path": "src/useReducedMotion.ts",
+            "findings": {}
+          },
+          {
+            "path": "LICENSE",
+            "findings": {}
+          }
+        ],
+        "not_performed": [
+          "antivirus",
+          "dependency audit",
+          "native runtime execution",
+          "whole repository malware assessment"
+        ],
+        "git_blob_integrity": {
+          "verified_files": 3,
+          "total_upstream_files": 3,
+          "status": "passed",
+          "limit": null
+        }
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "repository": "animate-css/animate.css",
+      "revision": "3f8ab233dbbd9d2fe577528d2296382954be3d1a",
+      "reason": "Pinned LICENSE identifies a Hippocratic license rather than standard MIT terms; use restrictions are outside this permissive-redistribution collection. Excluded conservatively.",
+      "license_sha256": "d7aeec796d07d91a33d5070ce9a8b8832d67cfeb390521f67c4f91fed7d80822"
+    }
+  ],
+  "limitations": [
+    "Eight newly referenced public repositories, eight entries, eight inert JSON source references, eight original inline fragments, and zero new playable Lottie/dotLottie/Rive animations.",
+    "Live unauthenticated public GitHub API metadata, commit/tree discovery, and repository search; selected UTF-8 files fetched only from full-SHA raw.githubusercontent.com URLs through the existing allowlisted Fetcher with public DNS/TLS pinning and byte/time quotas.",
+    "No clones, archives, downloads of builds, installers, hooks, binary animations, native libraries, WASM, or dependency installation. No downloaded source executed or SVG/HTML rendered.",
+    "Root LICENSE and root/one-level NOTICE paths were checked against full pinned trees. No additional NOTICE files were present for selected MIT modules. Third-party copyright statements remain in complete separate license files.",
+    "Static pattern scanning is limited to fetched and archived text. Documentation HTTPS URLs are benign flagged references, not active fetch code. No antivirus, dependency audit, or whole-repository safety certification.",
+    "Catalog examples are original integration fragments requiring host application context and reviewed dependencies; they were not executed. Only declared framework/browser/mobile scope is claimed.",
+    "Copied README excerpts are shortened to API/framework guidance, with image embeds, raw HTML/script media, and unrelated installer instructions omitted. The dotLottie remote sample placeholder was changed to a relative local path and that modification is recorded.",
+    "This final verification observed no redirects on selected raw full-SHA fetches. Every raw fetch attempt remained on the selected repository/full revision; Git blob SHA1 is computed over complete fetched bytes and compared with pinned tree metadata where available. Missing metadata is reported explicitly rather than fabricated. Offline validation cannot independently recompute source blob hashes from shortened excerpts."
+  ]
+}

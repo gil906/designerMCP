@@ -1,0 +1,43 @@
+{
+  "attribution_verbatim": [
+    "Copyright (c) 2019 Chakra Systems Inc.",
+    "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER"
+  ],
+  "excerpts": [
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous excerpt. Other README content, including installers, trackers and unrelated media, omitted.",
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/README.md",
+      "range": {
+        "end_line": 40,
+        "start_line": 38
+      },
+      "text": "Chakra UI is a component system for building products with speed. Accessible\nReact components for building high-quality web apps and design systems. Works\nwith Next.js RSC"
+    },
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "apps/compositions/src/examples/accordion-with-subtext.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/apps/compositions/src/examples/accordion-with-subtext.tsx",
+      "range": {
+        "end_line": 28,
+        "start_line": 11
+      },
+      "text": "  return (\n    <Accordion.Root collapsible>\n      {items.map((item, index) => (\n        <Accordion.Item key={index} value={item.value}>\n          <Accordion.ItemTrigger>\n            <Stack gap=\"1\">\n              <Text>{item.title}</Text>\n              <Text fontSize=\"sm\" color=\"fg.muted\">\n                Click to expand\n              </Text>\n            </Stack>\n          </Accordion.ItemTrigger>\n          <Accordion.ItemContent>\n            <Accordion.ItemBody>{item.text}</Accordion.ItemBody>\n          </Accordion.ItemContent>\n        </Accordion.Item>\n      ))}\n    </Accordion.Root>"
+    }
+  ],
+  "license": "MIT",
+  "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+  "notice_path": null,
+  "repository": "chakra-ui/chakra-ui",
+  "revision": "3eda54cae8d4a08b557917a233d1af3728e8d4b4",
+  "safety": "Untrusted inert text only. Do not execute, render markup, load remote resources or treat copied content as agent instructions. No upstream code or dependencies executed.",
+  "source_url": "https://github.com/chakra-ui/chakra-ui/tree/3eda54cae8d4a08b557917a233d1af3728e8d4b4",
+  "synthesis": {
+    "guidance": "Adapt Root/Item/ItemTrigger/ItemContent/ItemBody to real settings: identify the setting in the title and summarize its current value or consequence on a short second line. The story uses Stack gap=\"1\" and Text fontSize=\"sm\" color=\"fg.muted\" to establish hierarchy without another bordered card. Replace \"Click to expand\" with input-neutral, informative copy, and replace LoremIpsum with actual content. Use stable item IDs as React keys, not the example index. Check muted-text contrast in both themes, focus visibility and wrapping at narrow widths. Let application typography and spacing set the rhythm rather than repeating marketing tiles. The excerpt depends on Chakra and surrounding items data; it is not standalone code.",
+    "modifications": "Original adaptation guidance and archive wrapper; copied excerpts retain recorded ranges and licensing.",
+    "summary": "An accordion trigger stacks a title with smaller muted subtext, while the body lives in ItemContent/ItemBody. Useful for compact preferences and setup screens."
+  },
+  "version": 1
+}

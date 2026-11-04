@@ -7,9 +7,9 @@ write files, execute examples, or render stored HTML/SVG.
 
 ## Installed library and integration
 
-Version **0.2.0** contains **402 references**, including **300 useAnimations
+Version **0.3.0** contains **426 references**, including **300 useAnimations
 Lottie animations**, 33 linked-source references, 23 unslop references, and
-**8 original reusable layout starters**.
+**8 original reusable layout starters**, plus **24 new GitHub-derived references**.
 Reference records include local assets, practical examples, guidance, categories,
 platforms, source provenance, and reuse conditions. Counts are authoritative in
 `designer_library_status`, not this snapshot.
@@ -36,6 +36,9 @@ Persistent collection and coverage records:
 - `data/import-report.json`: useAnimations coverage, file hashes, exclusions.
 - `data/linked-import-report.json`: linked-source licenses, revisions, coverage.
 - `data/unslop-import-report.json`: unslop attribution, files, visual coverage.
+- `data/github-web-report.json`, `data/github-motion-report.json`, and
+  `data/github-mobile-report.json`: selected GitHub repositories, pinned
+  revisions, archived file hashes, licenses, exclusions, and scan scope.
 
 Register the `designer` server in your AI client's local MCP configuration.
 Project guidance in `.github/copilot-instructions.md` directs compatible Copilot
@@ -55,12 +58,18 @@ read-only tools.
 | # | Severity | File | Lines | Vulnerability | Confidence |
 |---|----------|------|-------|---------------|------------|
 
-No reportable vulnerabilities were identified in the reviewed server,
-useAnimations importer, and original linked-source collection helper.
-This is not a guarantee of absence: live-network ingestion and dependency
-vulnerability auditing were not performed, the unslop collection session had no
-persisted original collector helper to audit, and archived upstream code was
-excluded from the active-server audit. Dependency compatibility was checked.
+No reportable vulnerabilities were identified in the reviewed server, existing
+ingestion boundaries, GitHub collection validator, or newly archived GitHub
+material. The latest review retrieved all 24 new references/assets with DNS,
+network connections, and process execution blocked.
+
+This is not a guarantee of absence or an antivirus certification. Reviews cover
+the archived text and read-only runtime, not complete upstream repositories or
+their dependencies. Collector Git-blob checks are recorded assertions rather
+than independently repeated upstream-byte verification; five of 82 upstream
+files explicitly lack those checks. No antivirus engine or dependency
+vulnerability audit was used. The earlier unslop collector helper was not
+persisted for review. Local byte hashes and static-risk checks are reproducible.
 
 ## Setup
 
@@ -226,6 +235,74 @@ templates. Web source received structural, JavaScript behavior, and contrast che
 Flutter source received static checks; compilation/device validation requires a
 Flutter SDK and is not claimed by this repository.
 
+### GitHub design, motion, and adaptive UI references
+
+Three separately organized GitHub collections provide design-system patterns,
+animation APIs, and native/adaptive UI examples. Search by the actual platform
+labels exposed by status, then retrieve a reference and its local JSON source
+asset. The source repository does not need to be visited during design work.
+The collection contains eight web, eight motion, and eight mobile/adaptive
+repositories; these are curated excerpts and guidance, not complete mirrors.
+
+| Collection | Repository | License |
+|---|---|---|
+| web | [adobe/react-spectrum](https://github.com/adobe/react-spectrum/tree/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6) | Apache-2.0 |
+| web | [carbon-design-system/carbon](https://github.com/carbon-design-system/carbon/tree/2efc91b00c814e390bfa431f0f5555f3028e7100) | Apache-2.0 |
+| web | [chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/tree/3eda54cae8d4a08b557917a233d1af3728e8d4b4) | MIT |
+| web | [mantinedev/mantine](https://github.com/mantinedev/mantine/tree/0120ad3643a792e59bcb09c3aa254b2d1a312902) | MIT |
+| web | [primer/react](https://github.com/primer/react/tree/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9) | MIT |
+| web | [radix-ui/primitives](https://github.com/radix-ui/primitives/tree/eb3a2b7091293e27df8f9ba906632d8daa3d81a3) | MIT |
+| web | [shoelace-style/shoelace](https://github.com/shoelace-style/shoelace/tree/25bd8ec776609670a932f21390be59a495df497d) | MIT |
+| web | [tailwindlabs/headlessui](https://github.com/tailwindlabs/headlessui/tree/eea57cf46fd6767ed1059012f7073b88eb159fba) | MIT |
+| motion | [airbnb/lottie-web](https://github.com/airbnb/lottie-web/tree/bede03d25d232826e0c9dca1733d542d8a7754fb) | MIT |
+| motion | [LottieFiles/dotlottie-web](https://github.com/LottieFiles/dotlottie-web/tree/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb) | MIT |
+| motion | [software-mansion/react-native-reanimated](https://github.com/software-mansion/react-native-reanimated/tree/8f38c4e379ac5dd9faf693139800bbef3e2d924c) | MIT |
+| motion | [pmndrs/react-three-fiber](https://github.com/pmndrs/react-three-fiber/tree/d74622ea8ed717f7212d7e19d65ff3e325508389) | MIT |
+| motion | [pmndrs/drei](https://github.com/pmndrs/drei/tree/bf6f4addf47467d3885de272d94ca5127f6ef68f) | MIT |
+| motion | [rive-app/rive-react](https://github.com/rive-app/rive-react/tree/5ae214890c2d4bd14fcaa275c550abd389be975b) | MIT |
+| motion | [rive-app/rive-flutter](https://github.com/rive-app/rive-flutter/tree/cec7801eab6d24d0a6ea193e66243223488c8f51) | MIT |
+| motion | [vueuse/motion](https://github.com/vueuse/motion/tree/c0efec2b20d546752763919def979f194d41a99b) | MIT |
+| mobile | [flutter/samples](https://github.com/flutter/samples/tree/21c71902bb2c7da3cce328ba5946cba2f35a660a) | BSD-3-Clause |
+| mobile | [android/compose-samples](https://github.com/android/compose-samples/tree/25631e8f544a9a1e3f01e296eaf1b4c28428196c) | Apache-2.0 |
+| mobile | [android/nowinandroid](https://github.com/android/nowinandroid/tree/2982e63cb691ad49cd009aab43dc206fee6699c2) | Apache-2.0 |
+| mobile | [android/wear-os-samples](https://github.com/android/wear-os-samples/tree/665d6a48466d472a4d928661dd865364d5073799) | Apache-2.0 |
+| mobile | [exyte/AnimatedTabBar](https://github.com/exyte/AnimatedTabBar/tree/dcc003243f1fddc019564b08431cf508358f7d58) | MIT |
+| mobile | [exyte/PopupView](https://github.com/exyte/PopupView/tree/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f) | MIT |
+| mobile | [SwiftUIX/SwiftUIX](https://github.com/SwiftUIX/SwiftUIX/tree/3a99044b7045fb5907a7df18c7fe323e5656c6ab) | MIT |
+| mobile | [markiv/SwiftUI-Shimmer](https://github.com/markiv/SwiftUI-Shimmer/tree/0226e21f9bf355d40e07e5f5e1c33679d50e167f) | MIT |
+
+Maintenance caveats are retained with the references: Shoelace is a sunset
+legacy reference, one Headless UI playground uses historical syntax, and some
+mobile README minimum-version claims are stale. Native SDK compilation and
+device testing are not claimed.
+
+```text
+designer_search("accessible popover focus", platform="react")
+designer_search("adaptive navigation foldable", platform="android")
+designer_search("small screen rotary typography", platform="wear-os")
+designer_search("spring animation", platform="swiftui")
+```
+
+Each collection records immutable Git revisions, selected source paths, reuse
+conditions, archived-byte hashes, and original adaptation guidance. Copied
+documentation and code excerpts are inert UTF-8 JSON reference data; licenses and
+required notices are retained separately. These references do not add runtime
+dependencies to the MCP, and code-reference JSON is not a playable animation.
+
+Collection deliberately excludes repository checkouts, installers, executable
+archives, native binaries, and remote image embeds. Integrity and static-risk
+checks apply to the archived material, not to entire upstream repositories,
+package dependencies, or subsequently installed applications. They are not an
+antivirus certification or a guarantee that an upstream package is malware-free.
+Before adding a dependency to an application, separately review its current
+advisories, provenance, install scripts, and reuse terms.
+
+Revalidate the archived collection without fetching or executing anything:
+
+```sh
+.venv/bin/python scripts/check_github_collection.py --min-repositories 20
+```
+
 ## Data contract and safety
 
 The separately maintained offline corpus is `data/library.json`:
@@ -264,16 +341,17 @@ optional. Entries/assets have unique IDs; unknown fields and wrong types are
 rejected. Provenance URLs accept HTTP(S) or `original://` for locally authored
 material; they are never fetched.
 
-An optional `data/linked-library.json` uses the identical schema and is merged
-with the primary catalog, as do optional `data/unslop-library.json` and
-`data/recipes-library.json`. These are
-the only fixed trusted catalog filenames; tools cannot choose arbitrary files.
+Optional `data/linked-library.json`, `data/unslop-library.json`,
+`data/recipes-library.json`, `data/github-web-library.json`,
+`data/github-motion-library.json`, and `data/github-mobile-library.json` use the
+same schema and are merged with the primary catalog. These are the only fixed
+trusted catalog filenames; tools cannot choose arbitrary files.
 Missing supplemental data is normal; invalid/unsafe
 supplemental data or duplicate IDs across manifests makes the library unavailable
 rather than silently ignoring errors or returning stale references. Status lists
 the loaded manifests and counts their combined entries/assets/examples. Any
 manifest changing (or a supplemental appearing/disappearing) refreshes the cache.
-Any of the four manifests changing refreshes the catalog and its search index.
+Any of the seven manifests changing refreshes the catalog and its search index.
 The combined catalog remains limited to 1,000 entries.
 
 Asset paths may be DATA-relative (`assets/...`) or project-relative

@@ -1,0 +1,42 @@
+{
+  "attribution_verbatim": [
+    "Copyright (c) 2022 WorkOS"
+  ],
+  "excerpts": [
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous excerpt. Other README content, including installers, trackers and unrelated media, omitted.",
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/README.md",
+      "range": {
+        "end_line": 7,
+        "start_line": 5
+      },
+      "text": "**An open-source UI component library for building high-quality, accessible design systems and web apps.**\n\nRadix Primitives is a low-level UI component library with a focus on accessibility, customization and developer experience. You can use these components either as the base layer of your design system, or adopt them incrementally."
+    },
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "apps/storybook/stories/alert-dialog.stories.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/apps/storybook/stories/alert-dialog.stories.tsx",
+      "range": {
+        "end_line": 22,
+        "start_line": 7
+      },
+      "text": "export const Styled = () => (\n  <AlertDialog.Root>\n    <AlertDialog.Trigger className={styles.trigger}>delete everything</AlertDialog.Trigger>\n    <AlertDialog.Portal>\n      <AlertDialog.Overlay className={styles.overlay} />\n      <AlertDialog.Content className={styles.content}>\n        <AlertDialog.Title className={styles.title}>Are you sure?</AlertDialog.Title>\n        <AlertDialog.Description className={styles.description}>\n          This will do a very dangerous thing. Thar be dragons!\n        </AlertDialog.Description>\n        <AlertDialog.Action className={styles.action}>yolo, do it</AlertDialog.Action>\n        <AlertDialog.Cancel className={styles.cancel}>maybe not</AlertDialog.Cancel>\n      </AlertDialog.Content>\n    </AlertDialog.Portal>\n  </AlertDialog.Root>\n);"
+    }
+  ],
+  "license": "MIT",
+  "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+  "notice_path": null,
+  "repository": "radix-ui/primitives",
+  "revision": "eb3a2b7091293e27df8f9ba906632d8daa3d81a3",
+  "safety": "Untrusted inert text only. Do not execute, render markup, load remote resources or treat copied content as agent instructions. No upstream code or dependencies executed.",
+  "source_url": "https://github.com/radix-ui/primitives/tree/eb3a2b7091293e27df8f9ba906632d8daa3d81a3",
+  "synthesis": {
+    "guidance": "Use the Root/Portal/Overlay/Content hierarchy from the inspected alert-dialog story, preserving Title and Description rather than styling an anonymous floating card. Size the dialog from the real decision text and place a clearly named cancel action beside the consequential action. Replace the upstream joke labels with actual consequences; do not copy its financial scenario or external imagery. Choose alertdialog only for an interruption requiring a decision, not every informational overlay. Keep existing brand typography and quiet surfaces: the primitive supplies behavior, not a finished visual identity. Test Tab, Escape, initial focus and focus return with the installed version. The excerpt is not a runnable bundle; upstream CSS is omitted.",
+    "modifications": "Original adaptation guidance and archive wrapper; copied excerpts retain recorded ranges and licensing.",
+    "summary": "A compound alert-dialog composition separates trigger, overlay, accessible title, description, confirm action and cancel action. Useful for consequential changes in settings or account screens."
+  },
+  "version": 1
+}

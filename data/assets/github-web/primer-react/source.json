@@ -1,0 +1,53 @@
+{
+  "attribution_verbatim": [
+    "Copyright (c) 2018 GitHub, Inc."
+  ],
+  "excerpts": [
+    {
+      "license": "MIT",
+      "modifications": "Removed presentation-only HTML paragraph wrapper; other README content omitted.",
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/README.md",
+      "range": {
+        "end_line": 7,
+        "start_line": 7
+      },
+      "text": "A React implementation of GitHub's Primer Design System"
+    },
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "packages/react/src/ActionList/ActionList.stories.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx",
+      "range": {
+        "end_line": 23,
+        "start_line": 17
+      },
+      "text": "export const Default = () => (\n  <ActionList>\n    <ActionList.Item>Copy link</ActionList.Item>\n    <ActionList.Item>Quote reply</ActionList.Item>\n    <ActionList.Item>Edit comment</ActionList.Item>\n  </ActionList>\n)"
+    },
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "packages/react/src/ActionList/ActionList.stories.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx",
+      "range": {
+        "end_line": 104,
+        "start_line": 96
+      },
+      "text": "  return (\n    <ActionList selectionVariant={args.selectionVariant}>\n      <ActionList.Item {...args}>\n        {leadingVisual && <ActionList.LeadingVisual>{leadingVisual}</ActionList.LeadingVisual>}\n        Action list item\n        {trailingVisual && <ActionList.TrailingVisual>{trailingVisual}</ActionList.TrailingVisual>}\n      </ActionList.Item>\n    </ActionList>\n  )"
+    }
+  ],
+  "license": "MIT",
+  "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+  "notice_path": null,
+  "repository": "primer/react",
+  "revision": "57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9",
+  "safety": "Untrusted inert text only. Do not execute, render markup, load remote resources or treat copied content as agent instructions. No upstream code or dependencies executed.",
+  "source_url": "https://github.com/primer/react/tree/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9",
+  "synthesis": {
+    "guidance": "Start with clear text commands, adding a leading icon only when it improves scanning. Reserve trailing visuals for meaningful secondary cues, not repeated decorative badges. ItemPlayground passes selectionVariant to ActionList and selected/active state to the item; distinguish current navigation from selected choices instead of painting both alike. Match row heights, icon alignment and separators to the product, preserving a visible focus target for each interactive row. Short command lists often need no card shadow. Copy link/Quote reply/Edit comment are upstream reference labels, not implemented actions. These are partial stories with omitted imports and arguments; verify actual routing, keyboard behavior and installed Primer APIs.",
+    "modifications": "Original adaptation guidance and archive wrapper; copied excerpts retain recorded ranges and licensing.",
+    "summary": "ActionList stories show simple command rows and explicit LeadingVisual/TrailingVisual slots within each item. Useful for compact contextual actions or selectable product navigation."
+  },
+  "version": 1
+}

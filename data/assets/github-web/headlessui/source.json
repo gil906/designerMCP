@@ -1,0 +1,42 @@
+{
+  "attribution_verbatim": [
+    "Copyright (c) 2020 Tailwind Labs"
+  ],
+  "excerpts": [
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous excerpt. Other README content, including installers, trackers and unrelated media, omitted.",
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/README.md",
+      "range": {
+        "end_line": 7,
+        "start_line": 6
+      },
+      "text": "  A set of completely unstyled, fully accessible UI components, designed to integrate\n  beautifully with Tailwind CSS."
+    },
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+      "range": {
+        "end_line": 27,
+        "start_line": 10
+      },
+      "text": "      <Button onClick={() => setOpen(true)}>Open dialog</Button>\n      <Dialog open={open} onClose={setOpen} className=\"fixed inset-0 grid place-content-center\">\n        <div className=\"fixed inset-0 bg-gray-500/70\" />\n        <Dialog.Panel className=\"inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle\">\n          <div className=\"bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4\">\n            <Tab.Group>\n              <Tab.List className=\"flex gap-4 py-4\">\n                <Tab as={Button}>Tab 1</Tab>\n                <Tab as={Button}>Tab 2</Tab>\n                <Tab as={Button}>Tab 3</Tab>\n              </Tab.List>\n              <Tab.Panels>\n                <Tab.Panel className=\"px-3 py-2\">Panel 1</Tab.Panel>\n                <Tab.Panel className=\"px-3 py-2\">Panel 2</Tab.Panel>\n                <Tab.Panel className=\"px-3 py-2\">Panel 3</Tab.Panel>\n              </Tab.Panels>\n            </Tab.Group>\n          </div>"
+    }
+  ],
+  "license": "MIT",
+  "license_path": "licenses/github-web/headlessui/LICENSE.txt",
+  "notice_path": null,
+  "repository": "tailwindlabs/headlessui",
+  "revision": "eea57cf46fd6767ed1059012f7073b88eb159fba",
+  "safety": "Untrusted inert text only. Do not execute, render markup, load remote resources or treat copied content as agent instructions. No upstream code or dependencies executed.",
+  "source_url": "https://github.com/tailwindlabs/headlessui/tree/eea57cf46fd6767ed1059012f7073b88eb159fba",
+  "synthesis": {
+    "guidance": "Use a dialog for a bounded task; if its tabs contain an entire application, move them to a page. The inspected playground separates open/onClose from Tab.Group and its list/panels. Carry that separation into the current installed API, replacing numbered tabs with task sections and sizing the dialog to real content. IMPORTANT: this playground uses compound Dialog.Panel and Tab.Group syntax and lacks an explicit dialog title; it is a historical composition reference, not a current drop-in or accessibility-complete example. Add the current library's accessible DialogTitle/heading and verify tab keyboard navigation, dismissal and focus return. Use existing surface and spacing tokens; Tailwind utilities are not a visual identity. The local Button helper and dependencies are neither archived nor installed.",
+    "modifications": "Original adaptation guidance and archive wrapper; copied excerpts retain recorded ranges and licensing.",
+    "summary": "A playground nests a tab list and panels inside a controlled dialog, separating overlay visibility from within-dialog navigation. Useful for focused multi-section tasks."
+  },
+  "version": 1
+}

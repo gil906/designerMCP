@@ -10,7 +10,7 @@ from PIL import Image
 
 from designer_mcp.library import (
     MAX_ASSET_BYTES, MAX_LIBRARY_BYTES, MAX_OUTPUT_BYTES,
-    Library, LibraryError, bounded,
+    GITHUB_MANIFESTS, Library, LibraryError, bounded,
 )
 from designer_mcp.server import create_server
 
@@ -48,7 +48,7 @@ def test_reference_provenance_and_cache_signatures(populated):
         library.reference("missing")
 
 
-@pytest.mark.parametrize("manifest", ["linked-library.json", "unslop-library.json", "recipes-library.json"])
+@pytest.mark.parametrize("manifest", ["linked-library.json", "unslop-library.json", "recipes-library.json", *GITHUB_MANIFESTS])
 def test_supplemental_merge_and_refresh(populated, entry, manifest):
     library = Library(populated)
     assert library.status()["manifests"] == ["data/library.json"]
@@ -69,7 +69,7 @@ def test_supplemental_merge_and_refresh(populated, entry, manifest):
 
 
 @pytest.mark.parametrize("invalid", ["duplicate", "schema", "symlink"])
-@pytest.mark.parametrize("manifest", ["linked-library.json", "unslop-library.json", "recipes-library.json"])
+@pytest.mark.parametrize("manifest", ["linked-library.json", "unslop-library.json", "recipes-library.json", *GITHUB_MANIFESTS])
 def test_supplemental_invalid_rejects_stale_cache(populated, entry, invalid, manifest):
     library = Library(populated)
     assert library.status()["entry_count"] == 1
@@ -93,6 +93,90 @@ def test_duplicate_ids_between_supplementals(populated, entry):
     for name in ("linked-library.json", "unslop-library.json"):
         (populated / "data" / name).write_text(json.dumps({"version": 1, "entries": [other]}))
     assert Library(populated).status()["library_state"] == "unavailable"
+
+
+@pytest.mark.parametrize("query,labels", [
+    ("iphone", ["ios"]), ("ipad", ["ipados"]), ("ipad", ["ios"]),
+    ("apple watch", ["watchos"]), ("wear os", ["wear-os"]),
+    ("wearos", ["wear-os"]), ("android app", ["android"]),
+    ("foldables", ["foldable"]),
+])
+def test_device_alias_search_requires_declared_platform(populated, entry, query, labels):
+    native = copy.deepcopy(entry)
+    native.update(id="native", title="Device navigation", platforms=labels, tags=[])
+    web = copy.deepcopy(entry)
+    web.update(id="web", title=f"{query} responsive layout", platforms=["web", "flutter"])
+    write_catalog(populated, [native, web])
+    library = Library(populated)
+    assert [r["id"] for r in library.search(query)["results"]] == ["native"]
+    assert [r["id"] for r in library.search("navigation", platform=query)["results"]] == ["native"]
+    write_catalog(populated, [web])
+    assert not library.search(query)["matched"]
+    assert not library.search("navigation", platform=query)["matched"]
+
+
+def test_ipados_is_not_inferred_for_iphone_and_watch_os_is_distinct(populated, entry):
+    entries = []
+    for label in ("ios", "ipados", "watchos", "wear-os", "android", "foldable"):
+        item = copy.deepcopy(entry)
+        item.update(id=label, title="Device navigation", platforms=[label], tags=[])
+        entries.append(item)
+    write_catalog(populated, entries)
+    library = Library(populated)
+    assert [r["id"] for r in library.search("iphone")["results"]] == ["ios"]
+    assert {r["id"] for r in library.search("ipad")["results"]} == {"ios", "ipados"}
+    assert [r["id"] for r in library.search("apple watch")["results"]] == ["watchos"]
+    assert [r["id"] for r in library.search("wear os")["results"]] == ["wear-os"]
+
+
+def test_github_status_counts_validated_shards_not_discovery(populated, entry):
+    library = Library(populated)
+    path = populated / "data/github-web-library.json"
+    other = copy.deepcopy(entry)
+    other.update(id="github-one", source_url="https://github.com/example/widgets/blob/" + "a" * 40 + "/README.md#L1")
+    second = copy.deepcopy(other)
+    second["id"] = "github-two"
+    unpinned = copy.deepcopy(other)
+    unpinned.update(id="unpinned", source_url="https://github.com/example/unverified")
+    path.write_text(json.dumps({"version": 1, "entries": [other, second, unpinned]}))
+    assert library.status()["github_collections"] == {
+        "web": {"repository_count": 1, "entry_count": 2, "unverified_entry_count": 1},
+    }
+    assert library.status()["github_repository_count"] == 1
+    assert library.status()["github_entry_count"] == 2
+    path.write_text('{"version":2,"entries":[]}')
+    assert library.status()["github_repository_count"] == 0
+    assert library.status()["github_collections"] == {}
+    path.unlink()
+    assert library.status()["github_collection_count"] == 0
+
+
+def test_github_animated_navigation_source_is_not_a_playable_icon(populated, entry, monkeypatch):
+    source = copy.deepcopy(entry)
+    source.update(
+        id="github-navigation", title="Animated navigation icon",
+        categories=["navigation", "animation"], tags=["icon", "navigation"],
+        platforms=["ios"], source_url="https://github.com/example/navigation/tree/" + "a" * 40,
+        assets=[{"id": "source", "path": "assets/github-mobile/source.json",
+                 "mime_type": "application/json", "title": "Inert source reference"}],
+    )
+    icon = copy.deepcopy(source)
+    icon.update(id="playable-icon", source_url="https://useanimations.com/navigation")
+    write_catalog(populated, [icon])
+    (populated / "data/github-mobile-library.json").write_text(json.dumps({"version": 1, "entries": [source]}))
+    library = Library(populated)
+    original_read = library.read
+
+    def manifest_only(parts, *args, **kwargs):
+        assert parts[1] not in {"assets", "licenses"}, "Search must not inspect source assets."
+        return original_read(parts, *args, **kwargs)
+
+    monkeypatch.setattr(library, "read", manifest_only)
+    results = library.search("navigation layout")["results"]
+    assert [r["id"] for r in results] == ["github-navigation", "playable-icon"]
+    assert results[0]["kind"] == "reference" and results[1]["kind"] == "animated-icon"
+    assert results[0]["score"] > results[1]["score"]
+    assert library.search("playable-icon")["results"][0]["kind"] == "animated-icon"
 
 
 @pytest.mark.parametrize("phrase", ["looks AI", "AI slop", "less AI-looking", "unslop", "AI-generated", "less generic"])

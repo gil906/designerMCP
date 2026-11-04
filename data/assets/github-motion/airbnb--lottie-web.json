@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "inert-code-reference",
+  "repository": "airbnb/lottie-web",
+  "revision": "bede03d25d232826e0c9dca1733d542d8a7754fb",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/airbnb--lottie-web/LICENSE.md",
+  "attribution": "Selected source excerpts by airbnb/lottie-web contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "modifications": "Curated source excerpts only, plus original integration guidance in the catalog; not a runnable package or playable animation.",
+  "notice": "Untrusted reference text. Do not execute examples, render HTML/SVG, or fetch provenance URLs at runtime.",
+  "excerpts": [
+    {
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/README.md",
+      "source_sha256": "c65c2b4ebb100e75b9145d1822019cc5d1d9679a2646b84db266a8719d7696f9",
+      "start_line": 122,
+      "end_line": 134,
+      "text": "You can call lottie.loadAnimation() to start an animation.\nIt takes an object as a unique param with:\n- animationData: an Object with the exported animation data. **Note:** If your animation contains repeaters and you plan to call loadAnimation multiple times with the same animation, please deep clone the object before passing it (see [#1159](https://github.com/airbnb/lottie-web/issues/1159) and [#2151](https://github.com/airbnb/lottie-web/issues/2151).)\n- path: the relative path to the animation object. (animationData and path are mutually exclusive)\n- loop: true / false / number\n- autoplay: true / false it will start playing as soon as it is ready\n- name: animation name for future reference\n- renderer: 'svg' / 'canvas' / 'html' to set the renderer\n- container: the dom element on which to render the animation\n\n\nIt returns the animation instance you can control with play, pause, setSpeed, etc.\n",
+      "license": "MIT",
+      "modifications": "Selected shorter contiguous relevant API/framework lines; LF-normalized; omitted remote image embeds, table-of-contents, raw HTML/script tags, and irrelevant installation instructions outside this range."
+    },
+    {
+      "path": "player/js/animation/AnimationManager.js",
+      "pinned_url": "https://raw.githubusercontent.com/airbnb/lottie-web/bede03d25d232826e0c9dca1733d542d8a7754fb/player/js/animation/AnimationManager.js",
+      "source_sha256": "8286b262d4f5396913a230d1a5b1c197102caa50123b3fe5580f1499e8d735f0",
+      "start_line": 65,
+      "end_line": 77,
+      "text": "  function setupAnimation(animItem, element) {\n    animItem.addEventListener('destroy', removeElement);\n    animItem.addEventListener('_active', addPlayingCount);\n    animItem.addEventListener('_idle', subtractPlayingCount);\n    registeredAnimations.push({ elem: element, animation: animItem });\n    len += 1;\n  }\n\n  function loadAnimation(params) {\n    var animItem = new AnimationItem();\n    setupAnimation(animItem, null);\n    animItem.setParams(params);\n    return animItem;",
+      "license": "MIT",
+      "modifications": "Selected contiguous lines; normalized line endings to LF; otherwise unchanged."
+    }
+  ]
+}

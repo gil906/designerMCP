@@ -14,7 +14,7 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path, PurePosixPath
 from typing import Annotated, Literal
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 
 from PIL import Image
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
@@ -28,14 +28,22 @@ TAXONOMY = (
     "layout", "typography", "color", "components", "navigation", "forms",
     "accessibility", "responsive", "animation", "interaction", "performance", "anti-slop", "template",
 )
-MANIFESTS = ("library.json", "linked-library.json", "unslop-library.json", "recipes-library.json")
+GITHUB_SHARDS = ("web", "motion", "mobile")
+GITHUB_MANIFESTS = tuple(f"github-{shard}-library.json" for shard in GITHUB_SHARDS)
+MANIFESTS = ("library.json", "linked-library.json", "unslop-library.json", "recipes-library.json", *GITHUB_MANIFESTS)
 PLATFORM_ALIASES = {
     "website": "web", "browser": "web", "reactjs": "react",
     "next.js": "react", "nextjs": "react", "flutter app": "flutter",
+    "iphone": "ios", "ipad": "ipados", "apple watch": "watchos",
+    "wear os": "wear-os", "wearos": "wear-os", "android app": "android",
+    "foldables": "foldable", "phones": "phone", "tablets": "tablet",
+    "watches": "watch",
 }
 CATEGORY_ALIASES = {
     "layouts": "layout", "animations": "animation", "templates": "template",
     "form": "forms", "colors": "color", "fonts": "typography",
+    "interactions": "interaction", "navigation patterns": "navigation",
+    "responsive layouts": "responsive",
 }
 STOP_WORDS = {"a", "an", "the", "and", "or", "for", "to", "my", "please", "make", "create", "build", "improve"}
 RELATED_TERMS = {
@@ -180,7 +188,39 @@ def search_words(value: str) -> set[str]:
 
 def label_matches(value: str, labels: list[str], aliases: dict[str, str]) -> bool:
     requested = value.casefold()
-    return bool({requested, aliases.get(requested, requested)} & {label.casefold() for label in labels})
+    alternatives = {requested, aliases.get(requested, requested)}
+    if aliases is PLATFORM_ALIASES and requested == "ipad":
+        alternatives.add("ios")
+    return bool(alternatives & {label.casefold() for label in labels})
+
+
+def github_source(value: str) -> tuple[str, str] | None:
+    """Recognize canonical commit-pinned GitHub tree/blob provenance, not OS support."""
+    match = re.fullmatch(
+        r"https://github\.com/([A-Za-z0-9](?:[A-Za-z0-9-]{0,38}))/"
+        r"([A-Za-z0-9_.-]{1,100})/(tree|blob)/([0-9a-f]{40})"
+        r"((?:/[^?#\s]+)?)(#L[1-9][0-9]*(?:-L[1-9][0-9]*)?)?", value,
+    )
+    if match is None or match[2] in {".", ".."}:
+        return None
+    path = unquote(match[5])
+    if (
+        (match[3] == "blob" and not path) or (match[3] == "tree" and match[6])
+        or (path and any(part in {"", ".", ".."} for part in path[1:].split("/")))
+        or "\\" in path or any(c.isspace() or ord(c) < 32 for c in path)
+    ):
+        return None
+    return f"{match[1]}/{match[2]}", match[4]
+
+
+def query_platform(value: str) -> str | None:
+    words = " " + " ".join(re.findall(r"[\w-]+", value.casefold())) + " "
+    for label in ("apple watch", "wear os", "android app", "iphone", "ipad",
+                  "watchos", "wearos", "wear-os", "ipados", "ios", "android",
+                  "foldables", "foldable"):
+        if f" {label} " in words:
+            return label
+    return None
 
 
 def anti_slop_intent(value: str) -> bool:
@@ -216,6 +256,7 @@ class Library:
         self._error: str | None = None
         self._search_documents: dict[str, tuple[set[str], set[str], set[str]]] = {}
         self._document_frequency: Counter[str] = Counter()
+        self._github_entries: dict[str, list[Entry]] = {}
 
     def read(self, parts: tuple[str, ...], maximum: int, *, optional: bool = False) -> bytes | None:
         """Open every component without following symlinks, including during races."""
@@ -265,11 +306,18 @@ class Library:
             self._catalog = catalog
             self._signatures = signatures
             self._manifests = manifests
+            self._github_entries = {
+                shard: part.entries
+                for name, part in zip(
+                    [name for name, raw in zip(MANIFESTS, payloads) if raw is not None], catalogs,
+                )
+                for shard in GITHUB_SHARDS if name == f"github-{shard}-library.json"
+            }
             self._error = None
             self._search_documents = {
                 entry.id: (
                     search_words(entry.title),
-                    search_words(" ".join([entry.title, *entry.categories, *entry.tags])),
+                    search_words(" ".join([entry.title, *entry.categories, *entry.tags, *entry.platforms])),
                     search_words(entry.summary + " " + entry.guidance),
                 )
                 for entry in catalog.entries
@@ -286,6 +334,7 @@ class Library:
             self._manifests = []
             self._search_documents = {}
             self._document_frequency = Counter()
+            self._github_entries = {}
             self._error = "Library unavailable: library manifest missing, unsafe, oversized, invalid, or duplicate IDs across manifests."
             raise LibraryError(self._error) from None
 
@@ -309,6 +358,9 @@ class Library:
         limit: int = 5, *, _anti_slop: bool = False, _style: str | None = None,
     ) -> dict:
         query = text_input(query, "query", 500)
+        inferred_platform = query_platform(query)
+        if platform is None:
+            platform = inferred_platform
         if category is not None:
             category = text_input(category, "category", 100)
         if platform is not None:
@@ -321,10 +373,20 @@ class Library:
         terms = set(query_words)
         for word in query_words:
             terms |= RELATED_TERMS.get(word, set())
+        if inferred_platform is not None:
+            terms |= search_words(PLATFORM_ALIASES.get(inferred_platform, inferred_platform))
+            if inferred_platform == "ipad":
+                terms.add("ios")
         anti_slop = _anti_slop or anti_slop_intent(query)
         if anti_slop:
             terms |= {"anti", "slop", "unslop", "intentional", "bespoke", "editorial"}
         entries = self.catalog().entries
+        source_reference_ids = {entry.id for group in self._github_entries.values() for entry in group}
+        animated_icon_ids = {
+            entry.id for entry in entries
+            if entry.id not in source_reference_ids and "animation" in entry.categories
+            and "icon" in self._search_documents[entry.id][1]
+        }
         layout_intent = bool(query_words & {
             "layout", "website", "site", "landing", "dashboard", "portfolio",
             "form", "setting", "commerce", "onboarding", "app", "design",
@@ -354,7 +416,7 @@ class Library:
                 if exact_title or query.casefold() == entry.id.casefold():
                     score += 40
                 starter = "template" in entry.categories and urlsplit(entry.source_url).scheme == "original"
-                icon = "animation" in entry.categories and "icon" in primary
+                icon = entry.id in animated_icon_ids
                 if layout_intent and not icon_request and not exact_title:
                     if starter:
                         score = score * 1.6 + 8
@@ -371,7 +433,7 @@ class Library:
                 "has_examples": bool(entry.examples),
                 "kind": (
                     "starter" if "template" in entry.categories and urlsplit(entry.source_url).scheme == "original"
-                    else "animated-icon" if "animation" in entry.categories and "icon" in self._search_documents[entry.id][1]
+                    else "animated-icon" if entry.id in animated_icon_ids
                     else "reference"
                 ),
                 "preview_asset_ids": [
@@ -466,6 +528,17 @@ class Library:
             s["status"] if isinstance(s.get("status"), str) and len(s["status"]) <= 100 else "unknown"
             for s in sources
         )
+        github_collections = {}
+        repositories = set()
+        for shard, shard_entries in self._github_entries.items():
+            verified = [(entry, github_source(entry.source_url)) for entry in shard_entries]
+            identities = {source[0].casefold() for _, source in verified if source is not None}
+            repositories |= identities
+            github_collections[shard] = {
+                "entry_count": sum(source is not None for _, source in verified),
+                "repository_count": len(identities),
+                "unverified_entry_count": sum(source is None for _, source in verified),
+            }
         return bounded({
             "offline": True, "read_only": True, "transport": "stdio",
             "library_state": state, "error": error, "entry_count": len(entries),
@@ -478,6 +551,10 @@ class Library:
             "source_status_counts": dict(statuses), "sources": sources,
             "discovered_at": discovered_at,
             "discovery_error": discovery_error, "notice": NOTICE,
+            "github_collection_count": len(github_collections),
+            "github_repository_count": len(repositories),
+            "github_entry_count": sum(c["entry_count"] for c in github_collections.values()),
+            "github_collections": github_collections,
         })
 
     def brief(

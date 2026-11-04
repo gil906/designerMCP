@@ -1,0 +1,338 @@
+{
+  "entries": [
+    {
+      "assets": [
+        {
+          "id": "source",
+          "mime_type": "application/json",
+          "path": "assets/github-web/carbon/source.json",
+          "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        }
+      ],
+      "categories": [
+        "accordion",
+        "accessibility",
+        "enterprise-ui"
+      ],
+      "examples": [
+        {
+          "code": "### Accordion align\n\nIn rare cases, you may need to specify the alignment of the icon in the\naccordion. You can use the `align` prop to specify the side where the icon\nshould be placed.\n\n_Note: This prop must not be used to create a tree view or set of nested\naccordions._\n\n```jsx\n<Accordion align=\"start\">\n  <AccordionItem title=\"Panel A\">Panel A</AccordionItem>\n  <AccordionItem title=\"Panel B\">Panel B</AccordionItem>\n  <AccordionItem title=\"Panel C\">Panel C</AccordionItem>\n</Accordion>",
+          "description": "Unmodified Apache-2.0 excerpt, packages/react/src/components/Accordion/Accordion.mdx lines 97–111; pinned https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/packages/react/src/components/Accordion/Accordion.mdx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "markdown"
+        },
+        {
+          "code": "## References\n\n### Why is interactive content in a heading considered an accessibility violation?\n\nWhen using the `title` prop from `Accordion`, it is possible to render arbitrary\nmarkup within the accordion header. The accordion header itself is rendered as a\n`<button>` and is considered an interactive element.\n\nIf you render an interactive element inside this header, then it becomes nested\ninside the `<button>`. Common examples of this are buttons or links. Rendering\ninteractive content inside the accordion heading is not reachable via a keyboard\nor screen reader.",
+          "description": "Unmodified Apache-2.0 excerpt, packages/react/src/components/Accordion/Accordion.mdx lines 198–209; pinned https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/packages/react/src/components/Accordion/Accordion.mdx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "markdown"
+        }
+      ],
+      "guidance": "Use accordions for independently expandable sections in dense product screens, not hierarchical navigation that requires a real tree pattern. The inspected docs allow changing disclosure-icon side with align but explicitly reject using it to fake a tree view. Treat the title as one interactive button's label: place edit, help, download or overflow actions outside that heading. Separate those actions spatially on the same baseline with restrained dividers, so a functional row does not become a decorative card. Give the body a readable line length and preserve keyboard focus visibility. The second excerpt is an actionable accessibility constraint, not source to render. Full Apache license is retained; no IBM fonts, pictograms, icons or Sass bundle were copied.",
+      "id": "github-web-carbon",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/carbon/LICENSE.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/carbon-design-system/carbon/tree/2efc91b00c814e390bfa431f0f5555f3028e7100",
+      "summary": "Carbon warns that accordion headings are buttons: nested links or buttons are unreachable for keyboard or screen-reader users. Icon alignment must not be used to simulate a tree view.",
+      "tags": [
+        "nested-interactive",
+        "keyboard",
+        "information-architecture",
+        "icon-alignment"
+      ],
+      "title": "Carbon accordion anatomy — avoid nested actions and false tree views"
+    },
+    {
+      "assets": [
+        {
+          "id": "source",
+          "mime_type": "application/json",
+          "path": "assets/github-web/chakra-ui/source.json",
+          "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        }
+      ],
+      "categories": [
+        "accordion",
+        "settings",
+        "typography"
+      ],
+      "examples": [
+        {
+          "code": "  return (\n    <Accordion.Root collapsible>\n      {items.map((item, index) => (\n        <Accordion.Item key={index} value={item.value}>\n          <Accordion.ItemTrigger>\n            <Stack gap=\"1\">\n              <Text>{item.title}</Text>\n              <Text fontSize=\"sm\" color=\"fg.muted\">\n                Click to expand\n              </Text>\n            </Stack>\n          </Accordion.ItemTrigger>\n          <Accordion.ItemContent>\n            <Accordion.ItemBody>{item.text}</Accordion.ItemBody>\n          </Accordion.ItemContent>\n        </Accordion.Item>\n      ))}\n    </Accordion.Root>",
+          "description": "Unmodified MIT excerpt, apps/compositions/src/examples/accordion-with-subtext.tsx lines 11–28; pinned https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/apps/compositions/src/examples/accordion-with-subtext.tsx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Adapt Root/Item/ItemTrigger/ItemContent/ItemBody to real settings: identify the setting in the title and summarize its current value or consequence on a short second line. The story uses Stack gap=\"1\" and Text fontSize=\"sm\" color=\"fg.muted\" to establish hierarchy without another bordered card. Replace \"Click to expand\" with input-neutral, informative copy, and replace LoremIpsum with actual content. Use stable item IDs as React keys, not the example index. Check muted-text contrast in both themes, focus visibility and wrapping at narrow widths. Let application typography and spacing set the rhythm rather than repeating marketing tiles. The excerpt depends on Chakra and surrounding items data; it is not standalone code.",
+      "id": "github-web-chakra-ui",
+      "license": "MIT",
+      "license_path": "licenses/github-web/chakra-ui/LICENSE.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/chakra-ui/chakra-ui/tree/3eda54cae8d4a08b557917a233d1af3728e8d4b4",
+      "summary": "An accordion trigger stacks a title with smaller muted subtext, while the body lives in ItemContent/ItemBody. Useful for compact preferences and setup screens.",
+      "tags": [
+        "subtext",
+        "progressive-disclosure",
+        "semantic-color",
+        "compound-components"
+      ],
+      "title": "Chakra accordion subtext — scannable settings with a second reading level"
+    },
+    {
+      "assets": [
+        {
+          "id": "source",
+          "mime_type": "application/json",
+          "path": "assets/github-web/headlessui/source.json",
+          "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        }
+      ],
+      "categories": [
+        "dialogs",
+        "tabs",
+        "accessibility"
+      ],
+      "examples": [
+        {
+          "code": "      <Button onClick={() => setOpen(true)}>Open dialog</Button>\n      <Dialog open={open} onClose={setOpen} className=\"fixed inset-0 grid place-content-center\">\n        <div className=\"fixed inset-0 bg-gray-500/70\" />\n        <Dialog.Panel className=\"inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle\">\n          <div className=\"bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4\">\n            <Tab.Group>\n              <Tab.List className=\"flex gap-4 py-4\">\n                <Tab as={Button}>Tab 1</Tab>\n                <Tab as={Button}>Tab 2</Tab>\n                <Tab as={Button}>Tab 3</Tab>\n              </Tab.List>\n              <Tab.Panels>\n                <Tab.Panel className=\"px-3 py-2\">Panel 1</Tab.Panel>\n                <Tab.Panel className=\"px-3 py-2\">Panel 2</Tab.Panel>\n                <Tab.Panel className=\"px-3 py-2\">Panel 3</Tab.Panel>\n              </Tab.Panels>\n            </Tab.Group>\n          </div>",
+          "description": "Unmodified MIT excerpt, playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx lines 10–27; pinned https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Use a dialog for a bounded task; if its tabs contain an entire application, move them to a page. The inspected playground separates open/onClose from Tab.Group and its list/panels. Carry that separation into the current installed API, replacing numbered tabs with task sections and sizing the dialog to real content. IMPORTANT: this playground uses compound Dialog.Panel and Tab.Group syntax and lacks an explicit dialog title; it is a historical composition reference, not a current drop-in or accessibility-complete example. Add the current library's accessible DialogTitle/heading and verify tab keyboard navigation, dismissal and focus return. Use existing surface and spacing tokens; Tailwind utilities are not a visual identity. The local Button helper and dependencies are neither archived nor installed.",
+      "id": "github-web-headlessui",
+      "license": "MIT",
+      "license_path": "licenses/github-web/headlessui/LICENSE.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/tailwindlabs/headlessui/tree/eea57cf46fd6767ed1059012f7073b88eb159fba",
+      "summary": "A playground nests a tab list and panels inside a controlled dialog, separating overlay visibility from within-dialog navigation. Useful for focused multi-section tasks.",
+      "tags": [
+        "overlay-state",
+        "tab-panels",
+        "unstyled",
+        "tailwind"
+      ],
+      "title": "Headless UI tabs in dialogs — separate navigation from overlay state"
+    },
+    {
+      "assets": [
+        {
+          "id": "source",
+          "mime_type": "application/json",
+          "path": "assets/github-web/mantine/source.json",
+          "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        }
+      ],
+      "categories": [
+        "accordion",
+        "accessibility",
+        "design-system"
+      ],
+      "examples": [
+        {
+          "code": "export interface AccordionProps<Multiple extends boolean = false>\n  extends\n    BoxProps,\n    StylesApiProps<AccordionFactory>,\n    ElementProps<'div', 'value' | 'defaultValue' | 'onChange'> {\n  /** If set, multiple items can be opened at the same time @default false */\n  multiple?: Multiple;\n\n  /** Controlled component value */\n  value?: AccordionValue<Multiple>;\n\n  /** Uncontrolled component default value */\n  defaultValue?: AccordionValue<Multiple>;\n\n  /** Called when value changes, payload type depends on `multiple` prop */\n  onChange?: (value: AccordionValue<Multiple>) => void;\n\n  /** If set, arrow keys loop through items (first to last and last to first) @default true */\n  loop?: boolean;\n\n  /** Transition duration in ms @default 200 */\n  transitionDuration?: number;\n\n  /** If set, chevron rotation is disabled @default false */\n  disableChevronRotation?: boolean;\n\n  /** If set, the open item cannot be collapsed by clicking it again, so one item always stays open. Only applies when `multiple` is `false`. @default false */\n  disableCollapse?: boolean;\n\n  /** Position of the chevron relative to the item label @default right */\n  chevronPosition?: AccordionChevronPosition;\n\n  /** Size of the chevron icon container @default auto */\n  chevronSize?: number | string;\n\n  /** Size of the default chevron icon. Ignored when `chevron` prop is set. Use `chevronSize` instead when using custom chevron. @default 16 */\n  chevronIconSize?: number | string;\n\n  /** Sets heading level (h2-h6) for `Accordion.Control` elements. Wraps each control in the corresponding heading tag, recommended to meet WAI-ARIA accessibility requirements. Has no visual effect. */\n  order?: AccordionHeadingOrder;",
+          "description": "Unmodified MIT excerpt, packages/@mantine/core/src/components/Accordion/Accordion.tsx lines 41–80; pinned https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/packages/@mantine/core/src/components/Accordion/Accordion.tsx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "typescript"
+        },
+        {
+          "code": "const defaultProps = {\n  multiple: false,\n  loop: true,\n  disableChevronRotation: false,\n  disableCollapse: false,\n  chevronPosition: 'right',\n  variant: 'default',\n  chevronSize: 'auto',\n  chevronIconSize: 16,\n  keepMountedMode: 'activity',\n} satisfies Partial<AccordionProps>;\n\nconst varsResolver = createVarsResolver<AccordionFactory>(\n  (_, { transitionDuration, chevronSize, radius }) => ({",
+          "description": "Unmodified MIT excerpt, packages/@mantine/core/src/components/Accordion/Accordion.tsx lines 112–125; pinned https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/packages/@mantine/core/src/components/Accordion/Accordion.tsx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "typescript"
+        }
+      ],
+      "guidance": "Choose multiple=true for independent filters or reference sections, and a single controlled value for mutually exclusive setup panels. The inspected props include loop for arrow-key wraparound and order for h2–h6 wrappers around controls; match order to the document outline, not font size. The default transition duration is 200ms: derive motion from the product and provide an appropriate reduced-motion alternative. Use separated or contained variants only when grouping is meaningful; a dense settings page often needs simple rows rather than rounded containers everywhere. Maintain value types when switching between single and multiple modes. Excerpts describe an internal prop contract and defaults, not a complete composition or installed dependency. These props alone do not guarantee accessibility.",
+      "id": "github-web-mantine",
+      "license": "MIT",
+      "license_path": "licenses/github-web/mantine/LICENSE.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/mantinedev/mantine/tree/0120ad3643a792e59bcb09c3aa254b2d1a312902",
+      "summary": "Accordion props expose single/multiple disclosure, controlled state, arrow-key looping, transition duration and semantic heading order. Choose disclosure behavior deliberately rather than copying a generic FAQ.",
+      "tags": [
+        "heading-order",
+        "keyboard-loop",
+        "controlled-state",
+        "reduced-motion"
+      ],
+      "title": "Mantine accordion controls — heading order and disclosure density"
+    },
+    {
+      "assets": [
+        {
+          "id": "source",
+          "mime_type": "application/json",
+          "path": "assets/github-web/primer-react/source.json",
+          "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        }
+      ],
+      "categories": [
+        "action-list",
+        "navigation",
+        "design-system"
+      ],
+      "examples": [
+        {
+          "code": "export const Default = () => (\n  <ActionList>\n    <ActionList.Item>Copy link</ActionList.Item>\n    <ActionList.Item>Quote reply</ActionList.Item>\n    <ActionList.Item>Edit comment</ActionList.Item>\n  </ActionList>\n)",
+          "description": "Unmodified MIT excerpt, packages/react/src/ActionList/ActionList.stories.tsx lines 17–23; pinned https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "tsx"
+        },
+        {
+          "code": "  return (\n    <ActionList selectionVariant={args.selectionVariant}>\n      <ActionList.Item {...args}>\n        {leadingVisual && <ActionList.LeadingVisual>{leadingVisual}</ActionList.LeadingVisual>}\n        Action list item\n        {trailingVisual && <ActionList.TrailingVisual>{trailingVisual}</ActionList.TrailingVisual>}\n      </ActionList.Item>\n    </ActionList>\n  )",
+          "description": "Unmodified MIT excerpt, packages/react/src/ActionList/ActionList.stories.tsx lines 96–104; pinned https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Start with clear text commands, adding a leading icon only when it improves scanning. Reserve trailing visuals for meaningful secondary cues, not repeated decorative badges. ItemPlayground passes selectionVariant to ActionList and selected/active state to the item; distinguish current navigation from selected choices instead of painting both alike. Match row heights, icon alignment and separators to the product, preserving a visible focus target for each interactive row. Short command lists often need no card shadow. Copy link/Quote reply/Edit comment are upstream reference labels, not implemented actions. These are partial stories with omitted imports and arguments; verify actual routing, keyboard behavior and installed Primer APIs.",
+      "id": "github-web-primer-react",
+      "license": "MIT",
+      "license_path": "licenses/github-web/primer-react/LICENSE.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/primer/react/tree/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9",
+      "summary": "ActionList stories show simple command rows and explicit LeadingVisual/TrailingVisual slots within each item. Useful for compact contextual actions or selectable product navigation.",
+      "tags": [
+        "leading-visual",
+        "trailing-visual",
+        "selection",
+        "dense-ui"
+      ],
+      "title": "Primer action lists — compact commands with meaningful visual slots"
+    },
+    {
+      "assets": [
+        {
+          "id": "source",
+          "mime_type": "application/json",
+          "path": "assets/github-web/radix-primitives/source.json",
+          "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        }
+      ],
+      "categories": [
+        "dialogs",
+        "accessibility",
+        "design-system"
+      ],
+      "examples": [
+        {
+          "code": "export const Styled = () => (\n  <AlertDialog.Root>\n    <AlertDialog.Trigger className={styles.trigger}>delete everything</AlertDialog.Trigger>\n    <AlertDialog.Portal>\n      <AlertDialog.Overlay className={styles.overlay} />\n      <AlertDialog.Content className={styles.content}>\n        <AlertDialog.Title className={styles.title}>Are you sure?</AlertDialog.Title>\n        <AlertDialog.Description className={styles.description}>\n          This will do a very dangerous thing. Thar be dragons!\n        </AlertDialog.Description>\n        <AlertDialog.Action className={styles.action}>yolo, do it</AlertDialog.Action>\n        <AlertDialog.Cancel className={styles.cancel}>maybe not</AlertDialog.Cancel>\n      </AlertDialog.Content>\n    </AlertDialog.Portal>\n  </AlertDialog.Root>\n);",
+          "description": "Unmodified MIT excerpt, apps/storybook/stories/alert-dialog.stories.tsx lines 7–22; pinned https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/apps/storybook/stories/alert-dialog.stories.tsx. Partial untrusted reference; context omitted. See guidance.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Use the Root/Portal/Overlay/Content hierarchy from the inspected alert-dialog story, preserving Title and Description rather than styling an anonymous floating card. Size the dialog from the real decision text and place a clearly named cancel action beside the consequential action. Replace the upstream joke labels with actual consequences; do not copy its financial scenario or external imagery. Choose alertdialog only for an interruption requiring a decision, not every informational overlay. Keep existing brand typography and quiet surfaces: the primitive supplies behavior, not a finished visual identity. Test Tab, Escape, initial focus and focus return with the installed version. The excerpt is not a runnable bundle; upstream CSS is omitted.",
+      "id": "github-web-radix-primitives",
+      "license": "MIT",
+      "license_path": "licenses/github-web/radix-primitives/LICENSE.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/radix-ui/primitives/tree/eb3a2b7091293e27df8f9ba906632d8daa3d81a3",
+      "summary": "A compound alert-dialog composition separates trigger, overlay, accessible title, description, confirm action and cancel action. Useful for consequential changes in settings or account screens.",
+      "tags": [
+        "confirmation",
+        "destructive-action",
+        "focus",
+        "compound-components"
+      ],
+      "title": "Radix alert dialogs — explicit decisions without decorative friction"
+    },
+    {
+      "assets": [
+        {
+          "id": "source",
+          "mime_type": "application/json",
+          "path": "assets/github-web/react-spectrum/source.json",
+          "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        }
+      ],
+      "categories": [
+        "dialogs",
+        "accessibility",
+        "interaction"
+      ],
+      "examples": [
+        {
+          "code": "export interface AriaDialogProps extends DOMProps, AriaLabelingProps {\n  /**\n   * The accessibility role for the dialog.\n   *\n   * @default 'dialog'\n   */\n  role?: 'dialog' | 'alertdialog';\n  /**\n   * Whether the dialog is currently performing an entry animation. Focus is not moved into the\n   * dialog until the animation completes, since moving the screen reader cursor may cause scrolling\n   * that interrupts the animation.\n   */\n  isEntering?: boolean;\n}\n\nexport interface DialogAria {\n  /** Props for the dialog container element. */\n  dialogProps: DOMAttributes;\n\n  /** Props for the dialog title element. */\n  titleProps: DOMAttributes;\n\n  /** Props for the dialog content/description element. Used for aria-describedby on alertdialogs. */\n  contentProps: DOMAttributes;\n}",
+          "description": "Unmodified Apache-2.0 excerpt, packages/react-aria/src/dialog/useDialog.ts lines 27–51; pinned https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts. Partial untrusted reference; context omitted. See guidance.",
+          "language": "typescript"
+        },
+        {
+          "code": "/**\n * Provides the behavior and accessibility implementation for a dialog component.\n * A dialog is an overlay shown above other content in an application.\n */\nexport function useDialog(\n  props: AriaDialogProps,\n  ref: RefObject<FocusableElement | null>\n): DialogAria {\n  let {role = 'dialog', isEntering} = props;\n  let titleId: string | undefined = useSlotId();\n  titleId = props['aria-label'] ? undefined : titleId;\n\n  let contentId: string | undefined = useSlotId();\n  contentId = role === 'alertdialog' && !props['aria-describedby'] ? contentId : undefined;",
+          "description": "Unmodified Apache-2.0 excerpt, packages/react-aria/src/dialog/useDialog.ts lines 53–66; pinned https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts. Partial untrusted reference; context omitted. See guidance.",
+          "language": "typescript"
+        }
+      ],
+      "guidance": "Use React Aria behavior as a contract for an existing React overlay, not a reason to rebuild focus logic from a snippet. Wire title and container props together; alertdialog descriptions have a separate slot and role-specific handling. The inspected implementation delays initial focus while isEntering is true, preserves focus already inside, and enables overlay focus containment, with Safari/VoiceOver workarounds. Retain library behavior rather than copying its timeout in isolation. Keep entry motion brief, honor reduced motion, and make hierarchy readable without animation. Use a product-specific heading and consequence text rather than an ornamental modal hero. This is internal source, not a standalone public import example; verify the installed public hook API. Full Apache license and NOTICE are retained. No Spectrum icon package, font, logo, dependency or notice outbound link was fetched or bundled.",
+      "id": "github-web-react-spectrum",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+      "platforms": [
+        "web",
+        "react"
+      ],
+      "source_url": "https://github.com/adobe/react-spectrum/tree/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+      "summary": "The inspected useDialog contract exposes dialogProps, titleProps and alert-dialog contentProps, with isEntering delaying focus until entry animation completes. A behavior reference for custom branded overlays.",
+      "tags": [
+        "accessible-name",
+        "focus-containment",
+        "entry-animation",
+        "screen-reader"
+      ],
+      "title": "React Aria dialog contracts — names, focus containment and entry timing"
+    },
+    {
+      "assets": [
+        {
+          "id": "source",
+          "mime_type": "application/json",
+          "path": "assets/github-web/shoelace/source.json",
+          "title": "Pinned inert excerpts, attribution and adaptation guidance"
+        }
+      ],
+      "categories": [
+        "dialogs",
+        "web-components",
+        "legacy-reference"
+      ],
+      "examples": [
+        {
+          "code": "const App = () => {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <SlDialog label=\"Dialog\" open={open} style={{ '--width': '50vw' }} onSlAfterHide={() => setOpen(false)}>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        <SlButton slot=\"footer\" variant=\"primary\" onClick={() => setOpen(false)}>\n          Close\n        </SlButton>\n      </SlDialog>\n\n      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>\n    </>\n  );\n};\n```",
+          "description": "Unmodified MIT excerpt, docs/pages/components/dialog.md lines 82–98; pinned https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/docs/pages/components/dialog.md. Partial untrusted reference; context omitted. See guidance.",
+          "language": "tsx"
+        }
+      ],
+      "guidance": "Upstream states Shoelace is sunset with no active development. Use this only as historical design/API guidance or to maintain an existing Shoelace application; do not select it as a new dependency based on this archive. In the inspected React example, onSlAfterHide resets open state so user dismissal remains synchronized, the footer slot carries the close button, and --width sets dialog size. Replace the generic label and filler with a concrete heading and content. The 50vw example is not a mobile-safe guarantee: choose a content-based maximum and narrow-screen width with safe margins, then test long content, focus return and keyboard dismissal. Preserve existing typography instead of importing a whole new theme. React adapters/custom elements remain uninstalled; no script tags or rendered media are included.",
+      "id": "github-web-shoelace",
+      "license": "MIT",
+      "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+      "platforms": [
+        "web",
+        "react",
+        "web-components"
+      ],
+      "source_url": "https://github.com/shoelace-style/shoelace/tree/25bd8ec776609670a932f21390be59a495df497d",
+      "summary": "A historical Shoelace React dialog synchronizes open state via onSlAfterHide, places its close action in the footer slot and exposes a --width property. Useful for maintaining existing component-based sites.",
+      "tags": [
+        "controlled-state",
+        "after-hide",
+        "width-token",
+        "maintenance-caveat"
+      ],
+      "title": "Shoelace legacy dialogs — controlled visibility and width tokens"
+    }
+  ],
+  "version": 1
+}

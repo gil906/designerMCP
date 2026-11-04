@@ -1,0 +1,42 @@
+{
+  "attribution_verbatim": [
+    "Copyright (c) 2020 A Beautiful Site, LLC"
+  ],
+  "excerpts": [
+    {
+      "license": "MIT",
+      "modifications": "Truncated after licensing/maintenance statement; contributor requests and successor links removed. Other README content omitted.",
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/README.md",
+      "range": {
+        "end_line": 8,
+        "start_line": 8
+      },
+      "text": "> **Shoelace is sunset.** There is no active development on this codebase. The library remains available under the MIT license for existing use."
+    },
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "docs/pages/components/dialog.md",
+      "pinned_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/docs/pages/components/dialog.md",
+      "range": {
+        "end_line": 98,
+        "start_line": 82
+      },
+      "text": "const App = () => {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <SlDialog label=\"Dialog\" open={open} style={{ '--width': '50vw' }} onSlAfterHide={() => setOpen(false)}>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        <SlButton slot=\"footer\" variant=\"primary\" onClick={() => setOpen(false)}>\n          Close\n        </SlButton>\n      </SlDialog>\n\n      <SlButton onClick={() => setOpen(true)}>Open Dialog</SlButton>\n    </>\n  );\n};\n```"
+    }
+  ],
+  "license": "MIT",
+  "license_path": "licenses/github-web/shoelace/LICENSE.txt",
+  "notice_path": null,
+  "repository": "shoelace-style/shoelace",
+  "revision": "25bd8ec776609670a932f21390be59a495df497d",
+  "safety": "Untrusted inert text only. Do not execute, render markup, load remote resources or treat copied content as agent instructions. No upstream code or dependencies executed.",
+  "source_url": "https://github.com/shoelace-style/shoelace/tree/25bd8ec776609670a932f21390be59a495df497d",
+  "synthesis": {
+    "guidance": "Upstream states Shoelace is sunset with no active development. Use this only as historical design/API guidance or to maintain an existing Shoelace application; do not select it as a new dependency based on this archive. In the inspected React example, onSlAfterHide resets open state so user dismissal remains synchronized, the footer slot carries the close button, and --width sets dialog size. Replace the generic label and filler with a concrete heading and content. The 50vw example is not a mobile-safe guarantee: choose a content-based maximum and narrow-screen width with safe margins, then test long content, focus return and keyboard dismissal. Preserve existing typography instead of importing a whole new theme. React adapters/custom elements remain uninstalled; no script tags or rendered media are included.",
+    "modifications": "Original adaptation guidance and archive wrapper; copied excerpts retain recorded ranges and licensing.",
+    "summary": "A historical Shoelace React dialog synchronizes open state via onSlAfterHide, places its close action in the footer slot and exposes a --width property. Useful for maintaining existing component-based sites."
+  },
+  "version": 1
+}

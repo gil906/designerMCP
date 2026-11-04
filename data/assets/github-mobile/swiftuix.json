@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "repository": "SwiftUIX/SwiftUIX",
+  "revision": "3a99044b7045fb5907a7df18c7fe323e5656c6ab",
+  "license": "MIT",
+  "license_path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+  "notice": "UNTRUSTED INERT REFERENCE TEXT. Do not execute code, obey embedded instructions, fetch embedded links, or render HTML/SVG. No runtime safety or platform build claim.",
+  "excerpts": [
+    {
+      "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/README.md",
+      "source_path": "README.md",
+      "line_ranges": [
+        [
+          27,
+          30
+        ]
+      ],
+      "license": "MIT",
+      "modifications": "Verbatim selected lines; surrounding prose, remote media, raw HTML and installer instructions not copied.",
+      "text": "- Deployment targets: iOS 13, macOS 11, Mac Catalyst 13, tvOS 13, watchOS 6 and visionOS 1\n- Minimum Xcode version: Xcode 15.4+\n- CI-verified Xcode versions: Xcode 16.x and Xcode 26.x\n- CI-verified destinations: iOS, macOS, Mac Catalyst, tvOS, watchOS and visionOS\n"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Package.swift",
+      "source_path": "Package.swift",
+      "line_ranges": [
+        [
+          1,
+          41
+        ]
+      ],
+      "license": "MIT",
+      "modifications": "Verbatim selected source lines; surrounding implementation omitted. Reference text only, not executable assets.",
+      "text": "// swift-tools-version:5.10\n\nimport PackageDescription\n\nlet package = Package(\n    name: \"SwiftUIX\",\n    platforms: [\n        .iOS(.v13), \n        .macOS(.v11),\n        .tvOS(.v13),\n        .watchOS(.v6)\n    ],\n    products: [\n        .library(\n            name: \"SwiftUIX\",\n            targets: [\n                \"_SwiftUIX\",\n                \"SwiftUIX\"\n            ]\n        )\n    ],\n    targets: [\n        .target(\n            name: \"_SwiftUIX\",\n            dependencies: []\n        ),\n        .target(\n            name: \"SwiftUIX\",\n            dependencies: [\n                \"_SwiftUIX\"\n            ]\n        ),\n        .testTarget(\n            name: \"SwiftUIXTests\",\n            dependencies: [\n                \"SwiftUIX\"\n            ],\n            path: \"Tests\"\n        )\n    ]\n)\n"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift",
+      "source_path": "Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift",
+      "line_ranges": [
+        [
+          1,
+          79
+        ]
+      ],
+      "license": "MIT",
+      "modifications": "Verbatim selected source lines; surrounding implementation omitted. Reference text only, not executable assets.",
+      "text": "//\n// Copyright (c) Vatsal Manot\n//\n\nimport Swift\nimport SwiftUI\n\n/// A view that arranges its children in a vertical/horizontal line.\n///\n/// The axis is determined in accordance to the size proposed by the parent container.\n@_documentation(visibility: internal)\npublic struct AutomaticAxisStack<Content: View>: View {\n    public let preferredAxis: Axis\n    public let alignment: Alignment\n    public let spacing: CGFloat?\n    public let content: Content\n    \n    @usableFromInline\n    @State var intrinsicGeometrySize: CGSize = .zero\n    \n    @usableFromInline\n    @State var geometrySize: CGSize = .zero\n    \n    @usableFromInline\n    @State var wantsRealign: Bool = false\n    \n    public init(\n        preferredAxis: Axis,\n        alignment: Alignment = .center,\n        spacing: CGFloat? = nil,\n        @ViewBuilder content: () -> Content\n    ) {\n        self.preferredAxis = preferredAxis\n        self.alignment = alignment\n        self.spacing = spacing\n        self.content = content()\n    }\n    \n    @inlinable\n    public var body: some View {\n        PassthroughView {\n            if wantsRealign {\n                AxisStack(\n                    axis: self.preferredAxis.orthogonal,\n                    alignment: self.alignment,\n                    spacing: self.spacing\n                ) {\n                    self.content\n                }\n            } else {\n                GeometryReader { geometry in\n                    AxisStack(\n                        axis: self.preferredAxis,\n                        alignment: self.alignment,\n                        spacing: self.spacing\n                    ) {\n                        self.content\n                    }\n                    .fixedSize()\n                    .background(GeometryReader { intrinsicGeometry in\n                        ZeroSizeView().then { _ in\n                            DispatchQueue.main.async {\n                                if intrinsicGeometry.size.dimensionLength(for: self.preferredAxis) > geometry.size.dimensionLength(for: self.preferredAxis) {\n                                    self.intrinsicGeometrySize = intrinsicGeometry.size\n                                    self.geometrySize = geometry.size\n                                    self.wantsRealign = true\n                                }\n                            }\n                        }\n                    })\n                }\n                .frame(\n                    min: intrinsicGeometrySize.dimensionLength(for: preferredAxis),\n                    axis: preferredAxis\n                )\n            }\n        }\n    }\n}\n"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift",
+      "source_path": "Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift",
+      "line_ranges": [
+        [
+          1,
+          49
+        ]
+      ],
+      "license": "MIT",
+      "modifications": "Verbatim selected source lines; surrounding implementation omitted. Reference text only, not executable assets.",
+      "text": "//\n// Copyright (c) Vatsal Manot\n//\n\nimport Swift\nimport SwiftUI\n\n@_documentation(visibility: internal)\npublic enum UserInterfaceIdiom: Hashable {\n    case carPlay\n    case mac\n    case phone\n    case pad\n    case vision\n    case tv\n    case watch\n    \n    case unspecified\n    \n    public static var current: UserInterfaceIdiom {\n        #if targetEnvironment(macCatalyst)\n        return .mac\n        #elseif os(iOS) || os(tvOS) || os(visionOS)\n        switch UIDevice.current.userInterfaceIdiom {\n            case .carPlay:\n                return .carPlay\n            case .phone:\n                return .phone\n            case .pad:\n                return .pad\n            #if swift(>=5.9)\n            case .vision:\n                return .vision\n            #endif\n            case .tv:\n                return .tv\n            case .mac:\n                return .mac\n            case .unspecified:\n                return .unspecified\n                \n            @unknown default:\n                return .unspecified\n        }\n        #elseif os(macOS)\n        return .mac\n        #elseif os(watchOS)\n        return .watch\n        #endif\n"
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "github-mobile-flutter-samples",
+      "title": "Flutter Material 3 width-adaptive navigation",
+      "summary": "The Material 3 demo switches between compact, medium and large layouts using available width, and pairs a NavigationBar with a NavigationRail. It is an SDK-widget reference rather than a discontinued adaptive-scaffold package.",
+      "categories": [
+        "layout",
+        "navigation",
+        "responsive",
+        "accessibility"
+      ],
+      "platforms": [
+        "flutter",
+        "android",
+        "ios",
+        "tablet"
+      ],
+      "tags": [
+        "material-3",
+        "adaptive",
+        "navigation-rail",
+        "large-text"
+      ],
+      "guidance": "Use the pinned Home.didChangeDependencies width logic and navigation composition as a study, not a fixed device-size recipe. Test 200% text, long localized destination labels and real lists; retain Android 48dp and iOS 44pt effective touch targets. On a narrow foldable cover window keep one task and bottom navigation; on an unfolded/tablet window promote navigation to a rail and expand only content that benefits. Width alone does not detect a hinge: this selected Flutter sample provides no verified hinge avoidance or watchOS support. Prefer constraints from the actual app window, preserve selection on resize, and suppress the navigation transition when reduced motion is requested. Source code is BSD-3-Clause; the full upstream LICENSE also contains third-party font and Apache notices, preserved without copying fonts or images.",
+      "source_url": "https://github.com/flutter/samples/tree/21c71902bb2c7da3cce328ba5946cba2f35a660a",
+      "license": "BSD-3-Clause",
+      "license_path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+      "assets": [
+        {
+          "id": "reference",
+          "path": "assets/github-mobile/flutter-samples.json",
+          "mime_type": "application/json",
+          "title": "Flutter Material 3 width-adaptive navigation licensed source excerpts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "dart",
+          "description": "Original adaptation sketch using SDK primitives; constraints, labels and content come from the host app.",
+          "code": "LayoutBuilder(builder: (context, constraints) {\n  final roomy = constraints.maxWidth >= 840;\n  return roomy\n      ? Row(children: [navigationRail, Expanded(child: longContent)])\n      : Column(children: [Expanded(child: longContent), navigationBar]);\n});"
+        }
+      ]
+    },
+    {
+      "id": "github-mobile-compose-reply",
+      "title": "Compose Reply: cover-screen and hinge-aware two panes",
+      "summary": "Reply turns compact windows into a single mail pane and expanded windows into list-detail panes. Its concrete source maps FoldingFeature bounds to book/separating postures and passes display features into Accompanist TwoPane.",
+      "categories": [
+        "layout",
+        "navigation",
+        "responsive",
+        "accessibility"
+      ],
+      "platforms": [
+        "android",
+        "tablet",
+        "foldable"
+      ],
+      "tags": [
+        "compose",
+        "material-3",
+        "hinge",
+        "window-size-class",
+        "list-detail"
+      ],
+      "guidance": "Reuse the distinction between window width and device posture. A narrow cover screen remains single-pane even on a foldable; an unfolded or tablet window can expose list and detail while keeping message selection stable. The selected ReplyApp inspects FoldingFeature and ReplyListContent passes displayFeatures to TwoPane, rather than treating the hinge as extra margin. Keep controls and text outside the separating bounds. Test half-open book posture, rotation, split-screen resizing, long messages, 200% font scale and 48dp effective touch targets. This pinned implementation uses Accompanist TwoPane; study its behavior but review current AndroidX adaptive APIs for a new app instead of claiming that this snapshot is the latest architecture. No build or runtime-safety verification was performed.",
+      "source_url": "https://github.com/android/compose-samples/tree/25631e8f544a9a1e3f01e296eaf1b4c28428196c",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+      "assets": [
+        {
+          "id": "reference",
+          "path": "assets/github-mobile/compose-reply.json",
+          "mime_type": "application/json",
+          "title": "Compose Reply: cover-screen and hinge-aware two panes licensed source excerpts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "kotlin",
+          "description": "Original policy sketch for app design; sample identifiers/types are host-provided, not a compiled standalone snippet.",
+          "code": "val showTwoPanes = when (widthClass) {\n    Compact -> false // narrow cover or split-screen window\n    Medium -> separatingHinge != null\n    Expanded -> true\n}\n// Supply observed display features to the pane container; never position a control on the hinge."
+        }
+      ]
+    },
+    {
+      "id": "github-mobile-now-in-android",
+      "title": "Now in Android: adaptive labeled navigation shell",
+      "summary": "NiaApp feeds currentWindowAdaptiveInfo into NiaNavigationSuiteScaffold, keeping navigation selection, localized labels and unread markers together. This is a practical app-shell reference for phone and larger Android windows.",
+      "categories": [
+        "navigation",
+        "layout",
+        "responsive",
+        "accessibility"
+      ],
+      "platforms": [
+        "android",
+        "tablet"
+      ],
+      "tags": [
+        "compose",
+        "material-3",
+        "navigation-suite",
+        "window-adaptive-info",
+        "state"
+      ],
+      "guidance": "Study the navigationSuiteItems block: retain visible localized labels and a selected destination rather than conveying unread state with a dot alone. Use actual window adaptive information for tablet and multi-window layouts; preserve navigation state during resize and back navigation. Run design checks with long topic names, offline empty states, real-length articles, 200% text and 48dp targets. Narrow windows should remain focused on one content task; widen content measure deliberately instead of stretching paragraphs edge to edge. This selected NiaApp shell is not evidence of hinge avoidance, so do not infer that from a large window or label it a foldable solution. Source and examples are inert references, not executed application code.",
+      "source_url": "https://github.com/android/nowinandroid/tree/2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/now-in-android/LICENSE.txt",
+      "assets": [
+        {
+          "id": "reference",
+          "path": "assets/github-mobile/now-in-android.json",
+          "mime_type": "application/json",
+          "title": "Now in Android: adaptive labeled navigation shell licensed source excerpts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "kotlin",
+          "description": "Original illustrative accessibility addition to a host Compose navigation item.",
+          "code": "item(\n    selected = isSelected,\n    onClick = onSelect,\n    icon = { Icon(icon, contentDescription = null) },\n    label = { Text(fullLocalizedLabel) },\n    modifier = Modifier.semantics {\n        stateDescription = if (hasUnread) unreadLabel else readLabel\n    },\n)"
+        }
+      ]
+    },
+    {
+      "id": "github-mobile-wear-os-compose",
+      "title": "Wear OS ComposeStarter: transforming small-screen lists",
+      "summary": "The current ComposeStarter uses Wear Compose Material 3 AppScaffold and ScreenScaffold, plus a TransformingLazyColumn whose scroll state is shared with the screen scaffold. It supplies a concrete round-watch list pattern rather than shrinking a phone UI.",
+      "categories": [
+        "layout",
+        "interaction",
+        "accessibility",
+        "navigation"
+      ],
+      "platforms": [
+        "android",
+        "wear-os"
+      ],
+      "tags": [
+        "compose",
+        "wearable",
+        "round-screen",
+        "transforming-lazy-column",
+        "rotary"
+      ],
+      "guidance": "Use one primary watch action and short first-line labels, but test full localized strings and enlarged text instead of truncating everything. Retain the scaffold content padding and transforming list treatment so round-screen edges do not hide controls. Keep at least the platform-recommended 48dp effective targets where possible and check adjacent-action spacing on the smallest watch. Verify crown/rotary input and touch scrolling on the target device; the archived block proves scroll-state wiring, not a separately configured rotary handler. Test focus ownership, long lists, confirmation/dismissal, haptics and ambient/low-power states. Avoid phone-style side-by-side panes and keep sensitive detail optional. No Wear APK was downloaded, built or run.",
+      "source_url": "https://github.com/android/wear-os-samples/tree/665d6a48466d472a4d928661dd865364d5073799",
+      "license": "Apache-2.0",
+      "license_path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+      "assets": [
+        {
+          "id": "reference",
+          "path": "assets/github-mobile/wear-os-compose.json",
+          "mime_type": "application/json",
+          "title": "Wear OS ComposeStarter: transforming small-screen lists licensed source excerpts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "kotlin",
+          "description": "Original small-screen state/padding wiring sketch using the verified Wear Material 3 pattern.",
+          "code": "val listState = rememberTransformingLazyColumnState()\nScreenScaffold(scrollState = listState) { padding ->\n    TransformingLazyColumn(state = listState, contentPadding = padding) {\n        // Add labeled, adequately spaced actions; validate rotary focus on-device.\n    }\n}"
+        }
+      ]
+    },
+    {
+      "id": "github-mobile-animated-tab-bar",
+      "title": "AnimatedTabBar: SwiftUI destination selection and motion controls",
+      "summary": "AnimatedTabBar exposes a selected-index binding and separate ball, indentation and button animation controls for custom SwiftUI tab navigation. Its package declares iOS 16+, not watchOS or Android.",
+      "categories": [
+        "navigation",
+        "animation",
+        "accessibility"
+      ],
+      "platforms": [
+        "ios",
+        "swiftui"
+      ],
+      "tags": [
+        "tab-bar",
+        "selected-state",
+        "reduced-motion",
+        "touch-targets"
+      ],
+      "guidance": "Use this as a study of selection feedback, not as permission to make primary navigation depend on a bouncing ornament. Provide visible destination labels, VoiceOver names and selected-state semantics, and maintain 44pt effective tap areas with enough separation. Test long localized labels and accessibility text on the narrowest iPhone. For larger windows prefer the host app standard adaptive tab/sidebar navigation unless the custom bar truly fits. Supply a standard static TabView fallback for Reduce Motion rather than assuming all library animations honor the environment. Retain the attribution to Exyte, Alisa Mylnikova and original design inspiration Yeasin Arafat. No promotional GIFs, screenshots or remote media were copied; source licensing does not license those images.",
+      "source_url": "https://github.com/exyte/AnimatedTabBar/tree/dcc003243f1fddc019564b08431cf508358f7d58",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/animated-tab-bar/LICENSE.txt",
+      "assets": [
+        {
+          "id": "reference",
+          "path": "assets/github-mobile/animated-tab-bar.json",
+          "mime_type": "application/json",
+          "title": "AnimatedTabBar: SwiftUI destination selection and motion controls licensed source excerpts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "swift",
+          "description": "Original reduced-motion fallback sketch; the host supplies StaticTabs and CustomAnimatedTabs.",
+          "code": "@Environment(\\.accessibilityReduceMotion) private var reduceMotion\n\n@ViewBuilder var navigation: some View {\n    if reduceMotion { StaticTabs() }\n    else { CustomAnimatedTabs() }\n}"
+        }
+      ]
+    },
+    {
+      "id": "github-mobile-popup-view",
+      "title": "PopupView: safe-area-aware SwiftUI transient surfaces",
+      "summary": "PopupView distinguishes edge toasts, safe-area floaters and centered popups, with explicit close-on-tap, outside-tap and drag dismissal controls. The pinned package targets iOS 17+/watchOS 10+, overriding older minimums still printed in its README.",
+      "categories": [
+        "components",
+        "interaction",
+        "accessibility",
+        "layout"
+      ],
+      "platforms": [
+        "ios",
+        "swiftui"
+      ],
+      "tags": [
+        "popup",
+        "safe-area",
+        "dismissal",
+        "keyboard",
+        "overlay"
+      ],
+      "guidance": "For iPhone use a safe-area floater for brief feedback; use a system sheet for forms or long content that needs keyboard and focus management. Do not use tap-through backgrounds for a blocking decision, and do not rely only on drag/outside tap to dismiss: provide a labeled 44pt Close control. Test long text, Dynamic Type, the keyboard and rotation. On iPad-style larger windows use presenter-relative overlay placement rather than assuming the whole physical screen is the app window; independently validate multi-window behavior. Package.swift is authoritative here: README minimums are stale. Although watchOS is declared, this entry focuses on iOS popup design; the separate verified Shimmer entry provides wearable-useful guidance without implying UIKit UIWindow works on a watch. No UIKit code was executed.",
+      "source_url": "https://github.com/exyte/PopupView/tree/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/popup-view/LICENSE.txt",
+      "assets": [
+        {
+          "id": "reference",
+          "path": "assets/github-mobile/popup-view.json",
+          "mime_type": "application/json",
+          "title": "PopupView: safe-area-aware SwiftUI transient surfaces licensed source excerpts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "swift",
+          "description": "Original accessible confirmation surface sketch; use a native sheet for substantial content.",
+          "code": "Button(\"Show details\") { showDetails = true }\n.sheet(isPresented: $showDetails) {\n    ScrollView { Text(fullDetailText).padding() }\n        .toolbar { Button(\"Close\") { showDetails = false } }\n}"
+        }
+      ]
+    },
+    {
+      "id": "github-mobile-swiftuix",
+      "title": "SwiftUIX: content-driven axis changes for iPhone and iPad",
+      "summary": "AutomaticAxisStack compares intrinsic child size with the proposed container dimension and can realign children on the other axis. A separate UserInterfaceIdiom source explicitly maps iOS pad devices, making this a concrete iPhone/iPad layout study.",
+      "categories": [
+        "layout",
+        "responsive",
+        "accessibility"
+      ],
+      "platforms": [
+        "ios",
+        "swiftui",
+        "tablet"
+      ],
+      "tags": [
+        "ipad",
+        "dynamic-type",
+        "automatic-axis-stack",
+        "content-fit"
+      ],
+      "guidance": "Adapt the content-fit idea for iPad split view and narrow iPhone windows: move action groups from horizontal to vertical before long labels collide. Prefer native ViewThatFits or an appropriate Layout for new code when available, because the pinned AutomaticAxisStack is marked documentation-internal and uses asynchronous measurement/state. Test repeated shrink-expand cycles, accessibility Dynamic Type, localized long labels, actual data and 44pt effective targets; do not use a device idiom alone as a breakpoint. The pad mapping verifies iPad relevance, but this source is not evidence of foldable hinge handling. SwiftUIX declares watchOS too; individual UIKit/AppKit components are not thereby watch-compatible. Copied author notices and the full Vatsal Manot MIT license remain intact.",
+      "source_url": "https://github.com/SwiftUIX/SwiftUIX/tree/3a99044b7045fb5907a7df18c7fe323e5656c6ab",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+      "assets": [
+        {
+          "id": "reference",
+          "path": "assets/github-mobile/swiftuix.json",
+          "mime_type": "application/json",
+          "title": "SwiftUIX: content-driven axis changes for iPhone and iPad licensed source excerpts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "swift",
+          "description": "Original iOS 16+ content-fit alternative; actions and labels are supplied by the app.",
+          "code": "ViewThatFits(in: .horizontal) {\n    HStack { primaryAction; secondaryAction }\n    VStack(alignment: .leading) { primaryAction; secondaryAction }\n}"
+        }
+      ]
+    },
+    {
+      "id": "github-mobile-watchos-shimmer",
+      "title": "SwiftUI-Shimmer: optional watchOS loading feedback",
+      "summary": "This MIT SwiftUI modifier explicitly declares watchOS 6+ and documents watchOS use. Its shimmering(active:) extension can leave a view unchanged when disabled, providing a useful small-watch loading-state reference rather than an unsupported Flutter watch claim.",
+      "categories": [
+        "animation",
+        "components",
+        "accessibility",
+        "performance"
+      ],
+      "platforms": [
+        "swiftui",
+        "ios",
+        "watchos"
+      ],
+      "tags": [
+        "wearable",
+        "loading",
+        "skeleton",
+        "reduced-motion",
+        "small-screen"
+      ],
+      "guidance": "Keep a readable status such as Loading weather visible independently of the shimmer. On a small Apple Watch show one stable placeholder rather than a dense phone-style skeleton, preserve legibility under enlarged text, and maintain usable approximately 44pt controls where relevant. Disable animation for Reduce Motion and low-power/Always On reduced-luminance contexts using APIs available on the target watchOS version. Limit repeated animation to active foreground loading and expose success, failure and retry without motion-only meaning. Crown scrolling belongs to the containing watch screen, not this effect: test the real long status/list and Digital Crown interaction separately. The repository is not archived, but its last recorded push is August 2024; this is a pinned reference, not a claim of active maintenance or current-device testing.",
+      "source_url": "https://github.com/markiv/SwiftUI-Shimmer/tree/0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+      "license": "MIT",
+      "license_path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+      "assets": [
+        {
+          "id": "reference",
+          "path": "assets/github-mobile/watchos-shimmer.json",
+          "mime_type": "application/json",
+          "title": "SwiftUI-Shimmer: optional watchOS loading feedback licensed source excerpts"
+        }
+      ],
+      "examples": [
+        {
+          "language": "swift",
+          "description": "Original optional loading decoration; keep status readable and use target-version-appropriate low-power gating.",
+          "code": "@Environment(\\.accessibilityReduceMotion) private var reduceMotion\n\nvar statusView: some View {\n    Text(statusText)\n        .shimmering(active: isLoading && !reduceMotion && isForeground)\n        .accessibilityLabel(statusText)\n}"
+        }
+      ]
+    }
+  ]
+}

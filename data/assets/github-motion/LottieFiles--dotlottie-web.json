@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "kind": "inert-code-reference",
+  "repository": "LottieFiles/dotlottie-web",
+  "revision": "2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/LottieFiles--dotlottie-web/LICENSE",
+  "attribution": "Selected source excerpts by LottieFiles/dotlottie-web contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "modifications": "Curated source excerpts only, plus original integration guidance in the catalog; not a runnable package or playable animation.",
+  "notice": "Untrusted reference text. Do not execute examples, render HTML/SVG, or fetch provenance URLs at runtime.",
+  "excerpts": [
+    {
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/README.md",
+      "source_sha256": "e7d69a113aca3d59655d4f085e6c790f1ff9c5cc87077176a9eabd9b1c9ab0c3",
+      "start_line": 54,
+      "end_line": 63,
+      "text": "```js\nimport { DotLottie } from '@lottiefiles/dotlottie-web';\n\nconst dotLottie = new DotLottie({\n  canvas: document.getElementById('canvas'),\n  src: 'path/to/animation.lottie',\n  autoplay: true,\n  loop: true,\n});\n```",
+      "license": "MIT",
+      "modifications": "Selected shorter contiguous relevant API/framework lines; LF-normalized; omitted remote image embeds, table-of-contents, raw HTML/script tags, and irrelevant installation instructions outside this range. Replaced the remote example src placeholder with a relative local path; source_sha256 still hashes the original complete upstream file."
+    },
+    {
+      "path": "packages/react/src/dotlottie.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/dotlottie.tsx",
+      "source_sha256": "c91e3368e705ac377e847597b87426188ab67990b96be812544a32f1c2b96c17",
+      "start_line": 1,
+      "end_line": 16,
+      "text": "'use client';\n\nimport type { Config } from '@lottiefiles/dotlottie-web';\nimport { DotLottie } from '@lottiefiles/dotlottie-web';\nimport type { ReactNode } from 'react';\n\nimport type { BaseDotLottieProps } from './base-dotlottie-react';\nimport { BaseDotLottieReact } from './base-dotlottie-react';\n\nexport type DotLottieReactProps = Omit<BaseDotLottieProps<DotLottie>, 'createDotLottie'>;\n\nconst createDotLottie = (config: Config): DotLottie => new DotLottie(config);\n\nexport const DotLottieReact = (props: DotLottieReactProps): ReactNode => {\n  return <BaseDotLottieReact {...props} createDotLottie={createDotLottie} />;\n};",
+      "license": "MIT",
+      "modifications": "Selected contiguous lines; normalized line endings to LF; otherwise unchanged."
+    },
+    {
+      "path": "packages/react/src/base-dotlottie-react.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/LottieFiles/dotlottie-web/2f3693a1d5b9d6936027bc892fa4f9d1cd16d2bb/packages/react/src/base-dotlottie-react.tsx",
+      "source_sha256": "be639ca68652e0bae6c3466788699a77660579b1549d530eb38452d1a470017f",
+      "start_line": 130,
+      "end_line": 161,
+      "text": "          canvas,\n        });\n      }\n      // else: React 19 StrictMode double attach without detach — reuse the live instance\n    } else if (dotLottieRef.current) {\n      const instance = dotLottieRef.current;\n      const instanceCanvas = instance.canvas;\n\n      dotLottieRef.current = null;\n\n      if (instanceCanvas instanceof HTMLCanvasElement) {\n        // Defer destroy one macrotask so a StrictMode remount (which runs synchronously\n        // within the commit) can reclaim the instance.\n        pendingDestroyRef.current = {\n          canvas: instanceCanvas,\n          instance,\n          timer: setTimeout(() => {\n            if (pendingDestroyRef.current?.instance === instance) {\n              pendingDestroyRef.current = null;\n            }\n            instance.destroy();\n          }, 0),\n        };\n      } else {\n        instance.destroy();\n      }\n    }\n\n    dotLottieRefCallbackRef.current?.(dotLottieRef.current);\n  }, []);\n\n  useEffect(() => {",
+      "license": "MIT",
+      "modifications": "Selected contiguous lines; normalized line endings to LF; otherwise unchanged."
+    }
+  ]
+}

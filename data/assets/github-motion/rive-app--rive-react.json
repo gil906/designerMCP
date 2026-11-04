@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "inert-code-reference",
+  "repository": "rive-app/rive-react",
+  "revision": "5ae214890c2d4bd14fcaa275c550abd389be975b",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/rive-app--rive-react/LICENSE",
+  "attribution": "Selected source excerpts by rive-app/rive-react contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "modifications": "Curated source excerpts only, plus original integration guidance in the catalog; not a runnable package or playable animation.",
+  "notice": "Untrusted reference text. Do not execute examples, render HTML/SVG, or fetch provenance URLs at runtime.",
+  "excerpts": [
+    {
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/README.md",
+      "source_sha256": "d3db576862ff069a0889157166a11e3f3136ec74a4736cb6acbac172ab835262",
+      "start_line": 11,
+      "end_line": 11,
+      "text": "This library is a wrapper around the [JS/Wasm runtime](https://github.com/rive-app/rive-wasm), giving full control over the JS/Wasm runtime while providing components and hooks for React applications.",
+      "license": "MIT",
+      "modifications": "Selected shorter contiguous relevant API/framework lines; LF-normalized; omitted remote image embeds, table-of-contents, raw HTML/script tags, and irrelevant installation instructions outside this range."
+    },
+    {
+      "path": "src/hooks/useRive.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/rive-app/rive-react/5ae214890c2d4bd14fcaa275c550abd389be975b/src/hooks/useRive.tsx",
+      "source_sha256": "132b75eadb9fe937d1c08115a1fae2c064a310cbcc4c8911b49de1a7d6a34b9e",
+      "start_line": 200,
+      "end_line": 229,
+      "text": "  useEffect(() => {\n    if (!canvasElem || !riveParams) {\n      return;\n    }\n    let isLoaded = rive != null;\n    let r: Rive | null;\n    if (rive == null) {\n      const { onRiveReady, ...restRiveParams } = riveParams;\n      r = new Rive({\n        ...restRiveParams,\n        useOffscreenRenderer,\n        canvas: canvasElem,\n      });\n      if (riveRef.current != null) {\n        safeCleanup('replacing a previous instance', () =>\n          riveRef.current!.cleanup()\n        );\n      }\n      riveRef.current = r;\n      r.on(EventType.Load, () => {\n        isLoaded = true;\n\n        if (onRiveReady) {\n          onRiveReady(r!);\n        }\n\n        // Check if the component/canvas is mounted before setting state to avoid setState\n        // on an unmounted component in some rare cases\n        if (canvasElem) {\n          setRive(r);",
+      "license": "MIT",
+      "modifications": "Selected contiguous lines; normalized line endings to LF; otherwise unchanged."
+    }
+  ]
+}

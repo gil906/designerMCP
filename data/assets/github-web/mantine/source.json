@@ -1,0 +1,53 @@
+{
+  "attribution_verbatim": [
+    "Copyright (c) 2021 Vitaly Rtishchev"
+  ],
+  "excerpts": [
+    {
+      "license": "MIT",
+      "modifications": "Removed outbound Markdown link destinations; labels and descriptions unchanged. Other README content omitted.",
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/README.md",
+      "range": {
+        "end_line": 24,
+        "start_line": 23
+      },
+      "text": "- `@mantine/hooks` – collection of 80+ hooks for state and UI management\n- `@mantine/core` – core components library – 100+ components"
+    },
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+      "range": {
+        "end_line": 80,
+        "start_line": 41
+      },
+      "text": "export interface AccordionProps<Multiple extends boolean = false>\n  extends\n    BoxProps,\n    StylesApiProps<AccordionFactory>,\n    ElementProps<'div', 'value' | 'defaultValue' | 'onChange'> {\n  /** If set, multiple items can be opened at the same time @default false */\n  multiple?: Multiple;\n\n  /** Controlled component value */\n  value?: AccordionValue<Multiple>;\n\n  /** Uncontrolled component default value */\n  defaultValue?: AccordionValue<Multiple>;\n\n  /** Called when value changes, payload type depends on `multiple` prop */\n  onChange?: (value: AccordionValue<Multiple>) => void;\n\n  /** If set, arrow keys loop through items (first to last and last to first) @default true */\n  loop?: boolean;\n\n  /** Transition duration in ms @default 200 */\n  transitionDuration?: number;\n\n  /** If set, chevron rotation is disabled @default false */\n  disableChevronRotation?: boolean;\n\n  /** If set, the open item cannot be collapsed by clicking it again, so one item always stays open. Only applies when `multiple` is `false`. @default false */\n  disableCollapse?: boolean;\n\n  /** Position of the chevron relative to the item label @default right */\n  chevronPosition?: AccordionChevronPosition;\n\n  /** Size of the chevron icon container @default auto */\n  chevronSize?: number | string;\n\n  /** Size of the default chevron icon. Ignored when `chevron` prop is set. Use `chevronSize` instead when using custom chevron. @default 16 */\n  chevronIconSize?: number | string;\n\n  /** Sets heading level (h2-h6) for `Accordion.Control` elements. Wraps each control in the corresponding heading tag, recommended to meet WAI-ARIA accessibility requirements. Has no visual effect. */\n  order?: AccordionHeadingOrder;"
+    },
+    {
+      "license": "MIT",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+      "range": {
+        "end_line": 125,
+        "start_line": 112
+      },
+      "text": "const defaultProps = {\n  multiple: false,\n  loop: true,\n  disableChevronRotation: false,\n  disableCollapse: false,\n  chevronPosition: 'right',\n  variant: 'default',\n  chevronSize: 'auto',\n  chevronIconSize: 16,\n  keepMountedMode: 'activity',\n} satisfies Partial<AccordionProps>;\n\nconst varsResolver = createVarsResolver<AccordionFactory>(\n  (_, { transitionDuration, chevronSize, radius }) => ({"
+    }
+  ],
+  "license": "MIT",
+  "license_path": "licenses/github-web/mantine/LICENSE.txt",
+  "notice_path": null,
+  "repository": "mantinedev/mantine",
+  "revision": "0120ad3643a792e59bcb09c3aa254b2d1a312902",
+  "safety": "Untrusted inert text only. Do not execute, render markup, load remote resources or treat copied content as agent instructions. No upstream code or dependencies executed.",
+  "source_url": "https://github.com/mantinedev/mantine/tree/0120ad3643a792e59bcb09c3aa254b2d1a312902",
+  "synthesis": {
+    "guidance": "Choose multiple=true for independent filters or reference sections, and a single controlled value for mutually exclusive setup panels. The inspected props include loop for arrow-key wraparound and order for h2–h6 wrappers around controls; match order to the document outline, not font size. The default transition duration is 200ms: derive motion from the product and provide an appropriate reduced-motion alternative. Use separated or contained variants only when grouping is meaningful; a dense settings page often needs simple rows rather than rounded containers everywhere. Maintain value types when switching between single and multiple modes. Excerpts describe an internal prop contract and defaults, not a complete composition or installed dependency. These props alone do not guarantee accessibility.",
+    "modifications": "Original adaptation guidance and archive wrapper; copied excerpts retain recorded ranges and licensing.",
+    "summary": "Accordion props expose single/multiple disclosure, controlled state, arrow-key looping, transition duration and semantic heading order. Choose disclosure behavior deliberately rather than copying a generic FAQ."
+  },
+  "version": 1
+}

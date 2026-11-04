@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "inert-code-reference",
+  "repository": "vueuse/motion",
+  "revision": "c0efec2b20d546752763919def979f194d41a99b",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/vueuse--motion/LICENSE",
+  "attribution": "Selected source excerpts by vueuse/motion contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "modifications": "Curated source excerpts only, plus original integration guidance in the catalog; not a runnable package or playable animation.",
+  "notice": "Untrusted reference text. Do not execute examples, render HTML/SVG, or fetch provenance URLs at runtime.",
+  "excerpts": [
+    {
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/README.md",
+      "source_sha256": "73351fbb3b16064e68b19b9c63a18323f1a8553993319f4b51893bcb5645156e",
+      "start_line": 47,
+      "end_line": 65,
+      "text": "You can now animate any of your component, HTML or SVG elements using `v-motion`.\n\n```vue\n<template>\n  <div\n    v-motion\n    :initial=\"{\n      opacity: 0,\n      y: 100,\n    }\"\n    :enter=\"{\n      opacity: 1,\n      y: 0,\n    }\"\n  />\n</template>\n```\n\nTo see more about how to use directives, check out [Directive Usage](https://motion.vueuse.org/features/directive-usage).",
+      "license": "MIT",
+      "modifications": "Selected shorter contiguous relevant API/framework lines; LF-normalized; omitted remote image embeds, table-of-contents, raw HTML/script tags, and irrelevant installation instructions outside this range."
+    },
+    {
+      "path": "src/useReducedMotion.ts",
+      "pinned_url": "https://raw.githubusercontent.com/vueuse/motion/c0efec2b20d546752763919def979f194d41a99b/src/useReducedMotion.ts",
+      "source_sha256": "8b0d144233d1209bcbdfaf9dda253ac3e402ada8910f2d0657f75480c930c037",
+      "start_line": 1,
+      "end_line": 12,
+      "text": "import { computed } from 'vue'\nimport type { Ref } from 'vue'\nimport { useMediaQuery } from '@vueuse/core'\n\n/**\n * Reactive prefers-reduced-motion.\n */\nexport function useReducedMotion(options: { window?: Window } = {}): Ref<boolean> {\n  const reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)', options)\n\n  return computed(() => reducedMotion.value)\n}",
+      "license": "MIT",
+      "modifications": "Selected contiguous lines; normalized line endings to LF; otherwise unchanged."
+    }
+  ]
+}

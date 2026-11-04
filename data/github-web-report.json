@@ -1,0 +1,1274 @@
+{
+  "limitations": [
+    "Shoelace is sunset; explicitly historical maintenance guidance, not a new dependency recommendation.",
+    "Headless UI playground uses older compound syntax and lacks a dialog title; adaptation guidance requires current API/title/focus validation.",
+    "Four large recursive trees exceeded trusted 2MiB bounds; subtree requests later hit HTTP 403. Already obtained public metadata/SHAs and bounded pinned raw files used; no weakened transport.",
+    "Git blob SHA1 checked wherever public tree supplied an expected blob. Some component files lacked expected blob metadata, honestly marked unavailable.",
+    "No full dependency-license audit: only permissively licensed selected text and required root notice archived. No fonts, icons or binaries copied.",
+    "Publication scan used explicit empty synthetic denylist; owner-specific private-string denylist/config was not accessed.",
+    "Inert source text was not built/executed; no claim of drop-in compatibility or accessibility certification.",
+    "System Python lacked PIL; existing project .venv used without dependency installation."
+  ],
+  "repositories": [
+    {
+      "artifacts": [
+        {
+          "path": "licenses/github-web/react-spectrum/LICENSE.txt",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        },
+        {
+          "path": "licenses/github-web/react-spectrum/NOTICE.txt",
+          "sha256": "378e1af1aac41d8383e9da1b2acbd2adca2ff8a4c4ad5fdecc8fbffff831eaf7"
+        },
+        {
+          "path": "assets/github-web/react-spectrum/source.json",
+          "sha256": "11f6bd335f56b3e94f9eead249955b198f55f50483f5f955285a1c3f7c61591f"
+        }
+      ],
+      "license": "Apache-2.0",
+      "reference_ids": [
+        "github-web-react-spectrum"
+      ],
+      "repository": "adobe/react-spectrum",
+      "revision": "6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+      "scans": {
+        "archived_extended_findings": 0,
+        "archived_publication_findings": 0,
+        "discovery": {
+          "public_results": [
+            "radix-ui/primitives",
+            "mui/base-ui",
+            "akveo/react-native-ui-kitten",
+            "vmware-archive/clarity",
+            "reach/reach-ui",
+            "chakra-ui/ark",
+            "reshaped-ui/reshaped",
+            "kobaltedev/kobalte",
+            "duetds/date-picker",
+            "uxfront-com/inkline",
+            "appica-dev/appica-ui",
+            "vmware-clarity/ng-clarity",
+            "GeekyAnts/react-native-aria",
+            "aws/aws-northstar",
+            "adaptui/react",
+            "visa/visa-chart-components",
+            "vmware-clarity/core",
+            "samzydd/Sakaniui",
+            "codeweb-dev/spark-ui",
+            "NYPL/nypl-design-system"
+          ],
+          "query": "accessible design system in:description language:TypeScript",
+          "url": "https://api.github.com/search/repositories?q=accessible+design+system+in:description+language:TypeScript&sort=stars&per_page=20"
+        },
+        "execution": "No downloaded code executed, renderer, clone, package install, hook or outbound README link followed",
+        "extended_checks": [
+          "unsafe-control",
+          "escaped-control",
+          "injection-instruction",
+          "execution-obfuscation",
+          "dangerous-network-execution",
+          "renderable-script-tag",
+          "remote-image-embed"
+        ],
+        "full_fetched_text": [
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "LICENSE",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "NOTICE.txt",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "packages/@react-spectrum/dialog/README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "packages/react-aria/src/dialog/useDialog.ts",
+            "publication_findings": 0
+          }
+        ],
+        "git_blob_verification": {
+          "limitations": "No blob verification claimed for paths absent from bounded public tree metadata",
+          "passed_paths": [
+            "README.md",
+            "LICENSE",
+            "NOTICE.txt"
+          ],
+          "unavailable_paths": [
+            "packages/@react-spectrum/dialog/README.md",
+            "packages/react-aria/src/dialog/useDialog.ts"
+          ]
+        },
+        "immutable_url_guard": "Exact pinned raw path checked before every HTTPS request; different-target or different-host redirects rejected",
+        "license_review": "Permissive root grant inspected, required root NOTICE retained when present; dependency grants not assumed",
+        "publication_checker": "scripts/check_publication.py inspect_content with explicit empty synthetic denylist; no owner-specific denylist/config accessed",
+        "scope": "All archived JSON decoded string values and full LICENSE/NOTICE bytes; all full fetched text also publication/control/injection/obfuscation checked. Clean excerpts only retained.",
+        "status": "passed",
+        "validation": {
+          "artifact_hashes": "passed: 17 listed local artifacts recomputed with SHA256",
+          "bounds": "Every JSON asset <=128KiB; specific fetched source docs <=32KiB; inline examples <=4000 characters",
+          "catalog_schema": "Catalog.model_validate passed: version 1, eight distinct entries",
+          "official_checker": {
+            "command": ".venv/bin/python scripts/check_github_collection.py --shard web --min-repositories 8",
+            "exit_code": 0,
+            "outcome": "passed; offline archived collection checks only, not independent live upstream/license/malware validation"
+          },
+          "owner_specific_denylist": "not accessed",
+          "publication_inspect_content": "passed: 19 final files inspected; explicit empty synthetic denylist, not staged-index-only scanning",
+          "scan_scope_paths": [
+            "data/github-web-library.json",
+            "data/github-web-report.json",
+            "data/licenses/github-web/radix-primitives/LICENSE.txt",
+            "data/assets/github-web/radix-primitives/source.json",
+            "data/licenses/github-web/react-spectrum/LICENSE.txt",
+            "data/licenses/github-web/react-spectrum/NOTICE.txt",
+            "data/assets/github-web/react-spectrum/source.json",
+            "data/licenses/github-web/chakra-ui/LICENSE.txt",
+            "data/assets/github-web/chakra-ui/source.json",
+            "data/licenses/github-web/mantine/LICENSE.txt",
+            "data/assets/github-web/mantine/source.json",
+            "data/licenses/github-web/carbon/LICENSE.txt",
+            "data/assets/github-web/carbon/source.json",
+            "data/licenses/github-web/headlessui/LICENSE.txt",
+            "data/assets/github-web/headlessui/source.json",
+            "data/licenses/github-web/shoelace/LICENSE.txt",
+            "data/assets/github-web/shoelace/source.json",
+            "data/licenses/github-web/primer-react/LICENSE.txt",
+            "data/assets/github-web/primer-react/source.json"
+          ],
+          "secure_library_retrieval": "passed: reference and application/json source retrieved through Library for every shard entry"
+        }
+      },
+      "selection_reason": "The inspected useDialog contract exposes dialogProps, titleProps and alert-dialog contentProps, with isEntering delaying focus until entry animation completes. A behavior reference for custom branded overlays.",
+      "source_url": "https://github.com/adobe/react-spectrum/tree/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+      "status": "archived",
+      "upstream_files": [
+        {
+          "expected_git_blob_sha1": "3e165434ad64dd3444f69ad8690151eb2ba0f151",
+          "path": "README.md",
+          "pinned_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/README.md",
+          "sha256": "f960a969da920635c343031a31170ece94521e4865c12fb79ecbb7e5b4b73936",
+          "verified_git_blob_sha1": "3e165434ad64dd3444f69ad8690151eb2ba0f151"
+        },
+        {
+          "expected_git_blob_sha1": "e3af6041dce3ff35457db0cfded595ec7421300e",
+          "path": "LICENSE",
+          "pinned_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/LICENSE",
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84",
+          "verified_git_blob_sha1": "e3af6041dce3ff35457db0cfded595ec7421300e"
+        },
+        {
+          "expected_git_blob_sha1": "07a501089b6a568fc090a9a65bcd0f4f5f755919",
+          "path": "NOTICE.txt",
+          "pinned_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/NOTICE.txt",
+          "sha256": "378e1af1aac41d8383e9da1b2acbd2adca2ff8a4c4ad5fdecc8fbffff831eaf7",
+          "verified_git_blob_sha1": "07a501089b6a568fc090a9a65bcd0f4f5f755919"
+        },
+        {
+          "path": "packages/@react-spectrum/dialog/README.md",
+          "pinned_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/@react-spectrum/dialog/README.md",
+          "sha256": "37245553dc199c1f541ae34afeeb468b8cee0c634faf8d7884c006271c139965"
+        },
+        {
+          "path": "packages/react-aria/src/dialog/useDialog.ts",
+          "pinned_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts",
+          "sha256": "538887eca22e1662dbaa2a23ad9ea5758102f1078a0c5e289e0d06c9682ac111"
+        }
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "path": "licenses/github-web/carbon/LICENSE.txt",
+          "sha256": "037b3e9eaff51477b270e9082f54b99175e4dd893548654f00995045b68294b8"
+        },
+        {
+          "path": "assets/github-web/carbon/source.json",
+          "sha256": "0efe67f66cbab662404a83ea59fdac3da75edbec8cc7ce74a2e322c4d222905d"
+        }
+      ],
+      "license": "Apache-2.0",
+      "reference_ids": [
+        "github-web-carbon"
+      ],
+      "repository": "carbon-design-system/carbon",
+      "revision": "2efc91b00c814e390bfa431f0f5555f3028e7100",
+      "scans": {
+        "archived_extended_findings": 0,
+        "archived_publication_findings": 0,
+        "discovery": {
+          "public_results": [
+            "radix-ui/primitives",
+            "mui/base-ui",
+            "akveo/react-native-ui-kitten",
+            "vmware-archive/clarity",
+            "reach/reach-ui",
+            "chakra-ui/ark",
+            "reshaped-ui/reshaped",
+            "kobaltedev/kobalte",
+            "duetds/date-picker",
+            "uxfront-com/inkline",
+            "appica-dev/appica-ui",
+            "vmware-clarity/ng-clarity",
+            "GeekyAnts/react-native-aria",
+            "aws/aws-northstar",
+            "adaptui/react",
+            "visa/visa-chart-components",
+            "vmware-clarity/core",
+            "samzydd/Sakaniui",
+            "codeweb-dev/spark-ui",
+            "NYPL/nypl-design-system"
+          ],
+          "query": "accessible design system in:description language:TypeScript",
+          "url": "https://api.github.com/search/repositories?q=accessible+design+system+in:description+language:TypeScript&sort=stars&per_page=20"
+        },
+        "execution": "No downloaded code executed, renderer, clone, package install, hook or outbound README link followed",
+        "extended_checks": [
+          "unsafe-control",
+          "escaped-control",
+          "injection-instruction",
+          "execution-obfuscation",
+          "dangerous-network-execution",
+          "renderable-script-tag",
+          "remote-image-embed"
+        ],
+        "full_fetched_text": [
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [
+              "remote-image-embed"
+            ],
+            "path": "README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "LICENSE",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "packages/react/src/components/Accordion/Accordion.mdx",
+            "publication_findings": 0
+          }
+        ],
+        "git_blob_verification": {
+          "limitations": "No blob verification claimed for paths absent from bounded public tree metadata",
+          "passed_paths": [
+            "README.md",
+            "LICENSE"
+          ],
+          "unavailable_paths": [
+            "packages/react/src/components/Accordion/Accordion.mdx"
+          ]
+        },
+        "immutable_url_guard": "Exact pinned raw path checked before every HTTPS request; different-target or different-host redirects rejected",
+        "license_review": "Permissive root grant inspected, required root NOTICE retained when present; dependency grants not assumed",
+        "publication_checker": "scripts/check_publication.py inspect_content with explicit empty synthetic denylist; no owner-specific denylist/config accessed",
+        "scope": "All archived JSON decoded string values and full LICENSE/NOTICE bytes; all full fetched text also publication/control/injection/obfuscation checked. Clean excerpts only retained.",
+        "status": "passed",
+        "validation": {
+          "artifact_hashes": "passed: 17 listed local artifacts recomputed with SHA256",
+          "bounds": "Every JSON asset <=128KiB; specific fetched source docs <=32KiB; inline examples <=4000 characters",
+          "catalog_schema": "Catalog.model_validate passed: version 1, eight distinct entries",
+          "official_checker": {
+            "command": ".venv/bin/python scripts/check_github_collection.py --shard web --min-repositories 8",
+            "exit_code": 0,
+            "outcome": "passed; offline archived collection checks only, not independent live upstream/license/malware validation"
+          },
+          "owner_specific_denylist": "not accessed",
+          "publication_inspect_content": "passed: 19 final files inspected; explicit empty synthetic denylist, not staged-index-only scanning",
+          "scan_scope_paths": [
+            "data/github-web-library.json",
+            "data/github-web-report.json",
+            "data/licenses/github-web/radix-primitives/LICENSE.txt",
+            "data/assets/github-web/radix-primitives/source.json",
+            "data/licenses/github-web/react-spectrum/LICENSE.txt",
+            "data/licenses/github-web/react-spectrum/NOTICE.txt",
+            "data/assets/github-web/react-spectrum/source.json",
+            "data/licenses/github-web/chakra-ui/LICENSE.txt",
+            "data/assets/github-web/chakra-ui/source.json",
+            "data/licenses/github-web/mantine/LICENSE.txt",
+            "data/assets/github-web/mantine/source.json",
+            "data/licenses/github-web/carbon/LICENSE.txt",
+            "data/assets/github-web/carbon/source.json",
+            "data/licenses/github-web/headlessui/LICENSE.txt",
+            "data/assets/github-web/headlessui/source.json",
+            "data/licenses/github-web/shoelace/LICENSE.txt",
+            "data/assets/github-web/shoelace/source.json",
+            "data/licenses/github-web/primer-react/LICENSE.txt",
+            "data/assets/github-web/primer-react/source.json"
+          ],
+          "secure_library_retrieval": "passed: reference and application/json source retrieved through Library for every shard entry"
+        }
+      },
+      "selection_reason": "Carbon warns that accordion headings are buttons: nested links or buttons are unreachable for keyboard or screen-reader users. Icon alignment must not be used to simulate a tree view.",
+      "source_url": "https://github.com/carbon-design-system/carbon/tree/2efc91b00c814e390bfa431f0f5555f3028e7100",
+      "status": "archived",
+      "upstream_files": [
+        {
+          "expected_git_blob_sha1": "f8db2b80a8e14257ce61715822b141d81049f3ad",
+          "path": "README.md",
+          "pinned_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/README.md",
+          "sha256": "1379b2bc49aae94c6dcd2b76cdb4f165a18220c2c613faf431fee74b18f3baa2",
+          "verified_git_blob_sha1": "f8db2b80a8e14257ce61715822b141d81049f3ad"
+        },
+        {
+          "expected_git_blob_sha1": "78e09cfabfb31eb9b611863e66732e80bd172fd4",
+          "path": "LICENSE",
+          "pinned_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/LICENSE",
+          "sha256": "037b3e9eaff51477b270e9082f54b99175e4dd893548654f00995045b68294b8",
+          "verified_git_blob_sha1": "78e09cfabfb31eb9b611863e66732e80bd172fd4"
+        },
+        {
+          "path": "packages/react/src/components/Accordion/Accordion.mdx",
+          "pinned_url": "https://raw.githubusercontent.com/carbon-design-system/carbon/2efc91b00c814e390bfa431f0f5555f3028e7100/packages/react/src/components/Accordion/Accordion.mdx",
+          "sha256": "0f7a1327c096f731b19e70b1f6a47b996c25abcf0cf22a3f843fb8181bbf747c"
+        }
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "path": "licenses/github-web/chakra-ui/LICENSE.txt",
+          "sha256": "9763e8439364e3663d1c41ac4c2a2bb44af407e3f28d9a079919d7a574d868f8"
+        },
+        {
+          "path": "assets/github-web/chakra-ui/source.json",
+          "sha256": "c32323a2519521b7f054945a83bce72d763ec8405d89a7d3e8a46d944acef9a9"
+        }
+      ],
+      "license": "MIT",
+      "reference_ids": [
+        "github-web-chakra-ui"
+      ],
+      "repository": "chakra-ui/chakra-ui",
+      "revision": "3eda54cae8d4a08b557917a233d1af3728e8d4b4",
+      "scans": {
+        "archived_extended_findings": 0,
+        "archived_publication_findings": 0,
+        "discovery": {
+          "public_results": [
+            "radix-ui/primitives",
+            "mui/base-ui",
+            "akveo/react-native-ui-kitten",
+            "vmware-archive/clarity",
+            "reach/reach-ui",
+            "chakra-ui/ark",
+            "reshaped-ui/reshaped",
+            "kobaltedev/kobalte",
+            "duetds/date-picker",
+            "uxfront-com/inkline",
+            "appica-dev/appica-ui",
+            "vmware-clarity/ng-clarity",
+            "GeekyAnts/react-native-aria",
+            "aws/aws-northstar",
+            "adaptui/react",
+            "visa/visa-chart-components",
+            "vmware-clarity/core",
+            "samzydd/Sakaniui",
+            "codeweb-dev/spark-ui",
+            "NYPL/nypl-design-system"
+          ],
+          "query": "accessible design system in:description language:TypeScript",
+          "url": "https://api.github.com/search/repositories?q=accessible+design+system+in:description+language:TypeScript&sort=stars&per_page=20"
+        },
+        "execution": "No downloaded code executed, renderer, clone, package install, hook or outbound README link followed",
+        "extended_checks": [
+          "unsafe-control",
+          "escaped-control",
+          "injection-instruction",
+          "execution-obfuscation",
+          "dangerous-network-execution",
+          "renderable-script-tag",
+          "remote-image-embed"
+        ],
+        "full_fetched_text": [
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [
+              "remote-image-embed"
+            ],
+            "path": "README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "LICENSE",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "apps/compositions/src/examples/accordion-with-subtext.tsx",
+            "publication_findings": 0
+          }
+        ],
+        "git_blob_verification": {
+          "limitations": "No blob verification claimed for paths absent from bounded public tree metadata",
+          "passed_paths": [
+            "README.md",
+            "LICENSE",
+            "apps/compositions/src/examples/accordion-with-subtext.tsx"
+          ],
+          "unavailable_paths": []
+        },
+        "immutable_url_guard": "Exact pinned raw path checked before every HTTPS request; different-target or different-host redirects rejected",
+        "license_review": "Permissive root grant inspected, required root NOTICE retained when present; dependency grants not assumed",
+        "publication_checker": "scripts/check_publication.py inspect_content with explicit empty synthetic denylist; no owner-specific denylist/config accessed",
+        "scope": "All archived JSON decoded string values and full LICENSE/NOTICE bytes; all full fetched text also publication/control/injection/obfuscation checked. Clean excerpts only retained.",
+        "status": "passed",
+        "validation": {
+          "artifact_hashes": "passed: 17 listed local artifacts recomputed with SHA256",
+          "bounds": "Every JSON asset <=128KiB; specific fetched source docs <=32KiB; inline examples <=4000 characters",
+          "catalog_schema": "Catalog.model_validate passed: version 1, eight distinct entries",
+          "official_checker": {
+            "command": ".venv/bin/python scripts/check_github_collection.py --shard web --min-repositories 8",
+            "exit_code": 0,
+            "outcome": "passed; offline archived collection checks only, not independent live upstream/license/malware validation"
+          },
+          "owner_specific_denylist": "not accessed",
+          "publication_inspect_content": "passed: 19 final files inspected; explicit empty synthetic denylist, not staged-index-only scanning",
+          "scan_scope_paths": [
+            "data/github-web-library.json",
+            "data/github-web-report.json",
+            "data/licenses/github-web/radix-primitives/LICENSE.txt",
+            "data/assets/github-web/radix-primitives/source.json",
+            "data/licenses/github-web/react-spectrum/LICENSE.txt",
+            "data/licenses/github-web/react-spectrum/NOTICE.txt",
+            "data/assets/github-web/react-spectrum/source.json",
+            "data/licenses/github-web/chakra-ui/LICENSE.txt",
+            "data/assets/github-web/chakra-ui/source.json",
+            "data/licenses/github-web/mantine/LICENSE.txt",
+            "data/assets/github-web/mantine/source.json",
+            "data/licenses/github-web/carbon/LICENSE.txt",
+            "data/assets/github-web/carbon/source.json",
+            "data/licenses/github-web/headlessui/LICENSE.txt",
+            "data/assets/github-web/headlessui/source.json",
+            "data/licenses/github-web/shoelace/LICENSE.txt",
+            "data/assets/github-web/shoelace/source.json",
+            "data/licenses/github-web/primer-react/LICENSE.txt",
+            "data/assets/github-web/primer-react/source.json"
+          ],
+          "secure_library_retrieval": "passed: reference and application/json source retrieved through Library for every shard entry"
+        }
+      },
+      "selection_reason": "An accordion trigger stacks a title with smaller muted subtext, while the body lives in ItemContent/ItemBody. Useful for compact preferences and setup screens.",
+      "source_url": "https://github.com/chakra-ui/chakra-ui/tree/3eda54cae8d4a08b557917a233d1af3728e8d4b4",
+      "status": "archived",
+      "upstream_files": [
+        {
+          "expected_git_blob_sha1": "693a61a6a94bab0eea0e7e1a5adae42e1e85b896",
+          "path": "README.md",
+          "pinned_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/README.md",
+          "sha256": "144a281b39d5fa14f44633c232b86ef9b03004ebb57f1f94249e27904abe889e",
+          "verified_git_blob_sha1": "693a61a6a94bab0eea0e7e1a5adae42e1e85b896"
+        },
+        {
+          "expected_git_blob_sha1": "79c996c1a09caaf2ea65e94e9ab47ecd19b68b03",
+          "path": "LICENSE",
+          "pinned_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/LICENSE",
+          "sha256": "9763e8439364e3663d1c41ac4c2a2bb44af407e3f28d9a079919d7a574d868f8",
+          "verified_git_blob_sha1": "79c996c1a09caaf2ea65e94e9ab47ecd19b68b03"
+        },
+        {
+          "expected_git_blob_sha1": "d17e4bc1239d3bff47f1d3c0aa1d2654854815ac",
+          "path": "apps/compositions/src/examples/accordion-with-subtext.tsx",
+          "pinned_url": "https://raw.githubusercontent.com/chakra-ui/chakra-ui/3eda54cae8d4a08b557917a233d1af3728e8d4b4/apps/compositions/src/examples/accordion-with-subtext.tsx",
+          "sha256": "b75016129ef26291f782c27b83c499c0d7f601b5ff5d1e1210c1aec6c5b072ad",
+          "verified_git_blob_sha1": "d17e4bc1239d3bff47f1d3c0aa1d2654854815ac"
+        }
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "path": "licenses/github-web/mantine/LICENSE.txt",
+          "sha256": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a"
+        },
+        {
+          "path": "assets/github-web/mantine/source.json",
+          "sha256": "fcd0acd35d1e08d16705d183d31155cef6e79362aa7712ce27b73abce5c25e43"
+        }
+      ],
+      "license": "MIT",
+      "reference_ids": [
+        "github-web-mantine"
+      ],
+      "repository": "mantinedev/mantine",
+      "revision": "0120ad3643a792e59bcb09c3aa254b2d1a312902",
+      "scans": {
+        "archived_extended_findings": 0,
+        "archived_publication_findings": 0,
+        "discovery": {
+          "public_results": [
+            "radix-ui/primitives",
+            "mui/base-ui",
+            "akveo/react-native-ui-kitten",
+            "vmware-archive/clarity",
+            "reach/reach-ui",
+            "chakra-ui/ark",
+            "reshaped-ui/reshaped",
+            "kobaltedev/kobalte",
+            "duetds/date-picker",
+            "uxfront-com/inkline",
+            "appica-dev/appica-ui",
+            "vmware-clarity/ng-clarity",
+            "GeekyAnts/react-native-aria",
+            "aws/aws-northstar",
+            "adaptui/react",
+            "visa/visa-chart-components",
+            "vmware-clarity/core",
+            "samzydd/Sakaniui",
+            "codeweb-dev/spark-ui",
+            "NYPL/nypl-design-system"
+          ],
+          "query": "accessible design system in:description language:TypeScript",
+          "url": "https://api.github.com/search/repositories?q=accessible+design+system+in:description+language:TypeScript&sort=stars&per_page=20"
+        },
+        "execution": "No downloaded code executed, renderer, clone, package install, hook or outbound README link followed",
+        "extended_checks": [
+          "unsafe-control",
+          "escaped-control",
+          "injection-instruction",
+          "execution-obfuscation",
+          "dangerous-network-execution",
+          "renderable-script-tag",
+          "remote-image-embed"
+        ],
+        "full_fetched_text": [
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [
+              "remote-image-embed"
+            ],
+            "path": "README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "LICENSE",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+            "publication_findings": 0
+          }
+        ],
+        "git_blob_verification": {
+          "limitations": "No blob verification claimed for paths absent from bounded public tree metadata",
+          "passed_paths": [
+            "README.md",
+            "LICENSE"
+          ],
+          "unavailable_paths": [
+            "packages/@mantine/core/src/components/Accordion/Accordion.tsx"
+          ]
+        },
+        "immutable_url_guard": "Exact pinned raw path checked before every HTTPS request; different-target or different-host redirects rejected",
+        "license_review": "Permissive root grant inspected, required root NOTICE retained when present; dependency grants not assumed",
+        "publication_checker": "scripts/check_publication.py inspect_content with explicit empty synthetic denylist; no owner-specific denylist/config accessed",
+        "scope": "All archived JSON decoded string values and full LICENSE/NOTICE bytes; all full fetched text also publication/control/injection/obfuscation checked. Clean excerpts only retained.",
+        "status": "passed",
+        "validation": {
+          "artifact_hashes": "passed: 17 listed local artifacts recomputed with SHA256",
+          "bounds": "Every JSON asset <=128KiB; specific fetched source docs <=32KiB; inline examples <=4000 characters",
+          "catalog_schema": "Catalog.model_validate passed: version 1, eight distinct entries",
+          "official_checker": {
+            "command": ".venv/bin/python scripts/check_github_collection.py --shard web --min-repositories 8",
+            "exit_code": 0,
+            "outcome": "passed; offline archived collection checks only, not independent live upstream/license/malware validation"
+          },
+          "owner_specific_denylist": "not accessed",
+          "publication_inspect_content": "passed: 19 final files inspected; explicit empty synthetic denylist, not staged-index-only scanning",
+          "scan_scope_paths": [
+            "data/github-web-library.json",
+            "data/github-web-report.json",
+            "data/licenses/github-web/radix-primitives/LICENSE.txt",
+            "data/assets/github-web/radix-primitives/source.json",
+            "data/licenses/github-web/react-spectrum/LICENSE.txt",
+            "data/licenses/github-web/react-spectrum/NOTICE.txt",
+            "data/assets/github-web/react-spectrum/source.json",
+            "data/licenses/github-web/chakra-ui/LICENSE.txt",
+            "data/assets/github-web/chakra-ui/source.json",
+            "data/licenses/github-web/mantine/LICENSE.txt",
+            "data/assets/github-web/mantine/source.json",
+            "data/licenses/github-web/carbon/LICENSE.txt",
+            "data/assets/github-web/carbon/source.json",
+            "data/licenses/github-web/headlessui/LICENSE.txt",
+            "data/assets/github-web/headlessui/source.json",
+            "data/licenses/github-web/shoelace/LICENSE.txt",
+            "data/assets/github-web/shoelace/source.json",
+            "data/licenses/github-web/primer-react/LICENSE.txt",
+            "data/assets/github-web/primer-react/source.json"
+          ],
+          "secure_library_retrieval": "passed: reference and application/json source retrieved through Library for every shard entry"
+        }
+      },
+      "selection_reason": "Accordion props expose single/multiple disclosure, controlled state, arrow-key looping, transition duration and semantic heading order. Choose disclosure behavior deliberately rather than copying a generic FAQ.",
+      "source_url": "https://github.com/mantinedev/mantine/tree/0120ad3643a792e59bcb09c3aa254b2d1a312902",
+      "status": "archived",
+      "upstream_files": [
+        {
+          "expected_git_blob_sha1": "d2eb802b62933bfb934ce29bf59fb7d5d4f69165",
+          "path": "README.md",
+          "pinned_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/README.md",
+          "sha256": "ed3f723d83c74199aca418eb2a277f2e5ad3d34442a69fb2e9690cce3572f15e",
+          "verified_git_blob_sha1": "d2eb802b62933bfb934ce29bf59fb7d5d4f69165"
+        },
+        {
+          "expected_git_blob_sha1": "c2b1d20b47003d10e738777879caf8d2771b034a",
+          "path": "LICENSE",
+          "pinned_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/LICENSE",
+          "sha256": "61c765e625bc25d55143f14de7554685c52f21d9e671d3d204304691a163d06a",
+          "verified_git_blob_sha1": "c2b1d20b47003d10e738777879caf8d2771b034a"
+        },
+        {
+          "path": "packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+          "pinned_url": "https://raw.githubusercontent.com/mantinedev/mantine/0120ad3643a792e59bcb09c3aa254b2d1a312902/packages/@mantine/core/src/components/Accordion/Accordion.tsx",
+          "sha256": "776ac150395ba5d8960c4490f52a4e1a421adcf00a23778ef928bb80a32d1d6b"
+        }
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "path": "licenses/github-web/primer-react/LICENSE.txt",
+          "sha256": "bf4f127cb7d82ed5c00d7095616440211225f4ca3b0195a0ecd0051720df5c18"
+        },
+        {
+          "path": "assets/github-web/primer-react/source.json",
+          "sha256": "44b07eb92a9c68b8d8050bdf23a0df817e1e999fa6fc02ccd83eaac90b8b334a"
+        }
+      ],
+      "license": "MIT",
+      "reference_ids": [
+        "github-web-primer-react"
+      ],
+      "repository": "primer/react",
+      "revision": "57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9",
+      "scans": {
+        "archived_extended_findings": 0,
+        "archived_publication_findings": 0,
+        "discovery": {
+          "public_results": [
+            "radix-ui/primitives",
+            "mui/base-ui",
+            "akveo/react-native-ui-kitten",
+            "vmware-archive/clarity",
+            "reach/reach-ui",
+            "chakra-ui/ark",
+            "reshaped-ui/reshaped",
+            "kobaltedev/kobalte",
+            "duetds/date-picker",
+            "uxfront-com/inkline",
+            "appica-dev/appica-ui",
+            "vmware-clarity/ng-clarity",
+            "GeekyAnts/react-native-aria",
+            "aws/aws-northstar",
+            "adaptui/react",
+            "visa/visa-chart-components",
+            "vmware-clarity/core",
+            "samzydd/Sakaniui",
+            "codeweb-dev/spark-ui",
+            "NYPL/nypl-design-system"
+          ],
+          "query": "accessible design system in:description language:TypeScript",
+          "url": "https://api.github.com/search/repositories?q=accessible+design+system+in:description+language:TypeScript&sort=stars&per_page=20"
+        },
+        "execution": "No downloaded code executed, renderer, clone, package install, hook or outbound README link followed",
+        "extended_checks": [
+          "unsafe-control",
+          "escaped-control",
+          "injection-instruction",
+          "execution-obfuscation",
+          "dangerous-network-execution",
+          "renderable-script-tag",
+          "remote-image-embed"
+        ],
+        "full_fetched_text": [
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [
+              "remote-image-embed"
+            ],
+            "path": "README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "LICENSE",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "packages/react/src/ActionList/ActionList.stories.tsx",
+            "publication_findings": 0
+          }
+        ],
+        "git_blob_verification": {
+          "limitations": "No blob verification claimed for paths absent from bounded public tree metadata",
+          "passed_paths": [
+            "README.md",
+            "LICENSE"
+          ],
+          "unavailable_paths": [
+            "packages/react/src/ActionList/ActionList.stories.tsx"
+          ]
+        },
+        "immutable_url_guard": "Exact pinned raw path checked before every HTTPS request; different-target or different-host redirects rejected",
+        "license_review": "Permissive root grant inspected, required root NOTICE retained when present; dependency grants not assumed",
+        "publication_checker": "scripts/check_publication.py inspect_content with explicit empty synthetic denylist; no owner-specific denylist/config accessed",
+        "scope": "All archived JSON decoded string values and full LICENSE/NOTICE bytes; all full fetched text also publication/control/injection/obfuscation checked. Clean excerpts only retained.",
+        "status": "passed",
+        "validation": {
+          "artifact_hashes": "passed: 17 listed local artifacts recomputed with SHA256",
+          "bounds": "Every JSON asset <=128KiB; specific fetched source docs <=32KiB; inline examples <=4000 characters",
+          "catalog_schema": "Catalog.model_validate passed: version 1, eight distinct entries",
+          "official_checker": {
+            "command": ".venv/bin/python scripts/check_github_collection.py --shard web --min-repositories 8",
+            "exit_code": 0,
+            "outcome": "passed; offline archived collection checks only, not independent live upstream/license/malware validation"
+          },
+          "owner_specific_denylist": "not accessed",
+          "publication_inspect_content": "passed: 19 final files inspected; explicit empty synthetic denylist, not staged-index-only scanning",
+          "scan_scope_paths": [
+            "data/github-web-library.json",
+            "data/github-web-report.json",
+            "data/licenses/github-web/radix-primitives/LICENSE.txt",
+            "data/assets/github-web/radix-primitives/source.json",
+            "data/licenses/github-web/react-spectrum/LICENSE.txt",
+            "data/licenses/github-web/react-spectrum/NOTICE.txt",
+            "data/assets/github-web/react-spectrum/source.json",
+            "data/licenses/github-web/chakra-ui/LICENSE.txt",
+            "data/assets/github-web/chakra-ui/source.json",
+            "data/licenses/github-web/mantine/LICENSE.txt",
+            "data/assets/github-web/mantine/source.json",
+            "data/licenses/github-web/carbon/LICENSE.txt",
+            "data/assets/github-web/carbon/source.json",
+            "data/licenses/github-web/headlessui/LICENSE.txt",
+            "data/assets/github-web/headlessui/source.json",
+            "data/licenses/github-web/shoelace/LICENSE.txt",
+            "data/assets/github-web/shoelace/source.json",
+            "data/licenses/github-web/primer-react/LICENSE.txt",
+            "data/assets/github-web/primer-react/source.json"
+          ],
+          "secure_library_retrieval": "passed: reference and application/json source retrieved through Library for every shard entry"
+        }
+      },
+      "selection_reason": "ActionList stories show simple command rows and explicit LeadingVisual/TrailingVisual slots within each item. Useful for compact contextual actions or selectable product navigation.",
+      "source_url": "https://github.com/primer/react/tree/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9",
+      "status": "archived",
+      "upstream_files": [
+        {
+          "expected_git_blob_sha1": "946a3d98763008ec2976204de5f3540ab024d90e",
+          "path": "README.md",
+          "pinned_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/README.md",
+          "sha256": "f8b5033456f1c210a24e06958e2adc8e3194709fed1414848c63d62785041fbb",
+          "verified_git_blob_sha1": "946a3d98763008ec2976204de5f3540ab024d90e"
+        },
+        {
+          "expected_git_blob_sha1": "7a22bf3f7a261e32e9552915a45032fd8b2cc746",
+          "path": "LICENSE",
+          "pinned_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/LICENSE",
+          "sha256": "bf4f127cb7d82ed5c00d7095616440211225f4ca3b0195a0ecd0051720df5c18",
+          "verified_git_blob_sha1": "7a22bf3f7a261e32e9552915a45032fd8b2cc746"
+        },
+        {
+          "path": "packages/react/src/ActionList/ActionList.stories.tsx",
+          "pinned_url": "https://raw.githubusercontent.com/primer/react/57c2ac594efb8ee9b3e59ed2b9abb66fc15a36d9/packages/react/src/ActionList/ActionList.stories.tsx",
+          "sha256": "80c1de217a63ced716582286352c62dd67369c75a341c6152a65feb63aa04aab"
+        }
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "path": "licenses/github-web/radix-primitives/LICENSE.txt",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        },
+        {
+          "path": "assets/github-web/radix-primitives/source.json",
+          "sha256": "5e0218351a71e243ccc44c7000556a20c52017f90cd27081c4d2e7872bb50649"
+        }
+      ],
+      "license": "MIT",
+      "reference_ids": [
+        "github-web-radix-primitives"
+      ],
+      "repository": "radix-ui/primitives",
+      "revision": "eb3a2b7091293e27df8f9ba906632d8daa3d81a3",
+      "scans": {
+        "archived_extended_findings": 0,
+        "archived_publication_findings": 0,
+        "discovery": {
+          "public_results": [
+            "radix-ui/primitives",
+            "mui/base-ui",
+            "akveo/react-native-ui-kitten",
+            "vmware-archive/clarity",
+            "reach/reach-ui",
+            "chakra-ui/ark",
+            "reshaped-ui/reshaped",
+            "kobaltedev/kobalte",
+            "duetds/date-picker",
+            "uxfront-com/inkline",
+            "appica-dev/appica-ui",
+            "vmware-clarity/ng-clarity",
+            "GeekyAnts/react-native-aria",
+            "aws/aws-northstar",
+            "adaptui/react",
+            "visa/visa-chart-components",
+            "vmware-clarity/core",
+            "samzydd/Sakaniui",
+            "codeweb-dev/spark-ui",
+            "NYPL/nypl-design-system"
+          ],
+          "query": "accessible design system in:description language:TypeScript",
+          "url": "https://api.github.com/search/repositories?q=accessible+design+system+in:description+language:TypeScript&sort=stars&per_page=20"
+        },
+        "execution": "No downloaded code executed, renderer, clone, package install, hook or outbound README link followed",
+        "extended_checks": [
+          "unsafe-control",
+          "escaped-control",
+          "injection-instruction",
+          "execution-obfuscation",
+          "dangerous-network-execution",
+          "renderable-script-tag",
+          "remote-image-embed"
+        ],
+        "full_fetched_text": [
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [
+              "remote-image-embed"
+            ],
+            "path": "README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "LICENSE",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [
+              "remote-image-embed"
+            ],
+            "path": "apps/storybook/stories/alert-dialog.stories.tsx",
+            "publication_findings": 0
+          }
+        ],
+        "git_blob_verification": {
+          "limitations": "No blob verification claimed for paths absent from bounded public tree metadata",
+          "passed_paths": [
+            "README.md",
+            "LICENSE",
+            "apps/storybook/stories/alert-dialog.stories.tsx"
+          ],
+          "unavailable_paths": []
+        },
+        "immutable_url_guard": "Exact pinned raw path checked before every HTTPS request; different-target or different-host redirects rejected",
+        "license_review": "Permissive root grant inspected, required root NOTICE retained when present; dependency grants not assumed",
+        "publication_checker": "scripts/check_publication.py inspect_content with explicit empty synthetic denylist; no owner-specific denylist/config accessed",
+        "scope": "All archived JSON decoded string values and full LICENSE/NOTICE bytes; all full fetched text also publication/control/injection/obfuscation checked. Clean excerpts only retained.",
+        "status": "passed",
+        "validation": {
+          "artifact_hashes": "passed: 17 listed local artifacts recomputed with SHA256",
+          "bounds": "Every JSON asset <=128KiB; specific fetched source docs <=32KiB; inline examples <=4000 characters",
+          "catalog_schema": "Catalog.model_validate passed: version 1, eight distinct entries",
+          "official_checker": {
+            "command": ".venv/bin/python scripts/check_github_collection.py --shard web --min-repositories 8",
+            "exit_code": 0,
+            "outcome": "passed; offline archived collection checks only, not independent live upstream/license/malware validation"
+          },
+          "owner_specific_denylist": "not accessed",
+          "publication_inspect_content": "passed: 19 final files inspected; explicit empty synthetic denylist, not staged-index-only scanning",
+          "scan_scope_paths": [
+            "data/github-web-library.json",
+            "data/github-web-report.json",
+            "data/licenses/github-web/radix-primitives/LICENSE.txt",
+            "data/assets/github-web/radix-primitives/source.json",
+            "data/licenses/github-web/react-spectrum/LICENSE.txt",
+            "data/licenses/github-web/react-spectrum/NOTICE.txt",
+            "data/assets/github-web/react-spectrum/source.json",
+            "data/licenses/github-web/chakra-ui/LICENSE.txt",
+            "data/assets/github-web/chakra-ui/source.json",
+            "data/licenses/github-web/mantine/LICENSE.txt",
+            "data/assets/github-web/mantine/source.json",
+            "data/licenses/github-web/carbon/LICENSE.txt",
+            "data/assets/github-web/carbon/source.json",
+            "data/licenses/github-web/headlessui/LICENSE.txt",
+            "data/assets/github-web/headlessui/source.json",
+            "data/licenses/github-web/shoelace/LICENSE.txt",
+            "data/assets/github-web/shoelace/source.json",
+            "data/licenses/github-web/primer-react/LICENSE.txt",
+            "data/assets/github-web/primer-react/source.json"
+          ],
+          "secure_library_retrieval": "passed: reference and application/json source retrieved through Library for every shard entry"
+        }
+      },
+      "selection_reason": "A compound alert-dialog composition separates trigger, overlay, accessible title, description, confirm action and cancel action. Useful for consequential changes in settings or account screens.",
+      "source_url": "https://github.com/radix-ui/primitives/tree/eb3a2b7091293e27df8f9ba906632d8daa3d81a3",
+      "status": "archived",
+      "upstream_files": [
+        {
+          "expected_git_blob_sha1": "1c9ac6cbfea839808d9bd0390389b09ffafb82d2",
+          "path": "README.md",
+          "pinned_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/README.md",
+          "sha256": "20cbda0a49f12fb8d23bc41106611cd89d8ff3c6950059b4a3092b58f357656d",
+          "verified_git_blob_sha1": "1c9ac6cbfea839808d9bd0390389b09ffafb82d2"
+        },
+        {
+          "expected_git_blob_sha1": "a18858fb7b014098cba85703e66609be66a26ef5",
+          "path": "LICENSE",
+          "pinned_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "verified_git_blob_sha1": "a18858fb7b014098cba85703e66609be66a26ef5"
+        },
+        {
+          "expected_git_blob_sha1": "4346803b96e7bcba1f13da650cb7b5458e39aeed",
+          "path": "apps/storybook/stories/alert-dialog.stories.tsx",
+          "pinned_url": "https://raw.githubusercontent.com/radix-ui/primitives/eb3a2b7091293e27df8f9ba906632d8daa3d81a3/apps/storybook/stories/alert-dialog.stories.tsx",
+          "sha256": "08d0fab5fd11cd85bb3a8cfcde38afa43296103e14df143833b37ab40be44c40",
+          "verified_git_blob_sha1": "4346803b96e7bcba1f13da650cb7b5458e39aeed"
+        }
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "path": "licenses/github-web/shoelace/LICENSE.txt",
+          "sha256": "ac9ffacbfc877b6f4253a481b3c0edbad0c019ac3506a3b51415b336f4a0c054"
+        },
+        {
+          "path": "assets/github-web/shoelace/source.json",
+          "sha256": "ca46bc83b93bd5726367ae1978fafa2248cc4102bc3bfc28f3a7d250bcd87ee2"
+        }
+      ],
+      "license": "MIT",
+      "reference_ids": [
+        "github-web-shoelace"
+      ],
+      "repository": "shoelace-style/shoelace",
+      "revision": "25bd8ec776609670a932f21390be59a495df497d",
+      "scans": {
+        "archived_extended_findings": 0,
+        "archived_publication_findings": 0,
+        "discovery": {
+          "public_results": [
+            "radix-ui/primitives",
+            "mui/base-ui",
+            "akveo/react-native-ui-kitten",
+            "vmware-archive/clarity",
+            "reach/reach-ui",
+            "chakra-ui/ark",
+            "reshaped-ui/reshaped",
+            "kobaltedev/kobalte",
+            "duetds/date-picker",
+            "uxfront-com/inkline",
+            "appica-dev/appica-ui",
+            "vmware-clarity/ng-clarity",
+            "GeekyAnts/react-native-aria",
+            "aws/aws-northstar",
+            "adaptui/react",
+            "visa/visa-chart-components",
+            "vmware-clarity/core",
+            "samzydd/Sakaniui",
+            "codeweb-dev/spark-ui",
+            "NYPL/nypl-design-system"
+          ],
+          "query": "accessible design system in:description language:TypeScript",
+          "url": "https://api.github.com/search/repositories?q=accessible+design+system+in:description+language:TypeScript&sort=stars&per_page=20"
+        },
+        "execution": "No downloaded code executed, renderer, clone, package install, hook or outbound README link followed",
+        "extended_checks": [
+          "unsafe-control",
+          "escaped-control",
+          "injection-instruction",
+          "execution-obfuscation",
+          "dangerous-network-execution",
+          "renderable-script-tag",
+          "remote-image-embed"
+        ],
+        "full_fetched_text": [
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "LICENSE.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [
+              "renderable-script-tag"
+            ],
+            "path": "docs/pages/components/dialog.md",
+            "publication_findings": 0
+          }
+        ],
+        "git_blob_verification": {
+          "limitations": "No blob verification claimed for paths absent from bounded public tree metadata",
+          "passed_paths": [
+            "README.md",
+            "LICENSE.md",
+            "docs/pages/components/dialog.md"
+          ],
+          "unavailable_paths": []
+        },
+        "immutable_url_guard": "Exact pinned raw path checked before every HTTPS request; different-target or different-host redirects rejected",
+        "license_review": "Permissive root grant inspected, required root NOTICE retained when present; dependency grants not assumed",
+        "publication_checker": "scripts/check_publication.py inspect_content with explicit empty synthetic denylist; no owner-specific denylist/config accessed",
+        "scope": "All archived JSON decoded string values and full LICENSE/NOTICE bytes; all full fetched text also publication/control/injection/obfuscation checked. Clean excerpts only retained.",
+        "status": "passed",
+        "validation": {
+          "artifact_hashes": "passed: 17 listed local artifacts recomputed with SHA256",
+          "bounds": "Every JSON asset <=128KiB; specific fetched source docs <=32KiB; inline examples <=4000 characters",
+          "catalog_schema": "Catalog.model_validate passed: version 1, eight distinct entries",
+          "official_checker": {
+            "command": ".venv/bin/python scripts/check_github_collection.py --shard web --min-repositories 8",
+            "exit_code": 0,
+            "outcome": "passed; offline archived collection checks only, not independent live upstream/license/malware validation"
+          },
+          "owner_specific_denylist": "not accessed",
+          "publication_inspect_content": "passed: 19 final files inspected; explicit empty synthetic denylist, not staged-index-only scanning",
+          "scan_scope_paths": [
+            "data/github-web-library.json",
+            "data/github-web-report.json",
+            "data/licenses/github-web/radix-primitives/LICENSE.txt",
+            "data/assets/github-web/radix-primitives/source.json",
+            "data/licenses/github-web/react-spectrum/LICENSE.txt",
+            "data/licenses/github-web/react-spectrum/NOTICE.txt",
+            "data/assets/github-web/react-spectrum/source.json",
+            "data/licenses/github-web/chakra-ui/LICENSE.txt",
+            "data/assets/github-web/chakra-ui/source.json",
+            "data/licenses/github-web/mantine/LICENSE.txt",
+            "data/assets/github-web/mantine/source.json",
+            "data/licenses/github-web/carbon/LICENSE.txt",
+            "data/assets/github-web/carbon/source.json",
+            "data/licenses/github-web/headlessui/LICENSE.txt",
+            "data/assets/github-web/headlessui/source.json",
+            "data/licenses/github-web/shoelace/LICENSE.txt",
+            "data/assets/github-web/shoelace/source.json",
+            "data/licenses/github-web/primer-react/LICENSE.txt",
+            "data/assets/github-web/primer-react/source.json"
+          ],
+          "secure_library_retrieval": "passed: reference and application/json source retrieved through Library for every shard entry"
+        }
+      },
+      "selection_reason": "A historical Shoelace React dialog synchronizes open state via onSlAfterHide, places its close action in the footer slot and exposes a --width property. Useful for maintaining existing component-based sites.",
+      "source_url": "https://github.com/shoelace-style/shoelace/tree/25bd8ec776609670a932f21390be59a495df497d",
+      "status": "archived",
+      "upstream_files": [
+        {
+          "expected_git_blob_sha1": "26f3556ad400110179de70476c24e327c7a444c4",
+          "path": "README.md",
+          "pinned_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/README.md",
+          "sha256": "c487472a9f5ed4bcf4eb5ac228c8b613397b0243ff5a6393ed120894a77983c3",
+          "verified_git_blob_sha1": "26f3556ad400110179de70476c24e327c7a444c4"
+        },
+        {
+          "expected_git_blob_sha1": "40f8e2ea2466728901eaba2bee082fd746b0d0ef",
+          "path": "LICENSE.md",
+          "pinned_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/LICENSE.md",
+          "sha256": "ac9ffacbfc877b6f4253a481b3c0edbad0c019ac3506a3b51415b336f4a0c054",
+          "verified_git_blob_sha1": "40f8e2ea2466728901eaba2bee082fd746b0d0ef"
+        },
+        {
+          "expected_git_blob_sha1": "46dca36f410769ee655b817be24d35cf4108929c",
+          "path": "docs/pages/components/dialog.md",
+          "pinned_url": "https://raw.githubusercontent.com/shoelace-style/shoelace/25bd8ec776609670a932f21390be59a495df497d/docs/pages/components/dialog.md",
+          "sha256": "0aa8a42b9362b7d7e8ee21f960a5b4e8c2f0eef10d5c146bc4cee3c5b5883783",
+          "verified_git_blob_sha1": "46dca36f410769ee655b817be24d35cf4108929c"
+        }
+      ]
+    },
+    {
+      "artifacts": [
+        {
+          "path": "licenses/github-web/headlessui/LICENSE.txt",
+          "sha256": "c0812e5b3b5848765343baffe9e304233fceae7891ba414a10d679aa7eccc0a6"
+        },
+        {
+          "path": "assets/github-web/headlessui/source.json",
+          "sha256": "eb2dd5a5d3d96f579b52cfe68095d0e291ee5867a4d949a4760b5d00ea33f1a3"
+        }
+      ],
+      "license": "MIT",
+      "reference_ids": [
+        "github-web-headlessui"
+      ],
+      "repository": "tailwindlabs/headlessui",
+      "revision": "eea57cf46fd6767ed1059012f7073b88eb159fba",
+      "scans": {
+        "archived_extended_findings": 0,
+        "archived_publication_findings": 0,
+        "discovery": {
+          "public_results": [
+            "radix-ui/primitives",
+            "mui/base-ui",
+            "akveo/react-native-ui-kitten",
+            "vmware-archive/clarity",
+            "reach/reach-ui",
+            "chakra-ui/ark",
+            "reshaped-ui/reshaped",
+            "kobaltedev/kobalte",
+            "duetds/date-picker",
+            "uxfront-com/inkline",
+            "appica-dev/appica-ui",
+            "vmware-clarity/ng-clarity",
+            "GeekyAnts/react-native-aria",
+            "aws/aws-northstar",
+            "adaptui/react",
+            "visa/visa-chart-components",
+            "vmware-clarity/core",
+            "samzydd/Sakaniui",
+            "codeweb-dev/spark-ui",
+            "NYPL/nypl-design-system"
+          ],
+          "query": "accessible design system in:description language:TypeScript",
+          "url": "https://api.github.com/search/repositories?q=accessible+design+system+in:description+language:TypeScript&sort=stars&per_page=20"
+        },
+        "execution": "No downloaded code executed, renderer, clone, package install, hook or outbound README link followed",
+        "extended_checks": [
+          "unsafe-control",
+          "escaped-control",
+          "injection-instruction",
+          "execution-obfuscation",
+          "dangerous-network-execution",
+          "renderable-script-tag",
+          "remote-image-embed"
+        ],
+        "full_fetched_text": [
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [
+              "remote-image-embed"
+            ],
+            "path": "README.md",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "LICENSE",
+            "publication_findings": 0
+          },
+          {
+            "archive_policy": "Only separately rescanned clean excerpts retained; media embeds and script blocks excluded. Full LICENSE/NOTICE retained verbatim.",
+            "extended_labels": [],
+            "path": "playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+            "publication_findings": 0
+          }
+        ],
+        "git_blob_verification": {
+          "limitations": "No blob verification claimed for paths absent from bounded public tree metadata",
+          "passed_paths": [
+            "README.md",
+            "LICENSE",
+            "playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx"
+          ],
+          "unavailable_paths": []
+        },
+        "immutable_url_guard": "Exact pinned raw path checked before every HTTPS request; different-target or different-host redirects rejected",
+        "license_review": "Permissive root grant inspected, required root NOTICE retained when present; dependency grants not assumed",
+        "publication_checker": "scripts/check_publication.py inspect_content with explicit empty synthetic denylist; no owner-specific denylist/config accessed",
+        "scope": "All archived JSON decoded string values and full LICENSE/NOTICE bytes; all full fetched text also publication/control/injection/obfuscation checked. Clean excerpts only retained.",
+        "status": "passed",
+        "validation": {
+          "artifact_hashes": "passed: 17 listed local artifacts recomputed with SHA256",
+          "bounds": "Every JSON asset <=128KiB; specific fetched source docs <=32KiB; inline examples <=4000 characters",
+          "catalog_schema": "Catalog.model_validate passed: version 1, eight distinct entries",
+          "official_checker": {
+            "command": ".venv/bin/python scripts/check_github_collection.py --shard web --min-repositories 8",
+            "exit_code": 0,
+            "outcome": "passed; offline archived collection checks only, not independent live upstream/license/malware validation"
+          },
+          "owner_specific_denylist": "not accessed",
+          "publication_inspect_content": "passed: 19 final files inspected; explicit empty synthetic denylist, not staged-index-only scanning",
+          "scan_scope_paths": [
+            "data/github-web-library.json",
+            "data/github-web-report.json",
+            "data/licenses/github-web/radix-primitives/LICENSE.txt",
+            "data/assets/github-web/radix-primitives/source.json",
+            "data/licenses/github-web/react-spectrum/LICENSE.txt",
+            "data/licenses/github-web/react-spectrum/NOTICE.txt",
+            "data/assets/github-web/react-spectrum/source.json",
+            "data/licenses/github-web/chakra-ui/LICENSE.txt",
+            "data/assets/github-web/chakra-ui/source.json",
+            "data/licenses/github-web/mantine/LICENSE.txt",
+            "data/assets/github-web/mantine/source.json",
+            "data/licenses/github-web/carbon/LICENSE.txt",
+            "data/assets/github-web/carbon/source.json",
+            "data/licenses/github-web/headlessui/LICENSE.txt",
+            "data/assets/github-web/headlessui/source.json",
+            "data/licenses/github-web/shoelace/LICENSE.txt",
+            "data/assets/github-web/shoelace/source.json",
+            "data/licenses/github-web/primer-react/LICENSE.txt",
+            "data/assets/github-web/primer-react/source.json"
+          ],
+          "secure_library_retrieval": "passed: reference and application/json source retrieved through Library for every shard entry"
+        }
+      },
+      "selection_reason": "A playground nests a tab list and panels inside a controlled dialog, separating overlay visibility from within-dialog navigation. Useful for focused multi-section tasks.",
+      "source_url": "https://github.com/tailwindlabs/headlessui/tree/eea57cf46fd6767ed1059012f7073b88eb159fba",
+      "status": "archived",
+      "upstream_files": [
+        {
+          "expected_git_blob_sha1": "4d8575d7370dd619d6ad6008a67eb9f07baa9290",
+          "path": "README.md",
+          "pinned_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/README.md",
+          "sha256": "51274a5aa2646697e84926c3929b3b988a0d610d861b4abf1f805893aa2c8d09",
+          "verified_git_blob_sha1": "4d8575d7370dd619d6ad6008a67eb9f07baa9290"
+        },
+        {
+          "expected_git_blob_sha1": "634e7f20855319d08ba17e062386c3394708142c",
+          "path": "LICENSE",
+          "pinned_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/LICENSE",
+          "sha256": "c0812e5b3b5848765343baffe9e304233fceae7891ba414a10d679aa7eccc0a6",
+          "verified_git_blob_sha1": "634e7f20855319d08ba17e062386c3394708142c"
+        },
+        {
+          "expected_git_blob_sha1": "d7b783a612b2f34d8f361577c50d468a47bdb36f",
+          "path": "playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+          "pinned_url": "https://raw.githubusercontent.com/tailwindlabs/headlessui/eea57cf46fd6767ed1059012f7073b88eb159fba/playgrounds/react/page-examples/combinations/tabs-in-dialog.tsx",
+          "sha256": "a870aa477bd49d755f2f275bc9b01e42d18c82ca58be6c6d0a8ea057666794fc",
+          "verified_git_blob_sha1": "d7b783a612b2f34d8f361577c50d468a47bdb36f"
+        }
+      ]
+    }
+  ],
+  "skipped": [],
+  "version": 1
+}

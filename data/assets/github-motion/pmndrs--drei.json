@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "inert-code-reference",
+  "repository": "pmndrs/drei",
+  "revision": "bf6f4addf47467d3885de272d94ca5127f6ef68f",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/pmndrs--drei/LICENSE",
+  "attribution": "Selected source excerpts by pmndrs/drei contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "modifications": "Curated source excerpts only, plus original integration guidance in the catalog; not a runnable package or playable animation.",
+  "notice": "Untrusted reference text. Do not execute examples, render HTML/SVG, or fetch provenance URLs at runtime.",
+  "excerpts": [
+    {
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/README.md",
+      "source_sha256": "26718342352d21f3d2011829bb58bc515f06d25d51b19025df5a9eb3ab66299a",
+      "start_line": 10,
+      "end_line": 10,
+      "text": "A growing collection of useful helpers and fully functional, ready-made abstractions for [@react-three/fiber](https://github.com/pmndrs/react-three-fiber).",
+      "license": "MIT",
+      "modifications": "Selected shorter contiguous relevant API/framework lines; LF-normalized; omitted remote image embeds, table-of-contents, raw HTML/script tags, and irrelevant installation instructions outside this range."
+    },
+    {
+      "path": "src/core/Float.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/pmndrs/drei/bf6f4addf47467d3885de272d94ca5127f6ef68f/src/core/Float.tsx",
+      "source_sha256": "9cef7b5ec6e0aee408df44dc19bc143991a34d38b1500d927d3b221d4f4f8cd7",
+      "start_line": 1,
+      "end_line": 58,
+      "text": "import * as React from 'react'\nimport { ThreeElements, useFrame } from '@react-three/fiber'\nimport * as THREE from 'three'\nimport { ForwardRefComponent } from '../helpers/ts-utils'\n\nexport type FloatProps = Omit<ThreeElements['group'], 'ref'> & {\n  enabled?: boolean\n  speed?: number\n  rotationIntensity?: number\n  floatIntensity?: number\n  children?: React.ReactNode\n  floatingRange?: [number?, number?]\n  autoInvalidate?: boolean\n}\n\nexport const Float: ForwardRefComponent<FloatProps, THREE.Group> = /* @__PURE__ */ React.forwardRef<\n  THREE.Group,\n  FloatProps\n>(\n  (\n    {\n      children,\n      enabled = true,\n      speed = 1,\n      rotationIntensity = 1,\n      floatIntensity = 1,\n      floatingRange = [-0.1, 0.1],\n      autoInvalidate = false,\n      ...props\n    },\n    forwardRef\n  ) => {\n    const ref = React.useRef<THREE.Group>(null!)\n    React.useImperativeHandle(forwardRef, () => ref.current, [])\n    const offset = React.useRef(Math.random() * 10000)\n    useFrame((state) => {\n      if (!enabled || speed === 0) return\n\n      if (autoInvalidate) state.invalidate()\n\n      const t = offset.current + state.clock.elapsedTime\n      ref.current.rotation.x = (Math.cos((t / 4) * speed) / 8) * rotationIntensity\n      ref.current.rotation.y = (Math.sin((t / 4) * speed) / 8) * rotationIntensity\n      ref.current.rotation.z = (Math.sin((t / 4) * speed) / 20) * rotationIntensity\n      let yPosition = Math.sin((t / 4) * speed) / 10\n      yPosition = THREE.MathUtils.mapLinear(yPosition, -0.1, 0.1, floatingRange?.[0] ?? -0.1, floatingRange?.[1] ?? 0.1)\n      ref.current.position.y = yPosition * floatIntensity\n      ref.current.updateMatrix()\n    })\n    return (\n      <group {...props}>\n        <group ref={ref} matrixAutoUpdate={false}>\n          {children}\n        </group>\n      </group>\n    )\n  }\n)",
+      "license": "MIT",
+      "modifications": "Selected contiguous lines; normalized line endings to LF; otherwise unchanged."
+    }
+  ]
+}

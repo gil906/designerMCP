@@ -1,0 +1,2 @@
+# Preserve the pinned upstream license bytes, including its final blank line.
+data/licenses/github-mobile/wear-os-compose/LICENSE.txt whitespace=-blank-at-eof

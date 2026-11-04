@@ -1,0 +1,826 @@
+{
+  "version": 1,
+  "repositories": [
+    {
+      "repository": "flutter/samples",
+      "revision": "21c71902bb2c7da3cce328ba5946cba2f35a660a",
+      "license": "BSD-3-Clause",
+      "source_url": "https://github.com/flutter/samples/tree/21c71902bb2c7da3cce328ba5946cba2f35a660a",
+      "reference_ids": [
+        "github-mobile-flutter-samples"
+      ],
+      "selection_reason": "The Material 3 demo switches between compact, medium and large layouts using available width, and pairs a NavigationBar with a NavigationRail. It is an SDK-widget reference rather than a discontinued adaptive-scaffold package.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-mobile/flutter-samples.json",
+          "sha256": "558ff30726f865faa57a99916f7b3f22bc3f431b0d171efdc9ea655a6509ba44"
+        },
+        {
+          "path": "licenses/github-mobile/flutter-samples/LICENSE.txt",
+          "sha256": "687c3d4c3a553c0fa995e9d3c35b245872fa4a0f5c2bd6494decc2fa410f7ce9"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "068bc60cf20eb351c46c08f0f4bac25d0ed53a0243f04ccd6d9962830d60bd7f",
+          "pinned_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/README.md",
+          "expected_git_blob_sha1": "12b4b493f1af624ba3afa4665aca55be3578b8a0",
+          "verified_git_blob_sha1": "12b4b493f1af624ba3afa4665aca55be3578b8a0"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "687c3d4c3a553c0fa995e9d3c35b245872fa4a0f5c2bd6494decc2fa410f7ce9",
+          "pinned_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/LICENSE",
+          "expected_git_blob_sha1": "57e60e3ab847efc3526aa15ffdb1dc0ed2ef743b",
+          "verified_git_blob_sha1": "57e60e3ab847efc3526aa15ffdb1dc0ed2ef743b"
+        },
+        {
+          "path": "material_3_demo/lib/src/home.dart",
+          "sha256": "bd77cbe0beacb2a9805e759d02d5a5f35fb48d00c08a1f4f2c3d9268a03e44c2",
+          "pinned_url": "https://raw.githubusercontent.com/flutter/samples/21c71902bb2c7da3cce328ba5946cba2f35a660a/material_3_demo/lib/src/home.dart",
+          "expected_git_blob_sha1": "8b2cadfe3e7b156710e77941b51e1d5423d39061",
+          "verified_git_blob_sha1": "8b2cadfe3e7b156710e77941b51e1d5423d39061"
+        }
+      ],
+      "scans": {
+        "publication_helper_new_bytes": "passed; inspect_content(..., denylist=()) on actual archived bytes and decoded excerpts",
+        "secrets_private_keys": "passed",
+        "nul_bidi_escape_controls": "passed",
+        "prompt_injection_obfuscation": "passed",
+        "dangerous_network_exec": "passed for archived excerpts and inline examples",
+        "remote_images_html_installers": "excluded from copied prose",
+        "notice_inventory": "complete nontruncated pinned tree; no NOTICE files found",
+        "git_blob_integrity": "all listed upstream full fetched bytes match pinned-tree blob SHA1",
+        "redirect_pinning": "reverified all upstream raw fetch attempts against exact immutable URL allowset; zero redirects; reject any changed/lost SHA pin",
+        "collection_collected_at_pacific": "2026-11-03T19:16:32.873213-08:00",
+        "collection_catalog_sha256": "d8fa7252c317bc7bbbefb107703ccadee05f039071d0d25c6db93c7d232223ed",
+        "collection_validation": {
+          "catalog_schema": "passed: exact Catalog.model_validate_json",
+          "secure_asset_retrieval": "passed: 8 JSON assets retrieved using shard-only Library subclass and normal no-follow read",
+          "artifact_hashes": "passed",
+          "json_assets_byte_cap": "passed: every asset <=128KiB",
+          "new_repository_count": 8,
+          "artifacts": 16,
+          "path_rejection": "passed",
+          "actual_new_byte_publication_scan": "passed: 18 final files using trusted inspect_content with empty denylist",
+          "pinned_git_blob_records": 31,
+          "max_asset_bytes": 7310,
+          "raw_pin_reverification": "passed: 31 full raw files, zero redirects, SHA256 and Git blob SHA1 matched",
+          "integration_validator": "passed: check_github_collection.py --shard mobile --min-repositories 8; 8 repos, 8 references, 16 artifacts, 31 consistent collector blob pairs"
+        },
+        "collection_discovery": {
+          "watchos_query": "watchOS SwiftUI license:mit stars:>10",
+          "public_api_url": "https://api.github.com/search/repositories?q=watchOS%20SwiftUI%20license%3Amit%20stars%3A%3E10&sort=stars&per_page=10",
+          "selected": "markiv/SwiftUI-Shimmer",
+          "evidence": "Public search returned MIT candidate; repo metadata, pinned README, Package.swift and Shimmer source verified."
+        },
+        "maintenance": {
+          "repository_archived": false,
+          "upstream_pushed_at": "2026-11-03T18:28:17Z",
+          "note": "Last push is an activity signal, not a maintenance/support guarantee."
+        },
+        "platform_evidence": [
+          {
+            "path": "material_3_demo/lib/src/home.dart",
+            "line_ranges": [
+              [
+                1,
+                3
+              ]
+            ]
+          },
+          {
+            "path": "material_3_demo/lib/src/home.dart",
+            "line_ranges": [
+              [
+                76,
+                106
+              ]
+            ]
+          },
+          {
+            "path": "material_3_demo/lib/src/home.dart",
+            "line_ranges": [
+              [
+                196,
+                249
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repository": "android/compose-samples",
+      "revision": "25631e8f544a9a1e3f01e296eaf1b4c28428196c",
+      "license": "Apache-2.0",
+      "source_url": "https://github.com/android/compose-samples/tree/25631e8f544a9a1e3f01e296eaf1b4c28428196c",
+      "reference_ids": [
+        "github-mobile-compose-reply"
+      ],
+      "selection_reason": "Reply turns compact windows into a single mail pane and expanded windows into list-detail panes. Its concrete source maps FoldingFeature bounds to book/separating postures and passes display features into Accompanist TwoPane.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-mobile/compose-reply.json",
+          "sha256": "b73237dfab5d02b5eac906e4318f1c924eaa171a42e23ece119ad68d177304ea"
+        },
+        {
+          "path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+          "sha256": "0a3428546fa34277a64d60b372f74f880a1aa9a30b6c96ac76d30740b6ad9326"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "59d4bd16ed8120149e7ed1e9c93906faadc14711b0aa01eb5b27fbc9686832c7",
+          "pinned_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/README.md",
+          "expected_git_blob_sha1": "c9a8c24fafc0df98afc5874f9db3d8a868e4b93e",
+          "verified_git_blob_sha1": "c9a8c24fafc0df98afc5874f9db3d8a868e4b93e"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "0a3428546fa34277a64d60b372f74f880a1aa9a30b6c96ac76d30740b6ad9326",
+          "pinned_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/LICENSE",
+          "expected_git_blob_sha1": "79b3dd5a8ef8c3249836185453221ec51965c810",
+          "verified_git_blob_sha1": "79b3dd5a8ef8c3249836185453221ec51965c810"
+        },
+        {
+          "path": "Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+          "sha256": "802b69d10ef23f1d4b3c2d1bd97bc8d0bc689d5e86ba586eaed351091fc8aa84",
+          "pinned_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+          "expected_git_blob_sha1": "921f8e3142d64a510616e7d5a225543dc7341e11",
+          "verified_git_blob_sha1": "921f8e3142d64a510616e7d5a225543dc7341e11"
+        },
+        {
+          "path": "Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+          "sha256": "18aaae2c105fb9bd0cb96be719aeea7d0a850a3a87d11aed635e6f56f5938965",
+          "pinned_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+          "expected_git_blob_sha1": "da3fc1c89af1ba23cc44764795cfab32f721969a",
+          "verified_git_blob_sha1": "da3fc1c89af1ba23cc44764795cfab32f721969a"
+        }
+      ],
+      "scans": {
+        "publication_helper_new_bytes": "passed; inspect_content(..., denylist=()) on actual archived bytes and decoded excerpts",
+        "secrets_private_keys": "passed",
+        "nul_bidi_escape_controls": "passed",
+        "prompt_injection_obfuscation": "passed",
+        "dangerous_network_exec": "passed for archived excerpts and inline examples",
+        "remote_images_html_installers": "excluded from copied prose",
+        "notice_inventory": "complete nontruncated pinned tree; no NOTICE files found",
+        "git_blob_integrity": "all listed upstream full fetched bytes match pinned-tree blob SHA1",
+        "redirect_pinning": "reverified all upstream raw fetch attempts against exact immutable URL allowset; zero redirects; reject any changed/lost SHA pin",
+        "maintenance": {
+          "repository_archived": false,
+          "upstream_pushed_at": "2026-10-28T03:06:42Z",
+          "note": "Last push is an activity signal, not a maintenance/support guarantee."
+        },
+        "platform_evidence": [
+          {
+            "path": "Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+            "line_ranges": [
+              [
+                1,
+                15
+              ]
+            ]
+          },
+          {
+            "path": "Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+            "line_ranges": [
+              [
+                55,
+                96
+              ]
+            ]
+          },
+          {
+            "path": "Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+            "line_ranges": [
+              [
+                1,
+                15
+              ]
+            ]
+          },
+          {
+            "path": "Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+            "line_ranges": [
+              [
+                80,
+                101
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repository": "android/nowinandroid",
+      "revision": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "license": "Apache-2.0",
+      "source_url": "https://github.com/android/nowinandroid/tree/2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "reference_ids": [
+        "github-mobile-now-in-android"
+      ],
+      "selection_reason": "NiaApp feeds currentWindowAdaptiveInfo into NiaNavigationSuiteScaffold, keeping navigation selection, localized labels and unread markers together. This is a practical app-shell reference for phone and larger Android windows.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-mobile/now-in-android.json",
+          "sha256": "52bcdc97b8bf0bb28af10c0209d109c10854a9edf6395f84bcab2e76b8cb5cf5"
+        },
+        {
+          "path": "licenses/github-mobile/now-in-android/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "d6eeade4c74e4cb521987ac2fe88b43bf90dd16610c27019b337ff6e04bd5536",
+          "pinned_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/README.md",
+          "expected_git_blob_sha1": "7f7613a0d4b43ce43ad6bd5be31f73e540277f6b",
+          "verified_git_blob_sha1": "7f7613a0d4b43ce43ad6bd5be31f73e540277f6b"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "pinned_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/LICENSE",
+          "expected_git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "verified_git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+        },
+        {
+          "path": "app/src/main/kotlin/com/google/samples/apps/nowinandroid/ui/NiaApp.kt",
+          "sha256": "689980be44418a06cc4381df0874afde3819f47de0985c8fb8c0234540316fd4",
+          "pinned_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/main/kotlin/com/google/samples/apps/nowinandroid/ui/NiaApp.kt",
+          "expected_git_blob_sha1": "a0e36e723fc2cef20ab466bece27868e77546ee4",
+          "verified_git_blob_sha1": "a0e36e723fc2cef20ab466bece27868e77546ee4"
+        }
+      ],
+      "scans": {
+        "publication_helper_new_bytes": "passed; inspect_content(..., denylist=()) on actual archived bytes and decoded excerpts",
+        "secrets_private_keys": "passed",
+        "nul_bidi_escape_controls": "passed",
+        "prompt_injection_obfuscation": "passed",
+        "dangerous_network_exec": "passed for archived excerpts and inline examples",
+        "remote_images_html_installers": "excluded from copied prose",
+        "notice_inventory": "complete nontruncated pinned tree; no NOTICE files found",
+        "git_blob_integrity": "all listed upstream full fetched bytes match pinned-tree blob SHA1",
+        "redirect_pinning": "reverified all upstream raw fetch attempts against exact immutable URL allowset; zero redirects; reject any changed/lost SHA pin",
+        "maintenance": {
+          "repository_archived": false,
+          "upstream_pushed_at": "2026-11-04T01:42:49Z",
+          "note": "Last push is an activity signal, not a maintenance/support guarantee."
+        },
+        "platform_evidence": [
+          {
+            "path": "app/src/main/kotlin/com/google/samples/apps/nowinandroid/ui/NiaApp.kt",
+            "line_ranges": [
+              [
+                1,
+                15
+              ]
+            ]
+          },
+          {
+            "path": "app/src/main/kotlin/com/google/samples/apps/nowinandroid/ui/NiaApp.kt",
+            "line_ranges": [
+              [
+                163,
+                207
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repository": "android/wear-os-samples",
+      "revision": "665d6a48466d472a4d928661dd865364d5073799",
+      "license": "Apache-2.0",
+      "source_url": "https://github.com/android/wear-os-samples/tree/665d6a48466d472a4d928661dd865364d5073799",
+      "reference_ids": [
+        "github-mobile-wear-os-compose"
+      ],
+      "selection_reason": "The current ComposeStarter uses Wear Compose Material 3 AppScaffold and ScreenScaffold, plus a TransformingLazyColumn whose scroll state is shared with the screen scaffold. It supplies a concrete round-watch list pattern rather than shrinking a phone UI.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-mobile/wear-os-compose.json",
+          "sha256": "9ce8a6e7e93dbe46bf6e1a22319dad42a1e676edcefc4817787f97e7b18444c7"
+        },
+        {
+          "path": "licenses/github-mobile/wear-os-compose/LICENSE.txt",
+          "sha256": "b493568bcbcaf50e888f66642878374ede50f7f12adb4e3f64d6f9c093de9ca4"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "cc111337c5f0e4b7eb86f958cfba15d11cfde064ce5ba45f238a05423bec26f0",
+          "pinned_url": "https://raw.githubusercontent.com/android/wear-os-samples/665d6a48466d472a4d928661dd865364d5073799/README.md",
+          "expected_git_blob_sha1": "f110daabb997fd5593eda313486de8b74ceae905",
+          "verified_git_blob_sha1": "f110daabb997fd5593eda313486de8b74ceae905"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "b493568bcbcaf50e888f66642878374ede50f7f12adb4e3f64d6f9c093de9ca4",
+          "pinned_url": "https://raw.githubusercontent.com/android/wear-os-samples/665d6a48466d472a4d928661dd865364d5073799/LICENSE",
+          "expected_git_blob_sha1": "549dddff0e67c99b7ce55100854e2392a367b9fe",
+          "verified_git_blob_sha1": "549dddff0e67c99b7ce55100854e2392a367b9fe"
+        },
+        {
+          "path": "ComposeStarter/app/src/main/java/com/example/android/wearable/composestarter/presentation/MainActivity.kt",
+          "sha256": "bf60476462d7b337ed3bdaea2e4db915954135c9306f19faa9dd16c614212b29",
+          "pinned_url": "https://raw.githubusercontent.com/android/wear-os-samples/665d6a48466d472a4d928661dd865364d5073799/ComposeStarter/app/src/main/java/com/example/android/wearable/composestarter/presentation/MainActivity.kt",
+          "expected_git_blob_sha1": "9dd7e4fc6265904710d7db0add85287a7153608e",
+          "verified_git_blob_sha1": "9dd7e4fc6265904710d7db0add85287a7153608e"
+        }
+      ],
+      "scans": {
+        "publication_helper_new_bytes": "passed; inspect_content(..., denylist=()) on actual archived bytes and decoded excerpts",
+        "secrets_private_keys": "passed",
+        "nul_bidi_escape_controls": "passed",
+        "prompt_injection_obfuscation": "passed",
+        "dangerous_network_exec": "passed for archived excerpts and inline examples",
+        "remote_images_html_installers": "excluded from copied prose",
+        "notice_inventory": "complete nontruncated pinned tree; no NOTICE files found",
+        "git_blob_integrity": "all listed upstream full fetched bytes match pinned-tree blob SHA1",
+        "redirect_pinning": "reverified all upstream raw fetch attempts against exact immutable URL allowset; zero redirects; reject any changed/lost SHA pin",
+        "maintenance": {
+          "repository_archived": false,
+          "upstream_pushed_at": "2026-11-03T00:46:45Z",
+          "note": "Last push is an activity signal, not a maintenance/support guarantee."
+        },
+        "platform_evidence": [
+          {
+            "path": "ComposeStarter/app/src/main/java/com/example/android/wearable/composestarter/presentation/MainActivity.kt",
+            "line_ranges": [
+              [
+                1,
+                15
+              ]
+            ]
+          },
+          {
+            "path": "ComposeStarter/app/src/main/java/com/example/android/wearable/composestarter/presentation/MainActivity.kt",
+            "line_ranges": [
+              [
+                174,
+                223
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repository": "exyte/AnimatedTabBar",
+      "revision": "dcc003243f1fddc019564b08431cf508358f7d58",
+      "license": "MIT",
+      "source_url": "https://github.com/exyte/AnimatedTabBar/tree/dcc003243f1fddc019564b08431cf508358f7d58",
+      "reference_ids": [
+        "github-mobile-animated-tab-bar"
+      ],
+      "selection_reason": "AnimatedTabBar exposes a selected-index binding and separate ball, indentation and button animation controls for custom SwiftUI tab navigation. Its package declares iOS 16+, not watchOS or Android.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-mobile/animated-tab-bar.json",
+          "sha256": "be31a74191301d142da67b1ac5fbb48a28fa1add078b9984cad2d541a207e05c"
+        },
+        {
+          "path": "licenses/github-mobile/animated-tab-bar/LICENSE.txt",
+          "sha256": "a6a30bbd8459f4ca73084fd67b7462f57363bc424bd98d4f30b7848fe58f124c"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "bb955e3efdc719eb87db906ac127f7d4274bfa3f8035b77028732f798172a816",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/AnimatedTabBar/dcc003243f1fddc019564b08431cf508358f7d58/README.md",
+          "expected_git_blob_sha1": "22a7e96fddb7215337234ec9c9da80a5f66f87ba",
+          "verified_git_blob_sha1": "22a7e96fddb7215337234ec9c9da80a5f66f87ba"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "a6a30bbd8459f4ca73084fd67b7462f57363bc424bd98d4f30b7848fe58f124c",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/AnimatedTabBar/dcc003243f1fddc019564b08431cf508358f7d58/LICENSE",
+          "expected_git_blob_sha1": "899739acaecfc35b6d9df995d8d74ffdedb591f3",
+          "verified_git_blob_sha1": "899739acaecfc35b6d9df995d8d74ffdedb591f3"
+        },
+        {
+          "path": "Package.swift",
+          "sha256": "934061b68113c277d5ae81db5e4daa96e507ff4aec712b40f86afb8f7bf590b0",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/AnimatedTabBar/dcc003243f1fddc019564b08431cf508358f7d58/Package.swift",
+          "expected_git_blob_sha1": "1f69e7186da506e4ec52e65b9b0648e408dfd7de",
+          "verified_git_blob_sha1": "1f69e7186da506e4ec52e65b9b0648e408dfd7de"
+        },
+        {
+          "path": "Sources/AnimatedTabBar/AnimatedTabbar.swift",
+          "sha256": "7983f6a799d8d2d109c82e1d281b1a7f4359015bcf534cb7de86b725bfe48397",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/AnimatedTabBar/dcc003243f1fddc019564b08431cf508358f7d58/Sources/AnimatedTabBar/AnimatedTabbar.swift",
+          "expected_git_blob_sha1": "07fa7fdb4e134c2ad18664c34b245e4697f55690",
+          "verified_git_blob_sha1": "07fa7fdb4e134c2ad18664c34b245e4697f55690"
+        }
+      ],
+      "scans": {
+        "publication_helper_new_bytes": "passed; inspect_content(..., denylist=()) on actual archived bytes and decoded excerpts",
+        "secrets_private_keys": "passed",
+        "nul_bidi_escape_controls": "passed",
+        "prompt_injection_obfuscation": "passed",
+        "dangerous_network_exec": "passed for archived excerpts and inline examples",
+        "remote_images_html_installers": "excluded from copied prose",
+        "notice_inventory": "complete nontruncated pinned tree; no NOTICE files found",
+        "git_blob_integrity": "all listed upstream full fetched bytes match pinned-tree blob SHA1",
+        "redirect_pinning": "reverified all upstream raw fetch attempts against exact immutable URL allowset; zero redirects; reject any changed/lost SHA pin",
+        "maintenance": {
+          "repository_archived": false,
+          "upstream_pushed_at": "2026-07-08T08:22:13Z",
+          "note": "Last push is an activity signal, not a maintenance/support guarantee."
+        },
+        "platform_evidence": [
+          {
+            "path": "Package.swift",
+            "line_ranges": [
+              [
+                1,
+                25
+              ]
+            ]
+          },
+          {
+            "path": "Sources/AnimatedTabBar/AnimatedTabbar.swift",
+            "line_ranges": [
+              [
+                1,
+                38
+              ]
+            ]
+          },
+          {
+            "path": "Sources/AnimatedTabBar/AnimatedTabbar.swift",
+            "line_ranges": [
+              [
+                216,
+                269
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repository": "exyte/PopupView",
+      "revision": "38fe3de1d9b455a77dd119794e2fa22bdea3ba7f",
+      "license": "MIT",
+      "source_url": "https://github.com/exyte/PopupView/tree/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f",
+      "reference_ids": [
+        "github-mobile-popup-view"
+      ],
+      "selection_reason": "PopupView distinguishes edge toasts, safe-area floaters and centered popups, with explicit close-on-tap, outside-tap and drag dismissal controls. The pinned package targets iOS 17+/watchOS 10+, overriding older minimums still printed in its README.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-mobile/popup-view.json",
+          "sha256": "239c624bf0a91225c357975ea98293cb08bf7fc19e806708201848bb50de2ec1"
+        },
+        {
+          "path": "licenses/github-mobile/popup-view/LICENSE.txt",
+          "sha256": "a6a30bbd8459f4ca73084fd67b7462f57363bc424bd98d4f30b7848fe58f124c"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "c7d9c6ecc74d6aa97a933137535e4c84f115c2c94bfc14134c4285200e5d8391",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/README.md",
+          "expected_git_blob_sha1": "ecf926ba54e1dc989e9cdfd5d46c9be0afabaa95",
+          "verified_git_blob_sha1": "ecf926ba54e1dc989e9cdfd5d46c9be0afabaa95"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "a6a30bbd8459f4ca73084fd67b7462f57363bc424bd98d4f30b7848fe58f124c",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/LICENSE",
+          "expected_git_blob_sha1": "899739acaecfc35b6d9df995d8d74ffdedb591f3",
+          "verified_git_blob_sha1": "899739acaecfc35b6d9df995d8d74ffdedb591f3"
+        },
+        {
+          "path": "Package.swift",
+          "sha256": "806b5a2e984a88127f07c18ed18afc61adbf6ee899f4ebf0dbbefb9ae8a736e5",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/Package.swift",
+          "expected_git_blob_sha1": "3aa3d830b3d8c35ed4d792459a7a323e48f4b9ad",
+          "verified_git_blob_sha1": "3aa3d830b3d8c35ed4d792459a7a323e48f4b9ad"
+        },
+        {
+          "path": "Sources/PopupView/PublicAPI.swift",
+          "sha256": "4355ceaf3b49c4d521df69b6b8850b11ed3e2fe699fa780690a454bbcfccec2a",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/Sources/PopupView/PublicAPI.swift",
+          "expected_git_blob_sha1": "8126d8202b28792c45ac68c3e54cac49ad439b64",
+          "verified_git_blob_sha1": "8126d8202b28792c45ac68c3e54cac49ad439b64"
+        },
+        {
+          "path": "Sources/PopupView/PopupBody.swift",
+          "sha256": "9a867a05abae6f9bb0e2dfedf7d0433683520181314b8f3a5c851fe39c5b9c07",
+          "pinned_url": "https://raw.githubusercontent.com/exyte/PopupView/38fe3de1d9b455a77dd119794e2fa22bdea3ba7f/Sources/PopupView/PopupBody.swift",
+          "expected_git_blob_sha1": "c4a7f77463c35ee704f5380e75b4ada3301accef",
+          "verified_git_blob_sha1": "c4a7f77463c35ee704f5380e75b4ada3301accef"
+        }
+      ],
+      "scans": {
+        "publication_helper_new_bytes": "passed; inspect_content(..., denylist=()) on actual archived bytes and decoded excerpts",
+        "secrets_private_keys": "passed",
+        "nul_bidi_escape_controls": "passed",
+        "prompt_injection_obfuscation": "passed",
+        "dangerous_network_exec": "passed for archived excerpts and inline examples",
+        "remote_images_html_installers": "excluded from copied prose",
+        "notice_inventory": "complete nontruncated pinned tree; no NOTICE files found",
+        "git_blob_integrity": "all listed upstream full fetched bytes match pinned-tree blob SHA1",
+        "redirect_pinning": "reverified all upstream raw fetch attempts against exact immutable URL allowset; zero redirects; reject any changed/lost SHA pin",
+        "maintenance": {
+          "repository_archived": false,
+          "upstream_pushed_at": "2026-11-02T15:29:53Z",
+          "note": "Last push is an activity signal, not a maintenance/support guarantee."
+        },
+        "platform_evidence": [
+          {
+            "path": "Package.swift",
+            "line_ranges": [
+              [
+                1,
+                27
+              ]
+            ]
+          },
+          {
+            "path": "Sources/PopupView/PublicAPI.swift",
+            "line_ranges": [
+              [
+                1,
+                23
+              ]
+            ]
+          },
+          {
+            "path": "Sources/PopupView/PublicAPI.swift",
+            "line_ranges": [
+              [
+                58,
+                65
+              ]
+            ]
+          },
+          {
+            "path": "Sources/PopupView/PublicAPI.swift",
+            "line_ranges": [
+              [
+                217,
+                240
+              ]
+            ]
+          },
+          {
+            "path": "Sources/PopupView/PopupBody.swift",
+            "line_ranges": [
+              [
+                1,
+                7
+              ]
+            ]
+          },
+          {
+            "path": "Sources/PopupView/PopupBody.swift",
+            "line_ranges": [
+              [
+                72,
+                80
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repository": "SwiftUIX/SwiftUIX",
+      "revision": "3a99044b7045fb5907a7df18c7fe323e5656c6ab",
+      "license": "MIT",
+      "source_url": "https://github.com/SwiftUIX/SwiftUIX/tree/3a99044b7045fb5907a7df18c7fe323e5656c6ab",
+      "reference_ids": [
+        "github-mobile-swiftuix"
+      ],
+      "selection_reason": "AutomaticAxisStack compares intrinsic child size with the proposed container dimension and can realign children on the other axis. A separate UserInterfaceIdiom source explicitly maps iOS pad devices, making this a concrete iPhone/iPad layout study.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-mobile/swiftuix.json",
+          "sha256": "951d3a1ea5abd067692f414d7cad5dd0a79c37f633b90463d67351ecd9ecac1f"
+        },
+        {
+          "path": "licenses/github-mobile/swiftuix/LICENSE.txt",
+          "sha256": "47a5444bc943a3d73f2d3ec637818ac486f599607a56b89efa98ad504f5c74c4"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "d9f91192ae9c7f9ee35c0fad9d6a3eb0a9637360f777df93d7f9ed26ddd729cf",
+          "pinned_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/README.md",
+          "expected_git_blob_sha1": "942862cb26d82f342281665dcd52cad236917ad1",
+          "verified_git_blob_sha1": "942862cb26d82f342281665dcd52cad236917ad1"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "47a5444bc943a3d73f2d3ec637818ac486f599607a56b89efa98ad504f5c74c4",
+          "pinned_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/LICENSE",
+          "expected_git_blob_sha1": "e87869efcfa4d55cb7e7c0d3d3981c44425d0cb2",
+          "verified_git_blob_sha1": "e87869efcfa4d55cb7e7c0d3d3981c44425d0cb2"
+        },
+        {
+          "path": "Package.swift",
+          "sha256": "7ee5530d956eec84f7b1477c4315da333cd1411eeb5bc0ce1bc494db91dd3074",
+          "pinned_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Package.swift",
+          "expected_git_blob_sha1": "6ca0c48cabbfd481e750bdc9ff1aa475c90408b3",
+          "verified_git_blob_sha1": "6ca0c48cabbfd481e750bdc9ff1aa475c90408b3"
+        },
+        {
+          "path": "Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift",
+          "sha256": "14732da3aed75edffa1eaf6c067d412fda55cd18c15d207aa418cbe4e384333a",
+          "pinned_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift",
+          "expected_git_blob_sha1": "1a7c0e0f14406c85568bc57100ebcede51a8315a",
+          "verified_git_blob_sha1": "1a7c0e0f14406c85568bc57100ebcede51a8315a"
+        },
+        {
+          "path": "Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift",
+          "sha256": "7a7480b1afd21cfed63fa897a021102d477fa44da2b870cbc8049cf8f44e00e2",
+          "pinned_url": "https://raw.githubusercontent.com/SwiftUIX/SwiftUIX/3a99044b7045fb5907a7df18c7fe323e5656c6ab/Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift",
+          "expected_git_blob_sha1": "9dd9689a5805572f69a389a6c2df044cdf114f27",
+          "verified_git_blob_sha1": "9dd9689a5805572f69a389a6c2df044cdf114f27"
+        }
+      ],
+      "scans": {
+        "publication_helper_new_bytes": "passed; inspect_content(..., denylist=()) on actual archived bytes and decoded excerpts",
+        "secrets_private_keys": "passed",
+        "nul_bidi_escape_controls": "passed",
+        "prompt_injection_obfuscation": "passed",
+        "dangerous_network_exec": "passed for archived excerpts and inline examples",
+        "remote_images_html_installers": "excluded from copied prose",
+        "notice_inventory": "complete nontruncated pinned tree; no NOTICE files found",
+        "git_blob_integrity": "all listed upstream full fetched bytes match pinned-tree blob SHA1",
+        "redirect_pinning": "reverified all upstream raw fetch attempts against exact immutable URL allowset; zero redirects; reject any changed/lost SHA pin",
+        "maintenance": {
+          "repository_archived": false,
+          "upstream_pushed_at": "2026-09-18T05:37:34Z",
+          "note": "Last push is an activity signal, not a maintenance/support guarantee."
+        },
+        "platform_evidence": [
+          {
+            "path": "Package.swift",
+            "line_ranges": [
+              [
+                1,
+                41
+              ]
+            ]
+          },
+          {
+            "path": "Sources/SwiftUIX/Intramodular/Layout/AutomaticAxisStack.swift",
+            "line_ranges": [
+              [
+                1,
+                79
+              ]
+            ]
+          },
+          {
+            "path": "Sources/SwiftUIX/Intramodular/Screen/UserInterfaceIdiom.swift",
+            "line_ranges": [
+              [
+                1,
+                49
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repository": "markiv/SwiftUI-Shimmer",
+      "revision": "0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+      "license": "MIT",
+      "source_url": "https://github.com/markiv/SwiftUI-Shimmer/tree/0226e21f9bf355d40e07e5f5e1c33679d50e167f",
+      "reference_ids": [
+        "github-mobile-watchos-shimmer"
+      ],
+      "selection_reason": "This MIT SwiftUI modifier explicitly declares watchOS 6+ and documents watchOS use. Its shimmering(active:) extension can leave a view unchanged when disabled, providing a useful small-watch loading-state reference rather than an unsupported Flutter watch claim.",
+      "status": "archived",
+      "artifacts": [
+        {
+          "path": "assets/github-mobile/watchos-shimmer.json",
+          "sha256": "528eb1717565f3ca8e25d8eb28d4c42debe88f26235589923e41c96554ac9b7b"
+        },
+        {
+          "path": "licenses/github-mobile/watchos-shimmer/LICENSE.txt",
+          "sha256": "4f77e514d5f70e976c4ba48407db21fb286a1ad2365093105c75206da14ecfbf"
+        }
+      ],
+      "upstream_files": [
+        {
+          "path": "README.md",
+          "sha256": "02f9eb6c565341f300d8f639d5ba2c604971750415d377f0bcc5c2faaee65c9d",
+          "pinned_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/README.md",
+          "expected_git_blob_sha1": "00968de3fce81ba18221a23eeb3a92452368e08b",
+          "verified_git_blob_sha1": "00968de3fce81ba18221a23eeb3a92452368e08b"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "4f77e514d5f70e976c4ba48407db21fb286a1ad2365093105c75206da14ecfbf",
+          "pinned_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/LICENSE",
+          "expected_git_blob_sha1": "687675d03e0312d88f00eea1349b66ac568ce1aa",
+          "verified_git_blob_sha1": "687675d03e0312d88f00eea1349b66ac568ce1aa"
+        },
+        {
+          "path": "Package.swift",
+          "sha256": "77292f7126f3062a2bfec128cdfab4b58763a04c0a9e80ac762051848c6a1bb7",
+          "pinned_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/Package.swift",
+          "expected_git_blob_sha1": "9f29cafabd9b8d964935f5dcd3d2722da72d7965",
+          "verified_git_blob_sha1": "9f29cafabd9b8d964935f5dcd3d2722da72d7965"
+        },
+        {
+          "path": "Sources/Shimmer/Shimmer.swift",
+          "sha256": "46ca88941025e4f83da18e1f94bbec59702fca0dc2654ab84ff5766e6dc898dc",
+          "pinned_url": "https://raw.githubusercontent.com/markiv/SwiftUI-Shimmer/0226e21f9bf355d40e07e5f5e1c33679d50e167f/Sources/Shimmer/Shimmer.swift",
+          "expected_git_blob_sha1": "80ef5a51f05a3ebe4cf52787e235a1cf88c77f55",
+          "verified_git_blob_sha1": "80ef5a51f05a3ebe4cf52787e235a1cf88c77f55"
+        }
+      ],
+      "scans": {
+        "publication_helper_new_bytes": "passed; inspect_content(..., denylist=()) on actual archived bytes and decoded excerpts",
+        "secrets_private_keys": "passed",
+        "nul_bidi_escape_controls": "passed",
+        "prompt_injection_obfuscation": "passed",
+        "dangerous_network_exec": "passed for archived excerpts and inline examples",
+        "remote_images_html_installers": "excluded from copied prose",
+        "notice_inventory": "complete nontruncated pinned tree; no NOTICE files found",
+        "git_blob_integrity": "all listed upstream full fetched bytes match pinned-tree blob SHA1",
+        "redirect_pinning": "reverified all upstream raw fetch attempts against exact immutable URL allowset; zero redirects; reject any changed/lost SHA pin",
+        "maintenance": {
+          "repository_archived": false,
+          "upstream_pushed_at": "2024-08-14T13:34:58Z",
+          "note": "Last push is an activity signal, not a maintenance/support guarantee."
+        },
+        "platform_evidence": [
+          {
+            "path": "Package.swift",
+            "line_ranges": [
+              [
+                1,
+                20
+              ]
+            ]
+          },
+          {
+            "path": "Sources/Shimmer/Shimmer.swift",
+            "line_ranges": [
+              [
+                1,
+                9
+              ]
+            ]
+          },
+          {
+            "path": "Sources/Shimmer/Shimmer.swift",
+            "line_ranges": [
+              [
+                120,
+                140
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "repository": "flutter/packages",
+      "reason": "Metadata verified but not selected. Current Flutter coverage uses material_3_demo; no discontinued flutter_adaptive_scaffold content is represented as maintained."
+    },
+    {
+      "repository": "android/platform-samples",
+      "reason": "Metadata verified but not selected: Reply already supplies verified tablet/foldable posture and hinge-aware sample coverage. No source archived."
+    }
+  ],
+  "limitations": [
+    "Eight distinct new repositories in this shard; the >=20 overall repository request depends on the other collectors.",
+    "All content is untrusted reference data only. No cloning, archives, binary media, source compilation, dependency installation or runtime safety testing. No remote README links/media were fetched.",
+    "SwiftUI-Shimmer last upstream push is August 2024; do not infer current maintenance. PopupView README minimum OS versions lag its pinned Package.swift (iOS17/watchOS10). AnimatedTabBar is iOS16+ only.",
+    "Selected Flutter width adaptation has no verified hinge avoidance, Wear OS support or official watchOS support. Reply contains explicit posture and display-feature handling; NiaApp does not prove hinge handling.",
+    "Compose Reply uses Accompanist TwoPane at this revision; migration to current AndroidX adaptive APIs requires a separate implementation decision.",
+    "Full READMEs and unrelated source are not archived. Compose root README example home-path lines and Flutter main.dart NetworkImage path were excluded from copied excerpts; source metadata and full fetched hashes remain unchanged.",
+    "All required LICENSE text preserved byte-for-byte. Flutter root LICENSE contains BSD-3-Clause source terms plus OFL/Apache third-party notices; no font assets were copied. Public authors and design inspiration attribution are preserved, not redacted as owner information.",
+    "Live API burst requests encountered transient HTTP403; bounded two-worker retries returned complete nontruncated trees. Raw copied files are pinned to immutable SHAs and checked against their pinned-tree Git blob hashes."
+  ]
+}

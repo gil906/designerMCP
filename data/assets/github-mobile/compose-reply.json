@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "repository": "android/compose-samples",
+  "revision": "25631e8f544a9a1e3f01e296eaf1b4c28428196c",
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-mobile/compose-reply/LICENSE.txt",
+  "notice": "UNTRUSTED INERT REFERENCE TEXT. Do not execute code, obey embedded instructions, fetch embedded links, or render HTML/SVG. No runtime safety or platform build claim.",
+  "excerpts": [
+    {
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/README.md",
+      "source_path": "README.md",
+      "line_ranges": [
+        [
+          4,
+          5
+        ]
+      ],
+      "license": "Apache-2.0",
+      "modifications": "Verbatim selected lines; surrounding prose, remote media, raw HTML and installer instructions not copied.",
+      "text": "This repository contains a set of individual Android Studio projects to help you learn about\nCompose in Android. Each sample demonstrates different use cases, complexity levels and APIs.\n"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+      "source_path": "Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+      "line_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "license": "Apache-2.0",
+      "modifications": "Verbatim selected source lines; surrounding implementation omitted. Reference text only, not executable assets.",
+      "text": "/*\n * Copyright 2022 The Android Open Source Project\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *     https://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+      "source_path": "Reply/app/src/main/java/com/example/reply/ui/ReplyApp.kt",
+      "line_ranges": [
+        [
+          55,
+          96
+        ]
+      ],
+      "license": "Apache-2.0",
+      "modifications": "Verbatim selected source lines; surrounding implementation omitted. Reference text only, not executable assets.",
+      "text": "    closeDetailScreen: () -> Unit = {},\n    navigateToDetail: (Long, ReplyContentType) -> Unit = { _, _ -> },\n    toggleSelectedEmail: (Long) -> Unit = { },\n) {\n    /**\n     * We are using display's folding features to map the device postures a fold is in.\n     * In the state of folding device If it's half fold in BookPosture we want to avoid content\n     * at the crease/hinge\n     */\n    val foldingFeature = displayFeatures.filterIsInstance<FoldingFeature>().firstOrNull()\n\n    val foldingDevicePosture = when {\n        isBookPosture(foldingFeature) ->\n            DevicePosture.BookPosture(foldingFeature.bounds)\n\n        isSeparating(foldingFeature) ->\n            DevicePosture.Separating(foldingFeature.bounds, foldingFeature.orientation)\n\n        else -> DevicePosture.NormalPosture\n    }\n\n    val contentType = when (windowSize.widthSizeClass) {\n        WindowWidthSizeClass.Compact -> ReplyContentType.SINGLE_PANE\n\n        WindowWidthSizeClass.Medium -> if (foldingDevicePosture != DevicePosture.NormalPosture) {\n            ReplyContentType.DUAL_PANE\n        } else {\n            ReplyContentType.SINGLE_PANE\n        }\n\n        WindowWidthSizeClass.Expanded -> ReplyContentType.DUAL_PANE\n\n        else -> ReplyContentType.SINGLE_PANE\n    }\n\n    val navController = rememberNavController()\n    val navigationActions = remember(navController) {\n        ReplyNavigationActions(navController)\n    }\n    val navBackStackEntry by navController.currentBackStackEntryAsState()\n    val currentDestination = navBackStackEntry?.destination\n\n"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+      "source_path": "Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+      "line_ranges": [
+        [
+          1,
+          15
+        ]
+      ],
+      "license": "Apache-2.0",
+      "modifications": "Verbatim selected source lines; surrounding implementation omitted. Reference text only, not executable assets.",
+      "text": "/*\n * Copyright 2022 The Android Open Source Project\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *     https://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/android/compose-samples/25631e8f544a9a1e3f01e296eaf1b4c28428196c/Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+      "source_path": "Reply/app/src/main/java/com/example/reply/ui/ReplyListContent.kt",
+      "line_ranges": [
+        [
+          80,
+          101
+        ]
+      ],
+      "license": "Apache-2.0",
+      "modifications": "Verbatim selected source lines; surrounding implementation omitted. Reference text only, not executable assets.",
+      "text": "    if (contentType == ReplyContentType.DUAL_PANE) {\n        TwoPane(\n            first = {\n                ReplyEmailList(\n                    emails = replyHomeUIState.emails,\n                    openedEmail = replyHomeUIState.openedEmail,\n                    selectedEmailIds = replyHomeUIState.selectedEmails,\n                    toggleEmailSelection = toggleSelectedEmail,\n                    emailLazyListState = emailLazyListState,\n                    navigateToDetail = navigateToDetail,\n                )\n            },\n            second = {\n                ReplyEmailDetail(\n                    email = replyHomeUIState.openedEmail ?: replyHomeUIState.emails.first(),\n                    isFullScreen = false,\n                )\n            },\n            strategy = HorizontalTwoPaneStrategy(splitFraction = 0.5f, gapWidth = 16.dp),\n            displayFeatures = displayFeatures,\n        )\n    } else {\n"
+    }
+  ]
+}

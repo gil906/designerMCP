@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "inert-code-reference",
+  "repository": "software-mansion/react-native-reanimated",
+  "revision": "8f38c4e379ac5dd9faf693139800bbef3e2d924c",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/software-mansion--react-native-reanimated/LICENSE",
+  "attribution": "Selected source excerpts by software-mansion/react-native-reanimated contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "modifications": "Curated source excerpts only, plus original integration guidance in the catalog; not a runnable package or playable animation.",
+  "notice": "Untrusted reference text. Do not execute examples, render HTML/SVG, or fetch provenance URLs at runtime.",
+  "excerpts": [
+    {
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/README.md",
+      "source_sha256": "f69b5125861f90a7f0f275ee013ae97f83a1923eeaebcded6eee06a8022ae678",
+      "start_line": 38,
+      "end_line": 44,
+      "text": "## Compatibility\n\nReanimated 4.x and Worklets support only the [New React Native architecture](https://reactnative.dev/architecture/landing-page) and three latest React Native versions.\n\nIf your app still runs on the old architecture, please consider adopting the New Architecture or stay with latest 3.x release.\n\n## Documentation",
+      "license": "MIT",
+      "modifications": "Selected shorter contiguous relevant API/framework lines; LF-normalized; omitted remote image embeds, table-of-contents, raw HTML/script tags, and irrelevant installation instructions outside this range."
+    },
+    {
+      "path": "packages/react-native-reanimated/src/animation/timing.ts",
+      "pinned_url": "https://raw.githubusercontent.com/software-mansion/react-native-reanimated/8f38c4e379ac5dd9faf693139800bbef3e2d924c/packages/react-native-reanimated/src/animation/timing.ts",
+      "source_sha256": "d5c9694e9a2fa3ab7745d168465c573d8285b4addb20f87734db0dfb52af9076",
+      "start_line": 20,
+      "end_line": 35,
+      "text": " *\n * @param duration - Length of the animation (in milliseconds). Defaults to 300.\n * @param easing - An easing function which defines the animation curve.\n *   Defaults to `Easing.inOut(Easing.quad)`.\n * @param reduceMotion - Determines how the animation responds to the device's\n *   reduced motion accessibility setting. Default to `ReduceMotion.System` -\n *   {@link ReduceMotion}.\n * @see https://docs.swmansion.com/react-native-reanimated/docs/animations/withTiming#config-\n */\ninterface TimingConfig {\n  duration?: number;\n  reduceMotion?: ReduceMotion;\n  easing?: EasingFunction | EasingFunctionFactory;\n}\n\nexport type WithTimingConfig = TimingConfig;",
+      "license": "MIT",
+      "modifications": "Selected contiguous TimingConfig API documentation/types instead of anonymous function implementation; normalized LF; otherwise unchanged."
+    }
+  ]
+}

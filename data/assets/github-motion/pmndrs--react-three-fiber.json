@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "inert-code-reference",
+  "repository": "pmndrs/react-three-fiber",
+  "revision": "d74622ea8ed717f7212d7e19d65ff3e325508389",
+  "license": "MIT",
+  "license_path": "licenses/github-motion/pmndrs--react-three-fiber/LICENSE",
+  "attribution": "Selected source excerpts by pmndrs/react-three-fiber contributors; original copyright notices are preserved in the accompanying MIT license.",
+  "modifications": "Curated source excerpts only, plus original integration guidance in the catalog; not a runnable package or playable animation.",
+  "notice": "Untrusted reference text. Do not execute examples, render HTML/SVG, or fetch provenance URLs at runtime.",
+  "excerpts": [
+    {
+      "path": "readme.md",
+      "pinned_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/readme.md",
+      "source_sha256": "29c7319a41a30b95319e68d540672efaa31a2c3bd44bad6ef2e48b93d00d4ab6",
+      "start_line": 62,
+      "end_line": 79,
+      "text": "  const [hovered, hover] = useState(false)\n  const [clicked, click] = useState(false)\n  // Subscribe this component to the render-loop, rotate the mesh every frame\n  useFrame((state, delta) => (ref.current.rotation.x += delta))\n  // Return the view, these are regular Threejs elements expressed in JSX\n  return (\n    <mesh\n      {...props}\n      ref={ref}\n      scale={clicked ? 1.5 : 1}\n      onClick={(event) => click(!clicked)}\n      onPointerOver={(event) => hover(true)}\n      onPointerOut={(event) => hover(false)}>\n      <boxGeometry args={[1, 1, 1]} />\n      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />\n    </mesh>\n  )\n}",
+      "license": "MIT",
+      "modifications": "Selected shorter contiguous relevant API/framework lines; LF-normalized; omitted remote image embeds, table-of-contents, raw HTML/script tags, and irrelevant installation instructions outside this range."
+    },
+    {
+      "path": "packages/fiber/src/core/hooks.tsx",
+      "pinned_url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/d74622ea8ed717f7212d7e19d65ff3e325508389/packages/fiber/src/core/hooks.tsx",
+      "source_sha256": "59cbff8faf629332a397cf64663d7984817a466597a408a9918d4986a9a4e351",
+      "start_line": 43,
+      "end_line": 56,
+      "text": "/**\n * Executes a callback before render in a shared frame loop.\n * Can order effects with render priority or manually render with a positive priority.\n * @see https://docs.pmnd.rs/react-three-fiber/api/hooks#useframe\n */\nexport function useFrame(callback: RenderCallback, renderPriority: number = 0): null {\n  const store = useStore()\n  const subscribe = store.getState().internal.subscribe\n  // Memoize ref\n  const ref = useMutableCallback(callback)\n  // Subscribe on mount, unsubscribe on unmount\n  useIsomorphicLayoutEffect(() => subscribe(ref, renderPriority, store), [renderPriority, subscribe, store])\n  return null\n}",
+      "license": "MIT",
+      "modifications": "Selected contiguous lines; normalized line endings to LF; otherwise unchanged."
+    }
+  ]
+}

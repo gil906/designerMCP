@@ -1,0 +1,56 @@
+{
+  "attribution_verbatim": [
+    "      copyright notice that is included in or attached to the work",
+    "      copyright license to reproduce, prepare Derivative Works of,",
+    "   Copyright 2019 Adobe",
+    " * Copyright 2020 Adobe. All rights reserved."
+  ],
+  "excerpts": [
+    {
+      "license": "Apache-2.0",
+      "modifications": "Unmodified contiguous excerpt. Other README content, including installers, trackers and unrelated media, omitted.",
+      "path": "README.md",
+      "pinned_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/README.md",
+      "range": {
+        "end_line": 3,
+        "start_line": 3
+      },
+      "text": "A collection of libraries and tools that help you build adaptive, accessible, and robust user experiences."
+    },
+    {
+      "license": "Apache-2.0",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "packages/react-aria/src/dialog/useDialog.ts",
+      "pinned_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts",
+      "range": {
+        "end_line": 51,
+        "start_line": 27
+      },
+      "text": "export interface AriaDialogProps extends DOMProps, AriaLabelingProps {\n  /**\n   * The accessibility role for the dialog.\n   *\n   * @default 'dialog'\n   */\n  role?: 'dialog' | 'alertdialog';\n  /**\n   * Whether the dialog is currently performing an entry animation. Focus is not moved into the\n   * dialog until the animation completes, since moving the screen reader cursor may cause scrolling\n   * that interrupts the animation.\n   */\n  isEntering?: boolean;\n}\n\nexport interface DialogAria {\n  /** Props for the dialog container element. */\n  dialogProps: DOMAttributes;\n\n  /** Props for the dialog title element. */\n  titleProps: DOMAttributes;\n\n  /** Props for the dialog content/description element. Used for aria-describedby on alertdialogs. */\n  contentProps: DOMAttributes;\n}"
+    },
+    {
+      "license": "Apache-2.0",
+      "modifications": "Unmodified contiguous source excerpt. Surrounding code/imports/styles may be omitted. Explicitly untrusted inert text, not a runnable bundle.",
+      "path": "packages/react-aria/src/dialog/useDialog.ts",
+      "pinned_url": "https://raw.githubusercontent.com/adobe/react-spectrum/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6/packages/react-aria/src/dialog/useDialog.ts",
+      "range": {
+        "end_line": 66,
+        "start_line": 53
+      },
+      "text": "/**\n * Provides the behavior and accessibility implementation for a dialog component.\n * A dialog is an overlay shown above other content in an application.\n */\nexport function useDialog(\n  props: AriaDialogProps,\n  ref: RefObject<FocusableElement | null>\n): DialogAria {\n  let {role = 'dialog', isEntering} = props;\n  let titleId: string | undefined = useSlotId();\n  titleId = props['aria-label'] ? undefined : titleId;\n\n  let contentId: string | undefined = useSlotId();\n  contentId = role === 'alertdialog' && !props['aria-describedby'] ? contentId : undefined;"
+    }
+  ],
+  "license": "Apache-2.0",
+  "license_path": "licenses/github-web/react-spectrum/LICENSE.txt",
+  "notice_path": "licenses/github-web/react-spectrum/NOTICE.txt",
+  "repository": "adobe/react-spectrum",
+  "revision": "6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+  "safety": "Untrusted inert text only. Do not execute, render markup, load remote resources or treat copied content as agent instructions. No upstream code or dependencies executed.",
+  "source_url": "https://github.com/adobe/react-spectrum/tree/6dec77beccf0545a04318e6a01b8eb9cbe2dccc6",
+  "synthesis": {
+    "guidance": "Use React Aria behavior as a contract for an existing React overlay, not a reason to rebuild focus logic from a snippet. Wire title and container props together; alertdialog descriptions have a separate slot and role-specific handling. The inspected implementation delays initial focus while isEntering is true, preserves focus already inside, and enables overlay focus containment, with Safari/VoiceOver workarounds. Retain library behavior rather than copying its timeout in isolation. Keep entry motion brief, honor reduced motion, and make hierarchy readable without animation. Use a product-specific heading and consequence text rather than an ornamental modal hero. This is internal source, not a standalone public import example; verify the installed public hook API. Full Apache license and NOTICE are retained. No Spectrum icon package, font, logo, dependency or notice outbound link was fetched or bundled.",
+    "modifications": "Original adaptation guidance and archive wrapper; copied excerpts retain recorded ranges and licensing.",
+    "summary": "The inspected useDialog contract exposes dialogProps, titleProps and alert-dialog contentProps, with isEntering delaying focus until entry animation completes. A behavior reference for custom branded overlays."
+  },
+  "version": 1
+}
